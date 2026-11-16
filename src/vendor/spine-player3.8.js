@@ -8364,8 +8364,23 @@ var spine;
 			}
 			GLTexture.prototype.setFilters = function (minFilter, magFilter) {
 				var gl = this.context.gl;
+				var resolvedMin = minFilter;
+				if (this.useMipMaps) {
+					if (minFilter === spine.TextureFilter.Linear)
+						resolvedMin = spine.TextureFilter.MipMapLinearLinear;
+					else if (minFilter === spine.TextureFilter.Nearest)
+						resolvedMin = spine.TextureFilter.MipMapNearestLinear;
+				} else {
+					if (minFilter === spine.TextureFilter.MipMap ||
+						minFilter === spine.TextureFilter.MipMapLinearLinear ||
+						minFilter === spine.TextureFilter.MipMapLinearNearest)
+						resolvedMin = spine.TextureFilter.Linear;
+					else if (minFilter === spine.TextureFilter.MipMapNearestLinear ||
+						minFilter === spine.TextureFilter.MipMapNearestNearest)
+						resolvedMin = spine.TextureFilter.Nearest;
+				}
 				this.bind();
-				gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, minFilter);
+				gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, resolvedMin);
 				gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, GLTexture.validateMagFilter(magFilter));
 			};
 			GLTexture.validateMagFilter = function (magFilter) {
@@ -8388,6 +8403,11 @@ var spine;
 			};
 			GLTexture.prototype.update = function (useMipMaps) {
 				var gl = this.context.gl;
+				var isWebGL2 = typeof WebGL2RenderingContext !== "undefined" && gl instanceof WebGL2RenderingContext;
+				var img = this._image;
+				var isPot = img && img.width > 0 && img.height > 0 && (img.width & (img.width - 1)) === 0 && (img.height & (img.height - 1)) === 0;
+				var canMip = !!useMipMaps && (isWebGL2 || isPot);
+				this.useMipMaps = canMip;
 				if (!this.texture) {
 					this.texture = this.context.gl.createTexture();
 				}
@@ -8396,10 +8416,10 @@ var spine;
 					gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, false);
 				gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, this._image);
 				gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-				gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, useMipMaps ? gl.LINEAR_MIPMAP_LINEAR : gl.LINEAR);
+				gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, canMip ? gl.LINEAR_MIPMAP_LINEAR : gl.LINEAR);
 				gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
 				gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-				if (useMipMaps)
+				if (canMip)
 					gl.generateMipmap(gl.TEXTURE_2D);
 			};
 			GLTexture.prototype.restore = function () {
@@ -9720,8 +9740,9 @@ var spine;
 			};
 			SceneRenderer.prototype.resize = function (resizeMode) {
 				var canvas = this.canvas;
-				var w = canvas.clientWidth;
-				var h = canvas.clientHeight;
+				var dpr = Math.min(typeof window !== "undefined" ? (window.devicePixelRatio || 1) : 1, 3);
+				var w = Math.max(1, Math.round(canvas.clientWidth * dpr));
+				var h = Math.max(1, Math.round(canvas.clientHeight * dpr));
 				if (canvas.width != w || canvas.height != h) {
 					canvas.width = w;
 					canvas.height = h;
@@ -11136,7 +11157,7 @@ var spine;
 			}
 			try {
 				this.canvas = findWithClass(dom, "spine-player-canvas")[0];
-				var webglConfig = { alpha: config.alpha, preserveDrawingBuffer: true };
+				var webglConfig = { alpha: config.alpha, preserveDrawingBuffer: true, antialias: true, powerPreference: "high-performance" };
 				this.context = new spine.webgl.ManagedWebGLRenderingContext(this.canvas, webglConfig);
 				this.sceneRenderer = new spine.webgl.SceneRenderer(this.canvas, this.context, true);
 				this.loadingScreen = new spine.webgl.LoadingScreen(this.sceneRenderer);

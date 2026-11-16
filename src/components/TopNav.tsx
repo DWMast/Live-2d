@@ -67,47 +67,43 @@ export const TopNav: React.FC<TopNavProps> = ({
       </div>
 
       {/* Zone 2: Navigation Links (Desktop) */}
-      <nav className="hidden lg:flex items-center gap-2 text-sm font-medium text-slate-400">
+      <nav className="hidden lg:flex items-center gap-1.5 text-sm font-medium text-slate-400">
         <button
           onClick={() => setActiveTab('roster')}
-          className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg transition-all whitespace-nowrap shrink-0 ${
+          className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg transition-colors whitespace-nowrap shrink-0 ${
             activeTab === 'roster'
-              ? 'bg-slate-800 text-sky-400 font-semibold shadow-inner'
+              ? 'bg-slate-800 text-sky-400 font-semibold'
               : 'hover:text-slate-200 hover:bg-slate-800/50'
           }`}
         >
           <ImageIcon className="w-4 h-4" />
           <span>{gameMeta.rosterLabel}</span>
-          <span className="text-[11px] px-1.5 py-0.2 rounded bg-sky-950 text-sky-300 font-mono">
+          <span className="text-[11px] font-mono tabular-nums text-slate-500">
             {characterCount}
           </span>
         </button>
 
         <button
           onClick={() => setActiveTab('layers')}
-          className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg transition-all whitespace-nowrap shrink-0 ${
+          className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg transition-colors whitespace-nowrap shrink-0 ${
             activeTab === 'layers'
-              ? 'bg-slate-800 text-sky-400 font-semibold shadow-inner'
+              ? 'bg-slate-800 text-sky-400 font-semibold'
               : 'hover:text-slate-200 hover:bg-slate-800/50'
           }`}
         >
           <Layers className="w-4 h-4" />
           <span>Layer Stack</span>
-          <span className="text-[11px] px-1.5 py-0.2 rounded bg-slate-950 text-slate-300 font-mono">
+          <span className="text-[11px] font-mono tabular-nums text-slate-500">
             {layerCount}
+            {hiddenCount > 0 ? <span className="text-rose-400 ml-1">(-{hiddenCount})</span> : null}
           </span>
-          {hiddenCount > 0 && (
-            <span className="text-[10px] px-1.5 py-0.2 rounded bg-rose-950 text-rose-300 font-mono font-bold">
-              -{hiddenCount}
-            </span>
-          )}
         </button>
 
         <button
           onClick={() => setActiveTab('effects')}
-          className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg transition-all whitespace-nowrap shrink-0 ${
+          className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg transition-colors whitespace-nowrap shrink-0 ${
             activeTab === 'effects'
-              ? 'bg-slate-800 text-sky-400 font-semibold shadow-inner'
+              ? 'bg-slate-800 text-sky-400 font-semibold'
               : 'hover:text-slate-200 hover:bg-slate-800/50'
           }`}
         >
@@ -120,10 +116,11 @@ export const TopNav: React.FC<TopNavProps> = ({
       <div className="flex items-center gap-2 shrink-0 relative" ref={menuRef}>
         <button
           onClick={onOpenExport}
-          className="min-h-[40px] px-3.5 py-1.5 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-500 active:bg-sky-700 rounded-xl transition-all shadow-md shadow-sky-600/20 flex items-center justify-center gap-1.5 whitespace-nowrap shrink-0"
+          className="h-9 sm:h-10 px-3 sm:px-3.5 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-500 active:bg-sky-700 rounded-xl transition-colors shadow-md shadow-sky-600/20 flex items-center justify-center gap-1.5 whitespace-nowrap shrink-0"
         >
           <Download className="w-4 h-4" />
-          <span>Export PNG</span>
+          <span className="hidden sm:inline">Export PNG</span>
+          <span className="sm:hidden">PNG</span>
         </button>
 
         <button

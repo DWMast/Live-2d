@@ -1,17 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { BD2Character } from '../types/bd2';
-import { Search, ChevronDown, ChevronRight, Shirt, User, Film, Sparkles, AlertCircle } from 'lucide-react';
+import { Search, ChevronDown, ChevronRight, Shirt, User, Sparkles, X } from 'lucide-react';
 
-/**
- * Echocalypse roster browser.
- *
- * The catalog models every exported spine, but what people actually browse is
- * *characters*. So this groups exports under their base character: one card per
- * character, showing the portrait, name, rarity and faction, with a collapsed
- * row of that character's costumes underneath. Unnamed exports are kept - they
- * are real models - but they live in their own clearly-labelled section instead
- * of being presented as if they were identified characters.
- */
 interface EchoRosterProps {
   characters: BD2Character[];
   selectedCharacter: BD2Character;
@@ -22,26 +12,19 @@ type Section = 'characters' | 'npc' | 'collab' | 'battle' | 'scene' | 'unnamed';
 
 const SECTION_LABEL: Record<Section, string> = {
   characters: 'Characters',
-  npc: 'Story NPCs',
-  collab: 'Collab Guests',
-  battle: 'Battle Variants',
-  scene: 'Scene Assets',
-  unnamed: 'Unnamed (unreleased)',
+  npc: 'NPCs',
+  collab: 'Collab',
+  battle: 'Battle',
+  scene: 'Scenes',
+  unnamed: 'Unnamed',
 };
 
 const RARITY_TONE: Record<string, string> = {
-  SSR: 'text-amber-300 bg-amber-500/15 border-amber-500/40',
-  UR: 'text-fuchsia-300 bg-fuchsia-500/15 border-fuchsia-500/40',
-  MR: 'text-rose-300 bg-rose-500/15 border-rose-500/40',
-  SR: 'text-violet-300 bg-violet-500/15 border-violet-500/40',
-  R: 'text-sky-300 bg-sky-500/15 border-sky-500/40',
-};
-
-const FACTION_TONE: Record<string, string> = {
-  Bifrost: 'text-cyan-300',
-  Empire: 'text-rose-300',
-  Nebu: 'text-emerald-300',
-  Eastrise: 'text-amber-300',
+  SSR: 'text-amber-300',
+  UR: 'text-fuchsia-300',
+  MR: 'text-rose-300',
+  SR: 'text-violet-300',
+  R: 'text-sky-300',
 };
 
 function sectionFor(char: BD2Character): Section {
@@ -71,7 +54,6 @@ export const EchoRoster: React.FC<EchoRosterProps> = ({
   const [section, setSection] = useState<Section>('characters');
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
 
-  // Group by base character; the base spine (costumeIndex 0) represents the group.
   const groups = useMemo(() => {
     const byBase = new Map<string, BD2Character[]>();
     for (const char of characters) {
@@ -88,7 +70,6 @@ export const EchoRoster: React.FC<EchoRosterProps> = ({
       out.push({ baseId, representative, members: sorted, section: sectionFor(representative) });
     }
     out.sort((a, b) => {
-      // Named characters alphabetically, everything else by id.
       const an = a.representative.charName.toLowerCase();
       const bn = b.representative.charName.toLowerCase();
       if (a.section !== b.section) return 0;
@@ -141,7 +122,6 @@ export const EchoRoster: React.FC<EchoRosterProps> = ({
 
   const visible = filtered.filter((g) => g.section === section);
 
-  // Auto-expand the group of whatever is selected so its costumes are reachable.
   useEffect(() => {
     const base = selectedCharacter.baseId || selectedCharacter.spine;
     setExpanded((prev) => (prev.has(base) ? prev : new Set(prev).add(base)));
@@ -155,37 +135,50 @@ export const EchoRoster: React.FC<EchoRosterProps> = ({
       return next;
     });
 
+  const availableSections = (Object.keys(SECTION_LABEL) as Section[]).filter(
+    (s) => (counts.get(s) ?? 0) > 0
+  );
+
   return (
-    <div className="w-full lg:w-96 h-full bg-slate-900 border-r border-slate-800 flex flex-col shrink-0 select-none overflow-hidden">
+    <div className="w-full lg:w-96 h-full bg-slate-900 border-r border-slate-800/90 flex flex-col shrink-0 select-none overflow-hidden">
       <div className="w-10 h-1.5 bg-slate-700 rounded-full mx-auto my-2 shrink-0 lg:hidden" />
 
-      <div className="p-3.5 sm:p-4 border-b border-slate-800 flex flex-col gap-3 shrink-0 bg-slate-900/90">
-        <div className="flex items-center justify-between">
+      <div className="px-4 pt-3.5 pb-2.5 border-b border-slate-800/90 flex flex-col gap-2.5 shrink-0 bg-slate-900">
+        <div className="flex items-baseline justify-between">
           <div className="flex items-center gap-2">
             <Sparkles className="w-4 h-4 text-emerald-400" />
-            <h2 className="text-sm font-bold text-white tracking-wide">Echocalypse</h2>
+            <h2 className="text-sm font-bold text-white tracking-tight">Echocalypse</h2>
           </div>
-          <span className="text-xs font-mono font-medium px-2 py-0.5 rounded-full border text-emerald-400 bg-emerald-950/80 border-emerald-800/60">
-            {counts.get('characters') ?? 0} Characters
+          <span className="text-[11px] font-mono text-slate-400 tabular-nums">
+            {visible.length} / {counts.get(section) ?? 0}
           </span>
         </div>
 
         <div className="relative w-full">
-          <Search className="w-4 h-4 absolute left-3 top-2.5 text-slate-500" />
+          <Search className="w-4 h-4 absolute left-3 top-2.5 text-slate-500 pointer-events-none" />
           <input
             type="text"
-            placeholder="Search Levia, Valiant, 李瑾, or an id…"
+            placeholder="Search name, alias, or model ID…"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="w-full pl-9 pr-3 py-2 text-xs bg-slate-950 border border-slate-800 rounded-xl text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition-colors"
+            className="w-full pl-9 pr-8 py-2 text-xs bg-slate-950/90 border border-slate-800 rounded-xl text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500/80 transition-colors"
           />
+          {query && (
+            <button
+              onClick={() => setQuery('')}
+              className="absolute right-2.5 top-2 p-0.5 rounded-md text-slate-500 hover:text-slate-200"
+              aria-label="Clear search"
+            >
+              <X className="w-3.5 h-3.5" />
+            </button>
+          )}
         </div>
 
-        <div className="flex items-center gap-1.5 text-[11px] flex-wrap">
+        <div className="grid grid-cols-2 gap-1.5 text-[11px]">
           <select
             value={rarity}
             onChange={(e) => setRarity(e.target.value)}
-            className="min-h-[32px] px-2 rounded-lg bg-slate-950 border border-slate-800 text-slate-300 focus:outline-none focus:border-emerald-500"
+            className="min-h-[32px] px-2.5 rounded-lg bg-slate-950/90 border border-slate-800 text-slate-300 focus:outline-none focus:border-emerald-500/80"
           >
             {rarities.map((r) => (
               <option key={r} value={r}>
@@ -196,7 +189,7 @@ export const EchoRoster: React.FC<EchoRosterProps> = ({
           <select
             value={faction}
             onChange={(e) => setFaction(e.target.value)}
-            className="min-h-[32px] px-2 rounded-lg bg-slate-950 border border-slate-800 text-slate-300 focus:outline-none focus:border-emerald-500"
+            className="min-h-[32px] px-2.5 rounded-lg bg-slate-950/90 border border-slate-800 text-slate-300 focus:outline-none focus:border-emerald-500/80"
           >
             {factions.map((f) => (
               <option key={f} value={f}>
@@ -204,34 +197,33 @@ export const EchoRoster: React.FC<EchoRosterProps> = ({
               </option>
             ))}
           </select>
-          <span className="ml-auto text-slate-500 font-mono">
-            {visible.length} shown
-          </span>
         </div>
 
-        <div className="flex items-center gap-1 overflow-x-auto pb-0.5">
-          {(Object.keys(SECTION_LABEL) as Section[])
-            .filter((s) => (counts.get(s) ?? 0) > 0)
-            .map((s) => (
+        <div className="flex flex-wrap items-center gap-1 pt-0.5">
+          {availableSections.map((s) => {
+            const active = section === s;
+            return (
               <button
                 key={s}
                 onClick={() => setSection(s)}
-                className={`min-h-[30px] px-2.5 rounded-lg text-[11px] font-semibold whitespace-nowrap transition-colors ${
-                  section === s
-                    ? 'bg-emerald-600 text-white'
-                    : 'bg-slate-950 text-slate-400 hover:text-slate-200'
+                className={`h-7 px-2 rounded-lg text-[11px] font-semibold whitespace-nowrap transition-colors flex items-center gap-1 shrink-0 ${
+                  active
+                    ? 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/40'
+                    : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 border border-transparent'
                 }`}
               >
-                {SECTION_LABEL[s]} <span className="opacity-60">{counts.get(s)}</span>
+                <span>{SECTION_LABEL[s]}</span>
+                <span className="text-[10px] font-mono opacity-65 tabular-nums">{counts.get(s)}</span>
               </button>
-            ))}
+            );
+          })}
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto p-3 flex flex-col gap-2">
+      <div className="flex-1 overflow-y-auto divide-y divide-slate-800/50">
         {visible.length === 0 ? (
-          <div className="py-12 text-center text-xs text-slate-500">
-            Nothing matches “{query}”
+          <div className="py-14 px-6 text-center text-xs text-slate-500">
+            No models match the current filter.
           </div>
         ) : (
           visible.map((group) => {
@@ -241,17 +233,17 @@ export const EchoRoster: React.FC<EchoRosterProps> = ({
             return (
               <div
                 key={group.baseId}
-                className={`rounded-2xl border transition-colors ${
-                  isActiveGroup
-                    ? 'bg-slate-800/70 border-emerald-500/60'
-                    : 'bg-slate-950/60 border-slate-800/80 hover:border-slate-700'
+                className={`transition-colors ${
+                  isActiveGroup ? 'bg-emerald-950/25' : 'hover:bg-slate-800/35'
                 }`}
               >
                 <div
                   onClick={() => onSelectCharacter(char)}
-                  className="min-h-[64px] p-2.5 flex items-center gap-3 cursor-pointer"
+                  className={`min-h-[60px] px-4 py-2.5 flex items-center gap-3 cursor-pointer border-l-2 ${
+                    isActiveGroup ? 'border-emerald-400' : 'border-transparent'
+                  }`}
                 >
-                  <div className="w-12 h-12 rounded-xl bg-slate-900 border border-slate-800 overflow-hidden shrink-0 relative">
+                  <div className="w-11 h-11 rounded-xl bg-slate-950 border border-slate-800/90 overflow-hidden shrink-0">
                     <Portrait char={char} />
                   </div>
 
@@ -260,22 +252,18 @@ export const EchoRoster: React.FC<EchoRosterProps> = ({
                       <h3 className="text-xs font-bold text-white truncate">{char.charName}</h3>
                       {char.rarity && (
                         <span
-                          className={`px-1 py-0.5 rounded border text-[9px] font-bold leading-none shrink-0 ${
-                            RARITY_TONE[char.rarity] ?? 'text-slate-300 bg-slate-700/40 border-slate-600'
+                          className={`text-[10px] font-mono font-bold shrink-0 ${
+                            RARITY_TONE[char.rarity] ?? 'text-slate-400'
                           }`}
                         >
                           {char.rarity}
                         </span>
                       )}
                     </div>
-                    <p className="text-[11px] text-slate-400 truncate">
-                      {char.nameZh ? `${char.nameZh} · ` : ''}
-                      {char.faction || (char.named === false ? 'name unknown' : '')}
-                      {char.role ? ` · ${char.role}` : ''}
-                    </p>
-                    <p className="text-[10px] font-mono text-slate-600 truncate">
-                      #{group.baseId} · {group.members.length}{' '}
-                      {group.members.length === 1 ? 'export' : 'exports'}
+                    <p className="text-[11px] text-slate-400 truncate mt-0.5">
+                      {[char.nameZh, char.faction || (char.named === false ? `#${group.baseId}` : ''), char.role]
+                        .filter(Boolean)
+                        .join(' · ')}
                     </p>
                   </div>
 
@@ -285,43 +273,43 @@ export const EchoRoster: React.FC<EchoRosterProps> = ({
                         e.stopPropagation();
                         toggle(group.baseId);
                       }}
-                      className="w-7 h-7 rounded-lg hover:bg-slate-700/60 text-slate-400 flex items-center justify-center shrink-0"
+                      className="h-7 px-2 rounded-lg hover:bg-slate-800 text-slate-400 hover:text-slate-200 flex items-center gap-1 text-[10px] font-mono tabular-nums shrink-0 transition-colors"
                       aria-label={isOpen ? 'Hide costumes' : 'Show costumes'}
                     >
+                      <span>{group.members.length}</span>
                       {isOpen ? (
-                        <ChevronDown className="w-4 h-4" />
+                        <ChevronDown className="w-3.5 h-3.5" />
                       ) : (
-                        <ChevronRight className="w-4 h-4" />
+                        <ChevronRight className="w-3.5 h-3.5" />
                       )}
                     </button>
                   )}
                 </div>
 
                 {isOpen && group.members.length > 1 && (
-                  <div className="px-2.5 pb-2.5 flex flex-col gap-1">
+                  <div className="px-4 pb-2.5 pl-[4.25rem] flex flex-col gap-1">
                     {group.members.map((member) => {
                       const active = member.id === selectedCharacter.id;
                       return (
                         <button
                           key={member.id}
                           onClick={() => onSelectCharacter(member)}
-                          className={`min-h-[34px] px-2.5 rounded-xl flex items-center gap-2 text-left transition-colors ${
+                          className={`min-h-[32px] px-2.5 rounded-lg flex items-center gap-2 text-left transition-colors ${
                             active
                               ? 'bg-emerald-600/90 text-white'
-                              : 'bg-slate-900/80 text-slate-300 hover:bg-slate-800'
+                              : 'bg-slate-950/70 text-slate-300 hover:bg-slate-800'
                           }`}
                         >
                           {member.costumeIndex === 0 ? (
-                            <User className="w-3.5 h-3.5 shrink-0 opacity-70" />
+                            <User className="w-3 h-3 shrink-0 opacity-75" />
                           ) : (
-                            <Shirt className="w-3.5 h-3.5 shrink-0 opacity-70" />
+                            <Shirt className="w-3 h-3 shrink-0 opacity-75" />
                           )}
-                          <span className="text-[11px] font-semibold truncate">
+                          <span className="text-[11px] font-medium truncate">
                             {member.costumeName}
                           </span>
-                          <span className="ml-auto text-[10px] font-mono opacity-60 shrink-0">
+                          <span className="ml-auto text-[10px] font-mono opacity-65 shrink-0">
                             {member.modelType === 'character' ? 'base' : member.modelType}
-                            {member.hasBackdropSpine ? ' · bg' : ''}
                           </span>
                         </button>
                       );
@@ -342,7 +330,7 @@ const Portrait: React.FC<{ char: BD2Character }> = ({ char }) => {
 
   if (failed || !char.iconUrl) {
     return (
-      <div className="w-full h-full bg-gradient-to-tr from-emerald-600 to-teal-700 flex items-center justify-center text-white text-[10px] font-black">
+      <div className="w-full h-full bg-gradient-to-tr from-emerald-700 to-teal-800 flex items-center justify-center text-white text-[10px] font-black">
         {char.charName.replace(/[^A-Za-z\u4e00-\u9fff]/g, '').slice(0, 2) || '?'}
       </div>
     );

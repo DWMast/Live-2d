@@ -38,23 +38,14 @@ export const MobileBottomBar: React.FC<MobileBottomBarProps> = ({
       {/* Tab 2: Layer Stack & Delete */}
       <button
         onClick={() => setActiveTab('layers')}
-        className={`flex-1 min-h-[44px] flex flex-col items-center justify-center py-1 transition-all relative ${
+        className={`flex-1 min-h-[44px] flex flex-col items-center justify-center py-1 transition-all ${
           activeTab === 'layers' ? 'text-sky-400 font-bold' : 'text-slate-400 hover:text-slate-200'
         }`}
       >
-        <div className="relative">
-          <Layers className="w-5 h-5" />
-          {hiddenCount > 0 ? (
-            <span className="absolute -top-1.5 -right-3 text-[9px] font-mono font-bold px-1 rounded-full bg-rose-600 text-white">
-              -{hiddenCount}
-            </span>
-          ) : (
-            <span className="absolute -top-1.5 -right-3 text-[9px] font-mono font-bold px-1 rounded-full bg-sky-600 text-white">
-              {layerCount}
-            </span>
-          )}
-        </div>
-        <span className="text-[10px] mt-1 font-medium tracking-tight">Layer Stack</span>
+        <Layers className="w-5 h-5" />
+        <span className="text-[10px] mt-1 font-medium tracking-tight tabular-nums">
+          Layers ({hiddenCount > 0 ? `-${hiddenCount}` : layerCount})
+        </span>
       </button>
 
       {/* Tab 3: Shaders & Backdrop */}

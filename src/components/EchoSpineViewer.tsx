@@ -1,13 +1,12 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { SpinePlayer, GLTexture, OrthoCamera, Vector2, Vector3, Downloader } from '@esotericsoftware/spine-player';
 import '@esotericsoftware/spine-player/dist/spine-player.css';
 import { BD2Character } from '../types/bd2';
 import { ECHO_SPINE_BASE } from '../utils/bd2Assets';
 import { loadModel, createModelDownloader, ModelLoadError, type LoadedModel } from '../utils/spine/assetLoader';
-import { applyTextureContract, type ContractState } from '../utils/spine/renderContract';
-import { runtimeForVersion, type SpineInspection } from '../utils/spine/skeletonInspector';
+import { applyTextureContract } from '../utils/spine/renderContract';
+import { runtimeForVersion } from '../utils/spine/skeletonInspector';
 import {
-  Check,
   AlertTriangle,
   Loader2,
   Maximize2,
@@ -16,7 +15,6 @@ import {
   Undo2,
   ZoomIn,
   ZoomOut,
-  Camera,
 } from 'lucide-react';
 
 interface EchoSpineViewerProps {
@@ -32,31 +30,6 @@ interface EchoSpineViewerProps {
   onResetAllLayers: () => void;
   selectedLayerName: string | null;
   onSelectLayer: (name: string | null) => void;
-  onModelLoaded?: (info: ModelHealth) => void;
-}
-
-/** Everything the health panel reports, taken from the file rather than guessed. */
-export interface ModelHealth {
-  modelId: string;
-  version: string | null;
-  runtime: '3.8' | '4.0' | '4.1' | '4.2';
-  headerOk: boolean;
-  headerError: string | null;
-  alphaSummary: string;
-  blendPma: boolean;
-  uploadPma: boolean;
-  texturePatched: boolean;
-  mipmaps: boolean;
-  pageCount: number;
-  pageNames: string[];
-  slots: number;
-  bones: number;
-  animations: number;
-  skins: string[];
-  darkTintedSlots: number;
-  loadMs: number;
-  payloadMb: number;
-  warnings: string[];
 }
 
 const RUNTIME_MODULES: Record<string, () => Promise<{ default: unknown }>> = {
@@ -90,19 +63,10 @@ function loadRuntime(version: '3.8' | '4.0' | '4.1' | '4.2'): Promise<RuntimeMod
 }
 
 /**
- * Each bundled player accepts a *different* set of skeleton keys, and they are
- * not interchangeable:
- *
- *   3.8   jsonUrl | skelUrl.                   `binaryUrl` is ignored entirely
- *         (validateConfig throws "Please specify the URL of the skeleton JSON
- *         or .skel file." if neither of the two is present).
- *   4.0   jsonUrl | binaryUrl (skelUrl is    copied onto binaryUrl).
- *   4.1+  jsonUrl | skelUrl  | binaryUrl,  and `skeleton` is the unified key.
- *
- * Emitting a single key for all four is what made every Echocalypse model fail:
- * their skeletons are 3.8.x, so the 3.8 player ran and rejected `binaryUrl`.
- * Build the config for the runtime actually loaded, and always include the key
- * that version reads.
+ * Each bundled player accepts a different set of skeleton keys:
+ *   3.8   jsonUrl | skelUrl
+ *   4.0   jsonUrl | binaryUrl
+ *   4.1+  jsonUrl | skelUrl | binaryUrl (and `skeleton`)
  */
 function skeletonConfigFor(
   runtimeVersion: '3.8' | '4.0' | '4.1' | '4.2',
@@ -111,19 +75,9 @@ function skeletonConfigFor(
   const url = model.skeletonUrl;
   const isJson = !!url && /\.json(\?.*)?$/i.test(url);
 
-  if (isJson) {
-    // Accepted by every bundled runtime.
-    return { jsonUrl: url };
-  }
-  if (runtimeVersion === '3.8') {
-    // 3.8 has no JSON fallback path for a binary skeleton: skelUrl or nothing.
-    return { skelUrl: url };
-  }
-  if (runtimeVersion === '4.0') {
-    return { binaryUrl: url };
-  }
-  // 4.1 / 4.2 read `skeleton`, but skelUrl and binaryUrl are both aliased onto
-  // it during validation, so send both for forward/backward compatibility.
+  if (isJson) return { jsonUrl: url };
+  if (runtimeVersion === '3.8') return { skelUrl: url };
+  if (runtimeVersion === '4.0') return { binaryUrl: url };
   return { skeleton: url, skelUrl: url, binaryUrl: url };
 }
 
@@ -156,8 +110,10 @@ function disposePlayer(player: SpinePlayer | null) {
 
 type SlotLike = {
   data: { name: string };
+  bone?: unknown;
   color?: { r: number; g: number; b: number; a: number };
   darkColor?: { r: number; g: number; b: number; a: number };
+  getAttachment?: () => unknown;
 };
 
 export const EchoSpineViewer = React.forwardRef<
@@ -183,17 +139,18 @@ export const EchoSpineViewer = React.forwardRef<
     onResetAllLayers,
     selectedLayerName,
     onSelectLayer,
-    onModelLoaded,
   },
   ref
 ) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const playerRef = useRef<SpinePlayer | null>(null);
   const cameraRef = useRef<OrthoCamera | null>(null);
+  const runtimeRef = useRef<RuntimeModule>(DEFAULT_RUNTIME);
   const defaultPoseRef = useRef<{ x: number; y: number; zoom: number } | null>(null);
   const hiddenRef = useRef(hiddenLayers);
   const playingRef = useRef(isPlaying);
   const speedRef = useRef(animationSpeed);
+  const onSelectLayerRef = useRef(onSelectLayer);
   const setupColorsRef = useRef<Map<string, SlotLike['color']>>(new Map());
   const forcedHiddenRef = useRef<Set<string>>(new Set());
   const [reloadNonce, setReloadNonce] = useState(0);
@@ -201,11 +158,11 @@ export const EchoSpineViewer = React.forwardRef<
   const [loading, setLoading] = useState(true);
   const [stage, setStage] = useState('Preparing');
   const [error, setError] = useState<{ message: string; detail: string } | null>(null);
-  const [health, setHealth] = useState<ModelHealth | null>(null);
 
   hiddenRef.current = hiddenLayers;
   playingRef.current = isPlaying;
   speedRef.current = animationSpeed;
+  onSelectLayerRef.current = onSelectLayer;
 
   // ---------------------------------------------------------------------------
   // visibility
@@ -232,6 +189,174 @@ export const EchoSpineViewer = React.forwardRef<
     }
   }, []);
 
+  const syncCamera = useCallback((cam: OrthoCamera) => {
+    cam.update();
+    const player = playerRef.current;
+    const renderCam = player?.sceneRenderer?.camera;
+    if (renderCam) {
+      renderCam.viewportWidth = cam.viewportWidth;
+      renderCam.viewportHeight = cam.viewportHeight;
+      renderCam.position.x = cam.position.x;
+      renderCam.position.y = cam.position.y;
+      renderCam.zoom = cam.zoom;
+      renderCam.update();
+    }
+    if (!playingRef.current) {
+      try {
+        (player as unknown as { drawFrame?: (req?: boolean) => void } | null)?.drawFrame?.(false);
+      } catch {
+        // ignore
+      }
+    }
+  }, []);
+
+  const clampZoom = useCallback((nextZoom: number): number => {
+    const base = defaultPoseRef.current?.zoom || 1;
+    const minZoom = Math.max(0.01, base * 0.04);
+    const maxZoom = Math.max(40, base * 25);
+    return Math.max(minZoom, Math.min(maxZoom, nextZoom));
+  }, []);
+
+  const zoomAtClientPoint = useCallback(
+    (factor: number, clientX?: number, clientY?: number) => {
+      const cam = cameraRef.current;
+      const canvas = containerRef.current?.querySelector('canvas') as HTMLCanvasElement | null;
+      const rt = runtimeRef.current;
+      if (!cam || !canvas || !(factor > 0) || !Number.isFinite(factor)) return;
+
+      const rect = canvas.getBoundingClientRect();
+      if (rect.width <= 0 || rect.height <= 0) return;
+
+      const localX = clientX !== undefined ? clientX - rect.left : rect.width / 2;
+      const localY = clientY !== undefined ? clientY - rect.top : rect.height / 2;
+      const nextZoom = clampZoom(cam.zoom * factor);
+      if (!Number.isFinite(nextZoom) || nextZoom <= 0) return;
+
+      const before = cam.screenToWorld(
+        new rt.Vector3(localX, localY, 0),
+        rect.width,
+        rect.height
+      );
+      cam.zoom = nextZoom;
+      cam.update();
+      const after = cam.screenToWorld(
+        new rt.Vector3(localX, localY, 0),
+        rect.width,
+        rect.height
+      );
+      cam.position.x += before.x - after.x;
+      cam.position.y += before.y - after.y;
+      syncCamera(cam);
+    },
+    [clampZoom, syncCamera]
+  );
+
+  const resetCameraPose = useCallback(() => {
+    const cam = cameraRef.current;
+    const pose = defaultPoseRef.current;
+    if (!cam || !pose) return;
+    cam.position.x = pose.x;
+    cam.position.y = pose.y;
+    cam.zoom = pose.zoom;
+    syncCamera(cam);
+  }, [syncCamera]);
+
+  const hitTestLayerAtClientPoint = useCallback((clientX: number, clientY: number): string | null => {
+    const cam = cameraRef.current;
+    const player = playerRef.current;
+    const canvas = containerRef.current?.querySelector('canvas') as HTMLCanvasElement | null;
+    const skeleton = player?.skeleton as unknown as { drawOrder?: SlotLike[] } | undefined;
+    if (!cam || !canvas || !skeleton?.drawOrder) return null;
+
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width <= 0 || rect.height <= 0) return null;
+
+    const localX = clientX - rect.left;
+    const localY = clientY - rect.top;
+    const world = cam.screenToWorld(
+      new runtimeRef.current.Vector3(localX, localY, 0),
+      rect.width,
+      rect.height
+    );
+
+    const scratch = new Float32Array(4096);
+    for (let i = skeleton.drawOrder.length - 1; i >= 0; i--) {
+      const slot = skeleton.drawOrder[i];
+      const name = slot.data.name;
+      if (!name || hiddenRef.current.has(name)) continue;
+      if ((slot.color?.a ?? 1) <= 0.01) continue;
+      const lower = name.toLowerCase();
+      if (lower.startsWith('bg') || lower.includes('background')) continue;
+
+      const attachment = slot.getAttachment?.() as {
+        worldVerticesLength?: number;
+        hullLength?: number;
+        triangles?: number[];
+        computeWorldVertices?: (...args: unknown[]) => void;
+      } | null;
+      if (!attachment?.computeWorldVertices) continue;
+
+      try {
+        if (typeof attachment.worldVerticesLength === 'number' && attachment.worldVerticesLength > 0) {
+          const count = attachment.worldVerticesLength;
+          const buf = count <= scratch.length ? scratch : new Float32Array(count);
+          attachment.computeWorldVertices(slot, 0, count, buf, 0, 2);
+          const tris = attachment.triangles;
+          if (tris && tris.length >= 3) {
+            for (let t = 0; t < tris.length; t += 3) {
+              const i0 = tris[t] * 2;
+              const i1 = tris[t + 1] * 2;
+              const i2 = tris[t + 2] * 2;
+              if (
+                pointInTriangle(
+                  world.x,
+                  world.y,
+                  buf[i0],
+                  buf[i0 + 1],
+                  buf[i1],
+                  buf[i1 + 1],
+                  buf[i2],
+                  buf[i2 + 1]
+                )
+              ) {
+                return name;
+              }
+            }
+          }
+        } else if (slot.bone) {
+          attachment.computeWorldVertices(slot.bone, scratch, 0, 2);
+          if (
+            pointInTriangle(
+              world.x,
+              world.y,
+              scratch[0],
+              scratch[1],
+              scratch[2],
+              scratch[3],
+              scratch[4],
+              scratch[5]
+            ) ||
+            pointInTriangle(
+              world.x,
+              world.y,
+              scratch[0],
+              scratch[1],
+              scratch[4],
+              scratch[5],
+              scratch[6],
+              scratch[7]
+            )
+          ) {
+            return name;
+          }
+        }
+      } catch {
+        continue;
+      }
+    }
+    return null;
+  }, []);
+
   React.useImperativeHandle(
     ref,
     () => ({
@@ -241,50 +366,20 @@ export const EchoSpineViewer = React.forwardRef<
       },
       setPose: (pose) => {
         const cam = cameraRef.current;
-        const renderCam = playerRef.current?.sceneRenderer?.camera;
         if (!cam) return;
         cam.position.x = pose.x;
         cam.position.y = pose.y;
-        cam.zoom = pose.zoom;
-        cam.update();
-        if (renderCam) {
-          renderCam.position.x = pose.x;
-          renderCam.position.y = pose.y;
-          renderCam.zoom = pose.zoom;
-          renderCam.update();
-        }
+        cam.zoom = clampZoom(pose.zoom);
+        syncCamera(cam);
       },
-      resetPose: () => {
-        const cam = cameraRef.current;
-        const pose = defaultPoseRef.current;
-        const renderCam = playerRef.current?.sceneRenderer?.camera;
-        if (!cam || !pose) return;
-        cam.position.x = pose.x;
-        cam.position.y = pose.y;
-        cam.zoom = pose.zoom;
-        cam.update();
-        if (renderCam) {
-          renderCam.position.x = pose.x;
-          renderCam.position.y = pose.y;
-          renderCam.zoom = pose.zoom;
-          renderCam.update();
-        }
-      },
-      zoomBy: (factor) => {
-        const cam = cameraRef.current;
-        if (!cam) return;
-        const next = cam.zoom * factor;
-        if (next > 0 && Number.isFinite(next)) {
-          cam.zoom = next;
-          cam.update();
-        }
-      },
+      resetPose: resetCameraPose,
+      zoomBy: (factor) => zoomAtClientPoint(factor),
       capture: () => {
         const canvas = containerRef.current?.querySelector('canvas') as HTMLCanvasElement | null;
         return canvas ? canvas.toDataURL('image/png') : null;
       },
     }),
-    []
+    [clampZoom, resetCameraPose, syncCamera, zoomAtClientPoint]
   );
 
   // ---------------------------------------------------------------------------
@@ -298,7 +393,6 @@ export const EchoSpineViewer = React.forwardRef<
     const controller = new AbortController();
     setLoading(true);
     setError(null);
-    setHealth(null);
     setStage('Downloading skeleton and atlas');
 
     disposePlayer(playerRef.current);
@@ -333,7 +427,6 @@ export const EchoSpineViewer = React.forwardRef<
       }
       if (disposed) return;
 
-      // Runtime chosen from the skeleton's own header, not from the catalog guess.
       const runtimeVersion = runtimeForVersion(model.inspection.version);
       setStage(`Starting Spine ${runtimeVersion} runtime`);
 
@@ -350,8 +443,9 @@ export const EchoSpineViewer = React.forwardRef<
       }
       if (disposed) return;
 
-      // The contract: upload form must equal blend form, both from the atlas.
-      const contract: ContractState = applyTextureContract(runtime.GLTexture, {
+      runtimeRef.current = runtime;
+
+      applyTextureContract(runtime.GLTexture, {
         blendPma: model.alpha.blendPma,
         mipmaps: true,
       });
@@ -373,7 +467,6 @@ export const EchoSpineViewer = React.forwardRef<
         downloader,
         showControls: false,
         showLoading: false,
-        // Blend side of the contract.
         premultipliedAlpha: model.alpha.blendPma,
         preserveDrawingBuffer: true,
         alpha: true,
@@ -417,7 +510,6 @@ export const EchoSpineViewer = React.forwardRef<
 
           skeleton.setToSetupPose();
 
-          // Snapshot setup colours before anything hides them.
           const slots = (skeleton as unknown as { slots: SlotLike[] }).slots;
           setupColorsRef.current = new Map(
             slots.map((slot) => [
@@ -436,9 +528,9 @@ export const EchoSpineViewer = React.forwardRef<
               animations.find((a) => /^(idle|stand|loop|dai|wait)/i.test(a)) || animations[0];
             p.animationState.setAnimation(0, preferred, true);
             p.animationState.apply(skeleton);
+            skeleton.updateWorldTransform();
           }
 
-          // Frame the model from its live bounds.
           const canvas = p.canvas;
           const renderCam = p.sceneRenderer?.camera;
           if (canvas && renderCam) {
@@ -447,24 +539,28 @@ export const EchoSpineViewer = React.forwardRef<
             canvas.style.height = '100%';
 
             const dpr = Math.min(window.devicePixelRatio || 1, 3);
-            const cssW = canvas.clientWidth || 800;
-            const cssH = canvas.clientHeight || 800;
+            const cssW = canvas.clientWidth || container.clientWidth || 800;
+            const cssH = canvas.clientHeight || container.clientHeight || 800;
+            const bufW = Math.max(1, Math.round(cssW * dpr));
+            const bufH = Math.max(1, Math.round(cssH * dpr));
             const bounds = measureBounds(skeleton, runtime);
 
-            const cam = new runtime.OrthoCamera(Math.round(cssW * dpr), Math.round(cssH * dpr));
+            const cam = new runtime.OrthoCamera(bufW, bufH);
             cam.position.x = bounds.x + bounds.width / 2;
             cam.position.y = bounds.y + bounds.height / 2;
 
-            const aspect = cssH / Math.max(cssW, 1);
-            const padW = Math.max(bounds.width, 100) * 1.08;
-            const padH = Math.max(bounds.height, 100) * 1.08;
+            const aspect = bufH / Math.max(bufW, 1);
+            const padW = Math.max(bounds.width, 100) * 1.1;
+            const padH = Math.max(bounds.height, 100) * 1.1;
             const viewAspect = padH / Math.max(padW, 1);
-            cam.zoom = aspect > viewAspect ? padW / Math.max(cssW * dpr, 1) : padH / Math.max(cssH * dpr, 1);
+            cam.zoom = aspect > viewAspect ? padW / Math.max(bufW, 1) : padH / Math.max(bufH, 1);
             if (!Number.isFinite(cam.zoom) || cam.zoom <= 0) cam.zoom = 1;
             cam.update();
 
             cameraRef.current = cam;
             defaultPoseRef.current = { x: cam.position.x, y: cam.position.y, zoom: cam.zoom };
+            renderCam.viewportWidth = bufW;
+            renderCam.viewportHeight = bufH;
             renderCam.position.x = cam.position.x;
             renderCam.position.y = cam.position.y;
             renderCam.zoom = cam.zoom;
@@ -475,12 +571,6 @@ export const EchoSpineViewer = React.forwardRef<
           if (playingRef.current) p.play();
           else p.pause();
 
-          const info: ModelHealth = summarize(model, contract, p.skeleton as unknown as {
-            bones?: unknown[];
-            slots?: unknown[];
-          }, runtimeVersion);
-          setHealth(info);
-          onModelLoaded?.(info);
           setLoading(false);
         },
         error: (_p, message) => {
@@ -512,6 +602,11 @@ export const EchoSpineViewer = React.forwardRef<
     if (current?.animation?.name === activeAnimation) return;
     try {
       player.animationState.setAnimation(0, activeAnimation, true);
+      if (!playingRef.current && player.skeleton) {
+        player.animationState.apply(player.skeleton);
+        player.skeleton.updateWorldTransform();
+        (player as unknown as { drawFrame?: (req?: boolean) => void }).drawFrame?.(false);
+      }
     } catch {
       // ignore invalid animation
     }
@@ -529,86 +624,242 @@ export const EchoSpineViewer = React.forwardRef<
     const player = playerRef.current;
     if (!player) return;
     applyVisibility(player);
+    if (!playingRef.current) {
+      try {
+        (player as unknown as { drawFrame?: (req?: boolean) => void }).drawFrame?.(false);
+      } catch {
+        // ignore
+      }
+    }
   }, [hiddenLayers, applyVisibility]);
 
   // ---------------------------------------------------------------------------
-  // input: pan / wheel zoom / pinch
+  // input: mouse pan / wheel & trackpad zoom / 2-finger pinch / tap layer pick
   // ---------------------------------------------------------------------------
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
-    let dragging = false;
-    let lastX = 0;
-    let lastY = 0;
 
-    const onDown = (e: PointerEvent) => {
-      dragging = true;
-      lastX = e.clientX;
-      lastY = e.clientY;
-      container.setPointerCapture(e.pointerId);
+    let mousePanning = false;
+    let mouseDownX = 0;
+    let mouseDownY = 0;
+    let mouseLastX = 0;
+    let mouseLastY = 0;
+    let mouseMoved = 0;
+
+    let touchPanStart: {
+      x: number;
+      y: number;
+      camX: number;
+      camY: number;
+      moved: number;
+    } | null = null;
+    let prevPinchDistance: number | null = null;
+    let prevPinchMid: { x: number; y: number } | null = null;
+    let wasPinching = false;
+
+    const onMouseDown = (e: MouseEvent) => {
+      if (e.button !== 0) return;
+      mousePanning = true;
+      mouseDownX = e.clientX;
+      mouseDownY = e.clientY;
+      mouseLastX = e.clientX;
+      mouseLastY = e.clientY;
+      mouseMoved = 0;
     };
-    const onMove = (e: PointerEvent) => {
-      if (!dragging) return;
+
+    const onMouseMove = (e: MouseEvent) => {
+      if (!mousePanning) return;
       const cam = cameraRef.current;
       const canvas = container.querySelector('canvas') as HTMLCanvasElement | null;
       if (!cam || !canvas) return;
-      const dx = e.clientX - lastX;
-      const dy = e.clientY - lastY;
-      lastX = e.clientX;
-      lastY = e.clientY;
-      const perPxX = (cam.viewportWidth * cam.zoom) / Math.max(canvas.clientWidth, 1);
-      const perPxY = (cam.viewportHeight * cam.zoom) / Math.max(canvas.clientHeight, 1);
+      const dx = e.clientX - mouseLastX;
+      const dy = e.clientY - mouseLastY;
+      mouseLastX = e.clientX;
+      mouseLastY = e.clientY;
+      mouseMoved = Math.max(mouseMoved, Math.hypot(e.clientX - mouseDownX, e.clientY - mouseDownY));
+      const rect = canvas.getBoundingClientRect();
+      const perPxX = (cam.viewportWidth * cam.zoom) / Math.max(rect.width, 1);
+      const perPxY = (cam.viewportHeight * cam.zoom) / Math.max(rect.height, 1);
       cam.position.x -= dx * perPxX;
       cam.position.y += dy * perPxY;
-      cam.update();
+      syncCamera(cam);
     };
-    const onUp = (e: PointerEvent) => {
-      dragging = false;
-      try {
-        container.releasePointerCapture(e.pointerId);
-      } catch {
-        // ignore
+
+    const onMouseUp = (e: MouseEvent) => {
+      if (!mousePanning) return;
+      mousePanning = false;
+      if (mouseMoved < 6) {
+        const hit = hitTestLayerAtClientPoint(e.clientX, e.clientY);
+        onSelectLayerRef.current(hit);
       }
     };
+
     const onWheel = (e: WheelEvent) => {
+      if (!cameraRef.current) return;
+      e.preventDefault();
+      if (e.deltaY === 0) return;
+      const clampedDelta = Math.max(-140, Math.min(140, e.deltaY));
+      const sensitivity = e.ctrlKey ? 0.008 : 0.0014;
+      const factor = Math.exp(clampedDelta * sensitivity);
+      zoomAtClientPoint(factor, e.clientX, e.clientY);
+    };
+
+    const onTouchStart = (e: TouchEvent) => {
       const cam = cameraRef.current;
       if (!cam) return;
-      e.preventDefault();
-      const factor = e.deltaY < 0 ? 1 / 1.12 : 1.12;
-      const next = cam.zoom * factor;
-      if (next > 0 && Number.isFinite(next)) {
-        cam.zoom = next;
-        cam.update();
+      if (e.touches.length === 1 && !wasPinching) {
+        const t = e.touches[0];
+        touchPanStart = {
+          x: t.clientX,
+          y: t.clientY,
+          camX: cam.position.x,
+          camY: cam.position.y,
+          moved: 0,
+        };
+        prevPinchDistance = null;
+        prevPinchMid = null;
+      } else if (e.touches.length >= 2) {
+        touchPanStart = null;
+        wasPinching = true;
+        const t0 = e.touches[0];
+        const t1 = e.touches[1];
+        const dist = Math.hypot(t1.clientX - t0.clientX, t1.clientY - t0.clientY);
+        prevPinchDistance = dist > 2 ? dist : null;
+        prevPinchMid = {
+          x: (t0.clientX + t1.clientX) / 2,
+          y: (t0.clientY + t1.clientY) / 2,
+        };
       }
     };
 
-    container.addEventListener('pointerdown', onDown);
-    container.addEventListener('pointermove', onMove);
-    container.addEventListener('pointerup', onUp);
-    container.addEventListener('pointercancel', onUp);
-    container.addEventListener('wheel', onWheel, { passive: false });
-    return () => {
-      container.removeEventListener('pointerdown', onDown);
-      container.removeEventListener('pointermove', onMove);
-      container.removeEventListener('pointerup', onUp);
-      container.removeEventListener('pointercancel', onUp);
-      container.removeEventListener('wheel', onWheel);
-    };
-  }, []);
+    const onTouchMove = (e: TouchEvent) => {
+      const cam = cameraRef.current;
+      const canvas = container.querySelector('canvas') as HTMLCanvasElement | null;
+      if (!cam || !canvas) return;
+      if (e.cancelable) e.preventDefault();
 
-  const healthBadge = useMemo(() => {
-    if (!health) return null;
-    const issues = health.warnings.length + (health.headerError ? 1 : 0);
-    if (issues === 0) return { tone: 'ok' as const, label: 'Clean' };
-    return { tone: 'warn' as const, label: `${issues} note${issues === 1 ? '' : 's'}` };
-  }, [health]);
+      if (e.touches.length >= 2) {
+        touchPanStart = null;
+        wasPinching = true;
+        const t0 = e.touches[0];
+        const t1 = e.touches[1];
+        const dist = Math.hypot(t1.clientX - t0.clientX, t1.clientY - t0.clientY);
+        const curMid = {
+          x: (t0.clientX + t1.clientX) / 2,
+          y: (t0.clientY + t1.clientY) / 2,
+        };
+
+        if (prevPinchDistance === null || prevPinchMid === null) {
+          if (dist > 2) {
+            prevPinchDistance = dist;
+            prevPinchMid = curMid;
+          }
+          return;
+        }
+
+        if (dist > 2 && prevPinchDistance > 2) {
+          const rect = canvas.getBoundingClientRect();
+          if (rect.width > 0 && rect.height > 0) {
+            const rt = runtimeRef.current;
+            const before = cam.screenToWorld(
+              new rt.Vector3(prevPinchMid.x - rect.left, prevPinchMid.y - rect.top, 0),
+              rect.width,
+              rect.height
+            );
+            const nextZoom = clampZoom(cam.zoom * (prevPinchDistance / dist));
+            if (Number.isFinite(nextZoom) && nextZoom > 0) {
+              cam.zoom = nextZoom;
+              cam.update();
+              const after = cam.screenToWorld(
+                new rt.Vector3(curMid.x - rect.left, curMid.y - rect.top, 0),
+                rect.width,
+                rect.height
+              );
+              cam.position.x += before.x - after.x;
+              cam.position.y += before.y - after.y;
+              syncCamera(cam);
+            }
+          }
+          prevPinchDistance = dist;
+          prevPinchMid = curMid;
+        }
+      } else if (e.touches.length === 1 && touchPanStart && !wasPinching) {
+        const t = e.touches[0];
+        const dx = t.clientX - touchPanStart.x;
+        const dy = t.clientY - touchPanStart.y;
+        touchPanStart.moved = Math.max(touchPanStart.moved, Math.hypot(dx, dy));
+        const rect = canvas.getBoundingClientRect();
+        const perPxX = (cam.viewportWidth * cam.zoom) / Math.max(rect.width, 1);
+        const perPxY = (cam.viewportHeight * cam.zoom) / Math.max(rect.height, 1);
+        cam.position.x = touchPanStart.camX - dx * perPxX;
+        cam.position.y = touchPanStart.camY + dy * perPxY;
+        syncCamera(cam);
+      }
+    };
+
+    const onTouchEnd = (e: TouchEvent) => {
+      if (e.touches.length === 0) {
+        if (touchPanStart && !wasPinching && touchPanStart.moved < 8) {
+          const lastTouch = e.changedTouches[0];
+          if (lastTouch) {
+            const hit = hitTestLayerAtClientPoint(lastTouch.clientX, lastTouch.clientY);
+            onSelectLayerRef.current(hit);
+          }
+        }
+        touchPanStart = null;
+        prevPinchDistance = null;
+        prevPinchMid = null;
+        wasPinching = false;
+      } else if (e.touches.length === 1) {
+        prevPinchDistance = null;
+        prevPinchMid = null;
+      }
+    };
+
+    const ro = new ResizeObserver(() => {
+      const cam = cameraRef.current;
+      const canvas = container.querySelector('canvas') as HTMLCanvasElement | null;
+      if (!cam || !canvas) return;
+      const dpr = Math.min(window.devicePixelRatio || 1, 3);
+      const w = Math.max(1, Math.round(canvas.clientWidth * dpr));
+      const h = Math.max(1, Math.round(canvas.clientHeight * dpr));
+      if (cam.viewportWidth !== w || cam.viewportHeight !== h) {
+        cam.viewportWidth = w;
+        cam.viewportHeight = h;
+        syncCamera(cam);
+      }
+    });
+    ro.observe(container);
+
+    container.addEventListener('mousedown', onMouseDown);
+    window.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('mouseup', onMouseUp);
+    container.addEventListener('wheel', onWheel, { passive: false });
+    container.addEventListener('touchstart', onTouchStart, { passive: false });
+    container.addEventListener('touchmove', onTouchMove, { passive: false });
+    container.addEventListener('touchend', onTouchEnd);
+    container.addEventListener('touchcancel', onTouchEnd);
+
+    return () => {
+      ro.disconnect();
+      container.removeEventListener('mousedown', onMouseDown);
+      window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('mouseup', onMouseUp);
+      container.removeEventListener('wheel', onWheel);
+      container.removeEventListener('touchstart', onTouchStart);
+      container.removeEventListener('touchmove', onTouchMove);
+      container.removeEventListener('touchend', onTouchEnd);
+      container.removeEventListener('touchcancel', onTouchEnd);
+    };
+  }, [clampZoom, hitTestLayerAtClientPoint, syncCamera, zoomAtClientPoint]);
 
   return (
     <div className="relative w-full h-full flex items-center justify-center overflow-hidden select-none">
       <div ref={containerRef} className="w-full h-full cursor-grab active:cursor-grabbing touch-none" />
 
       {loading && (
-        <div className="absolute inset-0 z-30 flex flex-col items-center justify-center gap-3 bg-slate-950/70 backdrop-blur-sm">
+        <div className="absolute inset-0 z-30 flex flex-col items-center justify-center gap-3 bg-slate-950/75 backdrop-blur-sm">
           <Loader2 className="w-7 h-7 text-emerald-400 animate-spin" />
           <div className="text-center">
             <p className="text-sm font-bold text-white">{character.charName}</p>
@@ -636,36 +887,21 @@ export const EchoSpineViewer = React.forwardRef<
         </div>
       )}
 
-      {/* Health badge */}
-      {healthBadge && (
-        <div
-          className={`absolute top-3 left-3 z-20 flex items-center gap-1.5 px-2.5 py-1 rounded-lg border text-[10px] font-mono backdrop-blur-sm ${
-            healthBadge.tone === 'ok'
-              ? 'bg-emerald-500/10 border-emerald-500/40 text-emerald-300'
-              : 'bg-amber-500/10 border-amber-500/40 text-amber-300'
-          }`}
-        >
-          <Check className="w-3 h-3" />
-          Spine {health?.version ?? '?'} · {health?.pageCount ?? 0} page{(health?.pageCount ?? 0) === 1 ? '' : 's'} ·{' '}
-          {health?.slots ?? 0} slots · {health?.blendPma ? 'PMA' : 'straight'} · {healthBadge.label}
-        </div>
-      )}
-
       {/* Selected layer actions */}
       {selectedLayerName && (
-        <div className="absolute top-3 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-900/95 border border-emerald-400/50 shadow-xl">
-          <span className="text-[11px] font-mono text-emerald-300 truncate max-w-[180px]">
+        <div className="absolute top-14 left-3 z-30 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-900/95 border border-emerald-400/50 shadow-xl backdrop-blur-md">
+          <span className="text-[11px] font-mono text-emerald-300 truncate max-w-[160px] sm:max-w-[220px]">
             {selectedLayerName}
           </span>
           <button
             onClick={() => onDeleteLayer(selectedLayerName)}
-            className="min-h-[30px] px-2 rounded-lg bg-rose-600 hover:bg-rose-500 text-white text-[11px] font-bold flex items-center gap-1"
+            className="min-h-[28px] px-2.5 rounded-lg bg-rose-600 hover:bg-rose-500 text-white text-[11px] font-semibold flex items-center gap-1 transition-colors"
           >
             <Trash2 className="w-3 h-3" /> Hide
           </button>
           <button
             onClick={() => onSelectLayer(null)}
-            className="text-slate-400 hover:text-white text-xs"
+            className="w-6 h-6 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 flex items-center justify-center text-xs transition-colors"
             aria-label="Clear selection"
           >
             ✕
@@ -673,59 +909,56 @@ export const EchoSpineViewer = React.forwardRef<
         </div>
       )}
 
-      {/* Camera controls */}
-      <div className="absolute top-3 right-3 z-20 flex items-center gap-1.5">
+      {/* Camera & layer undo controls */}
+      <div className="absolute top-3 right-3 z-20 flex items-center gap-2">
         {hiddenLayers.size > 0 && (
-          <button
-            onClick={onUndoDelete}
-            className="min-h-[34px] px-2.5 rounded-lg bg-slate-900/90 border border-slate-700 text-slate-200 text-[11px] flex items-center gap-1"
-          >
-            <Undo2 className="w-3 h-3" /> Undo ({hiddenLayers.size})
-          </button>
+          <div className="flex items-center p-1 rounded-xl bg-slate-900/90 border border-slate-800/90 backdrop-blur-md shadow-xl gap-1">
+            <button
+              onClick={onUndoDelete}
+              className="h-8 px-2.5 rounded-lg hover:bg-slate-800 text-slate-200 text-[11px] font-medium flex items-center gap-1.5 transition-colors tabular-nums"
+              title="Restore last hidden layer"
+            >
+              <Undo2 className="w-3.5 h-3.5 text-emerald-400" />
+              <span>Undo ({hiddenLayers.size})</span>
+            </button>
+            {hiddenLayers.size > 1 && (
+              <button
+                onClick={onResetAllLayers}
+                className="h-8 px-2.5 rounded-lg hover:bg-slate-800 text-slate-300 text-[11px] font-medium transition-colors"
+              >
+                Show all
+              </button>
+            )}
+          </div>
         )}
-        {hiddenLayers.size > 1 && (
+
+        <div className="flex items-center p-1 rounded-xl bg-slate-900/90 border border-slate-800/90 backdrop-blur-md shadow-xl">
           <button
-            onClick={onResetAllLayers}
-            className="min-h-[34px] px-2.5 rounded-lg bg-slate-900/90 border border-slate-700 text-slate-300 text-[11px]"
+            onClick={() => zoomAtClientPoint(1 / 1.25)}
+            className="w-8 h-8 rounded-lg hover:bg-slate-800 text-slate-200 flex items-center justify-center transition-colors"
+            aria-label="Zoom in"
+            title="Zoom in"
           >
-            Show all
+            <ZoomIn className="w-4 h-4" />
           </button>
-        )}
-        <button
-          onClick={() => (ref as React.MutableRefObject<{ zoomBy: (f: number) => void }>)?.current?.zoomBy?.(1 / 1.2)}
-          className="w-[34px] h-[34px] rounded-lg bg-slate-900/90 border border-slate-700 text-slate-200 flex items-center justify-center"
-          aria-label="Zoom in"
-        >
-          <ZoomIn className="w-4 h-4" />
-        </button>
-        <button
-          onClick={() => (ref as React.MutableRefObject<{ zoomBy: (f: number) => void }>)?.current?.zoomBy?.(1.2)}
-          className="w-[34px] h-[34px] rounded-lg bg-slate-900/90 border border-slate-700 text-slate-200 flex items-center justify-center"
-          aria-label="Zoom out"
-        >
-          <ZoomOut className="w-4 h-4" />
-        </button>
-        <button
-          onClick={() => (ref as React.MutableRefObject<{ resetPose: () => void }>)?.current?.resetPose?.()}
-          className="w-[34px] h-[34px] rounded-lg bg-slate-900/90 border border-slate-700 text-slate-200 flex items-center justify-center"
-          aria-label="Recenter"
-        >
-          <Maximize2 className="w-4 h-4" />
-        </button>
-        <button
-          onClick={() => {
-            const url = (ref as React.MutableRefObject<{ capture: () => string | null }>)?.current?.capture?.();
-            if (!url) return;
-            const link = document.createElement('a');
-            link.download = `${character.baseId || character.spine}_${character.spine}.png`;
-            link.href = url;
-            link.click();
-          }}
-          className="w-[34px] h-[34px] rounded-lg bg-slate-900/90 border border-slate-700 text-slate-200 flex items-center justify-center"
-          aria-label="Save transparent PNG"
-        >
-          <Camera className="w-4 h-4" />
-        </button>
+          <button
+            onClick={() => zoomAtClientPoint(1.25)}
+            className="w-8 h-8 rounded-lg hover:bg-slate-800 text-slate-200 flex items-center justify-center transition-colors"
+            aria-label="Zoom out"
+            title="Zoom out"
+          >
+            <ZoomOut className="w-4 h-4" />
+          </button>
+          <div className="w-px h-4 bg-slate-800 mx-0.5" />
+          <button
+            onClick={resetCameraPose}
+            className="w-8 h-8 rounded-lg hover:bg-slate-800 text-slate-200 flex items-center justify-center transition-colors"
+            aria-label="Recenter"
+            title="Fit to screen"
+          >
+            <Maximize2 className="w-3.5 h-3.5" />
+          </button>
+        </div>
       </div>
     </div>
   );
@@ -736,6 +969,37 @@ EchoSpineViewer.displayName = 'EchoSpineViewer';
 // -----------------------------------------------------------------------------
 // helpers
 // -----------------------------------------------------------------------------
+
+function pointInTriangle(
+  px: number,
+  py: number,
+  ax: number,
+  ay: number,
+  bx: number,
+  by: number,
+  cx: number,
+  cy: number
+): boolean {
+  const v0x = cx - ax;
+  const v0y = cy - ay;
+  const v1x = bx - ax;
+  const v1y = by - ay;
+  const v2x = px - ax;
+  const v2y = py - ay;
+
+  const dot00 = v0x * v0x + v0y * v0y;
+  const dot01 = v0x * v1x + v0y * v1y;
+  const dot02 = v0x * v2x + v0y * v2y;
+  const dot11 = v1x * v1x + v1y * v1y;
+  const dot12 = v1x * v2x + v1y * v2y;
+
+  const denom = dot00 * dot11 - dot01 * dot01;
+  if (Math.abs(denom) < 1e-8) return false;
+  const invDenom = 1 / denom;
+  const u = (dot11 * dot02 - dot01 * dot12) * invDenom;
+  const v = (dot00 * dot12 - dot01 * dot02) * invDenom;
+  return u >= 0 && v >= 0 && u + v <= 1;
+}
 
 function measureBounds(
   skeleton: unknown,
@@ -753,6 +1017,7 @@ function measureBounds(
   for (const slot of drawOrder) {
     const typedSlot = slot as {
       data: { name: string };
+      bone?: unknown;
       getAttachment: () => unknown;
     };
     const name = typedSlot.data.name.toLowerCase();
@@ -778,8 +1043,8 @@ function measureBounds(
             found = true;
           }
         }
-      } else {
-        attachment.computeWorldVertices(typedSlot, scratch, 0, 2);
+      } else if (typedSlot.bone) {
+        attachment.computeWorldVertices(typedSlot.bone, scratch, 0, 2);
         for (let i = 0; i < 8; i += 2) {
           if (Number.isFinite(scratch[i]) && Number.isFinite(scratch[i + 1])) {
             minX = Math.min(minX, scratch[i]);
@@ -807,42 +1072,5 @@ function measureBounds(
     y: Number.isFinite(offset.y) ? offset.y : -400,
     width: size.x > 5 ? size.x : 800,
     height: size.y > 5 ? size.y : 800,
-  };
-}
-
-function summarize(
-  model: LoadedModel,
-  contract: ContractState,
-  skeleton: { bones?: unknown[]; slots?: unknown[] },
-  runtimeVersion: '3.8' | '4.0' | '4.1' | '4.2'
-): ModelHealth {
-  const inspection: SpineInspection = model.inspection;
-  return {
-    modelId: model.skeletonUrl.split('/').slice(-2)[0] ?? '',
-    version: inspection.version,
-    runtime: runtimeVersion,
-    headerOk: inspection.ok,
-    headerError: inspection.error,
-    alphaSummary: model.alpha.summary,
-    blendPma: contract.blendPma,
-    uploadPma: contract.uploadPma,
-    texturePatched: contract.patched,
-    mipmaps: contract.mipmaps,
-    pageCount: model.pages.length,
-    pageNames: model.pages.map((p) => `${p.declaredName}${p.resolvedName !== p.declaredName ? ` → ${p.resolvedName}` : ''}`),
-    slots: skeleton.slots?.length ?? inspection.slots.length,
-    bones: skeleton.bones?.length ?? inspection.bones.length,
-    animations: inspection.animationCount,
-    skins: inspection.skins.map((s) => s.name),
-    darkTintedSlots: inspection.darkTintedSlots.length,
-    loadMs: model.elapsedMs,
-    payloadMb:
-      Math.round(
-        ((model.skeleton.byteLength + new TextEncoder().encode(model.atlasText).length +
-          model.pages.reduce((sum, p) => sum + p.bytes, 0)) /
-          1048576) *
-          10
-      ) / 10,
-    warnings: model.warnings,
   };
 }

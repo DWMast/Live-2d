@@ -39,15 +39,17 @@
 export interface TextureCtor {
   prototype: {
     update: (useMipMaps: boolean) => void;
+    setFilters?: (minFilter: number, magFilter: number) => void;
     __contractOriginalUpdate?: (useMipMaps: boolean) => void;
+    __contractOriginalSetFilters?: (minFilter: number, magFilter: number) => void;
   };
   DISABLE_UNPACK_PREMULTIPLIED_ALPHA_WEBGL?: boolean;
 }
 
 export interface ContractState {
-  /** What the atlas declares (from its `pma` key). */
+  /** What the renderer uses for blending / vertex premultiplication. */
   blendPma: boolean;
-  /** What the uploader will be told to do. Must equal blendPma. */
+  /** What GL pixelStorei(UNPACK_PREMULTIPLY_ALPHA_WEBGL) uses during upload. */
   uploadPma: boolean;
   /** Mipmaps enabled for this model. */
   mipmaps: boolean;
@@ -58,25 +60,39 @@ export interface ContractState {
 }
 
 const MAX_ANISOTROPY = 8;
+const GL_NEAREST = 9728;
+const GL_LINEAR = 9729;
+const GL_NEAREST_MIPMAP_LINEAR = 9986;
+const GL_LINEAR_MIPMAP_LINEAR = 9987;
+
+function applyAnisotropy(
+  gl: WebGLRenderingContext | WebGL2RenderingContext,
+  anisotropy: number
+) {
+  try {
+    const ext = gl.getExtension('EXT_texture_filter_anisotropic');
+    if (ext) {
+      const max = gl.getParameter(ext.MAX_TEXTURE_MAX_ANISOTROPY_EXT) as number;
+      gl.texParameterf(gl.TEXTURE_2D, ext.TEXTURE_MAX_ANISOTROPY_EXT, Math.min(anisotropy, max || 1));
+    }
+  } catch {
+    // Anisotropy is a quality nicety; never let it break the upload.
+  }
+}
 
 /**
- * Patch `GLTexture.prototype.update` for every bundled runtime so the unpack
- * flag is set explicitly on each upload, matching the model's atlas.
- *
- * `SpinePlayer.premultipliedAlpha` only affects the *blend* side; nothing in the
- * stock runtime sets the unpack flag unless `DISABLE_UNPACK_PREMULTIPLIED_ALPHA_
- * WEBGL` happens to be true, in which case it forces the flag to `false`. Leaving
- * it alone means the flag keeps whatever value the GL context last had - normally
- * the browser default of `true` - regardless of what the atlas actually contains.
+ * Patch `GLTexture.prototype.update` and `GLTexture.prototype.setFilters` for
+ * every bundled runtime so the unpack flag, mipmaps, and anisotropy stay consistent.
  */
 export function applyTextureContract(
   TextureCtor: unknown,
-  opts: { blendPma: boolean; mipmaps: boolean; anisotropy?: number }
+  opts: { blendPma: boolean; uploadPma?: boolean; mipmaps: boolean; anisotropy?: number }
 ): ContractState {
   const ctor = TextureCtor as TextureCtor | undefined;
+  const uploadPma = opts.uploadPma ?? opts.blendPma;
   const state: ContractState = {
     blendPma: opts.blendPma,
-    uploadPma: opts.blendPma,
+    uploadPma,
     mipmaps: opts.mipmaps,
     anisotropy: opts.anisotropy ?? MAX_ANISOTROPY,
     patched: false,
@@ -85,7 +101,7 @@ export function applyTextureContract(
   if (!ctor || !proto || typeof proto.update !== 'function') return state;
 
   // Force the runtime's own flag to the state we actually want, and keep the
-  // original update so repeated calls across model switches do not stack wrappers.
+  // original methods so repeated calls across model switches do not stack wrappers.
   ctor.DISABLE_UNPACK_PREMULTIPLIED_ALPHA_WEBGL = !state.uploadPma;
   const original = proto.__contractOriginalUpdate ?? proto.update;
   proto.__contractOriginalUpdate = original;
@@ -96,29 +112,58 @@ export function applyTextureContract(
   proto.update = function (this: unknown, useMipMaps: boolean) {
     const self = this as {
       context?: { gl?: WebGLRenderingContext | WebGL2RenderingContext };
+      _image?: { width?: number; height?: number };
+      useMipMaps?: boolean;
+      __contractHasMipmaps?: boolean;
     };
     const gl = self.context?.gl;
-    const mipmaps = useMipMaps || wantMipmaps;
+    const img = self._image;
+    const isWebGL2 =
+      typeof WebGL2RenderingContext !== 'undefined' && gl instanceof WebGL2RenderingContext;
+    const w = img?.width ?? 0;
+    const h = img?.height ?? 0;
+    const isPot = w > 0 && h > 0 && (w & (w - 1)) === 0 && (h & (h - 1)) === 0;
+    const mipmaps = (useMipMaps || wantMipmaps) && (isWebGL2 || isPot);
+    self.__contractHasMipmaps = mipmaps;
+    self.useMipMaps = mipmaps;
 
     if (gl && !gl.isContextLost()) {
-      // The one line that decides whether edges are correct.
       gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, state.uploadPma ? 1 : 0);
     }
 
     original.call(this, mipmaps);
 
     if (gl && !gl.isContextLost() && mipmaps) {
-      try {
-        const ext = gl.getExtension('EXT_texture_filter_anisotropic');
-        if (ext) {
-          const max = gl.getParameter(ext.MAX_TEXTURE_MAX_ANISOTROPY_EXT) as number;
-          gl.texParameterf(gl.TEXTURE_2D, ext.TEXTURE_MAX_ANISOTROPY_EXT, Math.min(anisotropy, max || 1));
-        }
-      } catch {
-        // Anisotropy is a quality nicety; never let it break the upload.
-      }
+      applyAnisotropy(gl, anisotropy);
     }
   };
+
+  if (typeof proto.setFilters === 'function') {
+    const originalSetFilters = proto.__contractOriginalSetFilters ?? proto.setFilters;
+    proto.__contractOriginalSetFilters = originalSetFilters;
+    proto.setFilters = function (this: unknown, minFilter: number, magFilter: number) {
+      const self = this as {
+        context?: { gl?: WebGLRenderingContext | WebGL2RenderingContext };
+        useMipMaps?: boolean;
+        __contractHasMipmaps?: boolean;
+      };
+      const hasMipmaps = self.__contractHasMipmaps ?? !!self.useMipMaps;
+      let nextMin = minFilter;
+      if (hasMipmaps) {
+        if (minFilter === GL_LINEAR) nextMin = GL_LINEAR_MIPMAP_LINEAR;
+        else if (minFilter === GL_NEAREST) nextMin = GL_NEAREST_MIPMAP_LINEAR;
+      } else if (nextMin >= 9984 && nextMin <= 9987) {
+        nextMin = nextMin === 9984 || nextMin === 9986 ? GL_NEAREST : GL_LINEAR;
+      }
+
+      originalSetFilters.call(this, nextMin, magFilter);
+
+      const gl = self.context?.gl;
+      if (gl && !gl.isContextLost() && hasMipmaps) {
+        applyAnisotropy(gl, anisotropy);
+      }
+    };
+  }
 
   state.patched = true;
   return state;

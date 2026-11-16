@@ -12,8 +12,7 @@ import { ENVIRONMENTS } from './data/environments';
 import { EnvironmentPreset, ScreenFilters } from './types';
 import { TopNav } from './components/TopNav';
 import { SpineViewer, SpineViewerHandle } from './components/SpineViewer';
-import { EchoSpineViewer, type ModelHealth } from './components/EchoSpineViewer';
-import { EchoHealthPanel } from './components/EchoHealthPanel';
+import { EchoSpineViewer } from './components/EchoSpineViewer';
 import { EchoRoster } from './components/EchoRoster';
 import { CinematicPlayer, CinematicLauncher } from './components/CinematicPlayer';
 import { ShotSequence } from './types/shot';
@@ -121,9 +120,6 @@ export default function App() {
   }, []);
   const [diagShots, setDiagShots] = useState<PoseShotSummary[]>([]);
   const [diagNotice, setDiagNotice] = useState<string | null>(null);
-  /** Health report for the Echocalypse viewer, filled from the model files. */
-  const [echoHealth, setEchoHealth] = useState<ModelHealth | null>(null);
-  const [echoHealthOpen, setEchoHealthOpen] = useState(false);
 
   // Spacebar play/pause shortcut
   useEffect(() => {
@@ -151,7 +147,6 @@ export default function App() {
     setHiddenHistory([]);
     setSelectedLayerName(null);
     setIsMobileDrawerOpen(false);
-    setEchoHealth(null);
   }, []);
 
   // Switch between Brown Dust 2, Daiblos Core, Haze Reverb, Echocalypse, and Azur Lane via the corner Star button
@@ -308,9 +303,10 @@ export default function App() {
     setModelFrame(null);
   }, [selectedCharacter.id, activeCategory]);
 
-  // Download Transparent PNG Screenshot from the WebGL canvas specifically
+  // Download Transparent PNG Screenshot from the active WebGL canvas
   const handleTakeScreenshot = useCallback(() => {
-    const canvas = document.querySelector('canvas.spine-player-canvas') as HTMLCanvasElement | null;
+    const canvas = (viewportRef.current?.querySelector('canvas') ||
+      document.querySelector('canvas.spine-player-canvas')) as HTMLCanvasElement | null;
     if (!canvas) return;
 
     const link = document.createElement('a');
@@ -516,10 +512,11 @@ export default function App() {
         {!isDesktop && !isMobileDrawerOpen && (
           <button
             onClick={() => setIsMobileDrawerOpen(true)}
-            className="fixed bottom-20 right-4 z-40 p-3 rounded-full bg-sky-600 text-white shadow-2xl flex items-center justify-center border border-sky-400"
-            title="Open Menu"
+            className="fixed bottom-20 left-4 z-40 h-10 px-3.5 rounded-xl bg-slate-900/95 hover:bg-slate-800 text-slate-100 shadow-2xl flex items-center gap-1.5 border border-slate-700/80 backdrop-blur-md text-xs font-semibold"
+            title="Open Panel"
           >
-            <ChevronUp className="w-6 h-6" />
+            <ChevronUp className="w-4 h-4 text-sky-400" />
+            <span>{activeTab === 'roster' ? 'Roster' : activeTab === 'layers' ? 'Layers' : 'VFX'}</span>
           </button>
         )}
 
@@ -573,7 +570,6 @@ export default function App() {
                   onResetAllLayers={handleResetAllLayers}
                   selectedLayerName={selectedLayerName}
                   onSelectLayer={handleSelectLayer}
-                  onModelLoaded={setEchoHealth}
                 />
               ) : (
               <SpineViewer
@@ -603,30 +599,11 @@ export default function App() {
             </ErrorBoundary>
           </div>
 
-          {/* Echocalypse: model health, read from the files themselves */}
-          {activeGame === 'echocalypse' && !echoHealthOpen && (
-            <button
-              onClick={() => setEchoHealthOpen(true)}
-              className="absolute top-4 left-4 z-40 min-h-[36px] px-3 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-400/50 text-emerald-300 text-[11px] font-bold flex items-center gap-1.5 backdrop-blur-sm"
-              title="Model health: skeleton version, atlas alpha mode, texture contract"
-            >
-              <Bug className="w-3.5 h-3.5" />
-              Health
-            </button>
-          )}
-          <EchoHealthPanel
-            open={echoHealthOpen}
-            onClose={() => setEchoHealthOpen(false)}
-            health={echoHealth}
-            characterName={selectedCharacter.charName}
-            modelId={selectedCharacter.spine}
-          />
-
-          {/* Echocalypse: jump between this character's exports without leaving the stage */}
+          {/* Echocalypse: switch outfits / variants without overlapping camera controls */}
           {activeGame === 'echocalypse' &&
             (selectedCharacter.costumes?.length ?? 0) > 1 && (
-              <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-30 max-w-[92vw] overflow-x-auto">
-                <div className="flex items-center gap-1.5 p-1.5 rounded-2xl bg-slate-900/90 border border-slate-700/80 backdrop-blur-md">
+              <div className="absolute top-3 left-3 sm:left-1/2 sm:-translate-x-1/2 z-20 max-w-[calc(100%-8.75rem)] sm:max-w-[calc(100%-18rem)] overflow-x-auto no-scrollbar">
+                <div className="flex items-center gap-1 p-1 rounded-xl bg-slate-900/90 border border-slate-800/90 backdrop-blur-md shadow-xl w-max">
                   {selectedCharacter.costumes!.map((modelId) => {
                     const member = activeRoster.find((c) => c.spine === modelId);
                     if (!member) return null;
@@ -635,10 +612,10 @@ export default function App() {
                       <button
                         key={modelId}
                         onClick={() => handleSelectCharacter(member)}
-                        className={`min-h-[32px] px-2.5 rounded-xl text-[11px] font-semibold whitespace-nowrap transition-colors ${
+                        className={`h-8 px-3 rounded-lg text-[11px] font-semibold whitespace-nowrap transition-colors ${
                           active
-                            ? 'bg-emerald-600 text-white'
-                            : 'bg-slate-950/80 text-slate-300 hover:bg-slate-800'
+                            ? 'bg-emerald-600 text-white shadow-sm'
+                            : 'text-slate-300 hover:text-white hover:bg-slate-800/80'
                         }`}
                       >
                         {member.costumeIndex === 0 ? 'Base' : member.costumeName}
