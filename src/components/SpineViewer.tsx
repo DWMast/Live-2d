@@ -272,6 +272,41 @@ function ensureGLTexturePremultiplyPatch(
   proto.update = wrapped;
 }
 
+/**
+ * Diagnostics only: force every slot's tint to plain white.
+ *
+ * Spine multiplies each vertex by `skeletonColor * slotColor * attachmentColor`
+ * and, when a slot has a `darkColor`, by a second (usually much darker) colour in
+ * the two-colour shader. If the dark marks are caused by tint data rather than
+ * baked pixels, flattening the tint to white makes them disappear - which
+ * isolates tint corruption from an art problem.
+ *
+ * Hidden slots are skipped so layer isolation still works while this is on.
+ */
+function neutraliseSlotTints(skeleton: Skeleton, hidden: Set<string>) {
+  const slots = skeleton.slots as unknown as SlotWithDarkColor[];
+  // `skeleton.color` exists in 3.8/4.0 but was dropped in 4.1/4.2, so this has
+  // to be optional or diagnosing a Dailbos Core (4.2) character would throw.
+  const skeletonColor = (skeleton as unknown as { color?: SpineColorLike }).color;
+  if (skeletonColor) {
+    skeletonColor.r = 1;
+    skeletonColor.g = 1;
+    skeletonColor.b = 1;
+  }
+  for (let i = 0; i < slots.length; i++) {
+    const slot = slots[i];
+    if (hidden.has(slot.data.name)) continue;
+    if (slot.color) {
+      slot.color.r = 1;
+      slot.color.g = 1;
+      slot.color.b = 1;
+    }
+    // A zeroed darkColor makes the two-colour shader fall back to plain
+    // modulate instead of multiplying by an arbitrary dark tint.
+    if (slot.darkColor) slot.darkColor.a = 0;
+  }
+}
+
 function ensureSpinePlayerSafeShowError(SpinePlayerCtor: typeof SpinePlayer) {
   const proto = SpinePlayerCtor.prototype as unknown as {
     showError: (message: string, error?: unknown) => void;
@@ -335,6 +370,15 @@ interface SpineViewerProps {
   cameraLocked?: boolean;
   /** Called once the skeleton is posed and the default camera has been fitted. */
   onReady?: (frame: { x: number; y: number; width: number; height: number }) => void;
+  /** Diagnostics: force texture uploads without mipmaps. */
+  diagnosticNoMipmaps?: boolean;
+  /** Diagnostics: neutralise slot tints to expose geometry/alpha only. */
+  diagnosticFlatShading?: boolean;
+  /**
+   * Diagnostics: show one slot at a time, advancing automatically. Whichever
+   * layer brings the dark marks back is the one that owns them.
+   */
+  diagnosticIsolateSlots?: boolean;
 }
 
 /** Imperative camera control exposed to the shot sequencer. */
@@ -354,13 +398,97 @@ type VertexAttachmentLike = {
   computeWorldVertices?: (...args: unknown[]) => void;
 };
 
+type SpineColorLike = { r: number; g: number; b: number; a: number };
+
 type SlotWithDarkColor = {
-  data: { name: string; color?: { a: number }; darkColor?: { a: number } };
+  data: { name: string; color?: SpineColorLike; darkColor?: SpineColorLike };
   bone?: unknown;
-  color?: { a: number };
-  darkColor?: { a: number };
+  color?: SpineColorLike;
+  darkColor?: SpineColorLike;
   getAttachment: () => unknown;
 };
+
+/**
+ * Authoritative setup-pose colour per slot, captured once from `slot.data`.
+ *
+ * Spine's `slot.color` is both the *visibility* channel and the *tint* that the
+ * two-colour (dark tint) shader multiplies against. Hiding a layer by zeroing
+ * `slot.color.a` therefore also destroys the slot's setup tint, and because
+ * animations keep writing colour tracks on every update, restoring by guessing
+ * "is alpha currently 0?" is unreliable - a slot faded to 0.05 by an animation
+ * is not "hidden" and must keep its animated colour.
+ *
+ * We snapshot the setup pose once and restore from that snapshot instead of
+ * probing current state. RGB is preserved together with alpha so a slot that
+ * was hidden can never be resurrected with a dark or stale tint.
+ */
+type SlotColorSnapshot = { color?: SpineColorLike; darkColor?: SpineColorLike };
+
+function snapshotSlotSetupColors(skeleton: Skeleton): Map<string, SlotColorSnapshot> {
+  const out = new Map<string, SlotColorSnapshot>();
+  const slots = skeleton.slots as unknown as SlotWithDarkColor[];
+  for (let i = 0; i < slots.length; i++) {
+    const slot = slots[i];
+    const data = slot.data;
+    out.set(data.name, {
+      color: data.color ? { ...data.color } : undefined,
+      darkColor: data.darkColor ? { ...data.darkColor } : undefined,
+    });
+  }
+  return out;
+}
+
+/**
+ * Hide or restore slots.
+ *
+ * `hidden` wins over animation state: while a layer is hidden its alpha stays
+ * pinned at 0 (animations would otherwise fade it back in). When it is not
+ * hidden we restore the setup tint *only* if this app is the one that zeroed it,
+ * tracked via `wasHidden` so animated colours are left untouched.
+ */
+function applySlotVisibility(
+  skeleton: Skeleton,
+  hidden: Set<string>,
+  setupColors: Map<string, SlotColorSnapshot>,
+  wasHidden: Set<string>,
+  /** Diagnostics only: when set, every slot except this one is hidden. */
+  isolate: string | null = null
+) {
+  const slots = skeleton.slots as unknown as SlotWithDarkColor[];
+  for (let i = 0; i < slots.length; i++) {
+    const slot = slots[i];
+    const name = slot.data.name;
+
+    if ((isolate !== null && name !== isolate) || hidden.has(name)) {
+      if (slot.color) slot.color.a = 0;
+      if (slot.darkColor) slot.darkColor.a = 0;
+      wasHidden.add(name);
+      continue;
+    }
+
+    // Not hidden. If we previously forced it invisible, restore the full setup
+    // RGBA (not just alpha) so the tint cannot come back dark or stale.
+    if (wasHidden.delete(name)) {
+      const setup = setupColors.get(name);
+      if (slot.color && setup?.color) {
+        slot.color.r = setup.color.r;
+        slot.color.g = setup.color.g;
+        slot.color.b = setup.color.b;
+        slot.color.a = setup.color.a;
+      }
+      if (slot.darkColor) {
+        if (setup?.darkColor) {
+          slot.darkColor.r = setup.darkColor.r;
+          slot.darkColor.g = setup.darkColor.g;
+          slot.darkColor.b = setup.darkColor.b;
+          slot.darkColor.a = setup.darkColor.a;
+        } else {
+          slot.darkColor.a = 0;
+        }
+      }
+    }
+  }
+}
 
 let scratchVertices = new Float32Array(2048);
 function getScratchBuffer(needed: number): Float32Array {
@@ -468,22 +596,6 @@ function computeModelBounds(
   };
 }
 
-function applySlotVisibility(skeleton: Skeleton, hidden: Set<string>) {
-  const slots = skeleton.slots as unknown as SlotWithDarkColor[];
-  for (let i = 0; i < slots.length; i++) {
-    const slot = slots[i];
-    if (hidden.has(slot.data.name)) {
-      if (slot.color) slot.color.a = 0;
-      if (slot.darkColor) slot.darkColor.a = 0;
-    } else if (slot.color && slot.color.a === 0 && (slot.data.color?.a ?? 1) > 0) {
-      slot.color.a = slot.data.color?.a ?? 1;
-      if (slot.darkColor && slot.data.darkColor) {
-        slot.darkColor.a = slot.data.darkColor.a;
-      }
-    }
-  }
-}
-
 export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>(({
   character,
   category,
@@ -503,6 +615,9 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
   isVoicePlaying,
   cameraLocked = false,
   onReady,
+  diagnosticNoMipmaps = false,
+  diagnosticFlatShading = false,
+  diagnosticIsolateSlots = false,
 }, ref) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const overlayCanvasRef = useRef<HTMLCanvasElement>(null);
@@ -517,6 +632,20 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
   cameraLockedRef.current = cameraLocked;
   const onReadyRef = useRef(onReady);
   onReadyRef.current = onReady;
+
+  /**
+   * Setup-pose slot colours captured on skeleton load, plus the set of slots
+   * this component is currently forcing invisible. Together these let us restore
+   * a hidden layer's real tint (including colour, not just alpha) precisely.
+   */
+  const slotSetupColorsRef = useRef<Map<string, SlotColorSnapshot>>(new Map());
+  const slotsForcedHiddenRef = useRef<Set<string>>(new Set());
+  /** Read inside the per-frame draw callback, which is created once. */
+  const diagFlatRef = useRef(diagnosticFlatShading);
+  diagFlatRef.current = diagnosticFlatShading;
+  /** Slot names to draw when isolating; empty means "draw everything". */
+  const diagIsolatedSlotRef = useRef<string | null>(null);
+  const [isolatedSlotLabel, setIsolatedSlotLabel] = useState<string | null>(null);
 
   // Refs synced to the 60fps SpinePlayer update callback without re-creating the player
   const hiddenLayersRef = useRef<Set<string>>(hiddenLayers);
@@ -797,7 +926,8 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
       setLoadingStage('webgl');
 
       try {
-        ensureGLTexturePremultiplyPatch(runtime.GLTexture, !isAtlasPma, WANT_MIPMAPS);
+        const wantMipmaps = WANT_MIPMAPS && !diagnosticNoMipmaps;
+        ensureGLTexturePremultiplyPatch(runtime.GLTexture, !isAtlasPma, wantMipmaps);
         ensureSpinePlayerSafeShowError(runtime.SpinePlayer);
 
         const skeletonConfig: Record<string, unknown> = isJson
@@ -813,7 +943,7 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
           premultipliedAlpha: true,
           preserveDrawingBuffer: true,
           alpha: true,
-          mipmaps: WANT_MIPMAPS,
+          mipmaps: wantMipmaps,
           backgroundColor: '#00000000',
           viewport: {
             x: -500,
@@ -838,7 +968,16 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
               cam.update();
             }
             if (p.skeleton) {
-              applySlotVisibility(p.skeleton, hiddenLayersRef.current);
+              applySlotVisibility(
+                p.skeleton,
+                hiddenLayersRef.current,
+                slotSetupColorsRef.current,
+                slotsForcedHiddenRef.current,
+                diagIsolatedSlotRef.current
+              );
+              if (diagFlatRef.current) {
+                neutraliseSlotTints(p.skeleton, hiddenLayersRef.current);
+              }
             }
             drawHighlightOverlay();
           },
@@ -862,6 +1001,13 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
             // 1. Setup pose + bind default skin
             skeleton.setToSetupPose();
             updateWorldTransformSafe(skeleton, runtime);
+
+            // Capture the authoritative setup colours now, before any animation
+            // or layer-hiding mutates them. Hiding sets color.a = 0, which also
+            // wipes the tint the two-colour shader blends with, so we need the
+            // original RGBA to restore from later.
+            slotSetupColorsRef.current = snapshotSlotSetupColors(skeleton);
+            slotsForcedHiddenRef.current.clear();
 
             const skinNames = skeleton.data.skins.map((s) => s.name);
             const defaultSkin = skinNames.find((s) => s !== 'default') || skinNames[0];
@@ -1242,12 +1388,82 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
       drawHighlightOverlay();
       return;
     }
-    applySlotVisibility(player.skeleton, hiddenLayers);
+    applySlotVisibility(
+      player.skeleton,
+      hiddenLayers,
+      slotSetupColorsRef.current,
+      slotsForcedHiddenRef.current,
+      diagIsolatedSlotRef.current
+    );
     if (!isPlaying) {
       safeDrawFrame(player);
     }
     drawHighlightOverlay();
   }, [hiddenLayers, selectedLayerName, isPlaying, drawHighlightOverlay]);
+
+  /**
+   * Diagnostics: cycle through slots one at a time.
+   *
+   * This is the fastest way to attribute a mark to a specific layer - if the
+   * dark patch under the brows appears while "brow_02" (or whatever it is
+   * called) is the only visible slot, the mark is that layer's geometry or its
+   * atlas region, not a compositing issue.
+   */
+  useEffect(() => {
+    if (!diagnosticIsolateSlots) {
+      diagIsolatedSlotRef.current = null;
+      setIsolatedSlotLabel(null);
+      const player = playerRef.current;
+      if (player?.skeleton) {
+        applySlotVisibility(
+          player.skeleton,
+          hiddenLayersRef.current,
+          slotSetupColorsRef.current,
+          slotsForcedHiddenRef.current,
+          null
+        );
+        if (!isPlayingRef.current) safeDrawFrame(player);
+      }
+      return;
+    }
+
+    const player = playerRef.current;
+    const skeleton = player?.skeleton;
+    if (!skeleton) return;
+
+    const allSlots = (skeleton.slots || []).map((s) => s.data.name).filter(Boolean);
+    // Only slots that actually have something to draw are worth cycling.
+    const visible = (skeleton.slots as unknown as SlotWithDarkColor[])
+      .filter((s) => s.getAttachment() != null)
+      .map((s) => s.data.name)
+      .filter((n) => !hiddenLayersRef.current.has(n));
+    const candidates = visible.length > 0 ? visible : allSlots;
+    if (candidates.length === 0) return;
+
+    let index = 0;
+    const apply = () => {
+      const name = candidates[index % candidates.length];
+      diagIsolatedSlotRef.current = name;
+      setIsolatedSlotLabel(name);
+      applySlotVisibility(
+        skeleton,
+        hiddenLayersRef.current,
+        slotSetupColorsRef.current,
+        slotsForcedHiddenRef.current,
+        name
+      );
+      if (!isPlayingRef.current) safeDrawFrame(player);
+      index += 1;
+    };
+
+    apply();
+    const timer = window.setInterval(apply, 1800);
+    return () => {
+      window.clearInterval(timer);
+      diagIsolatedSlotRef.current = null;
+      setIsolatedSlotLabel(null);
+    };
+  }, [diagnosticIsolateSlots, character.id, category]);
 
   // Hit test coordinate conversion
   const getWorldPoint = useCallback((clientX: number, clientY: number) => {
@@ -1364,6 +1580,13 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
         ref={overlayCanvasRef}
         className="absolute inset-0 pointer-events-none z-20"
       />
+
+      {/* Diagnostics: label the currently isolated slot */}
+      {diagnosticIsolateSlots && (
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-40 px-3 py-1.5 rounded-xl bg-amber-500/90 text-slate-950 text-[11px] font-bold font-mono pointer-events-none max-w-[80%] truncate">
+          {isolatedSlotLabel ? `isolated: ${isolatedSlotLabel}` : 'isolating…'}
+        </div>
+      )}
 
       {/* Loading Overlay */}
       {isLoading && (

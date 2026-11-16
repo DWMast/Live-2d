@@ -21,7 +21,12 @@ import { LayerDrawer } from './components/LayerDrawer';
 import { EffectsPanel } from './components/EffectsPanel';
 import { ControlToolbar } from './components/ControlToolbar';
 import { MobileBottomBar } from './components/MobileBottomBar';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import {
+  RenderDiagnostics,
+  DEFAULT_DIAGNOSTIC_TOGGLES,
+  DiagnosticToggles,
+} from './components/RenderDiagnostics';
+import { ChevronDown, ChevronUp, Bug } from 'lucide-react';
 
 function useIsDesktop(): boolean {
   const [isDesktop, setIsDesktop] = useState<boolean>(() =>
@@ -82,16 +87,34 @@ export default function App() {
 
   // Shaders & Backdrop
   const [currentEnvironment, setCurrentEnvironment] = useState<EnvironmentPreset>(ENVIRONMENTS[0]);
+  /**
+   * Neutral by default.
+   *
+   * These used to ship as contrast 1.05 / saturation 1.1 / vignette 0.2. Applied
+   * as a CSS filter over the whole canvas, `contrast(1.05)` pushes every dark
+   * texel toward black, and the vignette lays a radial black gradient straight
+   * over the character. On art that already has shaded creases (under brows, in
+   * eye sockets, between fingers) the two compound into hard black marks that
+   * look like a rendering bug but are added *on top of* the model. Defaults are
+   * neutral so the raw model is what you see until you opt in.
+   */
   const [filters, setFilters] = useState<ScreenFilters>({
     bloom: 0,
-    vignette: 0.2,
+    vignette: 0,
     chromaticAberration: 0,
     brightness: 1.0,
-    contrast: 1.05,
-    saturation: 1.1,
+    contrast: 1.0,
+    saturation: 1.0,
     scanlines: false,
     colorFilter: 'none',
   });
+
+  // On-device render diagnostics (see RenderDiagnostics.tsx for why these exist)
+  const [diagnosticsOpen, setDiagnosticsOpen] = useState(false);
+  const [diagToggles, setDiagToggles] = useState<DiagnosticToggles>(DEFAULT_DIAGNOSTIC_TOGGLES);
+  const handleChangeDiagToggles = useCallback((updates: Partial<DiagnosticToggles>) => {
+    setDiagToggles((prev) => ({ ...prev, ...updates }));
+  }, []);
 
   // Spacebar play/pause shortcut
   useEffect(() => {
@@ -332,8 +355,10 @@ export default function App() {
     );
   };
 
-  // Compute non-destructive CSS filter string for the WebGL canvas only
+  // Compute non-destructive CSS filter string for the WebGL canvas only.
+  // The diagnostics "raw canvas" switch bypasses all of it.
   const canvasFilterStyle = React.useMemo(() => {
+    if (diagToggles.rawCanvas) return undefined;
     const parts: string[] = [];
     if (filters.brightness !== 1) parts.push(`brightness(${filters.brightness})`);
     if (filters.contrast !== 1) parts.push(`contrast(${filters.contrast})`);
@@ -344,7 +369,63 @@ export default function App() {
     else if (filters.colorFilter === 'retro_anime') parts.push('contrast(1.12) saturate(1.2)');
     else if (filters.colorFilter === 'monochrome') parts.push('grayscale(1)');
     return parts.length > 0 ? parts.join(' ') : undefined;
-  }, [filters]);
+  }, [filters, diagToggles.rawCanvas]);
+
+  /**
+   * Human-readable snapshot of everything that could plausibly darken the model.
+   * Reading the *live* DOM rather than React state means the user's report
+   * reflects what the browser is actually compositing.
+   */
+  const diagnosticReport = React.useMemo(() => {
+    const lines: string[] = [];
+    const canvas =
+      viewportRef.current?.querySelector('canvas') ??
+      document.querySelector('canvas');
+    const dpr = typeof window !== 'undefined' ? window.devicePixelRatio : 0;
+
+    lines.push(
+      `character : ${selectedCharacter?.charName ?? '?'} / ${selectedCharacter?.costumeName ?? '?'} (${selectedCharacter?.id ?? '?'})`
+    );
+    lines.push(`game      : ${activeGame}`);
+    lines.push(`category  : ${activeCategory}`);
+    lines.push(`dpr       : ${dpr}`);
+    if (canvas) {
+      lines.push(`canvas css: ${canvas.clientWidth}x${canvas.clientHeight}`);
+      lines.push(`canvas buf: ${canvas.width}x${canvas.height}`);
+      const eff = canvas.width / Math.max(1, canvas.clientWidth);
+      lines.push(`scale     : ${eff.toFixed(2)}x (${eff < 1.5 ? 'LOW - likely pixelation' : 'ok'})`);
+    } else {
+      lines.push('canvas    : not found');
+    }
+    lines.push(`cssFilter : ${diagToggles.rawCanvas ? 'BYPASSED (raw canvas)' : canvasFilterStyle ?? 'none'}`);
+    lines.push(`vignette  : ${diagToggles.rawCanvas ? 'off (raw)' : filters.vignette.toFixed(2)}`);
+    lines.push(`scanlines : ${filters.scanlines ? 'on' : 'off'}`);
+    lines.push(`hidden    : ${hiddenLayers.size} layer(s)`);
+    lines.push(
+      `isolating : ${diagToggles.isolateSlots ? 'on - read the amber label over the character' : 'off'}`
+    );
+    lines.push('--- toggles ---');
+    (Object.keys(diagToggles) as Array<keyof DiagnosticToggles>).forEach((k) => {
+      lines.push(`${k.padEnd(12)}: ${diagToggles[k] ? 'ON' : 'off'}`);
+    });
+    return lines.join('\n');
+  }, [
+    selectedCharacter,
+    activeGame,
+    activeCategory,
+    diagToggles,
+    canvasFilterStyle,
+    filters.vignette,
+    filters.scanlines,
+    hiddenLayers.size,
+  ]);
+
+  const handleCopyDiagnosticReport = useCallback(() => {
+    const text = `=== Ego Apocalypse render report ===\n${diagnosticReport}`;
+    if (navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(text).catch(() => undefined);
+    }
+  }, [diagnosticReport]);
 
   return (
     <div className="w-screen h-[100dvh] flex flex-col bg-slate-950 text-slate-100 overflow-hidden font-sans">
@@ -412,7 +493,7 @@ export default function App() {
             />
           )}
 
-          {filters.vignette > 0 && (
+          {filters.vignette > 0 && !diagToggles.rawCanvas && (
             <div
               className="absolute inset-0 pointer-events-none z-20"
               style={{
@@ -421,7 +502,7 @@ export default function App() {
             />
           )}
 
-          {filters.scanlines && (
+          {filters.scanlines && !diagToggles.rawCanvas && (
             <div
               className="absolute inset-0 pointer-events-none z-20 opacity-20"
               style={{
@@ -458,9 +539,32 @@ export default function App() {
                 hasHiddenLayers={hiddenLayers.size > 0}
                 onPlayVoice={handlePlayVoice}
                 isVoicePlaying={isVoicePlaying}
+                diagnosticNoMipmaps={diagToggles.noMipmaps}
+                diagnosticFlatShading={diagToggles.flatShading}
+                diagnosticIsolateSlots={diagToggles.isolateSlots}
               />
             </ErrorBoundary>
           </div>
+
+          {/* Render diagnostics launcher + panel */}
+          {!diagnosticsOpen && (
+            <button
+              onClick={() => setDiagnosticsOpen(true)}
+              className="absolute top-4 left-4 z-40 min-h-[36px] px-3 rounded-xl bg-amber-500/15 hover:bg-amber-500/25 border border-amber-400/50 text-amber-300 text-[11px] font-bold flex items-center gap-1.5 backdrop-blur-sm"
+              title="Open render diagnostics"
+            >
+              <Bug className="w-3.5 h-3.5" />
+              Diagnose
+            </button>
+          )}
+          <RenderDiagnostics
+            open={diagnosticsOpen}
+            onClose={() => setDiagnosticsOpen(false)}
+            toggles={diagToggles}
+            onChangeToggles={handleChangeDiagToggles}
+            onCopyReport={handleCopyDiagnosticReport}
+            reportText={diagnosticReport}
+          />
 
           {/* Floating Control Toolbar */}
           <ControlToolbar
