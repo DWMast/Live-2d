@@ -89,6 +89,44 @@ function loadRuntime(version: '3.8' | '4.0' | '4.1' | '4.2'): Promise<RuntimeMod
   return loader().then((mod) => mod.default as RuntimeModule);
 }
 
+/**
+ * Each bundled player accepts a *different* set of skeleton keys, and they are
+ * not interchangeable:
+ *
+ *   3.8   jsonUrl | skelUrl.                   `binaryUrl` is ignored entirely
+ *         (validateConfig throws "Please specify the URL of the skeleton JSON
+ *         or .skel file." if neither of the two is present).
+ *   4.0   jsonUrl | binaryUrl (skelUrl is    copied onto binaryUrl).
+ *   4.1+  jsonUrl | skelUrl  | binaryUrl,  and `skeleton` is the unified key.
+ *
+ * Emitting a single key for all four is what made every Echocalypse model fail:
+ * their skeletons are 3.8.x, so the 3.8 player ran and rejected `binaryUrl`.
+ * Build the config for the runtime actually loaded, and always include the key
+ * that version reads.
+ */
+function skeletonConfigFor(
+  runtimeVersion: '3.8' | '4.0' | '4.1' | '4.2',
+  model: LoadedModel
+): Record<string, string> {
+  const url = model.skeletonUrl;
+  const isJson = !!url && /\.json(\?.*)?$/i.test(url);
+
+  if (isJson) {
+    // Accepted by every bundled runtime.
+    return { jsonUrl: url };
+  }
+  if (runtimeVersion === '3.8') {
+    // 3.8 has no JSON fallback path for a binary skeleton: skelUrl or nothing.
+    return { skelUrl: url };
+  }
+  if (runtimeVersion === '4.0') {
+    return { binaryUrl: url };
+  }
+  // 4.1 / 4.2 read `skeleton`, but skelUrl and binaryUrl are both aliased onto
+  // it during validation, so send both for forward/backward compatibility.
+  return { skeleton: url, skelUrl: url, binaryUrl: url };
+}
+
 function disposePlayer(player: SpinePlayer | null) {
   if (!player) return;
   const candidate = player as unknown as {
@@ -330,7 +368,7 @@ export const EchoSpineViewer = React.forwardRef<
       ) as unknown as Downloader;
 
       const player = new runtime.SpinePlayer(container, {
-        binaryUrl: model.skeletonUrl,
+        ...skeletonConfigFor(runtimeVersion, model),
         atlasUrl: model.atlasUrl,
         downloader,
         showControls: false,
