@@ -1,0 +1,424 @@
+import express from 'express';
+import fs from 'node:fs';
+import fsp from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import zlib from 'node:zlib';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const PORT = Number(process.env.PORT) || 3000;
+const IS_PROD = process.env.NODE_ENV === 'production';
+
+const UPSTREAM_SPINE_BASE = 'https://jelosus2.github.io/BD2-L2D-Viewer/assets/spines';
+const UPSTREAM_AUDIO_BASE = 'https://raw.githubusercontent.com/Jelosus2/BD2-L2D-Viewer/main/src/assets/audios';
+const UPSTREAM_DAICORE_BASE = 'https://daicoreviewer.jelosus1.dev';
+const UPSTREAM_HAZE_BASES = [
+  'https://cdn.jsdelivr.net/gh/leililei/cwcx-asset@main',
+  'https://raw.githubusercontent.com/leililei/cwcx-asset/main',
+];
+const UPSTREAM_ECHO_BASES = [
+  'https://cdn.jsdelivr.net/gh/leililei/echocalypse-spine@main',
+  'https://raw.githubusercontent.com/leililei/echocalypse-spine/main',
+];
+const UPSTREAM_AL_SPINE_BASES = [
+  'https://cdn.jsdelivr.net/gh/o0Nomar0o/SpineCollections@main',
+  'https://raw.githubusercontent.com/o0Nomar0o/SpineCollections/main',
+];
+const UPSTREAM_AL_ICON_BASES = [
+  'https://cdn.jsdelivr.net/gh/leililei/AzurLaneTools@master/public/squareicon',
+  'https://raw.githubusercontent.com/leililei/AzurLaneTools/master/public/squareicon',
+];
+
+const DISK_CACHE_ROOT = '/tmp/bd2-asset-cache';
+const MAX_RAM_CACHE_BYTES = 256 * 1024 * 1024; // 256MB in-memory hot cache
+
+interface RamEntry {
+  buffer: Buffer;
+  gzipBuffer?: Buffer;
+  contentType: string;
+  lastUsed: number;
+}
+
+const ramCache = new Map<string, RamEntry>();
+let ramCacheBytes = 0;
+const inflightUpstream = new Map<string, Promise<RamEntry>>();
+
+function buildRamEntry(relPath: string, buffer: Buffer): RamEntry {
+  const contentType = getContentType(relPath);
+  let gzipBuffer: Buffer | undefined;
+  if (/\.(json|skel|atlas)(\.prefab)?$/i.test(relPath) && buffer.byteLength > 1024) {
+    try {
+      gzipBuffer = zlib.gzipSync(buffer, { level: 6 });
+    } catch {
+      // ignore gzip failure
+    }
+  }
+  return {
+    buffer,
+    gzipBuffer,
+    contentType,
+    lastUsed: Date.now(),
+  };
+}
+
+function sendCachedEntry(req: express.Request, res: express.Response, entry: RamEntry) {
+  res.setHeader('Content-Type', entry.contentType);
+  res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+  const acceptEncoding = String(req.headers['accept-encoding'] || '');
+  if (entry.gzipBuffer && /\bgzip\b/i.test(acceptEncoding)) {
+    res.setHeader('Content-Encoding', 'gzip');
+    res.setHeader('Vary', 'Accept-Encoding');
+    res.send(entry.gzipBuffer);
+    return;
+  }
+  res.send(entry.buffer);
+}
+
+function putRamCache(key: string, entry: RamEntry) {
+  if (entry.buffer.byteLength > 48 * 1024 * 1024) return;
+  const existing = ramCache.get(key);
+  if (existing) {
+    ramCacheBytes -= existing.buffer.byteLength + (existing.gzipBuffer?.byteLength || 0);
+    ramCache.delete(key);
+  }
+  const entryBytes = entry.buffer.byteLength + (entry.gzipBuffer?.byteLength || 0);
+  while (ramCacheBytes + entryBytes > MAX_RAM_CACHE_BYTES && ramCache.size > 0) {
+    let oldestKey: string | null = null;
+    let oldestTime = Infinity;
+    for (const [k, v] of ramCache.entries()) {
+      if (v.lastUsed < oldestTime) {
+        oldestTime = v.lastUsed;
+        oldestKey = k;
+      }
+    }
+    if (!oldestKey) break;
+    const evicted = ramCache.get(oldestKey);
+    if (evicted) {
+      ramCacheBytes -= evicted.buffer.byteLength + (evicted.gzipBuffer?.byteLength || 0);
+    }
+    ramCache.delete(oldestKey);
+  }
+  ramCache.set(key, entry);
+  ramCacheBytes += entryBytes;
+}
+
+function getContentType(relPath: string): string {
+  const lower = relPath.toLowerCase();
+  if (lower.endsWith('.png')) return 'image/png';
+  if (lower.endsWith('.webp')) return 'image/webp';
+  if (lower.endsWith('.jpg') || lower.endsWith('.jpeg')) return 'image/jpeg';
+  if (lower.endsWith('.atlas') || lower.endsWith('.atlas.prefab') || lower.endsWith('.mtn')) {
+    return 'text/plain; charset=utf-8';
+  }
+  if (lower.endsWith('.json')) return 'application/json; charset=utf-8';
+  if (lower.endsWith('.webm')) return 'audio/webm';
+  if (lower.endsWith('.mp3')) return 'audio/mpeg';
+  if (lower.endsWith('.ogg')) return 'audio/ogg';
+  if (lower.endsWith('.wav')) return 'audio/wav';
+  return 'application/octet-stream';
+}
+
+function sanitizeAssetPath(rawPath: string, allowedExts: RegExp): string | null {
+  const cleaned = rawPath.replace(/^\/+/, '').split('?')[0];
+  if (!cleaned || cleaned.includes('..') || !/^[a-zA-Z0-9_\-./]+$/.test(cleaned)) {
+    return null;
+  }
+  if (!allowedExts.test(cleaned)) {
+    return null;
+  }
+  return cleaned;
+}
+
+function sanitizeUtf8AssetPath(rawPath: string, allowedExts: RegExp): string | null {
+  let decoded = rawPath;
+  try {
+    decoded = decodeURIComponent(rawPath);
+  } catch {
+    return null;
+  }
+  const cleaned = decoded.replace(/^\/+/, '').split('?')[0];
+  if (!cleaned || cleaned.includes('..') || cleaned.includes('\\') || /[\0-\x1f]/.test(cleaned)) {
+    return null;
+  }
+  if (!allowedExts.test(cleaned)) {
+    return null;
+  }
+  return cleaned;
+}
+
+function encodeUrlSegments(relPath: string): string {
+  return relPath
+    .split('/')
+    .map((seg) => encodeURIComponent(seg))
+    .join('/');
+}
+
+async function fetchUpstreamWithRetry(url: string, attempts = 3): Promise<Buffer> {
+  let lastErr: unknown;
+  for (let i = 0; i < attempts; i++) {
+    try {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 20000);
+      try {
+        const res = await fetch(url, { signal: controller.signal });
+        if (!res.ok) {
+          const err = new Error(`Upstream HTTP ${res.status}`) as Error & { status?: number };
+          err.status = res.status;
+          throw err;
+        }
+        const ab = await res.arrayBuffer();
+        return Buffer.from(ab);
+      } finally {
+        clearTimeout(timer);
+      }
+    } catch (err) {
+      lastErr = err;
+      const status = (err as { status?: number })?.status;
+      if (status === 404 || status === 403) break;
+      if (i < attempts - 1) {
+        await new Promise((r) => setTimeout(r, 250 * (i + 1)));
+      }
+    }
+  }
+  throw lastErr;
+}
+
+async function resolveCachedAsset(
+  namespace:
+    | 'spines'
+    | 'audios'
+    | 'daicore'
+    | 'haze-spines'
+    | 'echo-spines'
+    | 'al-spines'
+    | 'al-icons',
+  relPath: string,
+  upstreamBases: string | string[],
+  encodePathForUpstream = false
+): Promise<RamEntry> {
+  const cacheKey = `${namespace}/${relPath}`;
+  const memHit = ramCache.get(cacheKey);
+  if (memHit) {
+    memHit.lastUsed = Date.now();
+    return memHit;
+  }
+
+  // Check local bundled public/spines first if applicable
+  if (namespace === 'spines') {
+    const localPublicPath = path.join(__dirname, 'public', 'spines', relPath);
+    if (fs.existsSync(localPublicPath)) {
+      const buffer = await fsp.readFile(localPublicPath);
+      const entry = buildRamEntry(relPath, buffer);
+      putRamCache(cacheKey, entry);
+      return entry;
+    }
+  }
+
+  // Check disk cache
+  const diskPath = path.join(DISK_CACHE_ROOT, namespace, relPath);
+  if (fs.existsSync(diskPath)) {
+    try {
+      const buffer = await fsp.readFile(diskPath);
+      const entry = buildRamEntry(relPath, buffer);
+      putRamCache(cacheKey, entry);
+      return entry;
+    } catch {
+      // fall through to upstream fetch
+    }
+  }
+
+  const existingInflight = inflightUpstream.get(cacheKey);
+  if (existingInflight) {
+    return existingInflight;
+  }
+
+  const bases = Array.isArray(upstreamBases) ? upstreamBases : [upstreamBases];
+  const upstreamRel = encodePathForUpstream ? encodeUrlSegments(relPath) : relPath;
+
+  const work = (async () => {
+    let buffer: Buffer | null = null;
+    let lastErr: unknown;
+    for (const base of bases) {
+      try {
+        buffer = await fetchUpstreamWithRetry(`${base}/${upstreamRel}`, 2);
+        break;
+      } catch (err) {
+        lastErr = err;
+      }
+    }
+    if (!buffer) {
+      throw lastErr || new Error(`Failed to fetch ${relPath}`);
+    }
+
+    const entry = buildRamEntry(relPath, buffer);
+    putRamCache(cacheKey, entry);
+
+    // Persist asynchronously to disk cache
+    void (async () => {
+      try {
+        await fsp.mkdir(path.dirname(diskPath), { recursive: true });
+        await fsp.writeFile(diskPath, buffer);
+      } catch {
+        // ignore disk cache write failure
+      }
+    })();
+
+    return entry;
+  })();
+
+  inflightUpstream.set(cacheKey, work);
+  try {
+    return await work;
+  } finally {
+    inflightUpstream.delete(cacheKey);
+  }
+}
+
+async function startServer() {
+  const app = express();
+
+  app.get('/api/bd2-spine/*', async (req, res) => {
+    const rawParam = (req.params as Record<string, string>)[0] ?? '';
+    const relPath = sanitizeAssetPath(rawParam, /\.(skel|atlas|png|webp|jpg|jpeg|json)$/i);
+    if (!relPath) {
+      res.status(400).json({ error: 'Invalid spine asset path' });
+      return;
+    }
+    try {
+      const entry = await resolveCachedAsset('spines', relPath, UPSTREAM_SPINE_BASE);
+      sendCachedEntry(req, res, entry);
+    } catch (err) {
+      const status = (err as { status?: number })?.status || 502;
+      res.status(status).json({ error: `Failed to fetch spine asset: ${relPath}` });
+    }
+  });
+
+  app.get('/api/bd2-audio/*', async (req, res) => {
+    const rawParam = (req.params as Record<string, string>)[0] ?? '';
+    const relPath = sanitizeAssetPath(rawParam, /\.(webm|mp3|ogg|wav)$/i);
+    if (!relPath) {
+      res.status(400).json({ error: 'Invalid audio asset path' });
+      return;
+    }
+    try {
+      const entry = await resolveCachedAsset('audios', relPath, UPSTREAM_AUDIO_BASE);
+      sendCachedEntry(req, res, entry);
+    } catch (err) {
+      const status = (err as { status?: number })?.status || 502;
+      res.status(status).json({ error: `Failed to fetch audio asset: ${relPath}` });
+    }
+  });
+
+  app.get('/api/daicore/*', async (req, res) => {
+    const rawParam = (req.params as Record<string, string>)[0] ?? '';
+    const relPath = sanitizeUtf8AssetPath(
+      rawParam,
+      /\.(json|skel|atlas|png|webp|jpg|jpeg)$/i
+    );
+    if (!relPath) {
+      res.status(400).json({ error: 'Invalid Daiblos Core asset path' });
+      return;
+    }
+    try {
+      const entry = await resolveCachedAsset('daicore', relPath, UPSTREAM_DAICORE_BASE, true);
+      sendCachedEntry(req, res, entry);
+    } catch (err) {
+      const status = (err as { status?: number })?.status || 502;
+      res.status(status).json({ error: `Failed to fetch Daiblos Core asset: ${relPath}` });
+    }
+  });
+
+  app.get('/api/haze-spine/*', async (req, res) => {
+    const rawParam = (req.params as Record<string, string>)[0] ?? '';
+    const relPath = sanitizeUtf8AssetPath(
+      rawParam,
+      /\.(skel|atlas|json)(\.prefab)?$|\.(png|webp|jpg|jpeg)$/i
+    );
+    if (!relPath) {
+      res.status(400).json({ error: 'Invalid Haze Reverb spine path' });
+      return;
+    }
+    try {
+      const entry = await resolveCachedAsset('haze-spines', relPath, UPSTREAM_HAZE_BASES, true);
+      sendCachedEntry(req, res, entry);
+    } catch (err) {
+      const status = (err as { status?: number })?.status || 502;
+      res.status(status).json({ error: `Failed to fetch Haze Reverb asset: ${relPath}` });
+    }
+  });
+
+  app.get('/api/echo-spine/*', async (req, res) => {
+    const rawParam = (req.params as Record<string, string>)[0] ?? '';
+    const relPath = sanitizeUtf8AssetPath(
+      rawParam,
+      /\.(json|skel|atlas|png|webp|jpg|jpeg)$/i
+    );
+    if (!relPath) {
+      res.status(400).json({ error: 'Invalid Echocalypse spine path' });
+      return;
+    }
+    try {
+      const entry = await resolveCachedAsset('echo-spines', relPath, UPSTREAM_ECHO_BASES, true);
+      sendCachedEntry(req, res, entry);
+    } catch (err) {
+      const status = (err as { status?: number })?.status || 502;
+      res.status(status).json({ error: `Failed to fetch Echocalypse asset: ${relPath}` });
+    }
+  });
+
+  app.get('/api/al-spine/*', async (req, res) => {
+    const rawParam = (req.params as Record<string, string>)[0] ?? '';
+    const relPath = sanitizeUtf8AssetPath(
+      rawParam,
+      /\.(json|skel|atlas|png|webp|jpg|jpeg)$/i
+    );
+    if (!relPath) {
+      res.status(400).json({ error: 'Invalid Azur Lane spine path' });
+      return;
+    }
+    try {
+      const entry = await resolveCachedAsset('al-spines', relPath, UPSTREAM_AL_SPINE_BASES, true);
+      sendCachedEntry(req, res, entry);
+    } catch (err) {
+      const status = (err as { status?: number })?.status || 502;
+      res.status(status).json({ error: `Failed to fetch Azur Lane spine asset: ${relPath}` });
+    }
+  });
+
+  app.get('/api/al-icon/*', async (req, res) => {
+    const rawParam = (req.params as Record<string, string>)[0] ?? '';
+    const relPath = sanitizeUtf8AssetPath(rawParam, /\.(png|webp|jpg|jpeg)$/i);
+    if (!relPath) {
+      res.status(400).json({ error: 'Invalid Azur Lane icon path' });
+      return;
+    }
+    try {
+      const entry = await resolveCachedAsset('al-icons', relPath, UPSTREAM_AL_ICON_BASES, true);
+      sendCachedEntry(req, res, entry);
+    } catch (err) {
+      const status = (err as { status?: number })?.status || 502;
+      res.status(status).json({ error: `Failed to fetch Azur Lane icon: ${relPath}` });
+    }
+  });
+
+  if (!IS_PROD) {
+    const { createServer: createViteServer } = await import('vite');
+    const vite = await createViteServer({
+      server: { middlewareMode: true },
+      appType: 'spa',
+    });
+    app.use(vite.middlewares);
+  } else {
+    const distDir = path.join(__dirname, 'dist');
+    app.use(express.static(distDir, { maxAge: '1d' }));
+    app.get('*', (_req, res) => {
+      res.sendFile(path.join(distDir, 'index.html'));
+    });
+  }
+
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`BD2 Studio server listening on http://0.0.0.0:${PORT}`);
+  });
+}
+
+void startServer();

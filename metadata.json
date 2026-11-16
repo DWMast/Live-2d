@@ -1,0 +1,6 @@
+{
+  "name": "BD2 Live2D Studio - Fast Layer Compositor",
+  "description": "High-performance Live2D & Spine character viewer with instant layer select, deletion, custom multi-layer compositing, motion physics, and 4K export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

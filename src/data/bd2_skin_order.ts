@@ -1,0 +1,295 @@
+export interface SkinReleaseEntry {
+  id: string;
+  releasedAt: string;
+}
+
+/**
+ * Chronological skin release order from most recent individual skin to least recent (oldest).
+ * Every skin/costume is listed separately (not grouped by character) so newly released costumes
+ * appear directly at the top regardless of character ID numbering.
+ * Playable character skins are ordered from Nov 2026 back to June 2023 launch,
+ * followed by NPCs and Minigame models ordered newest-to-oldest.
+ */
+export const RECENT_SKIN_ORDER: readonly SkinReleaseEntry[] = [
+  // Nov 2026
+  { id: '068001', releasedAt: 'Nov 2026' },
+  { id: '001297', releasedAt: 'Nov 2026' },
+  // Oct 2026
+  { id: '067902', releasedAt: 'Oct 2026' },
+  { id: '004302', releasedAt: 'Oct 2026' },
+  { id: '004192', releasedAt: 'Oct 2026' },
+  // Sep 2026
+  { id: '021391', releasedAt: 'Sep 2026' },
+  { id: '021301', releasedAt: 'Sep 2026' },
+  { id: '021291', releasedAt: 'Sep 2026' },
+  { id: '021201', releasedAt: 'Sep 2026' },
+  { id: '021101', releasedAt: 'Sep 2026' },
+  // Aug 2026
+  { id: '067901', releasedAt: 'Aug 2026' },
+  { id: '003793', releasedAt: 'Aug 2026' },
+  // Jul 2026
+  { id: '066907', releasedAt: 'Jul 2026' },
+  { id: '065193', releasedAt: 'Jul 2026' },
+  { id: '061392', releasedAt: 'Jul 2026' },
+  { id: '061003', releasedAt: 'Jul 2026' },
+  { id: '001092', releasedAt: 'Jul 2026' },
+  // Jun 2026
+  { id: '067504', releasedAt: 'Jun 2026' },
+  { id: '067491', releasedAt: 'Jun 2026' },
+  { id: '067104', releasedAt: 'Jun 2026' },
+  { id: '061306', releasedAt: 'Jun 2026' },
+  { id: '060804', releasedAt: 'Jun 2026' },
+  { id: '004301', releasedAt: 'Jun 2026' },
+  { id: '004091', releasedAt: 'Jun 2026' },
+  { id: '003392', releasedAt: 'Jun 2026' },
+  { id: '000396', releasedAt: 'Jun 2026' },
+  // Apr 2026
+  { id: '067803', releasedAt: 'Apr 2026' },
+  { id: '004202', releasedAt: 'Apr 2026' },
+  { id: '003803', releasedAt: 'Apr 2026' },
+  { id: '021001', releasedAt: 'Apr 2026' },
+  // Mar 2026
+  { id: '067801', releasedAt: 'Mar 2026' },
+  { id: '061092', releasedAt: 'Mar 2026' },
+  { id: '066802_c', releasedAt: 'Mar 2026' },
+  { id: '000502_c', releasedAt: 'Mar 2026' },
+  { id: '101102_c', releasedAt: 'Mar 2026' },
+  { id: '101101_c', releasedAt: 'Mar 2026' },
+  { id: '004201', releasedAt: 'Mar 2026' },
+  // Feb 2026
+  { id: '003604', releasedAt: 'Feb 2026' },
+  { id: '002403', releasedAt: 'Feb 2026' },
+  // Jan 2026
+  { id: '067702', releasedAt: 'Jan 2026' },
+  { id: '067701', releasedAt: 'Jan 2026' },
+  { id: '003892', releasedAt: 'Jan 2026' },
+  // Dec 2025
+  { id: '067604', releasedAt: 'Dec 2025' },
+  { id: '061492', releasedAt: 'Dec 2025' },
+  { id: '061103', releasedAt: 'Dec 2025' },
+  { id: '004102', releasedAt: 'Dec 2025' },
+  { id: '004002', releasedAt: 'Dec 2025' },
+  // Oct 2025
+  { id: '067103', releasedAt: 'Oct 2025' },
+  { id: '003902', releasedAt: 'Oct 2025' },
+  { id: '004001', releasedAt: 'Oct 2025' },
+  // Sep 2025
+  { id: '004101', releasedAt: 'Sep 2025' },
+  { id: '003901', releasedAt: 'Sep 2025' },
+  // Aug 2025
+  { id: '001197', releasedAt: 'Aug 2025' },
+  { id: '001006', releasedAt: 'Aug 2025' },
+  { id: '000807', releasedAt: 'Aug 2025' },
+  // Jul 2025
+  { id: '003702', releasedAt: 'Jul 2025' },
+  { id: '003603', releasedAt: 'Jul 2025' },
+  { id: '003602', releasedAt: 'Jul 2025' },
+  { id: '003601', releasedAt: 'Jul 2025' },
+  // Jun 2025 (2nd Anniversary)
+  { id: '000296', releasedAt: 'Jun 2025' },
+  { id: '067603', releasedAt: 'Jun 2025' },
+  { id: '000708', releasedAt: 'Jun 2025' },
+  { id: '066803', releasedAt: 'Jun 2025' },
+  { id: '061404', releasedAt: 'Jun 2025' },
+  // May 2025 (Goblin Slayer Collab & Apostle Morpeah)
+  { id: '020901', releasedAt: 'May 2025' },
+  { id: '020801', releasedAt: 'May 2025' },
+  { id: '020701', releasedAt: 'May 2025' },
+  { id: '020601', releasedAt: 'May 2025' },
+  { id: '003403', releasedAt: 'May 2025' },
+  // Apr 2025
+  { id: '067601', releasedAt: 'Apr 2025' },
+  // Mar 2025
+  { id: '003802', releasedAt: 'Mar 2025' },
+  { id: '003801', releasedAt: 'Mar 2025' },
+  // Feb 2025
+  { id: '003703', releasedAt: 'Feb 2025' },
+  { id: '003701', releasedAt: 'Feb 2025' },
+  // Jan 2025
+  { id: '067004', releasedAt: 'Jan 2025' },
+  // Dec 2024 (1.5 Anniversary)
+  { id: '003203', releasedAt: 'Dec 2024' },
+  { id: '003402', releasedAt: 'Dec 2024' },
+  { id: '003303', releasedAt: 'Dec 2024' },
+  { id: '067503', releasedAt: 'Dec 2024' },
+  { id: '067502', releasedAt: 'Dec 2024' },
+  // Nov 2024
+  { id: '067403', releasedAt: 'Nov 2024' },
+  { id: '067402', releasedAt: 'Nov 2024' },
+  // Oct 2024 (Senran Kagura Collab & Levia)
+  { id: '020501', releasedAt: 'Oct 2024' },
+  { id: '020401', releasedAt: 'Oct 2024' },
+  { id: '020301', releasedAt: 'Oct 2024' },
+  { id: '020201', releasedAt: 'Oct 2024' },
+  { id: '067303', releasedAt: 'Oct 2024' },
+  // Sep 2024
+  { id: '003302', releasedAt: 'Sep 2024' },
+  { id: '003301', releasedAt: 'Sep 2024' },
+  // Aug 2024
+  { id: '003401', releasedAt: 'Aug 2024' },
+  { id: '067401', releasedAt: 'Aug 2024' },
+  { id: '000707', releasedAt: 'Aug 2024' },
+  { id: '001107', releasedAt: 'Aug 2024' },
+  // Jul 2024
+  { id: '061305', releasedAt: 'Jul 2024' },
+  { id: '067202', releasedAt: 'Jul 2024' },
+  { id: '067201', releasedAt: 'Jul 2024' },
+  // Jun 2024 (1st Anniversary)
+  { id: '003501', releasedAt: 'Jun 2024' },
+  { id: '067302', releasedAt: 'Jun 2024' },
+  { id: '067301', releasedAt: 'Jun 2024' },
+  { id: '003202', releasedAt: 'Jun 2024' },
+  // May 2024 (Mushoku Tensei Collab)
+  { id: '020102', releasedAt: 'May 2024' },
+  { id: '020101', releasedAt: 'May 2024' },
+  { id: '020002', releasedAt: 'May 2024' },
+  { id: '020001', releasedAt: 'May 2024' },
+  // Apr 2024
+  { id: '067102', releasedAt: 'Apr 2024' },
+  { id: '067101', releasedAt: 'Apr 2024' },
+  { id: '003201', releasedAt: 'Apr 2024' },
+  { id: '066802', releasedAt: 'Apr 2024' },
+  { id: '066801', releasedAt: 'Apr 2024' },
+  { id: '003101', releasedAt: 'Apr 2024' },
+  // Mar 2024
+  { id: '000506', releasedAt: 'Mar 2024' },
+  { id: '060802', releasedAt: 'Mar 2024' },
+  { id: '060706', releasedAt: 'Mar 2024' },
+  // Feb 2024
+  { id: '001207', releasedAt: 'Feb 2024' },
+  { id: '000806', releasedAt: 'Feb 2024' },
+  { id: '066906', releasedAt: 'Feb 2024' },
+  // Jan 2024
+  { id: '065103', releasedAt: 'Jan 2024' },
+  { id: '067003', releasedAt: 'Jan 2024' },
+  { id: '066902', releasedAt: 'Jan 2024' },
+  { id: '067002', releasedAt: 'Jan 2024' },
+  // Dec 2023 (Half Anniversary)
+  { id: '000706', releasedAt: 'Dec 2023' },
+  { id: '060403', releasedAt: 'Dec 2023' },
+  { id: '061302', releasedAt: 'Dec 2023' },
+  { id: '065802', releasedAt: 'Dec 2023' },
+  // Nov 2023
+  { id: '061402', releasedAt: 'Nov 2023' },
+  { id: '002406', releasedAt: 'Nov 2023' },
+  { id: '002401', releasedAt: 'Nov 2023' },
+  { id: '000504', releasedAt: 'Nov 2023' },
+  { id: '001004', releasedAt: 'Nov 2023' },
+  { id: '000804', releasedAt: 'Nov 2023' },
+  { id: '065102', releasedAt: 'Nov 2023' },
+  // Oct 2023
+  { id: '000604', releasedAt: 'Oct 2023' },
+  { id: '000105', releasedAt: 'Oct 2023' },
+  { id: '060801', releasedAt: 'Oct 2023' },
+  { id: '001002', releasedAt: 'Oct 2023' },
+  { id: '001106', releasedAt: 'Oct 2023' },
+  // Sep 2023
+  { id: '066403', releasedAt: 'Sep 2023' },
+  { id: '066402', releasedAt: 'Sep 2023' },
+  { id: '066401', releasedAt: 'Sep 2023' },
+  { id: '001206', releasedAt: 'Sep 2023' },
+  // Aug 2023
+  { id: '000306', releasedAt: 'Aug 2023' },
+  { id: '000206', releasedAt: 'Aug 2023' },
+  { id: '000106', releasedAt: 'Aug 2023' },
+  { id: '000406', releasedAt: 'Aug 2023' },
+  // Jul 2023
+  { id: '061002', releasedAt: 'Jul 2023' },
+  { id: '061102', releasedAt: 'Jul 2023' },
+  { id: '101102', releasedAt: 'Jul 2023' },
+  { id: '101103', releasedAt: 'Jul 2023' },
+  { id: '000104', releasedAt: 'Jul 2023' },
+  { id: '000103', releasedAt: 'Jul 2023' },
+  { id: '000102', releasedAt: 'Jul 2023' },
+  { id: '000204', releasedAt: 'Jul 2023' },
+  { id: '000203', releasedAt: 'Jul 2023' },
+  { id: '000202', releasedAt: 'Jul 2023' },
+  { id: '000304', releasedAt: 'Jul 2023' },
+  { id: '000303', releasedAt: 'Jul 2023' },
+  { id: '000403', releasedAt: 'Jul 2023' },
+  { id: '000402', releasedAt: 'Jul 2023' },
+  { id: '000502', releasedAt: 'Jul 2023' },
+  { id: '060702', releasedAt: 'Jul 2023' },
+  { id: '060602', releasedAt: 'Jul 2023' },
+  { id: '060502', releasedAt: 'Jul 2023' },
+  { id: '060402', releasedAt: 'Jul 2023' },
+  { id: '060302', releasedAt: 'Jul 2023' },
+  { id: '062002', releasedAt: 'Jul 2023' },
+  { id: '101502', releasedAt: 'Jul 2023' },
+  { id: '101402', releasedAt: 'Jul 2023' },
+  { id: '101302', releasedAt: 'Jul 2023' },
+  { id: '101202', releasedAt: 'Jul 2023' },
+  { id: '100502', releasedAt: 'Jul 2023' },
+  // Jun 2023 (Game Launch)
+  { id: '000201', releasedAt: 'Jun 2023' },
+  { id: '000301', releasedAt: 'Jun 2023' },
+  { id: '000101', releasedAt: 'Jun 2023' },
+  { id: '000401', releasedAt: 'Jun 2023' },
+  { id: '000501', releasedAt: 'Jun 2023' },
+  { id: '000601', releasedAt: 'Jun 2023' },
+  { id: '000701', releasedAt: 'Jun 2023' },
+  { id: '000801', releasedAt: 'Jun 2023' },
+  { id: '001001', releasedAt: 'Jun 2023' },
+  { id: '001101', releasedAt: 'Jun 2023' },
+  { id: '001201', releasedAt: 'Jun 2023' },
+  { id: '003001', releasedAt: 'Jun 2023' },
+  { id: '060301', releasedAt: 'Jun 2023' },
+  { id: '060501', releasedAt: 'Jun 2023' },
+  { id: '060601', releasedAt: 'Jun 2023' },
+  { id: '060701', releasedAt: 'Jun 2023' },
+  { id: '061001', releasedAt: 'Jun 2023' },
+  { id: '061101', releasedAt: 'Jun 2023' },
+  { id: '062001', releasedAt: 'Jun 2023' },
+  { id: '063001', releasedAt: 'Jun 2023' },
+  { id: '063301', releasedAt: 'Jun 2023' },
+  { id: '063401', releasedAt: 'Jun 2023' },
+  { id: '101601', releasedAt: 'Jun 2023' },
+  { id: '101501', releasedAt: 'Jun 2023' },
+  { id: '101401', releasedAt: 'Jun 2023' },
+  { id: '101301', releasedAt: 'Jun 2023' },
+  { id: '101201', releasedAt: 'Jun 2023' },
+  { id: '101101', releasedAt: 'Jun 2023' },
+  { id: '100801', releasedAt: 'Jun 2023' },
+  { id: '100601', releasedAt: 'Jun 2023' },
+  { id: '100501', releasedAt: 'Jun 2023' },
+  { id: '100401', releasedAt: 'Jun 2023' },
+  { id: '100301', releasedAt: 'Jun 2023' },
+  { id: '100201', releasedAt: 'Jun 2023' },
+  { id: '100101', releasedAt: 'Jun 2023' },
+  { id: '103701', releasedAt: 'Jun 2023' },
+  { id: '103601', releasedAt: 'Jun 2023' },
+  { id: '103501', releasedAt: 'Jun 2023' },
+  { id: '103401', releasedAt: 'Jun 2023' },
+  { id: '103301', releasedAt: 'Jun 2023' },
+  { id: '103201', releasedAt: 'Jun 2023' },
+  // Story NPCs & Minigame (ordered newest added to oldest)
+  { id: '9016', releasedAt: 'NPC' },
+  { id: '9018', releasedAt: 'NPC' },
+  { id: '200551', releasedAt: 'NPC' },
+  { id: '300103', releasedAt: 'NPC' },
+  { id: '300104', releasedAt: 'NPC' },
+  { id: '300601', releasedAt: 'NPC' },
+  { id: '300701', releasedAt: 'NPC' },
+  { id: '400001', releasedAt: 'NPC' },
+  { id: '400017', releasedAt: 'NPC' },
+  { id: '400018', releasedAt: 'NPC' },
+  { id: '400034', releasedAt: 'NPC' },
+  { id: '400042', releasedAt: 'NPC' },
+  { id: '400049', releasedAt: 'NPC' },
+  { id: '400050', releasedAt: 'NPC' },
+  { id: '400056', releasedAt: 'NPC' },
+  { id: '400064', releasedAt: 'NPC' },
+  { id: '400070', releasedAt: 'NPC' },
+  { id: '400100', releasedAt: 'NPC' },
+  { id: '400123', releasedAt: 'NPC' },
+  { id: '400135', releasedAt: 'NPC' },
+  { id: '000001', releasedAt: 'NPC' },
+  { id: '000004', releasedAt: 'NPC' },
+  { id: 'ellin', releasedAt: 'NPC' },
+  { id: '400098', releasedAt: 'NPC' },
+  { id: 'minigame1', releasedAt: 'Minigame' },
+];
+
+export const SKIN_RELEASE_META = new Map<string, { order: number; releasedAt: string }>(
+  RECENT_SKIN_ORDER.map((entry, idx) => [entry.id, { order: idx, releasedAt: entry.releasedAt }])
+);
