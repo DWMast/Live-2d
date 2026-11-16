@@ -52,6 +52,35 @@ export interface BD2Character extends BD2CharacterRaw {
   skills?: CharacterSkill[];
   releaseOrder: number;
   releaseLabel: string;
+
+  // ---- multi-game catalog fields -------------------------------------------
+  /** 6-digit character id this spine belongs to (costumes share their base's id). */
+  baseId?: string;
+  /** 0 for a character's base spine, 01/02/... for its costumes. */
+  costumeIndex?: number;
+  /** Every export available for this character, base first. */
+  costumes?: string[];
+  /** Localised names beyond the primary English one. */
+  nameZh?: string;
+  aliases?: string[];
+  element?: string;
+  faction?: string;
+  role?: string;
+  /** Researched confidence for the display name; "none" means the id is unlabelled. */
+  confidence?: string;
+  /** False when no source names this spine yet. */
+  named?: boolean;
+  /** Playable character vs npc/scene/collab/battle variant. */
+  kind?: string;
+  /** Upstream file sizes, used to warn before a large download. */
+  bytes?: { skeleton: number; atlas: number; textures: number };
+  /** True when the export ships a separate backdrop spine (<id>_bg). */
+  hasBackdropSpine?: boolean;
+  /**
+   * Which backend serves this row. "game-cdn" rows come from the live game's own
+   * update packages, which carry the newer heroes the third-party rip lacks.
+   */
+  source?: 'rip' | 'game-cdn';
 }
 
 export interface SpineSlotLayer {

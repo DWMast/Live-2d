@@ -12,6 +12,9 @@ import { ENVIRONMENTS } from './data/environments';
 import { EnvironmentPreset, ScreenFilters } from './types';
 import { TopNav } from './components/TopNav';
 import { SpineViewer, SpineViewerHandle } from './components/SpineViewer';
+import { EchoSpineViewer, type ModelHealth } from './components/EchoSpineViewer';
+import { EchoHealthPanel } from './components/EchoHealthPanel';
+import { EchoRoster } from './components/EchoRoster';
 import { CinematicPlayer, CinematicLauncher } from './components/CinematicPlayer';
 import { ShotSequence } from './types/shot';
 import { buildCharacterSequence, buildDatingSequence } from './utils/shotSequencer';
@@ -118,6 +121,9 @@ export default function App() {
   }, []);
   const [diagShots, setDiagShots] = useState<PoseShotSummary[]>([]);
   const [diagNotice, setDiagNotice] = useState<string | null>(null);
+  /** Health report for the Echocalypse viewer, filled from the model files. */
+  const [echoHealth, setEchoHealth] = useState<ModelHealth | null>(null);
+  const [echoHealthOpen, setEchoHealthOpen] = useState(false);
 
   // Spacebar play/pause shortcut
   useEffect(() => {
@@ -145,6 +151,7 @@ export default function App() {
     setHiddenHistory([]);
     setSelectedLayerName(null);
     setIsMobileDrawerOpen(false);
+    setEchoHealth(null);
   }, []);
 
   // Switch between Brown Dust 2, Daiblos Core, Haze Reverb, Echocalypse, and Azur Lane via the corner Star button
@@ -322,6 +329,15 @@ export default function App() {
   };
 
   const renderDrawerContent = () => {
+    if (activeTab === 'roster' && activeGame === 'echocalypse') {
+      return (
+        <EchoRoster
+          characters={activeRoster}
+          selectedCharacter={selectedCharacter}
+          onSelectCharacter={handleSelectCharacter}
+        />
+      );
+    }
     if (activeTab === 'roster') {
       return (
         <CharacterDrawer
@@ -542,6 +558,24 @@ export default function App() {
             style={canvasFilterStyle ? { filter: canvasFilterStyle } : undefined}
           >
             <ErrorBoundary resetKey={`${selectedCharacter.id}:${activeCategory}`}>
+              {activeGame === 'echocalypse' ? (
+                <EchoSpineViewer
+                  ref={viewerRef as unknown as React.Ref<never>}
+                  character={selectedCharacter}
+                  isPlaying={isPlaying}
+                  animationSpeed={animationSpeed}
+                  activeAnimation={activeAnimation}
+                  onAnimationsLoaded={handleAnimationsLoaded}
+                  onLayersLoaded={handleLayersLoaded}
+                  hiddenLayers={hiddenLayers}
+                  onDeleteLayer={handleDeleteLayer}
+                  onUndoDelete={handleUndoDelete}
+                  onResetAllLayers={handleResetAllLayers}
+                  selectedLayerName={selectedLayerName}
+                  onSelectLayer={handleSelectLayer}
+                  onModelLoaded={setEchoHealth}
+                />
+              ) : (
               <SpineViewer
                 ref={viewerRef}
                 cameraLocked={activeSequence !== null}
@@ -565,11 +599,58 @@ export default function App() {
                 diagnosticNoMipmaps={diagToggles.noMipmaps}
                 diagnosticFlatShading={diagToggles.flatShading}
               />
+              )}
             </ErrorBoundary>
           </div>
 
+          {/* Echocalypse: model health, read from the files themselves */}
+          {activeGame === 'echocalypse' && !echoHealthOpen && (
+            <button
+              onClick={() => setEchoHealthOpen(true)}
+              className="absolute top-4 left-4 z-40 min-h-[36px] px-3 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-400/50 text-emerald-300 text-[11px] font-bold flex items-center gap-1.5 backdrop-blur-sm"
+              title="Model health: skeleton version, atlas alpha mode, texture contract"
+            >
+              <Bug className="w-3.5 h-3.5" />
+              Health
+            </button>
+          )}
+          <EchoHealthPanel
+            open={echoHealthOpen}
+            onClose={() => setEchoHealthOpen(false)}
+            health={echoHealth}
+            characterName={selectedCharacter.charName}
+            modelId={selectedCharacter.spine}
+          />
+
+          {/* Echocalypse: jump between this character's exports without leaving the stage */}
+          {activeGame === 'echocalypse' &&
+            (selectedCharacter.costumes?.length ?? 0) > 1 && (
+              <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-30 max-w-[92vw] overflow-x-auto">
+                <div className="flex items-center gap-1.5 p-1.5 rounded-2xl bg-slate-900/90 border border-slate-700/80 backdrop-blur-md">
+                  {selectedCharacter.costumes!.map((modelId) => {
+                    const member = activeRoster.find((c) => c.spine === modelId);
+                    if (!member) return null;
+                    const active = member.id === selectedCharacter.id;
+                    return (
+                      <button
+                        key={modelId}
+                        onClick={() => handleSelectCharacter(member)}
+                        className={`min-h-[32px] px-2.5 rounded-xl text-[11px] font-semibold whitespace-nowrap transition-colors ${
+                          active
+                            ? 'bg-emerald-600 text-white'
+                            : 'bg-slate-950/80 text-slate-300 hover:bg-slate-800'
+                        }`}
+                      >
+                        {member.costumeIndex === 0 ? 'Base' : member.costumeName}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
           {/* Render diagnostics launcher + panel */}
-          {!diagnosticsOpen && (
+          {!diagnosticsOpen && activeGame !== 'echocalypse' && (
             <button
               onClick={() => setDiagnosticsOpen(true)}
               className="absolute top-4 left-4 z-40 min-h-[36px] px-3 rounded-xl bg-amber-500/15 hover:bg-amber-500/25 border border-amber-400/50 text-amber-300 text-[11px] font-bold flex items-center gap-1.5 backdrop-blur-sm"

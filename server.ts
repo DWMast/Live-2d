@@ -4,6 +4,9 @@ import fsp from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import zlib from 'node:zlib';
+import { gameTextureToPng } from './server/echoTextures.ts';
+import { fetchFromCdn, cdnStatus, CdnNotCovered } from './server/echoCdn.ts';
+import { rangeCacheStats } from './server/remoteZip.ts';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PORT = Number(process.env.PORT) || 3000;
@@ -16,9 +19,13 @@ const UPSTREAM_HAZE_BASES = [
   'https://cdn.jsdelivr.net/gh/leililei/cwcx-asset@main',
   'https://raw.githubusercontent.com/leililei/cwcx-asset/main',
 ];
+// Echocalypse assets. jsDelivr is a fast, CORS-friendly CDN but caps individual
+// files at 50 MB and throttles large images; raw.githubusercontent has the higher
+// throughput ceiling for the ~3 MB atlas pages. Both point at the same commit
+// tree, so a file present in one is present in the other.
 const UPSTREAM_ECHO_BASES = [
-  'https://cdn.jsdelivr.net/gh/leililei/echocalypse-spine@main',
   'https://raw.githubusercontent.com/leililei/echocalypse-spine/main',
+  'https://cdn.jsdelivr.net/gh/leililei/echocalypse-spine@main',
 ];
 const UPSTREAM_AL_SPINE_BASES = [
   'https://cdn.jsdelivr.net/gh/o0Nomar0o/SpineCollections@main',
@@ -183,6 +190,59 @@ async function fetchUpstreamWithRetry(url: string, attempts = 3): Promise<Buffer
   throw lastErr;
 }
 
+/**
+ * Keep the on-disk cache bounded. Decoded echocalypse sheets are ~6.7 MB each, so
+ * a two-hundred-character browse would otherwise leave gigabytes behind in /tmp.
+ * Files are evicted oldest-first once the total passes the ceiling.
+ */
+const MAX_DISK_CACHE_BYTES = 768 * 1024 * 1024;
+let diskTrimRunning = false;
+
+async function trimDiskCache() {
+  if (diskTrimRunning) return;
+  diskTrimRunning = true;
+  try {
+    const files: Array<{ path: string; size: number; atime: number }> = [];
+    let total = 0;
+    const walk = async (dir: string) => {
+      let entries: fs.Dirent[];
+      try {
+        entries = await fsp.readdir(dir, { withFileTypes: true });
+      } catch {
+        return;
+      }
+      for (const e of entries) {
+        const full = path.join(dir, e.name);
+        if (e.isDirectory()) {
+          await walk(full);
+        } else if (e.isFile()) {
+          try {
+            const st = await fsp.stat(full);
+            files.push({ path: full, size: st.size, atime: st.atimeMs });
+            total += st.size;
+          } catch {
+            // raced with another writer; skip
+          }
+        }
+      }
+    };
+    await walk(DISK_CACHE_ROOT);
+    if (total <= MAX_DISK_CACHE_BYTES) return;
+    files.sort((a, b) => a.atime - b.atime);
+    for (const f of files) {
+      if (total <= MAX_DISK_CACHE_BYTES * 0.8) break;
+      try {
+        await fsp.unlink(f.path);
+        total -= f.size;
+      } catch {
+        // already gone
+      }
+    }
+  } finally {
+    diskTrimRunning = false;
+  }
+}
+
 async function resolveCachedAsset(
   namespace:
     | 'spines'
@@ -190,6 +250,7 @@ async function resolveCachedAsset(
     | 'daicore'
     | 'haze-spines'
     | 'echo-spines'
+    | 'echo-pics'
     | 'al-spines'
     | 'al-icons',
   relPath: string,
@@ -246,18 +307,51 @@ async function resolveCachedAsset(
         lastErr = err;
       }
     }
+
+    // Fall back to the game's own update CDN for anything the rip does not carry.
+    // The rip is a strict subset of what the game ships, and the newer heroes
+    // exist only in the game's packages, so without this step those characters
+    // would 404 forever.
+    if (!buffer && (namespace === 'echo-spines' || namespace === 'echo-pics')) {
+      try {
+        buffer = await fetchFromCdn(relPath);
+      } catch (err) {
+        if (!(err instanceof CdnNotCovered)) {
+          console.warn(`[echo] CDN fetch failed for ${relPath}: ${(err as Error).message}`);
+        }
+      }
+    }
+
     if (!buffer) {
       throw lastErr || new Error(`Failed to fetch ${relPath}`);
     }
 
-    const entry = buildRamEntry(relPath, buffer);
+    // Echocalypse sheets arrive as `UF` containers holding ETC2 blocks, which no
+    // browser can read. Decode them here, once, and cache the PNG rather than the
+    // container: the decode costs ~250 ms per sheet and the PNG is what every
+    // later request wants.
+    let served = buffer;
+    if (namespace === 'echo-spines' || namespace === 'echo-pics') {
+      try {
+        const decoded = gameTextureToPng(buffer);
+        if (decoded) served = decoded.png;
+      } catch (err) {
+        // A container we cannot decode is still better served raw than not at all,
+        // but say so loudly - a silent fallback is what made the old viewer look
+        // like it was working on textures it was mangling.
+        console.warn(`[echo] could not decode ${relPath}: ${(err as Error).message}`);
+      }
+    }
+
+    const entry = buildRamEntry(relPath, served);
     putRamCache(cacheKey, entry);
 
     // Persist asynchronously to disk cache
     void (async () => {
       try {
         await fsp.mkdir(path.dirname(diskPath), { recursive: true });
-        await fsp.writeFile(diskPath, buffer);
+        await fsp.writeFile(diskPath, served);
+        await trimDiskCache();
       } catch {
         // ignore disk cache write failure
       }
@@ -347,6 +441,20 @@ async function startServer() {
     }
   });
 
+  // Where Echocalypse assets are coming from, and what the process has cached.
+  // The health panel uses this to tell "this character is not in any source" apart
+  // from "this character failed to load", which otherwise look identical.
+  app.get('/api/echo-source-status', (_req, res) => {
+    res.setHeader('Cache-Control', 'no-store');
+    res.json({
+      sources: {
+        rip: { bases: UPSTREAM_ECHO_BASES },
+        cdn: cdnStatus(),
+      },
+      rangeCache: rangeCacheStats(),
+    });
+  });
+
   app.get('/api/echo-spine/*', async (req, res) => {
     const rawParam = (req.params as Record<string, string>)[0] ?? '';
     const relPath = sanitizeUtf8AssetPath(
@@ -363,6 +471,24 @@ async function startServer() {
     } catch (err) {
       const status = (err as { status?: number })?.status || 502;
       res.status(status).json({ error: `Failed to fetch Echocalypse asset: ${relPath}` });
+    }
+  });
+
+  // Character portraits (knightAvatar / fragment). These are small and stable, so
+  // they get a long-lived immutable cache header and no gzip.
+  app.get('/api/echo-pic/*', async (req, res) => {
+    const rawParam = (req.params as Record<string, string>)[0] ?? '';
+    const relPath = sanitizeUtf8AssetPath(rawParam, /\.(png|webp|jpg|jpeg)$/i);
+    if (!relPath) {
+      res.status(400).json({ error: 'Invalid Echocalypse portrait path' });
+      return;
+    }
+    try {
+      const entry = await resolveCachedAsset('echo-pics', relPath, UPSTREAM_ECHO_BASES, true);
+      sendCachedEntry(req, res, entry);
+    } catch (err) {
+      const status = (err as { status?: number })?.status || 502;
+      res.status(status).json({ error: `Failed to fetch Echocalypse portrait: ${relPath}` });
     }
   });
 

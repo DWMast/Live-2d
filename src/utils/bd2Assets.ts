@@ -9,6 +9,7 @@ export const CDN_AUDIO_BASE = '/api/bd2-audio';
 export const DAICORE_BASE = '/api/daicore';
 export const HAZE_SPINE_BASE = '/api/haze-spine';
 export const ECHO_SPINE_BASE = '/api/echo-spine';
+export const ECHO_PIC_BASE = '/api/echo-pic';
 export const AL_SPINE_BASE = '/api/al-spine';
 export const AL_ICON_BASE = '/api/al-icon';
 
@@ -48,8 +49,8 @@ export const GAME_LIST: GameDescriptor[] = [
     shortCode: 'EC',
     name: 'Echocalypse',
     studioName: 'Echocalypse Spine Studio',
-    rosterLabel: 'Echocalypse Roster',
-    engineLabel: 'Spine 3.8 HD · 344 Cases & Skins',
+    rosterLabel: 'Echocalypse Cases',
+    engineLabel: 'Spine 3.8 · 155 Characters · 141 Named',
     accentGradient: 'from-emerald-500 to-teal-600 shadow-emerald-500/20',
     accentText: 'text-emerald-400',
   },
@@ -176,12 +177,32 @@ interface HazeReverbCatalogEntry {
 
 interface EchocalypseCatalogEntry {
   id: string;
+  modelId: string;
   charName: string;
   costumeName: string;
-  modelType: 'skin' | 'character';
+  modelType: 'character' | 'skin' | 'costume' | 'npc' | 'scene' | 'collab' | 'battle' | 'unnamed';
   jsonPath: string;
   atlasPath: string;
+  spineVersion?: string;
+  pages?: string[];
+  kind?: string;
+  baseId?: string;
+  costumeIndex?: number;
+  costumes?: string[];
+  named?: boolean;
+  nameZh?: string;
+  aliases?: string[];
+  rarity?: string;
+  element?: string;
+  faction?: string;
+  role?: string;
+  confidence?: string;
+  bytes?: { skeleton: number; atlas: number; textures: number };
+  hasBackdropSpine?: boolean;
 }
+
+/** Playable characters come from the 6-digit base ids; the rest is secondary. */
+const ECHO_PLAYABLE_KINDS = new Set(['character', 'costume']);
 
 interface AzurLaneCatalogEntry {
   id: string;
@@ -271,26 +292,63 @@ export async function loadGameRoster(gameId: GameId): Promise<BD2Character[]> {
       const res = await fetch('/data/echocalypse_catalog.json');
       if (!res.ok) throw new Error(`Failed to load Echocalypse catalog (HTTP ${res.status})`);
       const rawList = (await res.json()) as EchocalypseCatalogEntry[];
-      mapped = rawList.map((item, idx) => ({
-        id: item.id,
-        game: 'echocalypse',
-        charName: item.charName,
-        costumeName: item.costumeName || 'Case Illustration',
-        spine: item.id,
-        cutscene: '',
-        dating: '',
-        audio: '',
-        skeletonUrl: encodeProxyPath(ECHO_SPINE_BASE, item.jsonPath),
-        atlasUrl: encodeProxyPath(ECHO_SPINE_BASE, item.atlasPath),
-        skeletonFormat: 'skel',
-        spineVersion: '3.8.99',
-        modelType: item.modelType,
-        iconUrl: '',
-        hasCutscene: false,
-        hasDating: false,
-        releaseOrder: idx,
-        releaseLabel: item.modelType === 'skin' ? 'Skin Spine' : 'Case Spine',
-      }));
+
+      // Character-first ordering: every base character, then its costumes, then
+      // the non-playable spines. The roster keeps that order so the list reads
+      // as characters rather than as a pile of files.
+      const order = (entry: EchocalypseCatalogEntry) => {
+        const kindRank = entry.kind && ECHO_PLAYABLE_KINDS.has(entry.kind) ? 0 : 1;
+        const base = Number(entry.baseId || entry.modelId);
+        const costume = entry.costumeIndex ?? 0;
+        return [kindRank, -base, costume] as const;
+      };
+      const sorted = [...rawList].sort((a, b) => {
+        const [ka, ba, ca] = order(a);
+        const [kb, bb, cb] = order(b);
+        if (ka !== kb) return ka - kb;
+        if (ba !== bb) return ba - bb;
+        return ca - cb;
+      });
+
+      mapped = sorted.map((item, idx) => {
+        const baseId = item.baseId || item.modelId;
+        const portraitId = baseId;
+        return {
+          id: item.id,
+          game: 'echocalypse' as const,
+          charName: item.charName,
+          costumeName: item.costumeName,
+          spine: item.modelId,
+          cutscene: '',
+          dating: '',
+          audio: '',
+          skeletonUrl: encodeProxyPath(ECHO_SPINE_BASE, item.jsonPath),
+          atlasUrl: encodeProxyPath(ECHO_SPINE_BASE, item.atlasPath),
+          skeletonFormat: 'skel' as const,
+          spineVersion: item.spineVersion || '3.8',
+          modelType: item.modelType,
+          // Portraits are keyed by the character id, not the export id.
+          iconUrl: encodeProxyPath(ECHO_PIC_BASE, `res/common/pic/knightAvatar/${portraitId}.png`),
+          hasCutscene: false,
+          hasDating: false,
+          releaseOrder: idx,
+          releaseLabel: item.rarity || '',
+          baseId,
+          costumeIndex: item.costumeIndex ?? 0,
+          costumes: item.costumes || [item.modelId],
+          nameZh: item.nameZh || '',
+          aliases: item.aliases || [],
+          rarity: item.rarity,
+          element: item.element,
+          faction: item.faction,
+          role: item.role,
+          confidence: item.confidence,
+          named: item.named,
+          kind: item.kind,
+          bytes: item.bytes,
+          hasBackdropSpine: item.hasBackdropSpine,
+        };
+      });
     } else if (gameId === 'azurlane') {
       const res = await fetch('/data/azurlane_catalog.json');
       if (!res.ok) throw new Error(`Failed to load Azur Lane catalog (HTTP ${res.status})`);
@@ -342,7 +400,13 @@ export function pickDefaultCharacterForGame(gameId: GameId, roster: BD2Character
     );
   }
   if (gameId === 'echocalypse') {
-    return roster.find((c) => c.modelType === 'skin') || roster[0];
+    // Open on a named character with a base spine, so the first thing anyone
+    // sees is a real character rather than an unlabelled promo variant.
+    return (
+      roster.find((c) => c.costumeIndex === 0 && c.named && c.charName === 'Levia') ||
+      roster.find((c) => c.costumeIndex === 0 && c.named) ||
+      roster[0]
+    );
   }
   if (gameId === 'azurlane') {
     return (
