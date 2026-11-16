@@ -11,7 +11,10 @@ import {
 import { ENVIRONMENTS } from './data/environments';
 import { EnvironmentPreset, ScreenFilters } from './types';
 import { TopNav } from './components/TopNav';
-import { SpineViewer } from './components/SpineViewer';
+import { SpineViewer, SpineViewerHandle } from './components/SpineViewer';
+import { CinematicPlayer, CinematicLauncher } from './components/CinematicPlayer';
+import { ShotSequence } from './types/shot';
+import { buildCharacterSequence, buildDatingSequence } from './utils/shotSequencer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { CharacterDrawer } from './components/CharacterDrawer';
 import { LayerDrawer } from './components/LayerDrawer';
@@ -50,6 +53,14 @@ export default function App() {
   const [selectedCharacter, setSelectedCharacter] = useState<BD2Character>(DEFAULT_CHARACTER);
   const [activeCategory, setActiveCategory] = useState<AnimationCategory>('character');
   const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useState(false);
+
+  // Cinematic shot sequencing (BD2-style standing -> dialogue framing)
+  const viewerRef = useRef<SpineViewerHandle | null>(null);
+  const viewportRef = useRef<HTMLDivElement | null>(null);
+  const [modelFrame, setModelFrame] = useState<
+    { x: number; y: number; width: number; height: number } | null
+  >(null);
+  const [activeSequence, setActiveSequence] = useState<ShotSequence | null>(null);
 
   const activeRoster = rostersByGame[activeGame] || ALL_CHARACTERS;
   const gameMeta = GAME_MAP[activeGame];
@@ -245,6 +256,25 @@ export default function App() {
     audio.play().catch(() => setIsVoicePlaying(false));
   }, [selectedCharacter, audioLanguage]);
 
+  // Cinematic sequences: drive the camera through a scripted list of shots
+  const handlePlayCutscene = useCallback(() => {
+    setActiveSequence(buildCharacterSequence(selectedCharacter.charName));
+  }, [selectedCharacter]);
+
+  const handlePlayDating = useCallback(() => {
+    setActiveSequence(buildDatingSequence(selectedCharacter.charName));
+  }, [selectedCharacter]);
+
+  const handleExitCinematic = useCallback(() => {
+    setActiveSequence(null);
+  }, []);
+
+  // Any character/category change invalidates a running sequence
+  useEffect(() => {
+    setActiveSequence(null);
+    setModelFrame(null);
+  }, [selectedCharacter.id, activeCategory]);
+
   // Download Transparent PNG Screenshot from the WebGL canvas specifically
   const handleTakeScreenshot = useCallback(() => {
     const canvas = document.querySelector('canvas.spine-player-canvas') as HTMLCanvasElement | null;
@@ -403,11 +433,15 @@ export default function App() {
           )}
 
           <div
+            ref={viewportRef}
             className="w-full h-full"
             style={canvasFilterStyle ? { filter: canvasFilterStyle } : undefined}
           >
             <ErrorBoundary resetKey={`${selectedCharacter.id}:${activeCategory}`}>
               <SpineViewer
+                ref={viewerRef}
+                cameraLocked={activeSequence !== null}
+                onReady={setModelFrame}
                 character={selectedCharacter}
                 category={activeCategory}
                 animationSpeed={animationSpeed}
@@ -444,6 +478,23 @@ export default function App() {
             hasAudio={Boolean(selectedCharacter.audio)}
             onTakeScreenshot={handleTakeScreenshot}
           />
+
+          {activeSequence ? (
+            <CinematicPlayer
+              sequence={activeSequence}
+              viewerRef={viewerRef}
+              viewportRef={viewportRef}
+              modelFrame={modelFrame}
+              onExit={handleExitCinematic}
+            />
+          ) : (
+            <CinematicLauncher
+              onPlayCutscene={handlePlayCutscene}
+              onPlayDating={handlePlayDating}
+              hasCutscene={activeGame === 'bd2'}
+              hasDating={activeGame === 'bd2'}
+            />
+          )}
         </main>
       </div>
 
