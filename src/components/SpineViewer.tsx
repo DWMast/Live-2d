@@ -44,13 +44,18 @@ interface SpineRuntimeMod {
 }
 
 /**
- * Keep mipmaps on. These models are drawn at less than 1 atlas texel per
- * screen pixel almost all the time, and without mipmaps GL "Linear" minifies
- * by point-sampling a couple of texels - which is the crunchy, crawling,
- * "low quality / pixelated" look on hair and cloth edges when panning or
- * animating. Mipmaps cost ~33% texture memory and fix it.
+ * Mipmaps off by default. These were on, which is what made characters look
+ * blurry: a full-body character here is nearly always MAGNIFIED (the atlas
+ * page is large, the character fills a fraction of it), and GL never reads the
+ * mip chain when magnifying. But turning mipmaps on forces MIN_FILTER to
+ * LINEAR_MIPMAP_LINEAR, and GLTexture.update() hardcodes MAG_FILTER to LINEAR,
+ * so the moment a character is scaled down even slightly the whole sprite goes
+ * through the trilinear path and softens.
+ *
+ * Re-enable only if you view characters consistently below 1:1 and see
+ * shimmering on hair while panning.
  */
-const WANT_MIPMAPS = true;
+const WANT_MIPMAPS = false;
 
 const SPINE_41_RUNTIME: SpineRuntimeMod = {
   SpinePlayer,
@@ -239,13 +244,23 @@ function ensureGLTexturePremultiplyPatch(
   if (!proto || typeof proto.update !== 'function') return;
 
   const usePma = Boolean(shouldPremultiplyOnUpload);
-  const isPma = 'DISABLE_UNPACK_PREMULTIPLIED_ALPHA_WEBGL' in ctor;
 
-  if (!isPma) {
-    // Older runtimes have no static flag to steer; make their own upload path
-    // request exactly what we want instead of leaving it to prior GL state.
-    ctor.DISABLE_UNPACK_PREMULTIPLIED_ALPHA_WEBGL = !usePma;
-  }
+  // GLTexture.update() reads the *static* GLTexture.DISABLE_UNPACK_... (which
+  // defaults to false) and only touches UNPACK_PREMULTIPLY_ALPHA_WEBGL when
+  // that static is true - at which point it forces the flag OFF. Left alone,
+  // the flag keeps whatever the GL context last had, normally the browser
+  // default of true (premultiply). So a straight-alpha atlas ("no pma: true")
+  // got its texels premultiplied on upload and then blended once more with
+  // SRC_ALPHA: every soft edge darkened twice, which is the grey-black
+  // fringing under brows/eyes and between fingers.
+  //
+  // The previous version only assigned this static when it was absent, but it
+  // is always present on these runtimes (GLTexture.js declares it), so the
+  // assignment never executed and the upload state was never corrected. Set
+  // it unconditionally, and also force the flag per-upload in the wrapper so
+  // switching between PMA and straight-alpha models cannot inherit stale
+  // state from the previous character.
+  ctor.DISABLE_UNPACK_PREMULTIPLIED_ALPHA_WEBGL = !usePma;
 
   const previous = proto.update as typeof proto.update & {
     __bd2Wrapped?: boolean;
