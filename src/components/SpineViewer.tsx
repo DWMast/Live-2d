@@ -176,6 +176,30 @@ type GLTextureCtorLike = {
 };
 
 /**
+ * Pull the page image URLs out of an atlas file.
+ *
+ * Spine atlas text is a sequence of blocks: a page block starts with a bare
+ * image filename, followed by key/value lines, then blank-line-separated region
+ * blocks. Only the first line of each page block is an image, but the simplest
+ * reliable test is "line that looks like an image path".
+ */
+function extractAtlasPageUrls(atlasText: string, atlasUrl: string): string[] {
+  const urls: string[] = [];
+  for (const rawLine of atlasText.split(/\r?\n/)) {
+    const line = rawLine.trim();
+    if (!/\.(png|webp|jpg|jpeg)$/i.test(line)) continue;
+    if (line.includes(':')) continue;
+    try {
+      // Page names are relative to the atlas file's own directory.
+      urls.push(new URL(line, new URL(atlasUrl, window.location.href)).href);
+    } catch {
+      // A malformed page name is not worth failing the load over.
+    }
+  }
+  return urls;
+}
+
+/**
  * Texture upload quality.
  *
  * Spine upsamples "Linear" atlas pages to mipmaps of its own accord, but the
@@ -378,7 +402,6 @@ interface SpineViewerProps {
    * Diagnostics: show one slot at a time, advancing automatically. Whichever
    * layer brings the dark marks back is the one that owns them.
    */
-  diagnosticIsolateSlots?: boolean;
 }
 
 /** Imperative camera control exposed to the shot sequencer. */
@@ -391,6 +414,26 @@ export interface SpineViewerHandle {
   setPose: (pose: { x: number; y: number; zoom: number }) => void;
   /** Restore the auto-fitted framing for the current character. */
   resetPose: () => void;
+  /**
+   * Grab the character's current pose as a crop of the live WebGL canvas.
+   *
+   * Returns the raw pixels *and* the character's bounding box in the same
+   * coordinate space, so dark marks can be measured against actual anatomy
+   * (eyes, fingers) instead of guessed at from a whole-screen screenshot.
+   */
+  capturePoseShot: () => CapturedPoseShot | null;
+}
+
+export interface CapturedPoseShot {
+  /** PNG data URL of the character region of the canvas. */
+  dataUrl: string;
+  /** Character bounds in data-URL image pixels. */
+  bounds: { x: number; y: number; width: number; height: number };
+  image: { width: number; height: number };
+  /** Physical atlas page URLs the model declares. */
+  atlasPages: string[];
+  /** Device pixel ratio the canvas is rendered at. */
+  pixelRatio: number;
 }
 
 type VertexAttachmentLike = {
@@ -617,7 +660,6 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
   onReady,
   diagnosticNoMipmaps = false,
   diagnosticFlatShading = false,
-  diagnosticIsolateSlots = false,
 }, ref) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const overlayCanvasRef = useRef<HTMLCanvasElement>(null);
@@ -644,8 +686,8 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
   const diagFlatRef = useRef(diagnosticFlatShading);
   diagFlatRef.current = diagnosticFlatShading;
   /** Slot names to draw when isolating; empty means "draw everything". */
-  const diagIsolatedSlotRef = useRef<string | null>(null);
-  const [isolatedSlotLabel, setIsolatedSlotLabel] = useState<string | null>(null);
+  /** Atlas page image URLs for the currently loaded model, reported by the snapshot. */
+  const atlasPageUrlsRef = useRef<string[]>([]);
 
   // Refs synced to the 60fps SpinePlayer update callback without re-creating the player
   const hiddenLayersRef = useRef<Set<string>>(hiddenLayers);
@@ -808,6 +850,74 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
 
   const runtimeRef = useRef<SpineRuntimeMod>(SPINE_41_RUNTIME);
 
+  /**
+   * Capture the character's current pose straight out of the WebGL buffer.
+   *
+   * The player is created with `preserveDrawingBuffer: true`, so the last drawn
+   * frame can be read back at any time. We crop to the character's bounding box
+   * (plus margin) because that is the only region worth measuring - a full-screen
+   * capture drags in the UI chrome and the letterbox, which is what made previous
+   * screenshot analysis so ambiguous.
+   */
+  const capturePoseShot = useCallback((): CapturedPoseShot | null => {
+    const player = playerRef.current;
+    const cam = player?.sceneRenderer?.camera;
+    const bounds = modelBoundsRef.current;
+    const canvas = containerRef.current?.querySelector('canvas') as HTMLCanvasElement | null;
+    if (!player || !cam || !bounds || !canvas || canvas.width === 0 || canvas.height === 0) {
+      return null;
+    }
+    const viewportWidth = cam.viewportWidth;
+    const viewportHeight = cam.viewportHeight;
+    if (!(viewportWidth > 0) || !(viewportHeight > 0)) return null;
+
+    // World units per canvas pixel, matching the player's own projection.
+    const unitsPerPxX = (viewportWidth * cam.zoom) / canvas.width;
+    const unitsPerPxY = (viewportHeight * cam.zoom) / canvas.height;
+    if (!Number.isFinite(unitsPerPxX) || !Number.isFinite(unitsPerPxY)) return null;
+
+    const left = (bounds.x - cam.position.x) / unitsPerPxX + canvas.width / 2;
+    const right = (bounds.x + bounds.width - cam.position.x) / unitsPerPxX + canvas.width / 2;
+    const top = canvas.height / 2 - (bounds.y + bounds.height - cam.position.y) / unitsPerPxY;
+    const bottom = canvas.height / 2 - (bounds.y - cam.position.y) / unitsPerPxY;
+
+    // 8% margin so a mark straddling the silhouette is never clipped away.
+    const marginX = Math.max(8, Math.round((right - left) * 0.08));
+    const marginY = Math.max(8, Math.round((bottom - top) * 0.08));
+    const sx = Math.max(0, Math.floor(left - marginX));
+    const sy = Math.max(0, Math.floor(top - marginY));
+    const sw = Math.min(canvas.width - sx, Math.ceil(right - left + marginX * 2));
+    const sh = Math.min(canvas.height - sy, Math.ceil(bottom - top + marginY * 2));
+    if (sw <= 0 || sh <= 0) return null;
+
+    try {
+      const out = document.createElement('canvas');
+      out.width = sw;
+      out.height = sh;
+      const ctx = out.getContext('2d');
+      if (!ctx) return null;
+      // Fill white first: the canvas itself is transparent, and a transparent
+      // backdrop makes dark pixels impossible to judge against their surroundings.
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, sw, sh);
+      ctx.drawImage(canvas, sx, sy, sw, sh, 0, 0, sw, sh);
+      return {
+        dataUrl: out.toDataURL('image/png'),
+        bounds: {
+          x: Math.round(left - sx),
+          y: Math.round(top - sy),
+          width: Math.round(right - left),
+          height: Math.round(bottom - top),
+        },
+        image: { width: sw, height: sh },
+        atlasPages: atlasPageUrlsRef.current,
+        pixelRatio: window.devicePixelRatio || 1,
+      };
+    } catch {
+      return null;
+    }
+  }, []);
+
   // Imperative camera handle for the shot sequencer. Camera state lives in
   // refs so driving it at 60fps never triggers a React re-render of the canvas.
   React.useImperativeHandle(
@@ -854,8 +964,9 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
         }
         if (player && !isPlayingRef.current) safeDrawFrame(player);
       },
+      capturePoseShot,
     }),
-    []
+    [capturePoseShot]
   );
 
   // Load Spine Model using parallel prefetch + zero-copy downloader + non-blocking viewport
@@ -894,6 +1005,7 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
         if (!isSubscribed) return;
 
         isAtlasPma = /\bpma\s*:\s*true\b/i.test(cachedAssets.atlasText);
+        atlasPageUrlsRef.current = extractAtlasPageUrls(cachedAssets.atlasText, atlasUrl);
         const version = detectSpineVersion(cachedAssets);
         if (version === '4.0') {
           const mod = await import('../vendor/spine-player4.0.js');
@@ -972,8 +1084,7 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
                 p.skeleton,
                 hiddenLayersRef.current,
                 slotSetupColorsRef.current,
-                slotsForcedHiddenRef.current,
-                diagIsolatedSlotRef.current
+                slotsForcedHiddenRef.current
               );
               if (diagFlatRef.current) {
                 neutraliseSlotTints(p.skeleton, hiddenLayersRef.current);
@@ -1392,78 +1503,13 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
       player.skeleton,
       hiddenLayers,
       slotSetupColorsRef.current,
-      slotsForcedHiddenRef.current,
-      diagIsolatedSlotRef.current
+      slotsForcedHiddenRef.current
     );
     if (!isPlaying) {
       safeDrawFrame(player);
     }
     drawHighlightOverlay();
   }, [hiddenLayers, selectedLayerName, isPlaying, drawHighlightOverlay]);
-
-  /**
-   * Diagnostics: cycle through slots one at a time.
-   *
-   * This is the fastest way to attribute a mark to a specific layer - if the
-   * dark patch under the brows appears while "brow_02" (or whatever it is
-   * called) is the only visible slot, the mark is that layer's geometry or its
-   * atlas region, not a compositing issue.
-   */
-  useEffect(() => {
-    if (!diagnosticIsolateSlots) {
-      diagIsolatedSlotRef.current = null;
-      setIsolatedSlotLabel(null);
-      const player = playerRef.current;
-      if (player?.skeleton) {
-        applySlotVisibility(
-          player.skeleton,
-          hiddenLayersRef.current,
-          slotSetupColorsRef.current,
-          slotsForcedHiddenRef.current,
-          null
-        );
-        if (!isPlayingRef.current) safeDrawFrame(player);
-      }
-      return;
-    }
-
-    const player = playerRef.current;
-    const skeleton = player?.skeleton;
-    if (!skeleton) return;
-
-    const allSlots = (skeleton.slots || []).map((s) => s.data.name).filter(Boolean);
-    // Only slots that actually have something to draw are worth cycling.
-    const visible = (skeleton.slots as unknown as SlotWithDarkColor[])
-      .filter((s) => s.getAttachment() != null)
-      .map((s) => s.data.name)
-      .filter((n) => !hiddenLayersRef.current.has(n));
-    const candidates = visible.length > 0 ? visible : allSlots;
-    if (candidates.length === 0) return;
-
-    let index = 0;
-    const apply = () => {
-      const name = candidates[index % candidates.length];
-      diagIsolatedSlotRef.current = name;
-      setIsolatedSlotLabel(name);
-      applySlotVisibility(
-        skeleton,
-        hiddenLayersRef.current,
-        slotSetupColorsRef.current,
-        slotsForcedHiddenRef.current,
-        name
-      );
-      if (!isPlayingRef.current) safeDrawFrame(player);
-      index += 1;
-    };
-
-    apply();
-    const timer = window.setInterval(apply, 1800);
-    return () => {
-      window.clearInterval(timer);
-      diagIsolatedSlotRef.current = null;
-      setIsolatedSlotLabel(null);
-    };
-  }, [diagnosticIsolateSlots, character.id, category]);
 
   // Hit test coordinate conversion
   const getWorldPoint = useCallback((clientX: number, clientY: number) => {
@@ -1580,13 +1626,6 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
         ref={overlayCanvasRef}
         className="absolute inset-0 pointer-events-none z-20"
       />
-
-      {/* Diagnostics: label the currently isolated slot */}
-      {diagnosticIsolateSlots && (
-        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-40 px-3 py-1.5 rounded-xl bg-amber-500/90 text-slate-950 text-[11px] font-bold font-mono pointer-events-none max-w-[80%] truncate">
-          {isolatedSlotLabel ? `isolated: ${isolatedSlotLabel}` : 'isolating…'}
-        </div>
-      )}
 
       {/* Loading Overlay */}
       {isLoading && (

@@ -25,6 +25,7 @@ import {
   RenderDiagnostics,
   DEFAULT_DIAGNOSTIC_TOGGLES,
   DiagnosticToggles,
+  PoseShotSummary,
 } from './components/RenderDiagnostics';
 import { ChevronDown, ChevronUp, Bug } from 'lucide-react';
 
@@ -115,6 +116,8 @@ export default function App() {
   const handleChangeDiagToggles = useCallback((updates: Partial<DiagnosticToggles>) => {
     setDiagToggles((prev) => ({ ...prev, ...updates }));
   }, []);
+  const [diagShots, setDiagShots] = useState<PoseShotSummary[]>([]);
+  const [diagNotice, setDiagNotice] = useState<string | null>(null);
 
   // Spacebar play/pause shortcut
   useEffect(() => {
@@ -401,9 +404,6 @@ export default function App() {
     lines.push(`vignette  : ${diagToggles.rawCanvas ? 'off (raw)' : filters.vignette.toFixed(2)}`);
     lines.push(`scanlines : ${filters.scanlines ? 'on' : 'off'}`);
     lines.push(`hidden    : ${hiddenLayers.size} layer(s)`);
-    lines.push(
-      `isolating : ${diagToggles.isolateSlots ? 'on - read the amber label over the character' : 'off'}`
-    );
     lines.push('--- toggles ---');
     (Object.keys(diagToggles) as Array<keyof DiagnosticToggles>).forEach((k) => {
       lines.push(`${k.padEnd(12)}: ${diagToggles[k] ? 'ON' : 'off'}`);
@@ -420,12 +420,35 @@ export default function App() {
     hiddenLayers.size,
   ]);
 
-  const handleCopyDiagnosticReport = useCallback(() => {
-    const text = `=== Ego Apocalypse render report ===\n${diagnosticReport}`;
-    if (navigator.clipboard?.writeText) {
-      navigator.clipboard.writeText(text).catch(() => undefined);
+  /**
+   * Capture the character as it is right now.
+   *
+   * Each shot records the pose it was taken at, because "the marks appear when
+   * zoomed in" and "the marks appear at default zoom" are different bugs and the
+   * only way to tell them apart later is to have the numbers attached.
+   */
+  const handleCaptureShot = useCallback(() => {
+    const shot = viewerRef.current?.capturePoseShot();
+    if (!shot) {
+      setDiagNotice('Nothing to capture yet - wait for the character to load.');
+      return;
     }
-  }, [diagnosticReport]);
+    const pose = viewerRef.current?.getPose();
+    const name = selectedCharacter?.charName ?? 'character';
+    const detail = [
+      `${shot.image.width}x${shot.image.height}px @${shot.pixelRatio}x`,
+      `model ${selectedCharacter?.id ?? '?'}/${activeCategory}`,
+      pose ? `zoom ${pose.zoom.toFixed(3)}` : 'zoom ?',
+      `atlas ${shot.atlasPages.map((p) => p.split('/').pop()).join(', ') || '?'}`,
+      `mipmaps ${diagToggles.noMipmaps ? 'off' : 'on'}`,
+      `filter ${diagToggles.rawCanvas ? 'raw' : 'css'}`,
+    ].join(' · ');
+    setDiagShots((prev) => [
+      ...prev.slice(-5),
+      { label: `${name} — ${new Date().toLocaleTimeString()}`, dataUrl: shot.dataUrl, detail },
+    ]);
+    setDiagNotice(null);
+  }, [selectedCharacter, activeCategory, diagToggles.noMipmaps, diagToggles.rawCanvas]);
 
   return (
     <div className="w-screen h-[100dvh] flex flex-col bg-slate-950 text-slate-100 overflow-hidden font-sans">
@@ -541,7 +564,6 @@ export default function App() {
                 isVoicePlaying={isVoicePlaying}
                 diagnosticNoMipmaps={diagToggles.noMipmaps}
                 diagnosticFlatShading={diagToggles.flatShading}
-                diagnosticIsolateSlots={diagToggles.isolateSlots}
               />
             </ErrorBoundary>
           </div>
@@ -562,8 +584,10 @@ export default function App() {
             onClose={() => setDiagnosticsOpen(false)}
             toggles={diagToggles}
             onChangeToggles={handleChangeDiagToggles}
-            onCopyReport={handleCopyDiagnosticReport}
-            reportText={diagnosticReport}
+            shots={diagShots}
+            onCapture={handleCaptureShot}
+            onClearShots={() => setDiagShots([])}
+            reportText={diagNotice ? `${diagNotice}\n\n${diagnosticReport}` : diagnosticReport}
           />
 
           {/* Floating Control Toolbar */}
