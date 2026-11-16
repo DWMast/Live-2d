@@ -143,14 +143,20 @@ export const EchoSpineViewer = React.forwardRef<
   ref
 ) {
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const overlayCanvasRef = useRef<HTMLCanvasElement | null>(null);
+  const containerSizeRef = useRef<{ width: number; height: number }>({ width: 800, height: 600 });
+  const overlayHasDrawingRef = useRef(false);
   const playerRef = useRef<SpinePlayer | null>(null);
   const cameraRef = useRef<OrthoCamera | null>(null);
   const runtimeRef = useRef<RuntimeModule>(DEFAULT_RUNTIME);
   const defaultPoseRef = useRef<{ x: number; y: number; zoom: number } | null>(null);
   const hiddenRef = useRef(hiddenLayers);
+  const selectedLayerRef = useRef<string | null>(selectedLayerName);
   const playingRef = useRef(isPlaying);
   const speedRef = useRef(animationSpeed);
   const onSelectLayerRef = useRef(onSelectLayer);
+  const onDeleteLayerRef = useRef(onDeleteLayer);
+  const onUndoDeleteRef = useRef(onUndoDelete);
   const setupColorsRef = useRef<Map<string, SlotLike['color']>>(new Map());
   const forcedHiddenRef = useRef<Set<string>>(new Set());
   const [reloadNonce, setReloadNonce] = useState(0);
@@ -160,9 +166,12 @@ export const EchoSpineViewer = React.forwardRef<
   const [error, setError] = useState<{ message: string; detail: string } | null>(null);
 
   hiddenRef.current = hiddenLayers;
+  selectedLayerRef.current = selectedLayerName;
   playingRef.current = isPlaying;
   speedRef.current = animationSpeed;
   onSelectLayerRef.current = onSelectLayer;
+  onDeleteLayerRef.current = onDeleteLayer;
+  onUndoDeleteRef.current = onUndoDelete;
 
   // ---------------------------------------------------------------------------
   // visibility
@@ -189,26 +198,233 @@ export const EchoSpineViewer = React.forwardRef<
     }
   }, []);
 
-  const syncCamera = useCallback((cam: OrthoCamera) => {
-    cam.update();
+  const drawHighlightOverlay = useCallback(() => {
+    const overlay = overlayCanvasRef.current;
     const player = playerRef.current;
-    const renderCam = player?.sceneRenderer?.camera;
-    if (renderCam) {
-      renderCam.viewportWidth = cam.viewportWidth;
-      renderCam.viewportHeight = cam.viewportHeight;
-      renderCam.position.x = cam.position.x;
-      renderCam.position.y = cam.position.y;
-      renderCam.zoom = cam.zoom;
-      renderCam.update();
+    const activeLayer = selectedLayerRef.current;
+
+    if (!overlay) return;
+    if (
+      !activeLayer ||
+      !player?.skeleton ||
+      hiddenRef.current.has(activeLayer)
+    ) {
+      if (overlayHasDrawingRef.current) {
+        const ctx = overlay.getContext('2d');
+        ctx?.clearRect(0, 0, overlay.width, overlay.height);
+        overlayHasDrawingRef.current = false;
+      }
+      return;
     }
-    if (!playingRef.current) {
-      try {
-        (player as unknown as { drawFrame?: (req?: boolean) => void } | null)?.drawFrame?.(false);
-      } catch {
-        // ignore
+
+    const rect = containerRef.current?.getBoundingClientRect();
+    const cssW = rect && rect.width > 0 ? rect.width : containerSizeRef.current.width;
+    const cssH = rect && rect.height > 0 ? rect.height : containerSizeRef.current.height;
+    const dpr = Math.min(window.devicePixelRatio || 1, 3);
+    const targetW = Math.max(1, Math.round(cssW * dpr));
+    const targetH = Math.max(1, Math.round(cssH * dpr));
+    if (overlay.width !== targetW || overlay.height !== targetH) {
+      overlay.width = targetW;
+      overlay.height = targetH;
+    }
+
+    const ctx = overlay.getContext('2d');
+    if (!ctx) return;
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, targetW, targetH);
+
+    const skeleton = player.skeleton as unknown as {
+      drawOrder?: SlotLike[];
+      slots?: SlotLike[];
+    };
+    const slot =
+      skeleton.drawOrder?.find((s) => s.data.name === activeLayer) ||
+      skeleton.slots?.find((s) => s.data.name === activeLayer);
+    if (!slot) {
+      overlayHasDrawingRef.current = false;
+      return;
+    }
+
+    const attachment = slot.getAttachment?.() as {
+      worldVerticesLength?: number;
+      hullLength?: number;
+      triangles?: number[];
+      computeWorldVertices?: (...args: unknown[]) => void;
+    } | null;
+    const renderCam = player.sceneRenderer?.camera;
+
+    if (
+      !attachment?.computeWorldVertices ||
+      !renderCam ||
+      renderCam.viewportWidth <= 0 ||
+      renderCam.viewportHeight <= 0
+    ) {
+      overlayHasDrawingRef.current = false;
+      return;
+    }
+
+    const { position, zoom, viewportWidth, viewportHeight } = renderCam;
+    const halfW = (viewportWidth / 2) * zoom;
+    const halfH = (viewportHeight / 2) * zoom;
+    if (!Number.isFinite(halfW) || !Number.isFinite(halfH) || halfW === 0 || halfH === 0) {
+      overlayHasDrawingRef.current = false;
+      return;
+    }
+
+    const projectX = (wx: number) => (((wx - position.x) / halfW + 1) / 2) * cssW;
+    const projectY = (wy: number) => ((1 - (wy - position.y) / halfH) / 2) * cssH;
+
+    let count = 0;
+    let buf: Float32Array;
+    try {
+      if (typeof attachment.worldVerticesLength === 'number' && attachment.worldVerticesLength > 0) {
+        count = attachment.worldVerticesLength;
+        buf = new Float32Array(count);
+        attachment.computeWorldVertices(slot, 0, count, buf, 0, 2);
+      } else {
+        count = 8;
+        buf = new Float32Array(8);
+        try {
+          attachment.computeWorldVertices(slot, buf, 0, 2);
+        } catch {
+          if (!slot.bone) return;
+          attachment.computeWorldVertices(slot.bone, buf, 0, 2);
+        }
+      }
+    } catch {
+      return;
+    }
+
+    if (count < 6) return;
+
+    ctx.save();
+    ctx.scale(dpr, dpr);
+    ctx.strokeStyle = '#38bdf8';
+    ctx.fillStyle = 'rgba(56, 189, 248, 0.18)';
+    ctx.lineWidth = 2;
+    ctx.setLineDash([6, 4]);
+
+    const tris = attachment.triangles;
+    if (tris && tris.length >= 3) {
+      // Fill the exact triangle mesh without self-overlap streaks
+      ctx.beginPath();
+      for (let t = 0; t + 2 < tris.length; t += 3) {
+        const i0 = tris[t] * 2;
+        const i1 = tris[t + 1] * 2;
+        const i2 = tris[t + 2] * 2;
+        if (
+          !Number.isFinite(buf[i0]) ||
+          !Number.isFinite(buf[i1]) ||
+          !Number.isFinite(buf[i2])
+        ) {
+          continue;
+        }
+        ctx.moveTo(projectX(buf[i0]), projectY(buf[i0 + 1]));
+        ctx.lineTo(projectX(buf[i1]), projectY(buf[i1 + 1]));
+        ctx.lineTo(projectX(buf[i2]), projectY(buf[i2 + 1]));
+        ctx.closePath();
+      }
+      ctx.fill();
+
+      // Stroke only the outer perimeter (`hullLength` or unique triangle boundary edges)
+      const hullLen =
+        typeof attachment.hullLength === 'number' &&
+        attachment.hullLength >= 6 &&
+        attachment.hullLength <= count
+          ? attachment.hullLength
+          : 0;
+
+      ctx.beginPath();
+      if (hullLen > 0) {
+        let moved = false;
+        for (let i = 0; i < hullLen; i += 2) {
+          const wx = buf[i];
+          const wy = buf[i + 1];
+          if (!Number.isFinite(wx) || !Number.isFinite(wy)) continue;
+          const sx = projectX(wx);
+          const sy = projectY(wy);
+          if (!moved) {
+            ctx.moveTo(sx, sy);
+            moved = true;
+          } else {
+            ctx.lineTo(sx, sy);
+          }
+        }
+        if (moved) ctx.closePath();
+      } else {
+        const edgeCounts = new Map<string, [number, number, number]>();
+        const addEdge = (a: number, b: number) => {
+          const lo = a < b ? a : b;
+          const hi = a < b ? b : a;
+          const key = `${lo}:${hi}`;
+          const prev = edgeCounts.get(key);
+          if (prev) prev[2] += 1;
+          else edgeCounts.set(key, [lo, hi, 1]);
+        };
+        for (let t = 0; t + 2 < tris.length; t += 3) {
+          addEdge(tris[t], tris[t + 1]);
+          addEdge(tris[t + 1], tris[t + 2]);
+          addEdge(tris[t + 2], tris[t]);
+        }
+        for (const [a, b, edgeCount] of edgeCounts.values()) {
+          if (edgeCount !== 1) continue;
+          ctx.moveTo(projectX(buf[a * 2]), projectY(buf[a * 2 + 1]));
+          ctx.lineTo(projectX(buf[b * 2]), projectY(buf[b * 2 + 1]));
+        }
+      }
+      ctx.stroke();
+    } else {
+      // Region / Quad attachment
+      ctx.beginPath();
+      let moved = false;
+      for (let i = 0; i < count; i += 2) {
+        const wx = buf[i];
+        const wy = buf[i + 1];
+        if (!Number.isFinite(wx) || !Number.isFinite(wy)) continue;
+        const sx = projectX(wx);
+        const sy = projectY(wy);
+        if (!moved) {
+          ctx.moveTo(sx, sy);
+          moved = true;
+        } else {
+          ctx.lineTo(sx, sy);
+        }
+      }
+      if (moved) {
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
       }
     }
+
+    ctx.restore();
+    overlayHasDrawingRef.current = true;
   }, []);
+
+  const syncCamera = useCallback(
+    (cam: OrthoCamera) => {
+      cam.update();
+      const player = playerRef.current;
+      const renderCam = player?.sceneRenderer?.camera;
+      if (renderCam) {
+        renderCam.viewportWidth = cam.viewportWidth;
+        renderCam.viewportHeight = cam.viewportHeight;
+        renderCam.position.x = cam.position.x;
+        renderCam.position.y = cam.position.y;
+        renderCam.zoom = cam.zoom;
+        renderCam.update();
+      }
+      if (!playingRef.current) {
+        try {
+          (player as unknown as { drawFrame?: (req?: boolean) => void } | null)?.drawFrame?.(false);
+        } catch {
+          // ignore
+        }
+      }
+      drawHighlightOverlay();
+    },
+    [drawHighlightOverlay]
+  );
 
   const clampZoom = useCallback((nextZoom: number): number => {
     const base = defaultPoseRef.current?.zoom || 1;
@@ -495,6 +711,7 @@ export const EchoSpineViewer = React.forwardRef<
             renderCam.update();
           }
           applyVisibility(p);
+          drawHighlightOverlay();
         },
         success: (p) => {
           if (disposed) {
@@ -631,7 +848,37 @@ export const EchoSpineViewer = React.forwardRef<
         // ignore
       }
     }
-  }, [hiddenLayers, applyVisibility]);
+    drawHighlightOverlay();
+  }, [hiddenLayers, applyVisibility, drawHighlightOverlay]);
+
+  useEffect(() => {
+    drawHighlightOverlay();
+  }, [selectedLayerName, isPlaying, activeAnimation, drawHighlightOverlay]);
+
+  // Keyboard shortcuts matching BD2 viewer
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (target && ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName)) return;
+
+      if (e.key === 'Delete' || e.key === 'Backspace' || e.key.toLowerCase() === 'h') {
+        if (selectedLayerRef.current) {
+          e.preventDefault();
+          onDeleteLayerRef.current(selectedLayerRef.current);
+        }
+      } else if (e.key.toLowerCase() === 'u') {
+        e.preventDefault();
+        onUndoDeleteRef.current();
+      } else if (e.key === 'Escape') {
+        if (selectedLayerRef.current) {
+          e.preventDefault();
+          onSelectLayerRef.current(null);
+        }
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, []);
 
   // ---------------------------------------------------------------------------
   // input: mouse pan / wheel & trackpad zoom / 2-finger pinch / tap layer pick
@@ -691,7 +938,7 @@ export const EchoSpineViewer = React.forwardRef<
       mousePanning = false;
       if (mouseMoved < 6) {
         const hit = hitTestLayerAtClientPoint(e.clientX, e.clientY);
-        onSelectLayerRef.current(hit);
+        onSelectLayerRef.current(hit && hit === selectedLayerRef.current ? null : hit);
       }
     };
 
@@ -804,7 +1051,7 @@ export const EchoSpineViewer = React.forwardRef<
           const lastTouch = e.changedTouches[0];
           if (lastTouch) {
             const hit = hitTestLayerAtClientPoint(lastTouch.clientX, lastTouch.clientY);
-            onSelectLayerRef.current(hit);
+            onSelectLayerRef.current(hit && hit === selectedLayerRef.current ? null : hit);
           }
         }
         touchPanStart = null;
@@ -818,6 +1065,10 @@ export const EchoSpineViewer = React.forwardRef<
     };
 
     const ro = new ResizeObserver(() => {
+      const rect = container.getBoundingClientRect();
+      if (rect.width > 0 && rect.height > 0) {
+        containerSizeRef.current = { width: rect.width, height: rect.height };
+      }
       const cam = cameraRef.current;
       const canvas = container.querySelector('canvas') as HTMLCanvasElement | null;
       if (!cam || !canvas) return;
@@ -828,6 +1079,8 @@ export const EchoSpineViewer = React.forwardRef<
         cam.viewportWidth = w;
         cam.viewportHeight = h;
         syncCamera(cam);
+      } else {
+        drawHighlightOverlay();
       }
     });
     ro.observe(container);
@@ -856,7 +1109,13 @@ export const EchoSpineViewer = React.forwardRef<
 
   return (
     <div className="relative w-full h-full flex items-center justify-center overflow-hidden select-none">
-      <div ref={containerRef} className="w-full h-full cursor-grab active:cursor-grabbing touch-none" />
+      <div ref={containerRef} className="w-full h-full cursor-grab active:cursor-grabbing relative z-10 touch-none" />
+
+      {/* Body-Part Highlight Overlay (matching BD2 viewer) */}
+      <canvas
+        ref={overlayCanvasRef}
+        className="absolute inset-0 w-full h-full pointer-events-none z-20"
+      />
 
       {loading && (
         <div className="absolute inset-0 z-30 flex flex-col items-center justify-center gap-3 bg-slate-950/75 backdrop-blur-sm">
@@ -889,19 +1148,22 @@ export const EchoSpineViewer = React.forwardRef<
 
       {/* Selected layer actions */}
       {selectedLayerName && (
-        <div className="absolute top-14 left-3 z-30 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-900/95 border border-emerald-400/50 shadow-xl backdrop-blur-md">
-          <span className="text-[11px] font-mono text-emerald-300 truncate max-w-[160px] sm:max-w-[220px]">
+        <div className="absolute top-14 left-3 sm:top-4 sm:left-1/2 sm:-translate-x-1/2 z-30 flex items-center gap-2.5 px-3.5 py-2 rounded-2xl bg-slate-900/95 border border-sky-400/50 shadow-2xl backdrop-blur-md">
+          <span className="w-2.5 h-2.5 rounded-full bg-sky-400 animate-ping shrink-0" />
+          <span className="text-xs text-slate-400 font-medium hidden sm:inline">Selected:</span>
+          <span className="text-xs font-bold text-sky-300 truncate max-w-[160px] sm:max-w-[220px] font-mono">
             {selectedLayerName}
           </span>
           <button
             onClick={() => onDeleteLayer(selectedLayerName)}
-            className="min-h-[28px] px-2.5 rounded-lg bg-rose-600 hover:bg-rose-500 text-white text-[11px] font-semibold flex items-center gap-1 transition-colors"
+            className="min-h-[30px] px-2.5 py-1 rounded-xl bg-rose-600 hover:bg-rose-500 text-white text-[11px] font-bold flex items-center gap-1.5 transition-colors shadow-md shadow-rose-600/25"
+            title="Hide this layer (Delete / Backspace / H)"
           >
-            <Trash2 className="w-3 h-3" /> Hide
+            <Trash2 className="w-3.5 h-3.5" /> Hide
           </button>
           <button
             onClick={() => onSelectLayer(null)}
-            className="w-6 h-6 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 flex items-center justify-center text-xs transition-colors"
+            className="w-7 h-7 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 flex items-center justify-center text-xs transition-colors"
             aria-label="Clear selection"
           >
             ✕

@@ -305,7 +305,8 @@ export default function App() {
 
   // Download Transparent PNG Screenshot from the active WebGL canvas
   const handleTakeScreenshot = useCallback(() => {
-    const canvas = (viewportRef.current?.querySelector('canvas') ||
+    const canvas = (viewportRef.current?.querySelector('canvas.spine-player-canvas') ||
+      viewportRef.current?.querySelector('canvas') ||
       document.querySelector('canvas.spine-player-canvas')) as HTMLCanvasElement | null;
     if (!canvas) return;
 

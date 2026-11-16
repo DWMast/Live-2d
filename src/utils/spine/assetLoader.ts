@@ -24,7 +24,14 @@ import { parseAtlas, planAlpha, pageFileCandidates, type AlphaPlan, type ParsedA
 
 export type SpineRuntimeVersion = '3.8' | '4.0' | '4.1' | '4.2';
 
-const CACHE_NAME = 'echocalypse-spine-v3';
+const CACHE_NAME = 'echocalypse-spine-v5';
+const LEGACY_CACHES = [
+  'echocalypse-spine-v1',
+  'echocalypse-spine-v2',
+  'echocalypse-spine-v3',
+  'echocalypse-spine-v4',
+];
+let legacyPurged = false;
 const MAX_CONCURRENT = 6;
 const RETRY_DELAYS = [300, 900, 1800];
 
@@ -90,6 +97,12 @@ function encodePath(relative: string): string {
 
 async function openCache(): Promise<Cache | null> {
   if (typeof caches === 'undefined') return null;
+  if (!legacyPurged) {
+    legacyPurged = true;
+    for (const oldName of LEGACY_CACHES) {
+      void caches.delete(oldName).catch(() => {});
+    }
+  }
   try {
     return await caches.open(CACHE_NAME);
   } catch {

@@ -6,6 +6,11 @@ import { fileURLToPath } from 'node:url';
 import zlib from 'node:zlib';
 import { gameTextureToPng } from './server/echoTextures.ts';
 import { fetchFromCdn, cdnStatus, CdnNotCovered } from './server/echoCdn.ts';
+import {
+  fetchFromUpgradeHquality,
+  upgradeCdnStatus,
+  UpgradeCdnNotCovered,
+} from './server/echoUpgradeCdn.ts';
 import { rangeCacheStats } from './server/remoteZip.ts';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -249,8 +254,8 @@ async function resolveCachedAsset(
     | 'audios'
     | 'daicore'
     | 'haze-spines'
-    | 'echo-spines'
-    | 'echo-pics'
+    | 'echo-spines-hq'
+    | 'echo-pics-hq'
     | 'al-spines'
     | 'al-icons',
   relPath: string,
@@ -299,25 +304,46 @@ async function resolveCachedAsset(
   const work = (async () => {
     let buffer: Buffer | null = null;
     let lastErr: unknown;
-    for (const base of bases) {
+    const isEchoHq = namespace === 'echo-spines-hq' || namespace === 'echo-pics-hq';
+
+    if (isEchoHq) {
       try {
-        buffer = await fetchUpstreamWithRetry(`${base}/${upstreamRel}`, 2);
-        break;
+        buffer = await fetchFromUpgradeHquality(relPath);
       } catch (err) {
+        if (!(err instanceof UpgradeCdnNotCovered)) {
+          throw err;
+        }
         lastErr = err;
       }
-    }
 
-    // Fall back to the game's own update CDN for anything the rip does not carry.
-    // The rip is a strict subset of what the game ships, and the newer heroes
-    // exist only in the game's packages, so without this step those characters
-    // would 404 forever.
-    if (!buffer && (namespace === 'echo-spines' || namespace === 'echo-pics')) {
-      try {
-        buffer = await fetchFromCdn(relPath);
-      } catch (err) {
-        if (!(err instanceof CdnNotCovered)) {
-          console.warn(`[echo] CDN fetch failed for ${relPath}: ${(err as Error).message}`);
+      if (!buffer) {
+        try {
+          buffer = await fetchFromCdn(relPath);
+        } catch (err) {
+          if (!(err instanceof CdnNotCovered)) {
+            console.warn(`[echo] CDN fallback failed for ${relPath}: ${(err as Error).message}`);
+          }
+          lastErr = err;
+        }
+      }
+
+      if (!buffer) {
+        for (const base of bases) {
+          try {
+            buffer = await fetchUpstreamWithRetry(`${base}/${upstreamRel}`, 2);
+            break;
+          } catch (err) {
+            lastErr = err;
+          }
+        }
+      }
+    } else {
+      for (const base of bases) {
+        try {
+          buffer = await fetchUpstreamWithRetry(`${base}/${upstreamRel}`, 2);
+          break;
+        } catch (err) {
+          lastErr = err;
         }
       }
     }
@@ -331,7 +357,7 @@ async function resolveCachedAsset(
     // container: the decode costs ~250 ms per sheet and the PNG is what every
     // later request wants.
     let served = buffer;
-    if (namespace === 'echo-spines' || namespace === 'echo-pics') {
+    if (isEchoHq) {
       try {
         const decoded = gameTextureToPng(buffer);
         if (decoded) served = decoded.png;
@@ -369,6 +395,20 @@ async function resolveCachedAsset(
 }
 
 async function startServer() {
+  // Purge legacy non-upgrade_hquality Echocalypse disk caches if present
+  void (async () => {
+    for (const legacyDir of ['echo-spines', 'echo-pics']) {
+      const target = path.join(DISK_CACHE_ROOT, legacyDir);
+      if (fs.existsSync(target)) {
+        try {
+          await fsp.rm(target, { recursive: true, force: true });
+        } catch {
+          // ignore cleanup failure
+        }
+      }
+    }
+  })();
+
   const app = express();
 
   app.get('/api/bd2-spine/*', async (req, res) => {
@@ -448,8 +488,9 @@ async function startServer() {
     res.setHeader('Cache-Control', 'no-store');
     res.json({
       sources: {
-        rip: { bases: UPSTREAM_ECHO_BASES },
+        upgradeHquality: upgradeCdnStatus(),
         cdn: cdnStatus(),
+        ripFallback: { bases: UPSTREAM_ECHO_BASES },
       },
       rangeCache: rangeCacheStats(),
     });
@@ -466,7 +507,7 @@ async function startServer() {
       return;
     }
     try {
-      const entry = await resolveCachedAsset('echo-spines', relPath, UPSTREAM_ECHO_BASES, true);
+      const entry = await resolveCachedAsset('echo-spines-hq', relPath, UPSTREAM_ECHO_BASES, true);
       sendCachedEntry(req, res, entry);
     } catch (err) {
       const status = (err as { status?: number })?.status || 502;
@@ -484,7 +525,7 @@ async function startServer() {
       return;
     }
     try {
-      const entry = await resolveCachedAsset('echo-pics', relPath, UPSTREAM_ECHO_BASES, true);
+      const entry = await resolveCachedAsset('echo-pics-hq', relPath, UPSTREAM_ECHO_BASES, true);
       sendCachedEntry(req, res, entry);
     } catch (err) {
       const status = (err as { status?: number })?.status || 502;

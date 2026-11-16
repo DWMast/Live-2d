@@ -121,6 +121,40 @@ test('decodeEtc2Rgba sizes output from the requested dimensions', () => {
   assert.equal(img.rgba.length, w * h * 4);
 });
 
+test('decodeEtc2Rgba decodes Individual mode R1/R2/G1/G2/B1/B2 channel order without green/magenta shift', () => {
+  // Block taken from Akira 700420: hi=0x838373c4 (grey C1=[8,8,7], C2=[3,3,3], diff=0)
+  const block = Buffer.from('0000000000000000838373c400000000', 'hex');
+  const img = decodeEtc2Rgba(block, 4, 4);
+  for (let i = 0; i < 16; i++) {
+    const r = img.rgba[i * 4];
+    const g = img.rgba[i * 4 + 1];
+    const b = img.rgba[i * 4 + 2];
+    assert.ok(Math.abs(r - g) <= 20 && Math.abs(g - b) <= 20, `neutral grey at texel ${i}, got ${r},${g},${b}`);
+  }
+});
+
+test('decodeEtc2Rgba decodes Planar mode smoothly', () => {
+  // Block from Akira 700420: hi=0x82820483 lo=0x040840c1 (dark planar gradient)
+  const block = Buffer.from('ff0000000000000082820483040840c1', 'hex');
+  const img = decodeEtc2Rgba(block, 4, 4);
+  for (let i = 0; i < 16; i++) {
+    const r = img.rgba[i * 4];
+    const g = img.rgba[i * 4 + 1];
+    const b = img.rgba[i * 4 + 2];
+    assert.ok(r <= 20 && g <= 20 && b <= 20, `expected dark planar values at texel ${i}, got ${r},${g},${b}`);
+    assert.equal(img.rgba[i * 4 + 3], 255);
+  }
+});
+
+test('decodeEtc2Rgba indexes EAC alpha in column-major order (x*4+y)', () => {
+  // Put idx=7 (+14 * 1) at t=1 (x=0, y=1) and idx=0 (-15 * 1) elsewhere on base=100.
+  // Bit 45..43 = idx0, bit 42..40 = idx1 = 7 -> bits = 7n << 42n = 0x1c0000000000n (byte 2=0x1c)
+  const block = Buffer.from('64101c000000000000000002ffffffff', 'hex');
+  const img = decodeEtc2Rgba(block, 4, 4);
+  // x=0, y=1 -> pixel offset (1*4 + 0) = 4 should have higher alpha than (0,1)
+  assert.ok(img.rgba[4 * 4 + 3] > img.rgba[1 * 4 + 3], 't=1 must map to (x=0, y=1), not (x=1, y=0)');
+});
+
 test('gameTextureToPng passes a non-container through untouched', () => {
   const png = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a, 0, 0]);
   assert.equal(gameTextureToPng(png), null);

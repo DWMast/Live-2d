@@ -50,7 +50,7 @@ export const GAME_LIST: GameDescriptor[] = [
     name: 'Echocalypse',
     studioName: 'Echocalypse Spine Studio',
     rosterLabel: 'Echocalypse Cases',
-    engineLabel: 'Spine 3.8 · 155 Characters · 141 Named',
+    engineLabel: 'Spine 3.8 HD · 454 Models · 154 Named',
     accentGradient: 'from-emerald-500 to-teal-600 shadow-emerald-500/20',
     accentText: 'text-emerald-400',
   },
