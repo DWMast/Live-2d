@@ -43,6 +43,15 @@ interface SpineRuntimeMod {
   Physics?: { none: number; reset: number; update: number; pose: number };
 }
 
+/**
+ * Keep mipmaps on. These models are drawn at less than 1 atlas texel per
+ * screen pixel almost all the time, and without mipmaps GL "Linear" minifies
+ * by point-sampling a couple of texels - which is the crunchy, crawling,
+ * "low quality / pixelated" look on hair and cloth edges when panning or
+ * animating. Mipmaps cost ~33% texture memory and fix it.
+ */
+const WANT_MIPMAPS = true;
+
 const SPINE_41_RUNTIME: SpineRuntimeMod = {
   SpinePlayer,
   GLTexture,
@@ -52,25 +61,47 @@ const SPINE_41_RUNTIME: SpineRuntimeMod = {
   Downloader,
 };
 
-function detectSpineVersion(assets: CachedSpineAssets): '3.8' | '4.0' | '4.1' | '4.2' {
+type SpineRuntimeVersion = '3.8' | '4.0' | '4.1' | '4.2';
+
+/**
+ * Map a "major.minor" pair read out of a skeleton file onto the nearest runtime
+ * we actually ship. Anything newer than 4.1 must use the 4.2 build: the 4.1
+ * parser genuinely cannot read 4.2 skeleton data (new attachment fields, longer
+ * vertex/index encodings), and mis-parsing silently produces mangled geometry -
+ * misplaced, stretched or overlapping parts that read as visual "glitches".
+ */
+function mapMajorMinorToRuntime(majorMinor: string): SpineRuntimeVersion {
+  const [majorStr, minorStr] = majorMinor.split('.');
+  const major = Number(majorStr);
+  const minor = Number(minorStr);
+  if (!Number.isFinite(major) || !Number.isFinite(minor)) return '4.1';
+  if (major <= 3) return '3.8';
+  if (major === 4) {
+    if (minor <= 0) return '4.0';
+    if (minor === 1) return '4.1';
+    // 4.2 and every later 4.x line (the bundled "4.10" runtime is such a build)
+    return '4.2';
+  }
+  return '4.2';
+}
+
+function detectSpineVersion(assets: CachedSpineAssets): SpineRuntimeVersion {
   if (assets.isJson && assets.jsonText) {
-    const sample = assets.jsonText.slice(0, 1024);
+    const sample = assets.jsonText.slice(0, 2048);
     const match = sample.match(/"spine"\s*:\s*"(\d+)\.(\d+)/);
-    if (match) {
-      const majorMinor = `${match[1]}.${match[2]}`;
-      if (majorMinor === '3.7' || majorMinor === '3.8') return '3.8';
-      if (majorMinor === '4.0') return '4.0';
-      if (majorMinor === '4.2') return '4.2';
-      return '4.1';
-    }
+    if (match) return mapMajorMinorToRuntime(`${match[1]}.${match[2]}`);
     return '4.1';
   }
   if (assets.binary) {
-    const headerSlice = assets.binary.subarray(0, Math.min(assets.binary.length, 64));
-    const headerText = new TextDecoder('ascii', { fatal: false }).decode(headerSlice);
-    if (/3\.[78]\.\d+/.test(headerText) || /\b3\.8\b/.test(headerText)) return '3.8';
-    if (/4\.0\.\d+/.test(headerText)) return '4.0';
-    if (/4\.2\.\d+/.test(headerText)) return '4.2';
+    // The binary header is a hashed prefix followed by the plain version string
+    // of the exporter that wrote it, e.g. "...<hash>4.1.11". Scan enough of the
+    // prefix to always include it.
+    const headerSlice = assets.binary.subarray(0, Math.min(assets.binary.length, 96));
+    const headerText = new TextDecoder('latin1', { fatal: false }).decode(headerSlice);
+    const match = headerText.match(/(\d+)\.(\d+)\.(\d+)/);
+    if (match) {
+      return mapMajorMinorToRuntime(`${match[1]}.${match[2]}`);
+    }
   }
   return '4.1';
 }
@@ -135,27 +166,110 @@ function safeDrawFrame(player: SpinePlayer | null) {
   }
 }
 
+type GLTextureCtorLike = {
+  prototype: {
+    update: (useMipMaps: boolean) => void;
+    context?: { gl?: WebGLRenderingContext | WebGL2RenderingContext };
+    __bd2OrigUpdate?: (useMipMaps: boolean) => void;
+  };
+  DISABLE_UNPACK_PREMULTIPLIED_ALPHA_WEBGL?: boolean;
+};
+
+/**
+ * Texture upload quality.
+ *
+ * Spine upsamples "Linear" atlas pages to mipmaps of its own accord, but the
+ * player is created once per character. These knobs let the atlas decide what
+ * we want: mipmaps stop the shimmering / crunchy edges you get when a character
+ * is zoomed out on a high-DPI screen, anisotropy keeps glancing-angle edges
+ * (hair, cloaks, capes) from smearing into mush.
+ */
+const MAX_ANISOTROPY = 8;
+
+/**
+ * Make the atlas texture upload store premultiplied or straight (non-premultiplied)
+ * texels, matching what the atlas itself declares and what the batcher blends with.
+ *
+ * Why this matters: spine-webgl only ever touches UNPACK_PREMULTIPLY_ALPHA_WEBGL
+ * when `DISABLE_UNPACK_PREMULTIPLIED_ALPHA_WEBGL` is true, in which case it
+ * forces the flag OFF (straight alpha). Otherwise the flag keeps whatever value
+ * it last had on the GL context - typically the browser default of true.
+ *
+ * A straight-alpha atlas (no `pma: true` in the .atlas) whose texels were
+ * premultiplied on upload, then blended with SRC_ALPHA/ONE_MINUS_SRC_ALPHA,
+ * darkens every anti-aliased edge and every hair / cloth alpha ramp. At low
+ * opacity that reads as grey-black shadowing around limbs and soft black
+ * blotches under overlapping parts - exactly the "shadows everywhere / black
+ * blobs" symptom.
+ *
+ * We set the unpack flag explicitly on every upload, so the result no longer
+ * depends on context state left behind by some other upload.
+ */
 function ensureGLTexturePremultiplyPatch(
   GLTextureCtor: typeof GLTexture,
-  shouldPremultiplyOnUpload: boolean
+  shouldPremultiplyOnUpload: boolean,
+  wantsMipmaps: boolean
 ) {
-  const proto = GLTextureCtor.prototype as unknown as {
-    update: (useMipMaps: boolean) => void;
-    context?: { gl?: WebGLRenderingContext };
-    __bd2UsePremultiply?: boolean;
-    __bd2PremultipliedPatchApplied?: boolean;
+  const ctor = GLTextureCtor as unknown as GLTextureCtorLike;
+  const proto = ctor.prototype;
+  if (!proto || typeof proto.update !== 'function') return;
+
+  const usePma = Boolean(shouldPremultiplyOnUpload);
+  const isPma = 'DISABLE_UNPACK_PREMULTIPLIED_ALPHA_WEBGL' in ctor;
+
+  if (!isPma) {
+    // Older runtimes have no static flag to steer; make their own upload path
+    // request exactly what we want instead of leaving it to prior GL state.
+    ctor.DISABLE_UNPACK_PREMULTIPLIED_ALPHA_WEBGL = !usePma;
+  }
+
+  const previous = proto.update as typeof proto.update & {
+    __bd2Wrapped?: boolean;
+    __bd2UsePma?: boolean;
+    __bd2WantsMipmaps?: boolean;
   };
-  proto.__bd2UsePremultiply = shouldPremultiplyOnUpload;
-  if (proto.__bd2PremultipliedPatchApplied) return;
-  const originalUpdate = proto.update;
-  proto.update = function (useMipMaps: boolean) {
-    const gl = this.context?.gl;
+  const baseUpdate =
+    previous.__bd2Wrapped && proto.__bd2OrigUpdate ? proto.__bd2OrigUpdate : previous;
+
+  const wrapped = function (this: unknown, useMipMaps: boolean) {
+    const self = this as {
+      context?: { gl?: WebGLRenderingContext | WebGL2RenderingContext };
+    };
+    const gl = self.context?.gl;
+    const mipmaps = useMipMaps || wantsMipmaps;
     if (gl && !gl.isContextLost()) {
-      gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, Boolean(proto.__bd2UsePremultiply));
+      gl.pixelStorei(
+        gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL,
+        usePma ? 1 : 0
+      );
     }
-    originalUpdate.call(this, useMipMaps);
+    baseUpdate.call(this, mipmaps);
+    if (gl && !gl.isContextLost() && mipmaps) {
+      try {
+        const ext = gl.getExtension('EXT_texture_filter_anisotropic');
+        if (ext) {
+          const maxAniso = gl.getParameter(ext.MAX_TEXTURE_MAX_ANISOTROPY_EXT) as number;
+          gl.texParameterf(
+            gl.TEXTURE_2D,
+            ext.TEXTURE_MAX_ANISOTROPY_EXT,
+            Math.min(MAX_ANISOTROPY, maxAniso || 1)
+          );
+        }
+      } catch {
+        // Anisotropy is a nicety; never let it break texture upload.
+      }
+    }
+  } as typeof proto.update & {
+    __bd2Wrapped?: boolean;
+    __bd2UsePma?: boolean;
+    __bd2WantsMipmaps?: boolean;
   };
-  proto.__bd2PremultipliedPatchApplied = true;
+
+  wrapped.__bd2Wrapped = true;
+  wrapped.__bd2UsePma = usePma;
+  wrapped.__bd2WantsMipmaps = Boolean(wantsMipmaps);
+  proto.__bd2OrigUpdate = baseUpdate;
+  proto.update = wrapped;
 }
 
 function ensureSpinePlayerSafeShowError(SpinePlayerCtor: typeof SpinePlayer) {
@@ -217,6 +331,22 @@ interface SpineViewerProps {
   hasHiddenLayers: boolean;
   onPlayVoice: () => void;
   isVoicePlaying: boolean;
+  /** When true, the camera sequencer owns the camera and pan/zoom input is ignored. */
+  cameraLocked?: boolean;
+  /** Called once the skeleton is posed and the default camera has been fitted. */
+  onReady?: (frame: { x: number; y: number; width: number; height: number }) => void;
+}
+
+/** Imperative camera control exposed to the shot sequencer. */
+export interface SpineViewerHandle {
+  /** Live world-space bounding box of the character at the current pose. */
+  getModelFrame: () => { x: number; y: number; width: number; height: number } | null;
+  /** Current camera pose, or null if the player is not ready. */
+  getPose: () => { x: number; y: number; zoom: number } | null;
+  /** Apply a camera pose immediately and redraw if playback is paused. */
+  setPose: (pose: { x: number; y: number; zoom: number }) => void;
+  /** Restore the auto-fitted framing for the current character. */
+  resetPose: () => void;
 }
 
 type VertexAttachmentLike = {
@@ -354,7 +484,7 @@ function applySlotVisibility(skeleton: Skeleton, hidden: Set<string>) {
   }
 }
 
-export const SpineViewer: React.FC<SpineViewerProps> = ({
+export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>(({
   character,
   category,
   animationSpeed,
@@ -371,12 +501,22 @@ export const SpineViewer: React.FC<SpineViewerProps> = ({
   hasHiddenLayers,
   onPlayVoice,
   isVoicePlaying,
-}) => {
+  cameraLocked = false,
+  onReady,
+}, ref) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const overlayCanvasRef = useRef<HTMLCanvasElement>(null);
   const playerRef = useRef<SpinePlayer | null>(null);
   const manualCameraRef = useRef<OrthoCamera | null>(null);
   const defaultCameraPoseRef = useRef<{ x: number; y: number; zoom: number } | null>(null);
+  /** Model bounds measured when the skeleton finished loading, in world units. */
+  const modelBoundsRef = useRef<{ x: number; y: number; width: number; height: number } | null>(
+    null
+  );
+  const cameraLockedRef = useRef(cameraLocked);
+  cameraLockedRef.current = cameraLocked;
+  const onReadyRef = useRef(onReady);
+  onReadyRef.current = onReady;
 
   // Refs synced to the 60fps SpinePlayer update callback without re-creating the player
   const hiddenLayersRef = useRef<Set<string>>(hiddenLayers);
@@ -539,6 +679,56 @@ export const SpineViewer: React.FC<SpineViewerProps> = ({
 
   const runtimeRef = useRef<SpineRuntimeMod>(SPINE_41_RUNTIME);
 
+  // Imperative camera handle for the shot sequencer. Camera state lives in
+  // refs so driving it at 60fps never triggers a React re-render of the canvas.
+  React.useImperativeHandle(
+    ref,
+    () => ({
+      getModelFrame: () => modelBoundsRef.current,
+      getPose: () => {
+        const cam = manualCameraRef.current;
+        if (!cam) return null;
+        return { x: cam.position.x, y: cam.position.y, zoom: cam.zoom };
+      },
+      setPose: (pose) => {
+        const cam = manualCameraRef.current;
+        const player = playerRef.current;
+        if (!cam || !Number.isFinite(pose.zoom) || pose.zoom <= 0) return;
+        cam.position.x = pose.x;
+        cam.position.y = pose.y;
+        cam.zoom = pose.zoom;
+        cam.update();
+        const renderCam = player?.sceneRenderer?.camera;
+        if (renderCam) {
+          renderCam.position.x = pose.x;
+          renderCam.position.y = pose.y;
+          renderCam.zoom = pose.zoom;
+          renderCam.update();
+        }
+        if (player && !isPlayingRef.current) safeDrawFrame(player);
+      },
+      resetPose: () => {
+        const pose = defaultCameraPoseRef.current;
+        const cam = manualCameraRef.current;
+        if (!pose || !cam) return;
+        cam.position.x = pose.x;
+        cam.position.y = pose.y;
+        cam.zoom = pose.zoom;
+        cam.update();
+        const player = playerRef.current;
+        const renderCam = player?.sceneRenderer?.camera;
+        if (renderCam) {
+          renderCam.position.x = pose.x;
+          renderCam.position.y = pose.y;
+          renderCam.zoom = pose.zoom;
+          renderCam.update();
+        }
+        if (player && !isPlayingRef.current) safeDrawFrame(player);
+      },
+    }),
+    []
+  );
+
   // Load Spine Model using parallel prefetch + zero-copy downloader + non-blocking viewport
   useEffect(() => {
     const container = containerRef.current;
@@ -607,7 +797,7 @@ export const SpineViewer: React.FC<SpineViewerProps> = ({
       setLoadingStage('webgl');
 
       try {
-        ensureGLTexturePremultiplyPatch(runtime.GLTexture, !isAtlasPma);
+        ensureGLTexturePremultiplyPatch(runtime.GLTexture, !isAtlasPma, WANT_MIPMAPS);
         ensureSpinePlayerSafeShowError(runtime.SpinePlayer);
 
         const skeletonConfig: Record<string, unknown> = isJson
@@ -623,7 +813,7 @@ export const SpineViewer: React.FC<SpineViewerProps> = ({
           premultipliedAlpha: true,
           preserveDrawingBuffer: true,
           alpha: true,
-          mipmaps: false,
+          mipmaps: WANT_MIPMAPS,
           backgroundColor: '#00000000',
           viewport: {
             x: -500,
@@ -713,10 +903,21 @@ export const SpineViewer: React.FC<SpineViewerProps> = ({
               canvas.style.width = '100%';
               canvas.style.height = '100%';
 
-              const canvasWidth =
-                canvas.clientWidth || containerSizeRef.current.width || canvas.width || 800;
-              const canvasHeight =
-                canvas.clientHeight || containerSizeRef.current.height || canvas.height || 600;
+              // Size the fit against the physical (devicePixelRatio) framebuffer,
+              // not CSS pixels. SpinePlayer.resize() sets canvas.width/height to
+              // clientWidth * dpr, so on any HiDPI / mobile screen the CSS size is
+              // smaller than the pixel buffer we actually render into. Fitting to
+              // the CSS size makes the model appear zoomed-in by dpr^2 and, more
+              // importantly, the camera aspect test below can pick the wrong axis
+              // on non-square viewports, clipping or mis-centering the character.
+              const dpr = Math.min(
+                typeof window !== 'undefined' ? window.devicePixelRatio || 1 : 1,
+                3
+              );
+              const cssW = canvas.clientWidth || containerSizeRef.current.width || 800;
+              const cssH = canvas.clientHeight || containerSizeRef.current.height || 600;
+              const canvasWidth = Math.max(1, Math.round(cssW * dpr));
+              const canvasHeight = Math.max(1, Math.round(cssH * dpr));
               const manualCam = new runtime.OrthoCamera(canvasWidth, canvasHeight);
               manualCam.position.x = bounds.x + bounds.width / 2;
               manualCam.position.y = bounds.y + bounds.height / 2;
@@ -734,6 +935,7 @@ export const SpineViewer: React.FC<SpineViewerProps> = ({
               manualCam.update();
 
               manualCameraRef.current = manualCam;
+              modelBoundsRef.current = bounds;
               defaultCameraPoseRef.current = {
                 x: manualCam.position.x,
                 y: manualCam.position.y,
@@ -767,7 +969,7 @@ export const SpineViewer: React.FC<SpineViewerProps> = ({
               let camStartY = 0;
 
               const onMouseDown = (ev: MouseEvent) => {
-                if (ev.button !== 0) return;
+                if (ev.button !== 0 || cameraLockedRef.current) return;
                 isMousePanning = true;
                 mouseStartX = ev.clientX;
                 mouseStartY = ev.clientY;
@@ -792,6 +994,7 @@ export const SpineViewer: React.FC<SpineViewerProps> = ({
               };
 
               const onWheel = (ev: WheelEvent) => {
+                if (cameraLockedRef.current) return;
                 ev.preventDefault();
                 const rect = canvas.getBoundingClientRect();
                 const localX = ev.clientX - rect.left;
@@ -823,6 +1026,7 @@ export const SpineViewer: React.FC<SpineViewerProps> = ({
               let wasPinching = false;
 
               const onTouchStart = (ev: TouchEvent) => {
+                if (cameraLockedRef.current) return;
                 if (ev.touches.length === 1 && !wasPinching) {
                   const t = ev.touches[0];
                   touchPanStart = {
@@ -844,6 +1048,7 @@ export const SpineViewer: React.FC<SpineViewerProps> = ({
               };
 
               const onTouchMove = (ev: TouchEvent) => {
+                if (cameraLockedRef.current) return;
                 if (ev.cancelable) ev.preventDefault();
                 if (ev.touches.length >= 2) {
                   pointerStartRef.current = null;
@@ -932,6 +1137,11 @@ export const SpineViewer: React.FC<SpineViewerProps> = ({
             else p.pause();
 
             setIsLoading(false);
+
+            // Hand the measured framing to the shot sequencer so it can aim the
+            // camera without having to re-measure or guess at the character size.
+            const readyBounds = modelBoundsRef.current;
+            if (readyBounds) onReadyRef.current?.(readyBounds);
 
             // 6. Idle background prefetch of popular next models + current character's cutscene
             const scheduleIdle =
@@ -1289,4 +1499,6 @@ export const SpineViewer: React.FC<SpineViewerProps> = ({
       </div>
     </div>
   );
-};
+});
+
+SpineViewer.displayName = 'SpineViewer';
