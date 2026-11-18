@@ -40,6 +40,16 @@ const UPSTREAM_AL_SPINE_BASES = [
   'https://cdn.jsdelivr.net/gh/o0Nomar0o/SpineCollections@main',
   'https://raw.githubusercontent.com/o0Nomar0o/SpineCollections/main',
 ];
+// Dragon & Girls Symphony (Idle Huntress) Cubism Live2D models normally live in
+// Misekato/TestIHd; the character portraits used as icons live in the IHLive2d
+// viewer repo. One namespace handles both since the paths never collide.
+const UPSTREAM_GS_BASES = [
+  'https://cdn.jsdelivr.net/gh/Misekato/TestIHd@main',
+  'https://raw.githubusercontent.com/Misekato/TestIHd/main',
+  'https://cdn.jsdelivr.net/gh/Misekato/IHLive2d@main',
+  'https://raw.githubusercontent.com/Misekato/IHLive2d/main',
+];
+
 const UPSTREAM_AL_ICON_BASES = [
   'https://cdn.jsdelivr.net/gh/leililei/AzurLaneTools@master/public/squareicon',
   'https://raw.githubusercontent.com/leililei/AzurLaneTools/master/public/squareicon',
@@ -263,7 +273,8 @@ async function resolveCachedAsset(
     | 'al-spines'
     | 'al-icons'
     | 'mad-spines'
-    | 'anchor-spines',
+    | 'anchor-spines'
+    | 'gs-live2d',
   relPath: string,
   upstreamBases: string | string[],
   encodePathForUpstream = false
@@ -607,6 +618,23 @@ async function startServer() {
     } catch (err) {
       const status = (err as { status?: number })?.status || 502;
       res.status(status).json({ error: `Failed to fetch Anchor Panic asset: ${relPath}` });
+    }
+  });
+
+  // Dragon & Girls Symphony (Idle Huntress) Cubism Live2D assets + portrait icons.
+  app.get('/api/gs-live2d/*', async (req, res) => {
+    const rawParam = (req.params as Record<string, string>)[0] ?? '';
+    const relPath = sanitizeUtf8AssetPath(rawParam, /\.(json|moc3|png|webp|jpg|jpeg)$/i);
+    if (!relPath) {
+      res.status(400).json({ error: 'Invalid Dragon & Girls Symphony asset path' });
+      return;
+    }
+    try {
+      const entry = await resolveCachedAsset('gs-live2d', relPath, UPSTREAM_GS_BASES, true);
+      sendCachedEntry(req, res, entry);
+    } catch (err) {
+      const status = (err as { status?: number })?.status || 502;
+      res.status(status).json({ error: `Failed to fetch DGS Live2D asset: ${relPath}` });
     }
   });
 

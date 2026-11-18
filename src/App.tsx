@@ -12,6 +12,7 @@ import { ENVIRONMENTS } from './data/environments';
 import { EnvironmentPreset, ScreenFilters } from './types';
 import { TopNav } from './components/TopNav';
 import { SpineViewer, SpineViewerHandle } from './components/SpineViewer';
+import { Live2DViewer } from './components/Live2DViewer';
 import { EchoSpineViewer } from './components/EchoSpineViewer';
 import { EchoRoster } from './components/EchoRoster';
 import { CinematicPlayer, CinematicLauncher } from './components/CinematicPlayer';
@@ -556,7 +557,16 @@ export default function App() {
             style={canvasFilterStyle ? { filter: canvasFilterStyle } : undefined}
           >
             <ErrorBoundary resetKey={`${selectedCharacter.id}:${activeCategory}`}>
-              {activeGame === 'echocalypse' ? (
+              {activeGame === 'girlssymphony' ? (
+                <Live2DViewer
+                  character={selectedCharacter}
+                  isPlaying={isPlaying}
+                  animationSpeed={animationSpeed}
+                  activeAnimation={activeAnimation}
+                  onAnimationsLoaded={handleAnimationsLoaded}
+                  onLayersLoaded={handleLayersLoaded}
+                />
+              ) : activeGame === 'echocalypse' ? (
                 <EchoSpineViewer
                   ref={viewerRef as unknown as React.Ref<never>}
                   character={selectedCharacter}

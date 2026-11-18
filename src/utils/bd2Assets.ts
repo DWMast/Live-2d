@@ -14,6 +14,7 @@ export const AL_SPINE_BASE = '/api/al-spine';
 export const AL_ICON_BASE = '/api/al-icon';
 export const MAD_SPINE_BASE = '/api/mad-spine';
 export const ANCHOR_SPINE_BASE = '/api/anchor-spine';
+export const GS_LIVE2D_BASE = '/api/gs-live2d';
 
 export const GAME_LIST: GameDescriptor[] = [
   {
@@ -85,6 +86,16 @@ export const GAME_LIST: GameDescriptor[] = [
     engineLabel: 'Spine 3.8 · 110 Skins',
     accentGradient: 'from-teal-500 to-sky-600 shadow-teal-500/20',
     accentText: 'text-teal-400',
+  },
+  {
+    id: 'girlssymphony',
+    shortCode: 'DGS',
+    name: 'Dragon & Girls Symphony',
+    studioName: 'Idle Huntress Live2D Studio',
+    rosterLabel: 'DGS Roster',
+    engineLabel: 'Cubism 4 Live2D · 398 Skins',
+    accentGradient: 'from-amber-500 to-rose-600 shadow-amber-500/20',
+    accentText: 'text-amber-400',
   },
 ];
 
@@ -254,6 +265,16 @@ interface AzurLaneCatalogEntry {
   jsonPath: string;
   atlasPath: string;
   iconPath?: string;
+}
+
+interface Live2DCatalogEntry {
+  id: string;
+  charName: string;
+  costumeName: string;
+  modelType: string;
+  jsonPath: string;
+  iconPath?: string;
+  api: string;
 }
 
 const rosterCache = new Map<GameId, BD2Character[]>();
@@ -456,6 +477,40 @@ export async function loadGameRoster(gameId: GameId): Promise<BD2Character[]> {
         costumes: [item.id],
         kind: item.kind,
       }));
+    } else if (gameId === 'girlssymphony') {
+      const res = await fetch('/data/girlssymphony_catalog.json');
+      if (!res.ok) throw new Error(`Failed to load Dragon & Girls Symphony catalog (HTTP ${res.status})`);
+      const rawList = (await res.json()) as Live2DCatalogEntry[];
+      // Character-first ordering: base costume, then each named variant.
+      const variantOrder = ['1', '2', '3', 'ssr_1', 'ssr_2', 'ssr_3', 'ur', 'swimsuit', 'valentine', '4'];
+      const sorted = [...rawList].sort((a, b) => {
+        const mid = (e: Live2DCatalogEntry) => e.jsonPath.split('/')[1] || e.id;
+        const ca = mid(a).replace(/^[^_]*_?/, ''),
+              cb = mid(b).replace(/^[^_]*_?/, '');
+        const ia = variantOrder.indexOf(ca), ib = variantOrder.indexOf(cb);
+        if ((a.charName !== b.charName)) return a.charName.localeCompare(b.charName);
+        return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
+      });
+      mapped = sorted.map((item, idx) => ({
+        id: item.id,
+        game: 'girlssymphony',
+        charName: item.charName,
+        costumeName: item.costumeName,
+        spine: item.id,
+        cutscene: '',
+        dating: '',
+        audio: '',
+        live2dModelUrl: encodeProxyPath(GS_LIVE2D_BASE, item.jsonPath),
+        cubismApi: (item.api as 'cubism4') || 'cubism4',
+        modelType: item.modelType,
+        iconUrl: item.iconPath ? encodeProxyPath(GS_LIVE2D_BASE, item.iconPath) : '',
+        hasCutscene: false,
+        hasDating: false,
+        releaseOrder: idx,
+        releaseLabel: 'Cubism 4 Live2D',
+        named: true,
+        kind: 'live2d',
+      }));
     } else if (gameId === 'azurlane') {
       const res = await fetch('/data/azurlane_catalog.json');
       if (!res.ok) throw new Error(`Failed to load Azur Lane catalog (HTTP ${res.status})`);
@@ -520,6 +575,9 @@ export function pickDefaultCharacterForGame(gameId: GameId, roster: BD2Character
   }
   if (gameId === 'anchorpanic') {
     return roster.find((c) => (c.costumeIndex ?? 0) === 0) || roster[0];
+  }
+  if (gameId === 'girlssymphony') {
+    return roster.find((c) => c.id === 'gs_aphrodite_1') || roster.find((c) => c.iconUrl) || roster[0];
   }
   if (gameId === 'azurlane') {
     return (

@@ -1,0 +1,3584 @@
+[
+ {
+  "id": "gs_akechi_1",
+  "charName": "Akechi",
+  "costumeName": "Akechi · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/akechi_1/live2d.model3.json",
+  "iconPath": "assets/char/akechi_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_akechi_2",
+  "charName": "Akechi",
+  "costumeName": "Akechi · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/akechi_2/live2d.model3.json",
+  "iconPath": "assets/char/akechi_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_akechi_3",
+  "charName": "Akechi",
+  "costumeName": "Akechi · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/akechi_3/live2d.model3.json",
+  "iconPath": "assets/char/akechi_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_akechi_swimsuit",
+  "charName": "Akechi",
+  "costumeName": "Akechi · Swimsuit",
+  "modelType": "skin",
+  "jsonPath": "assets/akechi_swimsuit/live2d.model3.json",
+  "iconPath": "assets/char/akechi_swimsuit.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_aphrodite_1",
+  "charName": "Aphrodite",
+  "costumeName": "Aphrodite · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/aphrodite_1/live2d.model3.json",
+  "iconPath": "assets/char/aphrodite_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_aphrodite_2",
+  "charName": "Aphrodite",
+  "costumeName": "Aphrodite · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/aphrodite_2/live2d.model3.json",
+  "iconPath": "assets/char/aphrodite_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_aphrodite_ssr_1",
+  "charName": "Aphrodite",
+  "costumeName": "Aphrodite · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/aphrodite_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/aphrodite_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_aphrodite_ssr_2",
+  "charName": "Aphrodite",
+  "costumeName": "Aphrodite · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/aphrodite_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/aphrodite_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_ares_1",
+  "charName": "Ares",
+  "costumeName": "Ares · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/ares_1/live2d.model3.json",
+  "iconPath": "assets/char/ares_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_ares_2",
+  "charName": "Ares",
+  "costumeName": "Ares · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/ares_2/live2d.model3.json",
+  "iconPath": "assets/char/ares_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_ares_3",
+  "charName": "Ares",
+  "costumeName": "Ares · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/ares_3/live2d.model3.json",
+  "iconPath": "assets/char/ares_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_ares_ur",
+  "charName": "Ares",
+  "costumeName": "Ares · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/ares_ur/live2d.model3.json",
+  "iconPath": "assets/char/ares_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_artemis_1",
+  "charName": "Artemis",
+  "costumeName": "Artemis · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/artemis_1/live2d.model3.json",
+  "iconPath": "assets/char/artemis_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_artemis_2",
+  "charName": "Artemis",
+  "costumeName": "Artemis · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/artemis_2/live2d.model3.json",
+  "iconPath": "assets/char/artemis_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_artemis_3",
+  "charName": "Artemis",
+  "costumeName": "Artemis · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/artemis_3/live2d.model3.json",
+  "iconPath": "assets/char/artemis_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_arthur_1",
+  "charName": "Arthur",
+  "costumeName": "Arthur · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/arthur_1/live2d.model3.json",
+  "iconPath": "assets/char/arthur_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_arthur_2",
+  "charName": "Arthur",
+  "costumeName": "Arthur · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/arthur_2/live2d.model3.json",
+  "iconPath": "assets/char/arthur_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_arthur_ssr_1",
+  "charName": "Arthur",
+  "costumeName": "Arthur · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/arthur_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/arthur_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_arthur_ssr_2",
+  "charName": "Arthur",
+  "costumeName": "Arthur · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/arthur_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/arthur_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_ashikaga_1",
+  "charName": "Ashikaga",
+  "costumeName": "Ashikaga · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/ashikaga_1/live2d.model3.json",
+  "iconPath": "assets/char/ashikaga_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_ashikaga_2",
+  "charName": "Ashikaga",
+  "costumeName": "Ashikaga · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/ashikaga_2/live2d.model3.json",
+  "iconPath": "assets/char/ashikaga_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_ashikaga_ssr_1",
+  "charName": "Ashikaga",
+  "costumeName": "Ashikaga · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/ashikaga_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/ashikaga_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_ashikaga_ssr_2",
+  "charName": "Ashikaga",
+  "costumeName": "Ashikaga · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/ashikaga_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/ashikaga_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_attila_ssr_1",
+  "charName": "Attila",
+  "costumeName": "Attila · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/attila_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/attila_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_attila_ssr_2",
+  "charName": "Attila",
+  "costumeName": "Attila · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/attila_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/attila_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_attila_ssr_3",
+  "charName": "Attila",
+  "costumeName": "Attila · Costume ssr_3",
+  "modelType": "skin",
+  "jsonPath": "assets/attila_ssr_3/live2d.model3.json",
+  "iconPath": "assets/char/attila_ssr_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_attila_ur",
+  "charName": "Attila",
+  "costumeName": "Attila · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/attila_ur/live2d.model3.json",
+  "iconPath": "assets/char/attila_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_barbatos_1",
+  "charName": "Barbatos",
+  "costumeName": "Barbatos · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/barbatos_1/live2d.model3.json",
+  "iconPath": "assets/char/barbatos_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_barbatos_2",
+  "charName": "Barbatos",
+  "costumeName": "Barbatos · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/barbatos_2/live2d.model3.json",
+  "iconPath": "assets/char/barbatos_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_barbatos_ssr_1",
+  "charName": "Barbatos",
+  "costumeName": "Barbatos · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/barbatos_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/barbatos_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_barbatos_ssr_2",
+  "charName": "Barbatos",
+  "costumeName": "Barbatos · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/barbatos_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/barbatos_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_beethoven_1",
+  "charName": "Beethoven",
+  "costumeName": "Beethoven · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/beethoven_1/live2d.model3.json",
+  "iconPath": "assets/char/beethoven_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_beethoven_2",
+  "charName": "Beethoven",
+  "costumeName": "Beethoven · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/beethoven_2/live2d.model3.json",
+  "iconPath": "assets/char/beethoven_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_beethoven_ssr_1",
+  "charName": "Beethoven",
+  "costumeName": "Beethoven · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/beethoven_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/beethoven_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_beethoven_ssr_2",
+  "charName": "Beethoven",
+  "costumeName": "Beethoven · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/beethoven_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/beethoven_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_benkei_1",
+  "charName": "Benkei",
+  "costumeName": "Benkei · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/benkei_1/live2d.model3.json",
+  "iconPath": "assets/char/benkei_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_benkei_2",
+  "charName": "Benkei",
+  "costumeName": "Benkei · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/benkei_2/live2d.model3.json",
+  "iconPath": "assets/char/benkei_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_benkei_3",
+  "charName": "Benkei",
+  "costumeName": "Benkei · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/benkei_3/live2d.model3.json",
+  "iconPath": "assets/char/benkei_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_caesar_1",
+  "charName": "Caesar",
+  "costumeName": "Caesar · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/caesar_1/live2d.model3.json",
+  "iconPath": "assets/char/caesar_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_caesar_2",
+  "charName": "Caesar",
+  "costumeName": "Caesar · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/caesar_2/live2d.model3.json",
+  "iconPath": "assets/char/caesar_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_caesar_ssr_1",
+  "charName": "Caesar",
+  "costumeName": "Caesar · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/caesar_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/caesar_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_caesar_ssr_2",
+  "charName": "Caesar",
+  "costumeName": "Caesar · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/caesar_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/caesar_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_carmen_1",
+  "charName": "Carmen",
+  "costumeName": "Carmen · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/carmen_1/live2d.model3.json",
+  "iconPath": "assets/char/carmen_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_carmen_2",
+  "charName": "Carmen",
+  "costumeName": "Carmen · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/carmen_2/live2d.model3.json",
+  "iconPath": "assets/char/carmen_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_carmen_ssr_1",
+  "charName": "Carmen",
+  "costumeName": "Carmen · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/carmen_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/carmen_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_carmen_ssr_2",
+  "charName": "Carmen",
+  "costumeName": "Carmen · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/carmen_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/carmen_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_catherine_1",
+  "charName": "Catherine",
+  "costumeName": "Catherine · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/catherine_1/live2d.model3.json",
+  "iconPath": "assets/char/catherine_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_catherine_2",
+  "charName": "Catherine",
+  "costumeName": "Catherine · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/catherine_2/live2d.model3.json",
+  "iconPath": "assets/char/catherine_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_catherine_3",
+  "charName": "Catherine",
+  "costumeName": "Catherine · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/catherine_3/live2d.model3.json",
+  "iconPath": "assets/char/catherine_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_catherine_ur",
+  "charName": "Catherine",
+  "costumeName": "Catherine · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/catherine_ur/live2d.model3.json",
+  "iconPath": "assets/char/catherine_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_charlemagne_1",
+  "charName": "Charlemagne",
+  "costumeName": "Charlemagne · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/charlemagne_1/live2d.model3.json",
+  "iconPath": "assets/char/charlemagne_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_charlemagne_2",
+  "charName": "Charlemagne",
+  "costumeName": "Charlemagne · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/charlemagne_2/live2d.model3.json",
+  "iconPath": "assets/char/charlemagne_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_charlemagne_ssr_1",
+  "charName": "Charlemagne",
+  "costumeName": "Charlemagne · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/charlemagne_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/charlemagne_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_charlemagne_ssr_2",
+  "charName": "Charlemagne",
+  "costumeName": "Charlemagne · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/charlemagne_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/charlemagne_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_chiyome_1",
+  "charName": "Chiyome",
+  "costumeName": "Chiyome · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/chiyome_1/live2d.model3.json",
+  "iconPath": "assets/char/chiyome_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_chiyome_2",
+  "charName": "Chiyome",
+  "costumeName": "Chiyome · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/chiyome_2/live2d.model3.json",
+  "iconPath": "assets/char/chiyome_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_chiyome_3",
+  "charName": "Chiyome",
+  "costumeName": "Chiyome · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/chiyome_3/live2d.model3.json",
+  "iconPath": "assets/char/chiyome_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_chiyome_4",
+  "charName": "Chiyome",
+  "costumeName": "Chiyome · Costume 4",
+  "modelType": "skin",
+  "jsonPath": "assets/chiyome_4/live2d.model3.json",
+  "iconPath": "assets/char/chiyome_4.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_chiyome_ur",
+  "charName": "Chiyome",
+  "costumeName": "Chiyome · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/chiyome_ur/live2d.model3.json",
+  "iconPath": "assets/char/chiyome_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_christ_iori_1",
+  "charName": "Christ",
+  "costumeName": "Christ · Costume iori_1",
+  "modelType": "skin",
+  "jsonPath": "assets/christ_iori_1/live2d.model3.json",
+  "iconPath": "assets/char/christ_iori_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_christ_iori_2",
+  "charName": "Christ",
+  "costumeName": "Christ · Costume iori_2",
+  "modelType": "skin",
+  "jsonPath": "assets/christ_iori_2/live2d.model3.json",
+  "iconPath": "assets/char/christ_iori_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_christ_iori_3",
+  "charName": "Christ",
+  "costumeName": "Christ · Costume iori_3",
+  "modelType": "skin",
+  "jsonPath": "assets/christ_iori_3/live2d.model3.json",
+  "iconPath": "assets/char/christ_iori_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_christ_iori_ur",
+  "charName": "Christ",
+  "costumeName": "Christ · Costume iori_ur",
+  "modelType": "skin",
+  "jsonPath": "assets/christ_iori_ur/live2d.model3.json",
+  "iconPath": "assets/char/christ_iori_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_cleo_1",
+  "charName": "Cleo",
+  "costumeName": "Cleo · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/cleo_1/live2d.model3.json",
+  "iconPath": "assets/char/cleo_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_cleo_2",
+  "charName": "Cleo",
+  "costumeName": "Cleo · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/cleo_2/live2d.model3.json",
+  "iconPath": "assets/char/cleo_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_cleo_ssr_1",
+  "charName": "Cleo",
+  "costumeName": "Cleo · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/cleo_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/cleo_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_cleo_ssr_2",
+  "charName": "Cleo",
+  "costumeName": "Cleo · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/cleo_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/cleo_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_columbus_1",
+  "charName": "Columbus",
+  "costumeName": "Columbus · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/columbus_1/live2d.model3.json",
+  "iconPath": "assets/char/columbus_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_columbus_2",
+  "charName": "Columbus",
+  "costumeName": "Columbus · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/columbus_2/live2d.model3.json",
+  "iconPath": "assets/char/columbus_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_columbus_3",
+  "charName": "Columbus",
+  "costumeName": "Columbus · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/columbus_3/live2d.model3.json",
+  "iconPath": "assets/char/columbus_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_columbus_valentine",
+  "charName": "Columbus",
+  "costumeName": "Columbus · Valentine",
+  "modelType": "skin",
+  "jsonPath": "assets/columbus_valentine/live2d.model3.json",
+  "iconPath": "assets/char/columbus_valentine.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_copernicus_1",
+  "charName": "Copernicus",
+  "costumeName": "Copernicus · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/copernicus_1/live2d.model3.json",
+  "iconPath": "assets/char/copernicus_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_copernicus_2",
+  "charName": "Copernicus",
+  "costumeName": "Copernicus · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/copernicus_2/live2d.model3.json",
+  "iconPath": "assets/char/copernicus_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_copernicus_3",
+  "charName": "Copernicus",
+  "costumeName": "Copernicus · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/copernicus_3/live2d.model3.json",
+  "iconPath": "assets/char/copernicus_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_daji_1",
+  "charName": "Daji",
+  "costumeName": "Daji · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/daji_1/live2d.model3.json",
+  "iconPath": "assets/char/daji_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_daji_2",
+  "charName": "Daji",
+  "costumeName": "Daji · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/daji_2/live2d.model3.json",
+  "iconPath": "assets/char/daji_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_daji_ssr_1",
+  "charName": "Daji",
+  "costumeName": "Daji · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/daji_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/daji_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_daji_ssr_2",
+  "charName": "Daji",
+  "costumeName": "Daji · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/daji_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/daji_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_dante_1",
+  "charName": "Dante",
+  "costumeName": "Dante · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/dante_1/live2d.model3.json",
+  "iconPath": "assets/char/dante_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_dante_2",
+  "charName": "Dante",
+  "costumeName": "Dante · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/dante_2/live2d.model3.json",
+  "iconPath": "assets/char/dante_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_dante_3",
+  "charName": "Dante",
+  "costumeName": "Dante · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/dante_3/live2d.model3.json",
+  "iconPath": "assets/char/dante_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_dante_ur",
+  "charName": "Dante",
+  "costumeName": "Dante · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/dante_ur/live2d.model3.json",
+  "iconPath": "assets/char/dante_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_daqiaoxiaoqiao_1",
+  "charName": "Daqiaoxiaoqiao",
+  "costumeName": "Daqiaoxiaoqiao · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/daqiaoxiaoqiao_1/live2d.model3.json",
+  "iconPath": "assets/char/daqiaoxiaoqiao_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_daqiaoxiaoqiao_2",
+  "charName": "Daqiaoxiaoqiao",
+  "costumeName": "Daqiaoxiaoqiao · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/daqiaoxiaoqiao_2/live2d.model3.json",
+  "iconPath": "assets/char/daqiaoxiaoqiao_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_daqiaoxiaoqiao_3",
+  "charName": "Daqiaoxiaoqiao",
+  "costumeName": "Daqiaoxiaoqiao · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/daqiaoxiaoqiao_3/live2d.model3.json",
+  "iconPath": "assets/char/daqiaoxiaoqiao_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_daqiaoxiaoqiao_ur",
+  "charName": "Daqiaoxiaoqiao",
+  "costumeName": "Daqiaoxiaoqiao · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/daqiaoxiaoqiao_ur/live2d.model3.json",
+  "iconPath": "assets/char/daqiaoxiaoqiao_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_darwin_1",
+  "charName": "Darwin",
+  "costumeName": "Darwin · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/darwin_1/live2d.model3.json",
+  "iconPath": "assets/char/darwin_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_darwin_2",
+  "charName": "Darwin",
+  "costumeName": "Darwin · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/darwin_2/live2d.model3.json",
+  "iconPath": "assets/char/darwin_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_darwin_3",
+  "charName": "Darwin",
+  "costumeName": "Darwin · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/darwin_3/live2d.model3.json",
+  "iconPath": "assets/char/darwin_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_date_1",
+  "charName": "Date",
+  "costumeName": "Date · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/date_1/live2d.model3.json",
+  "iconPath": "assets/char/date_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_date_2",
+  "charName": "Date",
+  "costumeName": "Date · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/date_2/live2d.model3.json",
+  "iconPath": "assets/char/date_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_date_3",
+  "charName": "Date",
+  "costumeName": "Date · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/date_3/live2d.model3.json",
+  "iconPath": "assets/char/date_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_date_masamune_ur",
+  "charName": "Date",
+  "costumeName": "Date · Costume masamune_ur",
+  "modelType": "skin",
+  "jsonPath": "assets/date_masamune_ur/live2d.model3.json",
+  "iconPath": "assets/char/date_masamune_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_davinci_1",
+  "charName": "Davinci",
+  "costumeName": "Davinci · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/davinci_1/live2d.model3.json",
+  "iconPath": "assets/char/davinci_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_davinci_2",
+  "charName": "Davinci",
+  "costumeName": "Davinci · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/davinci_2/live2d.model3.json",
+  "iconPath": "assets/char/davinci_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_davinci_3",
+  "charName": "Davinci",
+  "costumeName": "Davinci · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/davinci_3/live2d.model3.json",
+  "iconPath": "assets/char/davinci_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_davinci_ur",
+  "charName": "Davinci",
+  "costumeName": "Davinci · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/davinci_ur/live2d.model3.json",
+  "iconPath": "assets/char/davinci_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_donquixote_1",
+  "charName": "Donquixote",
+  "costumeName": "Donquixote · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/donquixote_1/live2d.model3.json",
+  "iconPath": "assets/char/donquixote_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_donquixote_2",
+  "charName": "Donquixote",
+  "costumeName": "Donquixote · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/donquixote_2/live2d.model3.json",
+  "iconPath": "assets/char/donquixote_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_donquixote_3",
+  "charName": "Donquixote",
+  "costumeName": "Donquixote · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/donquixote_3/live2d.model3.json",
+  "iconPath": "assets/char/donquixote_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_donquixote_ur",
+  "charName": "Donquixote",
+  "costumeName": "Donquixote · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/donquixote_ur/live2d.model3.json",
+  "iconPath": "assets/char/donquixote_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_dracula_1",
+  "charName": "Dracula",
+  "costumeName": "Dracula · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/dracula_1/live2d.model3.json",
+  "iconPath": "assets/char/dracula_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_dracula_2",
+  "charName": "Dracula",
+  "costumeName": "Dracula · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/dracula_2/live2d.model3.json",
+  "iconPath": "assets/char/dracula_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_dracula_3",
+  "charName": "Dracula",
+  "costumeName": "Dracula · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/dracula_3/live2d.model3.json",
+  "iconPath": "assets/char/dracula_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_dracula_ur",
+  "charName": "Dracula",
+  "costumeName": "Dracula · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/dracula_ur/live2d.model3.json",
+  "iconPath": "assets/char/dracula_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_enako_1",
+  "charName": "Enako",
+  "costumeName": "Enako · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/enako_1/live2d.model3.json",
+  "iconPath": "assets/char/enako_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_enako_2",
+  "charName": "Enako",
+  "costumeName": "Enako · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/enako_2/live2d.model3.json",
+  "iconPath": "assets/char/enako_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_freya",
+  "charName": "Freya",
+  "costumeName": "Freya · Base",
+  "modelType": "skin",
+  "jsonPath": "assets/freya/live2d.model3.json",
+  "iconPath": "assets/char/freya.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_hannibal_1",
+  "charName": "Hannibal",
+  "costumeName": "Hannibal · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/hannibal_1/live2d.model3.json",
+  "iconPath": "assets/char/hannibal_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_hannibal_2",
+  "charName": "Hannibal",
+  "costumeName": "Hannibal · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/hannibal_2/live2d.model3.json",
+  "iconPath": "assets/char/hannibal_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_hannibal_3",
+  "charName": "Hannibal",
+  "costumeName": "Hannibal · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/hannibal_3/live2d.model3.json",
+  "iconPath": "assets/char/hannibal_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_hannibal_ur",
+  "charName": "Hannibal",
+  "costumeName": "Hannibal · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/hannibal_ur/live2d.model3.json",
+  "iconPath": "assets/char/hannibal_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_hanzo_1",
+  "charName": "Hanzo",
+  "costumeName": "Hanzo · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/hanzo_1/live2d.model3.json",
+  "iconPath": "assets/char/hanzo_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_hanzo_2",
+  "charName": "Hanzo",
+  "costumeName": "Hanzo · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/hanzo_2/live2d.model3.json",
+  "iconPath": "assets/char/hanzo_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_hanzo_ssr_1",
+  "charName": "Hanzo",
+  "costumeName": "Hanzo · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/hanzo_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/hanzo_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_hanzo_ssr_2",
+  "charName": "Hanzo",
+  "costumeName": "Hanzo · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/hanzo_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/hanzo_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_heimdall_1",
+  "charName": "Heimdall",
+  "costumeName": "Heimdall · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/heimdall_1/live2d.model3.json",
+  "iconPath": "assets/char/heimdall_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_heimdall_2",
+  "charName": "Heimdall",
+  "costumeName": "Heimdall · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/heimdall_2/live2d.model3.json",
+  "iconPath": "assets/char/heimdall_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_helen_1",
+  "charName": "Helen",
+  "costumeName": "Helen · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/helen_1/live2d.model3.json",
+  "iconPath": "assets/char/helen_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_helen_2",
+  "charName": "Helen",
+  "costumeName": "Helen · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/helen_2/live2d.model3.json",
+  "iconPath": "assets/char/helen_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_helen_3",
+  "charName": "Helen",
+  "costumeName": "Helen · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/helen_3/live2d.model3.json",
+  "iconPath": "assets/char/helen_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_helen_christmas",
+  "charName": "Helen",
+  "costumeName": "Helen · Costume christmas",
+  "modelType": "skin",
+  "jsonPath": "assets/helen_christmas/live2d.model3.json",
+  "iconPath": "assets/char/helen_christmas.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_helen_ur",
+  "charName": "Helen",
+  "costumeName": "Helen · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/helen_ur/live2d.model3.json",
+  "iconPath": "assets/char/helen_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_hercules_1",
+  "charName": "Hercules",
+  "costumeName": "Hercules · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/hercules_1/live2d.model3.json",
+  "iconPath": "assets/char/hercules_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_hercules_2",
+  "charName": "Hercules",
+  "costumeName": "Hercules · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/hercules_2/live2d.model3.json",
+  "iconPath": "assets/char/hercules_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_hercules_ssr_1",
+  "charName": "Hercules",
+  "costumeName": "Hercules · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/hercules_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/hercules_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_hercules_ssr_2",
+  "charName": "Hercules",
+  "costumeName": "Hercules · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/hercules_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/hercules_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_himiko_1",
+  "charName": "Himiko",
+  "costumeName": "Himiko · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/himiko_1/live2d.model3.json",
+  "iconPath": "assets/char/himiko_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_himiko_2",
+  "charName": "Himiko",
+  "costumeName": "Himiko · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/himiko_2/live2d.model3.json",
+  "iconPath": "assets/char/himiko_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_himiko_3",
+  "charName": "Himiko",
+  "costumeName": "Himiko · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/himiko_3/live2d.model3.json",
+  "iconPath": "assets/char/himiko_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_himiko_ur",
+  "charName": "Himiko",
+  "costumeName": "Himiko · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/himiko_ur/live2d.model3.json",
+  "iconPath": "assets/char/himiko_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_honda_1",
+  "charName": "Honda",
+  "costumeName": "Honda · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/honda_1/live2d.model3.json",
+  "iconPath": "assets/char/honda_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_honda_2",
+  "charName": "Honda",
+  "costumeName": "Honda · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/honda_2/live2d.model3.json",
+  "iconPath": "assets/char/honda_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_honda_3",
+  "charName": "Honda",
+  "costumeName": "Honda · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/honda_3/live2d.model3.json",
+  "iconPath": "assets/char/honda_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_honda_skin",
+  "charName": "Honda",
+  "costumeName": "Honda · Costume skin",
+  "modelType": "skin",
+  "jsonPath": "assets/honda_skin/live2d.model3.json",
+  "iconPath": "assets/char/honda_skin.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_honda_ur",
+  "charName": "Honda",
+  "costumeName": "Honda · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/honda_ur/live2d.model3.json",
+  "iconPath": "assets/char/honda_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_honoka_1",
+  "charName": "Honoka",
+  "costumeName": "Honoka · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/honoka_1/live2d.model3.json",
+  "iconPath": "assets/char/honoka_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_honoka_2",
+  "charName": "Honoka",
+  "costumeName": "Honoka · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/honoka_2/live2d.model3.json",
+  "iconPath": "assets/char/honoka_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_honoka_3",
+  "charName": "Honoka",
+  "costumeName": "Honoka · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/honoka_3/live2d.model3.json",
+  "iconPath": "assets/char/honoka_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_horus_1",
+  "charName": "Horus",
+  "costumeName": "Horus · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/horus_1/live2d.model3.json",
+  "iconPath": "assets/char/horus_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_horus_2",
+  "charName": "Horus",
+  "costumeName": "Horus · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/horus_2/live2d.model3.json",
+  "iconPath": "assets/char/horus_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_huangzhong_1",
+  "charName": "Huangzhong",
+  "costumeName": "Huangzhong · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/huangzhong_1/live2d.model3.json",
+  "iconPath": "assets/char/huangzhong_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_huangzhong_2",
+  "charName": "Huangzhong",
+  "costumeName": "Huangzhong · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/huangzhong_2/live2d.model3.json",
+  "iconPath": "assets/char/huangzhong_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_huangzhong_3",
+  "charName": "Huangzhong",
+  "costumeName": "Huangzhong · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/huangzhong_3/live2d.model3.json",
+  "iconPath": "assets/char/huangzhong_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_huangzhong_ur",
+  "charName": "Huangzhong",
+  "costumeName": "Huangzhong · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/huangzhong_ur/live2d.model3.json",
+  "iconPath": "assets/char/huangzhong_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_huatuo_1",
+  "charName": "Huatuo",
+  "costumeName": "Huatuo · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/huatuo_1/live2d.model3.json",
+  "iconPath": "assets/char/huatuo_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_huatuo_2",
+  "charName": "Huatuo",
+  "costumeName": "Huatuo · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/huatuo_2/live2d.model3.json",
+  "iconPath": "assets/char/huatuo_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_huatuo_3",
+  "charName": "Huatuo",
+  "costumeName": "Huatuo · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/huatuo_3/live2d.model3.json",
+  "iconPath": "assets/char/huatuo_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_huatuo_skin",
+  "charName": "Huatuo",
+  "costumeName": "Huatuo · Costume skin",
+  "modelType": "skin",
+  "jsonPath": "assets/huatuo_skin/live2d.model3.json",
+  "iconPath": "assets/char/huatuo_skin.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_hugo_1",
+  "charName": "Hugo",
+  "costumeName": "Hugo · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/hugo_1/live2d.model3.json",
+  "iconPath": "assets/char/hugo_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_hugo_2",
+  "charName": "Hugo",
+  "costumeName": "Hugo · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/hugo_2/live2d.model3.json",
+  "iconPath": "assets/char/hugo_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_hugo_3",
+  "charName": "Hugo",
+  "costumeName": "Hugo · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/hugo_3/live2d.model3.json",
+  "iconPath": "assets/char/hugo_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_iori_1",
+  "charName": "Iori",
+  "costumeName": "Iori · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/iori_1/live2d.model3.json",
+  "iconPath": "assets/char/iori_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_iori_2",
+  "charName": "Iori",
+  "costumeName": "Iori · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/iori_2/live2d.model3.json",
+  "iconPath": "assets/char/iori_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_iori_ss_ssr_1",
+  "charName": "Iori",
+  "costumeName": "Iori · Costume ss_ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/iori_ss_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/iori_ss_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_iori_ss_ssr_2",
+  "charName": "Iori",
+  "costumeName": "Iori · Costume ss_ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/iori_ss_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/iori_ss_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_iori_ss_ssr_3",
+  "charName": "Iori",
+  "costumeName": "Iori · Costume ss_ssr_3",
+  "modelType": "skin",
+  "jsonPath": "assets/iori_ss_ssr_3/live2d.model3.json",
+  "iconPath": "assets/char/iori_ss_ssr_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_iori_ss_ssr_4",
+  "charName": "Iori",
+  "costumeName": "Iori · Costume ss_ssr_4",
+  "modelType": "skin",
+  "jsonPath": "assets/iori_ss_ssr_4/live2d.model3.json",
+  "iconPath": "assets/char/iori_ss_ssr_4.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_iori_ss_ur",
+  "charName": "Iori",
+  "costumeName": "Iori · Costume ss_ur",
+  "modelType": "skin",
+  "jsonPath": "assets/iori_ss_ur/live2d.model3.json",
+  "iconPath": "assets/char/iori_ss_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_iori_ssr_1",
+  "charName": "Iori",
+  "costumeName": "Iori · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/iori_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/iori_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_iori_ssr_2",
+  "charName": "Iori",
+  "costumeName": "Iori · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/iori_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/iori_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_isis_1",
+  "charName": "Isis",
+  "costumeName": "Isis · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/isis_1/live2d.model3.json",
+  "iconPath": "assets/char/isis_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_isis_2",
+  "charName": "Isis",
+  "costumeName": "Isis · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/isis_2/live2d.model3.json",
+  "iconPath": "assets/char/isis_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_isis_ssr_1",
+  "charName": "Isis",
+  "costumeName": "Isis · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/isis_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/isis_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_isis_ssr_2",
+  "charName": "Isis",
+  "costumeName": "Isis · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/isis_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/isis_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_izumo_1",
+  "charName": "Izumo",
+  "costumeName": "Izumo · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/izumo_1/live2d.model3.json",
+  "iconPath": "assets/char/izumo_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_izumo_2",
+  "charName": "Izumo",
+  "costumeName": "Izumo · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/izumo_2/live2d.model3.json",
+  "iconPath": "assets/char/izumo_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_izumo_3",
+  "charName": "Izumo",
+  "costumeName": "Izumo · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/izumo_3/live2d.model3.json",
+  "iconPath": "assets/char/izumo_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_izumo_ur",
+  "charName": "Izumo",
+  "costumeName": "Izumo · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/izumo_ur/live2d.model3.json",
+  "iconPath": "assets/char/izumo_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_jingke_1",
+  "charName": "Jingke",
+  "costumeName": "Jingke · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/jingke_1/live2d.model3.json",
+  "iconPath": "assets/char/jingke_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_jingke_2",
+  "charName": "Jingke",
+  "costumeName": "Jingke · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/jingke_2/live2d.model3.json",
+  "iconPath": "assets/char/jingke_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_jingke_3",
+  "charName": "Jingke",
+  "costumeName": "Jingke · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/jingke_3/live2d.model3.json",
+  "iconPath": "assets/char/jingke_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_jingke_ur",
+  "charName": "Jingke",
+  "costumeName": "Jingke · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/jingke_ur/live2d.model3.json",
+  "iconPath": "assets/char/jingke_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_kasumi_1",
+  "charName": "Kasumi",
+  "costumeName": "Kasumi · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/kasumi_1/live2d.model3.json",
+  "iconPath": "assets/char/kasumi_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_kasumi_2",
+  "charName": "Kasumi",
+  "costumeName": "Kasumi · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/kasumi_2/live2d.model3.json",
+  "iconPath": "assets/char/kasumi_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_kasumi_3",
+  "charName": "Kasumi",
+  "costumeName": "Kasumi · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/kasumi_3/live2d.model3.json",
+  "iconPath": "assets/char/kasumi_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_katsuie_1",
+  "charName": "Katsuie",
+  "costumeName": "Katsuie · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/katsuie_1/live2d.model3.json",
+  "iconPath": "assets/char/katsuie_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_katsuie_2",
+  "charName": "Katsuie",
+  "costumeName": "Katsuie · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/katsuie_2/live2d.model3.json",
+  "iconPath": "assets/char/katsuie_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_katsuie_ssr_1",
+  "charName": "Katsuie",
+  "costumeName": "Katsuie · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/katsuie_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/katsuie_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_katsuie_ssr_2",
+  "charName": "Katsuie",
+  "costumeName": "Katsuie · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/katsuie_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/katsuie_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_kongming_1",
+  "charName": "Kongming",
+  "costumeName": "Kongming · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/kongming_1/live2d.model3.json",
+  "iconPath": "assets/char/kongming_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_kongming_2",
+  "charName": "Kongming",
+  "costumeName": "Kongming · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/kongming_2/live2d.model3.json",
+  "iconPath": "assets/char/kongming_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_kongming_ssr_1",
+  "charName": "Kongming",
+  "costumeName": "Kongming · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/kongming_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/kongming_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_kongming_ssr_2",
+  "charName": "Kongming",
+  "costumeName": "Kongming · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/kongming_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/kongming_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_lancelot_1",
+  "charName": "Lancelot",
+  "costumeName": "Lancelot · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/lancelot_1/live2d.model3.json",
+  "iconPath": "assets/char/lancelot_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_lancelot_2",
+  "charName": "Lancelot",
+  "costumeName": "Lancelot · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/lancelot_2/live2d.model3.json",
+  "iconPath": "assets/char/lancelot_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_lancelot_3",
+  "charName": "Lancelot",
+  "costumeName": "Lancelot · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/lancelot_3/live2d.model3.json",
+  "iconPath": "assets/char/lancelot_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_lancelot_valentine",
+  "charName": "Lancelot",
+  "costumeName": "Lancelot · Valentine",
+  "modelType": "skin",
+  "jsonPath": "assets/lancelot_valentine/live2d.model3.json",
+  "iconPath": "assets/char/lancelot_valentine.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_loki_1",
+  "charName": "Loki",
+  "costumeName": "Loki · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/loki_1/live2d.model3.json",
+  "iconPath": "assets/char/loki_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_loki_2",
+  "charName": "Loki",
+  "costumeName": "Loki · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/loki_2/live2d.model3.json",
+  "iconPath": "assets/char/loki_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_loki_3",
+  "charName": "Loki",
+  "costumeName": "Loki · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/loki_3/live2d.model3.json",
+  "iconPath": "assets/char/loki_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_loki_ur",
+  "charName": "Loki",
+  "costumeName": "Loki · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/loki_ur/live2d.model3.json",
+  "iconPath": "assets/char/loki_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_lubu_1",
+  "charName": "Lubu",
+  "costumeName": "Lubu · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/lubu_1/live2d.model3.json",
+  "iconPath": "assets/char/lubu_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_lubu_2",
+  "charName": "Lubu",
+  "costumeName": "Lubu · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/lubu_2/live2d.model3.json",
+  "iconPath": "assets/char/lubu_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_lubu_ssr_1",
+  "charName": "Lubu",
+  "costumeName": "Lubu · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/lubu_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/lubu_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_lubu_ssr_2",
+  "charName": "Lubu",
+  "costumeName": "Lubu · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/lubu_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/lubu_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_magellan_1",
+  "charName": "Magellan",
+  "costumeName": "Magellan · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/magellan_1/live2d.model3.json",
+  "iconPath": "assets/char/magellan_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_magellan_2",
+  "charName": "Magellan",
+  "costumeName": "Magellan · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/magellan_2/live2d.model3.json",
+  "iconPath": "assets/char/magellan_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_magellan_ssr_1",
+  "charName": "Magellan",
+  "costumeName": "Magellan · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/magellan_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/magellan_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_magellan_ssr_2",
+  "charName": "Magellan",
+  "costumeName": "Magellan · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/magellan_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/magellan_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_marierose_1",
+  "charName": "Marierose",
+  "costumeName": "Marierose · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/marierose_1/live2d.model3.json",
+  "iconPath": "assets/char/marierose_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_marierose_2",
+  "charName": "Marierose",
+  "costumeName": "Marierose · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/marierose_2/live2d.model3.json",
+  "iconPath": "assets/char/marierose_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_marierose_3",
+  "charName": "Marierose",
+  "costumeName": "Marierose · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/marierose_3/live2d.model3.json",
+  "iconPath": "assets/char/marierose_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_medea_1",
+  "charName": "Medea",
+  "costumeName": "Medea · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/medea_1/live2d.model3.json",
+  "iconPath": "assets/char/medea_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_medea_2",
+  "charName": "Medea",
+  "costumeName": "Medea · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/medea_2/live2d.model3.json",
+  "iconPath": "assets/char/medea_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_medea_ssr_1",
+  "charName": "Medea",
+  "costumeName": "Medea · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/medea_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/medea_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_medea_ssr_2",
+  "charName": "Medea",
+  "costumeName": "Medea · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/medea_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/medea_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_medusa_1",
+  "charName": "Medusa",
+  "costumeName": "Medusa · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/medusa_1/live2d.model3.json",
+  "iconPath": "assets/char/medusa_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_medusa_2",
+  "charName": "Medusa",
+  "costumeName": "Medusa · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/medusa_2/live2d.model3.json",
+  "iconPath": "assets/char/medusa_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_medusa_ssr_1",
+  "charName": "Medusa",
+  "costumeName": "Medusa · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/medusa_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/medusa_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_medusa_ssr_2",
+  "charName": "Medusa",
+  "costumeName": "Medusa · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/medusa_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/medusa_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_mendel_1",
+  "charName": "Mendel",
+  "costumeName": "Mendel · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/mendel_1/live2d.model3.json",
+  "iconPath": "assets/char/mendel_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_mendel_2",
+  "charName": "Mendel",
+  "costumeName": "Mendel · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/mendel_2/live2d.model3.json",
+  "iconPath": "assets/char/mendel_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_mendel_3",
+  "charName": "Mendel",
+  "costumeName": "Mendel · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/mendel_3/live2d.model3.json",
+  "iconPath": "assets/char/mendel_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_mendel_ur",
+  "charName": "Mendel",
+  "costumeName": "Mendel · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/mendel_ur/live2d.model3.json",
+  "iconPath": "assets/char/mendel_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_merlin_1",
+  "charName": "Merlin",
+  "costumeName": "Merlin · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/merlin_1/live2d.model3.json",
+  "iconPath": "assets/char/merlin_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_merlin_2",
+  "charName": "Merlin",
+  "costumeName": "Merlin · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/merlin_2/live2d.model3.json",
+  "iconPath": "assets/char/merlin_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_merlin_3",
+  "charName": "Merlin",
+  "costumeName": "Merlin · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/merlin_3/live2d.model3.json",
+  "iconPath": "assets/char/merlin_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_merlin_special",
+  "charName": "Merlin",
+  "costumeName": "Merlin · Costume special",
+  "modelType": "skin",
+  "jsonPath": "assets/merlin_special/live2d.model3.json",
+  "iconPath": "assets/char/merlin_special.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_merlin_ur",
+  "charName": "Merlin",
+  "costumeName": "Merlin · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/merlin_ur/live2d.model3.json",
+  "iconPath": "assets/char/merlin_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_michelangelo_1",
+  "charName": "Michelangelo",
+  "costumeName": "Michelangelo · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/michelangelo_1/live2d.model3.json",
+  "iconPath": "assets/char/michelangelo_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_michelangelo_2",
+  "charName": "Michelangelo",
+  "costumeName": "Michelangelo · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/michelangelo_2/live2d.model3.json",
+  "iconPath": "assets/char/michelangelo_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_michelangelo_3",
+  "charName": "Michelangelo",
+  "costumeName": "Michelangelo · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/michelangelo_3/live2d.model3.json",
+  "iconPath": "assets/char/michelangelo_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_michelangelo_ur",
+  "charName": "Michelangelo",
+  "costumeName": "Michelangelo · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/michelangelo_ur/live2d.model3.json",
+  "iconPath": "assets/char/michelangelo_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_minamoto_1",
+  "charName": "Minamoto",
+  "costumeName": "Minamoto · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/minamoto_1/live2d.model3.json",
+  "iconPath": "assets/char/minamoto_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_minamoto_2",
+  "charName": "Minamoto",
+  "costumeName": "Minamoto · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/minamoto_2/live2d.model3.json",
+  "iconPath": "assets/char/minamoto_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_minamoto_3",
+  "charName": "Minamoto",
+  "costumeName": "Minamoto · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/minamoto_3/live2d.model3.json",
+  "iconPath": "assets/char/minamoto_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_misaki_1",
+  "charName": "Misaki",
+  "costumeName": "Misaki · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/misaki_1/live2d.model3.json",
+  "iconPath": "assets/char/misaki_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_misaki_2",
+  "charName": "Misaki",
+  "costumeName": "Misaki · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/misaki_2/live2d.model3.json",
+  "iconPath": "assets/char/misaki_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_misaki_3",
+  "charName": "Misaki",
+  "costumeName": "Misaki · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/misaki_3/live2d.model3.json",
+  "iconPath": "assets/char/misaki_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_miyamoto_1",
+  "charName": "Miyamoto",
+  "costumeName": "Miyamoto · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/miyamoto_1/live2d.model3.json",
+  "iconPath": "assets/char/miyamoto_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_miyamoto_2",
+  "charName": "Miyamoto",
+  "costumeName": "Miyamoto · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/miyamoto_2/live2d.model3.json",
+  "iconPath": "assets/char/miyamoto_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_miyamoto_3",
+  "charName": "Miyamoto",
+  "costumeName": "Miyamoto · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/miyamoto_3/live2d.model3.json",
+  "iconPath": "assets/char/miyamoto_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_mobius_1",
+  "charName": "Mobius",
+  "costumeName": "Mobius · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/mobius_1/live2d.model3.json",
+  "iconPath": "assets/char/mobius_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_mobius_2",
+  "charName": "Mobius",
+  "costumeName": "Mobius · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/mobius_2/live2d.model3.json",
+  "iconPath": "assets/char/mobius_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_mobius_ssr_1",
+  "charName": "Mobius",
+  "costumeName": "Mobius · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/mobius_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/mobius_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_mobius_ssr_2",
+  "charName": "Mobius",
+  "costumeName": "Mobius · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/mobius_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/mobius_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_mordred_1",
+  "charName": "Mordred",
+  "costumeName": "Mordred · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/mordred_1/live2d.model3.json",
+  "iconPath": "assets/char/mordred_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_mordred_2",
+  "charName": "Mordred",
+  "costumeName": "Mordred · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/mordred_2/live2d.model3.json",
+  "iconPath": "assets/char/mordred_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_mordred_ssr_1",
+  "charName": "Mordred",
+  "costumeName": "Mordred · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/mordred_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/mordred_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_mordred_ssr_2",
+  "charName": "Mordred",
+  "costumeName": "Mordred · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/mordred_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/mordred_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_morgana_1",
+  "charName": "Morgana",
+  "costumeName": "Morgana · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/morgana_1/live2d.model3.json",
+  "iconPath": "assets/char/morgana_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_morgana_2",
+  "charName": "Morgana",
+  "costumeName": "Morgana · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/morgana_2/live2d.model3.json",
+  "iconPath": "assets/char/morgana_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_morgana_3",
+  "charName": "Morgana",
+  "costumeName": "Morgana · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/morgana_3/live2d.model3.json",
+  "iconPath": "assets/char/morgana_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_mozart_1",
+  "charName": "Mozart",
+  "costumeName": "Mozart · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/mozart_1/live2d.model3.json",
+  "iconPath": "assets/char/mozart_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_mozart_2",
+  "charName": "Mozart",
+  "costumeName": "Mozart · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/mozart_2/live2d.model3.json",
+  "iconPath": "assets/char/mozart_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_mozart_3",
+  "charName": "Mozart",
+  "costumeName": "Mozart · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/mozart_3/live2d.model3.json",
+  "iconPath": "assets/char/mozart_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_napoleon_1",
+  "charName": "Napoleon",
+  "costumeName": "Napoleon · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/napoleon_1/live2d.model3.json",
+  "iconPath": "assets/char/napoleon_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_napoleon_2",
+  "charName": "Napoleon",
+  "costumeName": "Napoleon · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/napoleon_2/live2d.model3.json",
+  "iconPath": "assets/char/napoleon_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_napoleon_3",
+  "charName": "Napoleon",
+  "costumeName": "Napoleon · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/napoleon_3/live2d.model3.json",
+  "iconPath": "assets/char/napoleon_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_nene_1",
+  "charName": "Nene",
+  "costumeName": "Nene · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/nene_1/live2d.model3.json",
+  "iconPath": "assets/char/nene_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_nene_2",
+  "charName": "Nene",
+  "costumeName": "Nene · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/nene_2/live2d.model3.json",
+  "iconPath": "assets/char/nene_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_nene_3",
+  "charName": "Nene",
+  "costumeName": "Nene · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/nene_3/live2d.model3.json",
+  "iconPath": "assets/char/nene_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_nero_1",
+  "charName": "Nero",
+  "costumeName": "Nero · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/nero_1/live2d.model3.json",
+  "iconPath": "assets/char/nero_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_nero_2",
+  "charName": "Nero",
+  "costumeName": "Nero · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/nero_2/live2d.model3.json",
+  "iconPath": "assets/char/nero_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_nero_ssr_1",
+  "charName": "Nero",
+  "costumeName": "Nero · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/nero_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/nero_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_nero_ssr_2",
+  "charName": "Nero",
+  "costumeName": "Nero · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/nero_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/nero_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_niwa_1",
+  "charName": "Niwa",
+  "costumeName": "Niwa · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/niwa_1/live2d.model3.json",
+  "iconPath": "assets/char/niwa_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_niwa_2",
+  "charName": "Niwa",
+  "costumeName": "Niwa · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/niwa_2/live2d.model3.json",
+  "iconPath": "assets/char/niwa_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_niwa_ssr_1",
+  "charName": "Niwa",
+  "costumeName": "Niwa · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/niwa_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/niwa_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_niwa_ssr_2",
+  "charName": "Niwa",
+  "costumeName": "Niwa · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/niwa_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/niwa_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_octavius_1",
+  "charName": "Octavius",
+  "costumeName": "Octavius · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/octavius_1/live2d.model3.json",
+  "iconPath": "assets/char/octavius_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_octavius_2",
+  "charName": "Octavius",
+  "costumeName": "Octavius · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/octavius_2/live2d.model3.json",
+  "iconPath": "assets/char/octavius_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_octavius_3",
+  "charName": "Octavius",
+  "costumeName": "Octavius · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/octavius_3/live2d.model3.json",
+  "iconPath": "assets/char/octavius_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_octavius_ur",
+  "charName": "Octavius",
+  "costumeName": "Octavius · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/octavius_ur/live2d.model3.json",
+  "iconPath": "assets/char/octavius_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_octavius_wedding",
+  "charName": "Octavius",
+  "costumeName": "Octavius · Costume wedding",
+  "modelType": "skin",
+  "jsonPath": "assets/octavius_wedding/live2d.model3.json",
+  "iconPath": "assets/char/octavius_wedding.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_oda_1",
+  "charName": "ODA",
+  "costumeName": "Oda · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/oda_1/live2d.model3.json",
+  "iconPath": "assets/char/oda_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_oda_2",
+  "charName": "ODA",
+  "costumeName": "Oda · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/oda_2/live2d.model3.json",
+  "iconPath": "assets/char/oda_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_oda_3",
+  "charName": "ODA",
+  "costumeName": "Oda · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/oda_3/live2d.model3.json",
+  "iconPath": "assets/char/oda_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_odanobunaga_skin",
+  "charName": "Odanobunaga",
+  "costumeName": "Odanobunaga · Costume skin",
+  "modelType": "skin",
+  "jsonPath": "assets/odanobunaga_skin/live2d.model3.json",
+  "iconPath": "assets/char/odanobunaga_skin.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_oichi_1",
+  "charName": "Oichi",
+  "costumeName": "Oichi · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/oichi_1/live2d.model3.json",
+  "iconPath": "assets/char/oichi_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_oichi_2",
+  "charName": "Oichi",
+  "costumeName": "Oichi · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/oichi_2/live2d.model3.json",
+  "iconPath": "assets/char/oichi_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_oichi_ssr_1",
+  "charName": "Oichi",
+  "costumeName": "Oichi · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/oichi_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/oichi_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_oichi_ssr_2",
+  "charName": "Oichi",
+  "costumeName": "Oichi · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/oichi_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/oichi_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_pandora_1",
+  "charName": "Pandora",
+  "costumeName": "Pandora · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/pandora_1/live2d.model3.json",
+  "iconPath": "assets/char/pandora_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_pandora_2",
+  "charName": "Pandora",
+  "costumeName": "Pandora · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/pandora_2/live2d.model3.json",
+  "iconPath": "assets/char/pandora_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_pandora_ssr_1",
+  "charName": "Pandora",
+  "costumeName": "Pandora · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/pandora_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/pandora_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_pandora_ssr_2",
+  "charName": "Pandora",
+  "costumeName": "Pandora · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/pandora_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/pandora_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_plato_1",
+  "charName": "Plato",
+  "costumeName": "Plato · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/plato_1/live2d.model3.json",
+  "iconPath": "assets/char/plato_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_plato_2",
+  "charName": "Plato",
+  "costumeName": "Plato · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/plato_2/live2d.model3.json",
+  "iconPath": "assets/char/plato_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_plato_ssr_1",
+  "charName": "Plato",
+  "costumeName": "Plato · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/plato_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/plato_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_plato_ssr_2",
+  "charName": "Plato",
+  "costumeName": "Plato · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/plato_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/plato_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_prometheus_1",
+  "charName": "Prometheus",
+  "costumeName": "Prometheus · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/prometheus_1/live2d.model3.json",
+  "iconPath": "assets/char/prometheus_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_prometheus_2",
+  "charName": "Prometheus",
+  "costumeName": "Prometheus · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/prometheus_2/live2d.model3.json",
+  "iconPath": "assets/char/prometheus_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_prometheus_ssr_1",
+  "charName": "Prometheus",
+  "costumeName": "Prometheus · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/prometheus_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/prometheus_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_prometheus_ssr_2",
+  "charName": "Prometheus",
+  "costumeName": "Prometheus · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/prometheus_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/prometheus_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_raphael_1",
+  "charName": "Raphael",
+  "costumeName": "Raphael · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/raphael_1/live2d.model3.json",
+  "iconPath": "assets/char/raphael_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_raphael_2",
+  "charName": "Raphael",
+  "costumeName": "Raphael · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/raphael_2/live2d.model3.json",
+  "iconPath": "assets/char/raphael_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_raphael_3",
+  "charName": "Raphael",
+  "costumeName": "Raphael · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/raphael_3/live2d.model3.json",
+  "iconPath": "assets/char/raphael_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_regin_1",
+  "charName": "Regin",
+  "costumeName": "Regin · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/regin_1/live2d.model3.json",
+  "iconPath": "assets/char/regin_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_regin_2",
+  "charName": "Regin",
+  "costumeName": "Regin · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/regin_2/live2d.model3.json",
+  "iconPath": "assets/char/regin_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_regin_3",
+  "charName": "Regin",
+  "costumeName": "Regin · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/regin_3/live2d.model3.json",
+  "iconPath": "assets/char/regin_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_regin_ur",
+  "charName": "Regin",
+  "costumeName": "Regin · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/regin_ur/live2d.model3.json",
+  "iconPath": "assets/char/regin_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_remus_1",
+  "charName": "Remus",
+  "costumeName": "Remus · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/remus_1/live2d.model3.json",
+  "iconPath": "assets/char/remus_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_remus_2",
+  "charName": "Remus",
+  "costumeName": "Remus · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/remus_2/live2d.model3.json",
+  "iconPath": "assets/char/remus_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_remus_3",
+  "charName": "Remus",
+  "costumeName": "Remus · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/remus_3/live2d.model3.json",
+  "iconPath": "assets/char/remus_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_richard_1",
+  "charName": "Richard",
+  "costumeName": "Richard · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/richard_1/live2d.model3.json",
+  "iconPath": "assets/char/richard_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_richard_2",
+  "charName": "Richard",
+  "costumeName": "Richard · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/richard_2/live2d.model3.json",
+  "iconPath": "assets/char/richard_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_richard_3",
+  "charName": "Richard",
+  "costumeName": "Richard · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/richard_3/live2d.model3.json",
+  "iconPath": "assets/char/richard_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_richard_ur",
+  "charName": "Richard",
+  "costumeName": "Richard · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/richard_ur/live2d.model3.json",
+  "iconPath": "assets/char/richard_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_robinhood_1",
+  "charName": "Robinhood",
+  "costumeName": "Robinhood · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/robinhood_1/live2d.model3.json",
+  "iconPath": "assets/char/robinhood_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_robinhood_2",
+  "charName": "Robinhood",
+  "costumeName": "Robinhood · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/robinhood_2/live2d.model3.json",
+  "iconPath": "assets/char/robinhood_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_robinhood_3",
+  "charName": "Robinhood",
+  "costumeName": "Robinhood · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/robinhood_3/live2d.model3.json",
+  "iconPath": "assets/char/robinhood_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_robinhood_4",
+  "charName": "Robinhood",
+  "costumeName": "Robinhood · Costume 4",
+  "modelType": "skin",
+  "jsonPath": "assets/robinhood_4/live2d.model3.json",
+  "iconPath": "assets/char/robinhood_4.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_robinhood_ur",
+  "charName": "Robinhood",
+  "costumeName": "Robinhood · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/robinhood_ur/live2d.model3.json",
+  "iconPath": "assets/char/robinhood_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_romulus_1",
+  "charName": "Romulus",
+  "costumeName": "Romulus · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/romulus_1/live2d.model3.json",
+  "iconPath": "assets/char/romulus_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_romulus_2",
+  "charName": "Romulus",
+  "costumeName": "Romulus · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/romulus_2/live2d.model3.json",
+  "iconPath": "assets/char/romulus_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_romulus_3",
+  "charName": "Romulus",
+  "costumeName": "Romulus · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/romulus_3/live2d.model3.json",
+  "iconPath": "assets/char/romulus_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_romulus_ur",
+  "charName": "Romulus",
+  "costumeName": "Romulus · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/romulus_ur/live2d.model3.json",
+  "iconPath": "assets/char/romulus_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_schrodinger_1",
+  "charName": "Schrodinger",
+  "costumeName": "Schrodinger · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/schrodinger_1/live2d.model3.json",
+  "iconPath": "assets/char/schrodinger_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_schrodinger_2",
+  "charName": "Schrodinger",
+  "costumeName": "Schrodinger · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/schrodinger_2/live2d.model3.json",
+  "iconPath": "assets/char/schrodinger_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_schrodinger_ssr_1",
+  "charName": "Schrodinger",
+  "costumeName": "Schrodinger · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/schrodinger_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/schrodinger_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_schrodinger_ssr_2",
+  "charName": "Schrodinger",
+  "costumeName": "Schrodinger · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/schrodinger_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/schrodinger_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_set_1",
+  "charName": "SET",
+  "costumeName": "Set · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/set_1/live2d.model3.json",
+  "iconPath": "assets/char/set_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_set_2",
+  "charName": "SET",
+  "costumeName": "Set · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/set_2/live2d.model3.json",
+  "iconPath": "assets/char/set_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_set_ssr_1",
+  "charName": "SET",
+  "costumeName": "Set · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/set_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/set_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_set_ssr_2",
+  "charName": "SET",
+  "costumeName": "Set · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/set_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/set_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_shakespeare_1",
+  "charName": "Shakespeare",
+  "costumeName": "Shakespeare · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/shakespeare_1/live2d.model3.json",
+  "iconPath": "assets/char/shakespeare_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_shakespeare_2",
+  "charName": "Shakespeare",
+  "costumeName": "Shakespeare · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/shakespeare_2/live2d.model3.json",
+  "iconPath": "assets/char/shakespeare_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_shakespeare_3",
+  "charName": "Shakespeare",
+  "costumeName": "Shakespeare · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/shakespeare_3/live2d.model3.json",
+  "iconPath": "assets/char/shakespeare_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_siegfried_1",
+  "charName": "Siegfried",
+  "costumeName": "Siegfried · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/siegfried_1/live2d.model3.json",
+  "iconPath": "assets/char/siegfried_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_siegfried_2",
+  "charName": "Siegfried",
+  "costumeName": "Siegfried · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/siegfried_2/live2d.model3.json",
+  "iconPath": "assets/char/siegfried_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_siegfried_ssr_1",
+  "charName": "Siegfried",
+  "costumeName": "Siegfried · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/siegfried_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/siegfried_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_siegfried_ssr_2",
+  "charName": "Siegfried",
+  "costumeName": "Siegfried · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/siegfried_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/siegfried_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_simayi_1",
+  "charName": "Simayi",
+  "costumeName": "Simayi · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/simayi_1/live2d.model3.json",
+  "iconPath": "assets/char/simayi_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_simayi_2",
+  "charName": "Simayi",
+  "costumeName": "Simayi · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/simayi_2/live2d.model3.json",
+  "iconPath": "assets/char/simayi_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_simayi_3",
+  "charName": "Simayi",
+  "costumeName": "Simayi · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/simayi_3/live2d.model3.json",
+  "iconPath": "assets/char/simayi_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_simayi_ur",
+  "charName": "Simayi",
+  "costumeName": "Simayi · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/simayi_ur/live2d.model3.json",
+  "iconPath": "assets/char/simayi_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_solomon_1",
+  "charName": "Solomon",
+  "costumeName": "Solomon · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/solomon_1/live2d.model3.json",
+  "iconPath": "assets/char/solomon_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_solomon_2",
+  "charName": "Solomon",
+  "costumeName": "Solomon · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/solomon_2/live2d.model3.json",
+  "iconPath": "assets/char/solomon_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_taira_1",
+  "charName": "Taira",
+  "costumeName": "Taira · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/taira_1/live2d.model3.json",
+  "iconPath": "assets/char/taira_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_taira_2",
+  "charName": "Taira",
+  "costumeName": "Taira · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/taira_2/live2d.model3.json",
+  "iconPath": "assets/char/taira_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_taira_ssr_1",
+  "charName": "Taira",
+  "costumeName": "Taira · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/taira_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/taira_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_taira_ssr_2",
+  "charName": "Taira",
+  "costumeName": "Taira · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/taira_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/taira_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_taishi_1",
+  "charName": "Taishi",
+  "costumeName": "Taishi · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/taishi_1/live2d.model3.json",
+  "iconPath": "assets/char/taishi_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_taishi_2",
+  "charName": "Taishi",
+  "costumeName": "Taishi · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/taishi_2/live2d.model3.json",
+  "iconPath": "assets/char/taishi_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_taishi_3",
+  "charName": "Taishi",
+  "costumeName": "Taishi · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/taishi_3/live2d.model3.json",
+  "iconPath": "assets/char/taishi_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_takeda_1",
+  "charName": "Takeda",
+  "costumeName": "Takeda · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/takeda_1/live2d.model3.json",
+  "iconPath": "assets/char/takeda_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_takeda_2",
+  "charName": "Takeda",
+  "costumeName": "Takeda · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/takeda_2/live2d.model3.json",
+  "iconPath": "assets/char/takeda_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_takeda_ssr_1",
+  "charName": "Takeda",
+  "costumeName": "Takeda · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/takeda_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/takeda_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_takeda_ssr_2",
+  "charName": "Takeda",
+  "costumeName": "Takeda · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/takeda_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/takeda_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_takeda_ssr_3",
+  "charName": "Takeda",
+  "costumeName": "Takeda · Costume ssr_3",
+  "modelType": "skin",
+  "jsonPath": "assets/takeda_ssr_3/live2d.model3.json",
+  "iconPath": "assets/char/takeda_ssr_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_takenaka_1",
+  "charName": "Takenaka",
+  "costumeName": "Takenaka · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/takenaka_1/live2d.model3.json",
+  "iconPath": "assets/char/takenaka_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_takenaka_2",
+  "charName": "Takenaka",
+  "costumeName": "Takenaka · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/takenaka_2/live2d.model3.json",
+  "iconPath": "assets/char/takenaka_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_takenaka_3",
+  "charName": "Takenaka",
+  "costumeName": "Takenaka · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/takenaka_3/live2d.model3.json",
+  "iconPath": "assets/char/takenaka_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_takenaka_4",
+  "charName": "Takenaka",
+  "costumeName": "Takenaka · Costume 4",
+  "modelType": "skin",
+  "jsonPath": "assets/takenaka_4/live2d.model3.json",
+  "iconPath": "assets/char/takenaka_4.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_takenaka_ur",
+  "charName": "Takenaka",
+  "costumeName": "Takenaka · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/takenaka_ur/live2d.model3.json",
+  "iconPath": "assets/char/takenaka_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_tamamo_1",
+  "charName": "Tamamo",
+  "costumeName": "Tamamo · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/tamamo_1/live2d.model3.json",
+  "iconPath": "assets/char/tamamo_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_tamamo_2",
+  "charName": "Tamamo",
+  "costumeName": "Tamamo · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/tamamo_2/live2d.model3.json",
+  "iconPath": "assets/char/tamamo_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_tamamo_3",
+  "charName": "Tamamo",
+  "costumeName": "Tamamo · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/tamamo_3/live2d.model3.json",
+  "iconPath": "assets/char/tamamo_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_tamamo_swimsuit",
+  "charName": "Tamamo",
+  "costumeName": "Tamamo · Swimsuit",
+  "modelType": "skin",
+  "jsonPath": "assets/tamamo_swimsuit/live2d.model3.json",
+  "iconPath": "assets/char/tamamo_swimsuit.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_thor_1",
+  "charName": "Thor",
+  "costumeName": "Thor · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/thor_1/live2d.model3.json",
+  "iconPath": "assets/char/thor_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_thor_2",
+  "charName": "Thor",
+  "costumeName": "Thor · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/thor_2/live2d.model3.json",
+  "iconPath": "assets/char/thor_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_thor_3",
+  "charName": "Thor",
+  "costumeName": "Thor · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/thor_3/live2d.model3.json",
+  "iconPath": "assets/char/thor_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_thor_ur",
+  "charName": "Thor",
+  "costumeName": "Thor · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/thor_ur/live2d.model3.json",
+  "iconPath": "assets/char/thor_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_tokugawa_1",
+  "charName": "Tokugawa",
+  "costumeName": "Tokugawa · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/tokugawa_1/live2d.model3.json",
+  "iconPath": "assets/char/tokugawa_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_tokugawa_2",
+  "charName": "Tokugawa",
+  "costumeName": "Tokugawa · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/tokugawa_2/live2d.model3.json",
+  "iconPath": "assets/char/tokugawa_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_tokugawa_3",
+  "charName": "Tokugawa",
+  "costumeName": "Tokugawa · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/tokugawa_3/live2d.model3.json",
+  "iconPath": "assets/char/tokugawa_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_uesugi_1",
+  "charName": "Uesugi",
+  "costumeName": "Uesugi · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/uesugi_1/live2d.model3.json",
+  "iconPath": "assets/char/uesugi_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_uesugi_2",
+  "charName": "Uesugi",
+  "costumeName": "Uesugi · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/uesugi_2/live2d.model3.json",
+  "iconPath": "assets/char/uesugi_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_uesugi_ssr_1",
+  "charName": "Uesugi",
+  "costumeName": "Uesugi · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/uesugi_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/uesugi_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_uesugi_ssr_2",
+  "charName": "Uesugi",
+  "costumeName": "Uesugi · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/uesugi_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/uesugi_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_venus_1",
+  "charName": "Venus",
+  "costumeName": "Venus · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/venus_1/live2d.model3.json",
+  "iconPath": "assets/char/venus_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_venus_2",
+  "charName": "Venus",
+  "costumeName": "Venus · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/venus_2/live2d.model3.json",
+  "iconPath": "assets/char/venus_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_venus_ssr_1",
+  "charName": "Venus",
+  "costumeName": "Venus · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/venus_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/venus_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_venus_ssr_2",
+  "charName": "Venus",
+  "costumeName": "Venus · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/venus_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/venus_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_watt_1",
+  "charName": "Watt",
+  "costumeName": "Watt · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/watt_1/live2d.model3.json",
+  "iconPath": "assets/char/watt_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_watt_2",
+  "charName": "Watt",
+  "costumeName": "Watt · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/watt_2/live2d.model3.json",
+  "iconPath": "assets/char/watt_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_watt_3",
+  "charName": "Watt",
+  "costumeName": "Watt · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/watt_3/live2d.model3.json",
+  "iconPath": "assets/char/watt_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_xuchu_1",
+  "charName": "Xuchu",
+  "costumeName": "Xuchu · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/xuchu_1/live2d.model3.json",
+  "iconPath": "assets/char/xuchu_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_xuchu_2",
+  "charName": "Xuchu",
+  "costumeName": "Xuchu · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/xuchu_2/live2d.model3.json",
+  "iconPath": "assets/char/xuchu_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_xuchu_3",
+  "charName": "Xuchu",
+  "costumeName": "Xuchu · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/xuchu_3/live2d.model3.json",
+  "iconPath": "assets/char/xuchu_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_yagyuu_1",
+  "charName": "Yagyuu",
+  "costumeName": "Yagyuu · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/yagyuu_1/live2d.model3.json",
+  "iconPath": "assets/char/yagyuu_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_yagyuu_2",
+  "charName": "Yagyuu",
+  "costumeName": "Yagyuu · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/yagyuu_2/live2d.model3.json",
+  "iconPath": "assets/char/yagyuu_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_yagyuu_3",
+  "charName": "Yagyuu",
+  "costumeName": "Yagyuu · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/yagyuu_3/live2d.model3.json",
+  "iconPath": "assets/char/yagyuu_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_yagyuu_swimsuit",
+  "charName": "Yagyuu",
+  "costumeName": "Yagyuu · Swimsuit",
+  "modelType": "skin",
+  "jsonPath": "assets/yagyuu_swimsuit/live2d.model3.json",
+  "iconPath": "assets/char/yagyuu_swimsuit.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_yoshiaki_1",
+  "charName": "Yoshiaki",
+  "costumeName": "Yoshiaki · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/yoshiaki_1/live2d.model3.json",
+  "iconPath": "assets/char/yoshiaki_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_yoshiaki_2",
+  "charName": "Yoshiaki",
+  "costumeName": "Yoshiaki · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/yoshiaki_2/live2d.model3.json",
+  "iconPath": "assets/char/yoshiaki_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_yoshiaki_ssr_1",
+  "charName": "Yoshiaki",
+  "costumeName": "Yoshiaki · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/yoshiaki_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/yoshiaki_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_yoshiaki_ssr_2",
+  "charName": "Yoshiaki",
+  "costumeName": "Yoshiaki · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/yoshiaki_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/yoshiaki_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_yoshimoto_1",
+  "charName": "Yoshimoto",
+  "costumeName": "Yoshimoto · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/yoshimoto_1/live2d.model3.json",
+  "iconPath": "assets/char/yoshimoto_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_yoshimoto_2",
+  "charName": "Yoshimoto",
+  "costumeName": "Yoshimoto · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/yoshimoto_2/live2d.model3.json",
+  "iconPath": "assets/char/yoshimoto_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_yoshimoto_ssr_1",
+  "charName": "Yoshimoto",
+  "costumeName": "Yoshimoto · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/yoshimoto_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/yoshimoto_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_yoshimoto_ssr_2",
+  "charName": "Yoshimoto",
+  "costumeName": "Yoshimoto · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/yoshimoto_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/yoshimoto_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_zhangfei_1",
+  "charName": "Zhangfei",
+  "costumeName": "Zhangfei · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/zhangfei_1/live2d.model3.json",
+  "iconPath": "assets/char/zhangfei_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_zhangfei_2",
+  "charName": "Zhangfei",
+  "costumeName": "Zhangfei · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/zhangfei_2/live2d.model3.json",
+  "iconPath": "assets/char/zhangfei_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_zhangfei_ssr_1",
+  "charName": "Zhangfei",
+  "costumeName": "Zhangfei · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/zhangfei_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/zhangfei_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_zhangfei_ssr_2",
+  "charName": "Zhangfei",
+  "costumeName": "Zhangfei · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/zhangfei_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/zhangfei_ssr_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_zhaoyun_ur",
+  "charName": "Zhaoyun",
+  "costumeName": "Zhaoyun · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/zhaoyun_ur/live2d.model3.json",
+  "iconPath": "assets/char/zhaoyun_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_zhenji_1",
+  "charName": "Zhenji",
+  "costumeName": "Zhenji · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/zhenji_1/live2d.model3.json",
+  "iconPath": "assets/char/zhenji_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_zhenji_2",
+  "charName": "Zhenji",
+  "costumeName": "Zhenji · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/zhenji_2/live2d.model3.json",
+  "iconPath": "assets/char/zhenji_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_zhenji_3",
+  "charName": "Zhenji",
+  "costumeName": "Zhenji · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/zhenji_3/live2d.model3.json",
+  "iconPath": "assets/char/zhenji_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_zhenji_ur",
+  "charName": "Zhenji",
+  "costumeName": "Zhenji · UR",
+  "modelType": "skin",
+  "jsonPath": "assets/zhenji_ur/live2d.model3.json",
+  "iconPath": "assets/char/zhenji_ur.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_zhouyu_1",
+  "charName": "Zhouyu",
+  "costumeName": "Zhouyu · Costume 1",
+  "modelType": "skin",
+  "jsonPath": "assets/zhouyu_1/live2d.model3.json",
+  "iconPath": "assets/char/zhouyu_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_zhouyu_2",
+  "charName": "Zhouyu",
+  "costumeName": "Zhouyu · Costume 2",
+  "modelType": "skin",
+  "jsonPath": "assets/zhouyu_2/live2d.model3.json",
+  "iconPath": "assets/char/zhouyu_2.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_zhouyu_3",
+  "charName": "Zhouyu",
+  "costumeName": "Zhouyu · Costume 3",
+  "modelType": "skin",
+  "jsonPath": "assets/zhouyu_3/live2d.model3.json",
+  "iconPath": "assets/char/zhouyu_3.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_zhouyu_ssr_1",
+  "charName": "Zhouyu",
+  "costumeName": "Zhouyu · Costume ssr_1",
+  "modelType": "skin",
+  "jsonPath": "assets/zhouyu_ssr_1/live2d.model3.json",
+  "iconPath": "assets/char/zhouyu_ssr_1.png",
+  "api": "cubism4"
+ },
+ {
+  "id": "gs_zhouyu_ssr_2",
+  "charName": "Zhouyu",
+  "costumeName": "Zhouyu · Costume ssr_2",
+  "modelType": "skin",
+  "jsonPath": "assets/zhouyu_ssr_2/live2d.model3.json",
+  "iconPath": "assets/char/zhouyu_ssr_2.png",
+  "api": "cubism4"
+ }
+]
