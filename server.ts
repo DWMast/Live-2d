@@ -32,6 +32,10 @@ const UPSTREAM_ECHO_BASES = [
   'https://raw.githubusercontent.com/leililei/echocalypse-spine/main',
   'https://cdn.jsdelivr.net/gh/leililei/echocalypse-spine@main',
 ];
+const UPSTREAM_MAD_BASES = [
+  'https://cdn.jsdelivr.net/gh/anyabot/MAD-assets-1@master',
+  'https://raw.githubusercontent.com/anyabot/MAD-assets-1/master',
+];
 const UPSTREAM_AL_SPINE_BASES = [
   'https://cdn.jsdelivr.net/gh/o0Nomar0o/SpineCollections@main',
   'https://raw.githubusercontent.com/o0Nomar0o/SpineCollections/main',
@@ -257,7 +261,8 @@ async function resolveCachedAsset(
     | 'echo-spines-hq'
     | 'echo-pics-hq'
     | 'al-spines'
-    | 'al-icons',
+    | 'al-icons'
+    | 'mad-spines',
   relPath: string,
   upstreamBases: string | string[],
   encodePathForUpstream = false
@@ -481,7 +486,40 @@ async function startServer() {
     }
   });
 
-  // Where Echocalypse assets are coming from, and what the process has cached.
+  app.get('/api/mad-spine/*', async (req, res) => {
+    const rawParam = (req.params as Record<string, string>)[0] ?? '';
+    const relPath = sanitizeUtf8AssetPath(
+      rawParam,
+      /\.(skel|atlas|json|png|webp|jpg|jpeg)$/i
+    );
+    if (!relPath) {
+      res.status(400).json({ error: 'Invalid MAD asset path' });
+      return;
+    }
+    try {
+      const candidates = [relPath];
+      const skinMatch = relPath.match(/^skins\/([^/]+)\/(.+)$/i);
+      if (skinMatch && !skinMatch[1].includes('__')) {
+        candidates.push(`skins/${skinMatch[1]}__google/${skinMatch[2]}`);
+        candidates.push(`skins/${skinMatch[1]}__onestore/${skinMatch[2]}`);
+      }
+      let lastError: unknown;
+      for (const candidate of candidates) {
+        try {
+          const entry = await resolveCachedAsset('mad-spines', candidate, UPSTREAM_MAD_BASES, true);
+          sendCachedEntry(req, res, entry);
+          return;
+        } catch (err) {
+          lastError = err;
+        }
+      }
+      throw lastError;
+    } catch (err) {
+      const status = (err as { status?: number })?.status || 502;
+      res.status(status).json({ error: `Failed to fetch MAD asset: ${relPath}` });
+    }
+  });
+
   // The health panel uses this to tell "this character is not in any source" apart
   // from "this character failed to load", which otherwise look identical.
   app.get('/api/echo-source-status', (_req, res) => {

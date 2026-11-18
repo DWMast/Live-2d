@@ -12,6 +12,7 @@ export const ECHO_SPINE_BASE = '/api/echo-spine';
 export const ECHO_PIC_BASE = '/api/echo-pic';
 export const AL_SPINE_BASE = '/api/al-spine';
 export const AL_ICON_BASE = '/api/al-icon';
+export const MAD_SPINE_BASE = '/api/mad-spine';
 
 export const GAME_LIST: GameDescriptor[] = [
   {
@@ -63,6 +64,16 @@ export const GAME_LIST: GameDescriptor[] = [
     engineLabel: 'Spine 3.8 HD · 119 Dynamic Spines',
     accentGradient: 'from-cyan-500 to-indigo-600 shadow-cyan-500/20',
     accentText: 'text-cyan-400',
+  },
+  {
+    id: 'mad',
+    shortCode: 'MAD',
+    name: 'MAke Drama: MAD',
+    studioName: 'MAke Drama Spine Studio',
+    rosterLabel: 'MAD Roster',
+    engineLabel: 'Spine 4.1 · 145 Skins',
+    accentGradient: 'from-violet-500 to-pink-600 shadow-violet-500/20',
+    accentText: 'text-violet-400',
   },
 ];
 
@@ -203,6 +214,21 @@ interface EchocalypseCatalogEntry {
 
 /** Playable characters come from the 6-digit base ids; the rest is secondary. */
 const ECHO_PLAYABLE_KINDS = new Set(['character', 'costume']);
+
+interface MadCatalogEntry {
+  id: string;
+  charName: string;
+  costumeName: string;
+  modelType: 'skin';
+  jsonPath: string;
+  atlasPath: string;
+  iconPath?: string;
+  spineVersion?: string;
+  kind?: string;
+  uncensored?: boolean;
+  stores?: string[];
+  hasBg?: boolean;
+}
 
 interface AzurLaneCatalogEntry {
   id: string;
@@ -349,6 +375,32 @@ export async function loadGameRoster(gameId: GameId): Promise<BD2Character[]> {
           hasBackdropSpine: item.hasBackdropSpine,
         };
       });
+    } else if (gameId === 'mad') {
+      const res = await fetch('/data/mad_catalog.json');
+      if (!res.ok) throw new Error(`Failed to load MAke Drama catalog (HTTP ${res.status})`);
+      const rawList = (await res.json()) as MadCatalogEntry[];
+      mapped = rawList.map((item, idx) => ({
+        id: item.id,
+        game: 'mad',
+        charName: item.charName,
+        costumeName: item.costumeName,
+        spine: item.id,
+        cutscene: '',
+        dating: '',
+        audio: '',
+        skeletonUrl: encodeProxyPath(MAD_SPINE_BASE, item.jsonPath),
+        atlasUrl: encodeProxyPath(MAD_SPINE_BASE, item.atlasPath),
+        skeletonFormat: 'skel',
+        spineVersion: item.spineVersion || '4.1',
+        modelType: item.modelType,
+        iconUrl: '',
+        hasCutscene: item.kind === 'drama',
+        hasDating: item.kind === 'affection' || item.kind === 'desire',
+        releaseOrder: idx,
+        releaseLabel: item.uncensored ? 'Uncensored available' : item.kind || 'Skin',
+        named: true,
+        kind: item.kind,
+      }));
     } else if (gameId === 'azurlane') {
       const res = await fetch('/data/azurlane_catalog.json');
       if (!res.ok) throw new Error(`Failed to load Azur Lane catalog (HTTP ${res.status})`);
@@ -407,6 +459,9 @@ export function pickDefaultCharacterForGame(gameId: GameId, roster: BD2Character
       roster.find((c) => c.costumeIndex === 0 && c.named) ||
       roster[0]
     );
+  }
+  if (gameId === 'mad') {
+    return roster.find((c) => c.kind === 'standing' && c.iconUrl) || roster.find((c) => c.kind === 'affection') || roster[0];
   }
   if (gameId === 'azurlane') {
     return (
