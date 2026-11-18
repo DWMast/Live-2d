@@ -262,7 +262,8 @@ async function resolveCachedAsset(
     | 'echo-pics-hq'
     | 'al-spines'
     | 'al-icons'
-    | 'mad-spines',
+    | 'mad-spines'
+    | 'anchor-spines',
   relPath: string,
   upstreamBases: string | string[],
   encodePathForUpstream = false
@@ -587,6 +588,25 @@ async function startServer() {
     } catch (err) {
       const status = (err as { status?: number })?.status || 502;
       res.status(status).json({ error: `Failed to fetch Azur Lane spine asset: ${relPath}` });
+    }
+  });
+
+  app.get('/api/anchor-spine/*', async (req, res) => {
+    const rawParam = (req.params as Record<string, string>)[0] ?? '';
+    const relPath = sanitizeUtf8AssetPath(
+      rawParam,
+      /\.(json|skel|atlas|png|webp|jpg|jpeg)$/i
+    );
+    if (!relPath) {
+      res.status(400).json({ error: 'Invalid Anchor Panic spine path' });
+      return;
+    }
+    try {
+      const entry = await resolveCachedAsset('anchor-spines', relPath, UPSTREAM_AL_SPINE_BASES, true);
+      sendCachedEntry(req, res, entry);
+    } catch (err) {
+      const status = (err as { status?: number })?.status || 502;
+      res.status(status).json({ error: `Failed to fetch Anchor Panic asset: ${relPath}` });
     }
   });
 

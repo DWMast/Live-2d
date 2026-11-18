@@ -13,6 +13,7 @@ export const ECHO_PIC_BASE = '/api/echo-pic';
 export const AL_SPINE_BASE = '/api/al-spine';
 export const AL_ICON_BASE = '/api/al-icon';
 export const MAD_SPINE_BASE = '/api/mad-spine';
+export const ANCHOR_SPINE_BASE = '/api/anchor-spine';
 
 export const GAME_LIST: GameDescriptor[] = [
   {
@@ -74,6 +75,16 @@ export const GAME_LIST: GameDescriptor[] = [
     engineLabel: 'Spine 4.1 · 145 Skins',
     accentGradient: 'from-violet-500 to-pink-600 shadow-violet-500/20',
     accentText: 'text-violet-400',
+  },
+  {
+    id: 'anchorpanic',
+    shortCode: 'AP',
+    name: 'Anchor Panic',
+    studioName: 'Anchor Panic Spine Studio',
+    rosterLabel: 'Anchor Panic Roster',
+    engineLabel: 'Spine 3.8 · 110 Skins',
+    accentGradient: 'from-teal-500 to-sky-600 shadow-teal-500/20',
+    accentText: 'text-teal-400',
   },
 ];
 
@@ -228,6 +239,11 @@ interface MadCatalogEntry {
   uncensored?: boolean;
   stores?: string[];
   hasBg?: boolean;
+}
+
+interface AnchorCatalogEntry extends MadCatalogEntry {
+  baseId?: string;
+  costumeIndex?: number;
 }
 
 interface AzurLaneCatalogEntry {
@@ -401,6 +417,45 @@ export async function loadGameRoster(gameId: GameId): Promise<BD2Character[]> {
         named: true,
         kind: item.kind,
       }));
+    } else if (gameId === 'anchorpanic') {
+      const res = await fetch('/data/anchorpanic_catalog.json');
+      if (!res.ok) throw new Error(`Failed to load Anchor Panic catalog (HTTP ${res.status})`);
+      const rawList = (await res.json()) as AnchorCatalogEntry[];
+      // Character-first ordering: base spine of each hero, then its costumes.
+      const sorted = [...rawList].sort((a, b) => {
+        const ca = a.costumeIndex ?? 0;
+        const cb = b.costumeIndex ?? 0;
+        if (ca !== cb && ca <= 0 && cb <= 0) {
+          return Number(a.baseId || a.id) - Number(b.baseId || b.id);
+        }
+        if (a.baseId === b.baseId) return ca - cb;
+        return String(a.baseId || a.id).localeCompare(String(b.baseId || b.id), 'en', { numeric: true });
+      });
+      mapped = sorted.map((item, idx) => ({
+        id: item.id,
+        game: 'anchorpanic',
+        charName: item.charName,
+        costumeName: item.costumeName,
+        spine: item.id,
+        cutscene: '',
+        dating: '',
+        audio: '',
+        skeletonUrl: encodeProxyPath(ANCHOR_SPINE_BASE, item.jsonPath),
+        atlasUrl: encodeProxyPath(ANCHOR_SPINE_BASE, item.atlasPath),
+        skeletonFormat: 'json',
+        spineVersion: item.spineVersion || '3.8',
+        modelType: item.modelType,
+        iconUrl: item.iconPath ? encodeProxyPath(ANCHOR_SPINE_BASE, item.iconPath) : '',
+        hasCutscene: false,
+        hasDating: false,
+        releaseOrder: idx,
+        releaseLabel: 'Spine 3.8',
+        named: true,
+        baseId: item.baseId,
+        costumeIndex: item.costumeIndex ?? 0,
+        costumes: [item.id],
+        kind: item.kind,
+      }));
     } else if (gameId === 'azurlane') {
       const res = await fetch('/data/azurlane_catalog.json');
       if (!res.ok) throw new Error(`Failed to load Azur Lane catalog (HTTP ${res.status})`);
@@ -462,6 +517,9 @@ export function pickDefaultCharacterForGame(gameId: GameId, roster: BD2Character
   }
   if (gameId === 'mad') {
     return roster.find((c) => c.kind === 'standing' && c.iconUrl) || roster.find((c) => c.kind === 'affection') || roster[0];
+  }
+  if (gameId === 'anchorpanic') {
+    return roster.find((c) => (c.costumeIndex ?? 0) === 0) || roster[0];
   }
   if (gameId === 'azurlane') {
     return (
