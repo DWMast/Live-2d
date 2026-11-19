@@ -11,6 +11,7 @@ export const HAZE_SPINE_BASE = '/api/haze-spine';
 export const AL_SPINE_BASE = '/api/al-spine';
 export const AL_ICON_BASE = '/api/al-icon';
 export const MAD_SPINE_BASE = '/api/mad-spine';
+export const MAD_ICON_BASE = '/api/mad-icon';
 export const ANCHOR_SPINE_BASE = '/api/anchor-spine';
 export const GS_LIVE2D_BASE = '/api/gs-live2d';
 
@@ -328,11 +329,12 @@ export async function loadGameRoster(gameId: GameId): Promise<BD2Character[]> {
         skeletonFormat: 'skel',
         spineVersion: item.spineVersion || '4.1',
         modelType: item.modelType,
-        iconUrl: '',
+        iconUrl: item.iconPath ? encodeProxyPath(MAD_ICON_BASE, item.iconPath) : '',
         hasCutscene: item.kind === 'drama',
         hasDating: item.kind === 'affection' || item.kind === 'desire',
         releaseOrder: idx,
         releaseLabel: item.uncensored ? 'Uncensored available' : item.kind || 'Skin',
+        uncensored: item.uncensored || undefined,
         named: true,
         kind: item.kind,
       }));

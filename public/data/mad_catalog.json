@@ -1,12 +1,12 @@
 [
  {
   "id": "af_ch0009",
-  "charName": "CH0009",
-  "costumeName": "Affection (CH0009)",
+  "charName": "Elisia",
+  "costumeName": "Elisia · Affection",
   "modelType": "skin",
   "jsonPath": "skins/af_ch0009__google/AF_CH0009.skel",
   "atlasPath": "skins/af_ch0009__google/AF_CH0009.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_AF_CH0009.webp",
   "spineVersion": "4.1",
   "kind": "affection",
   "uncensored": true,
@@ -15,16 +15,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 0
+  "releaseOrder": 0,
+  "nameCn": "엘리시아",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:AF_CH0009.png"
+  ]
  },
  {
   "id": "af_ch0010",
-  "charName": "CH0010",
-  "costumeName": "Affection (CH0010)",
+  "charName": "Mane (Swimsuit)",
+  "costumeName": "Mane (Swimsuit) · Affection",
   "modelType": "skin",
   "jsonPath": "skins/af_ch0010__google/AF_CH0010.skel",
   "atlasPath": "skins/af_ch0010__google/AF_CH0010.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_AF_CH0010.webp",
   "spineVersion": "4.1",
   "kind": "affection",
   "uncensored": true,
@@ -33,16 +39,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 1
+  "releaseOrder": 1,
+  "nameCn": "마네(수영복)",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:AF_CH0010.png"
+  ]
  },
  {
   "id": "af_ch0011",
-  "charName": "CH0011",
-  "costumeName": "Affection (CH0011)",
+  "charName": "Chise",
+  "costumeName": "Chise · Affection",
   "modelType": "skin",
   "jsonPath": "skins/af_ch0011/AF_chise.skel",
   "atlasPath": "skins/af_ch0011/AF_chise.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_AF_CH0011.webp",
   "spineVersion": "4.1",
   "kind": "affection",
   "uncensored": false,
@@ -50,16 +62,18 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 2
+  "releaseOrder": 2,
+  "nameCn": "치세",
+  "divergeReasons": []
  },
  {
   "id": "af_ch0015",
-  "charName": "CH0015",
-  "costumeName": "Affection (CH0015)",
+  "charName": "Ines",
+  "costumeName": "Ines · Affection",
   "modelType": "skin",
   "jsonPath": "skins/af_ch0015__google/AF_CH0015.skel",
   "atlasPath": "skins/af_ch0015__google/AF_CH0015.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_AF_CH0015.webp",
   "spineVersion": "4.1",
   "kind": "affection",
   "uncensored": true,
@@ -68,16 +82,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 3
+  "releaseOrder": 3,
+  "nameCn": "이네스",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:AF_CH0015.png"
+  ]
  },
  {
   "id": "af_ch0019",
-  "charName": "CH0019",
-  "costumeName": "Affection (CH0019)",
+  "charName": "Victoria",
+  "costumeName": "Victoria · Affection",
   "modelType": "skin",
   "jsonPath": "skins/af_ch0019/AF_CH0019.skel",
   "atlasPath": "skins/af_ch0019/AF_CH0019.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_AF_CH0019.webp",
   "spineVersion": "4.1",
   "kind": "affection",
   "uncensored": false,
@@ -85,16 +105,18 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 4
+  "releaseOrder": 4,
+  "nameCn": "빅토리아",
+  "divergeReasons": []
  },
  {
   "id": "af_ch0022",
-  "charName": "CH0022",
-  "costumeName": "Affection (CH0022)",
+  "charName": "Midwen",
+  "costumeName": "Midwen · Affection",
   "modelType": "skin",
   "jsonPath": "skins/af_ch0022__google/AF_CH0022.skel",
   "atlasPath": "skins/af_ch0022__google/AF_CH0022.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_AF_CH0022.webp",
   "spineVersion": "4.1",
   "kind": "affection",
   "uncensored": true,
@@ -103,16 +125,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 5
+  "releaseOrder": 5,
+  "nameCn": "미드웬",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:AF_CH0022.png"
+  ]
  },
  {
   "id": "af_ch0024",
-  "charName": "CH0024",
-  "costumeName": "Affection (CH0024)",
+  "charName": "Aronne",
+  "costumeName": "Aronne · Affection",
   "modelType": "skin",
   "jsonPath": "skins/af_ch0024__google/AF_Alone.skel",
   "atlasPath": "skins/af_ch0024__google/AF_Alone.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_AF_CH0024.webp",
   "spineVersion": "4.1",
   "kind": "affection",
   "uncensored": true,
@@ -121,16 +149,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 6
+  "releaseOrder": 6,
+  "nameCn": "아로네",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:AF_Alone.png"
+  ]
  },
  {
   "id": "af_ch0028",
-  "charName": "CH0028",
-  "costumeName": "Affection (CH0028)",
+  "charName": "Charlotte",
+  "costumeName": "Charlotte · Affection",
   "modelType": "skin",
   "jsonPath": "skins/af_ch0028__google/AF_Charlotte.skel",
   "atlasPath": "skins/af_ch0028__google/AF_Charlotte.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_AF_CH0028.webp",
   "spineVersion": "4.1",
   "kind": "affection",
   "uncensored": true,
@@ -139,16 +173,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 7
+  "releaseOrder": 7,
+  "nameCn": "샬럿",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:AF_Charlotte.png"
+  ]
  },
  {
   "id": "af_ch0032",
-  "charName": "CH0032",
-  "costumeName": "Affection (CH0032)",
+  "charName": "Suji",
+  "costumeName": "Suji · Affection",
   "modelType": "skin",
   "jsonPath": "skins/af_ch0032/AF_CH0032.skel",
   "atlasPath": "skins/af_ch0032/AF_CH0032.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_AF_CH0032.webp",
   "spineVersion": "4.1",
   "kind": "affection",
   "uncensored": false,
@@ -156,16 +196,18 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 8
+  "releaseOrder": 8,
+  "nameCn": "수지",
+  "divergeReasons": []
  },
  {
   "id": "af_ch0033",
-  "charName": "CH0033",
-  "costumeName": "Affection (CH0033)",
+  "charName": "Estelle",
+  "costumeName": "Estelle · Affection",
   "modelType": "skin",
   "jsonPath": "skins/af_ch0033__google/AF_CH0033.skel",
   "atlasPath": "skins/af_ch0033__google/AF_CH0033.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_AF_CH0033.webp",
   "spineVersion": "4.1",
   "kind": "affection",
   "uncensored": true,
@@ -174,16 +216,22 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 9
+  "releaseOrder": 9,
+  "nameCn": "에스텔",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:AF_CH0033.png"
+  ]
  },
  {
   "id": "af_ch0035",
-  "charName": "CH0035",
-  "costumeName": "Affection (CH0035)",
+  "charName": "Yuria",
+  "costumeName": "Yuria · Affection",
   "modelType": "skin",
   "jsonPath": "skins/af_ch0035__google/AF_CH0035.skel",
   "atlasPath": "skins/af_ch0035__google/AF_CH0035.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_AF_CH0035.webp",
   "spineVersion": "4.1",
   "kind": "affection",
   "uncensored": true,
@@ -192,16 +240,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 10
+  "releaseOrder": 10,
+  "nameCn": "유리아",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:AF_CH0035.png"
+  ]
  },
  {
   "id": "af_ch0038",
-  "charName": "CH0038",
-  "costumeName": "Affection (CH0038)",
+  "charName": "Valentina",
+  "costumeName": "Valentina · Affection",
   "modelType": "skin",
   "jsonPath": "skins/af_ch0038__google/AF_CH0038.skel",
   "atlasPath": "skins/af_ch0038__google/AF_CH0038.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_AF_CH0038.webp",
   "spineVersion": "4.1",
   "kind": "affection",
   "uncensored": true,
@@ -210,16 +264,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 11
+  "releaseOrder": 11,
+  "nameCn": "발렌티나",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:AF_CH0038.png"
+  ]
  },
  {
   "id": "af_ch0040",
-  "charName": "CH0040",
-  "costumeName": "Affection (CH0040)",
+  "charName": "Isabel",
+  "costumeName": "Isabel · Affection",
   "modelType": "skin",
   "jsonPath": "skins/af_ch0040__google/AF_CH0040.skel",
   "atlasPath": "skins/af_ch0040__google/AF_CH0040.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_AF_CH0040.webp",
   "spineVersion": "4.1",
   "kind": "affection",
   "uncensored": true,
@@ -228,16 +288,20 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 12
+  "releaseOrder": 12,
+  "nameCn": "이자벨",
+  "divergeReasons": [
+   "skeleton"
+  ]
  },
  {
   "id": "af_ch0042",
-  "charName": "CH0042",
-  "costumeName": "Affection (CH0042)",
+  "charName": "Oblia",
+  "costumeName": "Oblia · Affection",
   "modelType": "skin",
   "jsonPath": "skins/af_ch0042__google/AF_CH0042.skel",
   "atlasPath": "skins/af_ch0042__google/AF_CH0042.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_AF_CH0042.webp",
   "spineVersion": "4.1",
   "kind": "affection",
   "uncensored": true,
@@ -246,16 +310,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 13
+  "releaseOrder": 13,
+  "nameCn": "오블리아",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:AF_CH0042.png"
+  ]
  },
  {
   "id": "af_ch0043",
-  "charName": "CH0043",
-  "costumeName": "Affection (CH0043)",
+  "charName": "Lafine",
+  "costumeName": "Lafine · Affection",
   "modelType": "skin",
   "jsonPath": "skins/af_ch0043__google/AF_CH0043.skel",
   "atlasPath": "skins/af_ch0043__google/AF_CH0043.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_AF_CH0043.webp",
   "spineVersion": "4.1",
   "kind": "affection",
   "uncensored": true,
@@ -264,16 +334,22 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 14
+  "releaseOrder": 14,
+  "nameCn": "라피네",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:AF_CH0043.png"
+  ]
  },
  {
   "id": "af_ch0052",
-  "charName": "CH0052",
-  "costumeName": "Affection (CH0052)",
+  "charName": "Rana",
+  "costumeName": "Rana · Affection",
   "modelType": "skin",
   "jsonPath": "skins/af_ch0052__google/AF_CH0052.skel",
   "atlasPath": "skins/af_ch0052__google/AF_CH0052.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_AF_CH0052.webp",
   "spineVersion": "4.1",
   "kind": "affection",
   "uncensored": true,
@@ -282,16 +358,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 15
+  "releaseOrder": 15,
+  "nameCn": "라나",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:AF_CH0052.png"
+  ]
  },
  {
   "id": "af_ch0057",
-  "charName": "CH0057",
-  "costumeName": "Affection (CH0057)",
+  "charName": "Casey",
+  "costumeName": "Casey · Affection",
   "modelType": "skin",
   "jsonPath": "skins/af_ch0057__google/AF_CH0057.skel",
   "atlasPath": "skins/af_ch0057__google/AF_CH0057.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_AF_CH0057.webp",
   "spineVersion": "4.1",
   "kind": "affection",
   "uncensored": true,
@@ -300,16 +382,21 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 16
+  "releaseOrder": 16,
+  "nameCn": "케이시",
+  "divergeReasons": [
+   "skeleton",
+   "atlas"
+  ]
  },
  {
   "id": "af_ch0058",
-  "charName": "CH0058",
-  "costumeName": "Affection (CH0058)",
+  "charName": "Bianca",
+  "costumeName": "Bianca · Affection",
   "modelType": "skin",
   "jsonPath": "skins/af_ch0058__google/AF_CH0058.skel",
   "atlasPath": "skins/af_ch0058__google/AF_CH0058.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_AF_CH0058.webp",
   "spineVersion": "4.1",
   "kind": "affection",
   "uncensored": true,
@@ -318,16 +405,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 17
+  "releaseOrder": 17,
+  "nameCn": "비앙카",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:AF_CH0058.png"
+  ]
  },
  {
   "id": "af_ch0068",
-  "charName": "CH0068",
-  "costumeName": "Affection (CH0068)",
+  "charName": "Claire (Swimsuit)",
+  "costumeName": "Claire (Swimsuit) · Affection",
   "modelType": "skin",
   "jsonPath": "skins/af_ch0068__google/AF_CH0068.skel",
   "atlasPath": "skins/af_ch0068__google/AF_CH0068.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_AF_CH0068.webp",
   "spineVersion": "4.1",
   "kind": "affection",
   "uncensored": true,
@@ -336,16 +429,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 18
+  "releaseOrder": 18,
+  "nameCn": "클레어(수영복)",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:AF_CH0068.png"
+  ]
  },
  {
   "id": "af_ch0069",
-  "charName": "CH0069",
-  "costumeName": "Affection (CH0069)",
+  "charName": "Dan Xi (Halloween)",
+  "costumeName": "Dan Xi (Halloween) · Affection",
   "modelType": "skin",
   "jsonPath": "skins/af_ch0069__google/AF_CH0069.skel",
   "atlasPath": "skins/af_ch0069__google/AF_CH0069.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_AF_CH0069.webp",
   "spineVersion": "4.1",
   "kind": "affection",
   "uncensored": true,
@@ -354,16 +453,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 19
+  "releaseOrder": 19,
+  "nameCn": "단희(할로윈)",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:AF_CH0069.png"
+  ]
  },
  {
   "id": "af_ch0075",
-  "charName": "CH0075",
-  "costumeName": "Affection (CH0075)",
+  "charName": "Kouchou (Halloween)",
+  "costumeName": "Kouchou (Halloween) · Affection",
   "modelType": "skin",
   "jsonPath": "skins/af_ch0075__google/AF_CH0075.skel",
   "atlasPath": "skins/af_ch0075__google/AF_CH0075.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_AF_CH0075.webp",
   "spineVersion": "4.1",
   "kind": "affection",
   "uncensored": true,
@@ -372,16 +477,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 20
+  "releaseOrder": 20,
+  "nameCn": "홍접(할로윈)",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:AF_CH0075.png"
+  ]
  },
  {
   "id": "ds_ch0009",
-  "charName": "CH0009",
-  "costumeName": "Desire (CH0009)",
+  "charName": "Elisia",
+  "costumeName": "Elisia · Desire",
   "modelType": "skin",
   "jsonPath": "skins/ds_ch0009__google/DS_Elisia.skel",
   "atlasPath": "skins/ds_ch0009__google/DS_Elisia.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_DS_CH0009.webp",
   "spineVersion": "4.1",
   "kind": "desire",
   "uncensored": true,
@@ -390,16 +501,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 23
+  "releaseOrder": 23,
+  "nameCn": "엘리시아",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:DS_Elisia.png"
+  ]
  },
  {
   "id": "ds_ch0010",
-  "charName": "CH0010",
-  "costumeName": "Desire (CH0010)",
+  "charName": "Mane (Swimsuit)",
+  "costumeName": "Mane (Swimsuit) · Desire",
   "modelType": "skin",
   "jsonPath": "skins/ds_ch0010/DS_CH0010.skel",
   "atlasPath": "skins/ds_ch0010/DS_CH0010.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_DS_CH0010.webp",
   "spineVersion": "4.1",
   "kind": "desire",
   "uncensored": false,
@@ -407,16 +524,18 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 24
+  "releaseOrder": 24,
+  "nameCn": "마네(수영복)",
+  "divergeReasons": []
  },
  {
   "id": "ds_ch0011",
-  "charName": "CH0011",
-  "costumeName": "Desire (CH0011)",
+  "charName": "Chise",
+  "costumeName": "Chise · Desire",
   "modelType": "skin",
   "jsonPath": "skins/ds_ch0011__google/DS_chise.skel",
   "atlasPath": "skins/ds_ch0011__google/DS_chise.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_DS_CH0011.webp",
   "spineVersion": "4.1",
   "kind": "desire",
   "uncensored": true,
@@ -425,16 +544,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 25
+  "releaseOrder": 25,
+  "nameCn": "치세",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:DS_chise.png"
+  ]
  },
  {
   "id": "ds_ch0015",
-  "charName": "CH0015",
-  "costumeName": "Desire (CH0015)",
+  "charName": "Ines",
+  "costumeName": "Ines · Desire",
   "modelType": "skin",
   "jsonPath": "skins/ds_ch0015/DS_Ines.skel",
   "atlasPath": "skins/ds_ch0015/DS_Ines.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_DS_CH0015.webp",
   "spineVersion": "4.1",
   "kind": "desire",
   "uncensored": false,
@@ -442,16 +567,18 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 26
+  "releaseOrder": 26,
+  "nameCn": "이네스",
+  "divergeReasons": []
  },
  {
   "id": "ds_ch0019",
-  "charName": "CH0019",
-  "costumeName": "Desire (CH0019)",
+  "charName": "Victoria",
+  "costumeName": "Victoria · Desire",
   "modelType": "skin",
   "jsonPath": "skins/ds_ch0019__google/DS_Victoria.skel",
   "atlasPath": "skins/ds_ch0019__google/DS_Victoria.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_DS_CH0019.webp",
   "spineVersion": "4.1",
   "kind": "desire",
   "uncensored": true,
@@ -460,16 +587,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 27
+  "releaseOrder": 27,
+  "nameCn": "빅토리아",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:DS_Victoria.png"
+  ]
  },
  {
   "id": "ds_ch0022",
-  "charName": "CH0022",
-  "costumeName": "Desire (CH0022)",
+  "charName": "Midwen",
+  "costumeName": "Midwen · Desire",
   "modelType": "skin",
   "jsonPath": "skins/ds_ch0022__google/DS_CH0022.skel",
   "atlasPath": "skins/ds_ch0022__google/DS_CH0022.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_DS_CH0022.webp",
   "spineVersion": "4.1",
   "kind": "desire",
   "uncensored": true,
@@ -478,16 +611,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 28
+  "releaseOrder": 28,
+  "nameCn": "미드웬",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:DS_CH0022.png"
+  ]
  },
  {
   "id": "ds_ch0024",
-  "charName": "CH0024",
-  "costumeName": "Desire (CH0024)",
+  "charName": "Aronne",
+  "costumeName": "Aronne · Desire",
   "modelType": "skin",
   "jsonPath": "skins/ds_ch0024__google/DS_Alone.skel",
   "atlasPath": "skins/ds_ch0024__google/DS_Alone.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_DS_CH0024.webp",
   "spineVersion": "4.1",
   "kind": "desire",
   "uncensored": true,
@@ -496,16 +635,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 29
+  "releaseOrder": 29,
+  "nameCn": "아로네",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:DS_Alone.png"
+  ]
  },
  {
   "id": "ds_ch0028",
-  "charName": "CH0028",
-  "costumeName": "Desire (CH0028)",
+  "charName": "Charlotte",
+  "costumeName": "Charlotte · Desire",
   "modelType": "skin",
   "jsonPath": "skins/ds_ch0028__google/DS_Charlotte.skel",
   "atlasPath": "skins/ds_ch0028__google/DS_Charlotte.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_DS_CH0028.webp",
   "spineVersion": "4.1",
   "kind": "desire",
   "uncensored": true,
@@ -514,16 +659,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 30
+  "releaseOrder": 30,
+  "nameCn": "샬럿",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:DS_Charlotte.png"
+  ]
  },
  {
   "id": "ds_ch0032",
-  "charName": "CH0032",
-  "costumeName": "Desire (CH0032)",
+  "charName": "Suji",
+  "costumeName": "Suji · Desire",
   "modelType": "skin",
   "jsonPath": "skins/ds_ch0032__google/DS_CH0032.skel",
   "atlasPath": "skins/ds_ch0032__google/DS_CH0032.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_DS_CH0032.webp",
   "spineVersion": "4.1",
   "kind": "desire",
   "uncensored": true,
@@ -532,16 +683,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 31
+  "releaseOrder": 31,
+  "nameCn": "수지",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:DS_CH0032.png"
+  ]
  },
  {
   "id": "ds_ch0033",
-  "charName": "CH0033",
-  "costumeName": "Desire (CH0033)",
+  "charName": "Estelle",
+  "costumeName": "Estelle · Desire",
   "modelType": "skin",
   "jsonPath": "skins/ds_ch0033__google/DS_CH0033.skel",
   "atlasPath": "skins/ds_ch0033__google/DS_CH0033.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_DS_CH0033.webp",
   "spineVersion": "4.1",
   "kind": "desire",
   "uncensored": true,
@@ -550,16 +707,22 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 32
+  "releaseOrder": 32,
+  "nameCn": "에스텔",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:DS_CH0033.png"
+  ]
  },
  {
   "id": "ds_ch0035",
-  "charName": "CH0035",
-  "costumeName": "Desire (CH0035)",
+  "charName": "Yuria",
+  "costumeName": "Yuria · Desire",
   "modelType": "skin",
   "jsonPath": "skins/ds_ch0035__google/DS_CH0035.skel",
   "atlasPath": "skins/ds_ch0035__google/DS_CH0035.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_DS_CH0035.webp",
   "spineVersion": "4.1",
   "kind": "desire",
   "uncensored": true,
@@ -568,16 +731,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 33
+  "releaseOrder": 33,
+  "nameCn": "유리아",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:DS_CH0035.png"
+  ]
  },
  {
   "id": "ds_ch0038",
-  "charName": "CH0038",
-  "costumeName": "Desire (CH0038)",
+  "charName": "Valentina",
+  "costumeName": "Valentina · Desire",
   "modelType": "skin",
   "jsonPath": "skins/ds_ch0038__google/DS_CH0038.skel",
   "atlasPath": "skins/ds_ch0038__google/DS_CH0038.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_DS_CH0038.webp",
   "spineVersion": "4.1",
   "kind": "desire",
   "uncensored": true,
@@ -586,16 +755,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 34
+  "releaseOrder": 34,
+  "nameCn": "발렌티나",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:DS_CH0038.png"
+  ]
  },
  {
   "id": "ds_ch0040",
-  "charName": "CH0040",
-  "costumeName": "Desire (CH0040)",
+  "charName": "Isabel",
+  "costumeName": "Isabel · Desire",
   "modelType": "skin",
   "jsonPath": "skins/ds_ch0040__google/DS_CH0040.skel",
   "atlasPath": "skins/ds_ch0040__google/DS_CH0040.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_DS_CH0040.webp",
   "spineVersion": "4.1",
   "kind": "desire",
   "uncensored": true,
@@ -604,16 +779,22 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 35
+  "releaseOrder": 35,
+  "nameCn": "이자벨",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:DS_CH0040.png"
+  ]
  },
  {
   "id": "ds_ch0042",
-  "charName": "CH0042",
-  "costumeName": "Desire (CH0042)",
+  "charName": "Oblia",
+  "costumeName": "Oblia · Desire",
   "modelType": "skin",
   "jsonPath": "skins/ds_ch0042__google/DS_CH0042.skel",
   "atlasPath": "skins/ds_ch0042__google/DS_CH0042.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_DS_CH0042.webp",
   "spineVersion": "4.1",
   "kind": "desire",
   "uncensored": true,
@@ -622,16 +803,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 36
+  "releaseOrder": 36,
+  "nameCn": "오블리아",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:DS_CH0042.png"
+  ]
  },
  {
   "id": "ds_ch0043",
-  "charName": "CH0043",
-  "costumeName": "Desire (CH0043)",
+  "charName": "Lafine",
+  "costumeName": "Lafine · Desire",
   "modelType": "skin",
   "jsonPath": "skins/ds_ch0043__google/DS_CH0043.skel",
   "atlasPath": "skins/ds_ch0043__google/DS_CH0043.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_DS_CH0043.webp",
   "spineVersion": "4.1",
   "kind": "desire",
   "uncensored": true,
@@ -640,16 +827,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 37
+  "releaseOrder": 37,
+  "nameCn": "라피네",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:DS_CH0043.png"
+  ]
  },
  {
   "id": "ds_ch0052",
-  "charName": "CH0052",
-  "costumeName": "Desire (CH0052)",
+  "charName": "Rana",
+  "costumeName": "Rana · Desire",
   "modelType": "skin",
   "jsonPath": "skins/ds_ch0052__google/DS_CH0052.skel",
   "atlasPath": "skins/ds_ch0052__google/DS_CH0052.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_DS_CH0052.webp",
   "spineVersion": "4.1",
   "kind": "desire",
   "uncensored": true,
@@ -658,16 +851,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 38
+  "releaseOrder": 38,
+  "nameCn": "라나",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:DS_CH0052.png"
+  ]
  },
  {
   "id": "ds_ch0057",
-  "charName": "CH0057",
-  "costumeName": "Desire (CH0057)",
+  "charName": "Casey",
+  "costumeName": "Casey · Desire",
   "modelType": "skin",
   "jsonPath": "skins/ds_ch0057/DS_CH0057.skel",
   "atlasPath": "skins/ds_ch0057/DS_CH0057.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_DS_CH0057.webp",
   "spineVersion": "4.1",
   "kind": "desire",
   "uncensored": false,
@@ -675,16 +874,18 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 39
+  "releaseOrder": 39,
+  "nameCn": "케이시",
+  "divergeReasons": []
  },
  {
   "id": "ds_ch0058",
-  "charName": "CH0058",
-  "costumeName": "Desire (CH0058)",
+  "charName": "Bianca",
+  "costumeName": "Bianca · Desire",
   "modelType": "skin",
   "jsonPath": "skins/ds_ch0058__google/DS_CH0058.skel",
   "atlasPath": "skins/ds_ch0058__google/DS_CH0058.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_DS_CH0058.webp",
   "spineVersion": "4.1",
   "kind": "desire",
   "uncensored": true,
@@ -693,16 +894,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 40
+  "releaseOrder": 40,
+  "nameCn": "비앙카",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:DS_CH0058.png"
+  ]
  },
  {
   "id": "ds_ch0068",
-  "charName": "CH0068",
-  "costumeName": "Desire (CH0068)",
+  "charName": "Claire (Swimsuit)",
+  "costumeName": "Claire (Swimsuit) · Desire",
   "modelType": "skin",
   "jsonPath": "skins/ds_ch0068__google/DS_CH0068.skel",
   "atlasPath": "skins/ds_ch0068__google/DS_CH0068.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_DS_CH0068.webp",
   "spineVersion": "4.1",
   "kind": "desire",
   "uncensored": true,
@@ -711,16 +918,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 41
+  "releaseOrder": 41,
+  "nameCn": "클레어(수영복)",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:DS_CH0068.png"
+  ]
  },
  {
   "id": "ds_ch0069",
-  "charName": "CH0069",
-  "costumeName": "Desire (CH0069)",
+  "charName": "Dan Xi (Halloween)",
+  "costumeName": "Dan Xi (Halloween) · Desire",
   "modelType": "skin",
   "jsonPath": "skins/ds_ch0069__google/DS_CH0069.skel",
   "atlasPath": "skins/ds_ch0069__google/DS_CH0069.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_DS_CH0069.webp",
   "spineVersion": "4.1",
   "kind": "desire",
   "uncensored": true,
@@ -729,16 +942,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 42
+  "releaseOrder": 42,
+  "nameCn": "단희(할로윈)",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:DS_CH0069.png"
+  ]
  },
  {
   "id": "ds_ch0075",
-  "charName": "CH0075",
-  "costumeName": "Desire (CH0075)",
+  "charName": "Kouchou (Halloween)",
+  "costumeName": "Kouchou (Halloween) · Desire",
   "modelType": "skin",
   "jsonPath": "skins/ds_ch0075__google/DS_CH0075.skel",
   "atlasPath": "skins/ds_ch0075__google/DS_CH0075.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_DS_CH0075.webp",
   "spineVersion": "4.1",
   "kind": "desire",
   "uncensored": true,
@@ -747,12 +966,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 43
+  "releaseOrder": 43,
+  "nameCn": "홍접(할로윈)",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:DS_CH0075.png"
+  ]
  },
  {
   "id": "pl_cutin_0001",
   "charName": "cutin_0001",
-  "costumeName": "pleasure (cutin_0001)",
+  "costumeName": "cutin_0001 · Pleasure",
   "modelType": "skin",
   "jsonPath": "skins/pl_cutin_0001__google/PL_cutin_0001.skel",
   "atlasPath": "skins/pl_cutin_0001__google/PL_cutin_0001.atlas",
@@ -765,12 +990,18 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 44
+  "releaseOrder": 44,
+  "nameCn": "",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:PL_cutin_0001.png"
+  ]
  },
  {
   "id": "pl_cutin_0002",
   "charName": "cutin_0002",
-  "costumeName": "pleasure (cutin_0002)",
+  "costumeName": "cutin_0002 · Pleasure",
   "modelType": "skin",
   "jsonPath": "skins/pl_cutin_0002__google/PL_cutin_0002.skel",
   "atlasPath": "skins/pl_cutin_0002__google/PL_cutin_0002.atlas",
@@ -783,16 +1014,22 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 45
+  "releaseOrder": 45,
+  "nameCn": "",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:PL_cutin_0002.png"
+  ]
  },
  {
   "id": "pl_ev0001",
   "charName": "EV0001",
-  "costumeName": "pleasure (EV0001)",
+  "costumeName": "EV0001 · Pleasure",
   "modelType": "skin",
   "jsonPath": "skins/pl_ev0001/PL_EV0001.skel",
   "atlasPath": "skins/pl_ev0001/PL_EV0001.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_PL_EV0001.webp",
   "spineVersion": "4.1",
   "kind": "pleasure",
   "uncensored": false,
@@ -800,16 +1037,18 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 46
+  "releaseOrder": 46,
+  "nameCn": "",
+  "divergeReasons": []
  },
  {
   "id": "pl_ev0002",
   "charName": "EV0002",
-  "costumeName": "pleasure (EV0002)",
+  "costumeName": "EV0002 · Pleasure",
   "modelType": "skin",
   "jsonPath": "skins/pl_ev0002__google/PL_EV0002.skel",
   "atlasPath": "skins/pl_ev0002__google/PL_EV0002.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_PL_EV0002.webp",
   "spineVersion": "4.1",
   "kind": "pleasure",
   "uncensored": true,
@@ -818,16 +1057,23 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 47
+  "releaseOrder": 47,
+  "nameCn": "",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:PL_EV0002.png",
+   "texture:PL_EV0002_2.png"
+  ]
  },
  {
   "id": "pl_ma0003",
   "charName": "MA0003",
-  "costumeName": "pleasure (MA0003)",
+  "costumeName": "MA0003 · Pleasure",
   "modelType": "skin",
   "jsonPath": "skins/pl_ma0003__google/PL_MA0003.skel",
   "atlasPath": "skins/pl_ma0003__google/PL_MA0003.atlas",
-  "iconPath": "",
+  "iconPath": "skin/Thumbnail_PL_MA0003.webp",
   "spineVersion": "4.1",
   "kind": "pleasure",
   "uncensored": true,
@@ -836,12 +1082,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 48
+  "releaseOrder": 48,
+  "nameCn": "",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:PL_MA0003.png"
+  ]
  },
  {
   "id": "pl_title_0001",
   "charName": "title_0001",
-  "costumeName": "pleasure (title_0001)",
+  "costumeName": "title_0001 · Pleasure",
   "modelType": "skin",
   "jsonPath": "skins/pl_title_0001/PL_title_0001.skel",
   "atlasPath": "skins/pl_title_0001/PL_title_0001.atlas",
@@ -853,16 +1105,18 @@
    "onestore"
   ],
   "hasBg": true,
-  "releaseOrder": 49
+  "releaseOrder": 49,
+  "nameCn": "",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0001",
-  "charName": "CH0001",
-  "costumeName": "Standing (CH0001)",
+  "charName": "Lucia",
+  "costumeName": "Lucia · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0001/ST_CH0001.skel",
   "atlasPath": "skins/st_ch0001/ST_CH0001.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0001.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -870,16 +1124,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 50
+  "releaseOrder": 50,
+  "nameCn": "루시아",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0002",
-  "charName": "CH0002",
-  "costumeName": "Standing (CH0002)",
+  "charName": "Laila",
+  "costumeName": "Laila · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0002/ST_CH0002.skel",
   "atlasPath": "skins/st_ch0002/ST_CH0002.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0002.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -887,16 +1143,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 51
+  "releaseOrder": 51,
+  "nameCn": "라일라",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0003",
-  "charName": "CH0003",
-  "costumeName": "Standing (CH0003)",
+  "charName": "Yomi",
+  "costumeName": "Yomi · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0003/ST_CH0003.skel",
   "atlasPath": "skins/st_ch0003/ST_CH0003.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0003.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -904,16 +1162,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 52
+  "releaseOrder": 52,
+  "nameCn": "요미",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0005",
-  "charName": "CH0005",
-  "costumeName": "Standing (CH0005)",
+  "charName": "Claire",
+  "costumeName": "Claire · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0005/ST_CH0005.skel",
   "atlasPath": "skins/st_ch0005/ST_CH0005.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0005.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -921,16 +1181,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 53
+  "releaseOrder": 53,
+  "nameCn": "클레어",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0006",
-  "charName": "CH0006",
-  "costumeName": "Standing (CH0006)",
+  "charName": "Eileen",
+  "costumeName": "Eileen · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0006/ST_CH0006.skel",
   "atlasPath": "skins/st_ch0006/ST_CH0006.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0006.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -938,16 +1200,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 54
+  "releaseOrder": 54,
+  "nameCn": "에일린",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0007",
-  "charName": "CH0007",
-  "costumeName": "Standing (CH0007)",
+  "charName": "Mane",
+  "costumeName": "Mane · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0007/ST_CH0007.skel",
   "atlasPath": "skins/st_ch0007/ST_CH0007.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0007.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -955,16 +1219,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 55
+  "releaseOrder": 55,
+  "nameCn": "마네",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0009",
-  "charName": "CH0009",
-  "costumeName": "Standing (CH0009)",
+  "charName": "Elisia",
+  "costumeName": "Elisia · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0009__google/ST_CH0009.skel",
   "atlasPath": "skins/st_ch0009__google/ST_CH0009.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0009.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": true,
@@ -973,16 +1239,22 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 56
+  "releaseOrder": 56,
+  "nameCn": "엘리시아",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:ST_CH0009.png"
+  ]
  },
  {
   "id": "st_ch0010",
-  "charName": "CH0010",
-  "costumeName": "Standing (CH0010)",
+  "charName": "Mane (Swimsuit)",
+  "costumeName": "Mane (Swimsuit) · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0010__google/ST_CH0010.skel",
   "atlasPath": "skins/st_ch0010__google/ST_CH0010.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0010.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": true,
@@ -991,16 +1263,22 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 57
+  "releaseOrder": 57,
+  "nameCn": "마네(수영복)",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:ST_CH0010.png"
+  ]
  },
  {
   "id": "st_ch0011",
-  "charName": "CH0011",
-  "costumeName": "Standing (CH0011)",
+  "charName": "Chise",
+  "costumeName": "Chise · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0011/ST_CH0011.skel",
   "atlasPath": "skins/st_ch0011/ST_CH0011.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0011.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1008,16 +1286,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 58
+  "releaseOrder": 58,
+  "nameCn": "치세",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0012",
-  "charName": "CH0012",
-  "costumeName": "Standing (CH0012)",
+  "charName": "Marcia",
+  "costumeName": "Marcia · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0012/ST_CH0012.skel",
   "atlasPath": "skins/st_ch0012/ST_CH0012.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0012.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1025,16 +1305,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 59
+  "releaseOrder": 59,
+  "nameCn": "마샤",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0013",
-  "charName": "CH0013",
-  "costumeName": "Standing (CH0013)",
+  "charName": "Sir Romance",
+  "costumeName": "Sir Romance · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0013/ST_CH0013.skel",
   "atlasPath": "skins/st_ch0013/ST_CH0013.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0013.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1042,16 +1324,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 60
+  "releaseOrder": 60,
+  "nameCn": "로망스 경",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0015",
-  "charName": "CH0015",
-  "costumeName": "Standing (CH0015)",
+  "charName": "Ines",
+  "costumeName": "Ines · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0015/ST_CH0015.skel",
   "atlasPath": "skins/st_ch0015/ST_CH0015.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0015.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1059,16 +1343,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 61
+  "releaseOrder": 61,
+  "nameCn": "이네스",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0016",
-  "charName": "CH0016",
-  "costumeName": "Standing (CH0016)",
+  "charName": "Reanna",
+  "costumeName": "Reanna · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0016/ST_CH0016.skel",
   "atlasPath": "skins/st_ch0016/ST_CH0016.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0016.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1076,16 +1362,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 62
+  "releaseOrder": 62,
+  "nameCn": "레안나",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0017",
-  "charName": "CH0017",
-  "costumeName": "Standing (CH0017)",
+  "charName": "Shizuku",
+  "costumeName": "Shizuku · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0017/ST_CH0017.skel",
   "atlasPath": "skins/st_ch0017/ST_CH0017.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0017.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1093,16 +1381,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 63
+  "releaseOrder": 63,
+  "nameCn": "시즈쿠",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0019",
-  "charName": "CH0019",
-  "costumeName": "Standing (CH0019)",
+  "charName": "Victoria",
+  "costumeName": "Victoria · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0019/ST_CH0019.skel",
   "atlasPath": "skins/st_ch0019/ST_CH0019.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0019.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1110,16 +1400,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 64
+  "releaseOrder": 64,
+  "nameCn": "빅토리아",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0020",
-  "charName": "CH0020",
-  "costumeName": "Standing (CH0020)",
+  "charName": "Dan Xi",
+  "costumeName": "Dan Xi · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0020/ST_CH0020.skel",
   "atlasPath": "skins/st_ch0020/ST_CH0020.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0020.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1127,16 +1419,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 65
+  "releaseOrder": 65,
+  "nameCn": "단희",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0021",
-  "charName": "CH0021",
-  "costumeName": "Standing (CH0021)",
+  "charName": "Kouchou",
+  "costumeName": "Kouchou · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0021/ST_CH0021.skel",
   "atlasPath": "skins/st_ch0021/ST_CH0021.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0021.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1144,16 +1438,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 66
+  "releaseOrder": 66,
+  "nameCn": "홍접",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0022",
-  "charName": "CH0022",
-  "costumeName": "Standing (CH0022)",
+  "charName": "Midwen",
+  "costumeName": "Midwen · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0022/ST_CH0022.skel",
   "atlasPath": "skins/st_ch0022/ST_CH0022.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0022.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1161,16 +1457,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 67
+  "releaseOrder": 67,
+  "nameCn": "미드웬",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0023",
-  "charName": "CH0023",
-  "costumeName": "Standing (CH0023)",
+  "charName": "Rona",
+  "costumeName": "Rona · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0023/ST_CH0023.skel",
   "atlasPath": "skins/st_ch0023/ST_CH0023.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0023.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1178,16 +1476,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 68
+  "releaseOrder": 68,
+  "nameCn": "로나",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0024",
-  "charName": "CH0024",
-  "costumeName": "Standing (CH0024)",
+  "charName": "Aronne",
+  "costumeName": "Aronne · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0024/ST_CH0024.skel",
   "atlasPath": "skins/st_ch0024/ST_CH0024.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0024.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1195,16 +1495,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 69
+  "releaseOrder": 69,
+  "nameCn": "아로네",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0025",
-  "charName": "CH0025",
-  "costumeName": "Standing (CH0025)",
+  "charName": "Kage",
+  "costumeName": "Kage · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0025/ST_CH0025.skel",
   "atlasPath": "skins/st_ch0025/ST_CH0025.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0025.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1212,16 +1514,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 70
+  "releaseOrder": 70,
+  "nameCn": "카게",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0026",
-  "charName": "CH0026",
-  "costumeName": "Standing (CH0026)",
+  "charName": "Sophia",
+  "costumeName": "Sophia · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0026/ST_CH0026.skel",
   "atlasPath": "skins/st_ch0026/ST_CH0026.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0026.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1229,16 +1533,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 71
+  "releaseOrder": 71,
+  "nameCn": "소피아",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0027",
-  "charName": "CH0027",
-  "costumeName": "Standing (CH0027)",
+  "charName": "Emily",
+  "costumeName": "Emily · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0027__google/ST_CH0027.skel",
   "atlasPath": "skins/st_ch0027__google/ST_CH0027.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0027.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": true,
@@ -1247,16 +1553,22 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 72
+  "releaseOrder": 72,
+  "nameCn": "에밀리",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:ST_CH0027.png"
+  ]
  },
  {
   "id": "st_ch0028",
-  "charName": "CH0028",
-  "costumeName": "Standing (CH0028)",
+  "charName": "Charlotte",
+  "costumeName": "Charlotte · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0028/ST_CH0028.skel",
   "atlasPath": "skins/st_ch0028/ST_CH0028.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0028.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1264,16 +1576,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 73
+  "releaseOrder": 73,
+  "nameCn": "샬럿",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0029",
-  "charName": "CH0029",
-  "costumeName": "Standing (CH0029)",
+  "charName": "Freya",
+  "costumeName": "Freya · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0029/ST_CH0029.skel",
   "atlasPath": "skins/st_ch0029/ST_CH0029.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0029.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1281,16 +1595,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 74
+  "releaseOrder": 74,
+  "nameCn": "프레이아",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0030",
-  "charName": "CH0030",
-  "costumeName": "Standing (CH0030)",
+  "charName": "Seven",
+  "costumeName": "Seven · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0030/ST_CH0030.skel",
   "atlasPath": "skins/st_ch0030/ST_CH0030.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0030.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1298,16 +1614,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 75
+  "releaseOrder": 75,
+  "nameCn": "세븐",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0031",
-  "charName": "CH0031",
-  "costumeName": "Standing (CH0031)",
+  "charName": "Hinata",
+  "costumeName": "Hinata · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0031/ST_CH0031.skel",
   "atlasPath": "skins/st_ch0031/ST_CH0031.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0031.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1315,16 +1633,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 76
+  "releaseOrder": 76,
+  "nameCn": "히나타",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0032",
-  "charName": "CH0032",
-  "costumeName": "Standing (CH0032)",
+  "charName": "Suji",
+  "costumeName": "Suji · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0032/ST_CH0032.skel",
   "atlasPath": "skins/st_ch0032/ST_CH0032.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0032.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1332,16 +1652,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 77
+  "releaseOrder": 77,
+  "nameCn": "수지",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0033",
-  "charName": "CH0033",
-  "costumeName": "Standing (CH0033)",
+  "charName": "Estelle",
+  "costumeName": "Estelle · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0033/ST_CH0033.skel",
   "atlasPath": "skins/st_ch0033/ST_CH0033.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0033.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1349,16 +1671,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 78
+  "releaseOrder": 78,
+  "nameCn": "에스텔",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0034",
-  "charName": "CH0034",
-  "costumeName": "Standing (CH0034)",
+  "charName": "Theta",
+  "costumeName": "Theta · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0034/ST_CH0034.skel",
   "atlasPath": "skins/st_ch0034/ST_CH0034.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0034.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1366,16 +1690,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 79
+  "releaseOrder": 79,
+  "nameCn": "세타",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0035",
-  "charName": "CH0035",
-  "costumeName": "Standing (CH0035)",
+  "charName": "Yuria",
+  "costumeName": "Yuria · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0035/ST_CH0035.skel",
   "atlasPath": "skins/st_ch0035/ST_CH0035.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0035.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1383,16 +1709,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 80
+  "releaseOrder": 80,
+  "nameCn": "유리아",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0036",
-  "charName": "CH0036",
-  "costumeName": "Standing (CH0036)",
+  "charName": "Lumina",
+  "costumeName": "Lumina · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0036__google/ST_CH0036.skel",
   "atlasPath": "skins/st_ch0036__google/ST_CH0036.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0036.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": true,
@@ -1401,16 +1729,22 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 81
+  "releaseOrder": 81,
+  "nameCn": "루미나",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:ST_CH0036.png"
+  ]
  },
  {
   "id": "st_ch0037",
-  "charName": "CH0037",
-  "costumeName": "Standing (CH0037)",
+  "charName": "Kasa",
+  "costumeName": "Kasa · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0037/ST_CH0037.skel",
   "atlasPath": "skins/st_ch0037/ST_CH0037.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0037.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1418,16 +1752,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 82
+  "releaseOrder": 82,
+  "nameCn": "카사",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0038",
-  "charName": "CH0038",
-  "costumeName": "Standing (CH0038)",
+  "charName": "Valentina",
+  "costumeName": "Valentina · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0038__google/ST_CH0038.skel",
   "atlasPath": "skins/st_ch0038__google/ST_CH0038.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0038.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": true,
@@ -1436,16 +1772,22 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 83
+  "releaseOrder": 83,
+  "nameCn": "발렌티나",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:ST_CH0038.png"
+  ]
  },
  {
   "id": "st_ch0039",
-  "charName": "CH0039",
-  "costumeName": "Standing (CH0039)",
+  "charName": "Caren",
+  "costumeName": "Caren · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0039/ST_CH0039.skel",
   "atlasPath": "skins/st_ch0039/ST_CH0039.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0039.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1453,16 +1795,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 84
+  "releaseOrder": 84,
+  "nameCn": "카렌",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0040",
-  "charName": "CH0040",
-  "costumeName": "Standing (CH0040)",
+  "charName": "Isabel",
+  "costumeName": "Isabel · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0040__google/ST_CH0040.skel",
   "atlasPath": "skins/st_ch0040__google/ST_CH0040.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0040.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": true,
@@ -1471,16 +1815,22 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 85
+  "releaseOrder": 85,
+  "nameCn": "이자벨",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:ST_CH0040.png"
+  ]
  },
  {
   "id": "st_ch0042",
-  "charName": "CH0042",
-  "costumeName": "Standing (CH0042)",
+  "charName": "Oblia",
+  "costumeName": "Oblia · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0042/ST_CH0042.skel",
   "atlasPath": "skins/st_ch0042/ST_CH0042.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0042.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1488,16 +1838,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 86
+  "releaseOrder": 86,
+  "nameCn": "오블리아",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0043",
-  "charName": "CH0043",
-  "costumeName": "Standing (CH0043)",
+  "charName": "Lafine",
+  "costumeName": "Lafine · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0043/ST_CH0043.skel",
   "atlasPath": "skins/st_ch0043/ST_CH0043.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0043.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1505,16 +1857,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 87
+  "releaseOrder": 87,
+  "nameCn": "라피네",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0046",
-  "charName": "CH0046",
-  "costumeName": "Standing (CH0046)",
+  "charName": "Jennie",
+  "costumeName": "Jennie · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0046/ST_CH0046.skel",
   "atlasPath": "skins/st_ch0046/ST_CH0046.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0046.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1522,16 +1876,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 88
+  "releaseOrder": 88,
+  "nameCn": "제니",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0050",
-  "charName": "CH0050",
-  "costumeName": "Standing (CH0050)",
+  "charName": "Mio",
+  "costumeName": "Mio · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0050/ST_CH0050.skel",
   "atlasPath": "skins/st_ch0050/ST_CH0050.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0050.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1539,16 +1895,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 89
+  "releaseOrder": 89,
+  "nameCn": "미오",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0052",
-  "charName": "CH0052",
-  "costumeName": "Standing (CH0052)",
+  "charName": "Rana",
+  "costumeName": "Rana · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0052/ST_CH0052.skel",
   "atlasPath": "skins/st_ch0052/ST_CH0052.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0052.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1556,16 +1914,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 90
+  "releaseOrder": 90,
+  "nameCn": "라나",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0053",
-  "charName": "CH0053",
-  "costumeName": "Standing (CH0053)",
+  "charName": "Gin",
+  "costumeName": "Gin · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0053/ST_CH0053.skel",
   "atlasPath": "skins/st_ch0053/ST_CH0053.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0053.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1573,16 +1933,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 91
+  "releaseOrder": 91,
+  "nameCn": "진",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0054",
-  "charName": "CH0054",
-  "costumeName": "Standing (CH0054)",
+  "charName": "Hari",
+  "costumeName": "Hari · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0054/ST_CH0054.skel",
   "atlasPath": "skins/st_ch0054/ST_CH0054.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0054.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1590,16 +1952,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 92
+  "releaseOrder": 92,
+  "nameCn": "하리",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0056",
-  "charName": "CH0056",
-  "costumeName": "Standing (CH0056)",
+  "charName": "Airen",
+  "costumeName": "Airen · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0056/ST_CH0056.skel",
   "atlasPath": "skins/st_ch0056/ST_CH0056.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0056.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1607,16 +1971,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 93
+  "releaseOrder": 93,
+  "nameCn": "아이렌",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0057",
-  "charName": "CH0057",
-  "costumeName": "Standing (CH0057)",
+  "charName": "Casey",
+  "costumeName": "Casey · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0057/ST_CH0057.skel",
   "atlasPath": "skins/st_ch0057/ST_CH0057.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0057.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1624,16 +1990,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 94
+  "releaseOrder": 94,
+  "nameCn": "케이시",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0058",
-  "charName": "CH0058",
-  "costumeName": "Standing (CH0058)",
+  "charName": "Bianca",
+  "costumeName": "Bianca · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0058/ST_CH0058.skel",
   "atlasPath": "skins/st_ch0058/ST_CH0058.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0058.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1641,16 +2009,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 95
+  "releaseOrder": 95,
+  "nameCn": "비앙카",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0059",
-  "charName": "CH0059",
-  "costumeName": "Standing (CH0059)",
+  "charName": "Spica",
+  "costumeName": "Spica · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0059__google/ST_CH0059.skel",
   "atlasPath": "skins/st_ch0059__google/ST_CH0059.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0059.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": true,
@@ -1659,16 +2029,22 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 96
+  "releaseOrder": 96,
+  "nameCn": "스피카",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:ST_CH0059.png"
+  ]
  },
  {
   "id": "st_ch0060",
-  "charName": "CH0060",
-  "costumeName": "Standing (CH0060)",
+  "charName": "Jia",
+  "costumeName": "Jia · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0060/ST_CH0060.skel",
   "atlasPath": "skins/st_ch0060/ST_CH0060.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0060.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1676,16 +2052,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 97
+  "releaseOrder": 97,
+  "nameCn": "지아",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0062",
-  "charName": "CH0062",
-  "costumeName": "Standing (CH0062)",
+  "charName": "Treache",
+  "costumeName": "Treache · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0062/ST_CH0062.skel",
   "atlasPath": "skins/st_ch0062/ST_CH0062.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0062.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1693,16 +2071,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 98
+  "releaseOrder": 98,
+  "nameCn": "트리체",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0063",
-  "charName": "CH0063",
-  "costumeName": "Standing (CH0063)",
+  "charName": "Sera",
+  "costumeName": "Sera · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0063/ST_CH0063.skel",
   "atlasPath": "skins/st_ch0063/ST_CH0063.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0063.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1710,16 +2090,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 99
+  "releaseOrder": 99,
+  "nameCn": "세라",
+  "divergeReasons": []
  },
  {
   "id": "st_ch0068",
-  "charName": "CH0068",
-  "costumeName": "Standing (CH0068)",
+  "charName": "Claire (Swimsuit)",
+  "costumeName": "Claire (Swimsuit) · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0068__google/ST_CH0068.skel",
   "atlasPath": "skins/st_ch0068__google/ST_CH0068.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0068.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": true,
@@ -1728,16 +2110,22 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 100
+  "releaseOrder": 100,
+  "nameCn": "클레어(수영복)",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:ST_CH0068.png"
+  ]
  },
  {
   "id": "st_ch0069",
-  "charName": "CH0069",
-  "costumeName": "Standing (CH0069)",
+  "charName": "Dan Xi (Halloween)",
+  "costumeName": "Dan Xi (Halloween) · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0069__google/ST_CH0069.skel",
   "atlasPath": "skins/st_ch0069__google/ST_CH0069.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0069.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": true,
@@ -1746,16 +2134,22 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 101
+  "releaseOrder": 101,
+  "nameCn": "단희(할로윈)",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:ST_CH0069.png"
+  ]
  },
  {
   "id": "st_ch0075",
-  "charName": "CH0075",
-  "costumeName": "Standing (CH0075)",
+  "charName": "Kouchou (Halloween)",
+  "costumeName": "Kouchou (Halloween) · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_ch0075__google/ST_CH0075.skel",
   "atlasPath": "skins/st_ch0075__google/ST_CH0075.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_CH0075.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": true,
@@ -1764,12 +2158,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 102
+  "releaseOrder": 102,
+  "nameCn": "홍접(할로윈)",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:ST_CH0075.png"
+  ]
  },
  {
   "id": "st_np0103",
-  "charName": "NP0103",
-  "costumeName": "Standing (NP0103)",
+  "charName": "Maid Part-Timer (Roller)",
+  "costumeName": "Maid Part-Timer (Roller) · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_np0103/ST_Maid_A.skel",
   "atlasPath": "skins/st_np0103/ST_Maid_A.atlas",
@@ -1781,12 +2181,14 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 103
+  "releaseOrder": 103,
+  "nameCn": "메이드 알바(롤러)",
+  "divergeReasons": []
  },
  {
   "id": "st_np0104",
-  "charName": "NP0104",
-  "costumeName": "Standing (NP0104)",
+  "charName": "Maid Part-Timer (Guard)",
+  "costumeName": "Maid Part-Timer (Guard) · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_np0104/ST_NP0104.skel",
   "atlasPath": "skins/st_np0104/ST_NP0104.atlas",
@@ -1798,12 +2200,14 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 104
+  "releaseOrder": 104,
+  "nameCn": "메이드 알바(경호)",
+  "divergeReasons": []
  },
  {
   "id": "st_np0199",
-  "charName": "NP0199",
-  "costumeName": "Standing (NP0199)",
+  "charName": "Head Maid",
+  "costumeName": "Head Maid · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_np0199/ST_NP0199.skel",
   "atlasPath": "skins/st_np0199/ST_NP0199.atlas",
@@ -1815,12 +2219,14 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 105
+  "releaseOrder": 105,
+  "nameCn": "메이드장",
+  "divergeReasons": []
  },
  {
   "id": "st_np0203",
-  "charName": "NP0203",
-  "costumeName": "Standing (NP0203)",
+  "charName": "Blue Angel (Boxing)",
+  "costumeName": "Blue Angel (Boxing) · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_np0203/ST_NP0203.skel",
   "atlasPath": "skins/st_np0203/ST_NP0203.atlas",
@@ -1832,12 +2238,14 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 106
+  "releaseOrder": 106,
+  "nameCn": "블루 엔젤(복싱)",
+  "divergeReasons": []
  },
  {
   "id": "st_np0212",
-  "charName": "NP0212",
-  "costumeName": "Standing (NP0212)",
+  "charName": "Red Manager (Slingshot)",
+  "costumeName": "Red Manager (Slingshot) · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_np0212/ST_NP0212.skel",
   "atlasPath": "skins/st_np0212/ST_NP0212.atlas",
@@ -1849,16 +2257,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 107
+  "releaseOrder": 107,
+  "nameCn": "레드 매니저(슬링샷)",
+  "divergeReasons": []
  },
  {
   "id": "st_np0299",
-  "charName": "NP0299",
-  "costumeName": "Standing (NP0299)",
+  "charName": "Black Angel",
+  "costumeName": "Black Angel · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_np0299/ST_NP0299.skel",
   "atlasPath": "skins/st_np0299/ST_NP0299.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_NP0299.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1866,16 +2276,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 108
+  "releaseOrder": 108,
+  "nameCn": "블랙엔젤",
+  "divergeReasons": []
  },
  {
   "id": "st_np0304",
-  "charName": "NP0304",
-  "costumeName": "Standing (NP0304)",
+  "charName": "Bunny Rookie (Royal Guard)",
+  "costumeName": "Bunny Rookie (Royal Guard) · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_np0304/ST_NP0304.skel",
   "atlasPath": "skins/st_np0304/ST_NP0304.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_NP0304.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1883,16 +2295,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 109
+  "releaseOrder": 109,
+  "nameCn": "바니 루키(친위)",
+  "divergeReasons": []
  },
  {
   "id": "st_np0306",
-  "charName": "NP0306",
-  "costumeName": "Standing (NP0306)",
+  "charName": "Bunny Rookie (Magic)",
+  "costumeName": "Bunny Rookie (Magic) · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_np0306/ST_NP0306.skel",
   "atlasPath": "skins/st_np0306/ST_NP0306.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_NP0306.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1900,16 +2314,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 110
+  "releaseOrder": 110,
+  "nameCn": "바니 루키(마술)",
+  "divergeReasons": []
  },
  {
   "id": "st_np0308",
-  "charName": "NP0308",
-  "costumeName": "Standing (NP0308)",
+  "charName": "Bunny Lovers (Guard)",
+  "costumeName": "Bunny Lovers (Guard) · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_np0308/ST_NP0308.skel",
   "atlasPath": "skins/st_np0308/ST_NP0308.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_NP0308.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1917,16 +2333,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 111
+  "releaseOrder": 111,
+  "nameCn": "바니 러버즈(가드)",
+  "divergeReasons": []
  },
  {
   "id": "st_np0399",
-  "charName": "NP0399",
-  "costumeName": "Standing (NP0399)",
+  "charName": "Bunny Gloria",
+  "costumeName": "Bunny Gloria · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_np0399/ST_NP0399.skel",
   "atlasPath": "skins/st_np0399/ST_NP0399.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_NP0399.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1934,16 +2352,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 112
+  "releaseOrder": 112,
+  "nameCn": "바니 글로리아",
+  "divergeReasons": []
  },
  {
   "id": "st_np0402",
-  "charName": "NP0402",
-  "costumeName": "Standing (NP0402)",
+  "charName": "Novice (Protection)",
+  "costumeName": "Novice (Protection) · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_np0402/ST_NP0402.skel",
   "atlasPath": "skins/st_np0402/ST_NP0402.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_NP0402.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1951,16 +2371,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 113
+  "releaseOrder": 113,
+  "nameCn": "노비스(수호)",
+  "divergeReasons": []
  },
  {
   "id": "st_np0411",
-  "charName": "NP0411",
-  "costumeName": "Standing (NP0411)",
+  "charName": "Odina (Ritual)",
+  "costumeName": "Odina (Ritual) · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_np0411/ST_NP0411.skel",
   "atlasPath": "skins/st_np0411/ST_NP0411.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_NP0411.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1968,16 +2390,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 114
+  "releaseOrder": 114,
+  "nameCn": "오디나(의식)",
+  "divergeReasons": []
  },
  {
   "id": "st_np0499",
-  "charName": "NP0499",
-  "costumeName": "Standing (NP0499)",
+  "charName": "Exenos",
+  "costumeName": "Exenos · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_np0499/ST_NP0499.skel",
   "atlasPath": "skins/st_np0499/ST_NP0499.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_NP0499.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -1985,16 +2409,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 115
+  "releaseOrder": 115,
+  "nameCn": "엑세노스",
+  "divergeReasons": []
  },
  {
   "id": "st_np0502",
-  "charName": "NP0502",
-  "costumeName": "Standing (NP0502)",
+  "charName": "Kitty Bully (Cutty)",
+  "costumeName": "Kitty Bully (Cutty) · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_np0502/ST_NP0502.skel",
   "atlasPath": "skins/st_np0502/ST_NP0502.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_NP0502.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -2002,16 +2428,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 116
+  "releaseOrder": 116,
+  "nameCn": "키티 불리(커티)",
+  "divergeReasons": []
  },
  {
   "id": "st_np0509",
-  "charName": "NP0509",
-  "costumeName": "Standing (NP0509)",
+  "charName": "Pussycat Noir (Rattle)",
+  "costumeName": "Pussycat Noir (Rattle) · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_np0509/ST_NP0509.skel",
   "atlasPath": "skins/st_np0509/ST_NP0509.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_NP0509.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -2019,16 +2447,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 117
+  "releaseOrder": 117,
+  "nameCn": "푸시캣 느와르(래틀)",
+  "divergeReasons": []
  },
  {
   "id": "st_np0599",
-  "charName": "NP0599",
-  "costumeName": "Standing (NP0599)",
+  "charName": "Godmother",
+  "costumeName": "Godmother · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_np0599/ST_NP0599.skel",
   "atlasPath": "skins/st_np0599/ST_NP0599.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_NP0599.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -2036,16 +2466,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 118
+  "releaseOrder": 118,
+  "nameCn": "갓마더",
+  "divergeReasons": []
  },
  {
   "id": "st_np0706",
-  "charName": "NP0706",
-  "costumeName": "Standing (NP0706)",
+  "charName": "Maid Swimsuit (Cleaner)",
+  "costumeName": "Maid Swimsuit (Cleaner) · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_np0706/ST_NP0706.skel",
   "atlasPath": "skins/st_np0706/ST_NP0706.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_NP0706.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -2053,16 +2485,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 119
+  "releaseOrder": 119,
+  "nameCn": "메이드 수영복(클리너)",
+  "divergeReasons": []
  },
  {
   "id": "st_np0708",
-  "charName": "NP0708",
-  "costumeName": "Standing (NP0708)",
+  "charName": "Maid Bikini (Tanning)",
+  "costumeName": "Maid Bikini (Tanning) · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_np0708/ST_NP0708.skel",
   "atlasPath": "skins/st_np0708/ST_NP0708.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_NP0708.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -2070,16 +2504,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 120
+  "releaseOrder": 120,
+  "nameCn": "메이드 비키니(태닝)",
+  "divergeReasons": []
  },
  {
   "id": "st_np0799",
-  "charName": "NP0799",
-  "costumeName": "Standing (NP0799)",
+  "charName": "Head Maid (Swimsuit)",
+  "costumeName": "Head Maid (Swimsuit) · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_np0799__google/ST_NP0799.skel",
   "atlasPath": "skins/st_np0799__google/ST_NP0799.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_NP0799.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": true,
@@ -2088,16 +2524,22 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 121
+  "releaseOrder": 121,
+  "nameCn": "메이드장(수영복)",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:ST_NP0799.png"
+  ]
  },
  {
   "id": "st_np0802",
-  "charName": "NP0802",
-  "costumeName": "Standing (NP0802)",
+  "charName": "Lesser Aberrant Spirit (Clean)",
+  "costumeName": "Lesser Aberrant Spirit (Clean) · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_np0802/ST_NP0802.skel",
   "atlasPath": "skins/st_np0802/ST_NP0802.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_NP0802.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -2105,16 +2547,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 122
+  "releaseOrder": 122,
+  "nameCn": "하급 원령(클린)",
+  "divergeReasons": []
  },
  {
   "id": "st_np6023",
-  "charName": "NP6023",
-  "costumeName": "Standing (NP6023)",
+  "charName": "Mari",
+  "costumeName": "Mari · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_np6023/ST_NP6023.skel",
   "atlasPath": "skins/st_np6023/ST_NP6023.atlas",
-  "iconPath": "",
+  "iconPath": "char/Icon_NP6023.webp",
   "spineVersion": "4.1",
   "kind": "standing",
   "uncensored": false,
@@ -2122,12 +2566,14 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 123
+  "releaseOrder": 123,
+  "nameCn": "마리",
+  "divergeReasons": []
  },
  {
   "id": "st_np6028",
-  "charName": "NP6028",
-  "costumeName": "Standing (NP6028)",
+  "charName": "Shade",
+  "costumeName": "Shade · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_np6028/ST_NP6028.skel",
   "atlasPath": "skins/st_np6028/ST_NP6028.atlas",
@@ -2139,12 +2585,14 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 124
+  "releaseOrder": 124,
+  "nameCn": "쉐이드",
+  "divergeReasons": []
  },
  {
   "id": "st_sc0002",
-  "charName": "SC0002",
-  "costumeName": "Standing (SC0002)",
+  "charName": "Dandelion",
+  "costumeName": "Dandelion · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_sc0002/ST_SC0002.skel",
   "atlasPath": "skins/st_sc0002/ST_SC0002.atlas",
@@ -2156,12 +2604,14 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 125
+  "releaseOrder": 125,
+  "nameCn": "단델리온",
+  "divergeReasons": []
  },
  {
   "id": "st_sc0003",
-  "charName": "SC0003",
-  "costumeName": "Standing (SC0003)",
+  "charName": "Ami",
+  "costumeName": "Ami · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_sc0003/ST_SC0003.skel",
   "atlasPath": "skins/st_sc0003/ST_SC0003.atlas",
@@ -2173,12 +2623,14 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 126
+  "releaseOrder": 126,
+  "nameCn": "아미",
+  "divergeReasons": []
  },
  {
   "id": "st_sc0003_01",
   "charName": "SC0003_01",
-  "costumeName": "Standing (SC0003_01)",
+  "costumeName": "SC0003_01 · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_sc0003_01/ST_SC0003_01.skel",
   "atlasPath": "skins/st_sc0003_01/ST_SC0003_01.atlas",
@@ -2190,12 +2642,14 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 127
+  "releaseOrder": 127,
+  "nameCn": "",
+  "divergeReasons": []
  },
  {
   "id": "st_sc0004",
-  "charName": "SC0004",
-  "costumeName": "Standing (SC0004)",
+  "charName": "Ami",
+  "costumeName": "Ami · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_sc0004/ST_SC0004.skel",
   "atlasPath": "skins/st_sc0004/ST_SC0004.atlas",
@@ -2207,12 +2661,14 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 128
+  "releaseOrder": 128,
+  "nameCn": "아미",
+  "divergeReasons": []
  },
  {
   "id": "st_sc0101",
-  "charName": "SC0101",
-  "costumeName": "Standing (SC0101)",
+  "charName": "Belita",
+  "costumeName": "Belita · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_sc0101/ST_SC0101.skel",
   "atlasPath": "skins/st_sc0101/ST_SC0101.atlas",
@@ -2224,12 +2680,14 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 129
+  "releaseOrder": 129,
+  "nameCn": "벨리타",
+  "divergeReasons": []
  },
  {
   "id": "st_sc0201",
-  "charName": "SC0201",
-  "costumeName": "Standing (SC0201)",
+  "charName": "Flurry Enthusiast",
+  "costumeName": "Flurry Enthusiast · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_sc0201/ST_SC0201.skel",
   "atlasPath": "skins/st_sc0201/ST_SC0201.atlas",
@@ -2241,12 +2699,14 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 130
+  "releaseOrder": 130,
+  "nameCn": "플러리 애호가",
+  "divergeReasons": []
  },
  {
   "id": "st_sc0202",
-  "charName": "SC0202",
-  "costumeName": "Standing (SC0202)",
+  "charName": "Academy Cadet",
+  "costumeName": "Academy Cadet · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_sc0202/ST_SC0202.skel",
   "atlasPath": "skins/st_sc0202/ST_SC0202.atlas",
@@ -2258,12 +2718,14 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 131
+  "releaseOrder": 131,
+  "nameCn": "아카데미 생도 A",
+  "divergeReasons": []
  },
  {
   "id": "st_sc0203",
-  "charName": "SC0203",
-  "costumeName": "Standing (SC0203)",
+  "charName": "Academy Cadet",
+  "costumeName": "Academy Cadet · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_sc0203/ST_SC0203.skel",
   "atlasPath": "skins/st_sc0203/ST_SC0203.atlas",
@@ -2275,12 +2737,14 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 132
+  "releaseOrder": 132,
+  "nameCn": "아카데미 생도 B",
+  "divergeReasons": []
  },
  {
   "id": "st_sc0204",
-  "charName": "SC0204",
-  "costumeName": "Standing (SC0204)",
+  "charName": "Animata",
+  "costumeName": "Animata · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_sc0204/ST_SC0204.skel",
   "atlasPath": "skins/st_sc0204/ST_SC0204.atlas",
@@ -2292,12 +2756,14 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 133
+  "releaseOrder": 133,
+  "nameCn": "아니마타 A",
+  "divergeReasons": []
  },
  {
   "id": "st_sc0212",
-  "charName": "SC0212",
-  "costumeName": "Standing (SC0212)",
+  "charName": "Flurry",
+  "costumeName": "Flurry · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_sc0212/ST_SC0212.skel",
   "atlasPath": "skins/st_sc0212/ST_SC0212.atlas",
@@ -2309,12 +2775,14 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 134
+  "releaseOrder": 134,
+  "nameCn": "플러리",
+  "divergeReasons": []
  },
  {
   "id": "st_sc0213",
-  "charName": "SC0213",
-  "costumeName": "Standing (SC0213)",
+  "charName": "Quartet Attendant A",
+  "costumeName": "Quartet Attendant A · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_sc0213/ST_SC0213.skel",
   "atlasPath": "skins/st_sc0213/ST_SC0213.atlas",
@@ -2326,12 +2794,14 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 135
+  "releaseOrder": 135,
+  "nameCn": "사군자 수행원 A",
+  "divergeReasons": []
  },
  {
   "id": "st_sc0214",
-  "charName": "SC0214",
-  "costumeName": "Standing (SC0214)",
+  "charName": "Quartet Attendant B",
+  "costumeName": "Quartet Attendant B · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_sc0214/ST_SC0214.skel",
   "atlasPath": "skins/st_sc0214/ST_SC0214.atlas",
@@ -2343,12 +2813,14 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 136
+  "releaseOrder": 136,
+  "nameCn": "사군자 수행원 B",
+  "divergeReasons": []
  },
  {
   "id": "st_sc3001",
-  "charName": "SC3001",
-  "costumeName": "Standing (SC3001)",
+  "charName": "Lydia",
+  "costumeName": "Lydia · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_sc3001/ST_SC3001.skel",
   "atlasPath": "skins/st_sc3001/ST_SC3001.atlas",
@@ -2360,12 +2832,14 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 137
+  "releaseOrder": 137,
+  "nameCn": "리디아",
+  "divergeReasons": []
  },
  {
   "id": "st_sc3002",
-  "charName": "SC3002",
-  "costumeName": "Standing (SC3002)",
+  "charName": "Rosé",
+  "costumeName": "Rosé · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_sc3002/ST_SC3002.skel",
   "atlasPath": "skins/st_sc3002/ST_SC3002.atlas",
@@ -2377,12 +2851,14 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 138
+  "releaseOrder": 138,
+  "nameCn": "로제",
+  "divergeReasons": []
  },
  {
   "id": "st_sc3003",
-  "charName": "SC3003",
-  "costumeName": "Standing (SC3003)",
+  "charName": "Bobcat",
+  "costumeName": "Bobcat · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_sc3003__google/ST_SC3003.skel",
   "atlasPath": "skins/st_sc3003__google/ST_SC3003.atlas",
@@ -2395,12 +2871,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 139
+  "releaseOrder": 139,
+  "nameCn": "보브캣",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:ST_SC3003.png"
+  ]
  },
  {
   "id": "st_sc3004",
-  "charName": "SC3004",
-  "costumeName": "Standing (SC3004)",
+  "charName": "Tentacle",
+  "costumeName": "Tentacle · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_sc3004/ST_SC3004.skel",
   "atlasPath": "skins/st_sc3004/ST_SC3004.atlas",
@@ -2412,12 +2894,14 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 140
+  "releaseOrder": 140,
+  "nameCn": "촉수 씨",
+  "divergeReasons": []
  },
  {
   "id": "st_sc3005",
-  "charName": "SC3005",
-  "costumeName": "Standing (SC3005)",
+  "charName": "Paradox",
+  "costumeName": "Paradox · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_sc3005/ST_SC3005.skel",
   "atlasPath": "skins/st_sc3005/ST_SC3005.atlas",
@@ -2429,12 +2913,14 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 141
+  "releaseOrder": 141,
+  "nameCn": "패러독스",
+  "divergeReasons": []
  },
  {
   "id": "st_sc3006",
-  "charName": "SC3006",
-  "costumeName": "Standing (SC3006)",
+  "charName": "Dorothea",
+  "costumeName": "Dorothea · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_sc3006/ST_SC3006.skel",
   "atlasPath": "skins/st_sc3006/ST_SC3006.atlas",
@@ -2446,12 +2932,14 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 142
+  "releaseOrder": 142,
+  "nameCn": "도로테아",
+  "divergeReasons": []
  },
  {
   "id": "st_sc3007",
-  "charName": "SC3007",
-  "costumeName": "Standing (SC3007)",
+  "charName": "Hiyori",
+  "costumeName": "Hiyori · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_sc3007__google/ST_SC3007.skel",
   "atlasPath": "skins/st_sc3007__google/ST_SC3007.atlas",
@@ -2464,12 +2952,18 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 143
+  "releaseOrder": 143,
+  "nameCn": "히요리",
+  "divergeReasons": [
+   "skeleton",
+   "atlas",
+   "texture:ST_SC3007.png"
+  ]
  },
  {
   "id": "st_sc3012",
-  "charName": "SC3012",
-  "costumeName": "Standing (SC3012)",
+  "charName": "Cutie",
+  "costumeName": "Cutie · Standing",
   "modelType": "skin",
   "jsonPath": "skins/st_sc3012/ST_SC3012.skel",
   "atlasPath": "skins/st_sc3012/ST_SC3012.atlas",
@@ -2481,6 +2975,8 @@
    "onestore"
   ],
   "hasBg": false,
-  "releaseOrder": 144
+  "releaseOrder": 144,
+  "nameCn": "이쁜이",
+  "divergeReasons": []
  }
 ]

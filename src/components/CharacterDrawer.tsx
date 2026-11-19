@@ -406,6 +406,11 @@ export const CharacterDrawer: React.FC<CharacterDrawerProps> = ({
                             New
                           </span>
                         )}
+                        {char.uncensored && (
+                          <span className="px-1.5 py-0.5 rounded bg-pink-500/20 text-pink-300 border border-pink-500/40 text-[9px] font-bold uppercase tracking-wider shrink-0 leading-none">
+                            Uncensored
+                          </span>
+                        )}
                       </div>
                       <span className="text-[10px] font-mono text-slate-400 shrink-0">
                         {char.releaseLabel}

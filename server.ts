@@ -35,6 +35,14 @@ const UPSTREAM_ECHO_BASES = [
 const UPSTREAM_MAD_BASES = [
   'https://cdn.jsdelivr.net/gh/anyabot/MAD-assets-1@master',
   'https://raw.githubusercontent.com/anyabot/MAD-assets-1/master',
+  // The dump is split across two bucket repos; anyabot's cdn.json routes ~half
+  // of the skin folders to MAD-assets-2, so it must be a fallback candidate.
+  'https://cdn.jsdelivr.net/gh/anyabot/MAD-assets-2@master',
+  'https://raw.githubusercontent.com/anyabot/MAD-assets-2/master',
+];
+const UPSTREAM_MAD_ICON_BASES = [
+  'https://raw.githubusercontent.com/anyabot/MAD-Viewer/main/public/icons',
+  'https://cdn.jsdelivr.net/gh/anyabot/MAD-Viewer@main/public/icons',
 ];
 const UPSTREAM_AL_SPINE_BASES = [
   'https://cdn.jsdelivr.net/gh/o0Nomar0o/SpineCollections@main',
@@ -339,6 +347,7 @@ async function resolveCachedAsset(
     | 'al-spines'
     | 'al-icons'
     | 'mad-spines'
+    | 'mad-icons'
     | 'anchor-spines'
     | 'gs-live2d',
   relPath: string,
@@ -595,6 +604,40 @@ async function startServer() {
     } catch (err) {
       const status = (err as { status?: number })?.status || 502;
       res.status(status).json({ error: `Failed to fetch MAD asset: ${relPath}` });
+    }
+  });
+
+  // MAD character/skin thumbnails from the MAD-Viewer icon pack. A missing skin
+  // thumbnail falls back to the character's own portrait icon.
+  app.get('/api/mad-icon/*', async (req, res) => {
+    const rawParam = (req.params as Record<string, string>)[0] ?? '';
+    const relPath = sanitizeUtf8AssetPath(rawParam, /\.(png|webp|jpg|jpeg)$/i);
+    if (!relPath) {
+      res.status(400).json({ error: 'Invalid MAD icon path' });
+      return;
+    }
+    try {
+      const candidates = [relPath];
+      // Skin keys like AF_CH0009 map to the character icon (Icon_CH0009):
+      // the upstream 'char' icon group omits the two-letter skin prefix.
+      const thumb = relPath.match(/^skin\/Thumbnail_([A-Z]{2}_)?(CH[0-9]+)\.webp$/i);
+      if (thumb) {
+        candidates.push(`char/Icon_${thumb[2]}.webp`);
+      }
+      let lastError: unknown;
+      for (const candidate of candidates) {
+        try {
+          const entry = await resolveCachedAsset('mad-icons', candidate, UPSTREAM_MAD_ICON_BASES, true);
+          sendCachedEntry(req, res, entry);
+          return;
+        } catch (err) {
+          lastError = err;
+        }
+      }
+      throw lastError;
+    } catch (err) {
+      const status = (err as { status?: number })?.status || 502;
+      res.status(status).json({ error: `Failed to fetch MAD icon: ${relPath}` });
     }
   });
 

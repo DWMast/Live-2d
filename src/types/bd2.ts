@@ -76,6 +76,8 @@ export interface BD2Character extends BD2CharacterRaw {
   named?: boolean;
   /** Playable character vs npc/scene/collab/battle variant. */
   kind?: string;
+  /** Skin served from an uncensored (Google Store) build. */
+  uncensored?: boolean;
   /** Upstream file sizes, used to warn before a large download. */
   bytes?: { skeleton: number; atlas: number; textures: number };
   /** True when the export ships a separate backdrop spine (<id>_bg). */
