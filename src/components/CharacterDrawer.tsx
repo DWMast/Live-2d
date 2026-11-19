@@ -100,8 +100,7 @@ export const CharacterDrawer: React.FC<CharacterDrawerProps> = ({
     ? 'Search New Jersey, Shinano, Musashi, Albion...'
     : activeGame === 'mad'
     ? 'Search MAke Drama characters & scenes...'
-    : activeGame === 'anchorpanic'
-    ? 'Search Anchor Panic characters & skins...'
+
     : activeGame === 'girlssymphony'
     ? 'Search Aphrodite, Athena, Live2D skins...'
     : 'Search Justia, Schera, Lathel, Teresse...';

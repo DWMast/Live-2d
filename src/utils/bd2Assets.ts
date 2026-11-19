@@ -12,14 +12,9 @@ export const AL_SPINE_BASE = '/api/al-spine';
 export const AL_ICON_BASE = '/api/al-icon';
 export const MAD_SPINE_BASE = '/api/mad-spine';
 export const MAD_ICON_BASE = '/api/mad-icon';
-export const ANCHOR_SPINE_BASE = '/api/anchor-spine';
 export const GS_LIVE2D_BASE = '/api/gs-live2d';
 export const ECHO_SPINE_BASE = '/api/echo-spine';
 export const ECHO_ICON_BASE = '/api/echo-pic';
-export const CBJQ_SPINE_BASE = '/api/cbjq-spine';
-export const NIKKE_SPINE_BASE = '/api/nikke-spine';
-export const HYSN_SPINE_BASE = '/api/hysn-spine';
-export const PH_SPINE_BASE = '/api/ph-spine';
 
 export const GAME_LIST: GameDescriptor[] = [
   {
@@ -73,16 +68,6 @@ export const GAME_LIST: GameDescriptor[] = [
     accentText: 'text-violet-400',
   },
   {
-    id: 'anchorpanic',
-    shortCode: 'AP',
-    name: 'Anchor Panic',
-    studioName: 'Anchor Panic Spine Studio',
-    rosterLabel: 'Anchor Panic Roster',
-    engineLabel: 'Spine 3.8 · 110 Skins',
-    accentGradient: 'from-teal-500 to-sky-600 shadow-teal-500/20',
-    accentText: 'text-teal-400',
-  },
-  {
     id: 'girlssymphony',
     shortCode: 'DGS',
     name: 'Dragon & Girls Symphony',
@@ -101,46 +86,6 @@ export const GAME_LIST: GameDescriptor[] = [
     engineLabel: 'Spine 3.8 · Full Rip',
     accentGradient: 'from-orange-500 to-red-600 shadow-orange-500/20',
     accentText: 'text-orange-400',
-  },
-  {
-    id: 'snowbreak',
-    shortCode: 'SB',
-    name: 'Snowbreak',
-    studioName: 'Snowbreak Spine Studio',
-    rosterLabel: 'Snowbreak Roster',
-    engineLabel: 'Spine 3.8 · 459 Models',
-    accentGradient: 'from-emerald-500 to-cyan-600 shadow-emerald-500/20',
-    accentText: 'text-emerald-400',
-  },
-  {
-    id: 'nikke',
-    shortCode: 'NK',
-    name: 'Goddess of Victory: NIKKE',
-    studioName: 'Nikke Spine Studio',
-    rosterLabel: 'NIKKE Roster',
-    engineLabel: 'Spine 4.0 · 80 Characters',
-    accentGradient: 'from-pink-500 to-violet-600 shadow-pink-500/20',
-    accentText: 'text-pink-400',
-  },
-  {
-    id: 'hysn',
-    shortCode: 'HN',
-    name: 'Flower & Crimson',
-    studioName: 'HYSN Card Spine Studio',
-    rosterLabel: 'Flower & Crimson Roster',
-    engineLabel: 'Spine 3.8 · 181 Cards',
-    accentGradient: 'from-rose-500 to-orange-600 shadow-rose-500/20',
-    accentText: 'text-rose-400',
-  },
-  {
-    id: 'pixelheroes',
-    shortCode: 'PH',
-    name: 'Pixel Heroes',
-    studioName: 'Pixel Heroes Spine Studio',
-    rosterLabel: 'Pixel Heroes Roster',
-    engineLabel: 'Spine 3.8 · 88 Characters',
-    accentGradient: 'from-lime-500 to-emerald-600 shadow-lime-500/20',
-    accentText: 'text-lime-400',
   },
 ];
 
@@ -268,11 +213,6 @@ interface MadCatalogEntry {
   hasBg?: boolean;
 }
 
-interface AnchorCatalogEntry extends MadCatalogEntry {
-  baseId?: string;
-  costumeIndex?: number;
-}
-
 interface AzurLaneCatalogEntry {
   id: string;
   charName: string;
@@ -293,50 +233,9 @@ interface Live2DCatalogEntry {
   api: string;
 }
 
-interface PhCatalogEntry {
-  id: string;
-  charId: string;
-  charName: string;
-  costumeName: string;
-  jsonPath: string;
-  atlasPath: string;
-  iconPath?: string;
-}
 
-interface HysnCatalogEntry {
-  id: string;
-  charName: string;
-  costumeName: string;
-  modelType: string;
-  jsonPath: string;
-  atlasPath: string;
-  texturePage: string;
-}
 
-interface NikkeCatalogEntry {
-  id: string;
-  charId: string;
-  variant: string;
-  charName: string;
-  costumeName: string;
-  modelType: string;
-  jsonPath: string;
-  atlasPath: string;
-  iconPath?: string;
-  aimSpine?: string;
-  coverSpine?: string;
-}
 
-interface CbjqCatalogEntry {
-  id: string;
-  group: string;
-  sub: string;
-  charName: string;
-  costumeName: string;
-  kind: string;
-  jsonPath: string;
-  texturePages: string[];
-}
 
 interface EchoCatalogEntry {
   id: string;
@@ -451,255 +350,6 @@ export async function loadGameRoster(gameId: GameId): Promise<BD2Character[]> {
         named: true,
         kind: item.kind,
       }));
-    } else if (gameId === 'anchorpanic') {
-      const res = await fetch('/data/anchorpanic_catalog.json');
-      if (!res.ok) throw new Error(`Failed to load Anchor Panic catalog (HTTP ${res.status})`);
-      const rawList = (await res.json()) as AnchorCatalogEntry[];
-      // Character-first ordering: base spine of each hero, then its costumes.
-      const sorted = [...rawList].sort((a, b) => {
-        const ca = a.costumeIndex ?? 0;
-        const cb = b.costumeIndex ?? 0;
-        if (ca !== cb && ca <= 0 && cb <= 0) {
-          return Number(a.baseId || a.id) - Number(b.baseId || b.id);
-        }
-        if (a.baseId === b.baseId) return ca - cb;
-        return String(a.baseId || a.id).localeCompare(String(b.baseId || b.id), 'en', { numeric: true });
-      });
-      mapped = sorted.map((item, idx) => ({
-        id: item.id,
-        game: 'anchorpanic',
-        charName: item.charName,
-        costumeName: item.costumeName,
-        spine: item.id,
-        cutscene: '',
-        dating: '',
-        audio: '',
-        skeletonUrl: encodeProxyPath(ANCHOR_SPINE_BASE, item.jsonPath),
-        atlasUrl: encodeProxyPath(ANCHOR_SPINE_BASE, item.atlasPath),
-        skeletonFormat: 'skel',
-        spineVersion: item.spineVersion || '3.8',
-        modelType: item.modelType,
-        iconUrl: item.iconPath ? encodeProxyPath(ANCHOR_SPINE_BASE, item.iconPath) : '',
-        hasCutscene: false,
-        hasDating: false,
-        releaseOrder: idx,
-        releaseLabel: 'Spine 3.8',
-        named: true,
-        baseId: item.baseId,
-        costumeIndex: item.costumeIndex ?? 0,
-        costumes: [item.id],
-        kind: item.kind,
-      }));
-    } else if (gameId === 'girlssymphony') {
-      const res = await fetch('/data/girlssymphony_catalog.json');
-      if (!res.ok) throw new Error(`Failed to load Dragon & Girls Symphony catalog (HTTP ${res.status})`);
-      const rawList = (await res.json()) as Live2DCatalogEntry[];
-      // Character-first ordering: base costume, then each named variant.
-      const variantOrder = ['1', '2', '3', 'ssr_1', 'ssr_2', 'ssr_3', 'ur', 'swimsuit', 'valentine', '4'];
-      const sorted = [...rawList].sort((a, b) => {
-        const mid = (e: Live2DCatalogEntry) => e.jsonPath.split('/')[1] || e.id;
-        const ca = mid(a).replace(/^[^_]*_?/, ''),
-              cb = mid(b).replace(/^[^_]*_?/, '');
-        const ia = variantOrder.indexOf(ca), ib = variantOrder.indexOf(cb);
-        if ((a.charName !== b.charName)) return a.charName.localeCompare(b.charName);
-        return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
-      });
-      mapped = sorted.map((item, idx) => ({
-        id: item.id,
-        game: 'girlssymphony',
-        charName: item.charName,
-        costumeName: item.costumeName,
-        spine: item.id,
-        cutscene: '',
-        dating: '',
-        audio: '',
-        live2dModelUrl: encodeProxyPath(GS_LIVE2D_BASE, item.jsonPath),
-        cubismApi: (item.api as 'cubism4') || 'cubism4',
-        modelType: item.modelType,
-        iconUrl: item.iconPath ? encodeProxyPath(GS_LIVE2D_BASE, item.iconPath) : '',
-        hasCutscene: false,
-        hasDating: false,
-        releaseOrder: idx,
-        releaseLabel: 'Cubism 4 Live2D',
-        named: true,
-        kind: 'live2d',
-      }));
-    } else if (gameId === 'azurlane') {
-      const res = await fetch('/data/azurlane_catalog.json');
-      if (!res.ok) throw new Error(`Failed to load Azur Lane catalog (HTTP ${res.status})`);
-      const rawList = (await res.json()) as AzurLaneCatalogEntry[];
-      mapped = rawList.map((item, idx) => ({
-        id: item.id,
-        game: 'azurlane',
-        charName: item.charName,
-        costumeName: item.costumeName || 'Dynamic Spine',
-        spine: item.id,
-        cutscene: '',
-        dating: '',
-        audio: '',
-        skeletonUrl: encodeProxyPath(AL_SPINE_BASE, item.jsonPath),
-        atlasUrl: encodeProxyPath(AL_SPINE_BASE, item.atlasPath),
-        skeletonFormat: 'skel',
-        spineVersion: '3.8.99',
-        modelType: item.modelType,
-        iconUrl: item.iconPath ? encodeProxyPath(AL_ICON_BASE, item.iconPath) : '',
-        hasCutscene: false,
-        hasDating: false,
-        releaseOrder: idx,
-        releaseLabel: item.modelType === 'skin' ? 'Dynamic Skin' : 'Ship Spine',
-      }));
-    } else if (gameId === 'echocalypse') {
-      const res = await fetch('/data/echocalypse_catalog.json');
-      if (!res.ok) throw new Error(`Failed to load Echocalypse catalog (HTTP ${res.status})`);
-      const rawList = (await res.json()) as EchoCatalogEntry[];
-      // Character-first: group by model prefix so skins follow their base spine.
-      const sorted = [...rawList].sort((a, b) => {
-        const ba = a.modelId.slice(0, 6), bb = b.modelId.slice(0, 6);
-        if (ba !== bb) return ba.localeCompare(bb, 'en', { numeric: true });
-        return a.modelId.localeCompare(b.modelId, 'en', { numeric: true });
-      });
-      mapped = sorted.map((item, idx) => ({
-        id: item.id,
-        game: 'echocalypse',
-        charName: item.charName,
-        costumeName: item.costumeName,
-        spine: item.id,
-        cutscene: '',
-        dating: '',
-        audio: '',
-        skeletonUrl: encodeProxyPath(ECHO_SPINE_BASE, item.jsonPath),
-        atlasUrl: encodeProxyPath(ECHO_SPINE_BASE, item.atlasPath),
-        skeletonFormat: 'skel',
-        spineVersion: '3.8',
-        modelType: item.kind === 'npc' || item.kind === 'scene' ? 'character' : item.modelType || 'character',
-        iconUrl: item.iconPath ? encodeProxyPath(ECHO_ICON_BASE, item.iconPath) : '',
-        hasCutscene: false,
-        hasDating: false,
-        releaseOrder: idx,
-        releaseLabel: item.bucket === 'knight_spine_remote' ? 'Remote Build' : item.kind || 'Skin',
-        baseId: item.modelId.slice(0, 6),
-        named: item.charName !== item.modelId && !item.charName.includes('Variant') && !item.charName.includes('NPC') && !item.charName.includes('Scene'),
-        kind: item.kind,
-      }));
-    } else if (gameId === 'pixelheroes') {
-      const res = await fetch('/data/pixelheroes_catalog.json');
-      if (!res.ok) throw new Error(`Failed to load Pixel Heroes catalog (HTTP ${res.status})`);
-      const rawList = (await res.json()) as PhCatalogEntry[];
-      const sorted = [...rawList].sort((a, b) => Number(a.charId.replace(/\D/g, '')) - Number(b.charId.replace(/\D/g, '')));
-      mapped = sorted.map((item, idx) => ({
-        id: item.id,
-        game: 'pixelheroes',
-        charName: item.charName,
-        costumeName: item.costumeName === 'Default' ? 'Default' : `Skin ${item.costumeName}`,
-        spine: item.id,
-        cutscene: '',
-        dating: '',
-        audio: '',
-        skeletonUrl: encodeProxyPath(PH_SPINE_BASE, item.jsonPath),
-        atlasUrl: encodeProxyPath(PH_SPINE_BASE, item.atlasPath),
-        skeletonFormat: 'skel',
-        spineVersion: '3.8',
-        modelType: 'character',
-        iconUrl: item.iconPath ? encodeProxyPath(PH_SPINE_BASE, item.iconPath) : '',
-        hasCutscene: false,
-        hasDating: false,
-        releaseOrder: idx,
-        releaseLabel: 'Spine 3.8',
-        named: false,
-        baseId: item.charId,
-      }));
-    } else if (gameId === 'hysn') {
-      const res = await fetch('/data/hysn_catalog.json');
-      if (!res.ok) throw new Error(`Failed to load hysn catalog (HTTP ${res.status})`);
-      const rawList = (await res.json()) as HysnCatalogEntry[];
-      const sorted = [...rawList].sort((a, b) => {
-        const ia = Number(a.charName.slice(0, 6).replace(/\D/g, '')) || 0;
-        const ib = Number(b.charName.slice(0, 6).replace(/\D/g, '')) || 0;
-        if (ia !== ib) return ia - ib;
-        return a.id.localeCompare(b.id);
-      });
-      mapped = sorted.map((item, idx) => ({
-        id: item.id,
-        game: 'hysn',
-        charName: item.charName,
-        costumeName: item.costumeName === 'Default' ? 'Default' : `Variant ${item.costumeName}`,
-        spine: item.id,
-        cutscene: '',
-        dating: '',
-        audio: '',
-        skeletonUrl: encodeProxyPath(HYSN_SPINE_BASE, item.jsonPath),
-        atlasUrl: encodeProxyPath(HYSN_SPINE_BASE, item.atlasPath),
-        skeletonFormat: 'skel',
-        spineVersion: '3.8',
-        modelType: 'character',
-        iconUrl: '',
-        hasCutscene: false,
-        hasDating: false,
-        releaseOrder: idx,
-        releaseLabel: 'Card Spine 3.8',
-        baseId: item.charName.slice(0, 6),
-      }));
-    } else if (gameId === 'nikke') {
-      const res = await fetch('/data/nikke_catalog.json');
-      if (!res.ok) throw new Error(`Failed to load NIKKE catalog (HTTP ${res.status})`);
-      const rawList = (await res.json()) as NikkeCatalogEntry[];
-      mapped = rawList.map((item, idx) => ({
-        id: item.id,
-        game: 'nikke',
-        charName: item.charName,
-        costumeName: item.variant === '00' ? 'Default' : `Skin ${item.variant}`,
-        spine: item.id,
-        cutscene: '',
-        dating: '',
-        audio: '',
-        skeletonUrl: encodeProxyPath(NIKKE_SPINE_BASE, item.jsonPath),
-        atlasUrl: encodeProxyPath(NIKKE_SPINE_BASE, item.atlasPath),
-        skeletonFormat: 'skel',
-        spineVersion: '4.0',
-        modelType: 'character',
-        iconUrl: item.iconPath ? encodeProxyPath(NIKKE_SPINE_BASE, item.iconPath) : '',
-        hasCutscene: false,
-        hasDating: false,
-        releaseOrder: idx,
-        releaseLabel: 'Spine 4.0',
-        named: item.charName !== item.charId,
-        aimSpine: item.aimSpine ? encodeProxyPath(NIKKE_SPINE_BASE, item.aimSpine) : undefined,
-        coverSpine: item.coverSpine ? encodeProxyPath(NIKKE_SPINE_BASE, item.coverSpine) : undefined,
-        baseId: item.charId,
-      }));
-    } else if (gameId === 'snowbreak') {
-      const res = await fetch('/data/snowbreak_catalog.json');
-      if (!res.ok) throw new Error(`Failed to load Snowbreak catalog (HTTP ${res.status})`);
-      const rawList = (await res.json()) as CbjqCatalogEntry[];
-      const sorted = [...rawList].sort((a, b) => {
-        const na = Number((a.sub || a.charName).replace(/\D/g, '')) || 0;
-        const nb = Number((b.sub || b.charName).replace(/\D/g, '')) || 0;
-        if (na !== nb) return na - nb;
-        return a.id.localeCompare(b.id);
-      });
-      mapped = sorted.map((item, idx) => ({
-        id: item.id,
-        game: 'snowbreak',
-        charName: item.charName,
-        costumeName: item.costumeName,
-        spine: item.id,
-        cutscene: '',
-        dating: '',
-        audio: '',
-        skeletonUrl: encodeProxyPath(CBJQ_SPINE_BASE, item.jsonPath),
-        atlasUrl: encodeProxyPath(CBJQ_SPINE_BASE, item.jsonPath.replace(/\.json$/, '.atlas')),
-        skeletonFormat: 'json',
-        spineVersion: '3.8',
-        modelType: 'character',
-        iconUrl: '',
-        hasCutscene: false,
-        hasDating: false,
-        releaseOrder: idx,
-        releaseLabel: item.group === 'Hero' ? 'Hero Spine' : item.group === 'NPC' ? 'NPC' : item.group,
-        named: false,
-        kind: item.kind,
-        baseId: (item.sub || item.charName).slice(0, 7),
-      }));
     }
 
     rosterCache.set(gameId, mapped);
@@ -713,6 +363,7 @@ export async function loadGameRoster(gameId: GameId): Promise<BD2Character[]> {
     inflightRoster.delete(gameId);
   }
 }
+
 
 export function pickDefaultCharacterForGame(gameId: GameId, roster: BD2Character[]): BD2Character {
   if (gameId === 'bd2') return DEFAULT_CHARACTER;
@@ -729,23 +380,8 @@ export function pickDefaultCharacterForGame(gameId: GameId, roster: BD2Character
   if (gameId === 'mad') {
     return roster.find((c) => c.kind === 'standing' && c.iconUrl) || roster.find((c) => c.kind === 'affection') || roster[0];
   }
-  if (gameId === 'anchorpanic') {
-    return roster.find((c) => (c.costumeIndex ?? 0) === 0) || roster[0];
-  }
   if (gameId === 'girlssymphony') {
     return roster.find((c) => c.id === 'gs_aphrodite_1') || roster.find((c) => c.iconUrl) || roster[0];
-  }
-  if (gameId === 'snowbreak') {
-    return roster.find((c) => c.kind === 'character' && c.releaseLabel === 'Hero Spine') || roster[0];
-  }
-  if (gameId === 'pixelheroes') {
-    return roster.find((c) => c.iconUrl) || roster[0];
-  }
-  if (gameId === 'hysn') {
-    return roster.find((c) => !c.costumeName.startsWith('Variant')) || roster[0];
-  }
-  if (gameId === 'nikke') {
-    return roster.find((c) => c.iconUrl) || roster.find((c) => c.id === 'nikke_c010_00') || roster[0];
   }
   if (gameId === 'echocalypse') {
     return (
