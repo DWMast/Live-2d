@@ -1,0 +1,7313 @@
+[
+ {
+  "id": "cbjq_girl004a_02_gacha",
+  "group": "Hero",
+  "sub": "girl004a_02",
+  "charName": "girl004a_02_gacha",
+  "costumeName": "girl004a_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/girl004a_02/girl004a_02_gacha.json",
+  "texturePages": [
+   "girl004a_02_gacha.png",
+   "tryGirl_004a_02_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_girl005b_02",
+  "group": "Hero",
+  "sub": "Girl005b_02",
+  "charName": "girl005b_02",
+  "costumeName": "girl005b_02",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl005b_02/girl005b_02.json",
+  "texturePages": [
+   "11.png",
+   "girl005b_02.png",
+   "girl005b_02_a.png",
+   "sp_girl005b_02_gacha.png",
+   "sp_girl005b_02_gacha_a.png",
+   "tryGirl_005b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_girl005b_02_a",
+  "group": "Hero",
+  "sub": "Girl005b_02",
+  "charName": "girl005b_02_a",
+  "costumeName": "girl005b_02_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl005b_02/girl005b_02_a.json",
+  "texturePages": [
+   "11.png",
+   "girl005b_02.png",
+   "girl005b_02_a.png",
+   "sp_girl005b_02_gacha.png",
+   "sp_girl005b_02_gacha_a.png",
+   "tryGirl_005b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_girl013a_02",
+  "group": "Hero",
+  "sub": "Girl013a_02",
+  "charName": "girl013a_02",
+  "costumeName": "girl013a_02",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl013a_02/girl013a_02.json",
+  "texturePages": [
+   "girl013a_02.png",
+   "tryGirl_013a_02_bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_girl015a_02",
+  "group": "Hero",
+  "sub": "Girl015a_02",
+  "charName": "girl015a_02",
+  "costumeName": "girl015a_02",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015a_02/girl015a_02.json",
+  "texturePages": [
+   "girl015a_02.png",
+   "girl015a_02_a.png",
+   "girl015a_02_gacha.png",
+   "girl015a_02_gacha_a.png",
+   "tryGirl_015a_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_girl015a_02_a",
+  "group": "Hero",
+  "sub": "Girl015a_02",
+  "charName": "girl015a_02_a",
+  "costumeName": "girl015a_02_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015a_02/girl015a_02_a.json",
+  "texturePages": [
+   "girl015a_02.png",
+   "girl015a_02_a.png",
+   "girl015a_02_gacha.png",
+   "girl015a_02_gacha_a.png",
+   "tryGirl_015a_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_girl015a_02_gacha",
+  "group": "Hero",
+  "sub": "Girl015a_02",
+  "charName": "girl015a_02_gacha",
+  "costumeName": "girl015a_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015a_02/girl015a_02_gacha.json",
+  "texturePages": [
+   "girl015a_02.png",
+   "girl015a_02_a.png",
+   "girl015a_02_gacha.png",
+   "girl015a_02_gacha_a.png",
+   "tryGirl_015a_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_girl015a_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl015a_02",
+  "charName": "girl015a_02_gacha_a",
+  "costumeName": "girl015a_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015a_02/girl015a_02_gacha_a.json",
+  "texturePages": [
+   "girl015a_02.png",
+   "girl015a_02_a.png",
+   "girl015a_02_gacha.png",
+   "girl015a_02_gacha_a.png",
+   "tryGirl_015a_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_girl017_02_gacha",
+  "group": "Hero",
+  "sub": "Girl017_02",
+  "charName": "girl017_02_gacha",
+  "costumeName": "girl017_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl017_02/girl017_02_gacha.json",
+  "texturePages": [
+   "girl017_02_gacha.png",
+   "tryGirl_017_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_npc011",
+  "group": "NPC",
+  "sub": "Npc011",
+  "charName": "npc011",
+  "costumeName": "npc011",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc011/npc011.json",
+  "texturePages": [
+   "npc011.png"
+  ]
+ },
+ {
+  "id": "cbjq_npc013",
+  "group": "NPC",
+  "sub": "Npc013",
+  "charName": "npc013",
+  "costumeName": "npc013",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc013/npc013.json",
+  "texturePages": [
+   "npc013.png"
+  ]
+ },
+ {
+  "id": "cbjq_npc405_01_q",
+  "group": "Hero",
+  "sub": "Npc405_01_q",
+  "charName": "npc405_01_q",
+  "costumeName": "npc405_01_q",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Npc405_01_q/npc405_01_q.json",
+  "texturePages": [
+   "npc405_01_q.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_boss003-data",
+  "group": "Boss",
+  "sub": "Boss003",
+  "charName": "sp_boss003-data",
+  "costumeName": "sp_boss003-data",
+  "kind": "battle",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Boss/Boss003/sp_boss003-data.json",
+  "texturePages": [
+   "sp_boss003.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_boss102",
+  "group": "Boss",
+  "sub": "Boss102",
+  "charName": "sp_boss102",
+  "costumeName": "sp_boss102",
+  "kind": "battle",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Boss/Boss102/sp_boss102.json",
+  "texturePages": [
+   "sp_boss102.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_boss103",
+  "group": "Boss",
+  "sub": "Boss103",
+  "charName": "sp_boss103",
+  "costumeName": "sp_boss103",
+  "kind": "battle",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Boss/Boss103/sp_boss103.json",
+  "texturePages": [
+   "sp_boss103.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_boss208_01",
+  "group": "Boss",
+  "sub": "Boss208_01",
+  "charName": "sp_boss208_01",
+  "costumeName": "sp_boss208_01",
+  "kind": "battle",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Boss/Boss208_01/sp_boss208_01.json",
+  "texturePages": [
+   "sp_boss208_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_di18",
+  "group": "NPC",
+  "sub": "DI18",
+  "charName": "sp_di18",
+  "costumeName": "sp_di18",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/DI18/sp_di18.json",
+  "texturePages": [
+   "sp_di18.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl001",
+  "group": "Hero",
+  "sub": "Girl001",
+  "charName": "sp_girl001",
+  "costumeName": "sp_girl001",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl001/sp_girl001.json",
+  "texturePages": [
+   "sp_girl001.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl001_02",
+  "group": "Hero",
+  "sub": "Girl001_02",
+  "charName": "sp_girl001_02",
+  "costumeName": "sp_girl001_02",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl001_02/sp_girl001_02.json",
+  "texturePages": [
+   "sp_girl001_02.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl001a_03_gacha",
+  "group": "Hero",
+  "sub": "Girl001a_03",
+  "charName": "sp_girl001a_03_gacha",
+  "costumeName": "sp_girl001a_03_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl001a_03/sp_girl001a_03_gacha.json",
+  "texturePages": [
+   "sp_girl001a_03_gacha.png",
+   "tryGirl_001a_03_bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl001a_gacha",
+  "group": "Hero",
+  "sub": "Girl001a",
+  "charName": "sp_girl001a_gacha",
+  "costumeName": "sp_girl001a_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl001a/sp_girl001a_gacha.json",
+  "texturePages": [
+   "e_sp_girl001a_01_t.png",
+   "e_sp_girl001a_02_t.png",
+   "e_sp_girl001a_03_t.png",
+   "e_sp_girl001a_04_t.png",
+   "e_sp_girl001a_05_t.png",
+   "e_sp_girl001a_06_t.png",
+   "e_sp_girl001a_07_t.png",
+   "sp_girl001a_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl001b",
+  "group": "Hero",
+  "sub": "Girl001b",
+  "charName": "sp_girl001b",
+  "costumeName": "sp_girl001b",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl001b/sp_girl001b.json",
+  "texturePages": [
+   "e_sp_girl001b_01_t.png",
+   "e_sp_girl001b_02_t.png",
+   "e_sp_girl001b_03_t.png",
+   "e_sp_girl001b_04_t.png",
+   "e_sp_girl001b_05_t.png",
+   "e_sp_girl001b_06_t.png",
+   "e_sp_girl001b_07_t.png",
+   "e_sp_girl001b_08_t.png",
+   "e_sp_girl001b_09_t.png",
+   "sp_girl001b.png",
+   "sp_girl001b_a.png",
+   "sp_girl001b_gacha.png",
+   "sp_girl001b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl001b_02_gacha",
+  "group": "Hero",
+  "sub": "Girl001b_02",
+  "charName": "sp_girl001b_02_gacha",
+  "costumeName": "sp_girl001b_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl001b_02/sp_girl001b_02_gacha.json",
+  "texturePages": [
+   "e_Girl001b_02_z01_t.png",
+   "sp_girl001b_02_gacha.png",
+   "sp_girl001b_02_gacha_a.png",
+   "tryGirl_girl001b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl001b_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl001b_02",
+  "charName": "sp_girl001b_02_gacha_a",
+  "costumeName": "sp_girl001b_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl001b_02/sp_girl001b_02_gacha_a.json",
+  "texturePages": [
+   "e_Girl001b_02_z01_t.png",
+   "sp_girl001b_02_gacha.png",
+   "sp_girl001b_02_gacha_a.png",
+   "tryGirl_girl001b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl001b_a",
+  "group": "Hero",
+  "sub": "Girl001b",
+  "charName": "sp_girl001b_a",
+  "costumeName": "sp_girl001b_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl001b/sp_girl001b_a.json",
+  "texturePages": [
+   "e_sp_girl001b_01_t.png",
+   "e_sp_girl001b_02_t.png",
+   "e_sp_girl001b_03_t.png",
+   "e_sp_girl001b_04_t.png",
+   "e_sp_girl001b_05_t.png",
+   "e_sp_girl001b_06_t.png",
+   "e_sp_girl001b_07_t.png",
+   "e_sp_girl001b_08_t.png",
+   "e_sp_girl001b_09_t.png",
+   "sp_girl001b.png",
+   "sp_girl001b_a.png",
+   "sp_girl001b_gacha.png",
+   "sp_girl001b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl001b_gacha",
+  "group": "Hero",
+  "sub": "Girl001b",
+  "charName": "sp_girl001b_gacha",
+  "costumeName": "sp_girl001b_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl001b/sp_girl001b_gacha.json",
+  "texturePages": [
+   "e_sp_girl001b_01_t.png",
+   "e_sp_girl001b_02_t.png",
+   "e_sp_girl001b_03_t.png",
+   "e_sp_girl001b_04_t.png",
+   "e_sp_girl001b_05_t.png",
+   "e_sp_girl001b_06_t.png",
+   "e_sp_girl001b_07_t.png",
+   "e_sp_girl001b_08_t.png",
+   "e_sp_girl001b_09_t.png",
+   "sp_girl001b.png",
+   "sp_girl001b_a.png",
+   "sp_girl001b_gacha.png",
+   "sp_girl001b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl001b_gacha_a",
+  "group": "Hero",
+  "sub": "Girl001b",
+  "charName": "sp_girl001b_gacha_a",
+  "costumeName": "sp_girl001b_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl001b/sp_girl001b_gacha_a.json",
+  "texturePages": [
+   "e_sp_girl001b_01_t.png",
+   "e_sp_girl001b_02_t.png",
+   "e_sp_girl001b_03_t.png",
+   "e_sp_girl001b_04_t.png",
+   "e_sp_girl001b_05_t.png",
+   "e_sp_girl001b_06_t.png",
+   "e_sp_girl001b_07_t.png",
+   "e_sp_girl001b_08_t.png",
+   "e_sp_girl001b_09_t.png",
+   "sp_girl001b.png",
+   "sp_girl001b_a.png",
+   "sp_girl001b_gacha.png",
+   "sp_girl001b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl001b_lv2",
+  "group": "Hero",
+  "sub": "Girl001b_lv2",
+  "charName": "sp_girl001b_lv2",
+  "costumeName": "sp_girl001b_lv2",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl001b_lv2/sp_girl001b_lv2.json",
+  "texturePages": [
+   "sp_girl001b_lv2.png",
+   "sp_girl001b_lv2_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl001b_lv2_a",
+  "group": "Hero",
+  "sub": "Girl001b_lv2",
+  "charName": "sp_girl001b_lv2_a",
+  "costumeName": "sp_girl001b_lv2_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl001b_lv2/sp_girl001b_lv2_a.json",
+  "texturePages": [
+   "sp_girl001b_lv2.png",
+   "sp_girl001b_lv2_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl002",
+  "group": "Hero",
+  "sub": "Girl002",
+  "charName": "sp_girl002",
+  "costumeName": "sp_girl002",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl002/sp_girl002.json",
+  "texturePages": [
+   "sp_girl002.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl002a",
+  "group": "Hero",
+  "sub": "Girl002a",
+  "charName": "sp_girl002a",
+  "costumeName": "sp_girl002a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl002a/sp_girl002a.json",
+  "texturePages": [
+   "e_girl002a_w01_t.png",
+   "e_girl002a_w02_t.png",
+   "e_girl002a_w03_t.png",
+   "e_girl002a_w04_t.png",
+   "e_girl002a_w05_t.png",
+   "e_girl002a_w06_t.png",
+   "e_girl002a_w07_t.png",
+   "e_girl002a_w08_t.png",
+   "e_girl002a_w09_t.png",
+   "e_girl002a_w10_t.png",
+   "e_girl002a_w11_t.png",
+   "e_girl002a_w12_t.png",
+   "sp_girl002a.png",
+   "sp_girl002a_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl002a_01_q",
+  "group": "Hero",
+  "sub": "Girl002a_01_q",
+  "charName": "sp_girl002a_01_q",
+  "costumeName": "sp_girl002a_01_q",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl002a_01_q/sp_girl002a_01_q.json",
+  "texturePages": [
+   "sp_girl002a_01_q.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl002a_02",
+  "group": "Hero",
+  "sub": "Girl002a_02",
+  "charName": "sp_girl002a_02",
+  "costumeName": "sp_girl002a_02",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl002a_02/sp_girl002a_02.json",
+  "texturePages": [
+   "girl002a_02-denglong.png",
+   "girl002a_02-ditu.png",
+   "girl002a_02-renwu.png",
+   "sp_girl002a_02.png",
+   "sp_girl002a_02_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl002a_02_gacha",
+  "group": "Hero",
+  "sub": "Girl002a_02",
+  "charName": "sp_girl002a_02_gacha",
+  "costumeName": "sp_girl002a_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl002a_02/sp_girl002a_02_gacha.json",
+  "texturePages": [
+   "girl002a_02-denglong.png",
+   "girl002a_02-ditu.png",
+   "girl002a_02-renwu.png",
+   "sp_girl002a_02.png",
+   "sp_girl002a_02_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl002a_03_gacha",
+  "group": "Hero",
+  "sub": "Girl002a_03",
+  "charName": "sp_girl002a_03_gacha",
+  "costumeName": "sp_girl002a_03_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl002a_03/sp_girl002a_03_gacha.json",
+  "texturePages": [
+   "sp_girl002a_03_gacha.png",
+   "tryGirl_002a_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl002a_gacha",
+  "group": "Hero",
+  "sub": "Girl002a",
+  "charName": "sp_girl002a_gacha",
+  "costumeName": "sp_girl002a_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl002a/sp_girl002a_gacha.json",
+  "texturePages": [
+   "e_girl002a_w01_t.png",
+   "e_girl002a_w02_t.png",
+   "e_girl002a_w03_t.png",
+   "e_girl002a_w04_t.png",
+   "e_girl002a_w05_t.png",
+   "e_girl002a_w06_t.png",
+   "e_girl002a_w07_t.png",
+   "e_girl002a_w08_t.png",
+   "e_girl002a_w09_t.png",
+   "e_girl002a_w10_t.png",
+   "e_girl002a_w11_t.png",
+   "e_girl002a_w12_t.png",
+   "sp_girl002a.png",
+   "sp_girl002a_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl002b_02_gacha",
+  "group": "Hero",
+  "sub": "Girl002b_02",
+  "charName": "sp_girl002b_02_gacha",
+  "costumeName": "sp_girl002b_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl002b_02/sp_girl002b_02_gacha.json",
+  "texturePages": [
+   "sp_girl002b_02_gacha.png",
+   "sp_girl002b_02_gacha_a.png",
+   "tryGirl_002b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl002b_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl002b_02",
+  "charName": "sp_girl002b_02_gacha_a",
+  "costumeName": "sp_girl002b_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl002b_02/sp_girl002b_02_gacha_a.json",
+  "texturePages": [
+   "sp_girl002b_02_gacha.png",
+   "sp_girl002b_02_gacha_a.png",
+   "tryGirl_002b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl002b_a",
+  "group": "Hero",
+  "sub": "Girl002b",
+  "charName": "sp_girl002b_a",
+  "costumeName": "sp_girl002b_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl002b/sp_girl002b_a.json",
+  "texturePages": [
+   "sp_girl002b_01.png",
+   "sp_girl002b_a.png",
+   "sp_girl002b_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl002b_gacha",
+  "group": "Hero",
+  "sub": "Girl002b",
+  "charName": "sp_girl002b_gacha",
+  "costumeName": "sp_girl002b_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl002b/sp_girl002b_gacha.json",
+  "texturePages": [
+   "sp_girl002b_01.png",
+   "sp_girl002b_a.png",
+   "sp_girl002b_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl003",
+  "group": "Hero",
+  "sub": "Girl003",
+  "charName": "sp_girl003",
+  "costumeName": "sp_girl003",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl003/sp_girl003.json",
+  "texturePages": [
+   "sp_girl003.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl003_01",
+  "group": "Hero",
+  "sub": "Girl003_01",
+  "charName": "sp_girl003_01",
+  "costumeName": "sp_girl003_01",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl003_01/sp_girl003_01.json",
+  "texturePages": [
+   "sp_girl003_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl003a",
+  "group": "Hero",
+  "sub": "Girl003a",
+  "charName": "sp_girl003a",
+  "costumeName": "sp_girl003a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl003a/sp_girl003a.json",
+  "texturePages": [
+   "Girl003a_z01.png",
+   "Girl003a_z02.png",
+   "Girl003a_z03.png",
+   "Girl003a_z04.png",
+   "Girl003a_z05.png",
+   "Girl003a_z06.png",
+   "sp_girl003a.png",
+   "sp_girl003a_a.png",
+   "sp_girl003a_gacha.png",
+   "sp_girl003a_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl003a_02_gacha",
+  "group": "Hero",
+  "sub": "Girl003a_02",
+  "charName": "sp_girl003a_02_gacha",
+  "costumeName": "sp_girl003a_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl003a_02/sp_girl003a_02_gacha.json",
+  "texturePages": [
+   "sp_girl003a_02_gacha.png",
+   "sp_girl003a_02_gacha_a.png",
+   "tryGirl_003a_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl003a_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl003a_02",
+  "charName": "sp_girl003a_02_gacha_a",
+  "costumeName": "sp_girl003a_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl003a_02/sp_girl003a_02_gacha_a.json",
+  "texturePages": [
+   "sp_girl003a_02_gacha.png",
+   "sp_girl003a_02_gacha_a.png",
+   "tryGirl_003a_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl003a_03_gacha",
+  "group": "Hero",
+  "sub": "Girl003a_03",
+  "charName": "sp_girl003a_03_gacha",
+  "costumeName": "sp_girl003a_03_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl003a_03/sp_girl003a_03_gacha.json",
+  "texturePages": [
+   "G003a_03_01.png",
+   "sp_girl003a_03_gacha.png",
+   "sp_girl003a_03_gacha_a.png",
+   "tryGirl_girl003a_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl003a_03_gacha_a",
+  "group": "Hero",
+  "sub": "Girl003a_03",
+  "charName": "sp_girl003a_03_gacha_a",
+  "costumeName": "sp_girl003a_03_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl003a_03/sp_girl003a_03_gacha_a.json",
+  "texturePages": [
+   "G003a_03_01.png",
+   "sp_girl003a_03_gacha.png",
+   "sp_girl003a_03_gacha_a.png",
+   "tryGirl_girl003a_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl003a_a",
+  "group": "Hero",
+  "sub": "Girl003a",
+  "charName": "sp_girl003a_a",
+  "costumeName": "sp_girl003a_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl003a/sp_girl003a_a.json",
+  "texturePages": [
+   "Girl003a_z01.png",
+   "Girl003a_z02.png",
+   "Girl003a_z03.png",
+   "Girl003a_z04.png",
+   "Girl003a_z05.png",
+   "Girl003a_z06.png",
+   "sp_girl003a.png",
+   "sp_girl003a_a.png",
+   "sp_girl003a_gacha.png",
+   "sp_girl003a_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl003a_gacha",
+  "group": "Hero",
+  "sub": "Girl003a",
+  "charName": "sp_girl003a_gacha",
+  "costumeName": "sp_girl003a_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl003a/sp_girl003a_gacha.json",
+  "texturePages": [
+   "Girl003a_z01.png",
+   "Girl003a_z02.png",
+   "Girl003a_z03.png",
+   "Girl003a_z04.png",
+   "Girl003a_z05.png",
+   "Girl003a_z06.png",
+   "sp_girl003a.png",
+   "sp_girl003a_a.png",
+   "sp_girl003a_gacha.png",
+   "sp_girl003a_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl003a_gacha_a",
+  "group": "Hero",
+  "sub": "Girl003a",
+  "charName": "sp_girl003a_gacha_a",
+  "costumeName": "sp_girl003a_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl003a/sp_girl003a_gacha_a.json",
+  "texturePages": [
+   "Girl003a_z01.png",
+   "Girl003a_z02.png",
+   "Girl003a_z03.png",
+   "Girl003a_z04.png",
+   "Girl003a_z05.png",
+   "Girl003a_z06.png",
+   "sp_girl003a.png",
+   "sp_girl003a_a.png",
+   "sp_girl003a_gacha.png",
+   "sp_girl003a_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl004",
+  "group": "Hero",
+  "sub": "Girl004",
+  "charName": "sp_girl004",
+  "costumeName": "sp_girl004",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl004/sp_girl004.json",
+  "texturePages": [
+   "sp_girl004.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl004_01",
+  "group": "Hero",
+  "sub": "Girl004_01",
+  "charName": "sp_girl004_01",
+  "costumeName": "sp_girl004_01",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl004_01/sp_girl004_01.json",
+  "texturePages": [
+   "sp_girl004_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl004_02",
+  "group": "Hero",
+  "sub": "Girl004_02",
+  "charName": "sp_girl004_02",
+  "costumeName": "sp_girl004_02",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl004_02/sp_girl004_02.json",
+  "texturePages": [
+   "sp_girl004_02.png",
+   "sp_girl004_02_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl004_02_a",
+  "group": "Hero",
+  "sub": "Girl004_02",
+  "charName": "sp_girl004_02_a",
+  "costumeName": "sp_girl004_02_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl004_02/sp_girl004_02_a.json",
+  "texturePages": [
+   "sp_girl004_02.png",
+   "sp_girl004_02_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl004a",
+  "group": "Hero",
+  "sub": "Girl004a",
+  "charName": "sp_girl004a",
+  "costumeName": "sp_girl004a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl004a/sp_girl004a.json",
+  "texturePages": [
+   "e_girl004a_w01_t.png",
+   "e_girl004a_w02_t.png",
+   "e_girl004a_w04_t.png",
+   "e_girl004a_w05_t.png",
+   "e_girl004a_w06_t.png",
+   "e_girl004a_w07_t.png",
+   "e_girl004a_w08_t.png",
+   "e_girl004a_w09_t.png",
+   "e_girl004a_w10_t.png",
+   "girl004a_3.png",
+   "sp_girl004a.png",
+   "sp_girl004a_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl004a_03_gacha",
+  "group": "Hero",
+  "sub": "girl004a_03",
+  "charName": "sp_girl004a_03_gacha",
+  "costumeName": "sp_girl004a_03_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/girl004a_03/sp_girl004a_03_gacha.json",
+  "texturePages": [
+   "sp_girl004a_03_gacha.png",
+   "tryGirl_004a_03_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl004a_gacha",
+  "group": "Hero",
+  "sub": "Girl004a",
+  "charName": "sp_girl004a_gacha",
+  "costumeName": "sp_girl004a_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl004a/sp_girl004a_gacha.json",
+  "texturePages": [
+   "e_girl004a_w01_t.png",
+   "e_girl004a_w02_t.png",
+   "e_girl004a_w04_t.png",
+   "e_girl004a_w05_t.png",
+   "e_girl004a_w06_t.png",
+   "e_girl004a_w07_t.png",
+   "e_girl004a_w08_t.png",
+   "e_girl004a_w09_t.png",
+   "e_girl004a_w10_t.png",
+   "girl004a_3.png",
+   "sp_girl004a.png",
+   "sp_girl004a_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl004b",
+  "group": "Hero",
+  "sub": "Girl004b",
+  "charName": "sp_girl004b",
+  "costumeName": "sp_girl004b",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl004b/sp_girl004b.json",
+  "texturePages": [
+   "e_girl004b_z01_t.png",
+   "e_girl004b_z02_t.png",
+   "e_girl004b_z03_t.png",
+   "e_girl004b_z04_t.png",
+   "e_girl004b_z05_t.png",
+   "e_girl004b_z06_t.png",
+   "e_girl004b_z07_t.png",
+   "sp_girl004b.png",
+   "sp_girl004b_a.png",
+   "sp_girl004b_gacha.png",
+   "sp_girl004b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl004b_02",
+  "group": "Hero",
+  "sub": "Girl004b_02",
+  "charName": "sp_girl004b_02",
+  "costumeName": "sp_girl004b_02",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl004b_02/sp_girl004b_02.json",
+  "texturePages": [
+   "sp_girl004b_02.png",
+   "sp_girl004b_02_a.png",
+   "tryGirl_004b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl004b_02_a",
+  "group": "Hero",
+  "sub": "Girl004b_02",
+  "charName": "sp_girl004b_02_a",
+  "costumeName": "sp_girl004b_02_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl004b_02/sp_girl004b_02_a.json",
+  "texturePages": [
+   "sp_girl004b_02.png",
+   "sp_girl004b_02_a.png",
+   "tryGirl_004b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl004b_04_gacha",
+  "group": "Hero",
+  "sub": "Girl004b_04",
+  "charName": "sp_girl004b_04_gacha",
+  "costumeName": "sp_girl004b_04_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl004b_04/sp_girl004b_04_gacha.json",
+  "texturePages": [
+   "sp_girl004b_04_gacha.png",
+   "sp_girl004b_04_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl004b_04_gacha_a",
+  "group": "Hero",
+  "sub": "Girl004b_04",
+  "charName": "sp_girl004b_04_gacha_a",
+  "costumeName": "sp_girl004b_04_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl004b_04/sp_girl004b_04_gacha_a.json",
+  "texturePages": [
+   "sp_girl004b_04_gacha.png",
+   "sp_girl004b_04_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl004b_a",
+  "group": "Hero",
+  "sub": "Girl004b",
+  "charName": "sp_girl004b_a",
+  "costumeName": "sp_girl004b_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl004b/sp_girl004b_a.json",
+  "texturePages": [
+   "e_girl004b_z01_t.png",
+   "e_girl004b_z02_t.png",
+   "e_girl004b_z03_t.png",
+   "e_girl004b_z04_t.png",
+   "e_girl004b_z05_t.png",
+   "e_girl004b_z06_t.png",
+   "e_girl004b_z07_t.png",
+   "sp_girl004b.png",
+   "sp_girl004b_a.png",
+   "sp_girl004b_gacha.png",
+   "sp_girl004b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl004b_gacha",
+  "group": "Hero",
+  "sub": "Girl004b",
+  "charName": "sp_girl004b_gacha",
+  "costumeName": "sp_girl004b_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl004b/sp_girl004b_gacha.json",
+  "texturePages": [
+   "e_girl004b_z01_t.png",
+   "e_girl004b_z02_t.png",
+   "e_girl004b_z03_t.png",
+   "e_girl004b_z04_t.png",
+   "e_girl004b_z05_t.png",
+   "e_girl004b_z06_t.png",
+   "e_girl004b_z07_t.png",
+   "sp_girl004b.png",
+   "sp_girl004b_a.png",
+   "sp_girl004b_gacha.png",
+   "sp_girl004b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl004b_gacha_a",
+  "group": "Hero",
+  "sub": "Girl004b",
+  "charName": "sp_girl004b_gacha_a",
+  "costumeName": "sp_girl004b_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl004b/sp_girl004b_gacha_a.json",
+  "texturePages": [
+   "e_girl004b_z01_t.png",
+   "e_girl004b_z02_t.png",
+   "e_girl004b_z03_t.png",
+   "e_girl004b_z04_t.png",
+   "e_girl004b_z05_t.png",
+   "e_girl004b_z06_t.png",
+   "e_girl004b_z07_t.png",
+   "sp_girl004b.png",
+   "sp_girl004b_a.png",
+   "sp_girl004b_gacha.png",
+   "sp_girl004b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl004c",
+  "group": "Hero",
+  "sub": "Girl004c",
+  "charName": "sp_girl004c",
+  "costumeName": "sp_girl004c",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl004c/sp_girl004c.json",
+  "texturePages": [
+   "girl004ctemp.png",
+   "sp_girl004c.png",
+   "sp_girl004c_03.png",
+   "sp_girl004c_04.png",
+   "sp_girl004c_05.png",
+   "sp_girl004c_06.png",
+   "sp_girl004c_07.png",
+   "sp_girl004c_08.png",
+   "sp_girl004c_a.png",
+   "sp_girl004c_gacha.png",
+   "sp_girl004c_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl004c_02_gacha",
+  "group": "Hero",
+  "sub": "Girl004c_02",
+  "charName": "sp_girl004c_02_gacha",
+  "costumeName": "sp_girl004c_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl004c_02/sp_girl004c_02_gacha.json",
+  "texturePages": [
+   "sp_girl004c_02_gacha.png",
+   "sp_girl004c_02_gacha_a.png",
+   "tryGirl_girl004c_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl004c_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl004c_02",
+  "charName": "sp_girl004c_02_gacha_a",
+  "costumeName": "sp_girl004c_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl004c_02/sp_girl004c_02_gacha_a.json",
+  "texturePages": [
+   "sp_girl004c_02_gacha.png",
+   "sp_girl004c_02_gacha_a.png",
+   "tryGirl_girl004c_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl004c_a",
+  "group": "Hero",
+  "sub": "Girl004c",
+  "charName": "sp_girl004c_a",
+  "costumeName": "sp_girl004c_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl004c/sp_girl004c_a.json",
+  "texturePages": [
+   "girl004ctemp.png",
+   "sp_girl004c.png",
+   "sp_girl004c_03.png",
+   "sp_girl004c_04.png",
+   "sp_girl004c_05.png",
+   "sp_girl004c_06.png",
+   "sp_girl004c_07.png",
+   "sp_girl004c_08.png",
+   "sp_girl004c_a.png",
+   "sp_girl004c_gacha.png",
+   "sp_girl004c_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl004c_gacha",
+  "group": "Hero",
+  "sub": "Girl004c",
+  "charName": "sp_girl004c_gacha",
+  "costumeName": "sp_girl004c_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl004c/sp_girl004c_gacha.json",
+  "texturePages": [
+   "girl004ctemp.png",
+   "sp_girl004c.png",
+   "sp_girl004c_03.png",
+   "sp_girl004c_04.png",
+   "sp_girl004c_05.png",
+   "sp_girl004c_06.png",
+   "sp_girl004c_07.png",
+   "sp_girl004c_08.png",
+   "sp_girl004c_a.png",
+   "sp_girl004c_gacha.png",
+   "sp_girl004c_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl004c_gacha_a",
+  "group": "Hero",
+  "sub": "Girl004c",
+  "charName": "sp_girl004c_gacha_a",
+  "costumeName": "sp_girl004c_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl004c/sp_girl004c_gacha_a.json",
+  "texturePages": [
+   "girl004ctemp.png",
+   "sp_girl004c.png",
+   "sp_girl004c_03.png",
+   "sp_girl004c_04.png",
+   "sp_girl004c_05.png",
+   "sp_girl004c_06.png",
+   "sp_girl004c_07.png",
+   "sp_girl004c_08.png",
+   "sp_girl004c_a.png",
+   "sp_girl004c_gacha.png",
+   "sp_girl004c_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl005",
+  "group": "Hero",
+  "sub": "Girl005",
+  "charName": "sp_girl005",
+  "costumeName": "sp_girl005",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl005/sp_girl005.json",
+  "texturePages": [
+   "sp_girl005.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl005_01",
+  "group": "Hero",
+  "sub": "Girl005_01",
+  "charName": "sp_girl005_01",
+  "costumeName": "sp_girl005_01",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl005_01/sp_girl005_01.json",
+  "texturePages": [
+   "sp_girl005_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl005a",
+  "group": "Hero",
+  "sub": "Girl005a",
+  "charName": "sp_girl005a",
+  "costumeName": "sp_girl005a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl005a/sp_girl005a.json",
+  "texturePages": [
+   "sp_girl005a.png",
+   "sp_girl005a_gacha.png",
+   "sp_girl005a_w01_t.png",
+   "sp_girl005a_w02_t.png",
+   "sp_girl005a_w03_t.png",
+   "sp_girl005a_w04_t.png",
+   "sp_girl005a_w05_t.png",
+   "sp_girl005a_w06_t.png",
+   "sp_girl005a_w07_t.png",
+   "sp_girl005a_w08_t.png",
+   "sp_girl005a_w09_t.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl005a_01_q",
+  "group": "Hero",
+  "sub": "Girl005a_01_q",
+  "charName": "sp_girl005a_01_q",
+  "costumeName": "sp_girl005a_01_q",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl005a_01_q/sp_girl005a_01_q.json",
+  "texturePages": [
+   "sp_girl005a_01_q.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl005a_03_gacha",
+  "group": "Hero",
+  "sub": "Girl005a_03",
+  "charName": "sp_girl005a_03_gacha",
+  "costumeName": "sp_girl005a_03_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl005a_03/sp_girl005a_03_gacha.json",
+  "texturePages": [
+   "sp_girl005a_03_gacha.png",
+   "sp_girl005a_03_gacha_a.png",
+   "tryGirl_005a_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl005a_03_gacha_a",
+  "group": "Hero",
+  "sub": "Girl005a_03",
+  "charName": "sp_girl005a_03_gacha_a",
+  "costumeName": "sp_girl005a_03_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl005a_03/sp_girl005a_03_gacha_a.json",
+  "texturePages": [
+   "sp_girl005a_03_gacha.png",
+   "sp_girl005a_03_gacha_a.png",
+   "tryGirl_005a_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl005a_gacha",
+  "group": "Hero",
+  "sub": "Girl005a",
+  "charName": "sp_girl005a_gacha",
+  "costumeName": "sp_girl005a_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl005a/sp_girl005a_gacha.json",
+  "texturePages": [
+   "sp_girl005a.png",
+   "sp_girl005a_gacha.png",
+   "sp_girl005a_w01_t.png",
+   "sp_girl005a_w02_t.png",
+   "sp_girl005a_w03_t.png",
+   "sp_girl005a_w04_t.png",
+   "sp_girl005a_w05_t.png",
+   "sp_girl005a_w06_t.png",
+   "sp_girl005a_w07_t.png",
+   "sp_girl005a_w08_t.png",
+   "sp_girl005a_w09_t.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl005b",
+  "group": "Hero",
+  "sub": "Girl005b",
+  "charName": "sp_girl005b",
+  "costumeName": "sp_girl005b",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl005b/sp_girl005b.json",
+  "texturePages": [
+   "Girl005b_01.png",
+   "Girl005b_02.png",
+   "Girl005b_03.png",
+   "Girl005b_04.png",
+   "Girl005b_05.png",
+   "Girl005b_06.png",
+   "Girl005b_07.png",
+   "sp_girl005b.png",
+   "sp_girl005b_a.png",
+   "sp_girl005b_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl005b_02_gacha",
+  "group": "Hero",
+  "sub": "Girl005b_02",
+  "charName": "sp_girl005b_02_gacha",
+  "costumeName": "sp_girl005b_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl005b_02/sp_girl005b_02_gacha.json",
+  "texturePages": [
+   "11.png",
+   "girl005b_02.png",
+   "girl005b_02_a.png",
+   "sp_girl005b_02_gacha.png",
+   "sp_girl005b_02_gacha_a.png",
+   "tryGirl_005b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl005b_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl005b_02",
+  "charName": "sp_girl005b_02_gacha_a",
+  "costumeName": "sp_girl005b_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl005b_02/sp_girl005b_02_gacha_a.json",
+  "texturePages": [
+   "11.png",
+   "girl005b_02.png",
+   "girl005b_02_a.png",
+   "sp_girl005b_02_gacha.png",
+   "sp_girl005b_02_gacha_a.png",
+   "tryGirl_005b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl005b_03",
+  "group": "Hero",
+  "sub": "Girl005b_03",
+  "charName": "sp_girl005b_03",
+  "costumeName": "sp_girl005b_03",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl005b_03/sp_girl005b_03.json",
+  "texturePages": [
+   "sp_girl005b_03.png",
+   "sp_girl005b_03_a.png",
+   "tryGirl_005b_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl005b_03_a",
+  "group": "Hero",
+  "sub": "Girl005b_03",
+  "charName": "sp_girl005b_03_a",
+  "costumeName": "sp_girl005b_03_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl005b_03/sp_girl005b_03_a.json",
+  "texturePages": [
+   "sp_girl005b_03.png",
+   "sp_girl005b_03_a.png",
+   "tryGirl_005b_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl005b_a",
+  "group": "Hero",
+  "sub": "Girl005b",
+  "charName": "sp_girl005b_a",
+  "costumeName": "sp_girl005b_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl005b/sp_girl005b_a.json",
+  "texturePages": [
+   "Girl005b_01.png",
+   "Girl005b_02.png",
+   "Girl005b_03.png",
+   "Girl005b_04.png",
+   "Girl005b_05.png",
+   "Girl005b_06.png",
+   "Girl005b_07.png",
+   "sp_girl005b.png",
+   "sp_girl005b_a.png",
+   "sp_girl005b_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl005b_gacha",
+  "group": "Hero",
+  "sub": "Girl005b",
+  "charName": "sp_girl005b_gacha",
+  "costumeName": "sp_girl005b_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl005b/sp_girl005b_gacha.json",
+  "texturePages": [
+   "Girl005b_01.png",
+   "Girl005b_02.png",
+   "Girl005b_03.png",
+   "Girl005b_04.png",
+   "Girl005b_05.png",
+   "Girl005b_06.png",
+   "Girl005b_07.png",
+   "sp_girl005b.png",
+   "sp_girl005b_a.png",
+   "sp_girl005b_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl005c",
+  "group": "Hero",
+  "sub": "Girl005c",
+  "charName": "sp_girl005c",
+  "costumeName": "sp_girl005c",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl005c/sp_girl005c.json",
+  "texturePages": [
+   "Girl005c_01.png",
+   "Girl005c_02.png",
+   "Girl005c_03.png",
+   "Girl005c_04.png",
+   "Girl005c_05.png",
+   "sp_girl005c.png",
+   "sp_girl005c_a.png",
+   "sp_girl005c_gacha.png",
+   "sp_girl005c_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl005c_02_gacha",
+  "group": "Hero",
+  "sub": "Girl005c_02",
+  "charName": "sp_girl005c_02_gacha",
+  "costumeName": "sp_girl005c_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl005c_02/sp_girl005c_02_gacha.json",
+  "texturePages": [
+   "sp_girl005c_02_gacha.png",
+   "sp_girl005c_02_gacha_a.png",
+   "tryGirl_girl005c_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl005c_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl005c_02",
+  "charName": "sp_girl005c_02_gacha_a",
+  "costumeName": "sp_girl005c_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl005c_02/sp_girl005c_02_gacha_a.json",
+  "texturePages": [
+   "sp_girl005c_02_gacha.png",
+   "sp_girl005c_02_gacha_a.png",
+   "tryGirl_girl005c_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl005c_a",
+  "group": "Hero",
+  "sub": "Girl005c",
+  "charName": "sp_girl005c_a",
+  "costumeName": "sp_girl005c_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl005c/sp_girl005c_a.json",
+  "texturePages": [
+   "Girl005c_01.png",
+   "Girl005c_02.png",
+   "Girl005c_03.png",
+   "Girl005c_04.png",
+   "Girl005c_05.png",
+   "sp_girl005c.png",
+   "sp_girl005c_a.png",
+   "sp_girl005c_gacha.png",
+   "sp_girl005c_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl005c_gacha",
+  "group": "Hero",
+  "sub": "Girl005c",
+  "charName": "sp_girl005c_gacha",
+  "costumeName": "sp_girl005c_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl005c/sp_girl005c_gacha.json",
+  "texturePages": [
+   "Girl005c_01.png",
+   "Girl005c_02.png",
+   "Girl005c_03.png",
+   "Girl005c_04.png",
+   "Girl005c_05.png",
+   "sp_girl005c.png",
+   "sp_girl005c_a.png",
+   "sp_girl005c_gacha.png",
+   "sp_girl005c_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl005c_gacha_a",
+  "group": "Hero",
+  "sub": "Girl005c",
+  "charName": "sp_girl005c_gacha_a",
+  "costumeName": "sp_girl005c_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl005c/sp_girl005c_gacha_a.json",
+  "texturePages": [
+   "Girl005c_01.png",
+   "Girl005c_02.png",
+   "Girl005c_03.png",
+   "Girl005c_04.png",
+   "Girl005c_05.png",
+   "sp_girl005c.png",
+   "sp_girl005c_a.png",
+   "sp_girl005c_gacha.png",
+   "sp_girl005c_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl006",
+  "group": "Hero",
+  "sub": "Girl006",
+  "charName": "sp_girl006",
+  "costumeName": "sp_girl006",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl006/sp_girl006.json",
+  "texturePages": [
+   "sp_girl006.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl006_01",
+  "group": "Hero",
+  "sub": "Girl006_01",
+  "charName": "sp_girl006_01",
+  "costumeName": "sp_girl006_01",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl006_01/sp_girl006_01.json",
+  "texturePages": [
+   "sp_girl006_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl006a",
+  "group": "Hero",
+  "sub": "Girl006a",
+  "charName": "sp_girl006a",
+  "costumeName": "sp_girl006a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl006a/sp_girl006a.json",
+  "texturePages": [
+   "girl006a_1.png",
+   "girl006a_4.png",
+   "girl006a_5.png",
+   "girl006a_6.png",
+   "girl006a_7.png",
+   "sp_girl006a.png",
+   "sp_girl006a_a.png",
+   "sp_girl006a_gacha.png",
+   "sp_girl006a_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl006a_02_gacha",
+  "group": "Hero",
+  "sub": "girl006a_02",
+  "charName": "sp_girl006a_02_gacha",
+  "costumeName": "sp_girl006a_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/girl006a_02/sp_girl006a_02_gacha.json",
+  "texturePages": [
+   "sp_girl006a_02_gacha.png",
+   "tryGirl_006a_02_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl006a_a",
+  "group": "Hero",
+  "sub": "Girl006a",
+  "charName": "sp_girl006a_a",
+  "costumeName": "sp_girl006a_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl006a/sp_girl006a_a.json",
+  "texturePages": [
+   "girl006a_1.png",
+   "girl006a_4.png",
+   "girl006a_5.png",
+   "girl006a_6.png",
+   "girl006a_7.png",
+   "sp_girl006a.png",
+   "sp_girl006a_a.png",
+   "sp_girl006a_gacha.png",
+   "sp_girl006a_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl006a_gacha",
+  "group": "Hero",
+  "sub": "Girl006a",
+  "charName": "sp_girl006a_gacha",
+  "costumeName": "sp_girl006a_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl006a/sp_girl006a_gacha.json",
+  "texturePages": [
+   "girl006a_1.png",
+   "girl006a_4.png",
+   "girl006a_5.png",
+   "girl006a_6.png",
+   "girl006a_7.png",
+   "sp_girl006a.png",
+   "sp_girl006a_a.png",
+   "sp_girl006a_gacha.png",
+   "sp_girl006a_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl006a_gacha_a",
+  "group": "Hero",
+  "sub": "Girl006a",
+  "charName": "sp_girl006a_gacha_a",
+  "costumeName": "sp_girl006a_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl006a/sp_girl006a_gacha_a.json",
+  "texturePages": [
+   "girl006a_1.png",
+   "girl006a_4.png",
+   "girl006a_5.png",
+   "girl006a_6.png",
+   "girl006a_7.png",
+   "sp_girl006a.png",
+   "sp_girl006a_a.png",
+   "sp_girl006a_gacha.png",
+   "sp_girl006a_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl006b",
+  "group": "Hero",
+  "sub": "Girl006b",
+  "charName": "sp_girl006b",
+  "costumeName": "sp_girl006b",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl006b/sp_girl006b.json",
+  "texturePages": [
+   "girl006btemp.png",
+   "sp_girl006b.png",
+   "sp_girl006b_a.png",
+   "sp_girl006b_gacha.png",
+   "sp_girl006b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl006b_02_gacha",
+  "group": "Hero",
+  "sub": "Girl006b_02",
+  "charName": "sp_girl006b_02_gacha",
+  "costumeName": "sp_girl006b_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl006b_02/sp_girl006b_02_gacha.json",
+  "texturePages": [
+   "sp_girl006b_02_gacha.png",
+   "sp_girl006b_02_gacha_a.png",
+   "tryGirl_girl006b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl006b_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl006b_02",
+  "charName": "sp_girl006b_02_gacha_a",
+  "costumeName": "sp_girl006b_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl006b_02/sp_girl006b_02_gacha_a.json",
+  "texturePages": [
+   "sp_girl006b_02_gacha.png",
+   "sp_girl006b_02_gacha_a.png",
+   "tryGirl_girl006b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl006b_03_gacha",
+  "group": "Hero",
+  "sub": "Girl006b_03",
+  "charName": "sp_girl006b_03_gacha",
+  "costumeName": "sp_girl006b_03_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl006b_03/sp_girl006b_03_gacha.json",
+  "texturePages": [
+   "Girl006b_03_01.png",
+   "Girl006b_03_02.png",
+   "Girl006b_03_03.png",
+   "sp_girl006b_03_gacha.png",
+   "sp_girl006b_03_gacha_a.png",
+   "tryGirl_girl006b_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl006b_03_gacha_a",
+  "group": "Hero",
+  "sub": "Girl006b_03",
+  "charName": "sp_girl006b_03_gacha_a",
+  "costumeName": "sp_girl006b_03_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl006b_03/sp_girl006b_03_gacha_a.json",
+  "texturePages": [
+   "Girl006b_03_01.png",
+   "Girl006b_03_02.png",
+   "Girl006b_03_03.png",
+   "sp_girl006b_03_gacha.png",
+   "sp_girl006b_03_gacha_a.png",
+   "tryGirl_girl006b_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl006b_a",
+  "group": "Hero",
+  "sub": "Girl006b",
+  "charName": "sp_girl006b_a",
+  "costumeName": "sp_girl006b_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl006b/sp_girl006b_a.json",
+  "texturePages": [
+   "girl006btemp.png",
+   "sp_girl006b.png",
+   "sp_girl006b_a.png",
+   "sp_girl006b_gacha.png",
+   "sp_girl006b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl006b_gacha",
+  "group": "Hero",
+  "sub": "Girl006b",
+  "charName": "sp_girl006b_gacha",
+  "costumeName": "sp_girl006b_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl006b/sp_girl006b_gacha.json",
+  "texturePages": [
+   "girl006btemp.png",
+   "sp_girl006b.png",
+   "sp_girl006b_a.png",
+   "sp_girl006b_gacha.png",
+   "sp_girl006b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl006b_gacha_a",
+  "group": "Hero",
+  "sub": "Girl006b",
+  "charName": "sp_girl006b_gacha_a",
+  "costumeName": "sp_girl006b_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl006b/sp_girl006b_gacha_a.json",
+  "texturePages": [
+   "girl006btemp.png",
+   "sp_girl006b.png",
+   "sp_girl006b_a.png",
+   "sp_girl006b_gacha.png",
+   "sp_girl006b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl007",
+  "group": "Hero",
+  "sub": "Girl007",
+  "charName": "sp_girl007",
+  "costumeName": "sp_girl007",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl007/sp_girl007.json",
+  "texturePages": [
+   "sp_girl007.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl007_01",
+  "group": "Hero",
+  "sub": "Girl007_01",
+  "charName": "sp_girl007_01",
+  "costumeName": "sp_girl007_01",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl007_01/sp_girl007_01.json",
+  "texturePages": [
+   "sp_girl007_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl007_02",
+  "group": "Hero",
+  "sub": "Girl007_02",
+  "charName": "sp_girl007_02",
+  "costumeName": "sp_girl007_02",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl007_02/sp_girl007_02.json",
+  "texturePages": [
+   "sp_girl007_02.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl007a",
+  "group": "Hero",
+  "sub": "Girl007a",
+  "charName": "sp_girl007a",
+  "costumeName": "sp_girl007a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl007a/sp_girl007a.json",
+  "texturePages": [
+   "T_Girl_007a-8.png",
+   "girl007a_2.png",
+   "girl007a_3.png",
+   "girl007a_4.png",
+   "girl007a_5.png",
+   "girl007a_6.png",
+   "girl007a_7.png",
+   "sp_girl007a.png",
+   "sp_girl007a_a.png",
+   "sp_girl007a_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl007a_02_gacha",
+  "group": "Hero",
+  "sub": "Girl007a_02",
+  "charName": "sp_girl007a_02_gacha",
+  "costumeName": "sp_girl007a_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl007a_02/sp_girl007a_02_gacha.json",
+  "texturePages": [
+   "sp_girl007a_02_gacha.png",
+   "tryGirl_007a_02_bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl007a_03",
+  "group": "Hero",
+  "sub": "Girl007a_03",
+  "charName": "sp_girl007a_03",
+  "costumeName": "sp_girl007a_03",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl007a_03/sp_girl007a_03.json",
+  "texturePages": [
+   "sp_girl007a_03.png",
+   "sp_girl007a_03_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl007a_03_a",
+  "group": "Hero",
+  "sub": "Girl007a_03",
+  "charName": "sp_girl007a_03_a",
+  "costumeName": "sp_girl007a_03_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl007a_03/sp_girl007a_03_a.json",
+  "texturePages": [
+   "sp_girl007a_03.png",
+   "sp_girl007a_03_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl007a_04",
+  "group": "Hero",
+  "sub": "Girl007a_04",
+  "charName": "sp_girl007a_04",
+  "costumeName": "sp_girl007a_04",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl007a_04/sp_girl007a_04.json",
+  "texturePages": [
+   "sp_girl007a_04.png",
+   "sp_girl007a_04_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl007a_04_a",
+  "group": "Hero",
+  "sub": "Girl007a_04",
+  "charName": "sp_girl007a_04_a",
+  "costumeName": "sp_girl007a_04_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl007a_04/sp_girl007a_04_a.json",
+  "texturePages": [
+   "sp_girl007a_04.png",
+   "sp_girl007a_04_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl007a_05_a_gacha",
+  "group": "Hero",
+  "sub": "Girl007a_05",
+  "charName": "sp_girl007a_05_a_gacha",
+  "costumeName": "sp_girl007a_05_a_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl007a_05/sp_girl007a_05_a_gacha.json",
+  "texturePages": [
+   "sp_girl007a_05_a_gacha.png",
+   "sp_girl007a_05_gacha.png",
+   "tryGirl_007a_05_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl007a_05_gacha",
+  "group": "Hero",
+  "sub": "Girl007a_05",
+  "charName": "sp_girl007a_05_gacha",
+  "costumeName": "sp_girl007a_05_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl007a_05/sp_girl007a_05_gacha.json",
+  "texturePages": [
+   "sp_girl007a_05_a_gacha.png",
+   "sp_girl007a_05_gacha.png",
+   "tryGirl_007a_05_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl007a_a",
+  "group": "Hero",
+  "sub": "Girl007a",
+  "charName": "sp_girl007a_a",
+  "costumeName": "sp_girl007a_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl007a/sp_girl007a_a.json",
+  "texturePages": [
+   "T_Girl_007a-8.png",
+   "girl007a_2.png",
+   "girl007a_3.png",
+   "girl007a_4.png",
+   "girl007a_5.png",
+   "girl007a_6.png",
+   "girl007a_7.png",
+   "sp_girl007a.png",
+   "sp_girl007a_a.png",
+   "sp_girl007a_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl007a_gacha",
+  "group": "Hero",
+  "sub": "Girl007a",
+  "charName": "sp_girl007a_gacha",
+  "costumeName": "sp_girl007a_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl007a/sp_girl007a_gacha.json",
+  "texturePages": [
+   "T_Girl_007a-8.png",
+   "girl007a_2.png",
+   "girl007a_3.png",
+   "girl007a_4.png",
+   "girl007a_5.png",
+   "girl007a_6.png",
+   "girl007a_7.png",
+   "sp_girl007a.png",
+   "sp_girl007a_a.png",
+   "sp_girl007a_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008",
+  "group": "Hero",
+  "sub": "Girl008",
+  "charName": "sp_girl008",
+  "costumeName": "sp_girl008",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008/sp_girl008.json",
+  "texturePages": [
+   "sp_girl008.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008_02",
+  "group": "Hero",
+  "sub": "Girl008_02",
+  "charName": "sp_girl008_02",
+  "costumeName": "sp_girl008_02",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008_02/sp_girl008_02.json",
+  "texturePages": [
+   "sp_girl008_02.png",
+   "sp_girl008_02_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008_02_a",
+  "group": "Hero",
+  "sub": "Girl008_02",
+  "charName": "sp_girl008_02_a",
+  "costumeName": "sp_girl008_02_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008_02/sp_girl008_02_a.json",
+  "texturePages": [
+   "sp_girl008_02.png",
+   "sp_girl008_02_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008a",
+  "group": "Hero",
+  "sub": "Girl008a",
+  "charName": "sp_girl008a",
+  "costumeName": "sp_girl008a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008a/sp_girl008a.json",
+  "texturePages": [
+   "girl008a_1.png",
+   "girl008a_2.png",
+   "girl008a_3.png",
+   "girl008a_4.png",
+   "girl008a_5.png",
+   "girl008a_6.png",
+   "sp_girl008a.png",
+   "sp_girl008a_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008a_01_q",
+  "group": "Hero",
+  "sub": "Girl008a_01_q",
+  "charName": "sp_girl008a_01_q",
+  "costumeName": "sp_girl008a_01_q",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008a_01_q/sp_girl008a_01_q.json",
+  "texturePages": [
+   "sp_girl008a_01_q.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008a_03_gacha",
+  "group": "Hero",
+  "sub": "Girl008a_03",
+  "charName": "sp_girl008a_03_gacha",
+  "costumeName": "sp_girl008a_03_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008a_03/sp_girl008a_03_gacha.json",
+  "texturePages": [
+   "sp_girl008a_03_gacha.png",
+   "tryGirl_008a_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008a_04_gacha",
+  "group": "Hero",
+  "sub": "Girl008a_04",
+  "charName": "sp_girl008a_04_gacha",
+  "costumeName": "sp_girl008a_04_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008a_04/sp_girl008a_04_gacha.json",
+  "texturePages": [
+   "sp_girl008a_04_gacha.png",
+   "tryGirl_008a_04_bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008a_gacha",
+  "group": "Hero",
+  "sub": "Girl008a",
+  "charName": "sp_girl008a_gacha",
+  "costumeName": "sp_girl008a_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008a/sp_girl008a_gacha.json",
+  "texturePages": [
+   "girl008a_1.png",
+   "girl008a_2.png",
+   "girl008a_3.png",
+   "girl008a_4.png",
+   "girl008a_5.png",
+   "girl008a_6.png",
+   "sp_girl008a.png",
+   "sp_girl008a_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008b",
+  "group": "Hero",
+  "sub": "Girl008b",
+  "charName": "sp_girl008b",
+  "costumeName": "sp_girl008b",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008b/sp_girl008b.json",
+  "texturePages": [
+   "sp_girl008b.png",
+   "sp_girl008b_01.png",
+   "sp_girl008b_02.png",
+   "sp_girl008b_03.png",
+   "sp_girl008b_04.png",
+   "sp_girl008b_gacha.png",
+   "sp_girl008b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008b_02",
+  "group": "Hero",
+  "sub": "Girl008b_02",
+  "charName": "sp_girl008b_02",
+  "costumeName": "sp_girl008b_02",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008b_02/sp_girl008b_02.json",
+  "texturePages": [
+   "BG.png",
+   "sp_girl008b_02.png",
+   "sp_girl008b_02_a.png",
+   "tryGirl_008b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008b_02_a",
+  "group": "Hero",
+  "sub": "Girl008b_02",
+  "charName": "sp_girl008b_02_a",
+  "costumeName": "sp_girl008b_02_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008b_02/sp_girl008b_02_a.json",
+  "texturePages": [
+   "BG.png",
+   "sp_girl008b_02.png",
+   "sp_girl008b_02_a.png",
+   "tryGirl_008b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008b_03_gacha",
+  "group": "Hero",
+  "sub": "Girl008b_03",
+  "charName": "sp_girl008b_03_gacha",
+  "costumeName": "sp_girl008b_03_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008b_03/sp_girl008b_03_gacha.json",
+  "texturePages": [
+   "sp_girl008b_03_gacha.png",
+   "sp_girl008b_03_gacha_a.png",
+   "tryGirl_008b_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008b_03_gacha_a",
+  "group": "Hero",
+  "sub": "Girl008b_03",
+  "charName": "sp_girl008b_03_gacha_a",
+  "costumeName": "sp_girl008b_03_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008b_03/sp_girl008b_03_gacha_a.json",
+  "texturePages": [
+   "sp_girl008b_03_gacha.png",
+   "sp_girl008b_03_gacha_a.png",
+   "tryGirl_008b_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008b_gacha",
+  "group": "Hero",
+  "sub": "Girl008b",
+  "charName": "sp_girl008b_gacha",
+  "costumeName": "sp_girl008b_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008b/sp_girl008b_gacha.json",
+  "texturePages": [
+   "sp_girl008b.png",
+   "sp_girl008b_01.png",
+   "sp_girl008b_02.png",
+   "sp_girl008b_03.png",
+   "sp_girl008b_04.png",
+   "sp_girl008b_gacha.png",
+   "sp_girl008b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008b_gacha_a",
+  "group": "Hero",
+  "sub": "Girl008b",
+  "charName": "sp_girl008b_gacha_a",
+  "costumeName": "sp_girl008b_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008b/sp_girl008b_gacha_a.json",
+  "texturePages": [
+   "sp_girl008b.png",
+   "sp_girl008b_01.png",
+   "sp_girl008b_02.png",
+   "sp_girl008b_03.png",
+   "sp_girl008b_04.png",
+   "sp_girl008b_gacha.png",
+   "sp_girl008b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008c",
+  "group": "Hero",
+  "sub": "Girl008c",
+  "charName": "sp_girl008c",
+  "costumeName": "sp_girl008c",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008c/sp_girl008c.json",
+  "texturePages": [
+   "sp_girl008c.png",
+   "sp_girl008c_a.png",
+   "sp_girl008c_gacha.png",
+   "sp_girl008c_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008c_02",
+  "group": "Hero",
+  "sub": "Girl008c_02",
+  "charName": "sp_girl008c_02",
+  "costumeName": "sp_girl008c_02",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008c_02/sp_girl008c_02.json",
+  "texturePages": [
+   "sp_girl008c_02.png",
+   "sp_girl008c_02_01.png",
+   "sp_girl008c_02_a.png",
+   "sp_girl008c_02_gacha.png",
+   "sp_girl008c_02_gacha_a.png",
+   "tryGirl_girl008c_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008c_02_a",
+  "group": "Hero",
+  "sub": "Girl008c_02",
+  "charName": "sp_girl008c_02_a",
+  "costumeName": "sp_girl008c_02_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008c_02/sp_girl008c_02_a.json",
+  "texturePages": [
+   "sp_girl008c_02.png",
+   "sp_girl008c_02_01.png",
+   "sp_girl008c_02_a.png",
+   "sp_girl008c_02_gacha.png",
+   "sp_girl008c_02_gacha_a.png",
+   "tryGirl_girl008c_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008c_02_gacha",
+  "group": "Hero",
+  "sub": "Girl008c_02",
+  "charName": "sp_girl008c_02_gacha",
+  "costumeName": "sp_girl008c_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008c_02/sp_girl008c_02_gacha.json",
+  "texturePages": [
+   "sp_girl008c_02.png",
+   "sp_girl008c_02_01.png",
+   "sp_girl008c_02_a.png",
+   "sp_girl008c_02_gacha.png",
+   "sp_girl008c_02_gacha_a.png",
+   "tryGirl_girl008c_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008c_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl008c_02",
+  "charName": "sp_girl008c_02_gacha_a",
+  "costumeName": "sp_girl008c_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008c_02/sp_girl008c_02_gacha_a.json",
+  "texturePages": [
+   "sp_girl008c_02.png",
+   "sp_girl008c_02_01.png",
+   "sp_girl008c_02_a.png",
+   "sp_girl008c_02_gacha.png",
+   "sp_girl008c_02_gacha_a.png",
+   "tryGirl_girl008c_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008c_03_gacha",
+  "group": "Hero",
+  "sub": "Girl008c_03",
+  "charName": "sp_girl008c_03_gacha",
+  "costumeName": "sp_girl008c_03_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008c_03/sp_girl008c_03_gacha.json",
+  "texturePages": [
+   "sp_girl008c_03_gacha.png",
+   "sp_girl008c_03_gacha_a.png",
+   "tryGirl_girl008c_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008c_03_gacha_a",
+  "group": "Hero",
+  "sub": "Girl008c_03",
+  "charName": "sp_girl008c_03_gacha_a",
+  "costumeName": "sp_girl008c_03_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008c_03/sp_girl008c_03_gacha_a.json",
+  "texturePages": [
+   "sp_girl008c_03_gacha.png",
+   "sp_girl008c_03_gacha_a.png",
+   "tryGirl_girl008c_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008c_a",
+  "group": "Hero",
+  "sub": "Girl008c",
+  "charName": "sp_girl008c_a",
+  "costumeName": "sp_girl008c_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008c/sp_girl008c_a.json",
+  "texturePages": [
+   "sp_girl008c.png",
+   "sp_girl008c_a.png",
+   "sp_girl008c_gacha.png",
+   "sp_girl008c_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008c_gacha",
+  "group": "Hero",
+  "sub": "Girl008c",
+  "charName": "sp_girl008c_gacha",
+  "costumeName": "sp_girl008c_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008c/sp_girl008c_gacha.json",
+  "texturePages": [
+   "sp_girl008c.png",
+   "sp_girl008c_a.png",
+   "sp_girl008c_gacha.png",
+   "sp_girl008c_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl008c_gacha_a",
+  "group": "Hero",
+  "sub": "Girl008c",
+  "charName": "sp_girl008c_gacha_a",
+  "costumeName": "sp_girl008c_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl008c/sp_girl008c_gacha_a.json",
+  "texturePages": [
+   "sp_girl008c.png",
+   "sp_girl008c_a.png",
+   "sp_girl008c_gacha.png",
+   "sp_girl008c_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl010",
+  "group": "Hero",
+  "sub": "Girl010",
+  "charName": "sp_girl010",
+  "costumeName": "sp_girl010",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl010/sp_girl010.json",
+  "texturePages": [
+   "sp_girl010.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl010_01",
+  "group": "Hero",
+  "sub": "Girl010_01",
+  "charName": "sp_girl010_01",
+  "costumeName": "sp_girl010_01",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl010_01/sp_girl010_01.json",
+  "texturePages": [
+   "sp_girl010_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl010a",
+  "group": "Hero",
+  "sub": "Girl010a",
+  "charName": "sp_girl010a",
+  "costumeName": "sp_girl010a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl010a/sp_girl010a.json",
+  "texturePages": [
+   "e_girl_010a_w01_t.png",
+   "e_girl_010a_w02_t.png",
+   "e_girl_010a_w04_t.png",
+   "e_girl_010a_w05_t.png",
+   "e_girl_010a_w06_t.png",
+   "e_girl_010a_w07_t.png",
+   "e_girl_010a_w08_t.png",
+   "e_girl_010a_w09_t.png",
+   "sp_girl010a.png",
+   "sp_girl010a_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl010a_03_gacha",
+  "group": "Hero",
+  "sub": "Girl010a_03",
+  "charName": "sp_girl010a_03_gacha",
+  "costumeName": "sp_girl010a_03_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl010a_03/sp_girl010a_03_gacha.json",
+  "texturePages": [
+   "girl010a_03_02_a.png",
+   "girl010a_03_linshi_01.png",
+   "girl010a_03_linshi_02.png",
+   "girl010a_03_linshi_04.png",
+   "girl010a_03_linshi_05.png",
+   "girl010a_03_linshi_06.png",
+   "girl010a_03_linshi_07.png",
+   "girl010a_03_linshi_08.png",
+   "girl010a_03_linshi_09.png",
+   "girl010a_03_linshi_10.png",
+   "sp_girl010a_03_gacha.png",
+   "sp_girl010a_03_gacha_a.png",
+   "tryGirl_010a_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl010a_03_gacha_a",
+  "group": "Hero",
+  "sub": "Girl010a_03",
+  "charName": "sp_girl010a_03_gacha_a",
+  "costumeName": "sp_girl010a_03_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl010a_03/sp_girl010a_03_gacha_a.json",
+  "texturePages": [
+   "girl010a_03_02_a.png",
+   "girl010a_03_linshi_01.png",
+   "girl010a_03_linshi_02.png",
+   "girl010a_03_linshi_04.png",
+   "girl010a_03_linshi_05.png",
+   "girl010a_03_linshi_06.png",
+   "girl010a_03_linshi_07.png",
+   "girl010a_03_linshi_08.png",
+   "girl010a_03_linshi_09.png",
+   "girl010a_03_linshi_10.png",
+   "sp_girl010a_03_gacha.png",
+   "sp_girl010a_03_gacha_a.png",
+   "tryGirl_010a_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl010a_04_gacha",
+  "group": "Hero",
+  "sub": "Girl010a_04",
+  "charName": "sp_girl010a_04_gacha",
+  "costumeName": "sp_girl010a_04_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl010a_04/sp_girl010a_04_gacha.json",
+  "texturePages": [
+   "sp_girl010a_04_gacha.png",
+   "sp_girl010a_04_gacha_a.png",
+   "tryGirl_010a_04_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl010a_04_gacha_a",
+  "group": "Hero",
+  "sub": "Girl010a_04",
+  "charName": "sp_girl010a_04_gacha_a",
+  "costumeName": "sp_girl010a_04_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl010a_04/sp_girl010a_04_gacha_a.json",
+  "texturePages": [
+   "sp_girl010a_04_gacha.png",
+   "sp_girl010a_04_gacha_a.png",
+   "tryGirl_010a_04_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl010a_gacha",
+  "group": "Hero",
+  "sub": "Girl010a",
+  "charName": "sp_girl010a_gacha",
+  "costumeName": "sp_girl010a_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl010a/sp_girl010a_gacha.json",
+  "texturePages": [
+   "e_girl_010a_w01_t.png",
+   "e_girl_010a_w02_t.png",
+   "e_girl_010a_w04_t.png",
+   "e_girl_010a_w05_t.png",
+   "e_girl_010a_w06_t.png",
+   "e_girl_010a_w07_t.png",
+   "e_girl_010a_w08_t.png",
+   "e_girl_010a_w09_t.png",
+   "sp_girl010a.png",
+   "sp_girl010a_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl010b",
+  "group": "Hero",
+  "sub": "Girl010b",
+  "charName": "sp_girl010b",
+  "costumeName": "sp_girl010b",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl010b/sp_girl010b.json",
+  "texturePages": [
+   "e_girl_010a_z01_t.png",
+   "sp_girl010b.png",
+   "sp_girl010b_a.png",
+   "sp_girl010b_gacha.png",
+   "sp_girl010b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl010b_02_gacha_01",
+  "group": "Hero",
+  "sub": "Girl010b_02",
+  "charName": "sp_girl010b_02_gacha_01",
+  "costumeName": "sp_girl010b_02_gacha_01",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl010b_02/sp_girl010b_02_gacha_01.json",
+  "texturePages": [
+   "sp_girl010b_02_gacha_01.png",
+   "sp_girl010b_02_gacha_02.png",
+   "sp_girl010b_02_gacha_a_01.png",
+   "sp_girl010b_02_gacha_a_02.png",
+   "tryGirl_010b_02_01_Bg.png",
+   "tryGirl_010b_02_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl010b_02_gacha_02",
+  "group": "Hero",
+  "sub": "Girl010b_02",
+  "charName": "sp_girl010b_02_gacha_02",
+  "costumeName": "sp_girl010b_02_gacha_02",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl010b_02/sp_girl010b_02_gacha_02.json",
+  "texturePages": [
+   "sp_girl010b_02_gacha_01.png",
+   "sp_girl010b_02_gacha_02.png",
+   "sp_girl010b_02_gacha_a_01.png",
+   "sp_girl010b_02_gacha_a_02.png",
+   "tryGirl_010b_02_01_Bg.png",
+   "tryGirl_010b_02_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl010b_02_gacha_a_01",
+  "group": "Hero",
+  "sub": "Girl010b_02",
+  "charName": "sp_girl010b_02_gacha_a_01",
+  "costumeName": "sp_girl010b_02_gacha_a_01",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl010b_02/sp_girl010b_02_gacha_a_01.json",
+  "texturePages": [
+   "sp_girl010b_02_gacha_01.png",
+   "sp_girl010b_02_gacha_02.png",
+   "sp_girl010b_02_gacha_a_01.png",
+   "sp_girl010b_02_gacha_a_02.png",
+   "tryGirl_010b_02_01_Bg.png",
+   "tryGirl_010b_02_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl010b_02_gacha_a_02",
+  "group": "Hero",
+  "sub": "Girl010b_02",
+  "charName": "sp_girl010b_02_gacha_a_02",
+  "costumeName": "sp_girl010b_02_gacha_a_02",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl010b_02/sp_girl010b_02_gacha_a_02.json",
+  "texturePages": [
+   "sp_girl010b_02_gacha_01.png",
+   "sp_girl010b_02_gacha_02.png",
+   "sp_girl010b_02_gacha_a_01.png",
+   "sp_girl010b_02_gacha_a_02.png",
+   "tryGirl_010b_02_01_Bg.png",
+   "tryGirl_010b_02_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl010b_03_gacha",
+  "group": "Hero",
+  "sub": "Girl010b_03",
+  "charName": "sp_girl010b_03_gacha",
+  "costumeName": "sp_girl010b_03_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl010b_03/sp_girl010b_03_gacha.json",
+  "texturePages": [
+   "sp_girl010b_03_gacha.png",
+   "sp_girl010b_03_gacha_a.png",
+   "tryGirl_girl010b_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl010b_03_gacha_a",
+  "group": "Hero",
+  "sub": "Girl010b_03",
+  "charName": "sp_girl010b_03_gacha_a",
+  "costumeName": "sp_girl010b_03_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl010b_03/sp_girl010b_03_gacha_a.json",
+  "texturePages": [
+   "sp_girl010b_03_gacha.png",
+   "sp_girl010b_03_gacha_a.png",
+   "tryGirl_girl010b_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl010b_a",
+  "group": "Hero",
+  "sub": "Girl010b",
+  "charName": "sp_girl010b_a",
+  "costumeName": "sp_girl010b_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl010b/sp_girl010b_a.json",
+  "texturePages": [
+   "e_girl_010a_z01_t.png",
+   "sp_girl010b.png",
+   "sp_girl010b_a.png",
+   "sp_girl010b_gacha.png",
+   "sp_girl010b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl010b_gacha",
+  "group": "Hero",
+  "sub": "Girl010b",
+  "charName": "sp_girl010b_gacha",
+  "costumeName": "sp_girl010b_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl010b/sp_girl010b_gacha.json",
+  "texturePages": [
+   "e_girl_010a_z01_t.png",
+   "sp_girl010b.png",
+   "sp_girl010b_a.png",
+   "sp_girl010b_gacha.png",
+   "sp_girl010b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl010b_gacha_a",
+  "group": "Hero",
+  "sub": "Girl010b",
+  "charName": "sp_girl010b_gacha_a",
+  "costumeName": "sp_girl010b_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl010b/sp_girl010b_gacha_a.json",
+  "texturePages": [
+   "e_girl_010a_z01_t.png",
+   "sp_girl010b.png",
+   "sp_girl010b_a.png",
+   "sp_girl010b_gacha.png",
+   "sp_girl010b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl011",
+  "group": "Hero",
+  "sub": "Girl011",
+  "charName": "sp_girl011",
+  "costumeName": "sp_girl011",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl011/sp_girl011.json",
+  "texturePages": [
+   "sp_girl011.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl011_01",
+  "group": "Hero",
+  "sub": "Girl011_01",
+  "charName": "sp_girl011_01",
+  "costumeName": "sp_girl011_01",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl011_01/sp_girl011_01.json",
+  "texturePages": [
+   "sp_girl011_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl011_02",
+  "group": "Hero",
+  "sub": "Girl011_02",
+  "charName": "sp_girl011_02",
+  "costumeName": "sp_girl011_02",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl011_02/sp_girl011_02.json",
+  "texturePages": [
+   "girl011_02-qianjing.png",
+   "sp_girl011_02.png",
+   "sp_girl011_02_a.png",
+   "sp_girl011_02_gacha.png",
+   "tryGirl_011_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl011_02_a",
+  "group": "Hero",
+  "sub": "Girl011_02",
+  "charName": "sp_girl011_02_a",
+  "costumeName": "sp_girl011_02_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl011_02/sp_girl011_02_a.json",
+  "texturePages": [
+   "girl011_02-qianjing.png",
+   "sp_girl011_02.png",
+   "sp_girl011_02_a.png",
+   "sp_girl011_02_gacha.png",
+   "tryGirl_011_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl011_02_gacha",
+  "group": "Hero",
+  "sub": "Girl011_02",
+  "charName": "sp_girl011_02_gacha",
+  "costumeName": "sp_girl011_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl011_02/sp_girl011_02_gacha.json",
+  "texturePages": [
+   "girl011_02-qianjing.png",
+   "sp_girl011_02.png",
+   "sp_girl011_02_a.png",
+   "sp_girl011_02_gacha.png",
+   "tryGirl_011_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl011a",
+  "group": "Hero",
+  "sub": "Girl011a",
+  "charName": "sp_girl011a",
+  "costumeName": "sp_girl011a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl011a/sp_girl011a.json",
+  "texturePages": [
+   "sp_girl011a.png",
+   "sp_girl011a_1.png",
+   "sp_girl011a_2.png",
+   "sp_girl011a_3.png",
+   "sp_girl011a_a.png",
+   "sp_girl011a_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl011a_02_gacha",
+  "group": "Hero",
+  "sub": "Girl011a_02",
+  "charName": "sp_girl011a_02_gacha",
+  "costumeName": "sp_girl011a_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl011a_02/sp_girl011a_02_gacha.json",
+  "texturePages": [
+   "sp_girl011a_02_gacha.png",
+   "tryGirl_011a_02_bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl011a_03",
+  "group": "Hero",
+  "sub": "Girl011a_03",
+  "charName": "sp_girl011a_03",
+  "costumeName": "sp_girl011a_03",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl011a_03/sp_girl011a_03.json",
+  "texturePages": [
+   "sp_girl011a_03.png",
+   "sp_girl011a_03_a.png",
+   "sp_girl011a_03_gacha.png",
+   "sp_girl011a_03_gacha_a.png",
+   "tryGirl_011a_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl011a_03_a",
+  "group": "Hero",
+  "sub": "Girl011a_03",
+  "charName": "sp_girl011a_03_a",
+  "costumeName": "sp_girl011a_03_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl011a_03/sp_girl011a_03_a.json",
+  "texturePages": [
+   "sp_girl011a_03.png",
+   "sp_girl011a_03_a.png",
+   "sp_girl011a_03_gacha.png",
+   "sp_girl011a_03_gacha_a.png",
+   "tryGirl_011a_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl011a_03_gacha",
+  "group": "Hero",
+  "sub": "Girl011a_03",
+  "charName": "sp_girl011a_03_gacha",
+  "costumeName": "sp_girl011a_03_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl011a_03/sp_girl011a_03_gacha.json",
+  "texturePages": [
+   "sp_girl011a_03.png",
+   "sp_girl011a_03_a.png",
+   "sp_girl011a_03_gacha.png",
+   "sp_girl011a_03_gacha_a.png",
+   "tryGirl_011a_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl011a_03_gacha_a",
+  "group": "Hero",
+  "sub": "Girl011a_03",
+  "charName": "sp_girl011a_03_gacha_a",
+  "costumeName": "sp_girl011a_03_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl011a_03/sp_girl011a_03_gacha_a.json",
+  "texturePages": [
+   "sp_girl011a_03.png",
+   "sp_girl011a_03_a.png",
+   "sp_girl011a_03_gacha.png",
+   "sp_girl011a_03_gacha_a.png",
+   "tryGirl_011a_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl011a_a",
+  "group": "Hero",
+  "sub": "Girl011a",
+  "charName": "sp_girl011a_a",
+  "costumeName": "sp_girl011a_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl011a/sp_girl011a_a.json",
+  "texturePages": [
+   "sp_girl011a.png",
+   "sp_girl011a_1.png",
+   "sp_girl011a_2.png",
+   "sp_girl011a_3.png",
+   "sp_girl011a_a.png",
+   "sp_girl011a_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl011a_gacha",
+  "group": "Hero",
+  "sub": "Girl011a",
+  "charName": "sp_girl011a_gacha",
+  "costumeName": "sp_girl011a_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl011a/sp_girl011a_gacha.json",
+  "texturePages": [
+   "sp_girl011a.png",
+   "sp_girl011a_1.png",
+   "sp_girl011a_2.png",
+   "sp_girl011a_3.png",
+   "sp_girl011a_a.png",
+   "sp_girl011a_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl011b",
+  "group": "Hero",
+  "sub": "Girl011b",
+  "charName": "sp_girl011b",
+  "costumeName": "sp_girl011b",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl011b/sp_girl011b.json",
+  "texturePages": [
+   "sp_girl011b.png",
+   "sp_girl011b_a.png",
+   "sp_girl011b_a_a_01.png",
+   "sp_girl011b_gacha.png",
+   "sp_girl011b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl011b_02_gacha",
+  "group": "Hero",
+  "sub": "Girl011b_02",
+  "charName": "sp_girl011b_02_gacha",
+  "costumeName": "sp_girl011b_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl011b_02/sp_girl011b_02_gacha.json",
+  "texturePages": [
+   "sp_girl011b_02_gacha.png",
+   "sp_girl011b_02_gacha_a.png",
+   "tryGirl_011b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl011b_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl011b_02",
+  "charName": "sp_girl011b_02_gacha_a",
+  "costumeName": "sp_girl011b_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl011b_02/sp_girl011b_02_gacha_a.json",
+  "texturePages": [
+   "sp_girl011b_02_gacha.png",
+   "sp_girl011b_02_gacha_a.png",
+   "tryGirl_011b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl011b_03_gacha",
+  "group": "Hero",
+  "sub": "Girl011b_03",
+  "charName": "sp_girl011b_03_gacha",
+  "costumeName": "sp_girl011b_03_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl011b_03/sp_girl011b_03_gacha.json",
+  "texturePages": [
+   "sp_girl011b_03_gacha.png",
+   "sp_girl011b_03_gacha_a.png",
+   "tryGirl_011b_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl011b_03_gacha_a",
+  "group": "Hero",
+  "sub": "Girl011b_03",
+  "charName": "sp_girl011b_03_gacha_a",
+  "costumeName": "sp_girl011b_03_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl011b_03/sp_girl011b_03_gacha_a.json",
+  "texturePages": [
+   "sp_girl011b_03_gacha.png",
+   "sp_girl011b_03_gacha_a.png",
+   "tryGirl_011b_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl011b_a",
+  "group": "Hero",
+  "sub": "Girl011b",
+  "charName": "sp_girl011b_a",
+  "costumeName": "sp_girl011b_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl011b/sp_girl011b_a.json",
+  "texturePages": [
+   "sp_girl011b.png",
+   "sp_girl011b_a.png",
+   "sp_girl011b_a_a_01.png",
+   "sp_girl011b_gacha.png",
+   "sp_girl011b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl011b_gacha",
+  "group": "Hero",
+  "sub": "Girl011b",
+  "charName": "sp_girl011b_gacha",
+  "costumeName": "sp_girl011b_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl011b/sp_girl011b_gacha.json",
+  "texturePages": [
+   "sp_girl011b.png",
+   "sp_girl011b_a.png",
+   "sp_girl011b_a_a_01.png",
+   "sp_girl011b_gacha.png",
+   "sp_girl011b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl011b_gacha_a",
+  "group": "Hero",
+  "sub": "Girl011b",
+  "charName": "sp_girl011b_gacha_a",
+  "costumeName": "sp_girl011b_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl011b/sp_girl011b_gacha_a.json",
+  "texturePages": [
+   "sp_girl011b.png",
+   "sp_girl011b_a.png",
+   "sp_girl011b_a_a_01.png",
+   "sp_girl011b_gacha.png",
+   "sp_girl011b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl012",
+  "group": "Hero",
+  "sub": "Girl012",
+  "charName": "sp_girl012",
+  "costumeName": "sp_girl012",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl012/sp_girl012.json",
+  "texturePages": [
+   "sp_girl012.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl012_01",
+  "group": "Hero",
+  "sub": "Girl012_01",
+  "charName": "sp_girl012_01",
+  "costumeName": "sp_girl012_01",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl012_01/sp_girl012_01.json",
+  "texturePages": [
+   "sp_girl012_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl012a",
+  "group": "Hero",
+  "sub": "Girl012a",
+  "charName": "sp_girl012a",
+  "costumeName": "sp_girl012a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl012a/sp_girl012a.json",
+  "texturePages": [
+   "sp_girl012a.png",
+   "sp_girl012a_gachastand.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl012a_02",
+  "group": "Hero",
+  "sub": "Girl012a_02",
+  "charName": "sp_girl012a_02",
+  "costumeName": "sp_girl012a_02",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl012a_02/sp_girl012a_02.json",
+  "texturePages": [
+   "sp_girl012a_02.png",
+   "sp_girl012a_02_a.png",
+   "sp_girl012a_02_gacha.png",
+   "sp_girl012a_02_gacha_a.png",
+   "tryGirl_012a_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl012a_02_a",
+  "group": "Hero",
+  "sub": "Girl012a_02",
+  "charName": "sp_girl012a_02_a",
+  "costumeName": "sp_girl012a_02_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl012a_02/sp_girl012a_02_a.json",
+  "texturePages": [
+   "sp_girl012a_02.png",
+   "sp_girl012a_02_a.png",
+   "sp_girl012a_02_gacha.png",
+   "sp_girl012a_02_gacha_a.png",
+   "tryGirl_012a_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl012a_02_gacha",
+  "group": "Hero",
+  "sub": "Girl012a_02",
+  "charName": "sp_girl012a_02_gacha",
+  "costumeName": "sp_girl012a_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl012a_02/sp_girl012a_02_gacha.json",
+  "texturePages": [
+   "sp_girl012a_02.png",
+   "sp_girl012a_02_a.png",
+   "sp_girl012a_02_gacha.png",
+   "sp_girl012a_02_gacha_a.png",
+   "tryGirl_012a_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl012a_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl012a_02",
+  "charName": "sp_girl012a_02_gacha_a",
+  "costumeName": "sp_girl012a_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl012a_02/sp_girl012a_02_gacha_a.json",
+  "texturePages": [
+   "sp_girl012a_02.png",
+   "sp_girl012a_02_a.png",
+   "sp_girl012a_02_gacha.png",
+   "sp_girl012a_02_gacha_a.png",
+   "tryGirl_012a_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl012a_gachastand",
+  "group": "Hero",
+  "sub": "Girl012a",
+  "charName": "sp_girl012a_gachastand",
+  "costumeName": "sp_girl012a_gachastand",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl012a/sp_girl012a_gachastand.json",
+  "texturePages": [
+   "sp_girl012a.png",
+   "sp_girl012a_gachastand.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl012b",
+  "group": "Hero",
+  "sub": "Girl012b",
+  "charName": "sp_girl012b",
+  "costumeName": "sp_girl012b",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl012b/sp_girl012b.json",
+  "texturePages": [
+   "girl012b_01.png",
+   "girl012b_02.png",
+   "girl012b_03.png",
+   "girl012b_04.png",
+   "girl012b_05.png",
+   "sp_girl012b.png",
+   "sp_girl012b_a.png",
+   "sp_girl012b_gacha.png",
+   "sp_girl012b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl012b_02_gacha",
+  "group": "Hero",
+  "sub": "Girl012b_02",
+  "charName": "sp_girl012b_02_gacha",
+  "costumeName": "sp_girl012b_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl012b_02/sp_girl012b_02_gacha.json",
+  "texturePages": [
+   "sp_girl012b_02_gacha.png",
+   "sp_girl012b_02_gacha_a.png",
+   "tryGirl_girl012b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl012b_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl012b_02",
+  "charName": "sp_girl012b_02_gacha_a",
+  "costumeName": "sp_girl012b_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl012b_02/sp_girl012b_02_gacha_a.json",
+  "texturePages": [
+   "sp_girl012b_02_gacha.png",
+   "sp_girl012b_02_gacha_a.png",
+   "tryGirl_girl012b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl012b_a",
+  "group": "Hero",
+  "sub": "Girl012b",
+  "charName": "sp_girl012b_a",
+  "costumeName": "sp_girl012b_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl012b/sp_girl012b_a.json",
+  "texturePages": [
+   "girl012b_01.png",
+   "girl012b_02.png",
+   "girl012b_03.png",
+   "girl012b_04.png",
+   "girl012b_05.png",
+   "sp_girl012b.png",
+   "sp_girl012b_a.png",
+   "sp_girl012b_gacha.png",
+   "sp_girl012b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl012b_gacha",
+  "group": "Hero",
+  "sub": "Girl012b",
+  "charName": "sp_girl012b_gacha",
+  "costumeName": "sp_girl012b_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl012b/sp_girl012b_gacha.json",
+  "texturePages": [
+   "girl012b_01.png",
+   "girl012b_02.png",
+   "girl012b_03.png",
+   "girl012b_04.png",
+   "girl012b_05.png",
+   "sp_girl012b.png",
+   "sp_girl012b_a.png",
+   "sp_girl012b_gacha.png",
+   "sp_girl012b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl012b_gacha_a",
+  "group": "Hero",
+  "sub": "Girl012b",
+  "charName": "sp_girl012b_gacha_a",
+  "costumeName": "sp_girl012b_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl012b/sp_girl012b_gacha_a.json",
+  "texturePages": [
+   "girl012b_01.png",
+   "girl012b_02.png",
+   "girl012b_03.png",
+   "girl012b_04.png",
+   "girl012b_05.png",
+   "sp_girl012b.png",
+   "sp_girl012b_a.png",
+   "sp_girl012b_gacha.png",
+   "sp_girl012b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl013",
+  "group": "Hero",
+  "sub": "Girl013",
+  "charName": "sp_girl013",
+  "costumeName": "sp_girl013",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl013/sp_girl013.json",
+  "texturePages": [
+   "sp_girl013.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl013_01",
+  "group": "Hero",
+  "sub": "Girl013_01",
+  "charName": "sp_girl013_01",
+  "costumeName": "sp_girl013_01",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl013_01/sp_girl013_01.json",
+  "texturePages": [
+   "sp_girl013_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl013_02",
+  "group": "Hero",
+  "sub": "Girl013_02",
+  "charName": "sp_girl013_02",
+  "costumeName": "sp_girl013_02",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl013_02/sp_girl013_02.json",
+  "texturePages": [
+   "sp_girl013_02.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl013a",
+  "group": "Hero",
+  "sub": "Girl013a",
+  "charName": "sp_girl013a",
+  "costumeName": "sp_girl013a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl013a/sp_girl013a.json",
+  "texturePages": [
+   "e_Girl013a_01.png",
+   "e_Girl013a_02.png",
+   "e_Girl013a_03.png",
+   "girl013a_jueselinshi.png",
+   "girl013a_texiao.png",
+   "sp_girl013a.png",
+   "sp_girl013a_a.png",
+   "sp_girl013a_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl013a_04_gacha",
+  "group": "Hero",
+  "sub": "Girl013a_04",
+  "charName": "sp_girl013a_04_gacha",
+  "costumeName": "sp_girl013a_04_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl013a_04/sp_girl013a_04_gacha.json",
+  "texturePages": [
+   "Girl013a_02_01.png",
+   "Girl013a_02_011.png",
+   "Girl013a_02_02.png",
+   "sp_girl013a_04_gacha.png",
+   "sp_girl013a_04_gacha_a.png",
+   "tryGirl_013a_04_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl013a_04_gacha_a",
+  "group": "Hero",
+  "sub": "Girl013a_04",
+  "charName": "sp_girl013a_04_gacha_a",
+  "costumeName": "sp_girl013a_04_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl013a_04/sp_girl013a_04_gacha_a.json",
+  "texturePages": [
+   "Girl013a_02_01.png",
+   "Girl013a_02_011.png",
+   "Girl013a_02_02.png",
+   "sp_girl013a_04_gacha.png",
+   "sp_girl013a_04_gacha_a.png",
+   "tryGirl_013a_04_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl013a_a",
+  "group": "Hero",
+  "sub": "Girl013a",
+  "charName": "sp_girl013a_a",
+  "costumeName": "sp_girl013a_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl013a/sp_girl013a_a.json",
+  "texturePages": [
+   "e_Girl013a_01.png",
+   "e_Girl013a_02.png",
+   "e_Girl013a_03.png",
+   "girl013a_jueselinshi.png",
+   "girl013a_texiao.png",
+   "sp_girl013a.png",
+   "sp_girl013a_a.png",
+   "sp_girl013a_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl013a_gacha",
+  "group": "Hero",
+  "sub": "Girl013a",
+  "charName": "sp_girl013a_gacha",
+  "costumeName": "sp_girl013a_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl013a/sp_girl013a_gacha.json",
+  "texturePages": [
+   "e_Girl013a_01.png",
+   "e_Girl013a_02.png",
+   "e_Girl013a_03.png",
+   "girl013a_jueselinshi.png",
+   "girl013a_texiao.png",
+   "sp_girl013a.png",
+   "sp_girl013a_a.png",
+   "sp_girl013a_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl013b",
+  "group": "Hero",
+  "sub": "Girl013b",
+  "charName": "sp_girl013b",
+  "costumeName": "sp_girl013b",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl013b/sp_girl013b.json",
+  "texturePages": [
+   "Girl013b_01.png",
+   "sp_girl013b.png",
+   "sp_girl013b_a.png",
+   "sp_girl013b_gacha.png",
+   "sp_girl013b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl013b_02",
+  "group": "Hero",
+  "sub": "Girl013b_02",
+  "charName": "sp_girl013b_02",
+  "costumeName": "sp_girl013b_02",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl013b_02/sp_girl013b_02.json",
+  "texturePages": [
+   "sp_girl013b_02.png",
+   "sp_girl013b_02_a.png",
+   "sp_girl013b_02_gacha.png",
+   "sp_girl013b_02_gacha_a.png",
+   "tryGirl_girl013b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl013b_02_a",
+  "group": "Hero",
+  "sub": "Girl013b_02",
+  "charName": "sp_girl013b_02_a",
+  "costumeName": "sp_girl013b_02_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl013b_02/sp_girl013b_02_a.json",
+  "texturePages": [
+   "sp_girl013b_02.png",
+   "sp_girl013b_02_a.png",
+   "sp_girl013b_02_gacha.png",
+   "sp_girl013b_02_gacha_a.png",
+   "tryGirl_girl013b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl013b_02_gacha",
+  "group": "Hero",
+  "sub": "Girl013b_02",
+  "charName": "sp_girl013b_02_gacha",
+  "costumeName": "sp_girl013b_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl013b_02/sp_girl013b_02_gacha.json",
+  "texturePages": [
+   "sp_girl013b_02.png",
+   "sp_girl013b_02_a.png",
+   "sp_girl013b_02_gacha.png",
+   "sp_girl013b_02_gacha_a.png",
+   "tryGirl_girl013b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl013b_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl013b_02",
+  "charName": "sp_girl013b_02_gacha_a",
+  "costumeName": "sp_girl013b_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl013b_02/sp_girl013b_02_gacha_a.json",
+  "texturePages": [
+   "sp_girl013b_02.png",
+   "sp_girl013b_02_a.png",
+   "sp_girl013b_02_gacha.png",
+   "sp_girl013b_02_gacha_a.png",
+   "tryGirl_girl013b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl013b_03_gacha",
+  "group": "Hero",
+  "sub": "Girl013b_03",
+  "charName": "sp_girl013b_03_gacha",
+  "costumeName": "sp_girl013b_03_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl013b_03/sp_girl013b_03_gacha.json",
+  "texturePages": [
+   "sp_Girl013b_01.png",
+   "sp_Girl013b_02.png",
+   "sp_Girl013b_03.png",
+   "sp_Girl013b_04.png",
+   "sp_Girl013b_05.png",
+   "sp_Girl013b_06.png",
+   "sp_Girl013b_07.png",
+   "sp_girl013b_03_gacha.png",
+   "sp_girl013b_03_gacha_a.png",
+   "tryGirl_girl013b_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl013b_03_gacha_a",
+  "group": "Hero",
+  "sub": "Girl013b_03",
+  "charName": "sp_girl013b_03_gacha_a",
+  "costumeName": "sp_girl013b_03_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl013b_03/sp_girl013b_03_gacha_a.json",
+  "texturePages": [
+   "sp_Girl013b_01.png",
+   "sp_Girl013b_02.png",
+   "sp_Girl013b_03.png",
+   "sp_Girl013b_04.png",
+   "sp_Girl013b_05.png",
+   "sp_Girl013b_06.png",
+   "sp_Girl013b_07.png",
+   "sp_girl013b_03_gacha.png",
+   "sp_girl013b_03_gacha_a.png",
+   "tryGirl_girl013b_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl013b_a",
+  "group": "Hero",
+  "sub": "Girl013b",
+  "charName": "sp_girl013b_a",
+  "costumeName": "sp_girl013b_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl013b/sp_girl013b_a.json",
+  "texturePages": [
+   "Girl013b_01.png",
+   "sp_girl013b.png",
+   "sp_girl013b_a.png",
+   "sp_girl013b_gacha.png",
+   "sp_girl013b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl013b_gacha",
+  "group": "Hero",
+  "sub": "Girl013b",
+  "charName": "sp_girl013b_gacha",
+  "costumeName": "sp_girl013b_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl013b/sp_girl013b_gacha.json",
+  "texturePages": [
+   "Girl013b_01.png",
+   "sp_girl013b.png",
+   "sp_girl013b_a.png",
+   "sp_girl013b_gacha.png",
+   "sp_girl013b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl013b_gacha_a",
+  "group": "Hero",
+  "sub": "Girl013b",
+  "charName": "sp_girl013b_gacha_a",
+  "costumeName": "sp_girl013b_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl013b/sp_girl013b_gacha_a.json",
+  "texturePages": [
+   "Girl013b_01.png",
+   "sp_girl013b.png",
+   "sp_girl013b_a.png",
+   "sp_girl013b_gacha.png",
+   "sp_girl013b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl014",
+  "group": "Hero",
+  "sub": "Girl014",
+  "charName": "sp_girl014",
+  "costumeName": "sp_girl014",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl014/sp_girl014.json",
+  "texturePages": [
+   "sp_girl014.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl014_01",
+  "group": "Hero",
+  "sub": "Girl014_01",
+  "charName": "sp_girl014_01",
+  "costumeName": "sp_girl014_01",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl014_01/sp_girl014_01.json",
+  "texturePages": [
+   "sp_girl014_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl014a",
+  "group": "Hero",
+  "sub": "Girl014a",
+  "charName": "sp_girl014a",
+  "costumeName": "sp_girl014a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl014a/sp_girl014a.json",
+  "texturePages": [
+   "sp_girl001a_gacha_01.png",
+   "sp_girl001a_gacha_02.png",
+   "sp_girl001a_gacha_03.png",
+   "sp_girl001a_gacha_04.png",
+   "sp_girl014a.png",
+   "sp_girl014a_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl014a_03",
+  "group": "Hero",
+  "sub": "Girl014a_03",
+  "charName": "sp_girl014a_03",
+  "costumeName": "sp_girl014a_03",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl014a_03/sp_girl014a_03.json",
+  "texturePages": [
+   "sp_girl014a_03-ditu.png",
+   "sp_girl014a_03-ren.png",
+   "sp_girl014a_03-zhongjing.png",
+   "sp_girl014a_03.png",
+   "sp_girl014a_03_a.png",
+   "sp_girl014a_03_gacha.png",
+   "sp_girl014a_03_gacha_a.png",
+   "tryGirl_014a_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl014a_03_a",
+  "group": "Hero",
+  "sub": "Girl014a_03",
+  "charName": "sp_girl014a_03_a",
+  "costumeName": "sp_girl014a_03_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl014a_03/sp_girl014a_03_a.json",
+  "texturePages": [
+   "sp_girl014a_03-ditu.png",
+   "sp_girl014a_03-ren.png",
+   "sp_girl014a_03-zhongjing.png",
+   "sp_girl014a_03.png",
+   "sp_girl014a_03_a.png",
+   "sp_girl014a_03_gacha.png",
+   "sp_girl014a_03_gacha_a.png",
+   "tryGirl_014a_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl014a_03_gacha",
+  "group": "Hero",
+  "sub": "Girl014a_03",
+  "charName": "sp_girl014a_03_gacha",
+  "costumeName": "sp_girl014a_03_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl014a_03/sp_girl014a_03_gacha.json",
+  "texturePages": [
+   "sp_girl014a_03-ditu.png",
+   "sp_girl014a_03-ren.png",
+   "sp_girl014a_03-zhongjing.png",
+   "sp_girl014a_03.png",
+   "sp_girl014a_03_a.png",
+   "sp_girl014a_03_gacha.png",
+   "sp_girl014a_03_gacha_a.png",
+   "tryGirl_014a_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl014a_03_gacha_a",
+  "group": "Hero",
+  "sub": "Girl014a_03",
+  "charName": "sp_girl014a_03_gacha_a",
+  "costumeName": "sp_girl014a_03_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl014a_03/sp_girl014a_03_gacha_a.json",
+  "texturePages": [
+   "sp_girl014a_03-ditu.png",
+   "sp_girl014a_03-ren.png",
+   "sp_girl014a_03-zhongjing.png",
+   "sp_girl014a_03.png",
+   "sp_girl014a_03_a.png",
+   "sp_girl014a_03_gacha.png",
+   "sp_girl014a_03_gacha_a.png",
+   "tryGirl_014a_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl014a_04_gacha",
+  "group": "Hero",
+  "sub": "Girl014a_04",
+  "charName": "sp_girl014a_04_gacha",
+  "costumeName": "sp_girl014a_04_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl014a_04/sp_girl014a_04_gacha.json",
+  "texturePages": [
+   "sp_girl014a_04_gacha.png",
+   "sp_girl014a_04_gacha_a.png",
+   "tryGirl_014a_04_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl014a_04_gacha_a",
+  "group": "Hero",
+  "sub": "Girl014a_04",
+  "charName": "sp_girl014a_04_gacha_a",
+  "costumeName": "sp_girl014a_04_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl014a_04/sp_girl014a_04_gacha_a.json",
+  "texturePages": [
+   "sp_girl014a_04_gacha.png",
+   "sp_girl014a_04_gacha_a.png",
+   "tryGirl_014a_04_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl014a_gacha",
+  "group": "Hero",
+  "sub": "Girl014a",
+  "charName": "sp_girl014a_gacha",
+  "costumeName": "sp_girl014a_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl014a/sp_girl014a_gacha.json",
+  "texturePages": [
+   "sp_girl001a_gacha_01.png",
+   "sp_girl001a_gacha_02.png",
+   "sp_girl001a_gacha_03.png",
+   "sp_girl001a_gacha_04.png",
+   "sp_girl014a.png",
+   "sp_girl014a_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl014b",
+  "group": "Hero",
+  "sub": "Girl014b",
+  "charName": "sp_girl014b",
+  "costumeName": "sp_girl014b",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl014b/sp_girl014b.json",
+  "texturePages": [
+   "sp_girl014b.png",
+   "sp_girl014b_a.png",
+   "sp_girl014b_gacha.png",
+   "sp_girl014b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl014b_02_gacha",
+  "group": "Hero",
+  "sub": "Girl014b_02",
+  "charName": "sp_girl014b_02_gacha",
+  "costumeName": "sp_girl014b_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl014b_02/sp_girl014b_02_gacha.json",
+  "texturePages": [
+   "sp_girl014b_02_gacha.png",
+   "sp_girl014b_02_gacha_a.png",
+   "tryGirl_014b_02_01_Bg.png",
+   "tryGirl_014b_02_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl014b_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl014b_02",
+  "charName": "sp_girl014b_02_gacha_a",
+  "costumeName": "sp_girl014b_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl014b_02/sp_girl014b_02_gacha_a.json",
+  "texturePages": [
+   "sp_girl014b_02_gacha.png",
+   "sp_girl014b_02_gacha_a.png",
+   "tryGirl_014b_02_01_Bg.png",
+   "tryGirl_014b_02_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl014b_03_gacha",
+  "group": "Hero",
+  "sub": "Girl014b_03",
+  "charName": "sp_girl014b_03_gacha",
+  "costumeName": "sp_girl014b_03_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl014b_03/sp_girl014b_03_gacha.json",
+  "texturePages": [
+   "girl014b_03_Bg.png",
+   "sp_girl014b_03_gacha.png",
+   "sp_girl014b_03_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl014b_03_gacha_a",
+  "group": "Hero",
+  "sub": "Girl014b_03",
+  "charName": "sp_girl014b_03_gacha_a",
+  "costumeName": "sp_girl014b_03_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl014b_03/sp_girl014b_03_gacha_a.json",
+  "texturePages": [
+   "girl014b_03_Bg.png",
+   "sp_girl014b_03_gacha.png",
+   "sp_girl014b_03_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl014b_a",
+  "group": "Hero",
+  "sub": "Girl014b",
+  "charName": "sp_girl014b_a",
+  "costumeName": "sp_girl014b_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl014b/sp_girl014b_a.json",
+  "texturePages": [
+   "sp_girl014b.png",
+   "sp_girl014b_a.png",
+   "sp_girl014b_gacha.png",
+   "sp_girl014b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl014b_gacha",
+  "group": "Hero",
+  "sub": "Girl014b",
+  "charName": "sp_girl014b_gacha",
+  "costumeName": "sp_girl014b_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl014b/sp_girl014b_gacha.json",
+  "texturePages": [
+   "sp_girl014b.png",
+   "sp_girl014b_a.png",
+   "sp_girl014b_gacha.png",
+   "sp_girl014b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl014b_gacha_a",
+  "group": "Hero",
+  "sub": "Girl014b",
+  "charName": "sp_girl014b_gacha_a",
+  "costumeName": "sp_girl014b_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl014b/sp_girl014b_gacha_a.json",
+  "texturePages": [
+   "sp_girl014b.png",
+   "sp_girl014b_a.png",
+   "sp_girl014b_gacha.png",
+   "sp_girl014b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl015",
+  "group": "Hero",
+  "sub": "Girl015",
+  "charName": "sp_girl015",
+  "costumeName": "sp_girl015",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015/sp_girl015.json",
+  "texturePages": [
+   "e_sp_girl015_01_t.png",
+   "sp_girl015.png",
+   "sp_girl015_a.png",
+   "sp_girl015_gacha.png",
+   "sp_girl015_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl015_01",
+  "group": "Hero",
+  "sub": "Girl015_01",
+  "charName": "sp_girl015_01",
+  "costumeName": "sp_girl015_01",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015_01/sp_girl015_01.json",
+  "texturePages": [
+   "sp_girl015_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl015_02_gacha",
+  "group": "Hero",
+  "sub": "Girl015_02",
+  "charName": "sp_girl015_02_gacha",
+  "costumeName": "sp_girl015_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015_02/sp_girl015_02_gacha.json",
+  "texturePages": [
+   "sp_girl015_02_gacha.png",
+   "tryGirl_015_02_01.png",
+   "tryGirl_015_02_02.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl015_04_gacha",
+  "group": "Hero",
+  "sub": "Girl015_04",
+  "charName": "sp_girl015_04_gacha",
+  "costumeName": "sp_girl015_04_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015_04/sp_girl015_04_gacha.json",
+  "texturePages": [
+   "sp_girl015_04_gacha.png",
+   "tryGirl_015_04_bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl015_a",
+  "group": "Hero",
+  "sub": "Girl015",
+  "charName": "sp_girl015_a",
+  "costumeName": "sp_girl015_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015/sp_girl015_a.json",
+  "texturePages": [
+   "e_sp_girl015_01_t.png",
+   "sp_girl015.png",
+   "sp_girl015_a.png",
+   "sp_girl015_gacha.png",
+   "sp_girl015_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl015_gacha",
+  "group": "Hero",
+  "sub": "Girl015",
+  "charName": "sp_girl015_gacha",
+  "costumeName": "sp_girl015_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015/sp_girl015_gacha.json",
+  "texturePages": [
+   "e_sp_girl015_01_t.png",
+   "sp_girl015.png",
+   "sp_girl015_a.png",
+   "sp_girl015_gacha.png",
+   "sp_girl015_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl015_gacha_a",
+  "group": "Hero",
+  "sub": "Girl015",
+  "charName": "sp_girl015_gacha_a",
+  "costumeName": "sp_girl015_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015/sp_girl015_gacha_a.json",
+  "texturePages": [
+   "e_sp_girl015_01_t.png",
+   "sp_girl015.png",
+   "sp_girl015_a.png",
+   "sp_girl015_gacha.png",
+   "sp_girl015_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl015a",
+  "group": "Hero",
+  "sub": "Girl015a",
+  "charName": "sp_girl015a",
+  "costumeName": "sp_girl015a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015a/sp_girl015a.json",
+  "texturePages": [
+   "sp_girl015a.png",
+   "sp_girl015a_a.png",
+   "sp_girl015a_gacha.png",
+   "sp_girl015a_gacha_a.png",
+   "sp_girl015alinshi_01.png",
+   "sp_girl015alinshi_02.png",
+   "sp_girl015alinshi_03.png",
+   "sp_girl015alinshi_04.png",
+   "sp_girl015alinshi_05.png",
+   "sp_girl015alinshi_06.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl015a_04_gacha",
+  "group": "Hero",
+  "sub": "Girl015a_04",
+  "charName": "sp_girl015a_04_gacha",
+  "costumeName": "sp_girl015a_04_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015a_04/sp_girl015a_04_gacha.json",
+  "texturePages": [
+   "sp_girl015a_04_gacha.png",
+   "sp_girl015a_04_gacha_a.png",
+   "tryGirl_015a_04_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl015a_04_gacha_a",
+  "group": "Hero",
+  "sub": "Girl015a_04",
+  "charName": "sp_girl015a_04_gacha_a",
+  "costumeName": "sp_girl015a_04_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015a_04/sp_girl015a_04_gacha_a.json",
+  "texturePages": [
+   "sp_girl015a_04_gacha.png",
+   "sp_girl015a_04_gacha_a.png",
+   "tryGirl_015a_04_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl015a_a",
+  "group": "Hero",
+  "sub": "Girl015a",
+  "charName": "sp_girl015a_a",
+  "costumeName": "sp_girl015a_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015a/sp_girl015a_a.json",
+  "texturePages": [
+   "sp_girl015a.png",
+   "sp_girl015a_a.png",
+   "sp_girl015a_gacha.png",
+   "sp_girl015a_gacha_a.png",
+   "sp_girl015alinshi_01.png",
+   "sp_girl015alinshi_02.png",
+   "sp_girl015alinshi_03.png",
+   "sp_girl015alinshi_04.png",
+   "sp_girl015alinshi_05.png",
+   "sp_girl015alinshi_06.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl015a_gacha",
+  "group": "Hero",
+  "sub": "Girl015a",
+  "charName": "sp_girl015a_gacha",
+  "costumeName": "sp_girl015a_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015a/sp_girl015a_gacha.json",
+  "texturePages": [
+   "sp_girl015a.png",
+   "sp_girl015a_a.png",
+   "sp_girl015a_gacha.png",
+   "sp_girl015a_gacha_a.png",
+   "sp_girl015alinshi_01.png",
+   "sp_girl015alinshi_02.png",
+   "sp_girl015alinshi_03.png",
+   "sp_girl015alinshi_04.png",
+   "sp_girl015alinshi_05.png",
+   "sp_girl015alinshi_06.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl015a_gacha_a",
+  "group": "Hero",
+  "sub": "Girl015a",
+  "charName": "sp_girl015a_gacha_a",
+  "costumeName": "sp_girl015a_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015a/sp_girl015a_gacha_a.json",
+  "texturePages": [
+   "sp_girl015a.png",
+   "sp_girl015a_a.png",
+   "sp_girl015a_gacha.png",
+   "sp_girl015a_gacha_a.png",
+   "sp_girl015alinshi_01.png",
+   "sp_girl015alinshi_02.png",
+   "sp_girl015alinshi_03.png",
+   "sp_girl015alinshi_04.png",
+   "sp_girl015alinshi_05.png",
+   "sp_girl015alinshi_06.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl015b",
+  "group": "Hero",
+  "sub": "Girl015b",
+  "charName": "sp_girl015b",
+  "costumeName": "sp_girl015b",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015b/sp_girl015b.json",
+  "texturePages": [
+   "sp_girl015b.png",
+   "sp_girl015b_a.png",
+   "sp_girl015b_gacha.png",
+   "sp_girl015b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl015b_02_gacha",
+  "group": "Hero",
+  "sub": "Girl015b_02",
+  "charName": "sp_girl015b_02_gacha",
+  "costumeName": "sp_girl015b_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015b_02/sp_girl015b_02_gacha.json",
+  "texturePages": [
+   "sp_girl015b_02_gacha.png",
+   "sp_girl015b_02_gacha_a.png",
+   "tryGirl_015b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl015b_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl015b_02",
+  "charName": "sp_girl015b_02_gacha_a",
+  "costumeName": "sp_girl015b_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015b_02/sp_girl015b_02_gacha_a.json",
+  "texturePages": [
+   "sp_girl015b_02_gacha.png",
+   "sp_girl015b_02_gacha_a.png",
+   "tryGirl_015b_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl015b_03_gacha",
+  "group": "Hero",
+  "sub": "Girl015b_03",
+  "charName": "sp_girl015b_03_gacha",
+  "costumeName": "sp_girl015b_03_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015b_03/sp_girl015b_03_gacha.json",
+  "texturePages": [
+   "sp_girl015b_03_gacha.png",
+   "sp_girl015b_03_gacha_a.png",
+   "tryGirl_girl015b_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl015b_03_gacha_a",
+  "group": "Hero",
+  "sub": "Girl015b_03",
+  "charName": "sp_girl015b_03_gacha_a",
+  "costumeName": "sp_girl015b_03_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015b_03/sp_girl015b_03_gacha_a.json",
+  "texturePages": [
+   "sp_girl015b_03_gacha.png",
+   "sp_girl015b_03_gacha_a.png",
+   "tryGirl_girl015b_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl015b_a",
+  "group": "Hero",
+  "sub": "Girl015b",
+  "charName": "sp_girl015b_a",
+  "costumeName": "sp_girl015b_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015b/sp_girl015b_a.json",
+  "texturePages": [
+   "sp_girl015b.png",
+   "sp_girl015b_a.png",
+   "sp_girl015b_gacha.png",
+   "sp_girl015b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl015b_gacha",
+  "group": "Hero",
+  "sub": "Girl015b",
+  "charName": "sp_girl015b_gacha",
+  "costumeName": "sp_girl015b_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015b/sp_girl015b_gacha.json",
+  "texturePages": [
+   "sp_girl015b.png",
+   "sp_girl015b_a.png",
+   "sp_girl015b_gacha.png",
+   "sp_girl015b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl015b_gacha_a",
+  "group": "Hero",
+  "sub": "Girl015b",
+  "charName": "sp_girl015b_gacha_a",
+  "costumeName": "sp_girl015b_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl015b/sp_girl015b_gacha_a.json",
+  "texturePages": [
+   "sp_girl015b.png",
+   "sp_girl015b_a.png",
+   "sp_girl015b_gacha.png",
+   "sp_girl015b_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl016",
+  "group": "Hero",
+  "sub": "Girl016",
+  "charName": "sp_girl016",
+  "costumeName": "sp_girl016",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl016/sp_girl016.json",
+  "texturePages": [
+   "sp_girl016.png",
+   "sp_girl016_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl016_01",
+  "group": "Hero",
+  "sub": "Girl016_01",
+  "charName": "sp_girl016_01",
+  "costumeName": "sp_girl016_01",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl016_01/sp_girl016_01.json",
+  "texturePages": [
+   "sp_girl016_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl016_02_gacha",
+  "group": "Hero",
+  "sub": "Girl016_02",
+  "charName": "sp_girl016_02_gacha",
+  "costumeName": "sp_girl016_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl016_02/sp_girl016_02_gacha.json",
+  "texturePages": [
+   "sp_girl016_02_gacha.png",
+   "tryGirl_016_02_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl016_03",
+  "group": "Hero",
+  "sub": "Girl016_03",
+  "charName": "sp_girl016_03",
+  "costumeName": "sp_girl016_03",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl016_03/sp_girl016_03.json",
+  "texturePages": [
+   "sp_girl016_03.png",
+   "sp_girl016_03_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl016_03_a",
+  "group": "Hero",
+  "sub": "Girl016_03",
+  "charName": "sp_girl016_03_a",
+  "costumeName": "sp_girl016_03_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl016_03/sp_girl016_03_a.json",
+  "texturePages": [
+   "sp_girl016_03.png",
+   "sp_girl016_03_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl016_04_a_gacha",
+  "group": "Hero",
+  "sub": "Girl016_04",
+  "charName": "sp_girl016_04_a_gacha",
+  "costumeName": "sp_girl016_04_a_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl016_04/sp_girl016_04_a_gacha.json",
+  "texturePages": [
+   "sp_girl016_04_a_gacha.png",
+   "sp_girl016_04_gacha.png",
+   "tryGirl_016_04_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl016_04_gacha",
+  "group": "Hero",
+  "sub": "Girl016_04",
+  "charName": "sp_girl016_04_gacha",
+  "costumeName": "sp_girl016_04_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl016_04/sp_girl016_04_gacha.json",
+  "texturePages": [
+   "sp_girl016_04_a_gacha.png",
+   "sp_girl016_04_gacha.png",
+   "tryGirl_016_04_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl016_gacha",
+  "group": "Hero",
+  "sub": "Girl016",
+  "charName": "sp_girl016_gacha",
+  "costumeName": "sp_girl016_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl016/sp_girl016_gacha.json",
+  "texturePages": [
+   "sp_girl016.png",
+   "sp_girl016_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl017",
+  "group": "Hero",
+  "sub": "Girl017",
+  "charName": "sp_girl017",
+  "costumeName": "sp_girl017",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl017/sp_girl017.json",
+  "texturePages": [
+   "sp_girl017.png",
+   "sp_girl017_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl017_01",
+  "group": "Hero",
+  "sub": "Girl017_01",
+  "charName": "sp_girl017_01",
+  "costumeName": "sp_girl017_01",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl017_01/sp_girl017_01.json",
+  "texturePages": [
+   "sp_girl017_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl017_03",
+  "group": "Hero",
+  "sub": "Girl017_03",
+  "charName": "sp_girl017_03",
+  "costumeName": "sp_girl017_03",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl017_03/sp_girl017_03.json",
+  "texturePages": [
+   "sp_girl017_03.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl017_gacha",
+  "group": "Hero",
+  "sub": "Girl017",
+  "charName": "sp_girl017_gacha",
+  "costumeName": "sp_girl017_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl017/sp_girl017_gacha.json",
+  "texturePages": [
+   "sp_girl017.png",
+   "sp_girl017_gacha.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl017a",
+  "group": "Hero",
+  "sub": "Girl017a",
+  "charName": "sp_girl017a",
+  "costumeName": "sp_girl017a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl017a/sp_girl017a.json",
+  "texturePages": [
+   "e_Girl017a_spine_z01_t.png",
+   "e_Girl017a_spine_z02_t.png",
+   "e_Girl017a_spine_z03_t.png",
+   "sp_girl017a.png",
+   "sp_girl017a_a.png",
+   "sp_girl017a_gacha.png",
+   "sp_girl017a_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl017a_02_gacha",
+  "group": "Hero",
+  "sub": "Girl017a_02",
+  "charName": "sp_girl017a_02_gacha",
+  "costumeName": "sp_girl017a_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl017a_02/sp_girl017a_02_gacha.json",
+  "texturePages": [
+   "sp_girl017a_02_gacha.png",
+   "sp_girl017a_02_gacha_a.png",
+   "tryGirl_017a_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl017a_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl017a_02",
+  "charName": "sp_girl017a_02_gacha_a",
+  "costumeName": "sp_girl017a_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl017a_02/sp_girl017a_02_gacha_a.json",
+  "texturePages": [
+   "sp_girl017a_02_gacha.png",
+   "sp_girl017a_02_gacha_a.png",
+   "tryGirl_017a_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl017a_a",
+  "group": "Hero",
+  "sub": "Girl017a",
+  "charName": "sp_girl017a_a",
+  "costumeName": "sp_girl017a_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl017a/sp_girl017a_a.json",
+  "texturePages": [
+   "e_Girl017a_spine_z01_t.png",
+   "e_Girl017a_spine_z02_t.png",
+   "e_Girl017a_spine_z03_t.png",
+   "sp_girl017a.png",
+   "sp_girl017a_a.png",
+   "sp_girl017a_gacha.png",
+   "sp_girl017a_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl017a_gacha",
+  "group": "Hero",
+  "sub": "Girl017a",
+  "charName": "sp_girl017a_gacha",
+  "costumeName": "sp_girl017a_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl017a/sp_girl017a_gacha.json",
+  "texturePages": [
+   "e_Girl017a_spine_z01_t.png",
+   "e_Girl017a_spine_z02_t.png",
+   "e_Girl017a_spine_z03_t.png",
+   "sp_girl017a.png",
+   "sp_girl017a_a.png",
+   "sp_girl017a_gacha.png",
+   "sp_girl017a_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl017a_gacha_a",
+  "group": "Hero",
+  "sub": "Girl017a",
+  "charName": "sp_girl017a_gacha_a",
+  "costumeName": "sp_girl017a_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl017a/sp_girl017a_gacha_a.json",
+  "texturePages": [
+   "e_Girl017a_spine_z01_t.png",
+   "e_Girl017a_spine_z02_t.png",
+   "e_Girl017a_spine_z03_t.png",
+   "sp_girl017a.png",
+   "sp_girl017a_a.png",
+   "sp_girl017a_gacha.png",
+   "sp_girl017a_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl018",
+  "group": "Hero",
+  "sub": "Girl018",
+  "charName": "sp_girl018",
+  "costumeName": "sp_girl018",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl018/sp_girl018.json",
+  "texturePages": [
+   "sp_girl018.png",
+   "sp_girl018_a.png",
+   "sp_girl018_gacha.png",
+   "sp_girl018_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl018_01",
+  "group": "Hero",
+  "sub": "Girl018_01",
+  "charName": "sp_girl018_01",
+  "costumeName": "sp_girl018_01",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl018_01/sp_girl018_01.json",
+  "texturePages": [
+   "sp_girl018_01.png",
+   "sp_girl018_01_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl018_01_a",
+  "group": "Hero",
+  "sub": "Girl018_01",
+  "charName": "sp_girl018_01_a",
+  "costumeName": "sp_girl018_01_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl018_01/sp_girl018_01_a.json",
+  "texturePages": [
+   "sp_girl018_01.png",
+   "sp_girl018_01_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl018_02_gacha",
+  "group": "Hero",
+  "sub": "Girl018_02",
+  "charName": "sp_girl018_02_gacha",
+  "costumeName": "sp_girl018_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl018_02/sp_girl018_02_gacha.json",
+  "texturePages": [
+   "sp_girl018_02_gacha.png",
+   "sp_girl018_02_gacha_a.png",
+   "tryGirl_018_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl018_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl018_02",
+  "charName": "sp_girl018_02_gacha_a",
+  "costumeName": "sp_girl018_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl018_02/sp_girl018_02_gacha_a.json",
+  "texturePages": [
+   "sp_girl018_02_gacha.png",
+   "sp_girl018_02_gacha_a.png",
+   "tryGirl_018_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl018_03_gacha",
+  "group": "Hero",
+  "sub": "Girl018_03",
+  "charName": "sp_girl018_03_gacha",
+  "costumeName": "sp_girl018_03_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl018_03/sp_girl018_03_gacha.json",
+  "texturePages": [
+   "sp_girl018_03_gacha.png",
+   "sp_girl018_03_gacha_a.png",
+   "tryGirl_018_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl018_03_gacha_a",
+  "group": "Hero",
+  "sub": "Girl018_03",
+  "charName": "sp_girl018_03_gacha_a",
+  "costumeName": "sp_girl018_03_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl018_03/sp_girl018_03_gacha_a.json",
+  "texturePages": [
+   "sp_girl018_03_gacha.png",
+   "sp_girl018_03_gacha_a.png",
+   "tryGirl_018_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl018_a",
+  "group": "Hero",
+  "sub": "Girl018",
+  "charName": "sp_girl018_a",
+  "costumeName": "sp_girl018_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl018/sp_girl018_a.json",
+  "texturePages": [
+   "sp_girl018.png",
+   "sp_girl018_a.png",
+   "sp_girl018_gacha.png",
+   "sp_girl018_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl018_gacha",
+  "group": "Hero",
+  "sub": "Girl018",
+  "charName": "sp_girl018_gacha",
+  "costumeName": "sp_girl018_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl018/sp_girl018_gacha.json",
+  "texturePages": [
+   "sp_girl018.png",
+   "sp_girl018_a.png",
+   "sp_girl018_gacha.png",
+   "sp_girl018_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl018_gacha_a",
+  "group": "Hero",
+  "sub": "Girl018",
+  "charName": "sp_girl018_gacha_a",
+  "costumeName": "sp_girl018_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl018/sp_girl018_gacha_a.json",
+  "texturePages": [
+   "sp_girl018.png",
+   "sp_girl018_a.png",
+   "sp_girl018_gacha.png",
+   "sp_girl018_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl018a",
+  "group": "Hero",
+  "sub": "Girl018a",
+  "charName": "sp_girl018a",
+  "costumeName": "sp_girl018a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl018a/sp_girl018a.json",
+  "texturePages": [
+   "sp_girl018a.png",
+   "sp_girl018a_a.png",
+   "sp_girl018a_gacha.png",
+   "sp_girl018a_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl018a_02_gacha",
+  "group": "Hero",
+  "sub": "Girl018a_02",
+  "charName": "sp_girl018a_02_gacha",
+  "costumeName": "sp_girl018a_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl018a_02/sp_girl018a_02_gacha.json",
+  "texturePages": [
+   "girl018a_02_Bg.png",
+   "sp_girl018a_02_gacha.png",
+   "sp_girl018a_02_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl018a_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl018a_02",
+  "charName": "sp_girl018a_02_gacha_a",
+  "costumeName": "sp_girl018a_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl018a_02/sp_girl018a_02_gacha_a.json",
+  "texturePages": [
+   "girl018a_02_Bg.png",
+   "sp_girl018a_02_gacha.png",
+   "sp_girl018a_02_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl018a_03",
+  "group": "Hero",
+  "sub": "Girl018a_03",
+  "charName": "sp_girl018a_03",
+  "costumeName": "sp_girl018a_03",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl018a_03/sp_girl018a_03.json",
+  "texturePages": [
+   "sp_girl018a_03.png",
+   "sp_girl018a_03_a.png",
+   "sp_girl018a_03_gacha.png",
+   "sp_girl018a_03_gacha_a.png",
+   "sp_girl018a_03gacha_01.png",
+   "sp_girl018a_03gacha_02.png",
+   "sp_girl018a_03gacha_03.png",
+   "tryGirl_girl018a_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl018a_03_a",
+  "group": "Hero",
+  "sub": "Girl018a_03",
+  "charName": "sp_girl018a_03_a",
+  "costumeName": "sp_girl018a_03_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl018a_03/sp_girl018a_03_a.json",
+  "texturePages": [
+   "sp_girl018a_03.png",
+   "sp_girl018a_03_a.png",
+   "sp_girl018a_03_gacha.png",
+   "sp_girl018a_03_gacha_a.png",
+   "sp_girl018a_03gacha_01.png",
+   "sp_girl018a_03gacha_02.png",
+   "sp_girl018a_03gacha_03.png",
+   "tryGirl_girl018a_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl018a_03_gacha",
+  "group": "Hero",
+  "sub": "Girl018a_03",
+  "charName": "sp_girl018a_03_gacha",
+  "costumeName": "sp_girl018a_03_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl018a_03/sp_girl018a_03_gacha.json",
+  "texturePages": [
+   "sp_girl018a_03.png",
+   "sp_girl018a_03_a.png",
+   "sp_girl018a_03_gacha.png",
+   "sp_girl018a_03_gacha_a.png",
+   "sp_girl018a_03gacha_01.png",
+   "sp_girl018a_03gacha_02.png",
+   "sp_girl018a_03gacha_03.png",
+   "tryGirl_girl018a_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl018a_03_gacha_a",
+  "group": "Hero",
+  "sub": "Girl018a_03",
+  "charName": "sp_girl018a_03_gacha_a",
+  "costumeName": "sp_girl018a_03_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl018a_03/sp_girl018a_03_gacha_a.json",
+  "texturePages": [
+   "sp_girl018a_03.png",
+   "sp_girl018a_03_a.png",
+   "sp_girl018a_03_gacha.png",
+   "sp_girl018a_03_gacha_a.png",
+   "sp_girl018a_03gacha_01.png",
+   "sp_girl018a_03gacha_02.png",
+   "sp_girl018a_03gacha_03.png",
+   "tryGirl_girl018a_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl018a_a",
+  "group": "Hero",
+  "sub": "Girl018a",
+  "charName": "sp_girl018a_a",
+  "costumeName": "sp_girl018a_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl018a/sp_girl018a_a.json",
+  "texturePages": [
+   "sp_girl018a.png",
+   "sp_girl018a_a.png",
+   "sp_girl018a_gacha.png",
+   "sp_girl018a_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl018a_gacha",
+  "group": "Hero",
+  "sub": "Girl018a",
+  "charName": "sp_girl018a_gacha",
+  "costumeName": "sp_girl018a_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl018a/sp_girl018a_gacha.json",
+  "texturePages": [
+   "sp_girl018a.png",
+   "sp_girl018a_a.png",
+   "sp_girl018a_gacha.png",
+   "sp_girl018a_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl018a_gacha_a",
+  "group": "Hero",
+  "sub": "Girl018a",
+  "charName": "sp_girl018a_gacha_a",
+  "costumeName": "sp_girl018a_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl018a/sp_girl018a_gacha_a.json",
+  "texturePages": [
+   "sp_girl018a.png",
+   "sp_girl018a_a.png",
+   "sp_girl018a_gacha.png",
+   "sp_girl018a_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl020",
+  "group": "Hero",
+  "sub": "Girl020",
+  "charName": "sp_girl020",
+  "costumeName": "sp_girl020",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl020/sp_girl020.json",
+  "texturePages": [
+   "sp_girl020.png",
+   "sp_girl020_a.png",
+   "sp_girl020_gacha.png",
+   "sp_girl020_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl020_01",
+  "group": "Hero",
+  "sub": "Girl020_01",
+  "charName": "sp_girl020_01",
+  "costumeName": "sp_girl020_01",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl020_01/sp_girl020_01.json",
+  "texturePages": [
+   "sp_girl020_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl020_02_gacha",
+  "group": "Hero",
+  "sub": "Girl020_02",
+  "charName": "sp_girl020_02_gacha",
+  "costumeName": "sp_girl020_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl020_02/sp_girl020_02_gacha.json",
+  "texturePages": [
+   "sp_girl020_02_gacha.png",
+   "sp_girl020_02_gacha_a.png",
+   "tryGirl_020_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl020_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl020_02",
+  "charName": "sp_girl020_02_gacha_a",
+  "costumeName": "sp_girl020_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl020_02/sp_girl020_02_gacha_a.json",
+  "texturePages": [
+   "sp_girl020_02_gacha.png",
+   "sp_girl020_02_gacha_a.png",
+   "tryGirl_020_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl020_03_gacha",
+  "group": "Hero",
+  "sub": "Girl020_03",
+  "charName": "sp_girl020_03_gacha",
+  "costumeName": "sp_girl020_03_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl020_03/sp_girl020_03_gacha.json",
+  "texturePages": [
+   "sp_girl020_03_gacha.png",
+   "sp_girl020_03_gacha_a.png",
+   "tryGirl_020_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl020_03_gacha_a",
+  "group": "Hero",
+  "sub": "Girl020_03",
+  "charName": "sp_girl020_03_gacha_a",
+  "costumeName": "sp_girl020_03_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl020_03/sp_girl020_03_gacha_a.json",
+  "texturePages": [
+   "sp_girl020_03_gacha.png",
+   "sp_girl020_03_gacha_a.png",
+   "tryGirl_020_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl020_a",
+  "group": "Hero",
+  "sub": "Girl020",
+  "charName": "sp_girl020_a",
+  "costumeName": "sp_girl020_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl020/sp_girl020_a.json",
+  "texturePages": [
+   "sp_girl020.png",
+   "sp_girl020_a.png",
+   "sp_girl020_gacha.png",
+   "sp_girl020_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl020_gacha",
+  "group": "Hero",
+  "sub": "Girl020",
+  "charName": "sp_girl020_gacha",
+  "costumeName": "sp_girl020_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl020/sp_girl020_gacha.json",
+  "texturePages": [
+   "sp_girl020.png",
+   "sp_girl020_a.png",
+   "sp_girl020_gacha.png",
+   "sp_girl020_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl020_gacha_a",
+  "group": "Hero",
+  "sub": "Girl020",
+  "charName": "sp_girl020_gacha_a",
+  "costumeName": "sp_girl020_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl020/sp_girl020_gacha_a.json",
+  "texturePages": [
+   "sp_girl020.png",
+   "sp_girl020_a.png",
+   "sp_girl020_gacha.png",
+   "sp_girl020_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl020a",
+  "group": "Hero",
+  "sub": "Girl020a",
+  "charName": "sp_girl020a",
+  "costumeName": "sp_girl020a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl020a/sp_girl020a.json",
+  "texturePages": [
+   "sp_girl020a.png",
+   "sp_girl020a_a.png",
+   "sp_girl020a_gacha.png",
+   "sp_girl020a_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl020a_02_gacha",
+  "group": "Hero",
+  "sub": "Girl020a_02",
+  "charName": "sp_girl020a_02_gacha",
+  "costumeName": "sp_girl020a_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl020a_02/sp_girl020a_02_gacha.json",
+  "texturePages": [
+   "sp_girl020a_02_gacha.png",
+   "sp_girl020a_02_gacha_a.png",
+   "tryGirl_girl020a_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl020a_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl020a_02",
+  "charName": "sp_girl020a_02_gacha_a",
+  "costumeName": "sp_girl020a_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl020a_02/sp_girl020a_02_gacha_a.json",
+  "texturePages": [
+   "sp_girl020a_02_gacha.png",
+   "sp_girl020a_02_gacha_a.png",
+   "tryGirl_girl020a_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl020a_a",
+  "group": "Hero",
+  "sub": "Girl020a",
+  "charName": "sp_girl020a_a",
+  "costumeName": "sp_girl020a_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl020a/sp_girl020a_a.json",
+  "texturePages": [
+   "sp_girl020a.png",
+   "sp_girl020a_a.png",
+   "sp_girl020a_gacha.png",
+   "sp_girl020a_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl020a_gacha",
+  "group": "Hero",
+  "sub": "Girl020a",
+  "charName": "sp_girl020a_gacha",
+  "costumeName": "sp_girl020a_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl020a/sp_girl020a_gacha.json",
+  "texturePages": [
+   "sp_girl020a.png",
+   "sp_girl020a_a.png",
+   "sp_girl020a_gacha.png",
+   "sp_girl020a_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl020a_gacha_a",
+  "group": "Hero",
+  "sub": "Girl020a",
+  "charName": "sp_girl020a_gacha_a",
+  "costumeName": "sp_girl020a_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl020a/sp_girl020a_gacha_a.json",
+  "texturePages": [
+   "sp_girl020a.png",
+   "sp_girl020a_a.png",
+   "sp_girl020a_gacha.png",
+   "sp_girl020a_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl021",
+  "group": "Hero",
+  "sub": "Girl021",
+  "charName": "sp_girl021",
+  "costumeName": "sp_girl021",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl021/sp_girl021.json",
+  "texturePages": [
+   "sp_girl021.png",
+   "sp_girl021_a.png",
+   "sp_girl021_gacha.png",
+   "sp_girl021_gacha_a.png",
+   "sp_girl021alinshi_01.png",
+   "sp_girl021alinshi_02.png",
+   "sp_girl021alinshi_09.png",
+   "sp_girl021alinshi_10.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl021_01",
+  "group": "Hero",
+  "sub": "Girl021_01",
+  "charName": "sp_girl021_01",
+  "costumeName": "sp_girl021_01",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl021_01/sp_girl021_01.json",
+  "texturePages": [
+   "sp_girl021_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl021_02_gacha",
+  "group": "Hero",
+  "sub": "Girl021_02",
+  "charName": "sp_girl021_02_gacha",
+  "costumeName": "sp_girl021_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl021_02/sp_girl021_02_gacha.json",
+  "texturePages": [
+   "sp_girl021_02_gacha.png",
+   "sp_girl021_02_gacha_a.png",
+   "tryGirl_021_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl021_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl021_02",
+  "charName": "sp_girl021_02_gacha_a",
+  "costumeName": "sp_girl021_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl021_02/sp_girl021_02_gacha_a.json",
+  "texturePages": [
+   "sp_girl021_02_gacha.png",
+   "sp_girl021_02_gacha_a.png",
+   "tryGirl_021_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl021_03",
+  "group": "Hero",
+  "sub": "Girl021_03",
+  "charName": "sp_girl021_03",
+  "costumeName": "sp_girl021_03",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl021_03/sp_girl021_03.json",
+  "texturePages": [
+   "sp_girl021_03.png",
+   "sp_girl021_03_a.png",
+   "sp_girl021_03_gacha.png",
+   "sp_girl021_03_gacha_a.png",
+   "tryGirl_girl021_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl021_03_a",
+  "group": "Hero",
+  "sub": "Girl021_03",
+  "charName": "sp_girl021_03_a",
+  "costumeName": "sp_girl021_03_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl021_03/sp_girl021_03_a.json",
+  "texturePages": [
+   "sp_girl021_03.png",
+   "sp_girl021_03_a.png",
+   "sp_girl021_03_gacha.png",
+   "sp_girl021_03_gacha_a.png",
+   "tryGirl_girl021_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl021_03_gacha",
+  "group": "Hero",
+  "sub": "Girl021_03",
+  "charName": "sp_girl021_03_gacha",
+  "costumeName": "sp_girl021_03_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl021_03/sp_girl021_03_gacha.json",
+  "texturePages": [
+   "sp_girl021_03.png",
+   "sp_girl021_03_a.png",
+   "sp_girl021_03_gacha.png",
+   "sp_girl021_03_gacha_a.png",
+   "tryGirl_girl021_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl021_03_gacha_a",
+  "group": "Hero",
+  "sub": "Girl021_03",
+  "charName": "sp_girl021_03_gacha_a",
+  "costumeName": "sp_girl021_03_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl021_03/sp_girl021_03_gacha_a.json",
+  "texturePages": [
+   "sp_girl021_03.png",
+   "sp_girl021_03_a.png",
+   "sp_girl021_03_gacha.png",
+   "sp_girl021_03_gacha_a.png",
+   "tryGirl_girl021_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl021_a",
+  "group": "Hero",
+  "sub": "Girl021",
+  "charName": "sp_girl021_a",
+  "costumeName": "sp_girl021_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl021/sp_girl021_a.json",
+  "texturePages": [
+   "sp_girl021.png",
+   "sp_girl021_a.png",
+   "sp_girl021_gacha.png",
+   "sp_girl021_gacha_a.png",
+   "sp_girl021alinshi_01.png",
+   "sp_girl021alinshi_02.png",
+   "sp_girl021alinshi_09.png",
+   "sp_girl021alinshi_10.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl021_gacha",
+  "group": "Hero",
+  "sub": "Girl021",
+  "charName": "sp_girl021_gacha",
+  "costumeName": "sp_girl021_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl021/sp_girl021_gacha.json",
+  "texturePages": [
+   "sp_girl021.png",
+   "sp_girl021_a.png",
+   "sp_girl021_gacha.png",
+   "sp_girl021_gacha_a.png",
+   "sp_girl021alinshi_01.png",
+   "sp_girl021alinshi_02.png",
+   "sp_girl021alinshi_09.png",
+   "sp_girl021alinshi_10.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl021_gacha_a",
+  "group": "Hero",
+  "sub": "Girl021",
+  "charName": "sp_girl021_gacha_a",
+  "costumeName": "sp_girl021_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl021/sp_girl021_gacha_a.json",
+  "texturePages": [
+   "sp_girl021.png",
+   "sp_girl021_a.png",
+   "sp_girl021_gacha.png",
+   "sp_girl021_gacha_a.png",
+   "sp_girl021alinshi_01.png",
+   "sp_girl021alinshi_02.png",
+   "sp_girl021alinshi_09.png",
+   "sp_girl021alinshi_10.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl022",
+  "group": "Hero",
+  "sub": "Girl022",
+  "charName": "sp_girl022",
+  "costumeName": "sp_girl022",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl022/sp_girl022.json",
+  "texturePages": [
+   "sp_girl022.png",
+   "sp_girl022_a.png",
+   "sp_girl022_gacha.png",
+   "sp_girl022_gacha_a.png",
+   "sp_girl02gacha_01.png",
+   "sp_girl02gacha_02.png",
+   "sp_girl02gacha_03.png",
+   "sp_girl02gacha_04.png",
+   "sp_girl02gacha_05.png",
+   "sp_girl02gacha_06.png",
+   "sp_girl02gacha_07.png",
+   "sp_girl02gacha_10.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl022_01",
+  "group": "Hero",
+  "sub": "Girl022_01",
+  "charName": "sp_girl022_01",
+  "costumeName": "sp_girl022_01",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl022_01/sp_girl022_01.json",
+  "texturePages": [
+   "sp_girl022_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl022_02_gacha",
+  "group": "Hero",
+  "sub": "Girl022_02",
+  "charName": "sp_girl022_02_gacha",
+  "costumeName": "sp_girl022_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl022_02/sp_girl022_02_gacha.json",
+  "texturePages": [
+   "sp_girl022_02_gacha.png",
+   "sp_girl022_02_gacha_a.png",
+   "tryGirl_girl022_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl022_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl022_02",
+  "charName": "sp_girl022_02_gacha_a",
+  "costumeName": "sp_girl022_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl022_02/sp_girl022_02_gacha_a.json",
+  "texturePages": [
+   "sp_girl022_02_gacha.png",
+   "sp_girl022_02_gacha_a.png",
+   "tryGirl_girl022_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl022_a",
+  "group": "Hero",
+  "sub": "Girl022",
+  "charName": "sp_girl022_a",
+  "costumeName": "sp_girl022_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl022/sp_girl022_a.json",
+  "texturePages": [
+   "sp_girl022.png",
+   "sp_girl022_a.png",
+   "sp_girl022_gacha.png",
+   "sp_girl022_gacha_a.png",
+   "sp_girl02gacha_01.png",
+   "sp_girl02gacha_02.png",
+   "sp_girl02gacha_03.png",
+   "sp_girl02gacha_04.png",
+   "sp_girl02gacha_05.png",
+   "sp_girl02gacha_06.png",
+   "sp_girl02gacha_07.png",
+   "sp_girl02gacha_10.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl022_gacha",
+  "group": "Hero",
+  "sub": "Girl022",
+  "charName": "sp_girl022_gacha",
+  "costumeName": "sp_girl022_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl022/sp_girl022_gacha.json",
+  "texturePages": [
+   "sp_girl022.png",
+   "sp_girl022_a.png",
+   "sp_girl022_gacha.png",
+   "sp_girl022_gacha_a.png",
+   "sp_girl02gacha_01.png",
+   "sp_girl02gacha_02.png",
+   "sp_girl02gacha_03.png",
+   "sp_girl02gacha_04.png",
+   "sp_girl02gacha_05.png",
+   "sp_girl02gacha_06.png",
+   "sp_girl02gacha_07.png",
+   "sp_girl02gacha_10.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl022_gacha_a",
+  "group": "Hero",
+  "sub": "Girl022",
+  "charName": "sp_girl022_gacha_a",
+  "costumeName": "sp_girl022_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl022/sp_girl022_gacha_a.json",
+  "texturePages": [
+   "sp_girl022.png",
+   "sp_girl022_a.png",
+   "sp_girl022_gacha.png",
+   "sp_girl022_gacha_a.png",
+   "sp_girl02gacha_01.png",
+   "sp_girl02gacha_02.png",
+   "sp_girl02gacha_03.png",
+   "sp_girl02gacha_04.png",
+   "sp_girl02gacha_05.png",
+   "sp_girl02gacha_06.png",
+   "sp_girl02gacha_07.png",
+   "sp_girl02gacha_10.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl023",
+  "group": "Hero",
+  "sub": "Girl023",
+  "charName": "sp_girl023",
+  "costumeName": "sp_girl023",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl023/sp_girl023.json",
+  "texturePages": [
+   "girl023temp.png",
+   "sp_girl023.png",
+   "sp_girl023_01.png",
+   "sp_girl023_02.png",
+   "sp_girl023_03.png",
+   "sp_girl023_04.png",
+   "sp_girl023_05.png",
+   "sp_girl023_06.png",
+   "sp_girl023_a.png",
+   "sp_girl023_gacha.png",
+   "sp_girl023_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl023_01",
+  "group": "Hero",
+  "sub": "Girl023_01",
+  "charName": "sp_girl023_01",
+  "costumeName": "sp_girl023_01",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl023_01/sp_girl023_01.json",
+  "texturePages": [
+   "sp_girl023_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl023_02_gacha",
+  "group": "Hero",
+  "sub": "Girl023_02",
+  "charName": "sp_girl023_02_gacha",
+  "costumeName": "sp_girl023_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl023_02/sp_girl023_02_gacha.json",
+  "texturePages": [
+   "sp_girl023_02_gacha.png",
+   "sp_girl023_02_gacha_a.png",
+   "tryGirl_girl023_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl023_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl023_02",
+  "charName": "sp_girl023_02_gacha_a",
+  "costumeName": "sp_girl023_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl023_02/sp_girl023_02_gacha_a.json",
+  "texturePages": [
+   "sp_girl023_02_gacha.png",
+   "sp_girl023_02_gacha_a.png",
+   "tryGirl_girl023_02_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl023_03_gacha",
+  "group": "Hero",
+  "sub": "Girl023_03",
+  "charName": "sp_girl023_03_gacha",
+  "costumeName": "sp_girl023_03_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl023_03/sp_girl023_03_gacha.json",
+  "texturePages": [
+   "sp_girl023_03_gacha.png",
+   "sp_girl023_03_gacha_a.png",
+   "tryGirl_girl023_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl023_03_gacha_a",
+  "group": "Hero",
+  "sub": "Girl023_03",
+  "charName": "sp_girl023_03_gacha_a",
+  "costumeName": "sp_girl023_03_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl023_03/sp_girl023_03_gacha_a.json",
+  "texturePages": [
+   "sp_girl023_03_gacha.png",
+   "sp_girl023_03_gacha_a.png",
+   "tryGirl_girl023_03_Bg.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl023_a",
+  "group": "Hero",
+  "sub": "Girl023",
+  "charName": "sp_girl023_a",
+  "costumeName": "sp_girl023_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl023/sp_girl023_a.json",
+  "texturePages": [
+   "girl023temp.png",
+   "sp_girl023.png",
+   "sp_girl023_01.png",
+   "sp_girl023_02.png",
+   "sp_girl023_03.png",
+   "sp_girl023_04.png",
+   "sp_girl023_05.png",
+   "sp_girl023_06.png",
+   "sp_girl023_a.png",
+   "sp_girl023_gacha.png",
+   "sp_girl023_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl023_gacha",
+  "group": "Hero",
+  "sub": "Girl023",
+  "charName": "sp_girl023_gacha",
+  "costumeName": "sp_girl023_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl023/sp_girl023_gacha.json",
+  "texturePages": [
+   "girl023temp.png",
+   "sp_girl023.png",
+   "sp_girl023_01.png",
+   "sp_girl023_02.png",
+   "sp_girl023_03.png",
+   "sp_girl023_04.png",
+   "sp_girl023_05.png",
+   "sp_girl023_06.png",
+   "sp_girl023_a.png",
+   "sp_girl023_gacha.png",
+   "sp_girl023_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl023_gacha_a",
+  "group": "Hero",
+  "sub": "Girl023",
+  "charName": "sp_girl023_gacha_a",
+  "costumeName": "sp_girl023_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl023/sp_girl023_gacha_a.json",
+  "texturePages": [
+   "girl023temp.png",
+   "sp_girl023.png",
+   "sp_girl023_01.png",
+   "sp_girl023_02.png",
+   "sp_girl023_03.png",
+   "sp_girl023_04.png",
+   "sp_girl023_05.png",
+   "sp_girl023_06.png",
+   "sp_girl023_a.png",
+   "sp_girl023_gacha.png",
+   "sp_girl023_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl024",
+  "group": "Hero",
+  "sub": "Girl024",
+  "charName": "sp_girl024",
+  "costumeName": "sp_girl024",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl024/sp_girl024.json",
+  "texturePages": [
+   "sp_girl024.png",
+   "sp_girl024_a.png",
+   "sp_girl024_a_02.png",
+   "sp_girl024_a_04.png",
+   "sp_girl024_a_05.png",
+   "sp_girl024_a_07.png",
+   "sp_girl024_a_08.png",
+   "sp_girl024_a_09.png",
+   "sp_girl024_a_11.png",
+   "sp_girl024_gacha.png",
+   "sp_girl024_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl024_01",
+  "group": "Hero",
+  "sub": "Girl024_01",
+  "charName": "sp_girl024_01",
+  "costumeName": "sp_girl024_01",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl024_01/sp_girl024_01.json",
+  "texturePages": [
+   "sp_girl024_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl024_02_gacha",
+  "group": "Hero",
+  "sub": "Girl024_02",
+  "charName": "sp_girl024_02_gacha",
+  "costumeName": "sp_girl024_02_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl024_02/sp_girl024_02_gacha.json",
+  "texturePages": [
+   "sp_girl024_02_gacha.png",
+   "sp_girl024_02_gacha_a.png",
+   "tryGirl_girl024_02_Bg.png",
+   "tryGirl_girl024_02_Bg_01.png",
+   "tryGirl_girl024_02_Bg_02.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl024_02_gacha_a",
+  "group": "Hero",
+  "sub": "Girl024_02",
+  "charName": "sp_girl024_02_gacha_a",
+  "costumeName": "sp_girl024_02_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl024_02/sp_girl024_02_gacha_a.json",
+  "texturePages": [
+   "sp_girl024_02_gacha.png",
+   "sp_girl024_02_gacha_a.png",
+   "tryGirl_girl024_02_Bg.png",
+   "tryGirl_girl024_02_Bg_01.png",
+   "tryGirl_girl024_02_Bg_02.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl024_a",
+  "group": "Hero",
+  "sub": "Girl024",
+  "charName": "sp_girl024_a",
+  "costumeName": "sp_girl024_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl024/sp_girl024_a.json",
+  "texturePages": [
+   "sp_girl024.png",
+   "sp_girl024_a.png",
+   "sp_girl024_a_02.png",
+   "sp_girl024_a_04.png",
+   "sp_girl024_a_05.png",
+   "sp_girl024_a_07.png",
+   "sp_girl024_a_08.png",
+   "sp_girl024_a_09.png",
+   "sp_girl024_a_11.png",
+   "sp_girl024_gacha.png",
+   "sp_girl024_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl024_gacha",
+  "group": "Hero",
+  "sub": "Girl024",
+  "charName": "sp_girl024_gacha",
+  "costumeName": "sp_girl024_gacha",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl024/sp_girl024_gacha.json",
+  "texturePages": [
+   "sp_girl024.png",
+   "sp_girl024_a.png",
+   "sp_girl024_a_02.png",
+   "sp_girl024_a_04.png",
+   "sp_girl024_a_05.png",
+   "sp_girl024_a_07.png",
+   "sp_girl024_a_08.png",
+   "sp_girl024_a_09.png",
+   "sp_girl024_a_11.png",
+   "sp_girl024_gacha.png",
+   "sp_girl024_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_girl024_gacha_a",
+  "group": "Hero",
+  "sub": "Girl024",
+  "charName": "sp_girl024_gacha_a",
+  "costumeName": "sp_girl024_gacha_a",
+  "kind": "character",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Hero/Girl024/sp_girl024_gacha_a.json",
+  "texturePages": [
+   "sp_girl024.png",
+   "sp_girl024_a.png",
+   "sp_girl024_a_02.png",
+   "sp_girl024_a_04.png",
+   "sp_girl024_a_05.png",
+   "sp_girl024_a_07.png",
+   "sp_girl024_a_08.png",
+   "sp_girl024_a_09.png",
+   "sp_girl024_a_11.png",
+   "sp_girl024_gacha.png",
+   "sp_girl024_gacha_a.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_mon110",
+  "group": "Monster",
+  "sub": "Mon110",
+  "charName": "sp_mon110",
+  "costumeName": "sp_mon110",
+  "kind": "other",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Monster/Mon110/sp_mon110.json",
+  "texturePages": [
+   "sp_mon110.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_mon505",
+  "group": "Monster",
+  "sub": "Mon505",
+  "charName": "sp_mon505",
+  "costumeName": "sp_mon505",
+  "kind": "other",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Monster/Mon505/sp_mon505.json",
+  "texturePages": [
+   "sp_mon505.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc001",
+  "group": "NPC",
+  "sub": "Npc001",
+  "charName": "sp_npc001",
+  "costumeName": "sp_npc001",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc001/sp_npc001.json",
+  "texturePages": [
+   "sp_npc001.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc002",
+  "group": "Ceshi",
+  "sub": "",
+  "charName": "sp_npc002",
+  "costumeName": "sp_npc002",
+  "kind": "other",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Ceshi/sp_npc002.json",
+  "texturePages": [
+   "sp_npc002.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc002_activity",
+  "group": "NPC",
+  "sub": "Npc002",
+  "charName": "sp_npc002_activity",
+  "costumeName": "sp_npc002_activity",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc002/sp_npc002_activity.json",
+  "texturePages": [
+   "sp_npc002_activity.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc004",
+  "group": "NPC",
+  "sub": "Npc004",
+  "charName": "sp_npc004",
+  "costumeName": "sp_npc004",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc004/sp_npc004.json",
+  "texturePages": [
+   "sp_npc004.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc005",
+  "group": "NPC",
+  "sub": "Npc005",
+  "charName": "sp_npc005",
+  "costumeName": "sp_npc005",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc005/sp_npc005.json",
+  "texturePages": [
+   "sp_npc005.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc006",
+  "group": "NPC",
+  "sub": "Npc006",
+  "charName": "sp_npc006",
+  "costumeName": "sp_npc006",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc006/sp_npc006.json",
+  "texturePages": [
+   "sp_npc006.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc007",
+  "group": "NPC",
+  "sub": "Npc007",
+  "charName": "sp_npc007",
+  "costumeName": "sp_npc007",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc007/sp_npc007.json",
+  "texturePages": [
+   "sp_npc007.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc008",
+  "group": "NPC",
+  "sub": "Npc008",
+  "charName": "sp_npc008",
+  "costumeName": "sp_npc008",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc008/sp_npc008.json",
+  "texturePages": [
+   "sp_npc008.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc009",
+  "group": "NPC",
+  "sub": "Npc009",
+  "charName": "sp_npc009",
+  "costumeName": "sp_npc009",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc009/sp_npc009.json",
+  "texturePages": [
+   "sp_npc009.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc010",
+  "group": "NPC",
+  "sub": "Npc010",
+  "charName": "sp_npc010",
+  "costumeName": "sp_npc010",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc010/sp_npc010.json",
+  "texturePages": [
+   "sp_npc010.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc012",
+  "group": "NPC",
+  "sub": "Npc012",
+  "charName": "sp_npc012",
+  "costumeName": "sp_npc012",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc012/sp_npc012.json",
+  "texturePages": [
+   "sp_npc012.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc015",
+  "group": "NPC",
+  "sub": "Npc015",
+  "charName": "sp_npc015",
+  "costumeName": "sp_npc015",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc015/sp_npc015.json",
+  "texturePages": [
+   "sp_npc015.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc016",
+  "group": "NPC",
+  "sub": "Npc016",
+  "charName": "sp_npc016",
+  "costumeName": "sp_npc016",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc016/sp_npc016.json",
+  "texturePages": [
+   "sp_npc016.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc017",
+  "group": "NPC",
+  "sub": "Npc017",
+  "charName": "sp_npc017",
+  "costumeName": "sp_npc017",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc017/sp_npc017.json",
+  "texturePages": [
+   "sp_npc017.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc018",
+  "group": "NPC",
+  "sub": "Npc018",
+  "charName": "sp_npc018",
+  "costumeName": "sp_npc018",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc018/sp_npc018.json",
+  "texturePages": [
+   "sp_npc018.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc019",
+  "group": "NPC",
+  "sub": "Npc019",
+  "charName": "sp_npc019",
+  "costumeName": "sp_npc019",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc019/sp_npc019.json",
+  "texturePages": [
+   "sp_npc019.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc020",
+  "group": "NPC",
+  "sub": "Npc020",
+  "charName": "sp_npc020",
+  "costumeName": "sp_npc020",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc020/sp_npc020.json",
+  "texturePages": [
+   "sp_npc020.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc021",
+  "group": "NPC",
+  "sub": "Npc021",
+  "charName": "sp_npc021",
+  "costumeName": "sp_npc021",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc021/sp_npc021.json",
+  "texturePages": [
+   "sp_npc021.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc022",
+  "group": "NPC",
+  "sub": "Npc022",
+  "charName": "sp_npc022",
+  "costumeName": "sp_npc022",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc022/sp_npc022.json",
+  "texturePages": [
+   "sp_npc022.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc023",
+  "group": "NPC",
+  "sub": "Npc023",
+  "charName": "sp_npc023",
+  "costumeName": "sp_npc023",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc023/sp_npc023.json",
+  "texturePages": [
+   "sp_npc023.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc024",
+  "group": "NPC",
+  "sub": "Npc024",
+  "charName": "sp_npc024",
+  "costumeName": "sp_npc024",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc024/sp_npc024.json",
+  "texturePages": [
+   "sp_npc024.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc025",
+  "group": "NPC",
+  "sub": "Npc025",
+  "charName": "sp_npc025",
+  "costumeName": "sp_npc025",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc025/sp_npc025.json",
+  "texturePages": [
+   "sp_npc025.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc026",
+  "group": "NPC",
+  "sub": "Npc026",
+  "charName": "sp_npc026",
+  "costumeName": "sp_npc026",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc026/sp_npc026.json",
+  "texturePages": [
+   "sp_npc026.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc027",
+  "group": "NPC",
+  "sub": "Npc027",
+  "charName": "sp_npc027",
+  "costumeName": "sp_npc027",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc027/sp_npc027.json",
+  "texturePages": [
+   "sp_npc027.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc028",
+  "group": "NPC",
+  "sub": "Npc028",
+  "charName": "sp_npc028",
+  "costumeName": "sp_npc028",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc028/sp_npc028.json",
+  "texturePages": [
+   "sp_npc028.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc029",
+  "group": "NPC",
+  "sub": "Npc029",
+  "charName": "sp_npc029",
+  "costumeName": "sp_npc029",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc029/sp_npc029.json",
+  "texturePages": [
+   "sp_npc029.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc029_02",
+  "group": "NPC",
+  "sub": "Npc29_02",
+  "charName": "sp_npc029_02",
+  "costumeName": "sp_npc029_02",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc29_02/sp_npc029_02.json",
+  "texturePages": [
+   "sp_npc029_02.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc030",
+  "group": "NPC",
+  "sub": "Npc030",
+  "charName": "sp_npc030",
+  "costumeName": "sp_npc030",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc030/sp_npc030.json",
+  "texturePages": [
+   "sp_npc030.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc031",
+  "group": "NPC",
+  "sub": "Npc031",
+  "charName": "sp_npc031",
+  "costumeName": "sp_npc031",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc031/sp_npc031.json",
+  "texturePages": [
+   "sp_npc031.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc032",
+  "group": "NPC",
+  "sub": "Npc032",
+  "charName": "sp_npc032",
+  "costumeName": "sp_npc032",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc032/sp_npc032.json",
+  "texturePages": [
+   "sp_npc032.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc033",
+  "group": "NPC",
+  "sub": "Npc033",
+  "charName": "sp_npc033",
+  "costumeName": "sp_npc033",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc033/sp_npc033.json",
+  "texturePages": [
+   "sp_npc033.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc034",
+  "group": "NPC",
+  "sub": "Npc034",
+  "charName": "sp_npc034",
+  "costumeName": "sp_npc034",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc034/sp_npc034.json",
+  "texturePages": [
+   "sp_npc034.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc034",
+  "group": "NPC",
+  "sub": "Npc034_01",
+  "charName": "sp_npc034",
+  "costumeName": "sp_npc034",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc034_01/sp_npc034.json",
+  "texturePages": [
+   "sp_npc034.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc035",
+  "group": "NPC",
+  "sub": "Npc035",
+  "charName": "sp_npc035",
+  "costumeName": "sp_npc035",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc035/sp_npc035.json",
+  "texturePages": [
+   "sp_npc035.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc035_01",
+  "group": "NPC",
+  "sub": "Npc035_01",
+  "charName": "sp_npc035_01",
+  "costumeName": "sp_npc035_01",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc035_01/sp_npc035_01.json",
+  "texturePages": [
+   "sp_npc035_01.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc036",
+  "group": "NPC",
+  "sub": "Npc036",
+  "charName": "sp_npc036",
+  "costumeName": "sp_npc036",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc036/sp_npc036.json",
+  "texturePages": [
+   "sp_npc036.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc037",
+  "group": "NPC",
+  "sub": "Npc037",
+  "charName": "sp_npc037",
+  "costumeName": "sp_npc037",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc037/sp_npc037.json",
+  "texturePages": [
+   "sp_npc037.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc038",
+  "group": "NPC",
+  "sub": "Npc038",
+  "charName": "sp_npc038",
+  "costumeName": "sp_npc038",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc038/sp_npc038.json",
+  "texturePages": [
+   "sp_npc038.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc039",
+  "group": "NPC",
+  "sub": "Npc039",
+  "charName": "sp_npc039",
+  "costumeName": "sp_npc039",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc039/sp_npc039.json",
+  "texturePages": [
+   "sp_npc039.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc040",
+  "group": "NPC",
+  "sub": "Npc040",
+  "charName": "sp_npc040",
+  "costumeName": "sp_npc040",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc040/sp_npc040.json",
+  "texturePages": [
+   "sp_npc040.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc041",
+  "group": "NPC",
+  "sub": "Npc041",
+  "charName": "sp_npc041",
+  "costumeName": "sp_npc041",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc041/sp_npc041.json",
+  "texturePages": [
+   "sp_npc041.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc042",
+  "group": "NPC",
+  "sub": "Npc042",
+  "charName": "sp_npc042",
+  "costumeName": "sp_npc042",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc042/sp_npc042.json",
+  "texturePages": [
+   "sp_npc042.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc043",
+  "group": "NPC",
+  "sub": "Npc043",
+  "charName": "sp_npc043",
+  "costumeName": "sp_npc043",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc043/sp_npc043.json",
+  "texturePages": [
+   "sp_npc043.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc044",
+  "group": "NPC",
+  "sub": "Npc044",
+  "charName": "sp_npc044",
+  "costumeName": "sp_npc044",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc044/sp_npc044.json",
+  "texturePages": [
+   "sp_npc044.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc045",
+  "group": "NPC",
+  "sub": "Npc045",
+  "charName": "sp_npc045",
+  "costumeName": "sp_npc045",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc045/sp_npc045.json",
+  "texturePages": [
+   "sp_npc045.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc046",
+  "group": "NPC",
+  "sub": "Npc046",
+  "charName": "sp_npc046",
+  "costumeName": "sp_npc046",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc046/sp_npc046.json",
+  "texturePages": [
+   "sp_npc046.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc047",
+  "group": "NPC",
+  "sub": "Npc047",
+  "charName": "sp_npc047",
+  "costumeName": "sp_npc047",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc047/sp_npc047.json",
+  "texturePages": [
+   "sp_npc047.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc048",
+  "group": "NPC",
+  "sub": "Npc048",
+  "charName": "sp_npc048",
+  "costumeName": "sp_npc048",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc048/sp_npc048.json",
+  "texturePages": [
+   "sp_npc048.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc049",
+  "group": "NPC",
+  "sub": "Npc049",
+  "charName": "sp_npc049",
+  "costumeName": "sp_npc049",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc049/sp_npc049.json",
+  "texturePages": [
+   "sp_npc049.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc051",
+  "group": "NPC",
+  "sub": "Npc051",
+  "charName": "sp_npc051",
+  "costumeName": "sp_npc051",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc051/sp_npc051.json",
+  "texturePages": [
+   "sp_npc051.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc052",
+  "group": "NPC",
+  "sub": "Npc052",
+  "charName": "sp_npc052",
+  "costumeName": "sp_npc052",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc052/sp_npc052.json",
+  "texturePages": [
+   "sp_npc052.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc053",
+  "group": "NPC",
+  "sub": "Npc053",
+  "charName": "sp_npc053",
+  "costumeName": "sp_npc053",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc053/sp_npc053.json",
+  "texturePages": [
+   "sp_npc053.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc054",
+  "group": "NPC",
+  "sub": "Npc054",
+  "charName": "sp_npc054",
+  "costumeName": "sp_npc054",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc054/sp_npc054.json",
+  "texturePages": [
+   "sp_npc054.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc055",
+  "group": "NPC",
+  "sub": "Npc055",
+  "charName": "sp_npc055",
+  "costumeName": "sp_npc055",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc055/sp_npc055.json",
+  "texturePages": [
+   "sp_npc055.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc056",
+  "group": "NPC",
+  "sub": "Npc056",
+  "charName": "sp_npc056",
+  "costumeName": "sp_npc056",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc056/sp_npc056.json",
+  "texturePages": [
+   "sp_npc056.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc057",
+  "group": "NPC",
+  "sub": "Npc057",
+  "charName": "sp_npc057",
+  "costumeName": "sp_npc057",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc057/sp_npc057.json",
+  "texturePages": [
+   "sp_npc057.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc058",
+  "group": "NPC",
+  "sub": "Npc058",
+  "charName": "sp_npc058",
+  "costumeName": "sp_npc058",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc058/sp_npc058.json",
+  "texturePages": [
+   "sp_npc058.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc059",
+  "group": "NPC",
+  "sub": "Npc059",
+  "charName": "sp_npc059",
+  "costumeName": "sp_npc059",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc059/sp_npc059.json",
+  "texturePages": [
+   "sp_npc059.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc060",
+  "group": "NPC",
+  "sub": "Npc060",
+  "charName": "sp_npc060",
+  "costumeName": "sp_npc060",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc060/sp_npc060.json",
+  "texturePages": [
+   "sp_npc060.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc061",
+  "group": "NPC",
+  "sub": "Npc061",
+  "charName": "sp_npc061",
+  "costumeName": "sp_npc061",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc061/sp_npc061.json",
+  "texturePages": [
+   "sp_npc061.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc062",
+  "group": "NPC",
+  "sub": "Npc062",
+  "charName": "sp_npc062",
+  "costumeName": "sp_npc062",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc062/sp_npc062.json",
+  "texturePages": [
+   "sp_npc062.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc063",
+  "group": "NPC",
+  "sub": "Npc063",
+  "charName": "sp_npc063",
+  "costumeName": "sp_npc063",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc063/sp_npc063.json",
+  "texturePages": [
+   "sp_npc063.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc064",
+  "group": "NPC",
+  "sub": "Npc064",
+  "charName": "sp_npc064",
+  "costumeName": "sp_npc064",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc064/sp_npc064.json",
+  "texturePages": [
+   "sp_npc064.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc065",
+  "group": "NPC",
+  "sub": "Npc065",
+  "charName": "sp_npc065",
+  "costumeName": "sp_npc065",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc065/sp_npc065.json",
+  "texturePages": [
+   "sp_npc065.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc067",
+  "group": "NPC",
+  "sub": "Npc067",
+  "charName": "sp_npc067",
+  "costumeName": "sp_npc067",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc067/sp_npc067.json",
+  "texturePages": [
+   "sp_npc067.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc068",
+  "group": "NPC",
+  "sub": "Npc068",
+  "charName": "sp_npc068",
+  "costumeName": "sp_npc068",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc068/sp_npc068.json",
+  "texturePages": [
+   "sp_npc068.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc069",
+  "group": "NPC",
+  "sub": "Npc069",
+  "charName": "sp_npc069",
+  "costumeName": "sp_npc069",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc069/sp_npc069.json",
+  "texturePages": [
+   "sp_npc069.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc069_2",
+  "group": "NPC",
+  "sub": "Npc069_02",
+  "charName": "sp_npc069_2",
+  "costumeName": "sp_npc069_2",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc069_02/sp_npc069_2.json",
+  "texturePages": [
+   "sp_npc069_2.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc070",
+  "group": "NPC",
+  "sub": "Npc070",
+  "charName": "sp_npc070",
+  "costumeName": "sp_npc070",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc070/sp_npc070.json",
+  "texturePages": [
+   "sp_npc070.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc071",
+  "group": "NPC",
+  "sub": "Npc071",
+  "charName": "sp_npc071",
+  "costumeName": "sp_npc071",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc071/sp_npc071.json",
+  "texturePages": [
+   "sp_npc071.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc072",
+  "group": "NPC",
+  "sub": "Npc072",
+  "charName": "sp_npc072",
+  "costumeName": "sp_npc072",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc072/sp_npc072.json",
+  "texturePages": [
+   "sp_npc072.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc073",
+  "group": "NPC",
+  "sub": "Npc073",
+  "charName": "sp_npc073",
+  "costumeName": "sp_npc073",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc073/sp_npc073.json",
+  "texturePages": [
+   "sp_npc073.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc074",
+  "group": "NPC",
+  "sub": "Npc074",
+  "charName": "sp_npc074",
+  "costumeName": "sp_npc074",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc074/sp_npc074.json",
+  "texturePages": [
+   "sp_npc074.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc076",
+  "group": "NPC",
+  "sub": "Npc076",
+  "charName": "sp_npc076",
+  "costumeName": "sp_npc076",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc076/sp_npc076.json",
+  "texturePages": [
+   "sp_npc076.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc077",
+  "group": "NPC",
+  "sub": "Npc077",
+  "charName": "sp_npc077",
+  "costumeName": "sp_npc077",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc077/sp_npc077.json",
+  "texturePages": [
+   "sp_npc077.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc078",
+  "group": "NPC",
+  "sub": "Npc078",
+  "charName": "sp_npc078",
+  "costumeName": "sp_npc078",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc078/sp_npc078.json",
+  "texturePages": [
+   "sp_npc078.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc081",
+  "group": "NPC",
+  "sub": "Npc081",
+  "charName": "sp_npc081",
+  "costumeName": "sp_npc081",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc081/sp_npc081.json",
+  "texturePages": [
+   "sp_npc081.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc082",
+  "group": "NPC",
+  "sub": "Npc082",
+  "charName": "sp_npc082",
+  "costumeName": "sp_npc082",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc082/sp_npc082.json",
+  "texturePages": [
+   "sp_npc082.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc083",
+  "group": "NPC",
+  "sub": "Npc083",
+  "charName": "sp_npc083",
+  "costumeName": "sp_npc083",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc083/sp_npc083.json",
+  "texturePages": [
+   "sp_npc083.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc084",
+  "group": "NPC",
+  "sub": "Npc084",
+  "charName": "sp_npc084",
+  "costumeName": "sp_npc084",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc084/sp_npc084.json",
+  "texturePages": [
+   "sp_npc084.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc085",
+  "group": "NPC",
+  "sub": "Npc085",
+  "charName": "sp_npc085",
+  "costumeName": "sp_npc085",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc085/sp_npc085.json",
+  "texturePages": [
+   "sp_npc085.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc086",
+  "group": "NPC",
+  "sub": "Npc086",
+  "charName": "sp_npc086",
+  "costumeName": "sp_npc086",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc086/sp_npc086.json",
+  "texturePages": [
+   "sp_npc086.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc087",
+  "group": "NPC",
+  "sub": "Npc087",
+  "charName": "sp_npc087",
+  "costumeName": "sp_npc087",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc087/sp_npc087.json",
+  "texturePages": [
+   "sp_npc087.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc088",
+  "group": "NPC",
+  "sub": "Npc088",
+  "charName": "sp_npc088",
+  "costumeName": "sp_npc088",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc088/sp_npc088.json",
+  "texturePages": [
+   "sp_npc088.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc089",
+  "group": "NPC",
+  "sub": "Npc089",
+  "charName": "sp_npc089",
+  "costumeName": "sp_npc089",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc089/sp_npc089.json",
+  "texturePages": [
+   "sp_npc089.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc090",
+  "group": "NPC",
+  "sub": "Npc090",
+  "charName": "sp_npc090",
+  "costumeName": "sp_npc090",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc090/sp_npc090.json",
+  "texturePages": [
+   "sp_npc090.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc091",
+  "group": "NPC",
+  "sub": "Npc091",
+  "charName": "sp_npc091",
+  "costumeName": "sp_npc091",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc091/sp_npc091.json",
+  "texturePages": [
+   "sp_npc091.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc092",
+  "group": "NPC",
+  "sub": "Npc092",
+  "charName": "sp_npc092",
+  "costumeName": "sp_npc092",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc092/sp_npc092.json",
+  "texturePages": [
+   "sp_npc092.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc093",
+  "group": "NPC",
+  "sub": "Npc093",
+  "charName": "sp_npc093",
+  "costumeName": "sp_npc093",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc093/sp_npc093.json",
+  "texturePages": [
+   "sp_npc093.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc094",
+  "group": "NPC",
+  "sub": "Npc094",
+  "charName": "sp_npc094",
+  "costumeName": "sp_npc094",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc094/sp_npc094.json",
+  "texturePages": [
+   "sp_npc094.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc095",
+  "group": "NPC",
+  "sub": "Npc095",
+  "charName": "sp_npc095",
+  "costumeName": "sp_npc095",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc095/sp_npc095.json",
+  "texturePages": [
+   "sp_npc095.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc096",
+  "group": "NPC",
+  "sub": "Npc096",
+  "charName": "sp_npc096",
+  "costumeName": "sp_npc096",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc096/sp_npc096.json",
+  "texturePages": [
+   "sp_npc096.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc097",
+  "group": "NPC",
+  "sub": "Npc097",
+  "charName": "sp_npc097",
+  "costumeName": "sp_npc097",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc097/sp_npc097.json",
+  "texturePages": [
+   "sp_npc097.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc098",
+  "group": "NPC",
+  "sub": "Npc098",
+  "charName": "sp_npc098",
+  "costumeName": "sp_npc098",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc098/sp_npc098.json",
+  "texturePages": [
+   "sp_npc098.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc099",
+  "group": "NPC",
+  "sub": "Npc099",
+  "charName": "sp_npc099",
+  "costumeName": "sp_npc099",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc099/sp_npc099.json",
+  "texturePages": [
+   "sp_npc099.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc100",
+  "group": "NPC",
+  "sub": "Npc100",
+  "charName": "sp_npc100",
+  "costumeName": "sp_npc100",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc100/sp_npc100.json",
+  "texturePages": [
+   "sp_npc100.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc101",
+  "group": "NPC",
+  "sub": "Npc101",
+  "charName": "sp_npc101",
+  "costumeName": "sp_npc101",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc101/sp_npc101.json",
+  "texturePages": [
+   "sp_npc101.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc102",
+  "group": "NPC",
+  "sub": "Npc102",
+  "charName": "sp_npc102",
+  "costumeName": "sp_npc102",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc102/sp_npc102.json",
+  "texturePages": [
+   "sp_npc102.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc103",
+  "group": "NPC",
+  "sub": "Npc103",
+  "charName": "sp_npc103",
+  "costumeName": "sp_npc103",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc103/sp_npc103.json",
+  "texturePages": [
+   "sp_npc103.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc104",
+  "group": "NPC",
+  "sub": "Npc104",
+  "charName": "sp_npc104",
+  "costumeName": "sp_npc104",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc104/sp_npc104.json",
+  "texturePages": [
+   "sp_npc104.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc105",
+  "group": "NPC",
+  "sub": "Npc105",
+  "charName": "sp_npc105",
+  "costumeName": "sp_npc105",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc105/sp_npc105.json",
+  "texturePages": [
+   "sp_npc105.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc106-data",
+  "group": "NPC",
+  "sub": "Npc106",
+  "charName": "sp_npc106-data",
+  "costumeName": "sp_npc106-data",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc106/sp_npc106-data.json",
+  "texturePages": [
+   "sp_npc106.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc107",
+  "group": "NPC",
+  "sub": "Npc107",
+  "charName": "sp_npc107",
+  "costumeName": "sp_npc107",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc107/sp_npc107.json",
+  "texturePages": [
+   "sp_npc107.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc108",
+  "group": "NPC",
+  "sub": "Npc108",
+  "charName": "sp_npc108",
+  "costumeName": "sp_npc108",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc108/sp_npc108.json",
+  "texturePages": [
+   "sp_npc108.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc109",
+  "group": "NPC",
+  "sub": "Npc109",
+  "charName": "sp_npc109",
+  "costumeName": "sp_npc109",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc109/sp_npc109.json",
+  "texturePages": [
+   "sp_npc109.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc110",
+  "group": "NPC",
+  "sub": "Npc110",
+  "charName": "sp_npc110",
+  "costumeName": "sp_npc110",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc110/sp_npc110.json",
+  "texturePages": [
+   "sp_npc110.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc111",
+  "group": "NPC",
+  "sub": "Npc111",
+  "charName": "sp_npc111",
+  "costumeName": "sp_npc111",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc111/sp_npc111.json",
+  "texturePages": [
+   "sp_npc111.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc112",
+  "group": "NPC",
+  "sub": "Npc112",
+  "charName": "sp_npc112",
+  "costumeName": "sp_npc112",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc112/sp_npc112.json",
+  "texturePages": [
+   "sp_npc112.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc113_1",
+  "group": "NPC",
+  "sub": "Npc113_1",
+  "charName": "sp_npc113_1",
+  "costumeName": "sp_npc113_1",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc113_1/sp_npc113_1.json",
+  "texturePages": [
+   "sp_npc113_1.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc113_2",
+  "group": "NPC",
+  "sub": "Npc113_2",
+  "charName": "sp_npc113_2",
+  "costumeName": "sp_npc113_2",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc113_2/sp_npc113_2.json",
+  "texturePages": [
+   "sp_npc113_2.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc113_3",
+  "group": "NPC",
+  "sub": "Npc113_3",
+  "charName": "sp_npc113_3",
+  "costumeName": "sp_npc113_3",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc113_3/sp_npc113_3.json",
+  "texturePages": [
+   "sp_npc113_3.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc114",
+  "group": "NPC",
+  "sub": "Npc114",
+  "charName": "sp_npc114",
+  "costumeName": "sp_npc114",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc114/sp_npc114.json",
+  "texturePages": [
+   "sp_npc114.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc116",
+  "group": "NPC",
+  "sub": "Npc116",
+  "charName": "sp_npc116",
+  "costumeName": "sp_npc116",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc116/sp_npc116.json",
+  "texturePages": [
+   "sp_npc116.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_npc405_01_q",
+  "group": "NPC",
+  "sub": "Npc405_01_q",
+  "charName": "sp_npc405_01_q",
+  "costumeName": "sp_npc405_01_q",
+  "kind": "npc",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/NPC/Npc405_01_q/sp_npc405_01_q.json",
+  "texturePages": [
+   "sp_npc405_01_q.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_pic_building",
+  "group": "Level",
+  "sub": "Newstar01",
+  "charName": "sp_pic_building",
+  "costumeName": "sp_pic_building",
+  "kind": "other",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Level/Newstar01/sp_pic_building/sp_pic_building.json",
+  "texturePages": [
+   "sp_pic_building.png"
+  ]
+ },
+ {
+  "id": "cbjq_sp_pic_dlc30newstar",
+  "group": "Level",
+  "sub": "Newstar01",
+  "charName": "sp_pic_dlc30newstar",
+  "costumeName": "sp_pic_dlc30newstar",
+  "kind": "other",
+  "modelType": "character",
+  "jsonPath": "Game/Content/Spine/Level/Newstar01/sp_pic_dlc30newstar/sp_pic_dlc30newstar.json",
+  "texturePages": [
+   "sp_pic_dlc30newstar.png"
+  ]
+ }
+]

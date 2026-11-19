@@ -58,6 +58,11 @@ const UPSTREAM_GS_BASES = [
   'https://raw.githubusercontent.com/Misekato/IHLive2d/main',
 ];
 
+const UPSTREAM_CBJQ_SPINE_BASES = [
+  'https://cdn.jsdelivr.net/gh/leililei/cbjq-spine@main',
+  'https://raw.githubusercontent.com/leililei/cbjq-spine/main',
+];
+
 const UPSTREAM_AL_ICON_BASES = [
   'https://cdn.jsdelivr.net/gh/leililei/AzurLaneTools@master/public/squareicon',
   'https://raw.githubusercontent.com/leililei/AzurLaneTools/master/public/squareicon',
@@ -353,7 +358,8 @@ async function resolveCachedAsset(
     | 'mad-spines'
     | 'mad-icons'
     | 'anchor-spines'
-    | 'gs-live2d',
+    | 'gs-live2d'
+    | 'cbjq-spines',
   relPath: string,
   upstreamBases: string | string[],
   encodePathForUpstream = false
@@ -748,6 +754,26 @@ async function startServer() {
     } catch (err) {
       const status = (err as { status?: number })?.status || 502;
       res.status(status).json({ error: `Failed to fetch DGS Live2D asset: ${relPath}` });
+    }
+  });
+
+  // Snowbreak: Containment Zone (尘白禁区) Spine 3.8 models from the cbjq dump.
+  app.get('/api/cbjq-spine/*', async (req, res) => {
+    const rawParam = (req.params as Record<string, string>)[0] ?? '';
+    const relPath = sanitizeUtf8AssetPath(
+      rawParam,
+      /\.(json|skel|atlas|png|webp|jpg|jpeg)$/i
+    );
+    if (!relPath) {
+      res.status(400).json({ error: 'Invalid Snowbreak spine path' });
+      return;
+    }
+    try {
+      const entry = await resolveCachedAsset('cbjq-spines', relPath, UPSTREAM_CBJQ_SPINE_BASES, true);
+      sendCachedEntry(req, res, entry);
+    } catch (err) {
+      const status = (err as { status?: number })?.status || 502;
+      res.status(status).json({ error: `Failed to fetch Snowbreak asset: ${relPath}` });
     }
   });
 

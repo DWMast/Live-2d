@@ -14,6 +14,9 @@ export const MAD_SPINE_BASE = '/api/mad-spine';
 export const MAD_ICON_BASE = '/api/mad-icon';
 export const ANCHOR_SPINE_BASE = '/api/anchor-spine';
 export const GS_LIVE2D_BASE = '/api/gs-live2d';
+export const ECHO_SPINE_BASE = '/api/echo-spine';
+export const ECHO_ICON_BASE = '/api/echo-pic';
+export const CBJQ_SPINE_BASE = '/api/cbjq-spine';
 
 export const GAME_LIST: GameDescriptor[] = [
   {
@@ -85,6 +88,26 @@ export const GAME_LIST: GameDescriptor[] = [
     engineLabel: 'Cubism 4 Live2D · 398 Skins',
     accentGradient: 'from-amber-500 to-rose-600 shadow-amber-500/20',
     accentText: 'text-amber-400',
+  },
+  {
+    id: 'echocalypse',
+    shortCode: 'EC',
+    name: 'Echocalypse',
+    studioName: 'Echocalypse Spine Studio',
+    rosterLabel: 'Echocalypse Roster',
+    engineLabel: 'Spine 3.8 · Full Rip',
+    accentGradient: 'from-orange-500 to-red-600 shadow-orange-500/20',
+    accentText: 'text-orange-400',
+  },
+  {
+    id: 'snowbreak',
+    shortCode: 'SB',
+    name: 'Snowbreak',
+    studioName: 'Snowbreak Spine Studio',
+    rosterLabel: 'Snowbreak Roster',
+    engineLabel: 'Spine 3.8 · 459 Models',
+    accentGradient: 'from-emerald-500 to-cyan-600 shadow-emerald-500/20',
+    accentText: 'text-emerald-400',
   },
 ];
 
@@ -235,6 +258,29 @@ interface Live2DCatalogEntry {
   jsonPath: string;
   iconPath?: string;
   api: string;
+}
+
+interface CbjqCatalogEntry {
+  id: string;
+  group: string;
+  sub: string;
+  charName: string;
+  costumeName: string;
+  kind: string;
+  jsonPath: string;
+  texturePages: string[];
+}
+
+interface EchoCatalogEntry {
+  id: string;
+  modelId: string;
+  bucket: string;
+  charName: string;
+  costumeName: string;
+  kind: string;
+  jsonPath: string;
+  atlasPath: string;
+  iconPath?: string;
 }
 
 const rosterCache = new Map<GameId, BD2Character[]>();
@@ -435,6 +481,72 @@ export async function loadGameRoster(gameId: GameId): Promise<BD2Character[]> {
         releaseOrder: idx,
         releaseLabel: item.modelType === 'skin' ? 'Dynamic Skin' : 'Ship Spine',
       }));
+    } else if (gameId === 'echocalypse') {
+      const res = await fetch('/data/echocalypse_catalog.json');
+      if (!res.ok) throw new Error(`Failed to load Echocalypse catalog (HTTP ${res.status})`);
+      const rawList = (await res.json()) as EchoCatalogEntry[];
+      // Character-first: group by model prefix so skins follow their base spine.
+      const sorted = [...rawList].sort((a, b) => {
+        const ba = a.modelId.slice(0, 6), bb = b.modelId.slice(0, 6);
+        if (ba !== bb) return ba.localeCompare(bb, 'en', { numeric: true });
+        return a.modelId.localeCompare(b.modelId, 'en', { numeric: true });
+      });
+      mapped = sorted.map((item, idx) => ({
+        id: item.id,
+        game: 'echocalypse',
+        charName: item.charName,
+        costumeName: item.costumeName,
+        spine: item.id,
+        cutscene: '',
+        dating: '',
+        audio: '',
+        skeletonUrl: encodeProxyPath(ECHO_SPINE_BASE, item.jsonPath),
+        atlasUrl: encodeProxyPath(ECHO_SPINE_BASE, item.atlasPath),
+        skeletonFormat: 'skel',
+        spineVersion: '3.8',
+        modelType: item.kind === 'npc' || item.kind === 'scene' ? 'character' : item.modelType || 'character',
+        iconUrl: item.iconPath ? encodeProxyPath(ECHO_ICON_BASE, item.iconPath) : '',
+        hasCutscene: false,
+        hasDating: false,
+        releaseOrder: idx,
+        releaseLabel: item.bucket === 'knight_spine_remote' ? 'Remote Build' : item.kind || 'Skin',
+        baseId: item.modelId.slice(0, 6),
+        named: item.charName !== item.modelId && !item.charName.includes('Variant') && !item.charName.includes('NPC') && !item.charName.includes('Scene'),
+        kind: item.kind,
+      }));
+    } else if (gameId === 'snowbreak') {
+      const res = await fetch('/data/snowbreak_catalog.json');
+      if (!res.ok) throw new Error(`Failed to load Snowbreak catalog (HTTP ${res.status})`);
+      const rawList = (await res.json()) as CbjqCatalogEntry[];
+      const sorted = [...rawList].sort((a, b) => {
+        const na = Number((a.sub || a.charName).replace(/\D/g, '')) || 0;
+        const nb = Number((b.sub || b.charName).replace(/\D/g, '')) || 0;
+        if (na !== nb) return na - nb;
+        return a.id.localeCompare(b.id);
+      });
+      mapped = sorted.map((item, idx) => ({
+        id: item.id,
+        game: 'snowbreak',
+        charName: item.charName,
+        costumeName: item.costumeName,
+        spine: item.id,
+        cutscene: '',
+        dating: '',
+        audio: '',
+        skeletonUrl: encodeProxyPath(CBJQ_SPINE_BASE, item.jsonPath),
+        atlasUrl: encodeProxyPath(CBJQ_SPINE_BASE, item.jsonPath.replace(/\.json$/, '.atlas')),
+        skeletonFormat: 'json',
+        spineVersion: '3.8',
+        modelType: 'character',
+        iconUrl: '',
+        hasCutscene: false,
+        hasDating: false,
+        releaseOrder: idx,
+        releaseLabel: item.group === 'Hero' ? 'Hero Spine' : item.group === 'NPC' ? 'NPC' : item.group,
+        named: false,
+        kind: item.kind,
+        baseId: (item.sub || item.charName).slice(0, 7),
+      }));
     }
 
     rosterCache.set(gameId, mapped);
@@ -469,6 +581,16 @@ export function pickDefaultCharacterForGame(gameId: GameId, roster: BD2Character
   }
   if (gameId === 'girlssymphony') {
     return roster.find((c) => c.id === 'gs_aphrodite_1') || roster.find((c) => c.iconUrl) || roster[0];
+  }
+  if (gameId === 'snowbreak') {
+    return roster.find((c) => c.kind === 'character' && c.releaseLabel === 'Hero Spine') || roster[0];
+  }
+  if (gameId === 'echocalypse') {
+    return (
+      roster.find((c) => c.iconUrl && (c.kind === 'character' || c.kind === 'knight') && c.releaseLabel !== 'Remote Build') ||
+      roster.find((c) => c.iconUrl) ||
+      roster[0]
+    );
   }
   if (gameId === 'azurlane') {
     return (
