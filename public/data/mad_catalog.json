@@ -1,2521 +1,2486 @@
 [
-  {
-    "id": "af_ch0009",
-    "charName": "CH0009",
-    "costumeName": "Affection (CH0009)",
-    "modelType": "skin",
-    "jsonPath": "skins/af_ch0009/AF_CH0009.skel",
-    "atlasPath": "skins/af_ch0009/AF_CH0009.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "affection",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 0
-  },
-  {
-    "id": "af_ch0010",
-    "charName": "CH0010",
-    "costumeName": "Affection (CH0010)",
-    "modelType": "skin",
-    "jsonPath": "skins/af_ch0010/AF_CH0010.skel",
-    "atlasPath": "skins/af_ch0010/AF_CH0010.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "affection",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 1
-  },
-  {
-    "id": "af_ch0011",
-    "charName": "CH0011",
-    "costumeName": "Affection (CH0011)",
-    "modelType": "skin",
-    "jsonPath": "skins/af_ch0011/AF_CH0011.skel",
-    "atlasPath": "skins/af_ch0011/AF_CH0011.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "affection",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 2
-  },
-  {
-    "id": "af_ch0015",
-    "charName": "CH0015",
-    "costumeName": "Affection (CH0015)",
-    "modelType": "skin",
-    "jsonPath": "skins/af_ch0015/AF_CH0015.skel",
-    "atlasPath": "skins/af_ch0015/AF_CH0015.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "affection",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 3
-  },
-  {
-    "id": "af_ch0019",
-    "charName": "CH0019",
-    "costumeName": "Affection (CH0019)",
-    "modelType": "skin",
-    "jsonPath": "skins/af_ch0019/AF_CH0019.skel",
-    "atlasPath": "skins/af_ch0019/AF_CH0019.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "affection",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 4
-  },
-  {
-    "id": "af_ch0022",
-    "charName": "CH0022",
-    "costumeName": "Affection (CH0022)",
-    "modelType": "skin",
-    "jsonPath": "skins/af_ch0022/AF_CH0022.skel",
-    "atlasPath": "skins/af_ch0022/AF_CH0022.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "affection",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 5
-  },
-  {
-    "id": "af_ch0024",
-    "charName": "CH0024",
-    "costumeName": "Affection (CH0024)",
-    "modelType": "skin",
-    "jsonPath": "skins/af_ch0024/AF_CH0024.skel",
-    "atlasPath": "skins/af_ch0024/AF_CH0024.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "affection",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 6
-  },
-  {
-    "id": "af_ch0028",
-    "charName": "CH0028",
-    "costumeName": "Affection (CH0028)",
-    "modelType": "skin",
-    "jsonPath": "skins/af_ch0028/AF_CH0028.skel",
-    "atlasPath": "skins/af_ch0028/AF_CH0028.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "affection",
-    "uncensored": false,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 7
-  },
-  {
-    "id": "af_ch0032",
-    "charName": "CH0032",
-    "costumeName": "Affection (CH0032)",
-    "modelType": "skin",
-    "jsonPath": "skins/af_ch0032/AF_CH0032.skel",
-    "atlasPath": "skins/af_ch0032/AF_CH0032.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "affection",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 8
-  },
-  {
-    "id": "af_ch0033",
-    "charName": "CH0033",
-    "costumeName": "Affection (CH0033)",
-    "modelType": "skin",
-    "jsonPath": "skins/af_ch0033/AF_CH0033.skel",
-    "atlasPath": "skins/af_ch0033/AF_CH0033.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "affection",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 9
-  },
-  {
-    "id": "af_ch0035",
-    "charName": "CH0035",
-    "costumeName": "Affection (CH0035)",
-    "modelType": "skin",
-    "jsonPath": "skins/af_ch0035/AF_CH0035.skel",
-    "atlasPath": "skins/af_ch0035/AF_CH0035.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "affection",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 10
-  },
-  {
-    "id": "af_ch0038",
-    "charName": "CH0038",
-    "costumeName": "Affection (CH0038)",
-    "modelType": "skin",
-    "jsonPath": "skins/af_ch0038/AF_CH0038.skel",
-    "atlasPath": "skins/af_ch0038/AF_CH0038.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "affection",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 11
-  },
-  {
-    "id": "af_ch0040",
-    "charName": "CH0040",
-    "costumeName": "Affection (CH0040)",
-    "modelType": "skin",
-    "jsonPath": "skins/af_ch0040/AF_CH0040.skel",
-    "atlasPath": "skins/af_ch0040/AF_CH0040.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "affection",
-    "uncensored": false,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 12
-  },
-  {
-    "id": "af_ch0042",
-    "charName": "CH0042",
-    "costumeName": "Affection (CH0042)",
-    "modelType": "skin",
-    "jsonPath": "skins/af_ch0042/AF_CH0042.skel",
-    "atlasPath": "skins/af_ch0042/AF_CH0042.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "affection",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 13
-  },
-  {
-    "id": "af_ch0043",
-    "charName": "CH0043",
-    "costumeName": "Affection (CH0043)",
-    "modelType": "skin",
-    "jsonPath": "skins/af_ch0043/AF_CH0043.skel",
-    "atlasPath": "skins/af_ch0043/AF_CH0043.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "affection",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 14
-  },
-  {
-    "id": "af_ch0052",
-    "charName": "CH0052",
-    "costumeName": "Affection (CH0052)",
-    "modelType": "skin",
-    "jsonPath": "skins/af_ch0052/AF_CH0052.skel",
-    "atlasPath": "skins/af_ch0052/AF_CH0052.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "affection",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 15
-  },
-  {
-    "id": "af_ch0057",
-    "charName": "CH0057",
-    "costumeName": "Affection (CH0057)",
-    "modelType": "skin",
-    "jsonPath": "skins/af_ch0057/AF_CH0057.skel",
-    "atlasPath": "skins/af_ch0057/AF_CH0057.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "affection",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 16
-  },
-  {
-    "id": "af_ch0058",
-    "charName": "CH0058",
-    "costumeName": "Affection (CH0058)",
-    "modelType": "skin",
-    "jsonPath": "skins/af_ch0058/AF_CH0058.skel",
-    "atlasPath": "skins/af_ch0058/AF_CH0058.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "affection",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 17
-  },
-  {
-    "id": "af_ch0068",
-    "charName": "CH0068",
-    "costumeName": "Affection (CH0068)",
-    "modelType": "skin",
-    "jsonPath": "skins/af_ch0068/AF_CH0068.skel",
-    "atlasPath": "skins/af_ch0068/AF_CH0068.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "affection",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 18
-  },
-  {
-    "id": "af_ch0069",
-    "charName": "CH0069",
-    "costumeName": "Affection (CH0069)",
-    "modelType": "skin",
-    "jsonPath": "skins/af_ch0069/AF_CH0069.skel",
-    "atlasPath": "skins/af_ch0069/AF_CH0069.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "affection",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 19
-  },
-  {
-    "id": "af_ch0075",
-    "charName": "CH0075",
-    "costumeName": "Affection (CH0075)",
-    "modelType": "skin",
-    "jsonPath": "skins/af_ch0075/AF_CH0075.skel",
-    "atlasPath": "skins/af_ch0075/AF_CH0075.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "affection",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 20
-  },
-  {
-    "id": "dm_ma0001",
-    "charName": "DM_0001",
-    "costumeName": "Drama (DM_0001)",
-    "modelType": "skin",
-    "jsonPath": "skins/dm_ma0001/DM_MA0001.skel",
-    "atlasPath": "skins/dm_ma0001/DM_MA0001.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "drama",
-    "uncensored": false,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 21
-  },
-  {
-    "id": "dm_ma0002",
-    "charName": "DM_0002",
-    "costumeName": "Drama (DM_0002)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/dm_ma0002/DM_MA0002.skel",
-    "atlasPath": "bucket2/skins/dm_ma0002/DM_MA0002.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "drama",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 22
-  },
-  {
-    "id": "ds_ch0009",
-    "charName": "CH0009",
-    "costumeName": "Desire (CH0009)",
-    "modelType": "skin",
-    "jsonPath": "skins/ds_ch0009/DS_CH0009.skel",
-    "atlasPath": "skins/ds_ch0009/DS_CH0009.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "desire",
-    "uncensored": false,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 23
-  },
-  {
-    "id": "ds_ch0010",
-    "charName": "CH0010",
-    "costumeName": "Desire (CH0010)",
-    "modelType": "skin",
-    "jsonPath": "skins/ds_ch0010/DS_CH0010.skel",
-    "atlasPath": "skins/ds_ch0010/DS_CH0010.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "desire",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 24
-  },
-  {
-    "id": "ds_ch0011",
-    "charName": "CH0011",
-    "costumeName": "Desire (CH0011)",
-    "modelType": "skin",
-    "jsonPath": "skins/ds_ch0011/DS_CH0011.skel",
-    "atlasPath": "skins/ds_ch0011/DS_CH0011.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "desire",
-    "uncensored": false,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 25
-  },
-  {
-    "id": "ds_ch0015",
-    "charName": "CH0015",
-    "costumeName": "Desire (CH0015)",
-    "modelType": "skin",
-    "jsonPath": "skins/ds_ch0015/DS_CH0015.skel",
-    "atlasPath": "skins/ds_ch0015/DS_CH0015.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "desire",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 26
-  },
-  {
-    "id": "ds_ch0019",
-    "charName": "CH0019",
-    "costumeName": "Desire (CH0019)",
-    "modelType": "skin",
-    "jsonPath": "skins/ds_ch0019/DS_CH0019.skel",
-    "atlasPath": "skins/ds_ch0019/DS_CH0019.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "desire",
-    "uncensored": false,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 27
-  },
-  {
-    "id": "ds_ch0022",
-    "charName": "CH0022",
-    "costumeName": "Desire (CH0022)",
-    "modelType": "skin",
-    "jsonPath": "skins/ds_ch0022/DS_CH0022.skel",
-    "atlasPath": "skins/ds_ch0022/DS_CH0022.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "desire",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 28
-  },
-  {
-    "id": "ds_ch0024",
-    "charName": "CH0024",
-    "costumeName": "Desire (CH0024)",
-    "modelType": "skin",
-    "jsonPath": "skins/ds_ch0024/DS_CH0024.skel",
-    "atlasPath": "skins/ds_ch0024/DS_CH0024.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "desire",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 29
-  },
-  {
-    "id": "ds_ch0028",
-    "charName": "CH0028",
-    "costumeName": "Desire (CH0028)",
-    "modelType": "skin",
-    "jsonPath": "skins/ds_ch0028/DS_CH0028.skel",
-    "atlasPath": "skins/ds_ch0028/DS_CH0028.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "desire",
-    "uncensored": false,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 30
-  },
-  {
-    "id": "ds_ch0032",
-    "charName": "CH0032",
-    "costumeName": "Desire (CH0032)",
-    "modelType": "skin",
-    "jsonPath": "skins/ds_ch0032/DS_CH0032.skel",
-    "atlasPath": "skins/ds_ch0032/DS_CH0032.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "desire",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 31
-  },
-  {
-    "id": "ds_ch0033",
-    "charName": "CH0033",
-    "costumeName": "Desire (CH0033)",
-    "modelType": "skin",
-    "jsonPath": "skins/ds_ch0033/DS_CH0033.skel",
-    "atlasPath": "skins/ds_ch0033/DS_CH0033.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "desire",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 32
-  },
-  {
-    "id": "ds_ch0035",
-    "charName": "CH0035",
-    "costumeName": "Desire (CH0035)",
-    "modelType": "skin",
-    "jsonPath": "skins/ds_ch0035/DS_CH0035.skel",
-    "atlasPath": "skins/ds_ch0035/DS_CH0035.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "desire",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 33
-  },
-  {
-    "id": "ds_ch0038",
-    "charName": "CH0038",
-    "costumeName": "Desire (CH0038)",
-    "modelType": "skin",
-    "jsonPath": "skins/ds_ch0038/DS_CH0038.skel",
-    "atlasPath": "skins/ds_ch0038/DS_CH0038.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "desire",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 34
-  },
-  {
-    "id": "ds_ch0040",
-    "charName": "CH0040",
-    "costumeName": "Desire (CH0040)",
-    "modelType": "skin",
-    "jsonPath": "skins/ds_ch0040/DS_CH0040.skel",
-    "atlasPath": "skins/ds_ch0040/DS_CH0040.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "desire",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 35
-  },
-  {
-    "id": "ds_ch0042",
-    "charName": "CH0042",
-    "costumeName": "Desire (CH0042)",
-    "modelType": "skin",
-    "jsonPath": "skins/ds_ch0042/DS_CH0042.skel",
-    "atlasPath": "skins/ds_ch0042/DS_CH0042.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "desire",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 36
-  },
-  {
-    "id": "ds_ch0043",
-    "charName": "CH0043",
-    "costumeName": "Desire (CH0043)",
-    "modelType": "skin",
-    "jsonPath": "skins/ds_ch0043/DS_CH0043.skel",
-    "atlasPath": "skins/ds_ch0043/DS_CH0043.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "desire",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 37
-  },
-  {
-    "id": "ds_ch0052",
-    "charName": "CH0052",
-    "costumeName": "Desire (CH0052)",
-    "modelType": "skin",
-    "jsonPath": "skins/ds_ch0052/DS_CH0052.skel",
-    "atlasPath": "skins/ds_ch0052/DS_CH0052.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "desire",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 38
-  },
-  {
-    "id": "ds_ch0057",
-    "charName": "CH0057",
-    "costumeName": "Desire (CH0057)",
-    "modelType": "skin",
-    "jsonPath": "skins/ds_ch0057/DS_CH0057.skel",
-    "atlasPath": "skins/ds_ch0057/DS_CH0057.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "desire",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 39
-  },
-  {
-    "id": "ds_ch0058",
-    "charName": "CH0058",
-    "costumeName": "Desire (CH0058)",
-    "modelType": "skin",
-    "jsonPath": "skins/ds_ch0058/DS_CH0058.skel",
-    "atlasPath": "skins/ds_ch0058/DS_CH0058.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "desire",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 40
-  },
-  {
-    "id": "ds_ch0068",
-    "charName": "CH0068",
-    "costumeName": "Desire (CH0068)",
-    "modelType": "skin",
-    "jsonPath": "skins/ds_ch0068/DS_CH0068.skel",
-    "atlasPath": "skins/ds_ch0068/DS_CH0068.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "desire",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 41
-  },
-  {
-    "id": "ds_ch0069",
-    "charName": "CH0069",
-    "costumeName": "Desire (CH0069)",
-    "modelType": "skin",
-    "jsonPath": "skins/ds_ch0069/DS_CH0069.skel",
-    "atlasPath": "skins/ds_ch0069/DS_CH0069.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "desire",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 42
-  },
-  {
-    "id": "ds_ch0075",
-    "charName": "CH0075",
-    "costumeName": "Desire (CH0075)",
-    "modelType": "skin",
-    "jsonPath": "skins/ds_ch0075/DS_CH0075.skel",
-    "atlasPath": "skins/ds_ch0075/DS_CH0075.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "desire",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 43
-  },
-  {
-    "id": "pl_cutin_0001",
-    "charName": "cutin_0001",
-    "costumeName": "pleasure (cutin_0001)",
-    "modelType": "skin",
-    "jsonPath": "skins/pl_cutin_0001/PL_CUTIN_0001.skel",
-    "atlasPath": "skins/pl_cutin_0001/PL_CUTIN_0001.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "pleasure",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 44
-  },
-  {
-    "id": "pl_cutin_0002",
-    "charName": "cutin_0002",
-    "costumeName": "pleasure (cutin_0002)",
-    "modelType": "skin",
-    "jsonPath": "skins/pl_cutin_0002/PL_CUTIN_0002.skel",
-    "atlasPath": "skins/pl_cutin_0002/PL_CUTIN_0002.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "pleasure",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 45
-  },
-  {
-    "id": "pl_ev0001",
-    "charName": "EV0001",
-    "costumeName": "pleasure (EV0001)",
-    "modelType": "skin",
-    "jsonPath": "skins/pl_ev0001/PL_EV0001.skel",
-    "atlasPath": "skins/pl_ev0001/PL_EV0001.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "pleasure",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 46
-  },
-  {
-    "id": "pl_ev0002",
-    "charName": "EV0002",
-    "costumeName": "pleasure (EV0002)",
-    "modelType": "skin",
-    "jsonPath": "skins/pl_ev0002/PL_EV0002.skel",
-    "atlasPath": "skins/pl_ev0002/PL_EV0002.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "pleasure",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 47
-  },
-  {
-    "id": "pl_ma0003",
-    "charName": "MA0003",
-    "costumeName": "pleasure (MA0003)",
-    "modelType": "skin",
-    "jsonPath": "skins/pl_ma0003/PL_MA0003.skel",
-    "atlasPath": "skins/pl_ma0003/PL_MA0003.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "pleasure",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 48
-  },
-  {
-    "id": "pl_title_0001",
-    "charName": "title_0001",
-    "costumeName": "pleasure (title_0001)",
-    "modelType": "skin",
-    "jsonPath": "skins/pl_title_0001/PL_TITLE_0001.skel",
-    "atlasPath": "skins/pl_title_0001/PL_TITLE_0001.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "pleasure",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": true,
-    "releaseOrder": 49
-  },
-  {
-    "id": "st_ch0001",
-    "charName": "CH0001",
-    "costumeName": "Standing (CH0001)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0001/ST_CH0001.skel",
-    "atlasPath": "skins/st_ch0001/ST_CH0001.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 50
-  },
-  {
-    "id": "st_ch0002",
-    "charName": "CH0002",
-    "costumeName": "Standing (CH0002)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0002/ST_CH0002.skel",
-    "atlasPath": "skins/st_ch0002/ST_CH0002.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 51
-  },
-  {
-    "id": "st_ch0003",
-    "charName": "CH0003",
-    "costumeName": "Standing (CH0003)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/st_ch0003/ST_CH0003.skel",
-    "atlasPath": "bucket2/skins/st_ch0003/ST_CH0003.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 52
-  },
-  {
-    "id": "st_ch0005",
-    "charName": "CH0005",
-    "costumeName": "Standing (CH0005)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0005/ST_CH0005.skel",
-    "atlasPath": "skins/st_ch0005/ST_CH0005.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 53
-  },
-  {
-    "id": "st_ch0006",
-    "charName": "CH0006",
-    "costumeName": "Standing (CH0006)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0006/ST_CH0006.skel",
-    "atlasPath": "skins/st_ch0006/ST_CH0006.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 54
-  },
-  {
-    "id": "st_ch0007",
-    "charName": "CH0007",
-    "costumeName": "Standing (CH0007)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0007/ST_CH0007.skel",
-    "atlasPath": "skins/st_ch0007/ST_CH0007.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 55
-  },
-  {
-    "id": "st_ch0009",
-    "charName": "CH0009",
-    "costumeName": "Standing (CH0009)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0009/ST_CH0009.skel",
-    "atlasPath": "skins/st_ch0009/ST_CH0009.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 56
-  },
-  {
-    "id": "st_ch0010",
-    "charName": "CH0010",
-    "costumeName": "Standing (CH0010)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0010/ST_CH0010.skel",
-    "atlasPath": "skins/st_ch0010/ST_CH0010.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 57
-  },
-  {
-    "id": "st_ch0011",
-    "charName": "CH0011",
-    "costumeName": "Standing (CH0011)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0011/ST_CH0011.skel",
-    "atlasPath": "skins/st_ch0011/ST_CH0011.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 58
-  },
-  {
-    "id": "st_ch0012",
-    "charName": "CH0012",
-    "costumeName": "Standing (CH0012)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0012/ST_CH0012.skel",
-    "atlasPath": "skins/st_ch0012/ST_CH0012.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 59
-  },
-  {
-    "id": "st_ch0013",
-    "charName": "CH0013",
-    "costumeName": "Standing (CH0013)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0013/ST_CH0013.skel",
-    "atlasPath": "skins/st_ch0013/ST_CH0013.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 60
-  },
-  {
-    "id": "st_ch0015",
-    "charName": "CH0015",
-    "costumeName": "Standing (CH0015)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0015/ST_CH0015.skel",
-    "atlasPath": "skins/st_ch0015/ST_CH0015.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 61
-  },
-  {
-    "id": "st_ch0016",
-    "charName": "CH0016",
-    "costumeName": "Standing (CH0016)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0016/ST_CH0016.skel",
-    "atlasPath": "skins/st_ch0016/ST_CH0016.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 62
-  },
-  {
-    "id": "st_ch0017",
-    "charName": "CH0017",
-    "costumeName": "Standing (CH0017)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0017/ST_CH0017.skel",
-    "atlasPath": "skins/st_ch0017/ST_CH0017.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 63
-  },
-  {
-    "id": "st_ch0019",
-    "charName": "CH0019",
-    "costumeName": "Standing (CH0019)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0019/ST_CH0019.skel",
-    "atlasPath": "skins/st_ch0019/ST_CH0019.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 64
-  },
-  {
-    "id": "st_ch0020",
-    "charName": "CH0020",
-    "costumeName": "Standing (CH0020)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0020/ST_CH0020.skel",
-    "atlasPath": "skins/st_ch0020/ST_CH0020.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 65
-  },
-  {
-    "id": "st_ch0021",
-    "charName": "CH0021",
-    "costumeName": "Standing (CH0021)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0021/ST_CH0021.skel",
-    "atlasPath": "skins/st_ch0021/ST_CH0021.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 66
-  },
-  {
-    "id": "st_ch0022",
-    "charName": "CH0022",
-    "costumeName": "Standing (CH0022)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0022/ST_CH0022.skel",
-    "atlasPath": "skins/st_ch0022/ST_CH0022.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 67
-  },
-  {
-    "id": "st_ch0023",
-    "charName": "CH0023",
-    "costumeName": "Standing (CH0023)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0023/ST_CH0023.skel",
-    "atlasPath": "skins/st_ch0023/ST_CH0023.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 68
-  },
-  {
-    "id": "st_ch0024",
-    "charName": "CH0024",
-    "costumeName": "Standing (CH0024)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0024/ST_CH0024.skel",
-    "atlasPath": "skins/st_ch0024/ST_CH0024.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 69
-  },
-  {
-    "id": "st_ch0025",
-    "charName": "CH0025",
-    "costumeName": "Standing (CH0025)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0025/ST_CH0025.skel",
-    "atlasPath": "skins/st_ch0025/ST_CH0025.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 70
-  },
-  {
-    "id": "st_ch0026",
-    "charName": "CH0026",
-    "costumeName": "Standing (CH0026)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0026/ST_CH0026.skel",
-    "atlasPath": "skins/st_ch0026/ST_CH0026.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 71
-  },
-  {
-    "id": "st_ch0027",
-    "charName": "CH0027",
-    "costumeName": "Standing (CH0027)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0027/ST_CH0027.skel",
-    "atlasPath": "skins/st_ch0027/ST_CH0027.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 72
-  },
-  {
-    "id": "st_ch0028",
-    "charName": "CH0028",
-    "costumeName": "Standing (CH0028)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0028/ST_CH0028.skel",
-    "atlasPath": "skins/st_ch0028/ST_CH0028.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 73
-  },
-  {
-    "id": "st_ch0029",
-    "charName": "CH0029",
-    "costumeName": "Standing (CH0029)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0029/ST_CH0029.skel",
-    "atlasPath": "skins/st_ch0029/ST_CH0029.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 74
-  },
-  {
-    "id": "st_ch0030",
-    "charName": "CH0030",
-    "costumeName": "Standing (CH0030)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0030/ST_CH0030.skel",
-    "atlasPath": "skins/st_ch0030/ST_CH0030.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 75
-  },
-  {
-    "id": "st_ch0031",
-    "charName": "CH0031",
-    "costumeName": "Standing (CH0031)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0031/ST_CH0031.skel",
-    "atlasPath": "skins/st_ch0031/ST_CH0031.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 76
-  },
-  {
-    "id": "st_ch0032",
-    "charName": "CH0032",
-    "costumeName": "Standing (CH0032)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0032/ST_CH0032.skel",
-    "atlasPath": "skins/st_ch0032/ST_CH0032.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 77
-  },
-  {
-    "id": "st_ch0033",
-    "charName": "CH0033",
-    "costumeName": "Standing (CH0033)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0033/ST_CH0033.skel",
-    "atlasPath": "skins/st_ch0033/ST_CH0033.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 78
-  },
-  {
-    "id": "st_ch0034",
-    "charName": "CH0034",
-    "costumeName": "Standing (CH0034)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0034/ST_CH0034.skel",
-    "atlasPath": "skins/st_ch0034/ST_CH0034.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 79
-  },
-  {
-    "id": "st_ch0035",
-    "charName": "CH0035",
-    "costumeName": "Standing (CH0035)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0035/ST_CH0035.skel",
-    "atlasPath": "skins/st_ch0035/ST_CH0035.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 80
-  },
-  {
-    "id": "st_ch0036",
-    "charName": "CH0036",
-    "costumeName": "Standing (CH0036)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0036/ST_CH0036.skel",
-    "atlasPath": "skins/st_ch0036/ST_CH0036.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 81
-  },
-  {
-    "id": "st_ch0037",
-    "charName": "CH0037",
-    "costumeName": "Standing (CH0037)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0037/ST_CH0037.skel",
-    "atlasPath": "skins/st_ch0037/ST_CH0037.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 82
-  },
-  {
-    "id": "st_ch0038",
-    "charName": "CH0038",
-    "costumeName": "Standing (CH0038)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0038/ST_CH0038.skel",
-    "atlasPath": "skins/st_ch0038/ST_CH0038.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 83
-  },
-  {
-    "id": "st_ch0039",
-    "charName": "CH0039",
-    "costumeName": "Standing (CH0039)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0039/ST_CH0039.skel",
-    "atlasPath": "skins/st_ch0039/ST_CH0039.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 84
-  },
-  {
-    "id": "st_ch0040",
-    "charName": "CH0040",
-    "costumeName": "Standing (CH0040)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0040/ST_CH0040.skel",
-    "atlasPath": "skins/st_ch0040/ST_CH0040.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 85
-  },
-  {
-    "id": "st_ch0042",
-    "charName": "CH0042",
-    "costumeName": "Standing (CH0042)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0042/ST_CH0042.skel",
-    "atlasPath": "skins/st_ch0042/ST_CH0042.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 86
-  },
-  {
-    "id": "st_ch0043",
-    "charName": "CH0043",
-    "costumeName": "Standing (CH0043)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0043/ST_CH0043.skel",
-    "atlasPath": "skins/st_ch0043/ST_CH0043.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 87
-  },
-  {
-    "id": "st_ch0046",
-    "charName": "CH0046",
-    "costumeName": "Standing (CH0046)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0046/ST_CH0046.skel",
-    "atlasPath": "skins/st_ch0046/ST_CH0046.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 88
-  },
-  {
-    "id": "st_ch0050",
-    "charName": "CH0050",
-    "costumeName": "Standing (CH0050)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0050/ST_CH0050.skel",
-    "atlasPath": "skins/st_ch0050/ST_CH0050.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 89
-  },
-  {
-    "id": "st_ch0052",
-    "charName": "CH0052",
-    "costumeName": "Standing (CH0052)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/st_ch0052/ST_CH0052.skel",
-    "atlasPath": "bucket2/skins/st_ch0052/ST_CH0052.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 90
-  },
-  {
-    "id": "st_ch0053",
-    "charName": "CH0053",
-    "costumeName": "Standing (CH0053)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0053/ST_CH0053.skel",
-    "atlasPath": "skins/st_ch0053/ST_CH0053.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 91
-  },
-  {
-    "id": "st_ch0054",
-    "charName": "CH0054",
-    "costumeName": "Standing (CH0054)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0054/ST_CH0054.skel",
-    "atlasPath": "skins/st_ch0054/ST_CH0054.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 92
-  },
-  {
-    "id": "st_ch0056",
-    "charName": "CH0056",
-    "costumeName": "Standing (CH0056)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0056/ST_CH0056.skel",
-    "atlasPath": "skins/st_ch0056/ST_CH0056.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 93
-  },
-  {
-    "id": "st_ch0057",
-    "charName": "CH0057",
-    "costumeName": "Standing (CH0057)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0057/ST_CH0057.skel",
-    "atlasPath": "skins/st_ch0057/ST_CH0057.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 94
-  },
-  {
-    "id": "st_ch0058",
-    "charName": "CH0058",
-    "costumeName": "Standing (CH0058)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/st_ch0058/ST_CH0058.skel",
-    "atlasPath": "bucket2/skins/st_ch0058/ST_CH0058.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 95
-  },
-  {
-    "id": "st_ch0059",
-    "charName": "CH0059",
-    "costumeName": "Standing (CH0059)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0059/ST_CH0059.skel",
-    "atlasPath": "skins/st_ch0059/ST_CH0059.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 96
-  },
-  {
-    "id": "st_ch0060",
-    "charName": "CH0060",
-    "costumeName": "Standing (CH0060)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/st_ch0060/ST_CH0060.skel",
-    "atlasPath": "bucket2/skins/st_ch0060/ST_CH0060.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 97
-  },
-  {
-    "id": "st_ch0062",
-    "charName": "CH0062",
-    "costumeName": "Standing (CH0062)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0062/ST_CH0062.skel",
-    "atlasPath": "skins/st_ch0062/ST_CH0062.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 98
-  },
-  {
-    "id": "st_ch0063",
-    "charName": "CH0063",
-    "costumeName": "Standing (CH0063)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0063/ST_CH0063.skel",
-    "atlasPath": "skins/st_ch0063/ST_CH0063.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 99
-  },
-  {
-    "id": "st_ch0068",
-    "charName": "CH0068",
-    "costumeName": "Standing (CH0068)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0068/ST_CH0068.skel",
-    "atlasPath": "skins/st_ch0068/ST_CH0068.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 100
-  },
-  {
-    "id": "st_ch0069",
-    "charName": "CH0069",
-    "costumeName": "Standing (CH0069)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0069/ST_CH0069.skel",
-    "atlasPath": "skins/st_ch0069/ST_CH0069.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 101
-  },
-  {
-    "id": "st_ch0075",
-    "charName": "CH0075",
-    "costumeName": "Standing (CH0075)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_ch0075/ST_CH0075.skel",
-    "atlasPath": "skins/st_ch0075/ST_CH0075.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 102
-  },
-  {
-    "id": "st_np0103",
-    "charName": "NP0103",
-    "costumeName": "Standing (NP0103)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_np0103/ST_NP0103.skel",
-    "atlasPath": "skins/st_np0103/ST_NP0103.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 103
-  },
-  {
-    "id": "st_np0104",
-    "charName": "NP0104",
-    "costumeName": "Standing (NP0104)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_np0104/ST_NP0104.skel",
-    "atlasPath": "skins/st_np0104/ST_NP0104.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 104
-  },
-  {
-    "id": "st_np0199",
-    "charName": "NP0199",
-    "costumeName": "Standing (NP0199)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_np0199/ST_NP0199.skel",
-    "atlasPath": "skins/st_np0199/ST_NP0199.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 105
-  },
-  {
-    "id": "st_np0203",
-    "charName": "NP0203",
-    "costumeName": "Standing (NP0203)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_np0203/ST_NP0203.skel",
-    "atlasPath": "skins/st_np0203/ST_NP0203.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 106
-  },
-  {
-    "id": "st_np0212",
-    "charName": "NP0212",
-    "costumeName": "Standing (NP0212)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_np0212/ST_NP0212.skel",
-    "atlasPath": "skins/st_np0212/ST_NP0212.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 107
-  },
-  {
-    "id": "st_np0299",
-    "charName": "NP0299",
-    "costumeName": "Standing (NP0299)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_np0299/ST_NP0299.skel",
-    "atlasPath": "skins/st_np0299/ST_NP0299.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 108
-  },
-  {
-    "id": "st_np0304",
-    "charName": "NP0304",
-    "costumeName": "Standing (NP0304)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_np0304/ST_NP0304.skel",
-    "atlasPath": "skins/st_np0304/ST_NP0304.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 109
-  },
-  {
-    "id": "st_np0306",
-    "charName": "NP0306",
-    "costumeName": "Standing (NP0306)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_np0306/ST_NP0306.skel",
-    "atlasPath": "skins/st_np0306/ST_NP0306.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 110
-  },
-  {
-    "id": "st_np0308",
-    "charName": "NP0308",
-    "costumeName": "Standing (NP0308)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_np0308/ST_NP0308.skel",
-    "atlasPath": "skins/st_np0308/ST_NP0308.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 111
-  },
-  {
-    "id": "st_np0399",
-    "charName": "NP0399",
-    "costumeName": "Standing (NP0399)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_np0399/ST_NP0399.skel",
-    "atlasPath": "skins/st_np0399/ST_NP0399.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 112
-  },
-  {
-    "id": "st_np0402",
-    "charName": "NP0402",
-    "costumeName": "Standing (NP0402)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_np0402/ST_NP0402.skel",
-    "atlasPath": "skins/st_np0402/ST_NP0402.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 113
-  },
-  {
-    "id": "st_np0411",
-    "charName": "NP0411",
-    "costumeName": "Standing (NP0411)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_np0411/ST_NP0411.skel",
-    "atlasPath": "skins/st_np0411/ST_NP0411.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 114
-  },
-  {
-    "id": "st_np0499",
-    "charName": "NP0499",
-    "costumeName": "Standing (NP0499)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_np0499/ST_NP0499.skel",
-    "atlasPath": "skins/st_np0499/ST_NP0499.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 115
-  },
-  {
-    "id": "st_np0502",
-    "charName": "NP0502",
-    "costumeName": "Standing (NP0502)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_np0502/ST_NP0502.skel",
-    "atlasPath": "skins/st_np0502/ST_NP0502.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 116
-  },
-  {
-    "id": "st_np0509",
-    "charName": "NP0509",
-    "costumeName": "Standing (NP0509)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_np0509/ST_NP0509.skel",
-    "atlasPath": "skins/st_np0509/ST_NP0509.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 117
-  },
-  {
-    "id": "st_np0599",
-    "charName": "NP0599",
-    "costumeName": "Standing (NP0599)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_np0599/ST_NP0599.skel",
-    "atlasPath": "skins/st_np0599/ST_NP0599.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 118
-  },
-  {
-    "id": "st_np0706",
-    "charName": "NP0706",
-    "costumeName": "Standing (NP0706)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_np0706/ST_NP0706.skel",
-    "atlasPath": "skins/st_np0706/ST_NP0706.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 119
-  },
-  {
-    "id": "st_np0708",
-    "charName": "NP0708",
-    "costumeName": "Standing (NP0708)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_np0708/ST_NP0708.skel",
-    "atlasPath": "skins/st_np0708/ST_NP0708.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 120
-  },
-  {
-    "id": "st_np0799",
-    "charName": "NP0799",
-    "costumeName": "Standing (NP0799)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_np0799/ST_NP0799.skel",
-    "atlasPath": "skins/st_np0799/ST_NP0799.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 121
-  },
-  {
-    "id": "st_np0802",
-    "charName": "NP0802",
-    "costumeName": "Standing (NP0802)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/st_np0802/ST_NP0802.skel",
-    "atlasPath": "bucket2/skins/st_np0802/ST_NP0802.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 122
-  },
-  {
-    "id": "st_np6023",
-    "charName": "NP6023",
-    "costumeName": "Standing (NP6023)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_np6023/ST_NP6023.skel",
-    "atlasPath": "skins/st_np6023/ST_NP6023.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 123
-  },
-  {
-    "id": "st_np6028",
-    "charName": "NP6028",
-    "costumeName": "Standing (NP6028)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/st_np6028/ST_NP6028.skel",
-    "atlasPath": "bucket2/skins/st_np6028/ST_NP6028.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 124
-  },
-  {
-    "id": "st_sc0002",
-    "charName": "SC0002",
-    "costumeName": "Standing (SC0002)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_sc0002/ST_SC0002.skel",
-    "atlasPath": "skins/st_sc0002/ST_SC0002.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 125
-  },
-  {
-    "id": "st_sc0003",
-    "charName": "SC0003",
-    "costumeName": "Standing (SC0003)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/st_sc0003/ST_SC0003.skel",
-    "atlasPath": "bucket2/skins/st_sc0003/ST_SC0003.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 126
-  },
-  {
-    "id": "st_sc0003_01",
-    "charName": "SC0003_01",
-    "costumeName": "Standing (SC0003_01)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/st_sc0003_01/ST_SC0003_01.skel",
-    "atlasPath": "bucket2/skins/st_sc0003_01/ST_SC0003_01.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 127
-  },
-  {
-    "id": "st_sc0004",
-    "charName": "SC0004",
-    "costumeName": "Standing (SC0004)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/st_sc0004/ST_SC0004.skel",
-    "atlasPath": "bucket2/skins/st_sc0004/ST_SC0004.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 128
-  },
-  {
-    "id": "st_sc0101",
-    "charName": "SC0101",
-    "costumeName": "Standing (SC0101)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/st_sc0101/ST_SC0101.skel",
-    "atlasPath": "bucket2/skins/st_sc0101/ST_SC0101.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 129
-  },
-  {
-    "id": "st_sc0201",
-    "charName": "SC0201",
-    "costumeName": "Standing (SC0201)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/st_sc0201/ST_SC0201.skel",
-    "atlasPath": "bucket2/skins/st_sc0201/ST_SC0201.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 130
-  },
-  {
-    "id": "st_sc0202",
-    "charName": "SC0202",
-    "costumeName": "Standing (SC0202)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/st_sc0202/ST_SC0202.skel",
-    "atlasPath": "bucket2/skins/st_sc0202/ST_SC0202.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 131
-  },
-  {
-    "id": "st_sc0203",
-    "charName": "SC0203",
-    "costumeName": "Standing (SC0203)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/st_sc0203/ST_SC0203.skel",
-    "atlasPath": "bucket2/skins/st_sc0203/ST_SC0203.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 132
-  },
-  {
-    "id": "st_sc0204",
-    "charName": "SC0204",
-    "costumeName": "Standing (SC0204)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/st_sc0204/ST_SC0204.skel",
-    "atlasPath": "bucket2/skins/st_sc0204/ST_SC0204.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 133
-  },
-  {
-    "id": "st_sc0212",
-    "charName": "SC0212",
-    "costumeName": "Standing (SC0212)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/st_sc0212/ST_SC0212.skel",
-    "atlasPath": "bucket2/skins/st_sc0212/ST_SC0212.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 134
-  },
-  {
-    "id": "st_sc0213",
-    "charName": "SC0213",
-    "costumeName": "Standing (SC0213)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/st_sc0213/ST_SC0213.skel",
-    "atlasPath": "bucket2/skins/st_sc0213/ST_SC0213.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 135
-  },
-  {
-    "id": "st_sc0214",
-    "charName": "SC0214",
-    "costumeName": "Standing (SC0214)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/st_sc0214/ST_SC0214.skel",
-    "atlasPath": "bucket2/skins/st_sc0214/ST_SC0214.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 136
-  },
-  {
-    "id": "st_sc3001",
-    "charName": "SC3001",
-    "costumeName": "Standing (SC3001)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/st_sc3001/ST_SC3001.skel",
-    "atlasPath": "bucket2/skins/st_sc3001/ST_SC3001.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 137
-  },
-  {
-    "id": "st_sc3002",
-    "charName": "SC3002",
-    "costumeName": "Standing (SC3002)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/st_sc3002/ST_SC3002.skel",
-    "atlasPath": "bucket2/skins/st_sc3002/ST_SC3002.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 138
-  },
-  {
-    "id": "st_sc3003",
-    "charName": "SC3003",
-    "costumeName": "Standing (SC3003)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_sc3003/ST_SC3003.skel",
-    "atlasPath": "skins/st_sc3003/ST_SC3003.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 139
-  },
-  {
-    "id": "st_sc3004",
-    "charName": "SC3004",
-    "costumeName": "Standing (SC3004)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/st_sc3004/ST_SC3004.skel",
-    "atlasPath": "bucket2/skins/st_sc3004/ST_SC3004.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 140
-  },
-  {
-    "id": "st_sc3005",
-    "charName": "SC3005",
-    "costumeName": "Standing (SC3005)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/st_sc3005/ST_SC3005.skel",
-    "atlasPath": "bucket2/skins/st_sc3005/ST_SC3005.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 141
-  },
-  {
-    "id": "st_sc3006",
-    "charName": "SC3006",
-    "costumeName": "Standing (SC3006)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/st_sc3006/ST_SC3006.skel",
-    "atlasPath": "bucket2/skins/st_sc3006/ST_SC3006.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 142
-  },
-  {
-    "id": "st_sc3007",
-    "charName": "SC3007",
-    "costumeName": "Standing (SC3007)",
-    "modelType": "skin",
-    "jsonPath": "skins/st_sc3007/ST_SC3007.skel",
-    "atlasPath": "skins/st_sc3007/ST_SC3007.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": true,
-    "stores": [
-      "google",
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 143
-  },
-  {
-    "id": "st_sc3012",
-    "charName": "SC3012",
-    "costumeName": "Standing (SC3012)",
-    "modelType": "skin",
-    "jsonPath": "bucket2/skins/st_sc3012/ST_SC3012.skel",
-    "atlasPath": "bucket2/skins/st_sc3012/ST_SC3012.atlas",
-    "iconPath": "",
-    "spineVersion": "4.1",
-    "kind": "standing",
-    "uncensored": false,
-    "stores": [
-      "onestore"
-    ],
-    "hasBg": false,
-    "releaseOrder": 144
-  }
+ {
+  "id": "af_ch0009",
+  "charName": "CH0009",
+  "costumeName": "Affection (CH0009)",
+  "modelType": "skin",
+  "jsonPath": "skins/af_ch0009__google/AF_CH0009.skel",
+  "atlasPath": "skins/af_ch0009__google/AF_CH0009.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "affection",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 0
+ },
+ {
+  "id": "af_ch0010",
+  "charName": "CH0010",
+  "costumeName": "Affection (CH0010)",
+  "modelType": "skin",
+  "jsonPath": "skins/af_ch0010__google/AF_CH0010.skel",
+  "atlasPath": "skins/af_ch0010__google/AF_CH0010.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "affection",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 1
+ },
+ {
+  "id": "af_ch0011",
+  "charName": "CH0011",
+  "costumeName": "Affection (CH0011)",
+  "modelType": "skin",
+  "jsonPath": "skins/af_ch0011/AF_chise.skel",
+  "atlasPath": "skins/af_ch0011/AF_chise.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "affection",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 2
+ },
+ {
+  "id": "af_ch0015",
+  "charName": "CH0015",
+  "costumeName": "Affection (CH0015)",
+  "modelType": "skin",
+  "jsonPath": "skins/af_ch0015__google/AF_CH0015.skel",
+  "atlasPath": "skins/af_ch0015__google/AF_CH0015.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "affection",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 3
+ },
+ {
+  "id": "af_ch0019",
+  "charName": "CH0019",
+  "costumeName": "Affection (CH0019)",
+  "modelType": "skin",
+  "jsonPath": "skins/af_ch0019/AF_CH0019.skel",
+  "atlasPath": "skins/af_ch0019/AF_CH0019.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "affection",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 4
+ },
+ {
+  "id": "af_ch0022",
+  "charName": "CH0022",
+  "costumeName": "Affection (CH0022)",
+  "modelType": "skin",
+  "jsonPath": "skins/af_ch0022__google/AF_CH0022.skel",
+  "atlasPath": "skins/af_ch0022__google/AF_CH0022.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "affection",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 5
+ },
+ {
+  "id": "af_ch0024",
+  "charName": "CH0024",
+  "costumeName": "Affection (CH0024)",
+  "modelType": "skin",
+  "jsonPath": "skins/af_ch0024__google/AF_Alone.skel",
+  "atlasPath": "skins/af_ch0024__google/AF_Alone.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "affection",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 6
+ },
+ {
+  "id": "af_ch0028",
+  "charName": "CH0028",
+  "costumeName": "Affection (CH0028)",
+  "modelType": "skin",
+  "jsonPath": "skins/af_ch0028__google/AF_Charlotte.skel",
+  "atlasPath": "skins/af_ch0028__google/AF_Charlotte.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "affection",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 7
+ },
+ {
+  "id": "af_ch0032",
+  "charName": "CH0032",
+  "costumeName": "Affection (CH0032)",
+  "modelType": "skin",
+  "jsonPath": "skins/af_ch0032/AF_CH0032.skel",
+  "atlasPath": "skins/af_ch0032/AF_CH0032.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "affection",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 8
+ },
+ {
+  "id": "af_ch0033",
+  "charName": "CH0033",
+  "costumeName": "Affection (CH0033)",
+  "modelType": "skin",
+  "jsonPath": "skins/af_ch0033__google/AF_CH0033.skel",
+  "atlasPath": "skins/af_ch0033__google/AF_CH0033.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "affection",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 9
+ },
+ {
+  "id": "af_ch0035",
+  "charName": "CH0035",
+  "costumeName": "Affection (CH0035)",
+  "modelType": "skin",
+  "jsonPath": "skins/af_ch0035__google/AF_CH0035.skel",
+  "atlasPath": "skins/af_ch0035__google/AF_CH0035.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "affection",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 10
+ },
+ {
+  "id": "af_ch0038",
+  "charName": "CH0038",
+  "costumeName": "Affection (CH0038)",
+  "modelType": "skin",
+  "jsonPath": "skins/af_ch0038__google/AF_CH0038.skel",
+  "atlasPath": "skins/af_ch0038__google/AF_CH0038.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "affection",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 11
+ },
+ {
+  "id": "af_ch0040",
+  "charName": "CH0040",
+  "costumeName": "Affection (CH0040)",
+  "modelType": "skin",
+  "jsonPath": "skins/af_ch0040__google/AF_CH0040.skel",
+  "atlasPath": "skins/af_ch0040__google/AF_CH0040.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "affection",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 12
+ },
+ {
+  "id": "af_ch0042",
+  "charName": "CH0042",
+  "costumeName": "Affection (CH0042)",
+  "modelType": "skin",
+  "jsonPath": "skins/af_ch0042__google/AF_CH0042.skel",
+  "atlasPath": "skins/af_ch0042__google/AF_CH0042.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "affection",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 13
+ },
+ {
+  "id": "af_ch0043",
+  "charName": "CH0043",
+  "costumeName": "Affection (CH0043)",
+  "modelType": "skin",
+  "jsonPath": "skins/af_ch0043__google/AF_CH0043.skel",
+  "atlasPath": "skins/af_ch0043__google/AF_CH0043.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "affection",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 14
+ },
+ {
+  "id": "af_ch0052",
+  "charName": "CH0052",
+  "costumeName": "Affection (CH0052)",
+  "modelType": "skin",
+  "jsonPath": "skins/af_ch0052__google/AF_CH0052.skel",
+  "atlasPath": "skins/af_ch0052__google/AF_CH0052.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "affection",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 15
+ },
+ {
+  "id": "af_ch0057",
+  "charName": "CH0057",
+  "costumeName": "Affection (CH0057)",
+  "modelType": "skin",
+  "jsonPath": "skins/af_ch0057__google/AF_CH0057.skel",
+  "atlasPath": "skins/af_ch0057__google/AF_CH0057.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "affection",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 16
+ },
+ {
+  "id": "af_ch0058",
+  "charName": "CH0058",
+  "costumeName": "Affection (CH0058)",
+  "modelType": "skin",
+  "jsonPath": "skins/af_ch0058__google/AF_CH0058.skel",
+  "atlasPath": "skins/af_ch0058__google/AF_CH0058.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "affection",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 17
+ },
+ {
+  "id": "af_ch0068",
+  "charName": "CH0068",
+  "costumeName": "Affection (CH0068)",
+  "modelType": "skin",
+  "jsonPath": "skins/af_ch0068__google/AF_CH0068.skel",
+  "atlasPath": "skins/af_ch0068__google/AF_CH0068.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "affection",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 18
+ },
+ {
+  "id": "af_ch0069",
+  "charName": "CH0069",
+  "costumeName": "Affection (CH0069)",
+  "modelType": "skin",
+  "jsonPath": "skins/af_ch0069__google/AF_CH0069.skel",
+  "atlasPath": "skins/af_ch0069__google/AF_CH0069.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "affection",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 19
+ },
+ {
+  "id": "af_ch0075",
+  "charName": "CH0075",
+  "costumeName": "Affection (CH0075)",
+  "modelType": "skin",
+  "jsonPath": "skins/af_ch0075__google/AF_CH0075.skel",
+  "atlasPath": "skins/af_ch0075__google/AF_CH0075.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "affection",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 20
+ },
+ {
+  "id": "ds_ch0009",
+  "charName": "CH0009",
+  "costumeName": "Desire (CH0009)",
+  "modelType": "skin",
+  "jsonPath": "skins/ds_ch0009__google/DS_Elisia.skel",
+  "atlasPath": "skins/ds_ch0009__google/DS_Elisia.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "desire",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 23
+ },
+ {
+  "id": "ds_ch0010",
+  "charName": "CH0010",
+  "costumeName": "Desire (CH0010)",
+  "modelType": "skin",
+  "jsonPath": "skins/ds_ch0010/DS_CH0010.skel",
+  "atlasPath": "skins/ds_ch0010/DS_CH0010.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "desire",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 24
+ },
+ {
+  "id": "ds_ch0011",
+  "charName": "CH0011",
+  "costumeName": "Desire (CH0011)",
+  "modelType": "skin",
+  "jsonPath": "skins/ds_ch0011__google/DS_chise.skel",
+  "atlasPath": "skins/ds_ch0011__google/DS_chise.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "desire",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 25
+ },
+ {
+  "id": "ds_ch0015",
+  "charName": "CH0015",
+  "costumeName": "Desire (CH0015)",
+  "modelType": "skin",
+  "jsonPath": "skins/ds_ch0015/DS_Ines.skel",
+  "atlasPath": "skins/ds_ch0015/DS_Ines.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "desire",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 26
+ },
+ {
+  "id": "ds_ch0019",
+  "charName": "CH0019",
+  "costumeName": "Desire (CH0019)",
+  "modelType": "skin",
+  "jsonPath": "skins/ds_ch0019__google/DS_Victoria.skel",
+  "atlasPath": "skins/ds_ch0019__google/DS_Victoria.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "desire",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 27
+ },
+ {
+  "id": "ds_ch0022",
+  "charName": "CH0022",
+  "costumeName": "Desire (CH0022)",
+  "modelType": "skin",
+  "jsonPath": "skins/ds_ch0022__google/DS_CH0022.skel",
+  "atlasPath": "skins/ds_ch0022__google/DS_CH0022.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "desire",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 28
+ },
+ {
+  "id": "ds_ch0024",
+  "charName": "CH0024",
+  "costumeName": "Desire (CH0024)",
+  "modelType": "skin",
+  "jsonPath": "skins/ds_ch0024__google/DS_Alone.skel",
+  "atlasPath": "skins/ds_ch0024__google/DS_Alone.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "desire",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 29
+ },
+ {
+  "id": "ds_ch0028",
+  "charName": "CH0028",
+  "costumeName": "Desire (CH0028)",
+  "modelType": "skin",
+  "jsonPath": "skins/ds_ch0028__google/DS_Charlotte.skel",
+  "atlasPath": "skins/ds_ch0028__google/DS_Charlotte.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "desire",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 30
+ },
+ {
+  "id": "ds_ch0032",
+  "charName": "CH0032",
+  "costumeName": "Desire (CH0032)",
+  "modelType": "skin",
+  "jsonPath": "skins/ds_ch0032__google/DS_CH0032.skel",
+  "atlasPath": "skins/ds_ch0032__google/DS_CH0032.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "desire",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 31
+ },
+ {
+  "id": "ds_ch0033",
+  "charName": "CH0033",
+  "costumeName": "Desire (CH0033)",
+  "modelType": "skin",
+  "jsonPath": "skins/ds_ch0033__google/DS_CH0033.skel",
+  "atlasPath": "skins/ds_ch0033__google/DS_CH0033.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "desire",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 32
+ },
+ {
+  "id": "ds_ch0035",
+  "charName": "CH0035",
+  "costumeName": "Desire (CH0035)",
+  "modelType": "skin",
+  "jsonPath": "skins/ds_ch0035__google/DS_CH0035.skel",
+  "atlasPath": "skins/ds_ch0035__google/DS_CH0035.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "desire",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 33
+ },
+ {
+  "id": "ds_ch0038",
+  "charName": "CH0038",
+  "costumeName": "Desire (CH0038)",
+  "modelType": "skin",
+  "jsonPath": "skins/ds_ch0038__google/DS_CH0038.skel",
+  "atlasPath": "skins/ds_ch0038__google/DS_CH0038.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "desire",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 34
+ },
+ {
+  "id": "ds_ch0040",
+  "charName": "CH0040",
+  "costumeName": "Desire (CH0040)",
+  "modelType": "skin",
+  "jsonPath": "skins/ds_ch0040__google/DS_CH0040.skel",
+  "atlasPath": "skins/ds_ch0040__google/DS_CH0040.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "desire",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 35
+ },
+ {
+  "id": "ds_ch0042",
+  "charName": "CH0042",
+  "costumeName": "Desire (CH0042)",
+  "modelType": "skin",
+  "jsonPath": "skins/ds_ch0042__google/DS_CH0042.skel",
+  "atlasPath": "skins/ds_ch0042__google/DS_CH0042.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "desire",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 36
+ },
+ {
+  "id": "ds_ch0043",
+  "charName": "CH0043",
+  "costumeName": "Desire (CH0043)",
+  "modelType": "skin",
+  "jsonPath": "skins/ds_ch0043__google/DS_CH0043.skel",
+  "atlasPath": "skins/ds_ch0043__google/DS_CH0043.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "desire",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 37
+ },
+ {
+  "id": "ds_ch0052",
+  "charName": "CH0052",
+  "costumeName": "Desire (CH0052)",
+  "modelType": "skin",
+  "jsonPath": "skins/ds_ch0052__google/DS_CH0052.skel",
+  "atlasPath": "skins/ds_ch0052__google/DS_CH0052.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "desire",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 38
+ },
+ {
+  "id": "ds_ch0057",
+  "charName": "CH0057",
+  "costumeName": "Desire (CH0057)",
+  "modelType": "skin",
+  "jsonPath": "skins/ds_ch0057/DS_CH0057.skel",
+  "atlasPath": "skins/ds_ch0057/DS_CH0057.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "desire",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 39
+ },
+ {
+  "id": "ds_ch0058",
+  "charName": "CH0058",
+  "costumeName": "Desire (CH0058)",
+  "modelType": "skin",
+  "jsonPath": "skins/ds_ch0058__google/DS_CH0058.skel",
+  "atlasPath": "skins/ds_ch0058__google/DS_CH0058.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "desire",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 40
+ },
+ {
+  "id": "ds_ch0068",
+  "charName": "CH0068",
+  "costumeName": "Desire (CH0068)",
+  "modelType": "skin",
+  "jsonPath": "skins/ds_ch0068__google/DS_CH0068.skel",
+  "atlasPath": "skins/ds_ch0068__google/DS_CH0068.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "desire",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 41
+ },
+ {
+  "id": "ds_ch0069",
+  "charName": "CH0069",
+  "costumeName": "Desire (CH0069)",
+  "modelType": "skin",
+  "jsonPath": "skins/ds_ch0069__google/DS_CH0069.skel",
+  "atlasPath": "skins/ds_ch0069__google/DS_CH0069.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "desire",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 42
+ },
+ {
+  "id": "ds_ch0075",
+  "charName": "CH0075",
+  "costumeName": "Desire (CH0075)",
+  "modelType": "skin",
+  "jsonPath": "skins/ds_ch0075__google/DS_CH0075.skel",
+  "atlasPath": "skins/ds_ch0075__google/DS_CH0075.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "desire",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 43
+ },
+ {
+  "id": "pl_cutin_0001",
+  "charName": "cutin_0001",
+  "costumeName": "pleasure (cutin_0001)",
+  "modelType": "skin",
+  "jsonPath": "skins/pl_cutin_0001__google/PL_cutin_0001.skel",
+  "atlasPath": "skins/pl_cutin_0001__google/PL_cutin_0001.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "pleasure",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 44
+ },
+ {
+  "id": "pl_cutin_0002",
+  "charName": "cutin_0002",
+  "costumeName": "pleasure (cutin_0002)",
+  "modelType": "skin",
+  "jsonPath": "skins/pl_cutin_0002__google/PL_cutin_0002.skel",
+  "atlasPath": "skins/pl_cutin_0002__google/PL_cutin_0002.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "pleasure",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 45
+ },
+ {
+  "id": "pl_ev0001",
+  "charName": "EV0001",
+  "costumeName": "pleasure (EV0001)",
+  "modelType": "skin",
+  "jsonPath": "skins/pl_ev0001/PL_EV0001.skel",
+  "atlasPath": "skins/pl_ev0001/PL_EV0001.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "pleasure",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 46
+ },
+ {
+  "id": "pl_ev0002",
+  "charName": "EV0002",
+  "costumeName": "pleasure (EV0002)",
+  "modelType": "skin",
+  "jsonPath": "skins/pl_ev0002__google/PL_EV0002.skel",
+  "atlasPath": "skins/pl_ev0002__google/PL_EV0002.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "pleasure",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 47
+ },
+ {
+  "id": "pl_ma0003",
+  "charName": "MA0003",
+  "costumeName": "pleasure (MA0003)",
+  "modelType": "skin",
+  "jsonPath": "skins/pl_ma0003__google/PL_MA0003.skel",
+  "atlasPath": "skins/pl_ma0003__google/PL_MA0003.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "pleasure",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 48
+ },
+ {
+  "id": "pl_title_0001",
+  "charName": "title_0001",
+  "costumeName": "pleasure (title_0001)",
+  "modelType": "skin",
+  "jsonPath": "skins/pl_title_0001/PL_title_0001.skel",
+  "atlasPath": "skins/pl_title_0001/PL_title_0001.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "pleasure",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": true,
+  "releaseOrder": 49
+ },
+ {
+  "id": "st_ch0001",
+  "charName": "CH0001",
+  "costumeName": "Standing (CH0001)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0001/ST_CH0001.skel",
+  "atlasPath": "skins/st_ch0001/ST_CH0001.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 50
+ },
+ {
+  "id": "st_ch0002",
+  "charName": "CH0002",
+  "costumeName": "Standing (CH0002)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0002/ST_CH0002.skel",
+  "atlasPath": "skins/st_ch0002/ST_CH0002.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 51
+ },
+ {
+  "id": "st_ch0003",
+  "charName": "CH0003",
+  "costumeName": "Standing (CH0003)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0003/ST_CH0003.skel",
+  "atlasPath": "skins/st_ch0003/ST_CH0003.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 52
+ },
+ {
+  "id": "st_ch0005",
+  "charName": "CH0005",
+  "costumeName": "Standing (CH0005)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0005/ST_CH0005.skel",
+  "atlasPath": "skins/st_ch0005/ST_CH0005.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 53
+ },
+ {
+  "id": "st_ch0006",
+  "charName": "CH0006",
+  "costumeName": "Standing (CH0006)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0006/ST_CH0006.skel",
+  "atlasPath": "skins/st_ch0006/ST_CH0006.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 54
+ },
+ {
+  "id": "st_ch0007",
+  "charName": "CH0007",
+  "costumeName": "Standing (CH0007)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0007/ST_CH0007.skel",
+  "atlasPath": "skins/st_ch0007/ST_CH0007.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 55
+ },
+ {
+  "id": "st_ch0009",
+  "charName": "CH0009",
+  "costumeName": "Standing (CH0009)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0009__google/ST_CH0009.skel",
+  "atlasPath": "skins/st_ch0009__google/ST_CH0009.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 56
+ },
+ {
+  "id": "st_ch0010",
+  "charName": "CH0010",
+  "costumeName": "Standing (CH0010)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0010__google/ST_CH0010.skel",
+  "atlasPath": "skins/st_ch0010__google/ST_CH0010.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 57
+ },
+ {
+  "id": "st_ch0011",
+  "charName": "CH0011",
+  "costumeName": "Standing (CH0011)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0011/ST_CH0011.skel",
+  "atlasPath": "skins/st_ch0011/ST_CH0011.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 58
+ },
+ {
+  "id": "st_ch0012",
+  "charName": "CH0012",
+  "costumeName": "Standing (CH0012)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0012/ST_CH0012.skel",
+  "atlasPath": "skins/st_ch0012/ST_CH0012.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 59
+ },
+ {
+  "id": "st_ch0013",
+  "charName": "CH0013",
+  "costumeName": "Standing (CH0013)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0013/ST_CH0013.skel",
+  "atlasPath": "skins/st_ch0013/ST_CH0013.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 60
+ },
+ {
+  "id": "st_ch0015",
+  "charName": "CH0015",
+  "costumeName": "Standing (CH0015)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0015/ST_CH0015.skel",
+  "atlasPath": "skins/st_ch0015/ST_CH0015.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 61
+ },
+ {
+  "id": "st_ch0016",
+  "charName": "CH0016",
+  "costumeName": "Standing (CH0016)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0016/ST_CH0016.skel",
+  "atlasPath": "skins/st_ch0016/ST_CH0016.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 62
+ },
+ {
+  "id": "st_ch0017",
+  "charName": "CH0017",
+  "costumeName": "Standing (CH0017)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0017/ST_CH0017.skel",
+  "atlasPath": "skins/st_ch0017/ST_CH0017.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 63
+ },
+ {
+  "id": "st_ch0019",
+  "charName": "CH0019",
+  "costumeName": "Standing (CH0019)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0019/ST_CH0019.skel",
+  "atlasPath": "skins/st_ch0019/ST_CH0019.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 64
+ },
+ {
+  "id": "st_ch0020",
+  "charName": "CH0020",
+  "costumeName": "Standing (CH0020)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0020/ST_CH0020.skel",
+  "atlasPath": "skins/st_ch0020/ST_CH0020.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 65
+ },
+ {
+  "id": "st_ch0021",
+  "charName": "CH0021",
+  "costumeName": "Standing (CH0021)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0021/ST_CH0021.skel",
+  "atlasPath": "skins/st_ch0021/ST_CH0021.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 66
+ },
+ {
+  "id": "st_ch0022",
+  "charName": "CH0022",
+  "costumeName": "Standing (CH0022)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0022/ST_CH0022.skel",
+  "atlasPath": "skins/st_ch0022/ST_CH0022.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 67
+ },
+ {
+  "id": "st_ch0023",
+  "charName": "CH0023",
+  "costumeName": "Standing (CH0023)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0023/ST_CH0023.skel",
+  "atlasPath": "skins/st_ch0023/ST_CH0023.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 68
+ },
+ {
+  "id": "st_ch0024",
+  "charName": "CH0024",
+  "costumeName": "Standing (CH0024)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0024/ST_CH0024.skel",
+  "atlasPath": "skins/st_ch0024/ST_CH0024.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 69
+ },
+ {
+  "id": "st_ch0025",
+  "charName": "CH0025",
+  "costumeName": "Standing (CH0025)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0025/ST_CH0025.skel",
+  "atlasPath": "skins/st_ch0025/ST_CH0025.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 70
+ },
+ {
+  "id": "st_ch0026",
+  "charName": "CH0026",
+  "costumeName": "Standing (CH0026)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0026/ST_CH0026.skel",
+  "atlasPath": "skins/st_ch0026/ST_CH0026.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 71
+ },
+ {
+  "id": "st_ch0027",
+  "charName": "CH0027",
+  "costumeName": "Standing (CH0027)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0027__google/ST_CH0027.skel",
+  "atlasPath": "skins/st_ch0027__google/ST_CH0027.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 72
+ },
+ {
+  "id": "st_ch0028",
+  "charName": "CH0028",
+  "costumeName": "Standing (CH0028)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0028/ST_CH0028.skel",
+  "atlasPath": "skins/st_ch0028/ST_CH0028.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 73
+ },
+ {
+  "id": "st_ch0029",
+  "charName": "CH0029",
+  "costumeName": "Standing (CH0029)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0029/ST_CH0029.skel",
+  "atlasPath": "skins/st_ch0029/ST_CH0029.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 74
+ },
+ {
+  "id": "st_ch0030",
+  "charName": "CH0030",
+  "costumeName": "Standing (CH0030)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0030/ST_CH0030.skel",
+  "atlasPath": "skins/st_ch0030/ST_CH0030.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 75
+ },
+ {
+  "id": "st_ch0031",
+  "charName": "CH0031",
+  "costumeName": "Standing (CH0031)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0031/ST_CH0031.skel",
+  "atlasPath": "skins/st_ch0031/ST_CH0031.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 76
+ },
+ {
+  "id": "st_ch0032",
+  "charName": "CH0032",
+  "costumeName": "Standing (CH0032)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0032/ST_CH0032.skel",
+  "atlasPath": "skins/st_ch0032/ST_CH0032.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 77
+ },
+ {
+  "id": "st_ch0033",
+  "charName": "CH0033",
+  "costumeName": "Standing (CH0033)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0033/ST_CH0033.skel",
+  "atlasPath": "skins/st_ch0033/ST_CH0033.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 78
+ },
+ {
+  "id": "st_ch0034",
+  "charName": "CH0034",
+  "costumeName": "Standing (CH0034)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0034/ST_CH0034.skel",
+  "atlasPath": "skins/st_ch0034/ST_CH0034.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 79
+ },
+ {
+  "id": "st_ch0035",
+  "charName": "CH0035",
+  "costumeName": "Standing (CH0035)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0035/ST_CH0035.skel",
+  "atlasPath": "skins/st_ch0035/ST_CH0035.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 80
+ },
+ {
+  "id": "st_ch0036",
+  "charName": "CH0036",
+  "costumeName": "Standing (CH0036)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0036__google/ST_CH0036.skel",
+  "atlasPath": "skins/st_ch0036__google/ST_CH0036.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 81
+ },
+ {
+  "id": "st_ch0037",
+  "charName": "CH0037",
+  "costumeName": "Standing (CH0037)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0037/ST_CH0037.skel",
+  "atlasPath": "skins/st_ch0037/ST_CH0037.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 82
+ },
+ {
+  "id": "st_ch0038",
+  "charName": "CH0038",
+  "costumeName": "Standing (CH0038)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0038__google/ST_CH0038.skel",
+  "atlasPath": "skins/st_ch0038__google/ST_CH0038.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 83
+ },
+ {
+  "id": "st_ch0039",
+  "charName": "CH0039",
+  "costumeName": "Standing (CH0039)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0039/ST_CH0039.skel",
+  "atlasPath": "skins/st_ch0039/ST_CH0039.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 84
+ },
+ {
+  "id": "st_ch0040",
+  "charName": "CH0040",
+  "costumeName": "Standing (CH0040)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0040__google/ST_CH0040.skel",
+  "atlasPath": "skins/st_ch0040__google/ST_CH0040.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 85
+ },
+ {
+  "id": "st_ch0042",
+  "charName": "CH0042",
+  "costumeName": "Standing (CH0042)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0042/ST_CH0042.skel",
+  "atlasPath": "skins/st_ch0042/ST_CH0042.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 86
+ },
+ {
+  "id": "st_ch0043",
+  "charName": "CH0043",
+  "costumeName": "Standing (CH0043)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0043/ST_CH0043.skel",
+  "atlasPath": "skins/st_ch0043/ST_CH0043.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 87
+ },
+ {
+  "id": "st_ch0046",
+  "charName": "CH0046",
+  "costumeName": "Standing (CH0046)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0046/ST_CH0046.skel",
+  "atlasPath": "skins/st_ch0046/ST_CH0046.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 88
+ },
+ {
+  "id": "st_ch0050",
+  "charName": "CH0050",
+  "costumeName": "Standing (CH0050)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0050/ST_CH0050.skel",
+  "atlasPath": "skins/st_ch0050/ST_CH0050.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 89
+ },
+ {
+  "id": "st_ch0052",
+  "charName": "CH0052",
+  "costumeName": "Standing (CH0052)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0052/ST_CH0052.skel",
+  "atlasPath": "skins/st_ch0052/ST_CH0052.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 90
+ },
+ {
+  "id": "st_ch0053",
+  "charName": "CH0053",
+  "costumeName": "Standing (CH0053)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0053/ST_CH0053.skel",
+  "atlasPath": "skins/st_ch0053/ST_CH0053.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 91
+ },
+ {
+  "id": "st_ch0054",
+  "charName": "CH0054",
+  "costumeName": "Standing (CH0054)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0054/ST_CH0054.skel",
+  "atlasPath": "skins/st_ch0054/ST_CH0054.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 92
+ },
+ {
+  "id": "st_ch0056",
+  "charName": "CH0056",
+  "costumeName": "Standing (CH0056)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0056/ST_CH0056.skel",
+  "atlasPath": "skins/st_ch0056/ST_CH0056.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 93
+ },
+ {
+  "id": "st_ch0057",
+  "charName": "CH0057",
+  "costumeName": "Standing (CH0057)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0057/ST_CH0057.skel",
+  "atlasPath": "skins/st_ch0057/ST_CH0057.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 94
+ },
+ {
+  "id": "st_ch0058",
+  "charName": "CH0058",
+  "costumeName": "Standing (CH0058)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0058/ST_CH0058.skel",
+  "atlasPath": "skins/st_ch0058/ST_CH0058.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 95
+ },
+ {
+  "id": "st_ch0059",
+  "charName": "CH0059",
+  "costumeName": "Standing (CH0059)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0059__google/ST_CH0059.skel",
+  "atlasPath": "skins/st_ch0059__google/ST_CH0059.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 96
+ },
+ {
+  "id": "st_ch0060",
+  "charName": "CH0060",
+  "costumeName": "Standing (CH0060)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0060/ST_CH0060.skel",
+  "atlasPath": "skins/st_ch0060/ST_CH0060.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 97
+ },
+ {
+  "id": "st_ch0062",
+  "charName": "CH0062",
+  "costumeName": "Standing (CH0062)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0062/ST_CH0062.skel",
+  "atlasPath": "skins/st_ch0062/ST_CH0062.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 98
+ },
+ {
+  "id": "st_ch0063",
+  "charName": "CH0063",
+  "costumeName": "Standing (CH0063)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0063/ST_CH0063.skel",
+  "atlasPath": "skins/st_ch0063/ST_CH0063.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 99
+ },
+ {
+  "id": "st_ch0068",
+  "charName": "CH0068",
+  "costumeName": "Standing (CH0068)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0068__google/ST_CH0068.skel",
+  "atlasPath": "skins/st_ch0068__google/ST_CH0068.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 100
+ },
+ {
+  "id": "st_ch0069",
+  "charName": "CH0069",
+  "costumeName": "Standing (CH0069)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0069__google/ST_CH0069.skel",
+  "atlasPath": "skins/st_ch0069__google/ST_CH0069.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 101
+ },
+ {
+  "id": "st_ch0075",
+  "charName": "CH0075",
+  "costumeName": "Standing (CH0075)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_ch0075__google/ST_CH0075.skel",
+  "atlasPath": "skins/st_ch0075__google/ST_CH0075.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 102
+ },
+ {
+  "id": "st_np0103",
+  "charName": "NP0103",
+  "costumeName": "Standing (NP0103)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_np0103/ST_Maid_A.skel",
+  "atlasPath": "skins/st_np0103/ST_Maid_A.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 103
+ },
+ {
+  "id": "st_np0104",
+  "charName": "NP0104",
+  "costumeName": "Standing (NP0104)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_np0104/ST_NP0104.skel",
+  "atlasPath": "skins/st_np0104/ST_NP0104.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 104
+ },
+ {
+  "id": "st_np0199",
+  "charName": "NP0199",
+  "costumeName": "Standing (NP0199)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_np0199/ST_NP0199.skel",
+  "atlasPath": "skins/st_np0199/ST_NP0199.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 105
+ },
+ {
+  "id": "st_np0203",
+  "charName": "NP0203",
+  "costumeName": "Standing (NP0203)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_np0203/ST_NP0203.skel",
+  "atlasPath": "skins/st_np0203/ST_NP0203.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 106
+ },
+ {
+  "id": "st_np0212",
+  "charName": "NP0212",
+  "costumeName": "Standing (NP0212)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_np0212/ST_NP0212.skel",
+  "atlasPath": "skins/st_np0212/ST_NP0212.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 107
+ },
+ {
+  "id": "st_np0299",
+  "charName": "NP0299",
+  "costumeName": "Standing (NP0299)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_np0299/ST_NP0299.skel",
+  "atlasPath": "skins/st_np0299/ST_NP0299.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 108
+ },
+ {
+  "id": "st_np0304",
+  "charName": "NP0304",
+  "costumeName": "Standing (NP0304)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_np0304/ST_NP0304.skel",
+  "atlasPath": "skins/st_np0304/ST_NP0304.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 109
+ },
+ {
+  "id": "st_np0306",
+  "charName": "NP0306",
+  "costumeName": "Standing (NP0306)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_np0306/ST_NP0306.skel",
+  "atlasPath": "skins/st_np0306/ST_NP0306.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 110
+ },
+ {
+  "id": "st_np0308",
+  "charName": "NP0308",
+  "costumeName": "Standing (NP0308)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_np0308/ST_NP0308.skel",
+  "atlasPath": "skins/st_np0308/ST_NP0308.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 111
+ },
+ {
+  "id": "st_np0399",
+  "charName": "NP0399",
+  "costumeName": "Standing (NP0399)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_np0399/ST_NP0399.skel",
+  "atlasPath": "skins/st_np0399/ST_NP0399.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 112
+ },
+ {
+  "id": "st_np0402",
+  "charName": "NP0402",
+  "costumeName": "Standing (NP0402)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_np0402/ST_NP0402.skel",
+  "atlasPath": "skins/st_np0402/ST_NP0402.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 113
+ },
+ {
+  "id": "st_np0411",
+  "charName": "NP0411",
+  "costumeName": "Standing (NP0411)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_np0411/ST_NP0411.skel",
+  "atlasPath": "skins/st_np0411/ST_NP0411.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 114
+ },
+ {
+  "id": "st_np0499",
+  "charName": "NP0499",
+  "costumeName": "Standing (NP0499)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_np0499/ST_NP0499.skel",
+  "atlasPath": "skins/st_np0499/ST_NP0499.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 115
+ },
+ {
+  "id": "st_np0502",
+  "charName": "NP0502",
+  "costumeName": "Standing (NP0502)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_np0502/ST_NP0502.skel",
+  "atlasPath": "skins/st_np0502/ST_NP0502.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 116
+ },
+ {
+  "id": "st_np0509",
+  "charName": "NP0509",
+  "costumeName": "Standing (NP0509)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_np0509/ST_NP0509.skel",
+  "atlasPath": "skins/st_np0509/ST_NP0509.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 117
+ },
+ {
+  "id": "st_np0599",
+  "charName": "NP0599",
+  "costumeName": "Standing (NP0599)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_np0599/ST_NP0599.skel",
+  "atlasPath": "skins/st_np0599/ST_NP0599.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 118
+ },
+ {
+  "id": "st_np0706",
+  "charName": "NP0706",
+  "costumeName": "Standing (NP0706)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_np0706/ST_NP0706.skel",
+  "atlasPath": "skins/st_np0706/ST_NP0706.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 119
+ },
+ {
+  "id": "st_np0708",
+  "charName": "NP0708",
+  "costumeName": "Standing (NP0708)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_np0708/ST_NP0708.skel",
+  "atlasPath": "skins/st_np0708/ST_NP0708.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 120
+ },
+ {
+  "id": "st_np0799",
+  "charName": "NP0799",
+  "costumeName": "Standing (NP0799)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_np0799__google/ST_NP0799.skel",
+  "atlasPath": "skins/st_np0799__google/ST_NP0799.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 121
+ },
+ {
+  "id": "st_np0802",
+  "charName": "NP0802",
+  "costumeName": "Standing (NP0802)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_np0802/ST_NP0802.skel",
+  "atlasPath": "skins/st_np0802/ST_NP0802.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 122
+ },
+ {
+  "id": "st_np6023",
+  "charName": "NP6023",
+  "costumeName": "Standing (NP6023)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_np6023/ST_NP6023.skel",
+  "atlasPath": "skins/st_np6023/ST_NP6023.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 123
+ },
+ {
+  "id": "st_np6028",
+  "charName": "NP6028",
+  "costumeName": "Standing (NP6028)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_np6028/ST_NP6028.skel",
+  "atlasPath": "skins/st_np6028/ST_NP6028.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 124
+ },
+ {
+  "id": "st_sc0002",
+  "charName": "SC0002",
+  "costumeName": "Standing (SC0002)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_sc0002/ST_SC0002.skel",
+  "atlasPath": "skins/st_sc0002/ST_SC0002.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 125
+ },
+ {
+  "id": "st_sc0003",
+  "charName": "SC0003",
+  "costumeName": "Standing (SC0003)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_sc0003/ST_SC0003.skel",
+  "atlasPath": "skins/st_sc0003/ST_SC0003.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 126
+ },
+ {
+  "id": "st_sc0003_01",
+  "charName": "SC0003_01",
+  "costumeName": "Standing (SC0003_01)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_sc0003_01/ST_SC0003_01.skel",
+  "atlasPath": "skins/st_sc0003_01/ST_SC0003_01.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 127
+ },
+ {
+  "id": "st_sc0004",
+  "charName": "SC0004",
+  "costumeName": "Standing (SC0004)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_sc0004/ST_SC0004.skel",
+  "atlasPath": "skins/st_sc0004/ST_SC0004.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 128
+ },
+ {
+  "id": "st_sc0101",
+  "charName": "SC0101",
+  "costumeName": "Standing (SC0101)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_sc0101/ST_SC0101.skel",
+  "atlasPath": "skins/st_sc0101/ST_SC0101.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 129
+ },
+ {
+  "id": "st_sc0201",
+  "charName": "SC0201",
+  "costumeName": "Standing (SC0201)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_sc0201/ST_SC0201.skel",
+  "atlasPath": "skins/st_sc0201/ST_SC0201.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 130
+ },
+ {
+  "id": "st_sc0202",
+  "charName": "SC0202",
+  "costumeName": "Standing (SC0202)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_sc0202/ST_SC0202.skel",
+  "atlasPath": "skins/st_sc0202/ST_SC0202.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 131
+ },
+ {
+  "id": "st_sc0203",
+  "charName": "SC0203",
+  "costumeName": "Standing (SC0203)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_sc0203/ST_SC0203.skel",
+  "atlasPath": "skins/st_sc0203/ST_SC0203.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 132
+ },
+ {
+  "id": "st_sc0204",
+  "charName": "SC0204",
+  "costumeName": "Standing (SC0204)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_sc0204/ST_SC0204.skel",
+  "atlasPath": "skins/st_sc0204/ST_SC0204.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 133
+ },
+ {
+  "id": "st_sc0212",
+  "charName": "SC0212",
+  "costumeName": "Standing (SC0212)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_sc0212/ST_SC0212.skel",
+  "atlasPath": "skins/st_sc0212/ST_SC0212.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 134
+ },
+ {
+  "id": "st_sc0213",
+  "charName": "SC0213",
+  "costumeName": "Standing (SC0213)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_sc0213/ST_SC0213.skel",
+  "atlasPath": "skins/st_sc0213/ST_SC0213.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 135
+ },
+ {
+  "id": "st_sc0214",
+  "charName": "SC0214",
+  "costumeName": "Standing (SC0214)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_sc0214/ST_SC0214.skel",
+  "atlasPath": "skins/st_sc0214/ST_SC0214.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 136
+ },
+ {
+  "id": "st_sc3001",
+  "charName": "SC3001",
+  "costumeName": "Standing (SC3001)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_sc3001/ST_SC3001.skel",
+  "atlasPath": "skins/st_sc3001/ST_SC3001.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 137
+ },
+ {
+  "id": "st_sc3002",
+  "charName": "SC3002",
+  "costumeName": "Standing (SC3002)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_sc3002/ST_SC3002.skel",
+  "atlasPath": "skins/st_sc3002/ST_SC3002.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 138
+ },
+ {
+  "id": "st_sc3003",
+  "charName": "SC3003",
+  "costumeName": "Standing (SC3003)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_sc3003__google/ST_SC3003.skel",
+  "atlasPath": "skins/st_sc3003__google/ST_SC3003.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 139
+ },
+ {
+  "id": "st_sc3004",
+  "charName": "SC3004",
+  "costumeName": "Standing (SC3004)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_sc3004/ST_SC3004.skel",
+  "atlasPath": "skins/st_sc3004/ST_SC3004.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 140
+ },
+ {
+  "id": "st_sc3005",
+  "charName": "SC3005",
+  "costumeName": "Standing (SC3005)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_sc3005/ST_SC3005.skel",
+  "atlasPath": "skins/st_sc3005/ST_SC3005.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 141
+ },
+ {
+  "id": "st_sc3006",
+  "charName": "SC3006",
+  "costumeName": "Standing (SC3006)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_sc3006/ST_SC3006.skel",
+  "atlasPath": "skins/st_sc3006/ST_SC3006.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 142
+ },
+ {
+  "id": "st_sc3007",
+  "charName": "SC3007",
+  "costumeName": "Standing (SC3007)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_sc3007__google/ST_SC3007.skel",
+  "atlasPath": "skins/st_sc3007__google/ST_SC3007.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": true,
+  "stores": [
+   "google",
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 143
+ },
+ {
+  "id": "st_sc3012",
+  "charName": "SC3012",
+  "costumeName": "Standing (SC3012)",
+  "modelType": "skin",
+  "jsonPath": "skins/st_sc3012/ST_SC3012.skel",
+  "atlasPath": "skins/st_sc3012/ST_SC3012.atlas",
+  "iconPath": "",
+  "spineVersion": "4.1",
+  "kind": "standing",
+  "uncensored": false,
+  "stores": [
+   "onestore"
+  ],
+  "hasBg": false,
+  "releaseOrder": 144
+ }
 ]
