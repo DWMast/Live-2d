@@ -244,7 +244,11 @@ async function fetchUpstreamWithRetry(url: string, attempts = 3): Promise<Buffer
     try {
       return await withUpstreamConcurrency(async () => {
         const controller = new AbortController();
-        const timer = setTimeout(() => controller.abort(), 20000);
+        // Large model textures (e.g. Bianca 4096x4096 ~9.5 MB over slow CDNs)
+        // can legitimately take 60s+. A 20s cap aborted mid-download and froze
+        // characters like Bianca at the loading stage forever.
+        const UPSTREAM_TIMEOUT_MS = 120000;
+        const timer = setTimeout(() => controller.abort(), UPSTREAM_TIMEOUT_MS);
         try {
           const res = await fetch(url, { signal: controller.signal });
           if (!res.ok) {
