@@ -32,6 +32,17 @@ import {
 } from 'lucide-react';
 
 import { CachedSpineAssets } from '../utils/spineAssetCache';
+import {
+  AlphaSampleFn,
+  computeAttachmentVertices,
+  extractBoundaryPolylines,
+  findTopHitSlot,
+  HitTestSlotLike,
+  SpineColorLike,
+  SpineRuntimeVersion,
+  TextureAlphaSampler,
+  VertexAttachmentLike,
+} from '../utils/spineHitTest';
 
 interface SpineRuntimeMod {
   SpinePlayer: typeof SpinePlayer;
@@ -65,8 +76,6 @@ const SPINE_41_RUNTIME: SpineRuntimeMod = {
   Vector3,
   Downloader,
 };
-
-type SpineRuntimeVersion = '3.8' | '4.0' | '4.1' | '4.2';
 
 /**
  * Map a "major.minor" pair read out of a skeleton file onto the nearest runtime
@@ -451,13 +460,6 @@ export interface CapturedPoseShot {
   pixelRatio: number;
 }
 
-type VertexAttachmentLike = {
-  worldVerticesLength?: number;
-  computeWorldVertices?: (...args: unknown[]) => void;
-};
-
-type SpineColorLike = { r: number; g: number; b: number; a: number };
-
 type SlotWithDarkColor = {
   data: { name: string; color?: SpineColorLike; darkColor?: SpineColorLike };
   bone?: unknown;
@@ -548,47 +550,6 @@ function applySlotVisibility(
   }
 }
 
-let scratchVertices = new Float32Array(2048);
-function getScratchBuffer(needed: number): Float32Array {
-  if (scratchVertices.length < needed) {
-    scratchVertices = new Float32Array(Math.max(needed, scratchVertices.length * 2));
-  }
-  return scratchVertices;
-}
-
-function computeAttachmentVertices(slot: unknown, attachment: VertexAttachmentLike | null): number {
-  if (!attachment || typeof attachment.computeWorldVertices !== 'function') return 0;
-  if (typeof attachment.worldVerticesLength === 'number' && attachment.worldVerticesLength > 0) {
-    const count = attachment.worldVerticesLength;
-    const buf = getScratchBuffer(count);
-    attachment.computeWorldVertices(slot, 0, count, buf, 0, 2);
-    return count;
-  }
-  // RegionAttachment (8 world floats: 4 corners x,y)
-  const buf = getScratchBuffer(8);
-  attachment.computeWorldVertices(slot, buf, 0, 2);
-  return 8;
-}
-
-function isPointInPolygon(
-  px: number,
-  py: number,
-  vertices: Float32Array,
-  length: number
-): boolean {
-  let inside = false;
-  for (let i = 0, j = length - 2; i < length; j = i, i += 2) {
-    const xi = vertices[i];
-    const yi = vertices[i + 1];
-    const xj = vertices[j];
-    const yj = vertices[j + 1];
-    const intersect =
-      yi > py !== yj > py && px < ((xj - xi) * (py - yi)) / (yj - yi) + xi;
-    if (intersect) inside = !inside;
-  }
-  return inside;
-}
-
 function isBackgroundSlotName(name: string): boolean {
   const n = name.toLowerCase();
   return (
@@ -602,7 +563,8 @@ function isBackgroundSlotName(name: string): boolean {
 
 function computeModelBounds(
   skeleton: Skeleton,
-  Vector2Ctor: typeof Vector2
+  Vector2Ctor: typeof Vector2,
+  runtimeVersion?: SpineRuntimeVersion
 ): {
   x: number;
   y: number;
@@ -618,15 +580,17 @@ function computeModelBounds(
   for (const slot of skeleton.drawOrder) {
     if (isBackgroundSlotName(slot.data.name)) continue;
     const attachment = slot.getAttachment() as VertexAttachmentLike | null;
-    if (!attachment) continue;
+    if (!attachment || 'endSlot' in attachment || !attachment.region) continue;
     let vertexCount = 0;
+    let buf: Float32Array;
     try {
-      vertexCount = computeAttachmentVertices(slot, attachment);
+      const res = computeAttachmentVertices(slot, attachment, runtimeVersion);
+      vertexCount = res.count;
+      buf = res.vertices;
     } catch {
       continue;
     }
     if (vertexCount <= 0) continue;
-    const buf = scratchVertices;
     for (let i = 0; i < vertexCount; i += 2) {
       const vx = buf[i];
       const vy = buf[i + 1];
@@ -761,15 +725,21 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
     ) {
       if (overlayHasDrawingRef.current) {
         const ctx = canvas.getContext('2d');
-        ctx?.clearRect(0, 0, canvas.width, canvas.height);
+        if (ctx) {
+          ctx.setTransform(1, 0, 0, 1, 0, 0);
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
         overlayHasDrawingRef.current = false;
       }
       return;
     }
 
-    const { width: cssW, height: cssH } = containerSizeRef.current;
-    const targetW = Math.max(1, Math.round(cssW));
-    const targetH = Math.max(1, Math.round(cssH));
+    const rect = canvas.getBoundingClientRect();
+    const cssW = rect.width > 0 ? rect.width : containerSizeRef.current.width;
+    const cssH = rect.height > 0 ? rect.height : containerSizeRef.current.height;
+    const dpr = Math.min(typeof window !== 'undefined' ? window.devicePixelRatio || 1 : 1, 3);
+    const targetW = Math.max(1, Math.round(cssW * dpr));
+    const targetH = Math.max(1, Math.round(cssH * dpr));
     if (canvas.width !== targetW || canvas.height !== targetH) {
       canvas.width = targetW;
       canvas.height = targetH;
@@ -777,16 +747,20 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.clearRect(0, 0, targetW, targetH);
 
-    const slot = player.skeleton.slots.find((s) => s.data.name === activeLayer);
+    const slot =
+      player.skeleton.drawOrder?.find((s) => s.data.name === activeLayer) ||
+      player.skeleton.slots.find((s) => s.data.name === activeLayer);
     if (!slot) return;
 
     const attachment = slot.getAttachment() as VertexAttachmentLike | null;
-    const renderCam = player.sceneRenderer?.camera;
+    const renderCam = manualCameraRef.current || player.sceneRenderer?.camera;
 
     if (
       !attachment ||
+      'endSlot' in attachment ||
       !renderCam ||
       renderCam.viewportWidth <= 0 ||
       renderCam.viewportHeight <= 0
@@ -795,13 +769,15 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
     }
 
     let vertexCount = 0;
+    let worldVertices: Float32Array;
     try {
-      vertexCount = computeAttachmentVertices(slot, attachment);
+      const res = computeAttachmentVertices(slot, attachment, runtimeVersionRef.current);
+      vertexCount = res.count;
+      worldVertices = res.vertices;
     } catch {
       return;
     }
-    if (vertexCount <= 0) return;
-    const worldVertices = scratchVertices;
+    if (vertexCount < 6) return;
 
     const { position, zoom, viewportWidth, viewportHeight } = renderCam;
     const halfW = (viewportWidth / 2) * zoom;
@@ -810,27 +786,146 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
       return;
     }
 
+    const toScreenX = (wx: number) => (((wx - position.x) / halfW + 1) / 2) * cssW;
+    const toScreenY = (wy: number) => ((1 - (wy - position.y) / halfH) / 2) * cssH;
+
     ctx.save();
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.strokeStyle = '#38bdf8';
     ctx.lineWidth = 2;
     ctx.fillStyle = 'rgba(56, 189, 248, 0.16)';
     ctx.setLineDash([6, 4]);
 
-    ctx.beginPath();
-    for (let i = 0; i < vertexCount; i += 2) {
-      const wx = worldVertices[i];
-      const wy = worldVertices[i + 1];
-      if (!Number.isFinite(wx) || !Number.isFinite(wy)) continue;
-      const nx = (wx - position.x) / halfW;
-      const ny = (wy - position.y) / halfH;
-      const sx = ((nx + 1) / 2) * cssW;
-      const sy = ((1 - ny) / 2) * cssH;
-      if (i === 0) ctx.moveTo(sx, sy);
-      else ctx.lineTo(sx, sy);
+    const triangles = attachment.triangles;
+    if (triangles && triangles.length >= 3) {
+      // Fill exact mesh triangles so concave outlines and multi-island slots fill accurately
+      ctx.beginPath();
+      for (let t = 0; t + 2 < triangles.length; t += 3) {
+        const i0 = triangles[t] * 2;
+        const i1 = triangles[t + 1] * 2;
+        const i2 = triangles[t + 2] * 2;
+        if (i0 + 1 >= vertexCount || i1 + 1 >= vertexCount || i2 + 1 >= vertexCount) continue;
+        const x0 = worldVertices[i0];
+        const y0 = worldVertices[i0 + 1];
+        const x1 = worldVertices[i1];
+        const y1 = worldVertices[i1 + 1];
+        const x2 = worldVertices[i2];
+        const y2 = worldVertices[i2 + 1];
+        if (
+          !Number.isFinite(x0) ||
+          !Number.isFinite(y0) ||
+          !Number.isFinite(x1) ||
+          !Number.isFinite(y1) ||
+          !Number.isFinite(x2) ||
+          !Number.isFinite(y2)
+        ) {
+          continue;
+        }
+        ctx.moveTo(toScreenX(x0), toScreenY(y0));
+        ctx.lineTo(toScreenX(x1), toScreenY(y1));
+        ctx.lineTo(toScreenX(x2), toScreenY(y2));
+        ctx.closePath();
+      }
+      ctx.fill();
+
+      // Stroke outer contour cleanly: prefer artist-authored hull loop when present,
+      // falling back to extracted triangle boundary polylines when hull is omitted.
+      const hullFloats =
+        typeof attachment.hullLength === 'number' &&
+        attachment.hullLength >= 6 &&
+        attachment.hullLength <= vertexCount
+          ? attachment.hullLength
+          : 0;
+      if (hullFloats >= 6) {
+        ctx.beginPath();
+        let started = false;
+        for (let i = 0; i < hullFloats; i += 2) {
+          const wx = worldVertices[i];
+          const wy = worldVertices[i + 1];
+          if (!Number.isFinite(wx) || !Number.isFinite(wy)) continue;
+          const sx = toScreenX(wx);
+          const sy = toScreenY(wy);
+          if (!started) {
+            ctx.moveTo(sx, sy);
+            started = true;
+          } else {
+            ctx.lineTo(sx, sy);
+          }
+        }
+        if (started) {
+          ctx.closePath();
+          ctx.stroke();
+        }
+      } else {
+        const polylines = extractBoundaryPolylines(triangles);
+        if (polylines.length > 0) {
+          ctx.beginPath();
+          for (const loop of polylines) {
+            let started = false;
+            for (const vIdx of loop) {
+              const fIdx = vIdx * 2;
+              if (fIdx + 1 >= vertexCount) continue;
+              const wx = worldVertices[fIdx];
+              const wy = worldVertices[fIdx + 1];
+              if (!Number.isFinite(wx) || !Number.isFinite(wy)) continue;
+              const sx = toScreenX(wx);
+              const sy = toScreenY(wy);
+              if (!started) {
+                ctx.moveTo(sx, sy);
+                started = true;
+              } else {
+                ctx.lineTo(sx, sy);
+              }
+            }
+            if (started) ctx.closePath();
+          }
+          ctx.stroke();
+        } else {
+          ctx.beginPath();
+          let started = false;
+          for (let i = 0; i < vertexCount; i += 2) {
+            const wx = worldVertices[i];
+            const wy = worldVertices[i + 1];
+            if (!Number.isFinite(wx) || !Number.isFinite(wy)) continue;
+            const sx = toScreenX(wx);
+            const sy = toScreenY(wy);
+            if (!started) {
+              ctx.moveTo(sx, sy);
+              started = true;
+            } else {
+              ctx.lineTo(sx, sy);
+            }
+          }
+          if (started) {
+            ctx.closePath();
+            ctx.stroke();
+          }
+        }
+      }
+    } else {
+      // RegionAttachment (4 corners) or fallback polygon
+      ctx.beginPath();
+      let started = false;
+      for (let i = 0; i < vertexCount; i += 2) {
+        const wx = worldVertices[i];
+        const wy = worldVertices[i + 1];
+        if (!Number.isFinite(wx) || !Number.isFinite(wy)) continue;
+        const sx = toScreenX(wx);
+        const sy = toScreenY(wy);
+        if (!started) {
+          ctx.moveTo(sx, sy);
+          started = true;
+        } else {
+          ctx.lineTo(sx, sy);
+        }
+      }
+      if (started) {
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+      }
     }
-    ctx.closePath();
-    ctx.fill();
-    ctx.stroke();
+
     ctx.restore();
     overlayHasDrawingRef.current = true;
   }, []);
@@ -846,8 +941,9 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
     manualCam.update();
     if (player && !isPlayingRef.current) {
       safeDrawFrame(player);
+      drawHighlightOverlay();
     }
-  }, []);
+  }, [drawHighlightOverlay]);
 
   const handleZoomIn = useCallback(() => {
     const manualCam = manualCameraRef.current;
@@ -859,11 +955,14 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
       manualCam.update();
       if (player && !isPlayingRef.current) {
         safeDrawFrame(player);
+        drawHighlightOverlay();
       }
     }
-  }, []);
+  }, [drawHighlightOverlay]);
 
   const runtimeRef = useRef<SpineRuntimeMod>(SPINE_41_RUNTIME);
+  const runtimeVersionRef = useRef<SpineRuntimeVersion>('4.1');
+  const alphaSamplerRef = useRef<TextureAlphaSampler>(new TextureAlphaSampler());
 
   /**
    * Capture the character's current pose straight out of the WebGL buffer.
@@ -876,7 +975,7 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
    */
   const capturePoseShot = useCallback((): CapturedPoseShot | null => {
     const player = playerRef.current;
-    const cam = player?.sceneRenderer?.camera;
+    const cam = manualCameraRef.current || player?.sceneRenderer?.camera;
     const bounds = modelBoundsRef.current;
     const canvas = containerRef.current?.querySelector('canvas') as HTMLCanvasElement | null;
     if (!player || !cam || !bounds || !canvas || canvas.width === 0 || canvas.height === 0) {
@@ -1002,7 +1101,7 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
     defaultCameraPoseRef.current = null;
     container.innerHTML = '';
 
-    const { skeletonUrl, atlasUrl, isJson } = getSpineModelUrls(character, category);
+    const { skeletonUrl, atlasUrl } = getSpineModelUrls(character, category);
     const abortController = new AbortController();
     let isSubscribed = true;
     let cleanupCameraListeners: (() => void) | null = null;
@@ -1011,6 +1110,7 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
       let runtime: SpineRuntimeMod = SPINE_41_RUNTIME;
       let downloader: Downloader;
       let isAtlasPma = false;
+      let isSkeletonJson = false;
       try {
         const cachedAssets = await loadSpineAssetsFast(
           skeletonUrl,
@@ -1019,9 +1119,11 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
         );
         if (!isSubscribed) return;
 
+        isSkeletonJson = cachedAssets.isJson;
         isAtlasPma = /\bpma\s*:\s*true\b/i.test(cachedAssets.atlasText);
         atlasPageUrlsRef.current = extractAtlasPageUrls(cachedAssets.atlasText, atlasUrl);
         const version = detectSpineVersion(cachedAssets);
+        runtimeVersionRef.current = version;
         if (version === '4.0') {
           const mod = await import('../vendor/spine-player4.0.js');
           if (!isSubscribed) return;
@@ -1057,7 +1159,7 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
         ensureGLTexturePremultiplyPatch(runtime.GLTexture, !isAtlasPma, wantMipmaps);
         ensureSpinePlayerSafeShowError(runtime.SpinePlayer);
 
-        const skeletonConfig: Record<string, unknown> = isJson
+        const skeletonConfig: Record<string, unknown> = isSkeletonJson
           ? { jsonUrl: skeletonUrl }
           : { binaryUrl: skeletonUrl, skelUrl: skeletonUrl };
 
@@ -1166,7 +1268,11 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
             callbacksRef.current.onLayersLoaded(slotNames);
 
             // 4. Auto-fit OrthoCamera cleanly & enable pan/zoom via CameraController
-            const bounds = computeModelBounds(skeleton, runtime.Vector2);
+            const bounds = computeModelBounds(
+              skeleton,
+              runtime.Vector2,
+              runtimeVersionRef.current
+            );
             const canvas = p.canvas;
             const renderCam = p.sceneRenderer?.camera;
 
@@ -1215,6 +1321,8 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
               };
 
               // Sync immediately into sceneRenderer.camera so frame 1 is centered
+              renderCam.viewportWidth = canvasWidth;
+              renderCam.viewportHeight = canvasHeight;
               renderCam.position.x = manualCam.position.x;
               renderCam.position.y = manualCam.position.y;
               renderCam.zoom = manualCam.zoom;
@@ -1224,6 +1332,7 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
               const redrawIfPaused = () => {
                 if (!isPlayingRef.current) {
                   safeDrawFrame(p);
+                  drawHighlightOverlay();
                 }
               };
 
@@ -1476,6 +1585,7 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
         disposeSpinePlayerSafely(playerRef.current);
         playerRef.current = null;
       }
+      alphaSamplerRef.current.clear();
       manualCameraRef.current = null;
     };
   }, [character.id, category, reloadNonce]);
@@ -1532,8 +1642,11 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
     const player = playerRef.current;
     if (!container || !player) return null;
 
-    const bounds = container.getBoundingClientRect();
-    const renderCam = player.sceneRenderer?.camera;
+    const webglCanvas =
+      (player as unknown as { canvas?: HTMLCanvasElement | null }).canvas ||
+      (container.querySelector('canvas') as HTMLCanvasElement | null);
+    const bounds = (webglCanvas || container).getBoundingClientRect();
+    const renderCam = manualCameraRef.current || player.sceneRenderer?.camera;
     if (!bounds || bounds.width <= 0 || bounds.height <= 0 || !renderCam) return null;
 
     const screenX = clientX - bounds.left;
@@ -1572,26 +1685,28 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
     const worldPoint = getWorldPoint(e.clientX, e.clientY);
     if (!worldPoint) return;
 
-    const slots = player.skeleton.drawOrder;
+    const slots = player.skeleton.drawOrder as unknown as HitTestSlotLike[] | undefined;
     if (!slots) return;
 
-    for (let i = slots.length - 1; i >= 0; i--) {
-      const slot = slots[i];
-      if (hiddenLayers.has(slot.data.name)) continue;
+    const skeletonAlpha =
+      (player.skeleton as unknown as { color?: SpineColorLike }).color?.a ?? 1;
+    const sampleAlpha: AlphaSampleFn = (att, u, v) =>
+      alphaSamplerRef.current.sampleAttachmentAlpha(att, u, v);
 
-      const attachment = slot.getAttachment() as VertexAttachmentLike | null;
-      if (attachment) {
-        let vertexCount = 0;
-        try {
-          vertexCount = computeAttachmentVertices(slot, attachment);
-        } catch {
-          continue;
-        }
-        if (vertexCount > 0 && isPointInPolygon(worldPoint.x, worldPoint.y, scratchVertices, vertexCount)) {
-          onSelectLayer(selectedLayerName === slot.data.name ? null : slot.data.name);
-          return;
-        }
-      }
+    const hitName = findTopHitSlot({
+      drawOrder: slots,
+      worldX: worldPoint.x,
+      worldY: worldPoint.y,
+      hiddenLayers,
+      runtimeVersion: runtimeVersionRef.current,
+      sampleAlpha,
+      alphaThreshold: 8,
+      skeletonAlpha,
+    });
+
+    if (hitName) {
+      onSelectLayer(selectedLayerName === hitName ? null : hitName);
+      return;
     }
 
     onSelectLayer(null);
@@ -1639,7 +1754,7 @@ export const SpineViewer = React.forwardRef<SpineViewerHandle, SpineViewerProps>
       {/* Layer Highlight Canvas Overlay */}
       <canvas
         ref={overlayCanvasRef}
-        className="absolute inset-0 pointer-events-none z-20"
+        className="absolute inset-0 w-full h-full pointer-events-none z-20"
       />
 
       {/* Loading Overlay */}

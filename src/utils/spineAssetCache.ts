@@ -13,12 +13,13 @@ export interface CachedSpineAssets {
 
 const CACHE_NAME = 'bd2-spine-assets-v2';
 const MAX_MEMORY_ENTRIES = 16;
-const MAX_CONCURRENT_FETCHES = 6;
+const MAX_CONCURRENT_FETCHES = 4;
 
 const memoryCache = new Map<string, CachedSpineAssets>();
 const inflightRequests = new Map<string, Promise<CachedSpineAssets>>();
 
 let activePriorityLoads = 0;
+let activePrefetchCount = 0;
 let currentConcurrency = 0;
 const concurrencyQueue: Array<() => void> = [];
 
@@ -92,7 +93,34 @@ async function openAssetCache(): Promise<Cache | null> {
   }
 }
 
-async function fetchWithRetry(url: string, signal?: AbortSignal, attempts = 3): Promise<Response> {
+function parseRetryAfterHeader(res: Response): number | null {
+  const raw = res.headers.get('retry-after');
+  if (!raw) return null;
+  const sec = Number(raw);
+  if (Number.isFinite(sec) && sec >= 0) {
+    return Math.min(6000, Math.max(500, Math.round(sec * 1000)));
+  }
+  return null;
+}
+
+async function waitWithAbort(ms: number, signal?: AbortSignal): Promise<void> {
+  if (signal?.aborted) {
+    throw new DOMException('Aborted', 'AbortError');
+  }
+  await new Promise<void>((resolve, reject) => {
+    const timer = setTimeout(() => {
+      signal?.removeEventListener('abort', onAbort);
+      resolve();
+    }, ms);
+    const onAbort = () => {
+      clearTimeout(timer);
+      reject(new DOMException('Aborted', 'AbortError'));
+    };
+    signal?.addEventListener('abort', onAbort, { once: true });
+  });
+}
+
+async function fetchWithRetry(url: string, signal?: AbortSignal, attempts = 4): Promise<Response> {
   let lastError: unknown;
   for (let i = 0; i < attempts; i++) {
     if (signal?.aborted) {
@@ -101,8 +129,12 @@ async function fetchWithRetry(url: string, signal?: AbortSignal, attempts = 3): 
     try {
       const res = await fetch(url, { signal });
       if (!res.ok) {
-        const err = new Error(`HTTP ${res.status} loading ${url}`) as Error & { status?: number };
+        const err = new Error(`HTTP ${res.status} loading ${url}`) as Error & {
+          status?: number;
+          retryAfterMs?: number | null;
+        };
         err.status = res.status;
+        err.retryAfterMs = parseRetryAfterHeader(res);
         throw err;
       }
       return res;
@@ -111,10 +143,18 @@ async function fetchWithRetry(url: string, signal?: AbortSignal, attempts = 3): 
       if (signal?.aborted || (err instanceof DOMException && err.name === 'AbortError')) {
         throw err;
       }
-      const status = (err as { status?: number })?.status;
-      if (status === 404 || status === 400) break;
+      const typed = err as { status?: number; retryAfterMs?: number | null };
+      const status = typed?.status;
+      if (status === 404 || status === 400 || status === 403) break;
       if (i < attempts - 1) {
-        await new Promise((r) => setTimeout(r, 250 * (i + 1)));
+        const baseDelay =
+          status === 429
+            ? typed.retryAfterMs ?? 700 * Math.pow(2, i)
+            : status === 502 || status === 503 || status === 504
+            ? 500 * Math.pow(2, i)
+            : 400 * (i + 1);
+        const jitter = Math.floor(Math.random() * 250);
+        await waitWithAbort(baseDelay + jitter, signal);
       }
     }
   }
@@ -138,7 +178,7 @@ async function fetchWithPersistentCache(
   }
 
   return withConcurrencyLimit(async () => {
-    const res = await fetchWithRetry(url, signal, 3);
+    const res = await fetchWithRetry(url, signal, 4);
     if (cache) {
       try {
         const clone = res.clone();
@@ -180,6 +220,20 @@ async function fetchTextureBlobUrl(
   return URL.createObjectURL(blob);
 }
 
+function looksLikeJsonBytes(bytes: Uint8Array): boolean {
+  let i = 0;
+  if (bytes.length >= 3 && bytes[0] === 0xef && bytes[1] === 0xbb && bytes[2] === 0xbf) {
+    i = 3;
+  }
+  while (
+    i < bytes.length &&
+    (bytes[i] === 0x20 || bytes[i] === 0x09 || bytes[i] === 0x0a || bytes[i] === 0x0d)
+  ) {
+    i++;
+  }
+  return i < bytes.length && bytes[i] === 0x7b;
+}
+
 /**
  * Download .skel or .json, .atlas, AND textures with bounded concurrency, retries,
  * in-memory LRU, and persistent CacheStorage.
@@ -190,7 +244,6 @@ export async function loadSpineAssetsFast(
   signal?: AbortSignal,
   isPriority = true
 ): Promise<CachedSpineAssets> {
-  const isJson = /\.json(\?.*)?$/i.test(skeletonUrl);
   const key = makeCacheKey(skeletonUrl, atlasUrl);
 
   const memHit = memoryCache.get(key);
@@ -217,7 +270,9 @@ export async function loadSpineAssetsFast(
       atlasUrl.includes('/api/daicore/') ||
       atlasUrl.includes('/api/haze-spine/') ||
       atlasUrl.includes('/api/echo-spine/') ||
-      atlasUrl.includes('/api/al-spine/');
+      atlasUrl.includes('/api/al-spine/') ||
+      atlasUrl.includes('/api/mad-spine/') ||
+      atlasUrl.includes('/api/anchor-spine/');
     const speculativePngUrl = atlasUrl.replace(/\.atlas(\.prefab)?$/i, '.png');
     const speculativePngPromise =
       !isSpeculativeDisabled && speculativePngUrl !== atlasUrl
@@ -226,9 +281,7 @@ export async function loadSpineAssetsFast(
 
     // Launch skeleton & tiny atlas fetch concurrently, then immediately start downloading
     // texture pages as soon as atlas arrives instead of waiting for huge .json files.
-    const skeletonPromise = isJson
-      ? fetchTextAsset(skeletonUrl, cache, signal)
-      : fetchBinaryAsset(skeletonUrl, cache, signal);
+    const skeletonPromise = fetchBinaryAsset(skeletonUrl, cache, signal);
 
     const atlasText = await fetchTextAsset(atlasUrl, cache, signal);
     const pageNames = parseAtlasPageFilenames(atlasText);
@@ -254,7 +307,7 @@ export async function loadSpineAssetsFast(
       })
     );
 
-    const [skeletonData] = await Promise.all([skeletonPromise, pagesPromise]);
+    const [skeletonBytes] = await Promise.all([skeletonPromise, pagesPromise]);
 
     if (!pageBlobUrls.has(speculativePngUrl)) {
       const unused = await speculativePngPromise;
@@ -267,12 +320,13 @@ export async function loadSpineAssetsFast(
       }
     }
 
+    const isJson = looksLikeJsonBytes(skeletonBytes);
     const entry: CachedSpineAssets = {
       skeletonUrl,
       atlasUrl,
       isJson,
-      binary: isJson ? undefined : (skeletonData as Uint8Array),
-      jsonText: isJson ? (skeletonData as string) : undefined,
+      binary: isJson ? undefined : skeletonBytes,
+      jsonText: isJson ? new TextDecoder('utf-8').decode(skeletonBytes) : undefined,
       atlasText,
       pageBlobUrls,
       lastUsed: Date.now(),
@@ -298,15 +352,20 @@ export async function loadSpineAssetsFast(
 }
 
 /**
- * Low-priority background prefetch (skips if an active priority model load is running).
+ * Low-priority background prefetch (skips if an active priority load or prefetch is running).
  */
 export function prefetchSpineAssets(skeletonUrl: string, atlasUrl: string): void {
-  if (activePriorityLoads > 0) return;
+  if (activePriorityLoads > 0 || activePrefetchCount > 0) return;
   const key = makeCacheKey(skeletonUrl, atlasUrl);
   if (memoryCache.has(key) || inflightRequests.has(key)) return;
-  void loadSpineAssetsFast(skeletonUrl, atlasUrl, undefined, false).catch(() => {
-    // ignore background prefetch failures
-  });
+  activePrefetchCount++;
+  void loadSpineAssetsFast(skeletonUrl, atlasUrl, undefined, false)
+    .catch(() => {
+      // ignore background prefetch failures
+    })
+    .finally(() => {
+      activePrefetchCount = Math.max(0, activePrefetchCount - 1);
+    });
 }
 
 /**

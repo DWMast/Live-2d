@@ -6731,8 +6731,10 @@ var spine;
 					page.texture = textureLoader(line);
 					page.texture.setFilters(page.minFilter, page.magFilter);
 					page.texture.setWraps(page.uWrap, page.vWrap);
-					page.width = page.texture.getImage().width;
-					page.height = page.texture.getImage().height;
+					if (!page.width || !page.height) {
+						page.width = page.texture.getImage().width;
+						page.height = page.texture.getImage().height;
+					}
 					this.pages.push(page);
 				}
 				else {
@@ -11500,7 +11502,6 @@ var spine;
 					this.sceneRenderer.rect(false, viewport.x, viewport.y, viewport.width, viewport.height, spine.Color.RED);
 				}
 				this.sceneRenderer.end();
-				this.sceneRenderer.camera.zoom = 0;
 			}
 		};
 		SpinePlayer.prototype.scale = function (sourceWidth, sourceHeight, targetWidth, targetHeight) {
@@ -11766,7 +11767,8 @@ var spine;
 		};
 		SpinePlayer.prototype.pause = function () {
 			this.paused = true;
-			this.playerControls.classList.remove("spine-player-controls-hidden");
+			if (this.config.showControls)
+				this.playerControls.classList.remove("spine-player-controls-hidden");
 			clearTimeout(this.cancelId);
 			this.playButton.classList.remove("spine-player-button-icon-pause");
 			this.playButton.classList.add("spine-player-button-icon-play");

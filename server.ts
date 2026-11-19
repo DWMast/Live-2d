@@ -179,30 +179,96 @@ function encodeUrlSegments(relPath: string): string {
     .join('/');
 }
 
+const MAX_UPSTREAM_CONCURRENCY = 6;
+let activeUpstreamFetches = 0;
+const upstreamQueue: Array<() => void> = [];
+const hostRateLimitedUntil = new Map<string, number>();
+
+async function withUpstreamConcurrency<T>(fn: () => Promise<T>): Promise<T> {
+  if (activeUpstreamFetches >= MAX_UPSTREAM_CONCURRENCY) {
+    await new Promise<void>((resolve) => upstreamQueue.push(resolve));
+  }
+  activeUpstreamFetches++;
+  try {
+    return await fn();
+  } finally {
+    activeUpstreamFetches--;
+    const next = upstreamQueue.shift();
+    if (next) next();
+  }
+}
+
+function getUpstreamOrigin(url: string): string {
+  try {
+    return new URL(url).origin;
+  } catch {
+    return url;
+  }
+}
+
+function orderBasesByHealth(bases: string[]): string[] {
+  if (bases.length <= 1) return bases;
+  const now = Date.now();
+  const healthy: string[] = [];
+  const cooled: string[] = [];
+  for (const base of bases) {
+    const until = hostRateLimitedUntil.get(getUpstreamOrigin(base)) || 0;
+    if (until > now) cooled.push(base);
+    else healthy.push(base);
+  }
+  return healthy.length > 0 ? [...healthy, ...cooled] : bases;
+}
+
+function parseRetryAfterMs(res: Response): number | null {
+  const raw = res.headers.get('retry-after');
+  if (!raw) return null;
+  const sec = Number(raw);
+  if (Number.isFinite(sec) && sec >= 0) {
+    return Math.min(6000, Math.max(500, Math.round(sec * 1000)));
+  }
+  return null;
+}
+
 async function fetchUpstreamWithRetry(url: string, attempts = 3): Promise<Buffer> {
   let lastErr: unknown;
+  const origin = getUpstreamOrigin(url);
   for (let i = 0; i < attempts; i++) {
     try {
-      const controller = new AbortController();
-      const timer = setTimeout(() => controller.abort(), 20000);
-      try {
-        const res = await fetch(url, { signal: controller.signal });
-        if (!res.ok) {
-          const err = new Error(`Upstream HTTP ${res.status}`) as Error & { status?: number };
-          err.status = res.status;
-          throw err;
+      return await withUpstreamConcurrency(async () => {
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), 20000);
+        try {
+          const res = await fetch(url, { signal: controller.signal });
+          if (!res.ok) {
+            if (res.status === 429) {
+              hostRateLimitedUntil.set(origin, Date.now() + 20000);
+            }
+            const err = new Error(`Upstream HTTP ${res.status}`) as Error & {
+              status?: number;
+              retryAfterMs?: number | null;
+            };
+            err.status = res.status;
+            err.retryAfterMs = parseRetryAfterMs(res);
+            throw err;
+          }
+          const ab = await res.arrayBuffer();
+          return Buffer.from(ab);
+        } finally {
+          clearTimeout(timer);
         }
-        const ab = await res.arrayBuffer();
-        return Buffer.from(ab);
-      } finally {
-        clearTimeout(timer);
-      }
+      });
     } catch (err) {
       lastErr = err;
-      const status = (err as { status?: number })?.status;
+      const typed = err as { status?: number; retryAfterMs?: number | null };
+      const status = typed?.status;
       if (status === 404 || status === 403) break;
       if (i < attempts - 1) {
-        await new Promise((r) => setTimeout(r, 250 * (i + 1)));
+        const baseDelay =
+          status === 429
+            ? typed.retryAfterMs ?? 700 * (i + 1)
+            : 300 * (i + 1);
+        const jitter = Math.floor(Math.random() * 200);
+        await new Promise((r) => setTimeout(r, baseDelay + jitter));
       }
     }
   }
@@ -345,7 +411,7 @@ async function resolveCachedAsset(
       }
 
       if (!buffer) {
-        for (const base of bases) {
+        for (const base of orderBasesByHealth(bases)) {
           try {
             buffer = await fetchUpstreamWithRetry(`${base}/${upstreamRel}`, 2);
             break;
@@ -355,9 +421,9 @@ async function resolveCachedAsset(
         }
       }
     } else {
-      for (const base of bases) {
+      for (const base of orderBasesByHealth(bases)) {
         try {
-          buffer = await fetchUpstreamWithRetry(`${base}/${upstreamRel}`, 2);
+          buffer = await fetchUpstreamWithRetry(`${base}/${upstreamRel}`, 3);
           break;
         } catch (err) {
           lastErr = err;

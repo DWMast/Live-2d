@@ -1,12 +1,13 @@
-import { useEffect, useMemo, useRef } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { Loader2, RefreshCw } from 'lucide-react';
 import type { BD2Character } from '../types/bd2';
 
 /**
  * Live2D (Cubism 4) viewer for Dragon & Girls Symphony (Idle Huntress) models.
  *
- * Uses pixi-live2d-display-lipsyncpatch (already a project dependency) on top of
- * pixi.js v7. The official Live2D Cubism Core script is vendored in
- * public/vendor and loaded once, lazily, the first time this viewer mounts.
+ * Uses pixi-live2d-display-lipsyncpatch on top of pixi.js v7.
+ * The official Live2D Cubism Core script is vendored in public/vendor
+ * and loaded once, lazily, the first time this viewer mounts.
  */
 
 let coreLoadPromise: Promise<void> | null = null;
@@ -43,7 +44,9 @@ function loadDisplayModule() {
     >;
   }
   return displayModulePromise;
-}interface Live2DViewerProps {
+}
+
+interface Live2DViewerProps {
   character: BD2Character;
   isPlaying: boolean;
   animationSpeed: number;
@@ -66,22 +69,23 @@ export function Live2DViewer({
   const modelRef = useRef<{
     motion: (group: string, index?: number, priority?: number) => Promise<unknown> | unknown;
     motionGroups?: string[];
-    makeCoverVisible?: (v: boolean) => void;
   } | null>(null);
 
-  // The model URL (and only the URL) drives the (re)load effect.
-  const modelUrl = useMemo(
-    () => character.live2dModelUrl || '',
-    [character.live2dModelUrl]
-  );
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [reloadNonce, setReloadNonce] = useState(0);
 
-  // Control flags are read through refs so speed/play toggles never reload the model.
+  const modelUrl = useMemo(() => character.live2dModelUrl || '', [character.live2dModelUrl]);
+
   const playRef = useRef(isPlaying);
   const speedRef = useRef(animationSpeed);
   const activeAnimRef = useRef(activeAnimation);
+  const callbacksRef = useRef({ onAnimationsLoaded, onLayersLoaded, onLoadError });
+
   playRef.current = isPlaying;
   speedRef.current = animationSpeed;
   activeAnimRef.current = activeAnimation;
+  callbacksRef.current = { onAnimationsLoaded, onLayersLoaded, onLoadError };
 
   useEffect(() => {
     let disposed = false;
@@ -92,11 +96,18 @@ export function Live2DViewer({
         })
       | null = null;
     let tickerFunc: (() => void) | null = null;
+    let resizeObserver: ResizeObserver | null = null;
+
+    setIsLoading(true);
+    setLoadError(null);
 
     const report = (err: unknown) => {
       if (!disposed) {
+        const msg = err instanceof Error ? err.message : String(err);
         console.error('Live2D load failed', err);
-        onLoadError?.(err instanceof Error ? err.message : String(err));
+        setIsLoading(false);
+        setLoadError(msg);
+        callbacksRef.current.onLoadError?.(msg);
       }
     };
 
@@ -104,16 +115,22 @@ export function Live2DViewer({
       const host = hostRef.current;
       if (!host || !modelUrl) return;
       try {
-        await Promise.all([ensureCubismCore(), loadDisplayModule()]);
-        const PIXI = await import('pixi.js');
-        const { Live2DModel, MotionPriority } = (await loadDisplayModule()) as unknown as {
+        const [, displayMod, PIXI] = await Promise.all([
+          ensureCubismCore(),
+          loadDisplayModule(),
+          import('pixi.js'),
+        ]);
+
+        const { Live2DModel, MotionPriority } = displayMod as unknown as {
           Live2DModel: {
-            updateTextAnchor?: unknown;
+            registerTicker?: (tickerClass: unknown) => void;
             from: (
               src: string,
               opts?: {
-                autoInteract?: boolean;
                 autoUpdate?: boolean;
+                autoHitTest?: boolean;
+                autoFocus?: boolean;
+                ticker?: unknown;
               }
             ) => Promise<import('pixi-live2d-display-lipsyncpatch/cubism4').Live2DModel>;
           };
@@ -122,18 +139,28 @@ export function Live2DViewer({
 
         if (disposed || !host) return;
 
+        Live2DModel.registerTicker?.(PIXI.Ticker);
+
         app = new PIXI.Application({
           backgroundAlpha: 0,
           resizeTo: host,
           antialias: true,
           autoDensity: true,
+          preserveDrawingBuffer: true,
           resolution: Math.min(window.devicePixelRatio || 1, 2),
         });
-        host.appendChild(app.view as HTMLCanvasElement);
+        host.innerHTML = '';
+        const view = app.view as HTMLCanvasElement;
+        view.style.display = 'block';
+        view.style.width = '100%';
+        view.style.height = '100%';
+        host.appendChild(view);
 
-        model = (await Live2DModel.from(modelUrl + (modelUrl.includes('?') ? '&' : '?') + 'cache-bust=' + Date.now(), {
-          autoInteract: false,
+        model = (await Live2DModel.from(modelUrl, {
           autoUpdate: true,
+          autoHitTest: false,
+          autoFocus: false,
+          ticker: app.ticker,
         })) as unknown as NonNullable<typeof model>;
 
         if (disposed) {
@@ -142,20 +169,28 @@ export function Live2DViewer({
           return;
         }
 
-        const internal = model.internalModel as {
-          motionManager: { groups?: Record<string, string> };
-          motionManagerSettings?: { groups: Record<string, number> };
+        const fitModel = () => {
+          if (!app || !model || !host) return;
+          const sceneW = Math.max(1, host.clientWidth || app.renderer.width / app.renderer.resolution);
+          const sceneH = Math.max(1, host.clientHeight || app.renderer.height / app.renderer.resolution);
+          const origW = Math.max(1, model.internalModel.originalWidth || model.width || 1000);
+          const origH = Math.max(1, model.internalModel.originalHeight || model.height || 1000);
+          const scale = Math.min((sceneW * 0.92) / origW, (sceneH * 0.92) / origH);
+          model.scale.set(scale);
+          model.x = (sceneW - origW * scale) / 2;
+          model.y = (sceneH - origH * scale) / 2;
         };
 
-        // Fit the model to the viewport, keeping full-body framing like the spine viewer.
-        const sceneW = app.renderer.width / app.renderer.resolution;
-        const sceneH = app.renderer.height / app.renderer.resolution;
-        const scale = Math.min(sceneW / model.internalModel.originalWidth, sceneH / model.internalModel.originalHeight, 1);
-        model.scale.set(scale * 0.95);
-        model.x = sceneW / 2 - (model.internalModel.originalWidth * model.scale.x) / 2;
-        model.y = sceneH - model.internalModel.originalHeight * model.scale.y;
-
+        fitModel();
         app.stage.addChild(model as unknown as import('pixi.js').Container);
+
+        if (typeof ResizeObserver !== 'undefined') {
+          resizeObserver = new ResizeObserver(() => {
+            app?.resize();
+            fitModel();
+          });
+          resizeObserver.observe(host);
+        }
 
         const internalCasted = model.internalModel as unknown as {
           motionManager: { groups?: Record<string, string> };
@@ -163,42 +198,49 @@ export function Live2DViewer({
         const groups =
           (internalCasted.motionManager?.groups as Record<string, string> | undefined) ?? {};
 
-        // Expose all motion groups that exist in the model3.json to the app so the
-        // animation dropdown feels identical to the spine path.
         const animNames: string[] = [];
-        const rawSettings = (model.internalModel as unknown as { settings?: { motions?: Record<string, {}> } }).settings;
-        const motions = (rawSettings?.motions ?? {}) as Record<string, unknown>;
+        const rawSettings = (
+          model.internalModel as unknown as { settings?: { motions?: Record<string, unknown> } }
+        ).settings;
+        const motions = rawSettings?.motions ?? {};
         for (const name of Object.keys(motions)) animNames.push(name);
         if (animNames.length === 0) animNames.push('idle');
-        onAnimationsLoaded(animNames);
-        onLayersLoaded([]);
+
+        callbacksRef.current.onAnimationsLoaded(animNames);
+        callbacksRef.current.onLayersLoaded([]);
+
         modelRef.current = {
           motion: (group: string) =>
-            model?.internalModel.motionManager.startMotion(group, undefined, MotionPriority.FORCE),
+            (
+              model?.internalModel.motionManager as unknown as {
+                startMotion: (g: string, i?: number, p?: number) => Promise<unknown>;
+              }
+            )?.startMotion(group, undefined, MotionPriority.FORCE),
           motionGroups: animNames,
         };
 
-        // keep uniforms in sync on tick
+        const initialAnim = animNames.includes('idle') ? 'idle' : animNames[0];
+        if (initialAnim) {
+          void modelRef.current.motion(initialAnim);
+        }
+
         const onTick = () => {
-          if (!model) return;
-          const wantPlay = playRef.current;
+          if (!model || !app) return;
+          app.ticker.speed = playRef.current ? speedRef.current : 0;
           const motionMgr = model.internalModel.motionManager as unknown as {
-            idleMotionPriority?: number;
-            groups?: Record<string, string>;
             isFinished?: boolean;
             startMotion: (g: string, i?: number, p?: number) => Promise<unknown>;
           };
-          if (!wantPlay) {
-            motionMgr.isFinished = true;
-            return;
-          }
-          const wanted = groups.idle || 'idle';
+          if (!playRef.current) return;
+          const wanted = activeAnimRef.current || groups.idle || initialAnim || 'idle';
           if (motionMgr.isFinished) {
-            void motionMgr.startMotion(wanted, undefined, 2);
+            void motionMgr.startMotion(wanted, undefined, MotionPriority.IDLE);
           }
         };
         tickerFunc = onTick;
         app.ticker.add(onTick);
+
+        setIsLoading(false);
       } catch (err) {
         report(err);
       }
@@ -208,6 +250,11 @@ export function Live2DViewer({
 
     return () => {
       disposed = true;
+      modelRef.current = null;
+      if (resizeObserver) {
+        resizeObserver.disconnect();
+        resizeObserver = null;
+      }
       if (tickerFunc && app) {
         app.ticker.remove(tickerFunc);
       }
@@ -221,17 +268,53 @@ export function Live2DViewer({
         try {
           app.destroy(true, { children: true, texture: true, baseTexture: true });
         } catch {
-          // ignore teardown races with the app having not finished setup
+          // ignore teardown races
         }
       }
       app = null;
       if (hostRef.current) hostRef.current.innerHTML = '';
     };
-    // reload only when the actual model changes
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [modelUrl]);
+  }, [modelUrl, reloadNonce]);
 
-  return <div ref={hostRef} className="w-full h-full" />;
+  useEffect(() => {
+    if (!activeAnimation || !modelRef.current) return;
+    try {
+      void modelRef.current.motion(activeAnimation);
+    } catch {
+      // ignore missing motion group
+    }
+  }, [activeAnimation]);
+
+  return (
+    <div className="relative w-full h-full flex items-center justify-center bg-slate-950 overflow-hidden select-none">
+      <div ref={hostRef} className="w-full h-full" />
+
+      {isLoading && (
+        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-slate-950/75 backdrop-blur-sm text-center px-6 pointer-events-none">
+          <Loader2 className="w-8 h-8 text-amber-400 animate-spin mb-3" />
+          <p className="text-sm font-semibold text-white">
+            Loading {character.charName}
+          </p>
+          <p className="text-xs text-slate-400 mt-1">
+            {character.costumeName} · Cubism 4 Live2D
+          </p>
+        </div>
+      )}
+
+      {loadError && !isLoading && (
+        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-slate-950/85 text-center px-6">
+          <p className="text-sm font-semibold text-rose-400 mb-2">{loadError}</p>
+          <button
+            onClick={() => setReloadNonce((n) => n + 1)}
+            className="px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-semibold flex items-center gap-2 transition-colors"
+          >
+            <RefreshCw className="w-3.5 h-3.5" />
+            <span>Retry Load</span>
+          </button>
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default Live2DViewer;

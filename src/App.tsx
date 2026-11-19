@@ -13,8 +13,6 @@ import { EnvironmentPreset, ScreenFilters } from './types';
 import { TopNav } from './components/TopNav';
 import { SpineViewer, SpineViewerHandle } from './components/SpineViewer';
 import { Live2DViewer } from './components/Live2DViewer';
-import { EchoSpineViewer } from './components/EchoSpineViewer';
-import { EchoRoster } from './components/EchoRoster';
 import { CinematicPlayer, CinematicLauncher } from './components/CinematicPlayer';
 import { ShotSequence } from './types/shot';
 import { buildCharacterSequence, buildDatingSequence } from './utils/shotSequencer';
@@ -24,13 +22,7 @@ import { LayerDrawer } from './components/LayerDrawer';
 import { EffectsPanel } from './components/EffectsPanel';
 import { ControlToolbar } from './components/ControlToolbar';
 import { MobileBottomBar } from './components/MobileBottomBar';
-import {
-  RenderDiagnostics,
-  DEFAULT_DIAGNOSTIC_TOGGLES,
-  DiagnosticToggles,
-  PoseShotSummary,
-} from './components/RenderDiagnostics';
-import { ChevronDown, ChevronUp, Bug } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 function useIsDesktop(): boolean {
   const [isDesktop, setIsDesktop] = useState<boolean>(() =>
@@ -113,15 +105,6 @@ export default function App() {
     colorFilter: 'none',
   });
 
-  // On-device render diagnostics (see RenderDiagnostics.tsx for why these exist)
-  const [diagnosticsOpen, setDiagnosticsOpen] = useState(false);
-  const [diagToggles, setDiagToggles] = useState<DiagnosticToggles>(DEFAULT_DIAGNOSTIC_TOGGLES);
-  const handleChangeDiagToggles = useCallback((updates: Partial<DiagnosticToggles>) => {
-    setDiagToggles((prev) => ({ ...prev, ...updates }));
-  }, []);
-  const [diagShots, setDiagShots] = useState<PoseShotSummary[]>([]);
-  const [diagNotice, setDiagNotice] = useState<string | null>(null);
-
   // Spacebar play/pause shortcut
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -150,7 +133,7 @@ export default function App() {
     setIsMobileDrawerOpen(false);
   }, []);
 
-  // Switch between Brown Dust 2, Daiblos Core, Haze Reverb, Echocalypse, and Azur Lane via the corner Star button
+  // Switch games via the corner Star button
   const handleSelectGame = useCallback(
     async (targetGame: GameId) => {
       if (isGameSwitching || targetGame === activeGame) return;
@@ -327,15 +310,6 @@ export default function App() {
   };
 
   const renderDrawerContent = () => {
-    if (activeTab === 'roster' && activeGame === 'echocalypse') {
-      return (
-        <EchoRoster
-          characters={activeRoster}
-          selectedCharacter={selectedCharacter}
-          onSelectCharacter={handleSelectCharacter}
-        />
-      );
-    }
     if (activeTab === 'roster') {
       return (
         <CharacterDrawer
@@ -373,9 +347,7 @@ export default function App() {
   };
 
   // Compute non-destructive CSS filter string for the WebGL canvas only.
-  // The diagnostics "raw canvas" switch bypasses all of it.
   const canvasFilterStyle = React.useMemo(() => {
-    if (diagToggles.rawCanvas) return undefined;
     const parts: string[] = [];
     if (filters.brightness !== 1) parts.push(`brightness(${filters.brightness})`);
     if (filters.contrast !== 1) parts.push(`contrast(${filters.contrast})`);
@@ -386,83 +358,7 @@ export default function App() {
     else if (filters.colorFilter === 'retro_anime') parts.push('contrast(1.12) saturate(1.2)');
     else if (filters.colorFilter === 'monochrome') parts.push('grayscale(1)');
     return parts.length > 0 ? parts.join(' ') : undefined;
-  }, [filters, diagToggles.rawCanvas]);
-
-  /**
-   * Human-readable snapshot of everything that could plausibly darken the model.
-   * Reading the *live* DOM rather than React state means the user's report
-   * reflects what the browser is actually compositing.
-   */
-  const diagnosticReport = React.useMemo(() => {
-    const lines: string[] = [];
-    const canvas =
-      viewportRef.current?.querySelector('canvas') ??
-      document.querySelector('canvas');
-    const dpr = typeof window !== 'undefined' ? window.devicePixelRatio : 0;
-
-    lines.push(
-      `character : ${selectedCharacter?.charName ?? '?'} / ${selectedCharacter?.costumeName ?? '?'} (${selectedCharacter?.id ?? '?'})`
-    );
-    lines.push(`game      : ${activeGame}`);
-    lines.push(`category  : ${activeCategory}`);
-    lines.push(`dpr       : ${dpr}`);
-    if (canvas) {
-      lines.push(`canvas css: ${canvas.clientWidth}x${canvas.clientHeight}`);
-      lines.push(`canvas buf: ${canvas.width}x${canvas.height}`);
-      const eff = canvas.width / Math.max(1, canvas.clientWidth);
-      lines.push(`scale     : ${eff.toFixed(2)}x (${eff < 1.5 ? 'LOW - likely pixelation' : 'ok'})`);
-    } else {
-      lines.push('canvas    : not found');
-    }
-    lines.push(`cssFilter : ${diagToggles.rawCanvas ? 'BYPASSED (raw canvas)' : canvasFilterStyle ?? 'none'}`);
-    lines.push(`vignette  : ${diagToggles.rawCanvas ? 'off (raw)' : filters.vignette.toFixed(2)}`);
-    lines.push(`scanlines : ${filters.scanlines ? 'on' : 'off'}`);
-    lines.push(`hidden    : ${hiddenLayers.size} layer(s)`);
-    lines.push('--- toggles ---');
-    (Object.keys(diagToggles) as Array<keyof DiagnosticToggles>).forEach((k) => {
-      lines.push(`${k.padEnd(12)}: ${diagToggles[k] ? 'ON' : 'off'}`);
-    });
-    return lines.join('\n');
-  }, [
-    selectedCharacter,
-    activeGame,
-    activeCategory,
-    diagToggles,
-    canvasFilterStyle,
-    filters.vignette,
-    filters.scanlines,
-    hiddenLayers.size,
-  ]);
-
-  /**
-   * Capture the character as it is right now.
-   *
-   * Each shot records the pose it was taken at, because "the marks appear when
-   * zoomed in" and "the marks appear at default zoom" are different bugs and the
-   * only way to tell them apart later is to have the numbers attached.
-   */
-  const handleCaptureShot = useCallback(() => {
-    const shot = viewerRef.current?.capturePoseShot();
-    if (!shot) {
-      setDiagNotice('Nothing to capture yet - wait for the character to load.');
-      return;
-    }
-    const pose = viewerRef.current?.getPose();
-    const name = selectedCharacter?.charName ?? 'character';
-    const detail = [
-      `${shot.image.width}x${shot.image.height}px @${shot.pixelRatio}x`,
-      `model ${selectedCharacter?.id ?? '?'}/${activeCategory}`,
-      pose ? `zoom ${pose.zoom.toFixed(3)}` : 'zoom ?',
-      `atlas ${shot.atlasPages.map((p) => p.split('/').pop()).join(', ') || '?'}`,
-      `mipmaps ${diagToggles.noMipmaps ? 'off' : 'on'}`,
-      `filter ${diagToggles.rawCanvas ? 'raw' : 'css'}`,
-    ].join(' · ');
-    setDiagShots((prev) => [
-      ...prev.slice(-5),
-      { label: `${name} — ${new Date().toLocaleTimeString()}`, dataUrl: shot.dataUrl, detail },
-    ]);
-    setDiagNotice(null);
-  }, [selectedCharacter, activeCategory, diagToggles.noMipmaps, diagToggles.rawCanvas]);
+  }, [filters]);
 
   return (
     <div className="w-screen h-[100dvh] flex flex-col bg-slate-950 text-slate-100 overflow-hidden font-sans">
@@ -510,18 +406,6 @@ export default function App() {
           </div>
         )}
 
-        {/* Mobile Drawer Re-open Button if closed */}
-        {!isDesktop && !isMobileDrawerOpen && (
-          <button
-            onClick={() => setIsMobileDrawerOpen(true)}
-            className="fixed bottom-20 left-4 z-40 h-10 px-3.5 rounded-xl bg-slate-900/95 hover:bg-slate-800 text-slate-100 shadow-2xl flex items-center gap-1.5 border border-slate-700/80 backdrop-blur-md text-xs font-semibold"
-            title="Open Panel"
-          >
-            <ChevronUp className="w-4 h-4 text-sky-400" />
-            <span>{activeTab === 'roster' ? 'Roster' : activeTab === 'layers' ? 'Layers' : 'VFX'}</span>
-          </button>
-        )}
-
         {/* Live Interactive Character Canvas (Spine or Live2D) */}
         <main className="flex-1 min-w-0 min-h-0 h-full relative overflow-hidden bg-slate-950">
           {currentEnvironment.bgUrl && (
@@ -531,7 +415,7 @@ export default function App() {
             />
           )}
 
-          {filters.vignette > 0 && !diagToggles.rawCanvas && (
+          {filters.vignette > 0 && (
             <div
               className="absolute inset-0 pointer-events-none z-20"
               style={{
@@ -540,7 +424,7 @@ export default function App() {
             />
           )}
 
-          {filters.scanlines && !diagToggles.rawCanvas && (
+          {filters.scanlines && (
             <div
               className="absolute inset-0 pointer-events-none z-20 opacity-20"
               style={{
@@ -566,12 +450,15 @@ export default function App() {
                   onAnimationsLoaded={handleAnimationsLoaded}
                   onLayersLoaded={handleLayersLoaded}
                 />
-              ) : activeGame === 'echocalypse' ? (
-                <EchoSpineViewer
-                  ref={viewerRef as unknown as React.Ref<never>}
+              ) : (
+                <SpineViewer
+                  ref={viewerRef}
+                  cameraLocked={activeSequence !== null}
+                  onReady={setModelFrame}
                   character={selectedCharacter}
-                  isPlaying={isPlaying}
+                  category={activeCategory}
                   animationSpeed={animationSpeed}
+                  isPlaying={isPlaying}
                   activeAnimation={activeAnimation}
                   onAnimationsLoaded={handleAnimationsLoaded}
                   onLayersLoaded={handleLayersLoaded}
@@ -581,83 +468,13 @@ export default function App() {
                   onResetAllLayers={handleResetAllLayers}
                   selectedLayerName={selectedLayerName}
                   onSelectLayer={handleSelectLayer}
+                  hasHiddenLayers={hiddenLayers.size > 0}
+                  onPlayVoice={handlePlayVoice}
+                  isVoicePlaying={isVoicePlaying}
                 />
-              ) : (
-              <SpineViewer
-                ref={viewerRef}
-                cameraLocked={activeSequence !== null}
-                onReady={setModelFrame}
-                character={selectedCharacter}
-                category={activeCategory}
-                animationSpeed={animationSpeed}
-                isPlaying={isPlaying}
-                activeAnimation={activeAnimation}
-                onAnimationsLoaded={handleAnimationsLoaded}
-                onLayersLoaded={handleLayersLoaded}
-                hiddenLayers={hiddenLayers}
-                onDeleteLayer={handleDeleteLayer}
-                onUndoDelete={handleUndoDelete}
-                onResetAllLayers={handleResetAllLayers}
-                selectedLayerName={selectedLayerName}
-                onSelectLayer={handleSelectLayer}
-                hasHiddenLayers={hiddenLayers.size > 0}
-                onPlayVoice={handlePlayVoice}
-                isVoicePlaying={isVoicePlaying}
-                diagnosticNoMipmaps={diagToggles.noMipmaps}
-                diagnosticFlatShading={diagToggles.flatShading}
-              />
               )}
             </ErrorBoundary>
           </div>
-
-          {/* Echocalypse: switch outfits / variants without overlapping camera controls */}
-          {activeGame === 'echocalypse' &&
-            (selectedCharacter.costumes?.length ?? 0) > 1 && (
-              <div className="absolute top-3 left-3 sm:left-1/2 sm:-translate-x-1/2 z-20 max-w-[calc(100%-8.75rem)] sm:max-w-[calc(100%-18rem)] overflow-x-auto no-scrollbar">
-                <div className="flex items-center gap-1 p-1 rounded-xl bg-slate-900/90 border border-slate-800/90 backdrop-blur-md shadow-xl w-max">
-                  {selectedCharacter.costumes!.map((modelId) => {
-                    const member = activeRoster.find((c) => c.spine === modelId);
-                    if (!member) return null;
-                    const active = member.id === selectedCharacter.id;
-                    return (
-                      <button
-                        key={modelId}
-                        onClick={() => handleSelectCharacter(member)}
-                        className={`h-8 px-3 rounded-lg text-[11px] font-semibold whitespace-nowrap transition-colors ${
-                          active
-                            ? 'bg-emerald-600 text-white shadow-sm'
-                            : 'text-slate-300 hover:text-white hover:bg-slate-800/80'
-                        }`}
-                      >
-                        {member.costumeIndex === 0 ? 'Base' : member.costumeName}
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-            )}
-
-          {/* Render diagnostics launcher + panel */}
-          {!diagnosticsOpen && activeGame !== 'echocalypse' && (
-            <button
-              onClick={() => setDiagnosticsOpen(true)}
-              className="absolute top-4 left-4 z-40 min-h-[36px] px-3 rounded-xl bg-amber-500/15 hover:bg-amber-500/25 border border-amber-400/50 text-amber-300 text-[11px] font-bold flex items-center gap-1.5 backdrop-blur-sm"
-              title="Open render diagnostics"
-            >
-              <Bug className="w-3.5 h-3.5" />
-              Diagnose
-            </button>
-          )}
-          <RenderDiagnostics
-            open={diagnosticsOpen}
-            onClose={() => setDiagnosticsOpen(false)}
-            toggles={diagToggles}
-            onChangeToggles={handleChangeDiagToggles}
-            shots={diagShots}
-            onCapture={handleCaptureShot}
-            onClearShots={() => setDiagShots([])}
-            reportText={diagNotice ? `${diagNotice}\n\n${diagnosticReport}` : diagnosticReport}
-          />
 
           {/* Floating Control Toolbar */}
           <ControlToolbar

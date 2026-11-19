@@ -36,6 +36,10 @@
   height: 100% !important;
 }
 
+.spine-player-controls {
+  display: none !important;
+}
+
 /* Canvas transparent checkerboard pattern */
 .bg-checkerboard {
   background-color: #0f172a;

@@ -35,7 +35,6 @@ export const CharacterDrawer: React.FC<CharacterDrawerProps> = ({
   const isBd2 = activeGame === 'bd2';
   const isDaiCore = activeGame === 'daicore';
   const isHaze = activeGame === 'hazereverb';
-  const isEcho = activeGame === 'echocalypse';
   const isAzurLane = activeGame === 'azurlane';
 
   const [searchTerm, setSearchTerm] = useState('');
@@ -97,10 +96,14 @@ export const CharacterDrawer: React.FC<CharacterDrawerProps> = ({
     ? 'Search Alps, Osiris, Lobera, Archive CG...'
     : isHaze
     ? 'Search Lulula, Julius, Alice, Lilith, Heige...'
-    : isEcho
-    ? 'Search Case ID or Skin Illustration...'
     : isAzurLane
     ? 'Search New Jersey, Shinano, Musashi, Albion...'
+    : activeGame === 'mad'
+    ? 'Search MAke Drama characters & scenes...'
+    : activeGame === 'anchorpanic'
+    ? 'Search Anchor Panic characters & skins...'
+    : activeGame === 'girlssymphony'
+    ? 'Search Aphrodite, Athena, Live2D skins...'
     : 'Search Justia, Schera, Lathel, Teresse...';
 
   return (
@@ -202,7 +205,7 @@ export const CharacterDrawer: React.FC<CharacterDrawerProps> = ({
               </>
             )}
 
-            {(isHaze || isEcho || isAzurLane) && (
+            {(isHaze || isAzurLane) && (
               <>
                 <button
                   onClick={() => setFilterType('skin')}
@@ -224,7 +227,7 @@ export const CharacterDrawer: React.FC<CharacterDrawerProps> = ({
                   }`}
                 >
                   <User className="w-3.5 h-3.5" />
-                  <span>{isHaze ? 'Drivers' : isEcho ? 'Cases' : 'Ships'}</span>
+                  <span>{isHaze ? 'Drivers' : 'Ships'}</span>
                 </button>
               </>
             )}
@@ -315,7 +318,9 @@ export const CharacterDrawer: React.FC<CharacterDrawerProps> = ({
           </div>
         ) : (
           <div className="flex items-center justify-between px-2.5 py-1.5 rounded-xl bg-slate-900/90 border border-slate-800 text-[11px] text-slate-300">
-            <span className="font-semibold">Interactive Spine Model</span>
+            <span className="font-semibold">
+              {activeGame === 'girlssymphony' ? 'Interactive Live2D Model' : 'Interactive Spine Model'}
+            </span>
             <span className="font-mono text-sky-300">
               {selectedCharacter.releaseLabel}
             </span>

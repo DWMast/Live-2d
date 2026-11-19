@@ -2,8 +2,9 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { SpinePlayer, GLTexture, OrthoCamera, Vector2, Vector3, Downloader } from '@esotericsoftware/spine-player';
 import '@esotericsoftware/spine-player/dist/spine-player.css';
 import { BD2Character } from '../types/bd2';
-import { ECHO_SPINE_BASE } from '../utils/bd2Assets';
 import { loadModel, createModelDownloader, ModelLoadError, type LoadedModel } from '../utils/spine/assetLoader';
+
+const ECHO_SPINE_BASE = '/api/echo-spine';
 import { applyTextureContract } from '../utils/spine/renderContract';
 import { runtimeForVersion } from '../utils/spine/skeletonInspector';
 import {
