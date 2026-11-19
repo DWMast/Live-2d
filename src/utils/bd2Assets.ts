@@ -17,6 +17,7 @@ export const GS_LIVE2D_BASE = '/api/gs-live2d';
 export const ECHO_SPINE_BASE = '/api/echo-spine';
 export const ECHO_ICON_BASE = '/api/echo-pic';
 export const CBJQ_SPINE_BASE = '/api/cbjq-spine';
+export const NIKKE_SPINE_BASE = '/api/nikke-spine';
 
 export const GAME_LIST: GameDescriptor[] = [
   {
@@ -108,6 +109,16 @@ export const GAME_LIST: GameDescriptor[] = [
     engineLabel: 'Spine 3.8 · 459 Models',
     accentGradient: 'from-emerald-500 to-cyan-600 shadow-emerald-500/20',
     accentText: 'text-emerald-400',
+  },
+  {
+    id: 'nikke',
+    shortCode: 'NK',
+    name: 'Goddess of Victory: NIKKE',
+    studioName: 'Nikke Spine Studio',
+    rosterLabel: 'NIKKE Roster',
+    engineLabel: 'Spine 4.0 · 80 Characters',
+    accentGradient: 'from-pink-500 to-violet-600 shadow-pink-500/20',
+    accentText: 'text-pink-400',
   },
 ];
 
@@ -258,6 +269,20 @@ interface Live2DCatalogEntry {
   jsonPath: string;
   iconPath?: string;
   api: string;
+}
+
+interface NikkeCatalogEntry {
+  id: string;
+  charId: string;
+  variant: string;
+  charName: string;
+  costumeName: string;
+  modelType: string;
+  jsonPath: string;
+  atlasPath: string;
+  iconPath?: string;
+  aimSpine?: string;
+  coverSpine?: string;
 }
 
 interface CbjqCatalogEntry {
@@ -514,6 +539,34 @@ export async function loadGameRoster(gameId: GameId): Promise<BD2Character[]> {
         named: item.charName !== item.modelId && !item.charName.includes('Variant') && !item.charName.includes('NPC') && !item.charName.includes('Scene'),
         kind: item.kind,
       }));
+    } else if (gameId === 'nikke') {
+      const res = await fetch('/data/nikke_catalog.json');
+      if (!res.ok) throw new Error(`Failed to load NIKKE catalog (HTTP ${res.status})`);
+      const rawList = (await res.json()) as NikkeCatalogEntry[];
+      mapped = rawList.map((item, idx) => ({
+        id: item.id,
+        game: 'nikke',
+        charName: item.charName,
+        costumeName: item.variant === '00' ? 'Default' : `Skin ${item.variant}`,
+        spine: item.id,
+        cutscene: '',
+        dating: '',
+        audio: '',
+        skeletonUrl: encodeProxyPath(NIKKE_SPINE_BASE, item.jsonPath),
+        atlasUrl: encodeProxyPath(NIKKE_SPINE_BASE, item.atlasPath),
+        skeletonFormat: 'skel',
+        spineVersion: '4.0',
+        modelType: 'character',
+        iconUrl: item.iconPath ? encodeProxyPath(NIKKE_SPINE_BASE, item.iconPath) : '',
+        hasCutscene: false,
+        hasDating: false,
+        releaseOrder: idx,
+        releaseLabel: 'Spine 4.0',
+        named: item.charName !== item.charId,
+        aimSpine: item.aimSpine ? encodeProxyPath(NIKKE_SPINE_BASE, item.aimSpine) : undefined,
+        coverSpine: item.coverSpine ? encodeProxyPath(NIKKE_SPINE_BASE, item.coverSpine) : undefined,
+        baseId: item.charId,
+      }));
     } else if (gameId === 'snowbreak') {
       const res = await fetch('/data/snowbreak_catalog.json');
       if (!res.ok) throw new Error(`Failed to load Snowbreak catalog (HTTP ${res.status})`);
@@ -584,6 +637,9 @@ export function pickDefaultCharacterForGame(gameId: GameId, roster: BD2Character
   }
   if (gameId === 'snowbreak') {
     return roster.find((c) => c.kind === 'character' && c.releaseLabel === 'Hero Spine') || roster[0];
+  }
+  if (gameId === 'nikke') {
+    return roster.find((c) => c.iconUrl) || roster.find((c) => c.id === 'nikke_c010_00') || roster[0];
   }
   if (gameId === 'echocalypse') {
     return (

@@ -58,6 +58,14 @@ const UPSTREAM_GS_BASES = [
   'https://raw.githubusercontent.com/Misekato/IHLive2d/main',
 ];
 
+const UPSTREAM_NIKKE_BASES = [
+  'https://raw.githubusercontent.com/nullice/NikkeSpine/master',
+  'https://cdn.jsdelivr.net/gh/nullice/NikkeSpine@master',
+  // Character portraits (images/FB/*) come from the nikke-db web app repo.
+  'https://raw.githubusercontent.com/leililei/Nikke-db.github.io/main',
+  'https://cdn.jsdelivr.net/gh/leililei/Nikke-db.github.io@gh-pages',
+];
+
 const UPSTREAM_CBJQ_SPINE_BASES = [
   'https://cdn.jsdelivr.net/gh/leililei/cbjq-spine@main',
   'https://raw.githubusercontent.com/leililei/cbjq-spine/main',
@@ -359,7 +367,8 @@ async function resolveCachedAsset(
     | 'mad-icons'
     | 'anchor-spines'
     | 'gs-live2d'
-    | 'cbjq-spines',
+    | 'cbjq-spines'
+    | 'nikke-spines',
   relPath: string,
   upstreamBases: string | string[],
   encodePathForUpstream = false
@@ -774,6 +783,26 @@ async function startServer() {
     } catch (err) {
       const status = (err as { status?: number })?.status || 502;
       res.status(status).json({ error: `Failed to fetch Snowbreak asset: ${relPath}` });
+    }
+  });
+
+  // NIKKE (胜利女神) Spine 4.0 models + nikke-db portrait icons.
+  app.get('/api/nikke-spine/*', async (req, res) => {
+    const rawParam = (req.params as Record<string, string>)[0] ?? '';
+    const relPath = sanitizeUtf8AssetPath(
+      rawParam,
+      /\.(json|skel|atlas|png|webp|jpg|jpeg)$/i
+    );
+    if (!relPath) {
+      res.status(400).json({ error: 'Invalid NIKKE asset path' });
+      return;
+    }
+    try {
+      const entry = await resolveCachedAsset('nikke-spines', relPath, UPSTREAM_NIKKE_BASES, true);
+      sendCachedEntry(req, res, entry);
+    } catch (err) {
+      const status = (err as { status?: number })?.status || 502;
+      res.status(status).json({ error: `Failed to fetch NIKKE asset: ${relPath}` });
     }
   });
 
