@@ -4,8 +4,8 @@
   "charName": "Elisia",
   "costumeName": "Elisia · Affection",
   "modelType": "skin",
-  "jsonPath": "skins/af_ch0009__google/AF_CH0009.skel",
-  "atlasPath": "skins/af_ch0009__google/AF_CH0009.atlas",
+  "jsonPath": "skins/af_ch0009__onestore/AF_CH0009.skel",
+  "atlasPath": "skins/af_ch0009__onestore/AF_CH0009.atlas",
   "iconPath": "skin/Thumbnail_AF_CH0009.webp",
   "spineVersion": "4.1",
   "kind": "affection",
@@ -21,15 +21,21 @@
    "skeleton",
    "atlas",
    "texture:AF_CH0009.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "af_ch0010",
   "charName": "Mane (Swimsuit)",
   "costumeName": "Mane (Swimsuit) · Affection",
   "modelType": "skin",
-  "jsonPath": "skins/af_ch0010__google/AF_CH0010.skel",
-  "atlasPath": "skins/af_ch0010__google/AF_CH0010.atlas",
+  "jsonPath": "skins/af_ch0010__onestore/AF_CH0010.skel",
+  "atlasPath": "skins/af_ch0010__onestore/AF_CH0010.atlas",
   "iconPath": "skin/Thumbnail_AF_CH0010.webp",
   "spineVersion": "4.1",
   "kind": "affection",
@@ -45,7 +51,13 @@
    "skeleton",
    "atlas",
    "texture:AF_CH0010.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "af_ch0011",
@@ -71,8 +83,8 @@
   "charName": "Ines",
   "costumeName": "Ines · Affection",
   "modelType": "skin",
-  "jsonPath": "skins/af_ch0015__google/AF_CH0015.skel",
-  "atlasPath": "skins/af_ch0015__google/AF_CH0015.atlas",
+  "jsonPath": "skins/af_ch0015__onestore/AF_CH0015.skel",
+  "atlasPath": "skins/af_ch0015__onestore/AF_CH0015.atlas",
   "iconPath": "skin/Thumbnail_AF_CH0015.webp",
   "spineVersion": "4.1",
   "kind": "affection",
@@ -88,7 +100,13 @@
    "skeleton",
    "atlas",
    "texture:AF_CH0015.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "af_ch0019",
@@ -114,8 +132,8 @@
   "charName": "Midwen",
   "costumeName": "Midwen · Affection",
   "modelType": "skin",
-  "jsonPath": "skins/af_ch0022__google/AF_CH0022.skel",
-  "atlasPath": "skins/af_ch0022__google/AF_CH0022.atlas",
+  "jsonPath": "skins/af_ch0022__onestore/AF_CH0022.skel",
+  "atlasPath": "skins/af_ch0022__onestore/AF_CH0022.atlas",
   "iconPath": "skin/Thumbnail_AF_CH0022.webp",
   "spineVersion": "4.1",
   "kind": "affection",
@@ -131,15 +149,21 @@
    "skeleton",
    "atlas",
    "texture:AF_CH0022.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "af_ch0024",
   "charName": "Aronne",
   "costumeName": "Aronne · Affection",
   "modelType": "skin",
-  "jsonPath": "skins/af_ch0024__google/AF_Alone.skel",
-  "atlasPath": "skins/af_ch0024__google/AF_Alone.atlas",
+  "jsonPath": "skins/af_ch0024__onestore/AF_Alone.skel",
+  "atlasPath": "skins/af_ch0024__onestore/AF_Alone.atlas",
   "iconPath": "skin/Thumbnail_AF_CH0024.webp",
   "spineVersion": "4.1",
   "kind": "affection",
@@ -155,7 +179,13 @@
    "skeleton",
    "atlas",
    "texture:AF_Alone.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "af_ch0028",
@@ -167,7 +197,7 @@
   "iconPath": "skin/Thumbnail_AF_CH0028.webp",
   "spineVersion": "4.1",
   "kind": "affection",
-  "uncensored": true,
+  "uncensored": false,
   "stores": [
    "google",
    "onestore"
@@ -179,7 +209,13 @@
    "skeleton",
    "atlas",
    "texture:AF_Charlotte.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "google",
+   "nude": false,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "af_ch0032",
@@ -205,8 +241,8 @@
   "charName": "Estelle",
   "costumeName": "Estelle · Affection",
   "modelType": "skin",
-  "jsonPath": "skins/af_ch0033__google/AF_CH0033.skel",
-  "atlasPath": "skins/af_ch0033__google/AF_CH0033.atlas",
+  "jsonPath": "skins/af_ch0033__onestore/AF_CH0033.skel",
+  "atlasPath": "skins/af_ch0033__onestore/AF_CH0033.atlas",
   "iconPath": "skin/Thumbnail_AF_CH0033.webp",
   "spineVersion": "4.1",
   "kind": "affection",
@@ -222,15 +258,21 @@
    "skeleton",
    "atlas",
    "texture:AF_CH0033.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": true,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "af_ch0035",
   "charName": "Yuria",
   "costumeName": "Yuria · Affection",
   "modelType": "skin",
-  "jsonPath": "skins/af_ch0035__google/AF_CH0035.skel",
-  "atlasPath": "skins/af_ch0035__google/AF_CH0035.atlas",
+  "jsonPath": "skins/af_ch0035__onestore/AF_CH0035.skel",
+  "atlasPath": "skins/af_ch0035__onestore/AF_CH0035.atlas",
   "iconPath": "skin/Thumbnail_AF_CH0035.webp",
   "spineVersion": "4.1",
   "kind": "affection",
@@ -246,15 +288,21 @@
    "skeleton",
    "atlas",
    "texture:AF_CH0035.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "af_ch0038",
   "charName": "Valentina",
   "costumeName": "Valentina · Affection",
   "modelType": "skin",
-  "jsonPath": "skins/af_ch0038__google/AF_CH0038.skel",
-  "atlasPath": "skins/af_ch0038__google/AF_CH0038.atlas",
+  "jsonPath": "skins/af_ch0038__onestore/AF_CH0038.skel",
+  "atlasPath": "skins/af_ch0038__onestore/AF_CH0038.atlas",
   "iconPath": "skin/Thumbnail_AF_CH0038.webp",
   "spineVersion": "4.1",
   "kind": "affection",
@@ -270,7 +318,13 @@
    "skeleton",
    "atlas",
    "texture:AF_CH0038.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "af_ch0040",
@@ -282,7 +336,7 @@
   "iconPath": "skin/Thumbnail_AF_CH0040.webp",
   "spineVersion": "4.1",
   "kind": "affection",
-  "uncensored": true,
+  "uncensored": false,
   "stores": [
    "google",
    "onestore"
@@ -292,15 +346,21 @@
   "nameCn": "이자벨",
   "divergeReasons": [
    "skeleton"
-  ]
+  ],
+  "censorBuild": {
+   "store": "google",
+   "nude": false,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "af_ch0042",
   "charName": "Oblia",
   "costumeName": "Oblia · Affection",
   "modelType": "skin",
-  "jsonPath": "skins/af_ch0042__google/AF_CH0042.skel",
-  "atlasPath": "skins/af_ch0042__google/AF_CH0042.atlas",
+  "jsonPath": "skins/af_ch0042__onestore/AF_CH0042.skel",
+  "atlasPath": "skins/af_ch0042__onestore/AF_CH0042.atlas",
   "iconPath": "skin/Thumbnail_AF_CH0042.webp",
   "spineVersion": "4.1",
   "kind": "affection",
@@ -316,15 +376,21 @@
    "skeleton",
    "atlas",
    "texture:AF_CH0042.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "af_ch0043",
   "charName": "Lafine",
   "costumeName": "Lafine · Affection",
   "modelType": "skin",
-  "jsonPath": "skins/af_ch0043__google/AF_CH0043.skel",
-  "atlasPath": "skins/af_ch0043__google/AF_CH0043.atlas",
+  "jsonPath": "skins/af_ch0043__onestore/AF_CH0043.skel",
+  "atlasPath": "skins/af_ch0043__onestore/AF_CH0043.atlas",
   "iconPath": "skin/Thumbnail_AF_CH0043.webp",
   "spineVersion": "4.1",
   "kind": "affection",
@@ -340,15 +406,21 @@
    "skeleton",
    "atlas",
    "texture:AF_CH0043.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "af_ch0052",
   "charName": "Rana",
   "costumeName": "Rana · Affection",
   "modelType": "skin",
-  "jsonPath": "skins/af_ch0052__google/AF_CH0052.skel",
-  "atlasPath": "skins/af_ch0052__google/AF_CH0052.atlas",
+  "jsonPath": "skins/af_ch0052__onestore/AF_CH0052.skel",
+  "atlasPath": "skins/af_ch0052__onestore/AF_CH0052.atlas",
   "iconPath": "skin/Thumbnail_AF_CH0052.webp",
   "spineVersion": "4.1",
   "kind": "affection",
@@ -364,15 +436,21 @@
    "skeleton",
    "atlas",
    "texture:AF_CH0052.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "af_ch0057",
   "charName": "Casey",
   "costumeName": "Casey · Affection",
   "modelType": "skin",
-  "jsonPath": "skins/af_ch0057__google/AF_CH0057.skel",
-  "atlasPath": "skins/af_ch0057__google/AF_CH0057.atlas",
+  "jsonPath": "skins/af_ch0057__onestore/AF_CH0057.skel",
+  "atlasPath": "skins/af_ch0057__onestore/AF_CH0057.atlas",
   "iconPath": "skin/Thumbnail_AF_CH0057.webp",
   "spineVersion": "4.1",
   "kind": "affection",
@@ -387,15 +465,21 @@
   "divergeReasons": [
    "skeleton",
    "atlas"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "af_ch0058",
   "charName": "Bianca",
   "costumeName": "Bianca · Affection",
   "modelType": "skin",
-  "jsonPath": "skins/af_ch0058__google/AF_CH0058.skel",
-  "atlasPath": "skins/af_ch0058__google/AF_CH0058.atlas",
+  "jsonPath": "skins/af_ch0058__onestore/AF_CH0058.skel",
+  "atlasPath": "skins/af_ch0058__onestore/AF_CH0058.atlas",
   "iconPath": "skin/Thumbnail_AF_CH0058.webp",
   "spineVersion": "4.1",
   "kind": "affection",
@@ -411,15 +495,21 @@
    "skeleton",
    "atlas",
    "texture:AF_CH0058.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "af_ch0068",
   "charName": "Claire (Swimsuit)",
   "costumeName": "Claire (Swimsuit) · Affection",
   "modelType": "skin",
-  "jsonPath": "skins/af_ch0068__google/AF_CH0068.skel",
-  "atlasPath": "skins/af_ch0068__google/AF_CH0068.atlas",
+  "jsonPath": "skins/af_ch0068__onestore/AF_CH0068.skel",
+  "atlasPath": "skins/af_ch0068__onestore/AF_CH0068.atlas",
   "iconPath": "skin/Thumbnail_AF_CH0068.webp",
   "spineVersion": "4.1",
   "kind": "affection",
@@ -435,15 +525,21 @@
    "skeleton",
    "atlas",
    "texture:AF_CH0068.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "af_ch0069",
   "charName": "Dan Xi (Halloween)",
   "costumeName": "Dan Xi (Halloween) · Affection",
   "modelType": "skin",
-  "jsonPath": "skins/af_ch0069__google/AF_CH0069.skel",
-  "atlasPath": "skins/af_ch0069__google/AF_CH0069.atlas",
+  "jsonPath": "skins/af_ch0069__onestore/AF_CH0069.skel",
+  "atlasPath": "skins/af_ch0069__onestore/AF_CH0069.atlas",
   "iconPath": "skin/Thumbnail_AF_CH0069.webp",
   "spineVersion": "4.1",
   "kind": "affection",
@@ -459,15 +555,21 @@
    "skeleton",
    "atlas",
    "texture:AF_CH0069.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "af_ch0075",
   "charName": "Kouchou (Halloween)",
   "costumeName": "Kouchou (Halloween) · Affection",
   "modelType": "skin",
-  "jsonPath": "skins/af_ch0075__google/AF_CH0075.skel",
-  "atlasPath": "skins/af_ch0075__google/AF_CH0075.atlas",
+  "jsonPath": "skins/af_ch0075__onestore/AF_CH0075.skel",
+  "atlasPath": "skins/af_ch0075__onestore/AF_CH0075.atlas",
   "iconPath": "skin/Thumbnail_AF_CH0075.webp",
   "spineVersion": "4.1",
   "kind": "affection",
@@ -483,19 +585,25 @@
    "skeleton",
    "atlas",
    "texture:AF_CH0075.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "ds_ch0009",
   "charName": "Elisia",
   "costumeName": "Elisia · Desire",
   "modelType": "skin",
-  "jsonPath": "skins/ds_ch0009__google/DS_Elisia.skel",
-  "atlasPath": "skins/ds_ch0009__google/DS_Elisia.atlas",
+  "jsonPath": "skins/ds_ch0009__onestore/DS_Elisia.skel",
+  "atlasPath": "skins/ds_ch0009__onestore/DS_Elisia.atlas",
   "iconPath": "skin/Thumbnail_DS_CH0009.webp",
   "spineVersion": "4.1",
   "kind": "desire",
-  "uncensored": true,
+  "uncensored": false,
   "stores": [
    "google",
    "onestore"
@@ -507,7 +615,13 @@
    "skeleton",
    "atlas",
    "texture:DS_Elisia.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": false,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": true
+  }
  },
  {
   "id": "ds_ch0010",
@@ -538,7 +652,7 @@
   "iconPath": "skin/Thumbnail_DS_CH0011.webp",
   "spineVersion": "4.1",
   "kind": "desire",
-  "uncensored": true,
+  "uncensored": false,
   "stores": [
    "google",
    "onestore"
@@ -550,7 +664,13 @@
    "skeleton",
    "atlas",
    "texture:DS_chise.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "google",
+   "nude": false,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "ds_ch0015",
@@ -581,7 +701,7 @@
   "iconPath": "skin/Thumbnail_DS_CH0019.webp",
   "spineVersion": "4.1",
   "kind": "desire",
-  "uncensored": true,
+  "uncensored": false,
   "stores": [
    "google",
    "onestore"
@@ -593,15 +713,21 @@
    "skeleton",
    "atlas",
    "texture:DS_Victoria.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "google",
+   "nude": false,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "ds_ch0022",
   "charName": "Midwen",
   "costumeName": "Midwen · Desire",
   "modelType": "skin",
-  "jsonPath": "skins/ds_ch0022__google/DS_CH0022.skel",
-  "atlasPath": "skins/ds_ch0022__google/DS_CH0022.atlas",
+  "jsonPath": "skins/ds_ch0022__onestore/DS_CH0022.skel",
+  "atlasPath": "skins/ds_ch0022__onestore/DS_CH0022.atlas",
   "iconPath": "skin/Thumbnail_DS_CH0022.webp",
   "spineVersion": "4.1",
   "kind": "desire",
@@ -617,15 +743,21 @@
    "skeleton",
    "atlas",
    "texture:DS_CH0022.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "ds_ch0024",
   "charName": "Aronne",
   "costumeName": "Aronne · Desire",
   "modelType": "skin",
-  "jsonPath": "skins/ds_ch0024__google/DS_Alone.skel",
-  "atlasPath": "skins/ds_ch0024__google/DS_Alone.atlas",
+  "jsonPath": "skins/ds_ch0024__onestore/DS_Alone.skel",
+  "atlasPath": "skins/ds_ch0024__onestore/DS_Alone.atlas",
   "iconPath": "skin/Thumbnail_DS_CH0024.webp",
   "spineVersion": "4.1",
   "kind": "desire",
@@ -641,7 +773,13 @@
    "skeleton",
    "atlas",
    "texture:DS_Alone.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "ds_ch0028",
@@ -653,7 +791,7 @@
   "iconPath": "skin/Thumbnail_DS_CH0028.webp",
   "spineVersion": "4.1",
   "kind": "desire",
-  "uncensored": true,
+  "uncensored": false,
   "stores": [
    "google",
    "onestore"
@@ -665,15 +803,21 @@
    "skeleton",
    "atlas",
    "texture:DS_Charlotte.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "google",
+   "nude": false,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "ds_ch0032",
   "charName": "Suji",
   "costumeName": "Suji · Desire",
   "modelType": "skin",
-  "jsonPath": "skins/ds_ch0032__google/DS_CH0032.skel",
-  "atlasPath": "skins/ds_ch0032__google/DS_CH0032.atlas",
+  "jsonPath": "skins/ds_ch0032__onestore/DS_CH0032.skel",
+  "atlasPath": "skins/ds_ch0032__onestore/DS_CH0032.atlas",
   "iconPath": "skin/Thumbnail_DS_CH0032.webp",
   "spineVersion": "4.1",
   "kind": "desire",
@@ -689,15 +833,21 @@
    "skeleton",
    "atlas",
    "texture:DS_CH0032.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "ds_ch0033",
   "charName": "Estelle",
   "costumeName": "Estelle · Desire",
   "modelType": "skin",
-  "jsonPath": "skins/ds_ch0033__google/DS_CH0033.skel",
-  "atlasPath": "skins/ds_ch0033__google/DS_CH0033.atlas",
+  "jsonPath": "skins/ds_ch0033__onestore/DS_CH0033.skel",
+  "atlasPath": "skins/ds_ch0033__onestore/DS_CH0033.atlas",
   "iconPath": "skin/Thumbnail_DS_CH0033.webp",
   "spineVersion": "4.1",
   "kind": "desire",
@@ -713,15 +863,21 @@
    "skeleton",
    "atlas",
    "texture:DS_CH0033.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "ds_ch0035",
   "charName": "Yuria",
   "costumeName": "Yuria · Desire",
   "modelType": "skin",
-  "jsonPath": "skins/ds_ch0035__google/DS_CH0035.skel",
-  "atlasPath": "skins/ds_ch0035__google/DS_CH0035.atlas",
+  "jsonPath": "skins/ds_ch0035__onestore/DS_CH0035.skel",
+  "atlasPath": "skins/ds_ch0035__onestore/DS_CH0035.atlas",
   "iconPath": "skin/Thumbnail_DS_CH0035.webp",
   "spineVersion": "4.1",
   "kind": "desire",
@@ -737,15 +893,21 @@
    "skeleton",
    "atlas",
    "texture:DS_CH0035.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "ds_ch0038",
   "charName": "Valentina",
   "costumeName": "Valentina · Desire",
   "modelType": "skin",
-  "jsonPath": "skins/ds_ch0038__google/DS_CH0038.skel",
-  "atlasPath": "skins/ds_ch0038__google/DS_CH0038.atlas",
+  "jsonPath": "skins/ds_ch0038__onestore/DS_CH0038.skel",
+  "atlasPath": "skins/ds_ch0038__onestore/DS_CH0038.atlas",
   "iconPath": "skin/Thumbnail_DS_CH0038.webp",
   "spineVersion": "4.1",
   "kind": "desire",
@@ -761,15 +923,21 @@
    "skeleton",
    "atlas",
    "texture:DS_CH0038.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "ds_ch0040",
   "charName": "Isabel",
   "costumeName": "Isabel · Desire",
   "modelType": "skin",
-  "jsonPath": "skins/ds_ch0040__google/DS_CH0040.skel",
-  "atlasPath": "skins/ds_ch0040__google/DS_CH0040.atlas",
+  "jsonPath": "skins/ds_ch0040__onestore/DS_CH0040.skel",
+  "atlasPath": "skins/ds_ch0040__onestore/DS_CH0040.atlas",
   "iconPath": "skin/Thumbnail_DS_CH0040.webp",
   "spineVersion": "4.1",
   "kind": "desire",
@@ -785,15 +953,21 @@
    "skeleton",
    "atlas",
    "texture:DS_CH0040.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "ds_ch0042",
   "charName": "Oblia",
   "costumeName": "Oblia · Desire",
   "modelType": "skin",
-  "jsonPath": "skins/ds_ch0042__google/DS_CH0042.skel",
-  "atlasPath": "skins/ds_ch0042__google/DS_CH0042.atlas",
+  "jsonPath": "skins/ds_ch0042__onestore/DS_CH0042.skel",
+  "atlasPath": "skins/ds_ch0042__onestore/DS_CH0042.atlas",
   "iconPath": "skin/Thumbnail_DS_CH0042.webp",
   "spineVersion": "4.1",
   "kind": "desire",
@@ -809,15 +983,21 @@
    "skeleton",
    "atlas",
    "texture:DS_CH0042.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "ds_ch0043",
   "charName": "Lafine",
   "costumeName": "Lafine · Desire",
   "modelType": "skin",
-  "jsonPath": "skins/ds_ch0043__google/DS_CH0043.skel",
-  "atlasPath": "skins/ds_ch0043__google/DS_CH0043.atlas",
+  "jsonPath": "skins/ds_ch0043__onestore/DS_CH0043.skel",
+  "atlasPath": "skins/ds_ch0043__onestore/DS_CH0043.atlas",
   "iconPath": "skin/Thumbnail_DS_CH0043.webp",
   "spineVersion": "4.1",
   "kind": "desire",
@@ -833,15 +1013,21 @@
    "skeleton",
    "atlas",
    "texture:DS_CH0043.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "ds_ch0052",
   "charName": "Rana",
   "costumeName": "Rana · Desire",
   "modelType": "skin",
-  "jsonPath": "skins/ds_ch0052__google/DS_CH0052.skel",
-  "atlasPath": "skins/ds_ch0052__google/DS_CH0052.atlas",
+  "jsonPath": "skins/ds_ch0052__onestore/DS_CH0052.skel",
+  "atlasPath": "skins/ds_ch0052__onestore/DS_CH0052.atlas",
   "iconPath": "skin/Thumbnail_DS_CH0052.webp",
   "spineVersion": "4.1",
   "kind": "desire",
@@ -857,7 +1043,13 @@
    "skeleton",
    "atlas",
    "texture:DS_CH0052.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "ds_ch0057",
@@ -883,8 +1075,8 @@
   "charName": "Bianca",
   "costumeName": "Bianca · Desire",
   "modelType": "skin",
-  "jsonPath": "skins/ds_ch0058__google/DS_CH0058.skel",
-  "atlasPath": "skins/ds_ch0058__google/DS_CH0058.atlas",
+  "jsonPath": "skins/ds_ch0058__onestore/DS_CH0058.skel",
+  "atlasPath": "skins/ds_ch0058__onestore/DS_CH0058.atlas",
   "iconPath": "skin/Thumbnail_DS_CH0058.webp",
   "spineVersion": "4.1",
   "kind": "desire",
@@ -900,15 +1092,21 @@
    "skeleton",
    "atlas",
    "texture:DS_CH0058.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "ds_ch0068",
   "charName": "Claire (Swimsuit)",
   "costumeName": "Claire (Swimsuit) · Desire",
   "modelType": "skin",
-  "jsonPath": "skins/ds_ch0068__google/DS_CH0068.skel",
-  "atlasPath": "skins/ds_ch0068__google/DS_CH0068.atlas",
+  "jsonPath": "skins/ds_ch0068__onestore/DS_CH0068.skel",
+  "atlasPath": "skins/ds_ch0068__onestore/DS_CH0068.atlas",
   "iconPath": "skin/Thumbnail_DS_CH0068.webp",
   "spineVersion": "4.1",
   "kind": "desire",
@@ -924,15 +1122,21 @@
    "skeleton",
    "atlas",
    "texture:DS_CH0068.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "ds_ch0069",
   "charName": "Dan Xi (Halloween)",
   "costumeName": "Dan Xi (Halloween) · Desire",
   "modelType": "skin",
-  "jsonPath": "skins/ds_ch0069__google/DS_CH0069.skel",
-  "atlasPath": "skins/ds_ch0069__google/DS_CH0069.atlas",
+  "jsonPath": "skins/ds_ch0069__onestore/DS_CH0069.skel",
+  "atlasPath": "skins/ds_ch0069__onestore/DS_CH0069.atlas",
   "iconPath": "skin/Thumbnail_DS_CH0069.webp",
   "spineVersion": "4.1",
   "kind": "desire",
@@ -948,15 +1152,21 @@
    "skeleton",
    "atlas",
    "texture:DS_CH0069.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "ds_ch0075",
   "charName": "Kouchou (Halloween)",
   "costumeName": "Kouchou (Halloween) · Desire",
   "modelType": "skin",
-  "jsonPath": "skins/ds_ch0075__google/DS_CH0075.skel",
-  "atlasPath": "skins/ds_ch0075__google/DS_CH0075.atlas",
+  "jsonPath": "skins/ds_ch0075__onestore/DS_CH0075.skel",
+  "atlasPath": "skins/ds_ch0075__onestore/DS_CH0075.atlas",
   "iconPath": "skin/Thumbnail_DS_CH0075.webp",
   "spineVersion": "4.1",
   "kind": "desire",
@@ -972,15 +1182,21 @@
    "skeleton",
    "atlas",
    "texture:DS_CH0075.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "pl_cutin_0001",
   "charName": "cutin_0001",
   "costumeName": "cutin_0001 · Pleasure",
   "modelType": "skin",
-  "jsonPath": "skins/pl_cutin_0001__google/PL_cutin_0001.skel",
-  "atlasPath": "skins/pl_cutin_0001__google/PL_cutin_0001.atlas",
+  "jsonPath": "skins/pl_cutin_0001__onestore/PL_cutin_0001.skel",
+  "atlasPath": "skins/pl_cutin_0001__onestore/PL_cutin_0001.atlas",
   "iconPath": "",
   "spineVersion": "4.1",
   "kind": "pleasure",
@@ -996,15 +1212,21 @@
    "skeleton",
    "atlas",
    "texture:PL_cutin_0001.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "pl_cutin_0002",
   "charName": "cutin_0002",
   "costumeName": "cutin_0002 · Pleasure",
   "modelType": "skin",
-  "jsonPath": "skins/pl_cutin_0002__google/PL_cutin_0002.skel",
-  "atlasPath": "skins/pl_cutin_0002__google/PL_cutin_0002.atlas",
+  "jsonPath": "skins/pl_cutin_0002__onestore/PL_cutin_0002.skel",
+  "atlasPath": "skins/pl_cutin_0002__onestore/PL_cutin_0002.atlas",
   "iconPath": "",
   "spineVersion": "4.1",
   "kind": "pleasure",
@@ -1020,7 +1242,13 @@
    "skeleton",
    "atlas",
    "texture:PL_cutin_0002.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "pl_ev0001",
@@ -1046,8 +1274,8 @@
   "charName": "EV0002",
   "costumeName": "EV0002 · Pleasure",
   "modelType": "skin",
-  "jsonPath": "skins/pl_ev0002__google/PL_EV0002.skel",
-  "atlasPath": "skins/pl_ev0002__google/PL_EV0002.atlas",
+  "jsonPath": "skins/pl_ev0002__onestore/PL_EV0002.skel",
+  "atlasPath": "skins/pl_ev0002__onestore/PL_EV0002.atlas",
   "iconPath": "skin/Thumbnail_PL_EV0002.webp",
   "spineVersion": "4.1",
   "kind": "pleasure",
@@ -1064,15 +1292,21 @@
    "atlas",
    "texture:PL_EV0002.png",
    "texture:PL_EV0002_2.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "pl_ma0003",
   "charName": "MA0003",
   "costumeName": "MA0003 · Pleasure",
   "modelType": "skin",
-  "jsonPath": "skins/pl_ma0003__google/PL_MA0003.skel",
-  "atlasPath": "skins/pl_ma0003__google/PL_MA0003.atlas",
+  "jsonPath": "skins/pl_ma0003__onestore/PL_MA0003.skel",
+  "atlasPath": "skins/pl_ma0003__onestore/PL_MA0003.atlas",
   "iconPath": "skin/Thumbnail_PL_MA0003.webp",
   "spineVersion": "4.1",
   "kind": "pleasure",
@@ -1088,7 +1322,13 @@
    "skeleton",
    "atlas",
    "texture:PL_MA0003.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "pl_title_0001",
@@ -1233,7 +1473,7 @@
   "iconPath": "char/Icon_CH0009.webp",
   "spineVersion": "4.1",
   "kind": "standing",
-  "uncensored": true,
+  "uncensored": false,
   "stores": [
    "google",
    "onestore"
@@ -1245,15 +1485,21 @@
    "skeleton",
    "atlas",
    "texture:ST_CH0009.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "google",
+   "nude": false,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "st_ch0010",
   "charName": "Mane (Swimsuit)",
   "costumeName": "Mane (Swimsuit) · Standing",
   "modelType": "skin",
-  "jsonPath": "skins/st_ch0010__google/ST_CH0010.skel",
-  "atlasPath": "skins/st_ch0010__google/ST_CH0010.atlas",
+  "jsonPath": "skins/st_ch0010__onestore/ST_CH0010.skel",
+  "atlasPath": "skins/st_ch0010__onestore/ST_CH0010.atlas",
   "iconPath": "char/Icon_CH0010.webp",
   "spineVersion": "4.1",
   "kind": "standing",
@@ -1269,7 +1515,13 @@
    "skeleton",
    "atlas",
    "texture:ST_CH0010.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "st_ch0011",
@@ -1547,7 +1799,7 @@
   "iconPath": "char/Icon_CH0027.webp",
   "spineVersion": "4.1",
   "kind": "standing",
-  "uncensored": true,
+  "uncensored": false,
   "stores": [
    "google",
    "onestore"
@@ -1559,7 +1811,13 @@
    "skeleton",
    "atlas",
    "texture:ST_CH0027.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "google",
+   "nude": false,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "st_ch0028",
@@ -1718,8 +1976,8 @@
   "charName": "Lumina",
   "costumeName": "Lumina · Standing",
   "modelType": "skin",
-  "jsonPath": "skins/st_ch0036__google/ST_CH0036.skel",
-  "atlasPath": "skins/st_ch0036__google/ST_CH0036.atlas",
+  "jsonPath": "skins/st_ch0036__onestore/ST_CH0036.skel",
+  "atlasPath": "skins/st_ch0036__onestore/ST_CH0036.atlas",
   "iconPath": "char/Icon_CH0036.webp",
   "spineVersion": "4.1",
   "kind": "standing",
@@ -1735,7 +1993,13 @@
    "skeleton",
    "atlas",
    "texture:ST_CH0036.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "st_ch0037",
@@ -1766,7 +2030,7 @@
   "iconPath": "char/Icon_CH0038.webp",
   "spineVersion": "4.1",
   "kind": "standing",
-  "uncensored": true,
+  "uncensored": false,
   "stores": [
    "google",
    "onestore"
@@ -1778,7 +2042,13 @@
    "skeleton",
    "atlas",
    "texture:ST_CH0038.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "google",
+   "nude": false,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "st_ch0039",
@@ -1804,8 +2074,8 @@
   "charName": "Isabel",
   "costumeName": "Isabel · Standing",
   "modelType": "skin",
-  "jsonPath": "skins/st_ch0040__google/ST_CH0040.skel",
-  "atlasPath": "skins/st_ch0040__google/ST_CH0040.atlas",
+  "jsonPath": "skins/st_ch0040__onestore/ST_CH0040.skel",
+  "atlasPath": "skins/st_ch0040__onestore/ST_CH0040.atlas",
   "iconPath": "char/Icon_CH0040.webp",
   "spineVersion": "4.1",
   "kind": "standing",
@@ -1821,7 +2091,13 @@
    "skeleton",
    "atlas",
    "texture:ST_CH0040.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "st_ch0042",
@@ -2018,8 +2294,8 @@
   "charName": "Spica",
   "costumeName": "Spica · Standing",
   "modelType": "skin",
-  "jsonPath": "skins/st_ch0059__google/ST_CH0059.skel",
-  "atlasPath": "skins/st_ch0059__google/ST_CH0059.atlas",
+  "jsonPath": "skins/st_ch0059__onestore/ST_CH0059.skel",
+  "atlasPath": "skins/st_ch0059__onestore/ST_CH0059.atlas",
   "iconPath": "char/Icon_CH0059.webp",
   "spineVersion": "4.1",
   "kind": "standing",
@@ -2035,7 +2311,13 @@
    "skeleton",
    "atlas",
    "texture:ST_CH0059.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": true,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "st_ch0060",
@@ -2099,8 +2381,8 @@
   "charName": "Claire (Swimsuit)",
   "costumeName": "Claire (Swimsuit) · Standing",
   "modelType": "skin",
-  "jsonPath": "skins/st_ch0068__google/ST_CH0068.skel",
-  "atlasPath": "skins/st_ch0068__google/ST_CH0068.atlas",
+  "jsonPath": "skins/st_ch0068__onestore/ST_CH0068.skel",
+  "atlasPath": "skins/st_ch0068__onestore/ST_CH0068.atlas",
   "iconPath": "char/Icon_CH0068.webp",
   "spineVersion": "4.1",
   "kind": "standing",
@@ -2116,15 +2398,21 @@
    "skeleton",
    "atlas",
    "texture:ST_CH0068.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "st_ch0069",
   "charName": "Dan Xi (Halloween)",
   "costumeName": "Dan Xi (Halloween) · Standing",
   "modelType": "skin",
-  "jsonPath": "skins/st_ch0069__google/ST_CH0069.skel",
-  "atlasPath": "skins/st_ch0069__google/ST_CH0069.atlas",
+  "jsonPath": "skins/st_ch0069__onestore/ST_CH0069.skel",
+  "atlasPath": "skins/st_ch0069__onestore/ST_CH0069.atlas",
   "iconPath": "char/Icon_CH0069.webp",
   "spineVersion": "4.1",
   "kind": "standing",
@@ -2140,15 +2428,21 @@
    "skeleton",
    "atlas",
    "texture:ST_CH0069.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "st_ch0075",
   "charName": "Kouchou (Halloween)",
   "costumeName": "Kouchou (Halloween) · Standing",
   "modelType": "skin",
-  "jsonPath": "skins/st_ch0075__google/ST_CH0075.skel",
-  "atlasPath": "skins/st_ch0075__google/ST_CH0075.atlas",
+  "jsonPath": "skins/st_ch0075__onestore/ST_CH0075.skel",
+  "atlasPath": "skins/st_ch0075__onestore/ST_CH0075.atlas",
   "iconPath": "char/Icon_CH0075.webp",
   "spineVersion": "4.1",
   "kind": "standing",
@@ -2164,7 +2458,13 @@
    "skeleton",
    "atlas",
    "texture:ST_CH0075.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "st_np0103",
@@ -2513,8 +2813,8 @@
   "charName": "Head Maid (Swimsuit)",
   "costumeName": "Head Maid (Swimsuit) · Standing",
   "modelType": "skin",
-  "jsonPath": "skins/st_np0799__google/ST_NP0799.skel",
-  "atlasPath": "skins/st_np0799__google/ST_NP0799.atlas",
+  "jsonPath": "skins/st_np0799__onestore/ST_NP0799.skel",
+  "atlasPath": "skins/st_np0799__onestore/ST_NP0799.atlas",
   "iconPath": "char/Icon_NP0799.webp",
   "spineVersion": "4.1",
   "kind": "standing",
@@ -2530,7 +2830,13 @@
    "skeleton",
    "atlas",
    "texture:ST_NP0799.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "st_np0802",
@@ -2865,7 +3171,7 @@
   "iconPath": "",
   "spineVersion": "4.1",
   "kind": "standing",
-  "uncensored": true,
+  "uncensored": false,
   "stores": [
    "google",
    "onestore"
@@ -2877,7 +3183,13 @@
    "skeleton",
    "atlas",
    "texture:ST_SC3003.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "google",
+   "nude": false,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "st_sc3004",
@@ -2941,8 +3253,8 @@
   "charName": "Hiyori",
   "costumeName": "Hiyori · Standing",
   "modelType": "skin",
-  "jsonPath": "skins/st_sc3007__google/ST_SC3007.skel",
-  "atlasPath": "skins/st_sc3007__google/ST_SC3007.atlas",
+  "jsonPath": "skins/st_sc3007__onestore/ST_SC3007.skel",
+  "atlasPath": "skins/st_sc3007__onestore/ST_SC3007.atlas",
   "iconPath": "",
   "spineVersion": "4.1",
   "kind": "standing",
@@ -2958,7 +3270,13 @@
    "skeleton",
    "atlas",
    "texture:ST_SC3007.png"
-  ]
+  ],
+  "censorBuild": {
+   "store": "onestore",
+   "nude": true,
+   "hasCensorOverlay": false,
+   "allBuildsCensored": false
+  }
  },
  {
   "id": "st_sc3012",
