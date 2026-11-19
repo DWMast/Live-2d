@@ -19,6 +19,7 @@ export const ECHO_ICON_BASE = '/api/echo-pic';
 export const CBJQ_SPINE_BASE = '/api/cbjq-spine';
 export const NIKKE_SPINE_BASE = '/api/nikke-spine';
 export const HYSN_SPINE_BASE = '/api/hysn-spine';
+export const PH_SPINE_BASE = '/api/ph-spine';
 
 export const GAME_LIST: GameDescriptor[] = [
   {
@@ -130,6 +131,16 @@ export const GAME_LIST: GameDescriptor[] = [
     engineLabel: 'Spine 3.8 · 181 Cards',
     accentGradient: 'from-rose-500 to-orange-600 shadow-rose-500/20',
     accentText: 'text-rose-400',
+  },
+  {
+    id: 'pixelheroes',
+    shortCode: 'PH',
+    name: 'Pixel Heroes',
+    studioName: 'Pixel Heroes Spine Studio',
+    rosterLabel: 'Pixel Heroes Roster',
+    engineLabel: 'Spine 3.8 · 88 Characters',
+    accentGradient: 'from-lime-500 to-emerald-600 shadow-lime-500/20',
+    accentText: 'text-lime-400',
   },
 ];
 
@@ -280,6 +291,16 @@ interface Live2DCatalogEntry {
   jsonPath: string;
   iconPath?: string;
   api: string;
+}
+
+interface PhCatalogEntry {
+  id: string;
+  charId: string;
+  charName: string;
+  costumeName: string;
+  jsonPath: string;
+  atlasPath: string;
+  iconPath?: string;
 }
 
 interface HysnCatalogEntry {
@@ -560,6 +581,33 @@ export async function loadGameRoster(gameId: GameId): Promise<BD2Character[]> {
         named: item.charName !== item.modelId && !item.charName.includes('Variant') && !item.charName.includes('NPC') && !item.charName.includes('Scene'),
         kind: item.kind,
       }));
+    } else if (gameId === 'pixelheroes') {
+      const res = await fetch('/data/pixelheroes_catalog.json');
+      if (!res.ok) throw new Error(`Failed to load Pixel Heroes catalog (HTTP ${res.status})`);
+      const rawList = (await res.json()) as PhCatalogEntry[];
+      const sorted = [...rawList].sort((a, b) => Number(a.charId.replace(/\D/g, '')) - Number(b.charId.replace(/\D/g, '')));
+      mapped = sorted.map((item, idx) => ({
+        id: item.id,
+        game: 'pixelheroes',
+        charName: item.charName,
+        costumeName: item.costumeName === 'Default' ? 'Default' : `Skin ${item.costumeName}`,
+        spine: item.id,
+        cutscene: '',
+        dating: '',
+        audio: '',
+        skeletonUrl: encodeProxyPath(PH_SPINE_BASE, item.jsonPath),
+        atlasUrl: encodeProxyPath(PH_SPINE_BASE, item.atlasPath),
+        skeletonFormat: 'skel',
+        spineVersion: '3.8',
+        modelType: 'character',
+        iconUrl: item.iconPath ? encodeProxyPath(PH_SPINE_BASE, item.iconPath) : '',
+        hasCutscene: false,
+        hasDating: false,
+        releaseOrder: idx,
+        releaseLabel: 'Spine 3.8',
+        named: false,
+        baseId: item.charId,
+      }));
     } else if (gameId === 'hysn') {
       const res = await fetch('/data/hysn_catalog.json');
       if (!res.ok) throw new Error(`Failed to load hysn catalog (HTTP ${res.status})`);
@@ -689,6 +737,9 @@ export function pickDefaultCharacterForGame(gameId: GameId, roster: BD2Character
   }
   if (gameId === 'snowbreak') {
     return roster.find((c) => c.kind === 'character' && c.releaseLabel === 'Hero Spine') || roster[0];
+  }
+  if (gameId === 'pixelheroes') {
+    return roster.find((c) => c.iconUrl) || roster[0];
   }
   if (gameId === 'hysn') {
     return roster.find((c) => !c.costumeName.startsWith('Variant')) || roster[0];

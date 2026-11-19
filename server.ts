@@ -58,6 +58,11 @@ const UPSTREAM_GS_BASES = [
   'https://raw.githubusercontent.com/Misekato/IHLive2d/main',
 ];
 
+const UPSTREAM_PH_BASES = [
+  'https://raw.githubusercontent.com/memo-db/pixel-heroes-spine/master',
+  'https://cdn.jsdelivr.net/gh/memo-db/pixel-heroes-spine@master',
+];
+
 const UPSTREAM_HYSN_BASES = [
   'https://raw.githubusercontent.com/leililei/hysn-asset/main',
   'https://cdn.jsdelivr.net/gh/leililei/hysn-asset@main',
@@ -374,7 +379,8 @@ async function resolveCachedAsset(
     | 'gs-live2d'
     | 'cbjq-spines'
     | 'nikke-spines'
-    | 'hysn-spines',
+    | 'hysn-spines'
+    | 'ph-spines',
   relPath: string,
   upstreamBases: string | string[],
   encodePathForUpstream = false
@@ -843,6 +849,26 @@ async function startServer() {
     } catch (err) {
       const status = (err as { status?: number })?.status || 502;
       res.status(status).json({ error: `Failed to fetch hysn asset: ${relPath}` });
+    }
+  });
+
+  // Pixel Heroes Spine 3.8 characters with built-in card icons.
+  app.get('/api/ph-spine/*', async (req, res) => {
+    const rawParam = (req.params as Record<string, string>)[0] ?? '';
+    const relPath = sanitizeUtf8AssetPath(
+      rawParam,
+      /\.(json|skel|atlas|png|webp|jpg|jpeg)$/i
+    );
+    if (!relPath) {
+      res.status(400).json({ error: 'Invalid Pixel Heroes path' });
+      return;
+    }
+    try {
+      const entry = await resolveCachedAsset('ph-spines', relPath, UPSTREAM_PH_BASES, true);
+      sendCachedEntry(req, res, entry);
+    } catch (err) {
+      const status = (err as { status?: number })?.status || 502;
+      res.status(status).json({ error: `Failed to fetch Pixel Heroes asset: ${relPath}` });
     }
   });
 

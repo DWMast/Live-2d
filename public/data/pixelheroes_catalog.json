@@ -1,0 +1,882 @@
+[
+ {
+  "id": "ph_10100",
+  "charId": "10100",
+  "charName": "10100",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10100.skel",
+  "atlasPath": "asset/animation/character/10100.atlas",
+  "iconPath": "asset/images/icon/card/10100.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10100_01",
+  "charId": "10100",
+  "charName": "10100_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10100_01.skel",
+  "atlasPath": "asset/animation/character/10100_01.atlas",
+  "iconPath": "asset/images/icon/card/10100_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10101",
+  "charId": "10101",
+  "charName": "10101",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10101.skel",
+  "atlasPath": "asset/animation/character/10101.atlas",
+  "iconPath": "asset/images/icon/card/10101.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10101_01",
+  "charId": "10101",
+  "charName": "10101_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10101_01.skel",
+  "atlasPath": "asset/animation/character/10101_01.atlas",
+  "iconPath": "asset/images/icon/card/10101_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10102",
+  "charId": "10102",
+  "charName": "10102",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10102.skel",
+  "atlasPath": "asset/animation/character/10102.atlas",
+  "iconPath": "asset/images/icon/card/10102.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10102_01",
+  "charId": "10102",
+  "charName": "10102_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10102_01.skel",
+  "atlasPath": "asset/animation/character/10102_01.atlas",
+  "iconPath": "asset/images/icon/card/10102_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10103",
+  "charId": "10103",
+  "charName": "10103",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10103.skel",
+  "atlasPath": "asset/animation/character/10103.atlas",
+  "iconPath": "asset/images/icon/card/10103.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10103_01",
+  "charId": "10103",
+  "charName": "10103_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10103_01.skel",
+  "atlasPath": "asset/animation/character/10103_01.atlas",
+  "iconPath": "asset/images/icon/card/10103_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10104",
+  "charId": "10104",
+  "charName": "10104",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10104.skel",
+  "atlasPath": "asset/animation/character/10104.atlas",
+  "iconPath": "asset/images/icon/card/10104.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10104_01",
+  "charId": "10104",
+  "charName": "10104_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10104_01.skel",
+  "atlasPath": "asset/animation/character/10104_01.atlas",
+  "iconPath": "asset/images/icon/card/10104_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10105",
+  "charId": "10105",
+  "charName": "10105",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10105.skel",
+  "atlasPath": "asset/animation/character/10105.atlas",
+  "iconPath": "asset/images/icon/card/10105.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10105_01",
+  "charId": "10105",
+  "charName": "10105_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10105_01.skel",
+  "atlasPath": "asset/animation/character/10105_01.atlas",
+  "iconPath": "asset/images/icon/card/10105_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10108",
+  "charId": "10108",
+  "charName": "10108",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10108.skel",
+  "atlasPath": "asset/animation/character/10108.atlas",
+  "iconPath": "asset/images/icon/card/10108.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10108_01",
+  "charId": "10108",
+  "charName": "10108_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10108_01.skel",
+  "atlasPath": "asset/animation/character/10108_01.atlas",
+  "iconPath": "asset/images/icon/card/10108_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10200",
+  "charId": "10200",
+  "charName": "10200",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10200.skel",
+  "atlasPath": "asset/animation/character/10200.atlas",
+  "iconPath": "asset/images/icon/card/10200.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10200_01",
+  "charId": "10200",
+  "charName": "10200_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10200_01.skel",
+  "atlasPath": "asset/animation/character/10200_01.atlas",
+  "iconPath": "asset/images/icon/card/10200_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10201",
+  "charId": "10201",
+  "charName": "10201",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10201.skel",
+  "atlasPath": "asset/animation/character/10201.atlas",
+  "iconPath": "asset/images/icon/card/10201.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10201_01",
+  "charId": "10201",
+  "charName": "10201_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10201_01.skel",
+  "atlasPath": "asset/animation/character/10201_01.atlas",
+  "iconPath": "asset/images/icon/card/10201_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10203",
+  "charId": "10203",
+  "charName": "10203",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10203.skel",
+  "atlasPath": "asset/animation/character/10203.atlas",
+  "iconPath": "asset/images/icon/card/10203.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10204",
+  "charId": "10204",
+  "charName": "10204",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10204.skel",
+  "atlasPath": "asset/animation/character/10204.atlas",
+  "iconPath": "asset/images/icon/card/10204.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10204_01",
+  "charId": "10204",
+  "charName": "10204_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10204_01.skel",
+  "atlasPath": "asset/animation/character/10204_01.atlas",
+  "iconPath": "asset/images/icon/card/10204_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10205",
+  "charId": "10205",
+  "charName": "10205",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10205.skel",
+  "atlasPath": "asset/animation/character/10205.atlas",
+  "iconPath": "asset/images/icon/card/10205.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10205_01",
+  "charId": "10205",
+  "charName": "10205_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10205_01.skel",
+  "atlasPath": "asset/animation/character/10205_01.atlas",
+  "iconPath": "asset/images/icon/card/10205_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10206",
+  "charId": "10206",
+  "charName": "10206",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10206.skel",
+  "atlasPath": "asset/animation/character/10206.atlas",
+  "iconPath": "asset/images/icon/card/10206.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10208",
+  "charId": "10208",
+  "charName": "10208",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10208.skel",
+  "atlasPath": "asset/animation/character/10208.atlas",
+  "iconPath": "asset/images/icon/card/10208.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10209",
+  "charId": "10209",
+  "charName": "10209",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10209.skel",
+  "atlasPath": "asset/animation/character/10209.atlas",
+  "iconPath": "asset/images/icon/card/10209.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10300",
+  "charId": "10300",
+  "charName": "10300",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10300.skel",
+  "atlasPath": "asset/animation/character/10300.atlas",
+  "iconPath": "asset/images/icon/card/10300.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10300_01",
+  "charId": "10300",
+  "charName": "10300_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10300_01.skel",
+  "atlasPath": "asset/animation/character/10300_01.atlas",
+  "iconPath": "asset/images/icon/card/10300_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10301",
+  "charId": "10301",
+  "charName": "10301",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10301.skel",
+  "atlasPath": "asset/animation/character/10301.atlas",
+  "iconPath": "asset/images/icon/card/10301.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10301_01",
+  "charId": "10301",
+  "charName": "10301_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10301_01.skel",
+  "atlasPath": "asset/animation/character/10301_01.atlas",
+  "iconPath": "asset/images/icon/card/10301_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10302",
+  "charId": "10302",
+  "charName": "10302",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10302.skel",
+  "atlasPath": "asset/animation/character/10302.atlas",
+  "iconPath": "asset/images/icon/card/10302.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10304",
+  "charId": "10304",
+  "charName": "10304",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10304.skel",
+  "atlasPath": "asset/animation/character/10304.atlas",
+  "iconPath": "asset/images/icon/card/10304.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10304_01",
+  "charId": "10304",
+  "charName": "10304_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10304_01.skel",
+  "atlasPath": "asset/animation/character/10304_01.atlas",
+  "iconPath": "asset/images/icon/card/10304_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10305",
+  "charId": "10305",
+  "charName": "10305",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10305.skel",
+  "atlasPath": "asset/animation/character/10305.atlas",
+  "iconPath": "asset/images/icon/card/10305.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10306",
+  "charId": "10306",
+  "charName": "10306",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10306.skel",
+  "atlasPath": "asset/animation/character/10306.atlas",
+  "iconPath": "asset/images/icon/card/10306.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10306_01",
+  "charId": "10306",
+  "charName": "10306_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10306_01.skel",
+  "atlasPath": "asset/animation/character/10306_01.atlas",
+  "iconPath": "asset/images/icon/card/10306_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10307",
+  "charId": "10307",
+  "charName": "10307",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10307.skel",
+  "atlasPath": "asset/animation/character/10307.atlas",
+  "iconPath": "asset/images/icon/card/10307.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10308",
+  "charId": "10308",
+  "charName": "10308",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10308.skel",
+  "atlasPath": "asset/animation/character/10308.atlas",
+  "iconPath": "asset/images/icon/card/10308.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10309",
+  "charId": "10309",
+  "charName": "10309",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10309.skel",
+  "atlasPath": "asset/animation/character/10309.atlas",
+  "iconPath": "asset/images/icon/card/10309.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10400",
+  "charId": "10400",
+  "charName": "10400",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10400.skel",
+  "atlasPath": "asset/animation/character/10400.atlas",
+  "iconPath": "asset/images/icon/card/10400.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10400_01",
+  "charId": "10400",
+  "charName": "10400_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10400_01.skel",
+  "atlasPath": "asset/animation/character/10400_01.atlas",
+  "iconPath": "asset/images/icon/card/10400_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10401",
+  "charId": "10401",
+  "charName": "10401",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10401.skel",
+  "atlasPath": "asset/animation/character/10401.atlas",
+  "iconPath": "asset/images/icon/card/10401.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10401_01",
+  "charId": "10401",
+  "charName": "10401_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10401_01.skel",
+  "atlasPath": "asset/animation/character/10401_01.atlas",
+  "iconPath": "asset/images/icon/card/10401_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10402",
+  "charId": "10402",
+  "charName": "10402",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10402.skel",
+  "atlasPath": "asset/animation/character/10402.atlas",
+  "iconPath": "asset/images/icon/card/10402.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10402_01",
+  "charId": "10402",
+  "charName": "10402_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10402_01.skel",
+  "atlasPath": "asset/animation/character/10402_01.atlas",
+  "iconPath": "asset/images/icon/card/10402_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10403",
+  "charId": "10403",
+  "charName": "10403",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10403.skel",
+  "atlasPath": "asset/animation/character/10403.atlas",
+  "iconPath": "asset/images/icon/card/10403.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10403_01",
+  "charId": "10403",
+  "charName": "10403_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10403_01.skel",
+  "atlasPath": "asset/animation/character/10403_01.atlas",
+  "iconPath": "asset/images/icon/card/10403_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10404",
+  "charId": "10404",
+  "charName": "10404",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10404.skel",
+  "atlasPath": "asset/animation/character/10404.atlas",
+  "iconPath": "asset/images/icon/card/10404.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10404_01",
+  "charId": "10404",
+  "charName": "10404_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10404_01.skel",
+  "atlasPath": "asset/animation/character/10404_01.atlas",
+  "iconPath": "asset/images/icon/card/10404_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10405",
+  "charId": "10405",
+  "charName": "10405",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10405.skel",
+  "atlasPath": "asset/animation/character/10405.atlas",
+  "iconPath": "asset/images/icon/card/10405.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10406",
+  "charId": "10406",
+  "charName": "10406",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10406.skel",
+  "atlasPath": "asset/animation/character/10406.atlas",
+  "iconPath": "asset/images/icon/card/10406.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10407",
+  "charId": "10407",
+  "charName": "10407",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10407.skel",
+  "atlasPath": "asset/animation/character/10407.atlas",
+  "iconPath": "asset/images/icon/card/10407.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10408",
+  "charId": "10408",
+  "charName": "10408",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10408.skel",
+  "atlasPath": "asset/animation/character/10408.atlas",
+  "iconPath": "asset/images/icon/card/10408.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10500",
+  "charId": "10500",
+  "charName": "10500",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10500.skel",
+  "atlasPath": "asset/animation/character/10500.atlas",
+  "iconPath": "asset/images/icon/card/10500.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10501",
+  "charId": "10501",
+  "charName": "10501",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10501.skel",
+  "atlasPath": "asset/animation/character/10501.atlas",
+  "iconPath": "asset/images/icon/card/10501.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10501_01",
+  "charId": "10501",
+  "charName": "10501_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10501_01.skel",
+  "atlasPath": "asset/animation/character/10501_01.atlas",
+  "iconPath": "asset/images/icon/card/10501_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10502",
+  "charId": "10502",
+  "charName": "10502",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10502.skel",
+  "atlasPath": "asset/animation/character/10502.atlas",
+  "iconPath": "asset/images/icon/card/10502.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10503",
+  "charId": "10503",
+  "charName": "10503",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10503.skel",
+  "atlasPath": "asset/animation/character/10503.atlas",
+  "iconPath": "asset/images/icon/card/10503.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10503_01",
+  "charId": "10503",
+  "charName": "10503_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10503_01.skel",
+  "atlasPath": "asset/animation/character/10503_01.atlas",
+  "iconPath": "asset/images/icon/card/10503_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10504",
+  "charId": "10504",
+  "charName": "10504",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10504.skel",
+  "atlasPath": "asset/animation/character/10504.atlas",
+  "iconPath": "asset/images/icon/card/10504.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10505",
+  "charId": "10505",
+  "charName": "10505",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10505.skel",
+  "atlasPath": "asset/animation/character/10505.atlas",
+  "iconPath": "asset/images/icon/card/10505.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10506",
+  "charId": "10506",
+  "charName": "10506",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10506.skel",
+  "atlasPath": "asset/animation/character/10506.atlas",
+  "iconPath": "asset/images/icon/card/10506.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10507",
+  "charId": "10507",
+  "charName": "10507",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10507.skel",
+  "atlasPath": "asset/animation/character/10507.atlas",
+  "iconPath": "asset/images/icon/card/10507.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10507_01",
+  "charId": "10507",
+  "charName": "10507_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10507_01.skel",
+  "atlasPath": "asset/animation/character/10507_01.atlas",
+  "iconPath": "asset/images/icon/card/10507_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10508",
+  "charId": "10508",
+  "charName": "10508",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10508.skel",
+  "atlasPath": "asset/animation/character/10508.atlas",
+  "iconPath": "asset/images/icon/card/10508.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10508_01",
+  "charId": "10508",
+  "charName": "10508_01",
+  "costumeName": "01",
+  "jsonPath": "asset/animation/character/10508_01.skel",
+  "atlasPath": "asset/animation/character/10508_01.atlas",
+  "iconPath": "asset/images/icon/card/10508_01.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_10509",
+  "charId": "10509",
+  "charName": "10509",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/10509.skel",
+  "atlasPath": "asset/animation/character/10509.atlas",
+  "iconPath": "asset/images/icon/card/10509.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_11220",
+  "charId": "11220",
+  "charName": "11220",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/11220.skel",
+  "atlasPath": "asset/animation/character/11220.atlas",
+  "iconPath": "asset/images/icon/card/11220.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_11300",
+  "charId": "11300",
+  "charName": "11300",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/11300.skel",
+  "atlasPath": "asset/animation/character/11300.atlas",
+  "iconPath": "asset/images/icon/card/11300.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_11310",
+  "charId": "11310",
+  "charName": "11310",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/11310.skel",
+  "atlasPath": "asset/animation/character/11310.atlas",
+  "iconPath": "asset/images/icon/card/11310.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_11311",
+  "charId": "11311",
+  "charName": "11311",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/11311.skel",
+  "atlasPath": "asset/animation/character/11311.atlas",
+  "iconPath": "asset/images/icon/card/11311.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_11320",
+  "charId": "11320",
+  "charName": "11320",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/11320.skel",
+  "atlasPath": "asset/animation/character/11320.atlas",
+  "iconPath": "asset/images/icon/card/11320.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_11321",
+  "charId": "11321",
+  "charName": "11321",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/11321.skel",
+  "atlasPath": "asset/animation/character/11321.atlas",
+  "iconPath": "asset/images/icon/card/11321.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_11322",
+  "charId": "11322",
+  "charName": "11322",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/11322.skel",
+  "atlasPath": "asset/animation/character/11322.atlas",
+  "iconPath": "asset/images/icon/card/11322.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_11401",
+  "charId": "11401",
+  "charName": "11401",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/11401.skel",
+  "atlasPath": "asset/animation/character/11401.atlas",
+  "iconPath": "asset/images/icon/card/11401.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_11410",
+  "charId": "11410",
+  "charName": "11410",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/11410.skel",
+  "atlasPath": "asset/animation/character/11410.atlas",
+  "iconPath": "asset/images/icon/card/11410.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_11411",
+  "charId": "11411",
+  "charName": "11411",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/11411.skel",
+  "atlasPath": "asset/animation/character/11411.atlas",
+  "iconPath": "asset/images/icon/card/11411.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_11420",
+  "charId": "11420",
+  "charName": "11420",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/11420.skel",
+  "atlasPath": "asset/animation/character/11420.atlas",
+  "iconPath": "asset/images/icon/card/11420.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_11421",
+  "charId": "11421",
+  "charName": "11421",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/11421.skel",
+  "atlasPath": "asset/animation/character/11421.atlas",
+  "iconPath": "asset/images/icon/card/11421.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_11422",
+  "charId": "11422",
+  "charName": "11422",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/11422.skel",
+  "atlasPath": "asset/animation/character/11422.atlas",
+  "iconPath": "asset/images/icon/card/11422.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_11500",
+  "charId": "11500",
+  "charName": "11500",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/11500.skel",
+  "atlasPath": "asset/animation/character/11500.atlas",
+  "iconPath": "asset/images/icon/card/11500.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_11510",
+  "charId": "11510",
+  "charName": "11510",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/11510.skel",
+  "atlasPath": "asset/animation/character/11510.atlas",
+  "iconPath": "asset/images/icon/card/11510.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_11511",
+  "charId": "11511",
+  "charName": "11511",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/11511.skel",
+  "atlasPath": "asset/animation/character/11511.atlas",
+  "iconPath": "asset/images/icon/card/11511.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_11520",
+  "charId": "11520",
+  "charName": "11520",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/11520.skel",
+  "atlasPath": "asset/animation/character/11520.atlas",
+  "iconPath": "asset/images/icon/card/11520.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_11521",
+  "charId": "11521",
+  "charName": "11521",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/11521.skel",
+  "atlasPath": "asset/animation/character/11521.atlas",
+  "iconPath": "asset/images/icon/card/11521.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_11522",
+  "charId": "11522",
+  "charName": "11522",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/11522.skel",
+  "atlasPath": "asset/animation/character/11522.atlas",
+  "iconPath": "asset/images/icon/card/11522.png",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_12003",
+  "charId": "12003",
+  "charName": "12003",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/12003.skel",
+  "atlasPath": "asset/animation/character/12003.atlas",
+  "iconPath": "",
+  "modelType": "character"
+ },
+ {
+  "id": "ph_12304",
+  "charId": "12304",
+  "charName": "12304",
+  "costumeName": "Default",
+  "jsonPath": "asset/animation/character/12304.skel",
+  "atlasPath": "asset/animation/character/12304.atlas",
+  "iconPath": "",
+  "modelType": "character"
+ }
+]
