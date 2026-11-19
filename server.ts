@@ -58,6 +58,11 @@ const UPSTREAM_GS_BASES = [
   'https://raw.githubusercontent.com/Misekato/IHLive2d/main',
 ];
 
+const UPSTREAM_HYSN_BASES = [
+  'https://raw.githubusercontent.com/leililei/hysn-asset/main',
+  'https://cdn.jsdelivr.net/gh/leililei/hysn-asset@main',
+];
+
 const UPSTREAM_NIKKE_BASES = [
   'https://raw.githubusercontent.com/nullice/NikkeSpine/master',
   'https://cdn.jsdelivr.net/gh/nullice/NikkeSpine@master',
@@ -368,7 +373,8 @@ async function resolveCachedAsset(
     | 'anchor-spines'
     | 'gs-live2d'
     | 'cbjq-spines'
-    | 'nikke-spines',
+    | 'nikke-spines'
+    | 'hysn-spines',
   relPath: string,
   upstreamBases: string | string[],
   encodePathForUpstream = false
@@ -803,6 +809,40 @@ async function startServer() {
     } catch (err) {
       const status = (err as { status?: number })?.status || 502;
       res.status(status).json({ error: `Failed to fetch NIKKE asset: ${relPath}` });
+    }
+  });
+
+  // 花与绯想 (hysn) Spine 3.8 card spines; textures ship as .webp while the
+  // atlas text references .png names, so fall back to the webp on miss.
+  app.get('/api/hysn-spine/*', async (req, res) => {
+    const rawParam = (req.params as Record<string, string>)[0] ?? '';
+    const relPath = sanitizeUtf8AssetPath(
+      rawParam,
+      /\.(json|skel|atlas|png|webp|jpg|jpeg)$/i
+    );
+    if (!relPath) {
+      res.status(400).json({ error: 'Invalid hysn spine path' });
+      return;
+    }
+    try {
+      let entry: RamEntry | null = null;
+      let lastError: unknown = null;
+      for (const candidate of [relPath, relPath.replace(/\.png$/i, '.webp')]) {
+        if (candidate === relPath || !/\.(png|webp)$/i.test(relPath)) {
+          if (candidate !== relPath) continue;
+        }
+        try {
+          entry = await resolveCachedAsset('hysn-spines', candidate, UPSTREAM_HYSN_BASES, true);
+          break;
+        } catch (err) {
+          lastError = err;
+        }
+      }
+      if (!entry) throw lastError;
+      sendCachedEntry(req, res, entry);
+    } catch (err) {
+      const status = (err as { status?: number })?.status || 502;
+      res.status(status).json({ error: `Failed to fetch hysn asset: ${relPath}` });
     }
   });
 

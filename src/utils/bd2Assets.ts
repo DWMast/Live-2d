@@ -18,6 +18,7 @@ export const ECHO_SPINE_BASE = '/api/echo-spine';
 export const ECHO_ICON_BASE = '/api/echo-pic';
 export const CBJQ_SPINE_BASE = '/api/cbjq-spine';
 export const NIKKE_SPINE_BASE = '/api/nikke-spine';
+export const HYSN_SPINE_BASE = '/api/hysn-spine';
 
 export const GAME_LIST: GameDescriptor[] = [
   {
@@ -119,6 +120,16 @@ export const GAME_LIST: GameDescriptor[] = [
     engineLabel: 'Spine 4.0 · 80 Characters',
     accentGradient: 'from-pink-500 to-violet-600 shadow-pink-500/20',
     accentText: 'text-pink-400',
+  },
+  {
+    id: 'hysn',
+    shortCode: 'HN',
+    name: 'Flower & Crimson',
+    studioName: 'HYSN Card Spine Studio',
+    rosterLabel: 'Flower & Crimson Roster',
+    engineLabel: 'Spine 3.8 · 181 Cards',
+    accentGradient: 'from-rose-500 to-orange-600 shadow-rose-500/20',
+    accentText: 'text-rose-400',
   },
 ];
 
@@ -269,6 +280,16 @@ interface Live2DCatalogEntry {
   jsonPath: string;
   iconPath?: string;
   api: string;
+}
+
+interface HysnCatalogEntry {
+  id: string;
+  charName: string;
+  costumeName: string;
+  modelType: string;
+  jsonPath: string;
+  atlasPath: string;
+  texturePage: string;
 }
 
 interface NikkeCatalogEntry {
@@ -539,6 +560,37 @@ export async function loadGameRoster(gameId: GameId): Promise<BD2Character[]> {
         named: item.charName !== item.modelId && !item.charName.includes('Variant') && !item.charName.includes('NPC') && !item.charName.includes('Scene'),
         kind: item.kind,
       }));
+    } else if (gameId === 'hysn') {
+      const res = await fetch('/data/hysn_catalog.json');
+      if (!res.ok) throw new Error(`Failed to load hysn catalog (HTTP ${res.status})`);
+      const rawList = (await res.json()) as HysnCatalogEntry[];
+      const sorted = [...rawList].sort((a, b) => {
+        const ia = Number(a.charName.slice(0, 6).replace(/\D/g, '')) || 0;
+        const ib = Number(b.charName.slice(0, 6).replace(/\D/g, '')) || 0;
+        if (ia !== ib) return ia - ib;
+        return a.id.localeCompare(b.id);
+      });
+      mapped = sorted.map((item, idx) => ({
+        id: item.id,
+        game: 'hysn',
+        charName: item.charName,
+        costumeName: item.costumeName === 'Default' ? 'Default' : `Variant ${item.costumeName}`,
+        spine: item.id,
+        cutscene: '',
+        dating: '',
+        audio: '',
+        skeletonUrl: encodeProxyPath(HYSN_SPINE_BASE, item.jsonPath),
+        atlasUrl: encodeProxyPath(HYSN_SPINE_BASE, item.atlasPath),
+        skeletonFormat: 'skel',
+        spineVersion: '3.8',
+        modelType: 'character',
+        iconUrl: '',
+        hasCutscene: false,
+        hasDating: false,
+        releaseOrder: idx,
+        releaseLabel: 'Card Spine 3.8',
+        baseId: item.charName.slice(0, 6),
+      }));
     } else if (gameId === 'nikke') {
       const res = await fetch('/data/nikke_catalog.json');
       if (!res.ok) throw new Error(`Failed to load NIKKE catalog (HTTP ${res.status})`);
@@ -637,6 +689,9 @@ export function pickDefaultCharacterForGame(gameId: GameId, roster: BD2Character
   }
   if (gameId === 'snowbreak') {
     return roster.find((c) => c.kind === 'character' && c.releaseLabel === 'Hero Spine') || roster[0];
+  }
+  if (gameId === 'hysn') {
+    return roster.find((c) => !c.costumeName.startsWith('Variant')) || roster[0];
   }
   if (gameId === 'nikke') {
     return roster.find((c) => c.iconUrl) || roster.find((c) => c.id === 'nikke_c010_00') || roster[0];

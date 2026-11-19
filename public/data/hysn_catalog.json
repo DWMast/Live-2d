@@ -1,0 +1,1631 @@
+[
+ {
+  "id": "hysn_1073001",
+  "charName": "1073001",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073001/1073001.skel",
+  "atlasPath": "bundle/arts/spine/card/1073001/1073001.atlas",
+  "texturePage": "1073001.webp"
+ },
+ {
+  "id": "hysn_1073001_1",
+  "charName": "1073001_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073001/1073001_1.skel",
+  "atlasPath": "bundle/arts/spine/card/1073001/1073001_1.atlas",
+  "texturePage": "1073001_1.webp"
+ },
+ {
+  "id": "hysn_1073001_2",
+  "charName": "1073001_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073001/1073001_2.skel",
+  "atlasPath": "bundle/arts/spine/card/1073001/1073001_2.atlas",
+  "texturePage": "1073001_2.webp"
+ },
+ {
+  "id": "hysn_1073001_3",
+  "charName": "1073001_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073001/1073001_3.skel",
+  "atlasPath": "bundle/arts/spine/card/1073001/1073001_3.atlas",
+  "texturePage": "1073001_3.webp"
+ },
+ {
+  "id": "hysn_1073002",
+  "charName": "1073002",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073002/1073002.skel",
+  "atlasPath": "bundle/arts/spine/card/1073002/1073002.atlas",
+  "texturePage": "1073002.webp"
+ },
+ {
+  "id": "hysn_1073002_1",
+  "charName": "1073002_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073002/1073002_1.skel",
+  "atlasPath": "bundle/arts/spine/card/1073002/1073002_1.atlas",
+  "texturePage": "1073002_1.webp"
+ },
+ {
+  "id": "hysn_1073002_2",
+  "charName": "1073002_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073002/1073002_2.skel",
+  "atlasPath": "bundle/arts/spine/card/1073002/1073002_2.atlas",
+  "texturePage": "1073002_2.webp"
+ },
+ {
+  "id": "hysn_1073002_3",
+  "charName": "1073002_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073002/1073002_3.skel",
+  "atlasPath": "bundle/arts/spine/card/1073002/1073002_3.atlas",
+  "texturePage": "1073002_3.webp"
+ },
+ {
+  "id": "hysn_1073003",
+  "charName": "1073003",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073003/1073003.skel",
+  "atlasPath": "bundle/arts/spine/card/1073003/1073003.atlas",
+  "texturePage": "1073003.webp"
+ },
+ {
+  "id": "hysn_10730031",
+  "charName": "10730031",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073003/10730031.skel",
+  "atlasPath": "bundle/arts/spine/card/1073003/10730031.atlas",
+  "texturePage": "10730031.webp"
+ },
+ {
+  "id": "hysn_10730032",
+  "charName": "10730032",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073003/10730032.skel",
+  "atlasPath": "bundle/arts/spine/card/1073003/10730032.atlas",
+  "texturePage": "10730032.webp"
+ },
+ {
+  "id": "hysn_10730033",
+  "charName": "10730033",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073003/10730033.skel",
+  "atlasPath": "bundle/arts/spine/card/1073003/10730033.atlas",
+  "texturePage": "10730033.webp"
+ },
+ {
+  "id": "hysn_1073004",
+  "charName": "1073004",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073004/1073004.skel",
+  "atlasPath": "bundle/arts/spine/card/1073004/1073004.atlas",
+  "texturePage": "1073004.webp"
+ },
+ {
+  "id": "hysn_1073004_1",
+  "charName": "1073004_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073004/1073004_1.skel",
+  "atlasPath": "bundle/arts/spine/card/1073004/1073004_1.atlas",
+  "texturePage": "1073004_1.webp"
+ },
+ {
+  "id": "hysn_1073004_2",
+  "charName": "1073004_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073004/1073004_2.skel",
+  "atlasPath": "bundle/arts/spine/card/1073004/1073004_2.atlas",
+  "texturePage": "1073004_2.webp"
+ },
+ {
+  "id": "hysn_1073004_3",
+  "charName": "1073004_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073004/1073004_3.skel",
+  "atlasPath": "bundle/arts/spine/card/1073004/1073004_3.atlas",
+  "texturePage": "1073004_3.webp"
+ },
+ {
+  "id": "hysn_1073005",
+  "charName": "1073005",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073005/1073005.skel",
+  "atlasPath": "bundle/arts/spine/card/1073005/1073005.atlas",
+  "texturePage": "1073005.webp"
+ },
+ {
+  "id": "hysn_1073005_1",
+  "charName": "1073005_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073005/1073005_1.skel",
+  "atlasPath": "bundle/arts/spine/card/1073005/1073005_1.atlas",
+  "texturePage": "1073005_1.webp"
+ },
+ {
+  "id": "hysn_1073005_2",
+  "charName": "1073005_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073005/1073005_2.skel",
+  "atlasPath": "bundle/arts/spine/card/1073005/1073005_2.atlas",
+  "texturePage": "1073005_2.webp"
+ },
+ {
+  "id": "hysn_1073005_3",
+  "charName": "1073005_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073005/1073005_3.skel",
+  "atlasPath": "bundle/arts/spine/card/1073005/1073005_3.atlas",
+  "texturePage": "1073005_3.webp"
+ },
+ {
+  "id": "hysn_1073005_4",
+  "charName": "1073005_4",
+  "costumeName": "4",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073005/1073005_4.skel",
+  "atlasPath": "bundle/arts/spine/card/1073005/1073005_4.atlas",
+  "texturePage": "1073005_4.webp"
+ },
+ {
+  "id": "hysn_1073006",
+  "charName": "1073006",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073006/1073006.skel",
+  "atlasPath": "bundle/arts/spine/card/1073006/1073006.atlas",
+  "texturePage": "1073006.webp"
+ },
+ {
+  "id": "hysn_1073006_1",
+  "charName": "1073006_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073006/1073006_1.skel",
+  "atlasPath": "bundle/arts/spine/card/1073006/1073006_1.atlas",
+  "texturePage": "1073006_1.webp"
+ },
+ {
+  "id": "hysn_1073006_2",
+  "charName": "1073006_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073006/1073006_2.skel",
+  "atlasPath": "bundle/arts/spine/card/1073006/1073006_2.atlas",
+  "texturePage": "1073006_2.webp"
+ },
+ {
+  "id": "hysn_1073006_3",
+  "charName": "1073006_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073006/1073006_3.skel",
+  "atlasPath": "bundle/arts/spine/card/1073006/1073006_3.atlas",
+  "texturePage": "1073006_3.webp"
+ },
+ {
+  "id": "hysn_1073006_4",
+  "charName": "1073006_4",
+  "costumeName": "4",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073006/1073006_4.skel",
+  "atlasPath": "bundle/arts/spine/card/1073006/1073006_4.atlas",
+  "texturePage": "1073006_4.webp"
+ },
+ {
+  "id": "hysn_1073006_5",
+  "charName": "1073006_5",
+  "costumeName": "5",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073006/1073006_5.skel",
+  "atlasPath": "bundle/arts/spine/card/1073006/1073006_5.atlas",
+  "texturePage": "1073006_5.webp"
+ },
+ {
+  "id": "hysn_1073007",
+  "charName": "1073007",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073007/1073007.skel",
+  "atlasPath": "bundle/arts/spine/card/1073007/1073007.atlas",
+  "texturePage": "1073007.webp"
+ },
+ {
+  "id": "hysn_1073007_1",
+  "charName": "1073007_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073007/1073007_1.skel",
+  "atlasPath": "bundle/arts/spine/card/1073007/1073007_1.atlas",
+  "texturePage": "1073007_1.webp"
+ },
+ {
+  "id": "hysn_1073007_2",
+  "charName": "1073007_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073007/1073007_2.skel",
+  "atlasPath": "bundle/arts/spine/card/1073007/1073007_2.atlas",
+  "texturePage": "1073007_2.webp"
+ },
+ {
+  "id": "hysn_1073007_3",
+  "charName": "1073007_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073007/1073007_3.skel",
+  "atlasPath": "bundle/arts/spine/card/1073007/1073007_3.atlas",
+  "texturePage": "1073007_3.webp"
+ },
+ {
+  "id": "hysn_1073007_4",
+  "charName": "1073007_4",
+  "costumeName": "4",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1073007/1073007_4.skel",
+  "atlasPath": "bundle/arts/spine/card/1073007/1073007_4.atlas",
+  "texturePage": "1073007_4.webp"
+ },
+ {
+  "id": "hysn_1083001",
+  "charName": "1083001",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083001/1083001.skel",
+  "atlasPath": "bundle/arts/spine/card/1083001/1083001.atlas",
+  "texturePage": "1083001.webp"
+ },
+ {
+  "id": "hysn_1083001_1",
+  "charName": "1083001_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083001/1083001_1.skel",
+  "atlasPath": "bundle/arts/spine/card/1083001/1083001_1.atlas",
+  "texturePage": "1083001_1.webp"
+ },
+ {
+  "id": "hysn_1083001_2",
+  "charName": "1083001_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083001/1083001_2.skel",
+  "atlasPath": "bundle/arts/spine/card/1083001/1083001_2.atlas",
+  "texturePage": "1083001_2.webp"
+ },
+ {
+  "id": "hysn_1083001_3",
+  "charName": "1083001_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083001/1083001_3.skel",
+  "atlasPath": "bundle/arts/spine/card/1083001/1083001_3.atlas",
+  "texturePage": "1083001_3.webp"
+ },
+ {
+  "id": "hysn_1083002",
+  "charName": "1083002",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083002/1083002.skel",
+  "atlasPath": "bundle/arts/spine/card/1083002/1083002.atlas",
+  "texturePage": "1083002.webp"
+ },
+ {
+  "id": "hysn_1083002_1",
+  "charName": "1083002_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083002/1083002_1.skel",
+  "atlasPath": "bundle/arts/spine/card/1083002/1083002_1.atlas",
+  "texturePage": "1083002_1.webp"
+ },
+ {
+  "id": "hysn_1083002_2",
+  "charName": "1083002_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083002/1083002_2.skel",
+  "atlasPath": "bundle/arts/spine/card/1083002/1083002_2.atlas",
+  "texturePage": "1083002_2.webp"
+ },
+ {
+  "id": "hysn_1083002_3",
+  "charName": "1083002_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083002/1083002_3.skel",
+  "atlasPath": "bundle/arts/spine/card/1083002/1083002_3.atlas",
+  "texturePage": "1083002_3.webp"
+ },
+ {
+  "id": "hysn_1083003",
+  "charName": "1083003",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083003/1083003.skel",
+  "atlasPath": "bundle/arts/spine/card/1083003/1083003.atlas",
+  "texturePage": "1083003.webp"
+ },
+ {
+  "id": "hysn_1083003_1",
+  "charName": "1083003_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083003/1083003_1.skel",
+  "atlasPath": "bundle/arts/spine/card/1083003/1083003_1.atlas",
+  "texturePage": "1083003_1.webp"
+ },
+ {
+  "id": "hysn_1083003_2",
+  "charName": "1083003_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083003/1083003_2.skel",
+  "atlasPath": "bundle/arts/spine/card/1083003/1083003_2.atlas",
+  "texturePage": "1083003_2.webp"
+ },
+ {
+  "id": "hysn_1083003_3",
+  "charName": "1083003_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083003/1083003_3.skel",
+  "atlasPath": "bundle/arts/spine/card/1083003/1083003_3.atlas",
+  "texturePage": "1083003_3.webp"
+ },
+ {
+  "id": "hysn_1083004",
+  "charName": "1083004",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083004/1083004.skel",
+  "atlasPath": "bundle/arts/spine/card/1083004/1083004.atlas",
+  "texturePage": "1083004.webp"
+ },
+ {
+  "id": "hysn_1083004_1",
+  "charName": "1083004_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083004/1083004_1.skel",
+  "atlasPath": "bundle/arts/spine/card/1083004/1083004_1.atlas",
+  "texturePage": "1083004_1.webp"
+ },
+ {
+  "id": "hysn_1083004_2",
+  "charName": "1083004_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083004/1083004_2.skel",
+  "atlasPath": "bundle/arts/spine/card/1083004/1083004_2.atlas",
+  "texturePage": "1083004_2.webp"
+ },
+ {
+  "id": "hysn_1083004_3",
+  "charName": "1083004_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083004/1083004_3.skel",
+  "atlasPath": "bundle/arts/spine/card/1083004/1083004_3.atlas",
+  "texturePage": "1083004_3.webp"
+ },
+ {
+  "id": "hysn_1083005",
+  "charName": "1083005",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083005/1083005.skel",
+  "atlasPath": "bundle/arts/spine/card/1083005/1083005.atlas",
+  "texturePage": "1083005.webp"
+ },
+ {
+  "id": "hysn_1083005_1",
+  "charName": "1083005_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083005/1083005_1.skel",
+  "atlasPath": "bundle/arts/spine/card/1083005/1083005_1.atlas",
+  "texturePage": "1083005_1.webp"
+ },
+ {
+  "id": "hysn_1083005_2",
+  "charName": "1083005_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083005/1083005_2.skel",
+  "atlasPath": "bundle/arts/spine/card/1083005/1083005_2.atlas",
+  "texturePage": "1083005_2.webp"
+ },
+ {
+  "id": "hysn_1083005_3",
+  "charName": "1083005_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083005/1083005_3.skel",
+  "atlasPath": "bundle/arts/spine/card/1083005/1083005_3.atlas",
+  "texturePage": "1083005_3.webp"
+ },
+ {
+  "id": "hysn_1083007",
+  "charName": "1083007",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083007/1083007.skel",
+  "atlasPath": "bundle/arts/spine/card/1083007/1083007.atlas",
+  "texturePage": "1083007.webp"
+ },
+ {
+  "id": "hysn_1083007_1",
+  "charName": "1083007_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083007/1083007_1.skel",
+  "atlasPath": "bundle/arts/spine/card/1083007/1083007_1.atlas",
+  "texturePage": "1083007_1.webp"
+ },
+ {
+  "id": "hysn_1083007_2",
+  "charName": "1083007_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083007/1083007_2.skel",
+  "atlasPath": "bundle/arts/spine/card/1083007/1083007_2.atlas",
+  "texturePage": "1083007_2.webp"
+ },
+ {
+  "id": "hysn_1083007_3",
+  "charName": "1083007_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083007/1083007_3.skel",
+  "atlasPath": "bundle/arts/spine/card/1083007/1083007_3.atlas",
+  "texturePage": "1083007_3.webp"
+ },
+ {
+  "id": "hysn_1083008",
+  "charName": "1083008",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083008/1083008.skel",
+  "atlasPath": "bundle/arts/spine/card/1083008/1083008.atlas",
+  "texturePage": "1083008.webp"
+ },
+ {
+  "id": "hysn_1083008_1",
+  "charName": "1083008_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083008/1083008_1.skel",
+  "atlasPath": "bundle/arts/spine/card/1083008/1083008_1.atlas",
+  "texturePage": "1083008_1.webp"
+ },
+ {
+  "id": "hysn_1083008_2",
+  "charName": "1083008_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083008/1083008_2.skel",
+  "atlasPath": "bundle/arts/spine/card/1083008/1083008_2.atlas",
+  "texturePage": "1083008_2.webp"
+ },
+ {
+  "id": "hysn_1083008_3",
+  "charName": "1083008_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083008/1083008_3.skel",
+  "atlasPath": "bundle/arts/spine/card/1083008/1083008_3.atlas",
+  "texturePage": "1083008_3.webp"
+ },
+ {
+  "id": "hysn_1083008_4",
+  "charName": "1083008_4",
+  "costumeName": "4",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083008/1083008_4.skel",
+  "atlasPath": "bundle/arts/spine/card/1083008/1083008_4.atlas",
+  "texturePage": "1083008_4.webp"
+ },
+ {
+  "id": "hysn_1083009_1",
+  "charName": "1083009_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083009/1083009_1.skel",
+  "atlasPath": "bundle/arts/spine/card/1083009/1083009_1.atlas",
+  "texturePage": "1083009_1.webp"
+ },
+ {
+  "id": "hysn_1083009_2",
+  "charName": "1083009_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083009/1083009_2.skel",
+  "atlasPath": "bundle/arts/spine/card/1083009/1083009_2.atlas",
+  "texturePage": "1083009_2.webp"
+ },
+ {
+  "id": "hysn_1083009_3",
+  "charName": "1083009_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083009/1083009_3.skel",
+  "atlasPath": "bundle/arts/spine/card/1083009/1083009_3.atlas",
+  "texturePage": "1083009_3.webp"
+ },
+ {
+  "id": "hysn_1083011",
+  "charName": "1083011",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083011/1083011.skel",
+  "atlasPath": "bundle/arts/spine/card/1083011/1083011.atlas",
+  "texturePage": "1083011.webp"
+ },
+ {
+  "id": "hysn_1083011_1",
+  "charName": "1083011_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083011/1083011_1.skel",
+  "atlasPath": "bundle/arts/spine/card/1083011/1083011_1.atlas",
+  "texturePage": "1083011_1.webp"
+ },
+ {
+  "id": "hysn_1083011_2",
+  "charName": "1083011_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083011/1083011_2.skel",
+  "atlasPath": "bundle/arts/spine/card/1083011/1083011_2.atlas",
+  "texturePage": "1083011_2.webp"
+ },
+ {
+  "id": "hysn_1083011_3",
+  "charName": "1083011_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083011/1083011_3.skel",
+  "atlasPath": "bundle/arts/spine/card/1083011/1083011_3.atlas",
+  "texturePage": "1083011_3.webp"
+ },
+ {
+  "id": "hysn_1083013",
+  "charName": "1083013",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083013/1083013.skel",
+  "atlasPath": "bundle/arts/spine/card/1083013/1083013.atlas",
+  "texturePage": "1083013.webp"
+ },
+ {
+  "id": "hysn_1083013_1",
+  "charName": "1083013_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083013/1083013_1.skel",
+  "atlasPath": "bundle/arts/spine/card/1083013/1083013_1.atlas",
+  "texturePage": "1083013_1.webp"
+ },
+ {
+  "id": "hysn_1083013_2",
+  "charName": "1083013_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083013/1083013_2.skel",
+  "atlasPath": "bundle/arts/spine/card/1083013/1083013_2.atlas",
+  "texturePage": "1083013_2.webp"
+ },
+ {
+  "id": "hysn_1083013_3",
+  "charName": "1083013_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/1083013/1083013_3.skel",
+  "atlasPath": "bundle/arts/spine/card/1083013/1083013_3.atlas",
+  "texturePage": "1083013_3.webp"
+ },
+ {
+  "id": "hysn_2073002",
+  "charName": "2073002",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2073002/2073002.skel",
+  "atlasPath": "bundle/arts/spine/card/2073002/2073002.atlas",
+  "texturePage": "2073002.webp"
+ },
+ {
+  "id": "hysn_207300201",
+  "charName": "207300201",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2073002/207300201.skel",
+  "atlasPath": "bundle/arts/spine/card/2073002/207300201.atlas",
+  "texturePage": "207300201.webp"
+ },
+ {
+  "id": "hysn_207300202",
+  "charName": "207300202",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2073002/207300202.skel",
+  "atlasPath": "bundle/arts/spine/card/2073002/207300202.atlas",
+  "texturePage": "207300202.webp"
+ },
+ {
+  "id": "hysn_2073003",
+  "charName": "2073003",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2073003/2073003.skel",
+  "atlasPath": "bundle/arts/spine/card/2073003/2073003.atlas",
+  "texturePage": "2073003.webp"
+ },
+ {
+  "id": "hysn_2073003_1",
+  "charName": "2073003_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2073003/2073003_1.skel",
+  "atlasPath": "bundle/arts/spine/card/2073003/2073003_1.atlas",
+  "texturePage": "2073003_1.webp"
+ },
+ {
+  "id": "hysn_2073003_2",
+  "charName": "2073003_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2073003/2073003_2.skel",
+  "atlasPath": "bundle/arts/spine/card/2073003/2073003_2.atlas",
+  "texturePage": "2073003_2.webp"
+ },
+ {
+  "id": "hysn_2073003_3",
+  "charName": "2073003_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2073003/2073003_3.skel",
+  "atlasPath": "bundle/arts/spine/card/2073003/2073003_3.atlas",
+  "texturePage": "2073003_3.webp"
+ },
+ {
+  "id": "hysn_2073003_4",
+  "charName": "2073003_4",
+  "costumeName": "4",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2073003/2073003_4.skel",
+  "atlasPath": "bundle/arts/spine/card/2073003/2073003_4.atlas",
+  "texturePage": "2073003_4.webp"
+ },
+ {
+  "id": "hysn_2073005",
+  "charName": "2073005",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2073005/2073005.skel",
+  "atlasPath": "bundle/arts/spine/card/2073005/2073005.atlas",
+  "texturePage": "2073005.webp"
+ },
+ {
+  "id": "hysn_2073005_1",
+  "charName": "2073005_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2073005/2073005_1.skel",
+  "atlasPath": "bundle/arts/spine/card/2073005/2073005_1.atlas",
+  "texturePage": "2073005_1.webp"
+ },
+ {
+  "id": "hysn_2073005_2",
+  "charName": "2073005_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2073005/2073005_2.skel",
+  "atlasPath": "bundle/arts/spine/card/2073005/2073005_2.atlas",
+  "texturePage": "2073005_2.webp"
+ },
+ {
+  "id": "hysn_2073005_3",
+  "charName": "2073005_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2073005/2073005_3.skel",
+  "atlasPath": "bundle/arts/spine/card/2073005/2073005_3.atlas",
+  "texturePage": "2073005_3.webp"
+ },
+ {
+  "id": "hysn_2073005_4",
+  "charName": "2073005_4",
+  "costumeName": "4",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2073005/2073005_4.skel",
+  "atlasPath": "bundle/arts/spine/card/2073005/2073005_4.atlas",
+  "texturePage": "2073005_4.webp"
+ },
+ {
+  "id": "hysn_2073006",
+  "charName": "2073006",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2073006/2073006.skel",
+  "atlasPath": "bundle/arts/spine/card/2073006/2073006.atlas",
+  "texturePage": "2073006.webp"
+ },
+ {
+  "id": "hysn_2073006_1",
+  "charName": "2073006_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2073006/2073006_1.skel",
+  "atlasPath": "bundle/arts/spine/card/2073006/2073006_1.atlas",
+  "texturePage": "2073006_1.webp"
+ },
+ {
+  "id": "hysn_2073006_2",
+  "charName": "2073006_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2073006/2073006_2.skel",
+  "atlasPath": "bundle/arts/spine/card/2073006/2073006_2.atlas",
+  "texturePage": "2073006_2.webp"
+ },
+ {
+  "id": "hysn_2073006_3",
+  "charName": "2073006_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2073006/2073006_3.skel",
+  "atlasPath": "bundle/arts/spine/card/2073006/2073006_3.atlas",
+  "texturePage": "2073006_3.webp"
+ },
+ {
+  "id": "hysn_2073006_4",
+  "charName": "2073006_4",
+  "costumeName": "4",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2073006/2073006_4.skel",
+  "atlasPath": "bundle/arts/spine/card/2073006/2073006_4.atlas",
+  "texturePage": "2073006_4.webp"
+ },
+ {
+  "id": "hysn_2073007",
+  "charName": "2073007",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2073007/2073007.skel",
+  "atlasPath": "bundle/arts/spine/card/2073007/2073007.atlas",
+  "texturePage": "2073007.webp"
+ },
+ {
+  "id": "hysn_2073007_1",
+  "charName": "2073007_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2073007/2073007_1.skel",
+  "atlasPath": "bundle/arts/spine/card/2073007/2073007_1.atlas",
+  "texturePage": "2073007_1.webp"
+ },
+ {
+  "id": "hysn_2073007_2",
+  "charName": "2073007_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2073007/2073007_2.skel",
+  "atlasPath": "bundle/arts/spine/card/2073007/2073007_2.atlas",
+  "texturePage": "2073007_2.webp"
+ },
+ {
+  "id": "hysn_2073007_3",
+  "charName": "2073007_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2073007/2073007_3.skel",
+  "atlasPath": "bundle/arts/spine/card/2073007/2073007_3.atlas",
+  "texturePage": "2073007_3.webp"
+ },
+ {
+  "id": "hysn_2073007_4",
+  "charName": "2073007_4",
+  "costumeName": "4",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2073007/2073007_4.skel",
+  "atlasPath": "bundle/arts/spine/card/2073007/2073007_4.atlas",
+  "texturePage": "2073007_4.webp"
+ },
+ {
+  "id": "hysn_2083001",
+  "charName": "2083001",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083001/2083001.skel",
+  "atlasPath": "bundle/arts/spine/card/2083001/2083001.atlas",
+  "texturePage": "2083001.webp"
+ },
+ {
+  "id": "hysn_2083001_1",
+  "charName": "2083001_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083001/2083001_1.skel",
+  "atlasPath": "bundle/arts/spine/card/2083001/2083001_1.atlas",
+  "texturePage": "2083001_1.webp"
+ },
+ {
+  "id": "hysn_2083001_2",
+  "charName": "2083001_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083001/2083001_2.skel",
+  "atlasPath": "bundle/arts/spine/card/2083001/2083001_2.atlas",
+  "texturePage": "2083001_2.webp"
+ },
+ {
+  "id": "hysn_2083001_3",
+  "charName": "2083001_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083001/2083001_3.skel",
+  "atlasPath": "bundle/arts/spine/card/2083001/2083001_3.atlas",
+  "texturePage": "2083001_3.webp"
+ },
+ {
+  "id": "hysn_2083002",
+  "charName": "2083002",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083002/2083002.skel",
+  "atlasPath": "bundle/arts/spine/card/2083002/2083002.atlas",
+  "texturePage": "2083002.webp"
+ },
+ {
+  "id": "hysn_2083002_1",
+  "charName": "2083002_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083002/2083002_1.skel",
+  "atlasPath": "bundle/arts/spine/card/2083002/2083002_1.atlas",
+  "texturePage": "2083002_1.webp"
+ },
+ {
+  "id": "hysn_2083002_2",
+  "charName": "2083002_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083002/2083002_2.skel",
+  "atlasPath": "bundle/arts/spine/card/2083002/2083002_2.atlas",
+  "texturePage": "2083002_2.webp"
+ },
+ {
+  "id": "hysn_2083002_3",
+  "charName": "2083002_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083002/2083002_3.skel",
+  "atlasPath": "bundle/arts/spine/card/2083002/2083002_3.atlas",
+  "texturePage": "2083002_3.webp"
+ },
+ {
+  "id": "hysn_208300201",
+  "charName": "208300201",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/208300201/208300201.skel",
+  "atlasPath": "bundle/arts/spine/card/208300201/208300201.atlas",
+  "texturePage": "208300201.webp"
+ },
+ {
+  "id": "hysn_2083003",
+  "charName": "2083003",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083003/2083003.skel",
+  "atlasPath": "bundle/arts/spine/card/2083003/2083003.atlas",
+  "texturePage": "2083003.webp"
+ },
+ {
+  "id": "hysn_2083003_1",
+  "charName": "2083003_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083003/2083003_1.skel",
+  "atlasPath": "bundle/arts/spine/card/2083003/2083003_1.atlas",
+  "texturePage": "2083003_1.webp"
+ },
+ {
+  "id": "hysn_2083003_2",
+  "charName": "2083003_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083003/2083003_2.skel",
+  "atlasPath": "bundle/arts/spine/card/2083003/2083003_2.atlas",
+  "texturePage": "2083003_2.webp"
+ },
+ {
+  "id": "hysn_2083003_3",
+  "charName": "2083003_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083003/2083003_3.skel",
+  "atlasPath": "bundle/arts/spine/card/2083003/2083003_3.atlas",
+  "texturePage": "2083003_3.webp"
+ },
+ {
+  "id": "hysn_2083004",
+  "charName": "2083004",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083004/2083004.skel",
+  "atlasPath": "bundle/arts/spine/card/2083004/2083004.atlas",
+  "texturePage": "2083004.webp"
+ },
+ {
+  "id": "hysn_2083004_1",
+  "charName": "2083004_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083004/2083004_1.skel",
+  "atlasPath": "bundle/arts/spine/card/2083004/2083004_1.atlas",
+  "texturePage": "2083004_1.webp"
+ },
+ {
+  "id": "hysn_2083004_2",
+  "charName": "2083004_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083004/2083004_2.skel",
+  "atlasPath": "bundle/arts/spine/card/2083004/2083004_2.atlas",
+  "texturePage": "2083004_2.webp"
+ },
+ {
+  "id": "hysn_2083004_3",
+  "charName": "2083004_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083004/2083004_3.skel",
+  "atlasPath": "bundle/arts/spine/card/2083004/2083004_3.atlas",
+  "texturePage": "2083004_3.webp"
+ },
+ {
+  "id": "hysn_2083005",
+  "charName": "2083005",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083005/2083005.skel",
+  "atlasPath": "bundle/arts/spine/card/2083005/2083005.atlas",
+  "texturePage": "2083005.webp"
+ },
+ {
+  "id": "hysn_2083005_1",
+  "charName": "2083005_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083005/2083005_1.skel",
+  "atlasPath": "bundle/arts/spine/card/2083005/2083005_1.atlas",
+  "texturePage": "2083005_1.webp"
+ },
+ {
+  "id": "hysn_2083005_2",
+  "charName": "2083005_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083005/2083005_2.skel",
+  "atlasPath": "bundle/arts/spine/card/2083005/2083005_2.atlas",
+  "texturePage": "2083005_2.webp"
+ },
+ {
+  "id": "hysn_2083005_3",
+  "charName": "2083005_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083005/2083005_3.skel",
+  "atlasPath": "bundle/arts/spine/card/2083005/2083005_3.atlas",
+  "texturePage": "2083005_3.webp"
+ },
+ {
+  "id": "hysn_2083005_4",
+  "charName": "2083005_4",
+  "costumeName": "4",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083005/2083005_4.skel",
+  "atlasPath": "bundle/arts/spine/card/2083005/2083005_4.atlas",
+  "texturePage": "2083005_4.webp"
+ },
+ {
+  "id": "hysn_2083006",
+  "charName": "2083006",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083006/2083006.skel",
+  "atlasPath": "bundle/arts/spine/card/2083006/2083006.atlas",
+  "texturePage": "2083006.webp"
+ },
+ {
+  "id": "hysn_2083006_1",
+  "charName": "2083006_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083006/2083006_1.skel",
+  "atlasPath": "bundle/arts/spine/card/2083006/2083006_1.atlas",
+  "texturePage": "2083006_1.webp"
+ },
+ {
+  "id": "hysn_2083006_2",
+  "charName": "2083006_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083006/2083006_2.skel",
+  "atlasPath": "bundle/arts/spine/card/2083006/2083006_2.atlas",
+  "texturePage": "2083006_2.webp"
+ },
+ {
+  "id": "hysn_2083006_3",
+  "charName": "2083006_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083006/2083006_3.skel",
+  "atlasPath": "bundle/arts/spine/card/2083006/2083006_3.atlas",
+  "texturePage": "2083006_3.webp"
+ },
+ {
+  "id": "hysn_2083007",
+  "charName": "2083007",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083007/2083007.skel",
+  "atlasPath": "bundle/arts/spine/card/2083007/2083007.atlas",
+  "texturePage": "2083007.webp"
+ },
+ {
+  "id": "hysn_2083007_1",
+  "charName": "2083007_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083007/2083007_1.skel",
+  "atlasPath": "bundle/arts/spine/card/2083007/2083007_1.atlas",
+  "texturePage": "2083007_1.webp"
+ },
+ {
+  "id": "hysn_2083007_2",
+  "charName": "2083007_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083007/2083007_2.skel",
+  "atlasPath": "bundle/arts/spine/card/2083007/2083007_2.atlas",
+  "texturePage": "2083007_2.webp"
+ },
+ {
+  "id": "hysn_2083007_3",
+  "charName": "2083007_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083007/2083007_3.skel",
+  "atlasPath": "bundle/arts/spine/card/2083007/2083007_3.atlas",
+  "texturePage": "2083007_3.webp"
+ },
+ {
+  "id": "hysn_2083008",
+  "charName": "2083008",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083008/2083008.skel",
+  "atlasPath": "bundle/arts/spine/card/2083008/2083008.atlas",
+  "texturePage": "2083008.webp"
+ },
+ {
+  "id": "hysn_2083008_1",
+  "charName": "2083008_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083008/2083008_1.skel",
+  "atlasPath": "bundle/arts/spine/card/2083008/2083008_1.atlas",
+  "texturePage": "2083008_1.webp"
+ },
+ {
+  "id": "hysn_2083008_2",
+  "charName": "2083008_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083008/2083008_2.skel",
+  "atlasPath": "bundle/arts/spine/card/2083008/2083008_2.atlas",
+  "texturePage": "2083008_2.webp"
+ },
+ {
+  "id": "hysn_2083008_3",
+  "charName": "2083008_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083008/2083008_3.skel",
+  "atlasPath": "bundle/arts/spine/card/2083008/2083008_3.atlas",
+  "texturePage": "2083008_3.webp"
+ },
+ {
+  "id": "hysn_2083009",
+  "charName": "2083009",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083009/2083009.skel",
+  "atlasPath": "bundle/arts/spine/card/2083009/2083009.atlas",
+  "texturePage": "2083009.webp"
+ },
+ {
+  "id": "hysn_2083009_1",
+  "charName": "2083009_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083009/2083009_1.skel",
+  "atlasPath": "bundle/arts/spine/card/2083009/2083009_1.atlas",
+  "texturePage": "2083009_1.webp"
+ },
+ {
+  "id": "hysn_2083009_2",
+  "charName": "2083009_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083009/2083009_2.skel",
+  "atlasPath": "bundle/arts/spine/card/2083009/2083009_2.atlas",
+  "texturePage": "2083009_2.webp"
+ },
+ {
+  "id": "hysn_2083009_3",
+  "charName": "2083009_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083009/2083009_3.skel",
+  "atlasPath": "bundle/arts/spine/card/2083009/2083009_3.atlas",
+  "texturePage": "2083009_3.webp"
+ },
+ {
+  "id": "hysn_2083009_4",
+  "charName": "2083009_4",
+  "costumeName": "4",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083009/2083009_4.skel",
+  "atlasPath": "bundle/arts/spine/card/2083009/2083009_4.atlas",
+  "texturePage": "2083009_4.webp"
+ },
+ {
+  "id": "hysn_2083010",
+  "charName": "2083010",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083010/2083010.skel",
+  "atlasPath": "bundle/arts/spine/card/2083010/2083010.atlas",
+  "texturePage": "2083010.webp"
+ },
+ {
+  "id": "hysn_2083010_1",
+  "charName": "2083010_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083010/2083010_1.skel",
+  "atlasPath": "bundle/arts/spine/card/2083010/2083010_1.atlas",
+  "texturePage": "2083010_1.webp"
+ },
+ {
+  "id": "hysn_2083010_2",
+  "charName": "2083010_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083010/2083010_2.skel",
+  "atlasPath": "bundle/arts/spine/card/2083010/2083010_2.atlas",
+  "texturePage": "2083010_2.webp"
+ },
+ {
+  "id": "hysn_2083010_3",
+  "charName": "2083010_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083010/2083010_3.skel",
+  "atlasPath": "bundle/arts/spine/card/2083010/2083010_3.atlas",
+  "texturePage": "2083010_3.webp"
+ },
+ {
+  "id": "hysn_2083012",
+  "charName": "2083012",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083012/2083012.skel",
+  "atlasPath": "bundle/arts/spine/card/2083012/2083012.atlas",
+  "texturePage": "2083012.webp"
+ },
+ {
+  "id": "hysn_2083012_1",
+  "charName": "2083012_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083012/2083012_1.skel",
+  "atlasPath": "bundle/arts/spine/card/2083012/2083012_1.atlas",
+  "texturePage": "2083012_1.webp"
+ },
+ {
+  "id": "hysn_2083012_2",
+  "charName": "2083012_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083012/2083012_2.skel",
+  "atlasPath": "bundle/arts/spine/card/2083012/2083012_2.atlas",
+  "texturePage": "2083012_2.webp"
+ },
+ {
+  "id": "hysn_2083012_3",
+  "charName": "2083012_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083012/2083012_3.skel",
+  "atlasPath": "bundle/arts/spine/card/2083012/2083012_3.atlas",
+  "texturePage": "2083012_3.webp"
+ },
+ {
+  "id": "hysn_2083014",
+  "charName": "2083014",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083014/2083014.skel",
+  "atlasPath": "bundle/arts/spine/card/2083014/2083014.atlas",
+  "texturePage": "2083014.webp"
+ },
+ {
+  "id": "hysn_2083014_1",
+  "charName": "2083014_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083014/2083014_1.skel",
+  "atlasPath": "bundle/arts/spine/card/2083014/2083014_1.atlas",
+  "texturePage": "2083014_1.webp"
+ },
+ {
+  "id": "hysn_2083014_2",
+  "charName": "2083014_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083014/2083014_2.skel",
+  "atlasPath": "bundle/arts/spine/card/2083014/2083014_2.atlas",
+  "texturePage": "2083014_2.webp"
+ },
+ {
+  "id": "hysn_2083014_3",
+  "charName": "2083014_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/2083014/2083014_3.skel",
+  "atlasPath": "bundle/arts/spine/card/2083014/2083014_3.atlas",
+  "texturePage": "2083014_3.webp"
+ },
+ {
+  "id": "hysn_3073001",
+  "charName": "3073001",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3073001/3073001.skel",
+  "atlasPath": "bundle/arts/spine/card/3073001/3073001.atlas",
+  "texturePage": "3073001.webp"
+ },
+ {
+  "id": "hysn_3073001_1",
+  "charName": "3073001_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3073001/3073001_1.skel",
+  "atlasPath": "bundle/arts/spine/card/3073001/3073001_1.atlas",
+  "texturePage": "3073001_1.webp"
+ },
+ {
+  "id": "hysn_3073001_2",
+  "charName": "3073001_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3073001/3073001_2.skel",
+  "atlasPath": "bundle/arts/spine/card/3073001/3073001_2.atlas",
+  "texturePage": "3073001_2.webp"
+ },
+ {
+  "id": "hysn_3073001_3",
+  "charName": "3073001_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3073001/3073001_3.skel",
+  "atlasPath": "bundle/arts/spine/card/3073001/3073001_3.atlas",
+  "texturePage": "3073001_3.webp"
+ },
+ {
+  "id": "hysn_3073002",
+  "charName": "3073002",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3073002/3073002.skel",
+  "atlasPath": "bundle/arts/spine/card/3073002/3073002.atlas",
+  "texturePage": "3073002.webp"
+ },
+ {
+  "id": "hysn_3073002_1",
+  "charName": "3073002_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3073002/3073002_1.skel",
+  "atlasPath": "bundle/arts/spine/card/3073002/3073002_1.atlas",
+  "texturePage": "3073002_1.webp"
+ },
+ {
+  "id": "hysn_3073002_2",
+  "charName": "3073002_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3073002/3073002_2.skel",
+  "atlasPath": "bundle/arts/spine/card/3073002/3073002_2.atlas",
+  "texturePage": "3073002_2.webp"
+ },
+ {
+  "id": "hysn_3073002_3",
+  "charName": "3073002_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3073002/3073002_3.skel",
+  "atlasPath": "bundle/arts/spine/card/3073002/3073002_3.atlas",
+  "texturePage": "3073002_3.webp"
+ },
+ {
+  "id": "hysn_3073002_4",
+  "charName": "3073002_4",
+  "costumeName": "4",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3073002/3073002_4.skel",
+  "atlasPath": "bundle/arts/spine/card/3073002/3073002_4.atlas",
+  "texturePage": "3073002_4.webp"
+ },
+ {
+  "id": "hysn_3073003",
+  "charName": "3073003",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3073003/3073003.skel",
+  "atlasPath": "bundle/arts/spine/card/3073003/3073003.atlas",
+  "texturePage": "3073003.webp"
+ },
+ {
+  "id": "hysn_3073003_1",
+  "charName": "3073003_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3073003/3073003_1.skel",
+  "atlasPath": "bundle/arts/spine/card/3073003/3073003_1.atlas",
+  "texturePage": "3073003_1.webp"
+ },
+ {
+  "id": "hysn_3073003_2",
+  "charName": "3073003_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3073003/3073003_2.skel",
+  "atlasPath": "bundle/arts/spine/card/3073003/3073003_2.atlas",
+  "texturePage": "3073003_2.webp"
+ },
+ {
+  "id": "hysn_3073003_3",
+  "charName": "3073003_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3073003/3073003_3.skel",
+  "atlasPath": "bundle/arts/spine/card/3073003/3073003_3.atlas",
+  "texturePage": "3073003_3.webp"
+ },
+ {
+  "id": "hysn_3073003_4",
+  "charName": "3073003_4",
+  "costumeName": "4",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3073003/3073003_4.skel",
+  "atlasPath": "bundle/arts/spine/card/3073003/3073003_4.atlas",
+  "texturePage": "3073003_4.webp"
+ },
+ {
+  "id": "hysn_3073005",
+  "charName": "3073005",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3073005/3073005.skel",
+  "atlasPath": "bundle/arts/spine/card/3073005/3073005.atlas",
+  "texturePage": "3073005.webp"
+ },
+ {
+  "id": "hysn_3073005_1",
+  "charName": "3073005_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3073005/3073005_1.skel",
+  "atlasPath": "bundle/arts/spine/card/3073005/3073005_1.atlas",
+  "texturePage": "3073005_1.webp"
+ },
+ {
+  "id": "hysn_3073005_2",
+  "charName": "3073005_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3073005/3073005_2.skel",
+  "atlasPath": "bundle/arts/spine/card/3073005/3073005_2.atlas",
+  "texturePage": "3073005_2.webp"
+ },
+ {
+  "id": "hysn_3073005_3",
+  "charName": "3073005_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3073005/3073005_3.skel",
+  "atlasPath": "bundle/arts/spine/card/3073005/3073005_3.atlas",
+  "texturePage": "3073005_3.webp"
+ },
+ {
+  "id": "hysn_3073005_4",
+  "charName": "3073005_4",
+  "costumeName": "4",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3073005/3073005_4.skel",
+  "atlasPath": "bundle/arts/spine/card/3073005/3073005_4.atlas",
+  "texturePage": "3073005_4.webp"
+ },
+ {
+  "id": "hysn_3083001",
+  "charName": "3083001",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3083001/3083001.skel",
+  "atlasPath": "bundle/arts/spine/card/3083001/3083001.atlas",
+  "texturePage": "3083001.webp"
+ },
+ {
+  "id": "hysn_3083001_1",
+  "charName": "3083001_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3083001/3083001_1.skel",
+  "atlasPath": "bundle/arts/spine/card/3083001/3083001_1.atlas",
+  "texturePage": "3083001_1.webp"
+ },
+ {
+  "id": "hysn_3083001_2",
+  "charName": "3083001_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3083001/3083001_2.skel",
+  "atlasPath": "bundle/arts/spine/card/3083001/3083001_2.atlas",
+  "texturePage": "3083001_2.webp"
+ },
+ {
+  "id": "hysn_3083001_3",
+  "charName": "3083001_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3083001/3083001_3.skel",
+  "atlasPath": "bundle/arts/spine/card/3083001/3083001_3.atlas",
+  "texturePage": "3083001_3.webp"
+ },
+ {
+  "id": "hysn_3083002",
+  "charName": "3083002",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3083002/3083002.skel",
+  "atlasPath": "bundle/arts/spine/card/3083002/3083002.atlas",
+  "texturePage": "3083002.webp"
+ },
+ {
+  "id": "hysn_3083002_1",
+  "charName": "3083002_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3083002/3083002_1.skel",
+  "atlasPath": "bundle/arts/spine/card/3083002/3083002_1.atlas",
+  "texturePage": "3083002_1.webp"
+ },
+ {
+  "id": "hysn_3083002_2",
+  "charName": "3083002_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3083002/3083002_2.skel",
+  "atlasPath": "bundle/arts/spine/card/3083002/3083002_2.atlas",
+  "texturePage": "3083002_2.webp"
+ },
+ {
+  "id": "hysn_3083002_3",
+  "charName": "3083002_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3083002/3083002_3.skel",
+  "atlasPath": "bundle/arts/spine/card/3083002/3083002_3.atlas",
+  "texturePage": "3083002_3.webp"
+ },
+ {
+  "id": "hysn_3083004",
+  "charName": "3083004",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3083004/3083004.skel",
+  "atlasPath": "bundle/arts/spine/card/3083004/3083004.atlas",
+  "texturePage": "3083004.webp"
+ },
+ {
+  "id": "hysn_3083004_1",
+  "charName": "3083004_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3083004/3083004_1.skel",
+  "atlasPath": "bundle/arts/spine/card/3083004/3083004_1.atlas",
+  "texturePage": "3083004_1.webp"
+ },
+ {
+  "id": "hysn_3083004_2",
+  "charName": "3083004_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3083004/3083004_2.skel",
+  "atlasPath": "bundle/arts/spine/card/3083004/3083004_2.atlas",
+  "texturePage": "3083004_2.webp"
+ },
+ {
+  "id": "hysn_3083004_3",
+  "charName": "3083004_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3083004/3083004_3.skel",
+  "atlasPath": "bundle/arts/spine/card/3083004/3083004_3.atlas",
+  "texturePage": "3083004_3.webp"
+ },
+ {
+  "id": "hysn_3083007",
+  "charName": "3083007",
+  "costumeName": "Default",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3083007/3083007.skel",
+  "atlasPath": "bundle/arts/spine/card/3083007/3083007.atlas",
+  "texturePage": "3083007.webp"
+ },
+ {
+  "id": "hysn_3083007_1",
+  "charName": "3083007_1",
+  "costumeName": "1",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3083007/3083007_1.skel",
+  "atlasPath": "bundle/arts/spine/card/3083007/3083007_1.atlas",
+  "texturePage": "3083007_1.webp"
+ },
+ {
+  "id": "hysn_3083007_2",
+  "charName": "3083007_2",
+  "costumeName": "2",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3083007/3083007_2.skel",
+  "atlasPath": "bundle/arts/spine/card/3083007/3083007_2.atlas",
+  "texturePage": "3083007_2.webp"
+ },
+ {
+  "id": "hysn_3083007_3",
+  "charName": "3083007_3",
+  "costumeName": "3",
+  "modelType": "character",
+  "jsonPath": "bundle/arts/spine/card/3083007/3083007_3.skel",
+  "atlasPath": "bundle/arts/spine/card/3083007/3083007_3.atlas",
+  "texturePage": "3083007_3.webp"
+ }
+]
