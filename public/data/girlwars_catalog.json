@@ -9,19 +9,9 @@
   "iconPath": "src/assets/char_icons/herowall_21073.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21073_cutscene",
-  "charName": "Abe no Seimei",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21073/cutscene/2107304.skel",
-  "atlasPath": "src/assets/spines/21073/cutscene/2107304.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21073.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21073/cutscene/2107304.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21073/cutscene/2107304.atlas"
  },
  {
   "id": "gw_31073",
@@ -33,19 +23,9 @@
   "iconPath": "src/assets/char_icons/herowall_31073.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31073_cutscene",
-  "charName": "Abe no Seimei",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31073/cutscene/3107304.skel",
-  "atlasPath": "src/assets/spines/31073/cutscene/3107304.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31073.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31073/cutscene/3107304.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31073/cutscene/3107304.atlas"
  },
  {
   "id": "gw_21101",
@@ -57,19 +37,9 @@
   "iconPath": "src/assets/char_icons/herowall_21101.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21101_cutscene",
-  "charName": "Achilles",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21101/cutscene/2110104.skel",
-  "atlasPath": "src/assets/spines/21101/cutscene/2110104.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21101.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21101/cutscene/2110104.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21101/cutscene/2110104.atlas"
  },
  {
   "id": "gw_1019",
@@ -81,19 +51,9 @@
   "iconPath": "src/assets/char_icons/herowall_1019.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1019_cutscene",
-  "charName": "Akechi Mitsuhide",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1019/cutscene/101904.skel",
-  "atlasPath": "src/assets/spines/1019/cutscene/101904.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1019.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1019/cutscene/101904.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1019/cutscene/101904.atlas"
  },
  {
   "id": "gw_1061",
@@ -105,19 +65,9 @@
   "iconPath": "src/assets/char_icons/herowall_1061.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1061_cutscene",
-  "charName": "Alexander",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1061/cutscene/106104.skel",
-  "atlasPath": "src/assets/spines/1061/cutscene/106104.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1061.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1061/cutscene/106104.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1061/cutscene/106104.atlas"
  },
  {
   "id": "gw_31112",
@@ -129,19 +79,9 @@
   "iconPath": "src/assets/char_icons/herowall_31112.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31112_cutscene",
-  "charName": "Ashiya Doman",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31112/cutscene/3111204.skel",
-  "atlasPath": "src/assets/spines/31112/cutscene/3111204.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31112.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31112/cutscene/3111204.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31112/cutscene/3111204.atlas"
  },
  {
   "id": "gw_21081",
@@ -153,19 +93,9 @@
   "iconPath": "src/assets/char_icons/herowall_21081.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21081_cutscene",
-  "charName": "Astolfo",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21081/cutscene/2108104.skel",
-  "atlasPath": "src/assets/spines/21081/cutscene/2108104.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21081.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21081/cutscene/2108104.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21081/cutscene/2108104.atlas"
  },
  {
   "id": "gw_21074",
@@ -177,19 +107,9 @@
   "iconPath": "src/assets/char_icons/herowall_21074.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21074_cutscene",
-  "charName": "Attila",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21074/cutscene/2107404.skel",
-  "atlasPath": "src/assets/spines/21074/cutscene/2107404.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21074.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21074/cutscene/2107404.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21074/cutscene/2107404.atlas"
  },
  {
   "id": "gw_1008",
@@ -201,19 +121,9 @@
   "iconPath": "src/assets/char_icons/herowall_1008.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1008_cutscene",
-  "charName": "Augustus",
-  "costumeName": "SR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1008/cutscene/100804.skel",
-  "atlasPath": "src/assets/spines/1008/cutscene/100804.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1008.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1008/cutscene/100804.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1008/cutscene/100804.atlas"
  },
  {
   "id": "gw_1062",
@@ -225,19 +135,9 @@
   "iconPath": "src/assets/char_icons/herowall_1062.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1062_cutscene",
-  "charName": "Beowulf",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1062/cutscene/106204.skel",
-  "atlasPath": "src/assets/spines/1062/cutscene/106204.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1062.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1062/cutscene/106204.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1062/cutscene/106204.atlas"
  },
  {
   "id": "gw_1034",
@@ -249,19 +149,9 @@
   "iconPath": "src/assets/char_icons/herowall_1034.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1034_cutscene",
-  "charName": "Bismarck",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1034/cutscene/103404.skel",
-  "atlasPath": "src/assets/spines/1034/cutscene/103404.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1034.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1034/cutscene/103404.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1034/cutscene/103404.atlas"
  },
  {
   "id": "gw_21076",
@@ -273,19 +163,9 @@
   "iconPath": "src/assets/char_icons/herowall_21076.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21076_cutscene",
-  "charName": "Brynhildr",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21076/cutscene/2107604.skel",
-  "atlasPath": "src/assets/spines/21076/cutscene/2107604.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21076.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21076/cutscene/2107604.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21076/cutscene/2107604.atlas"
  },
  {
   "id": "gw_1044",
@@ -297,19 +177,9 @@
   "iconPath": "src/assets/char_icons/herowall_1044.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1044_cutscene",
-  "charName": "Caesar",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1044/cutscene/104404.skel",
-  "atlasPath": "src/assets/spines/1044/cutscene/104404.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1044.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1044/cutscene/104404.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1044/cutscene/104404.atlas"
  },
  {
   "id": "gw_21044",
@@ -321,19 +191,9 @@
   "iconPath": "src/assets/char_icons/herowall_21044.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21044_cutscene",
-  "charName": "Caesar",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21044/cutscene/2104404.skel",
-  "atlasPath": "src/assets/spines/21044/cutscene/2104404.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21044.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21044/cutscene/2104404.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21044/cutscene/2104404.atlas"
  },
  {
   "id": "gw_31044",
@@ -345,19 +205,9 @@
   "iconPath": "src/assets/char_icons/herowall_31044.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31044_cutscene",
-  "charName": "Caesar",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31044/cutscene/3104404.skel",
-  "atlasPath": "src/assets/spines/31044/cutscene/3104404.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31044.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31044/cutscene/3104404.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31044/cutscene/3104404.atlas"
  },
  {
   "id": "gw_1060",
@@ -369,19 +219,9 @@
   "iconPath": "src/assets/char_icons/herowall_1060.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1060_cutscene",
-  "charName": "Cao Cao",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1060/cutscene/106004.skel",
-  "atlasPath": "src/assets/spines/1060/cutscene/106004.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1060.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1060/cutscene/106004.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1060/cutscene/106004.atlas"
  },
  {
   "id": "gw_1002",
@@ -393,19 +233,9 @@
   "iconPath": "src/assets/char_icons/herowall_1002.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1002_cutscene",
-  "charName": "Chacha",
-  "costumeName": "SR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1002/cutscene/100204.skel",
-  "atlasPath": "src/assets/spines/1002/cutscene/100204.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1002.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1002/cutscene/100204.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1002/cutscene/100204.atlas"
  },
  {
   "id": "gw_21070",
@@ -417,19 +247,9 @@
   "iconPath": "src/assets/char_icons/herowall_21070.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21070_cutscene",
-  "charName": "Charlemagne",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21070/cutscene/2107004.skel",
-  "atlasPath": "src/assets/spines/21070/cutscene/2107004.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21070.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21070/cutscene/2107004.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21070/cutscene/2107004.atlas"
  },
  {
   "id": "gw_31070",
@@ -441,19 +261,9 @@
   "iconPath": "src/assets/char_icons/herowall_31070.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31070_cutscene",
-  "charName": "Charlemagne",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31070/cutscene/3107004.skel",
-  "atlasPath": "src/assets/spines/31070/cutscene/3107004.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31070.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31070/cutscene/3107004.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31070/cutscene/3107004.atlas"
  },
  {
   "id": "gw_21072",
@@ -465,19 +275,9 @@
   "iconPath": "src/assets/char_icons/herowall_21072.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21072_cutscene",
-  "charName": "Chosokabe Motochika",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21072/cutscene/2107204.skel",
-  "atlasPath": "src/assets/spines/21072/cutscene/2107204.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21072.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21072/cutscene/2107204.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21072/cutscene/2107204.atlas"
  },
  {
   "id": "gw_31072",
@@ -489,19 +289,9 @@
   "iconPath": "src/assets/char_icons/herowall_31072.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31072_cutscene",
-  "charName": "Chosokabe Motochika",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31072/cutscene/3107204.skel",
-  "atlasPath": "src/assets/spines/31072/cutscene/3107204.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31072.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31072/cutscene/3107204.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31072/cutscene/3107204.atlas"
  },
  {
   "id": "gw_1049",
@@ -513,19 +303,9 @@
   "iconPath": "src/assets/char_icons/herowall_1049.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1049_cutscene",
-  "charName": "Christain",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1049/cutscene/104904.skel",
-  "atlasPath": "src/assets/spines/1049/cutscene/104904.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1049.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1049/cutscene/104904.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1049/cutscene/104904.atlas"
  },
  {
   "id": "gw_21049",
@@ -537,19 +317,9 @@
   "iconPath": "src/assets/char_icons/herowall_21049.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21049_cutscene",
-  "charName": "Christain",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21049/cutscene/2104904.skel",
-  "atlasPath": "src/assets/spines/21049/cutscene/2104904.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21049.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21049/cutscene/2104904.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21049/cutscene/2104904.atlas"
  },
  {
   "id": "gw_1040",
@@ -561,19 +331,9 @@
   "iconPath": "src/assets/char_icons/herowall_1040.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1040_cutscene",
-  "charName": "Cleopatra",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1040/cutscene/104004.skel",
-  "atlasPath": "src/assets/spines/1040/cutscene/104004.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1040.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1040/cutscene/104004.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1040/cutscene/104004.atlas"
  },
  {
   "id": "gw_1043",
@@ -585,19 +345,9 @@
   "iconPath": "src/assets/char_icons/herowall_1043.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1043_cutscene",
-  "charName": "Constantine",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1043/cutscene/104304.skel",
-  "atlasPath": "src/assets/spines/1043/cutscene/104304.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1043.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1043/cutscene/104304.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1043/cutscene/104304.atlas"
  },
  {
   "id": "gw_21043",
@@ -609,19 +359,9 @@
   "iconPath": "src/assets/char_icons/herowall_21043.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21043_cutscene",
-  "charName": "Constantine",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21043/cutscene/2104304.skel",
-  "atlasPath": "src/assets/spines/21043/cutscene/2104304.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21043.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21043/cutscene/2104304.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21043/cutscene/2104304.atlas"
  },
  {
   "id": "gw_21083",
@@ -633,19 +373,9 @@
   "iconPath": "src/assets/char_icons/herowall_21083.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21083_cutscene",
-  "charName": "Cu Chulainn",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21083/cutscene/2108304.skel",
-  "atlasPath": "src/assets/spines/21083/cutscene/2108304.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21083.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21083/cutscene/2108304.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21083/cutscene/2108304.atlas"
  },
  {
   "id": "gw_31107",
@@ -657,19 +387,9 @@
   "iconPath": "src/assets/char_icons/herowall_31107.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31107_cutscene",
-  "charName": "Dante",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31107/cutscene/3110704.skel",
-  "atlasPath": "src/assets/spines/31107/cutscene/3110704.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31107.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31107/cutscene/3110704.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31107/cutscene/3110704.atlas"
  },
  {
   "id": "gw_1025",
@@ -681,19 +401,9 @@
   "iconPath": "src/assets/char_icons/herowall_1025.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1025_cutscene",
-  "charName": "Date Masamune",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1025/cutscene/102504.skel",
-  "atlasPath": "src/assets/spines/1025/cutscene/102504.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1025.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1025/cutscene/102504.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1025/cutscene/102504.atlas"
  },
  {
   "id": "gw_21025",
@@ -705,19 +415,9 @@
   "iconPath": "src/assets/char_icons/herowall_21025.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21025_cutscene",
-  "charName": "Date Masamune",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21025/cutscene/2102504.skel",
-  "atlasPath": "src/assets/spines/21025/cutscene/2102504.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21025.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21025/cutscene/2102504.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21025/cutscene/2102504.atlas"
  },
  {
   "id": "gw_31025",
@@ -729,19 +429,9 @@
   "iconPath": "src/assets/char_icons/herowall_31025.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31025_cutscene",
-  "charName": "Date Masamune",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31025/cutscene/3102504.skel",
-  "atlasPath": "src/assets/spines/31025/cutscene/3102504.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31025.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31025/cutscene/3102504.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31025/cutscene/3102504.atlas"
  },
  {
   "id": "gw_1057",
@@ -753,19 +443,9 @@
   "iconPath": "src/assets/char_icons/herowall_1057.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1057_cutscene",
-  "charName": "Diaochan",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1057/cutscene/105704.skel",
-  "atlasPath": "src/assets/spines/1057/cutscene/105704.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1057.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1057/cutscene/105704.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1057/cutscene/105704.atlas"
  },
  {
   "id": "gw_31127",
@@ -777,19 +457,9 @@
   "iconPath": "src/assets/char_icons/herowall_31127.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31127_cutscene",
-  "charName": "Dong Zhuo",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31127/cutscene/3112704.skel",
-  "atlasPath": "src/assets/spines/31127/cutscene/3112704.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31127.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31127/cutscene/3112704.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31127/cutscene/3112704.atlas"
  },
  {
   "id": "gw_1033",
@@ -801,19 +471,9 @@
   "iconPath": "src/assets/char_icons/herowall_1033.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1033_cutscene",
-  "charName": "Elizabeth",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1033/cutscene/103304.skel",
-  "atlasPath": "src/assets/spines/1033/cutscene/103304.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1033.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1033/cutscene/103304.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1033/cutscene/103304.atlas"
  },
  {
   "id": "gw_1064",
@@ -825,19 +485,9 @@
   "iconPath": "src/assets/char_icons/herowall_1064.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1064_cutscene",
-  "charName": "Frankenstein",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1064/cutscene/106404.skel",
-  "atlasPath": "src/assets/spines/1064/cutscene/106404.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1064.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1064/cutscene/106404.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1064/cutscene/106404.atlas"
  },
  {
   "id": "gw_1036",
@@ -849,19 +499,9 @@
   "iconPath": "src/assets/char_icons/herowall_1036.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1036_cutscene",
-  "charName": "Friedrich",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1036/cutscene/103604.skel",
-  "atlasPath": "src/assets/spines/1036/cutscene/103604.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1036.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1036/cutscene/103604.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1036/cutscene/103604.atlas"
  },
  {
   "id": "gw_21079",
@@ -873,19 +513,9 @@
   "iconPath": "src/assets/char_icons/herowall_21079.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21079_cutscene",
-  "charName": "Gawain",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21079/cutscene/2107904.skel",
-  "atlasPath": "src/assets/spines/21079/cutscene/2107904.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21079.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21079/cutscene/2107904.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21079/cutscene/2107904.atlas"
  },
  {
   "id": "gw_31079",
@@ -897,19 +527,9 @@
   "iconPath": "src/assets/char_icons/herowall_31079.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31079_cutscene",
-  "charName": "Gawain",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31079/cutscene/3107904.skel",
-  "atlasPath": "src/assets/spines/31079/cutscene/3107904.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31079.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31079/cutscene/3107904.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31079/cutscene/3107904.atlas"
  },
  {
   "id": "gw_1052",
@@ -921,19 +541,9 @@
   "iconPath": "src/assets/char_icons/herowall_1052.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1052_cutscene",
-  "charName": "Ghengis Khan",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1052/cutscene/105204.skel",
-  "atlasPath": "src/assets/spines/1052/cutscene/105204.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1052.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1052/cutscene/105204.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1052/cutscene/105204.atlas"
  },
  {
   "id": "gw_21088",
@@ -945,19 +555,9 @@
   "iconPath": "src/assets/char_icons/herowall_21088.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21088_cutscene",
-  "charName": "Gilgamesh",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21088/cutscene/2108804.skel",
-  "atlasPath": "src/assets/spines/21088/cutscene/2108804.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21088.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21088/cutscene/2108804.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21088/cutscene/2108804.atlas"
  },
  {
   "id": "gw_1054",
@@ -969,19 +569,9 @@
   "iconPath": "src/assets/char_icons/herowall_1054.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1054_cutscene",
-  "charName": "Guan Yu",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1054/cutscene/105404.skel",
-  "atlasPath": "src/assets/spines/1054/cutscene/105404.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1054.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1054/cutscene/105404.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1054/cutscene/105404.atlas"
  },
  {
   "id": "gw_31120",
@@ -993,19 +583,9 @@
   "iconPath": "src/assets/char_icons/herowall_31120.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31120_cutscene",
-  "charName": "Hannibal Barca",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31120/cutscene/3112004.skel",
-  "atlasPath": "src/assets/spines/31120/cutscene/3112004.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31120.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31120/cutscene/3112004.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31120/cutscene/3112004.atlas"
  },
  {
   "id": "gw_1031",
@@ -1017,19 +597,9 @@
   "iconPath": "src/assets/char_icons/herowall_1031.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1031_cutscene",
-  "charName": "Hattori Hanzo",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1031/cutscene/103104.skel",
-  "atlasPath": "src/assets/spines/1031/cutscene/103104.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1031.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1031/cutscene/103104.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1031/cutscene/103104.atlas"
  },
  {
   "id": "gw_21085",
@@ -1041,19 +611,9 @@
   "iconPath": "src/assets/char_icons/herowall_21085.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21085_cutscene",
-  "charName": "Heracles",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21085/cutscene/2108504.skel",
-  "atlasPath": "src/assets/spines/21085/cutscene/2108504.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21085.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21085/cutscene/2108504.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21085/cutscene/2108504.atlas"
  },
  {
   "id": "gw_21084",
@@ -1065,19 +625,9 @@
   "iconPath": "src/assets/char_icons/herowall_21084.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21084_cutscene",
-  "charName": "Himiko",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21084/cutscene/2108404.skel",
-  "atlasPath": "src/assets/spines/21084/cutscene/2108404.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21084.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21084/cutscene/2108404.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21084/cutscene/2108404.atlas"
  },
  {
   "id": "gw_1013",
@@ -1089,19 +639,9 @@
   "iconPath": "src/assets/char_icons/herowall_1013.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1013_cutscene",
-  "charName": "Honda Komatsu",
-  "costumeName": "SR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1013/cutscene/101304.skel",
-  "atlasPath": "src/assets/spines/1013/cutscene/101304.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1013.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1013/cutscene/101304.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1013/cutscene/101304.atlas"
  },
  {
   "id": "gw_1020",
@@ -1113,19 +653,9 @@
   "iconPath": "src/assets/char_icons/herowall_1020.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1020_cutscene",
-  "charName": "Honda Tadakatsu",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1020/cutscene/102004.skel",
-  "atlasPath": "src/assets/spines/1020/cutscene/102004.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1020.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1020/cutscene/102004.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1020/cutscene/102004.atlas"
  },
  {
   "id": "gw_21090",
@@ -1137,19 +667,9 @@
   "iconPath": "src/assets/char_icons/herowall_21090.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21090_cutscene",
-  "charName": "Huang Zhong",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21090/cutscene/2109004.skel",
-  "atlasPath": "src/assets/spines/21090/cutscene/2109004.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21090.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21090/cutscene/2109004.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21090/cutscene/2109004.atlas"
  },
  {
   "id": "gw_1011",
@@ -1161,19 +681,9 @@
   "iconPath": "src/assets/char_icons/herowall_1011.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1011_cutscene",
-  "charName": "Imagawa Yoshimoto",
-  "costumeName": "SR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1011/cutscene/101104.skel",
-  "atlasPath": "src/assets/spines/1011/cutscene/101104.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1011.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1011/cutscene/101104.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1011/cutscene/101104.atlas"
  },
  {
   "id": "gw_1047",
@@ -1185,19 +695,9 @@
   "iconPath": "src/assets/char_icons/herowall_1047.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1047_cutscene",
-  "charName": "Ishida Mitsunari",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1047/cutscene/104704.skel",
-  "atlasPath": "src/assets/spines/1047/cutscene/104704.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1047.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1047/cutscene/104704.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1047/cutscene/104704.atlas"
  },
  {
   "id": "gw_1067",
@@ -1209,19 +709,9 @@
   "iconPath": "src/assets/char_icons/herowall_1067.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1067_cutscene",
-  "charName": "Joan of Arc",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1067/cutscene/106704.skel",
-  "atlasPath": "src/assets/spines/1067/cutscene/106704.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1067.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1067/cutscene/106704.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1067/cutscene/106704.atlas"
  },
  {
   "id": "gw_31105",
@@ -1233,19 +723,9 @@
   "iconPath": "src/assets/char_icons/herowall_31105.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31105_cutscene",
-  "charName": "Kamiizumi Nobutsuna",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31105/cutscene/3110504.skel",
-  "atlasPath": "src/assets/spines/31105/cutscene/3110504.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31105.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31105/cutscene/3110504.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31105/cutscene/3110504.atlas"
  },
  {
   "id": "gw_31126",
@@ -1257,19 +737,9 @@
   "iconPath": "src/assets/char_icons/herowall_31126.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31126_cutscene",
-  "charName": "Kashin Koji",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31126/cutscene/3112604.skel",
-  "atlasPath": "src/assets/spines/31126/cutscene/3112604.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31126.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31126/cutscene/3112604.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31126/cutscene/3112604.atlas"
  },
  {
   "id": "gw_1032",
@@ -1281,19 +751,9 @@
   "iconPath": "src/assets/char_icons/herowall_1032.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1032_cutscene",
-  "charName": "King Arthur",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1032/cutscene/103204.skel",
-  "atlasPath": "src/assets/spines/1032/cutscene/103204.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1032.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1032/cutscene/103204.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1032/cutscene/103204.atlas"
  },
  {
   "id": "gw_1045",
@@ -1305,19 +765,9 @@
   "iconPath": "src/assets/char_icons/herowall_1045.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1045_cutscene",
-  "charName": "Kobayakawa Hideaki",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1045/cutscene/104504.skel",
-  "atlasPath": "src/assets/spines/1045/cutscene/104504.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1045.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1045/cutscene/104504.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1045/cutscene/104504.atlas"
  },
  {
   "id": "gw_1003",
@@ -1329,19 +779,9 @@
   "iconPath": "src/assets/char_icons/herowall_1003.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1003_cutscene",
-  "charName": "Lancelot",
-  "costumeName": "SR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1003/cutscene/100304.skel",
-  "atlasPath": "src/assets/spines/1003/cutscene/100304.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1003.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1003/cutscene/100304.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1003/cutscene/100304.atlas"
  },
  {
   "id": "gw_31108",
@@ -1353,19 +793,9 @@
   "iconPath": "src/assets/char_icons/herowall_31108.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31108_cutscene",
-  "charName": "Leonardo Da Vinci",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31108/cutscene/3110804.skel",
-  "atlasPath": "src/assets/spines/31108/cutscene/3110804.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31108.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31108/cutscene/3110804.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31108/cutscene/3110804.atlas"
  },
  {
   "id": "gw_1046",
@@ -1377,19 +807,9 @@
   "iconPath": "src/assets/char_icons/herowall_1046.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1046_cutscene",
-  "charName": "Leonidas I",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1046/cutscene/104604.skel",
-  "atlasPath": "src/assets/spines/1046/cutscene/104604.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1046.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1046/cutscene/104604.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1046/cutscene/104604.atlas"
  },
  {
   "id": "gw_21104",
@@ -1401,19 +821,9 @@
   "iconPath": "src/assets/char_icons/herowall_21104.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21104_cutscene",
-  "charName": "Li Bai",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21104/cutscene/2110404.skel",
-  "atlasPath": "src/assets/spines/21104/cutscene/2110404.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21104.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21104/cutscene/2110404.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21104/cutscene/2110404.atlas"
  },
  {
   "id": "gw_31123",
@@ -1425,19 +835,9 @@
   "iconPath": "src/assets/char_icons/herowall_31123.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31123_cutscene",
-  "charName": "Liu Bang",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31123/cutscene/3112304.skel",
-  "atlasPath": "src/assets/spines/31123/cutscene/3112304.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31123.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31123/cutscene/3112304.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31123/cutscene/3112304.atlas"
  },
  {
   "id": "gw_21082",
@@ -1449,19 +849,9 @@
   "iconPath": "src/assets/char_icons/herowall_21082.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21082_cutscene",
-  "charName": "Liu Bei",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21082/cutscene/2108204.skel",
-  "atlasPath": "src/assets/spines/21082/cutscene/2108204.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21082.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21082/cutscene/2108204.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21082/cutscene/2108204.atlas"
  },
  {
   "id": "gw_1058",
@@ -1473,19 +863,9 @@
   "iconPath": "src/assets/char_icons/herowall_1058.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1058_cutscene",
-  "charName": "Lv Bu",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1058/cutscene/105804.skel",
-  "atlasPath": "src/assets/spines/1058/cutscene/105804.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1058.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1058/cutscene/105804.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1058/cutscene/105804.atlas"
  },
  {
   "id": "gw_21058",
@@ -1497,19 +877,9 @@
   "iconPath": "src/assets/char_icons/herowall_21058.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21058_cutscene",
-  "charName": "Lv Bu",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21058/cutscene/2105804.skel",
-  "atlasPath": "src/assets/spines/21058/cutscene/2105804.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21058.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21058/cutscene/2105804.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21058/cutscene/2105804.atlas"
  },
  {
   "id": "gw_21080",
@@ -1521,19 +891,9 @@
   "iconPath": "src/assets/char_icons/herowall_21080.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21080_cutscene",
-  "charName": "Ma Chao",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21080/cutscene/2108004.skel",
-  "atlasPath": "src/assets/spines/21080/cutscene/2108004.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21080.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21080/cutscene/2108004.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21080/cutscene/2108004.atlas"
  },
  {
   "id": "gw_1007",
@@ -1545,19 +905,9 @@
   "iconPath": "src/assets/char_icons/herowall_1007.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1007_cutscene",
-  "charName": "Maeda Keiji",
-  "costumeName": "SR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1007/cutscene/100704.skel",
-  "atlasPath": "src/assets/spines/1007/cutscene/100704.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1007.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1007/cutscene/100704.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1007/cutscene/100704.atlas"
  },
  {
   "id": "gw_1006",
@@ -1569,19 +919,9 @@
   "iconPath": "src/assets/char_icons/herowall_1006.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1006_cutscene",
-  "charName": "Maeda Toshiie",
-  "costumeName": "SR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1006/cutscene/100604.skel",
-  "atlasPath": "src/assets/spines/1006/cutscene/100604.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1006.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1006/cutscene/100604.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1006/cutscene/100604.atlas"
  },
  {
   "id": "gw_31130",
@@ -1593,19 +933,9 @@
   "iconPath": "src/assets/char_icons/herowall_31130.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31130_cutscene",
-  "charName": "Maeve",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31130/cutscene/3113004.skel",
-  "atlasPath": "src/assets/spines/31130/cutscene/3113004.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31130.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31130/cutscene/3113004.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31130/cutscene/3113004.atlas"
  },
  {
   "id": "gw_1068",
@@ -1617,19 +947,9 @@
   "iconPath": "src/assets/char_icons/herowall_1068.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1068_cutscene",
-  "charName": "Medea",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1068/cutscene/106804.skel",
-  "atlasPath": "src/assets/spines/1068/cutscene/106804.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1068.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1068/cutscene/106804.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1068/cutscene/106804.atlas"
  },
  {
   "id": "gw_21086",
@@ -1641,19 +961,9 @@
   "iconPath": "src/assets/char_icons/herowall_21086.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21086_cutscene",
-  "charName": "Mephisto",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21086/cutscene/2108604.skel",
-  "atlasPath": "src/assets/spines/21086/cutscene/2108604.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21086.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21086/cutscene/2108604.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21086/cutscene/2108604.atlas"
  },
  {
   "id": "gw_1039",
@@ -1665,19 +975,9 @@
   "iconPath": "src/assets/char_icons/herowall_1039.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1039_cutscene",
-  "charName": "Merlin",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1039/cutscene/103904.skel",
-  "atlasPath": "src/assets/spines/1039/cutscene/103904.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1039.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1039/cutscene/103904.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1039/cutscene/103904.atlas"
  },
  {
   "id": "gw_21039",
@@ -1689,19 +989,9 @@
   "iconPath": "src/assets/char_icons/herowall_21039.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21039_cutscene",
-  "charName": "Merlin",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21039/cutscene/2103904.skel",
-  "atlasPath": "src/assets/spines/21039/cutscene/2103904.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21039.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21039/cutscene/2103904.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21039/cutscene/2103904.atlas"
  },
  {
   "id": "gw_31115",
@@ -1713,19 +1003,9 @@
   "iconPath": "src/assets/char_icons/herowall_31115.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31115_cutscene",
-  "charName": "Minamoto no Yorimitsu",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31115/cutscene/3111504.skel",
-  "atlasPath": "src/assets/spines/31115/cutscene/3111504.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31115.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31115/cutscene/3111504.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31115/cutscene/3111504.atlas"
  },
  {
   "id": "gw_1024",
@@ -1737,19 +1017,9 @@
   "iconPath": "src/assets/char_icons/herowall_1024.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1024_cutscene",
-  "charName": "Minamoto no Yoshitsune",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1024/cutscene/102404.skel",
-  "atlasPath": "src/assets/spines/1024/cutscene/102404.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1024.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1024/cutscene/102404.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1024/cutscene/102404.atlas"
  },
  {
   "id": "gw_1055",
@@ -1761,19 +1031,9 @@
   "iconPath": "src/assets/char_icons/herowall_1055.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1055_cutscene",
-  "charName": "Miyamoto Musashi",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1055/cutscene/105504.skel",
-  "atlasPath": "src/assets/spines/1055/cutscene/105504.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1055.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1055/cutscene/105504.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1055/cutscene/105504.atlas"
  },
  {
   "id": "gw_1038",
@@ -1785,19 +1045,9 @@
   "iconPath": "src/assets/char_icons/herowall_1038.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1038_cutscene",
-  "charName": "Mordred",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1038/cutscene/103804.skel",
-  "atlasPath": "src/assets/spines/1038/cutscene/103804.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1038.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1038/cutscene/103804.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1038/cutscene/103804.atlas"
  },
  {
   "id": "gw_31119",
@@ -1809,19 +1059,9 @@
   "iconPath": "src/assets/char_icons/herowall_31119.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31119_cutscene",
-  "charName": "Morgan",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31119/cutscene/3111904.skel",
-  "atlasPath": "src/assets/spines/31119/cutscene/3111904.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31119.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31119/cutscene/3111904.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31119/cutscene/3111904.atlas"
  },
  {
   "id": "gw_1018",
@@ -1833,19 +1073,9 @@
   "iconPath": "src/assets/char_icons/herowall_1018.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1018_cutscene",
-  "charName": "Mori Motonari",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1018/cutscene/101804.skel",
-  "atlasPath": "src/assets/spines/1018/cutscene/101804.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1018.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1018/cutscene/101804.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1018/cutscene/101804.atlas"
  },
  {
   "id": "gw_1004",
@@ -1857,19 +1087,9 @@
   "iconPath": "src/assets/char_icons/herowall_1004.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1004_cutscene",
-  "charName": "Mori Ranmaru",
-  "costumeName": "SR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1004/cutscene/100404.skel",
-  "atlasPath": "src/assets/spines/1004/cutscene/100404.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1004.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1004/cutscene/100404.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1004/cutscene/100404.atlas"
  },
  {
   "id": "gw_1028",
@@ -1881,19 +1101,9 @@
   "iconPath": "src/assets/char_icons/herowall_1028.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1028_cutscene",
-  "charName": "Musashibo Benkei",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1028/cutscene/102804.skel",
-  "atlasPath": "src/assets/spines/1028/cutscene/102804.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1028.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1028/cutscene/102804.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1028/cutscene/102804.atlas"
  },
  {
   "id": "gw_1014",
@@ -1905,19 +1115,9 @@
   "iconPath": "src/assets/char_icons/herowall_1014.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1014_cutscene",
-  "charName": "Naoe Kanetsugu",
-  "costumeName": "SR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1014/cutscene/101404.skel",
-  "atlasPath": "src/assets/spines/1014/cutscene/101404.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1014.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1014/cutscene/101404.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1014/cutscene/101404.atlas"
  },
  {
   "id": "gw_1017",
@@ -1929,19 +1129,9 @@
   "iconPath": "src/assets/char_icons/herowall_1017.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1017_cutscene",
-  "charName": "Napoleon",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1017/cutscene/101704.skel",
-  "atlasPath": "src/assets/spines/1017/cutscene/101704.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1017.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1017/cutscene/101704.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1017/cutscene/101704.atlas"
  },
  {
   "id": "gw_1005",
@@ -1953,19 +1143,9 @@
   "iconPath": "src/assets/char_icons/herowall_1005.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1005_cutscene",
-  "charName": "Nene",
-  "costumeName": "SR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1005/cutscene/100504.skel",
-  "atlasPath": "src/assets/spines/1005/cutscene/100504.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1005.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1005/cutscene/100504.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1005/cutscene/100504.atlas"
  },
  {
   "id": "gw_21087",
@@ -1977,19 +1157,9 @@
   "iconPath": "src/assets/char_icons/herowall_21087.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21087_cutscene",
-  "charName": "Nero Claudius",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21087/cutscene/2108704.skel",
-  "atlasPath": "src/assets/spines/21087/cutscene/2108704.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21087.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21087/cutscene/2108704.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21087/cutscene/2108704.atlas"
  },
  {
   "id": "gw_31121",
@@ -2001,19 +1171,9 @@
   "iconPath": "src/assets/char_icons/herowall_31121.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31121_cutscene",
-  "charName": "Oberon",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31121/cutscene/3112104.skel",
-  "atlasPath": "src/assets/spines/31121/cutscene/3112104.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31121.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31121/cutscene/3112104.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31121/cutscene/3112104.atlas"
  },
  {
   "id": "gw_1016",
@@ -2025,19 +1185,9 @@
   "iconPath": "src/assets/char_icons/herowall_1016.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1016_cutscene",
-  "charName": "Oda Nobunaga",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1016/cutscene/101604.skel",
-  "atlasPath": "src/assets/spines/1016/cutscene/101604.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1016.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1016/cutscene/101604.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1016/cutscene/101604.atlas"
  },
  {
   "id": "gw_31116",
@@ -2049,19 +1199,9 @@
   "iconPath": "src/assets/char_icons/herowall_31116.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31116_cutscene",
-  "charName": "Odysseus",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31116/cutscene/3111604.skel",
-  "atlasPath": "src/assets/spines/31116/cutscene/3111604.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31116.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31116/cutscene/3111604.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31116/cutscene/3111604.atlas"
  },
  {
   "id": "gw_1048",
@@ -2073,19 +1213,9 @@
   "iconPath": "src/assets/char_icons/herowall_1048.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1048_cutscene",
-  "charName": "Okita Soji",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1048/cutscene/104804.skel",
-  "atlasPath": "src/assets/spines/1048/cutscene/104804.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1048.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1048/cutscene/104804.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1048/cutscene/104804.atlas"
  },
  {
   "id": "gw_21048",
@@ -2097,19 +1227,9 @@
   "iconPath": "src/assets/char_icons/herowall_21048.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21048_cutscene",
-  "charName": "Okita Soji",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21048/cutscene/2104804.skel",
-  "atlasPath": "src/assets/spines/21048/cutscene/2104804.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21048.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21048/cutscene/2104804.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21048/cutscene/2104804.atlas"
  },
  {
   "id": "gw_31109",
@@ -2121,19 +1241,9 @@
   "iconPath": "src/assets/char_icons/herowall_31109.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31109_cutscene",
-  "charName": "Orion",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31109/cutscene/3110904.skel",
-  "atlasPath": "src/assets/spines/31109/cutscene/3110904.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31109.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31109/cutscene/3110904.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31109/cutscene/3110904.atlas"
  },
  {
   "id": "gw_31128",
@@ -2145,19 +1255,9 @@
   "iconPath": "src/assets/char_icons/herowall_31128.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31128_cutscene",
-  "charName": "Ozymandias",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31128/cutscene/3112804.skel",
-  "atlasPath": "src/assets/spines/31128/cutscene/3112804.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31128.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31128/cutscene/3112804.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31128/cutscene/3112804.atlas"
  },
  {
   "id": "gw_31106",
@@ -2169,19 +1269,9 @@
   "iconPath": "src/assets/char_icons/herowall_31106.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31106_cutscene",
-  "charName": "Perseus",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31106/cutscene/3110604.skel",
-  "atlasPath": "src/assets/spines/31106/cutscene/3110604.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31106.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31106/cutscene/3110604.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31106/cutscene/3110604.atlas"
  },
  {
   "id": "gw_31124",
@@ -2193,19 +1283,9 @@
   "iconPath": "src/assets/char_icons/herowall_31124.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31124_cutscene",
-  "charName": "Richard",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31124/cutscene/3112404.skel",
-  "atlasPath": "src/assets/spines/31124/cutscene/3112404.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31124.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31124/cutscene/3112404.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31124/cutscene/3112404.atlas"
  },
  {
   "id": "gw_91001",
@@ -2229,19 +1309,9 @@
   "iconPath": "src/assets/char_icons/herowall_31129.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31129_cutscene",
-  "charName": "Roland",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31129/cutscene/3112904.skel",
-  "atlasPath": "src/assets/spines/31129/cutscene/3112904.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31129.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31129/cutscene/3112904.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31129/cutscene/3112904.atlas"
  },
  {
   "id": "gw_31113",
@@ -2253,19 +1323,9 @@
   "iconPath": "src/assets/char_icons/herowall_31113.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31113_cutscene",
-  "charName": "Romulus",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31113/cutscene/3111304.skel",
-  "atlasPath": "src/assets/spines/31113/cutscene/3111304.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31113.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31113/cutscene/3111304.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31113/cutscene/3111304.atlas"
  },
  {
   "id": "gw_1029",
@@ -2277,19 +1337,9 @@
   "iconPath": "src/assets/char_icons/herowall_1029.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1029_cutscene",
-  "charName": "Saito Kichou",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1029/cutscene/102904.skel",
-  "atlasPath": "src/assets/spines/1029/cutscene/102904.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1029.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1029/cutscene/102904.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1029/cutscene/102904.atlas"
  },
  {
   "id": "gw_21029",
@@ -2301,19 +1351,9 @@
   "iconPath": "src/assets/char_icons/herowall_21029.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21029_cutscene",
-  "charName": "Saito Kichou",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21029/cutscene/2102904.skel",
-  "atlasPath": "src/assets/spines/21029/cutscene/2102904.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21029.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21029/cutscene/2102904.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21029/cutscene/2102904.atlas"
  },
  {
   "id": "gw_1050",
@@ -2325,19 +1365,9 @@
   "iconPath": "src/assets/char_icons/herowall_1050.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1050_cutscene",
-  "charName": "Sakamoto Ryoma",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1050/cutscene/105004.skel",
-  "atlasPath": "src/assets/spines/1050/cutscene/105004.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1050.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1050/cutscene/105004.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1050/cutscene/105004.atlas"
  },
  {
   "id": "gw_21089",
@@ -2349,19 +1379,9 @@
   "iconPath": "src/assets/char_icons/herowall_21089.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21089_cutscene",
-  "charName": "Sakata Kintoki",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21089/cutscene/2108904.skel",
-  "atlasPath": "src/assets/spines/21089/cutscene/2108904.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21089.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21089/cutscene/2108904.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21089/cutscene/2108904.atlas"
  },
  {
   "id": "gw_1012",
@@ -2373,19 +1393,9 @@
   "iconPath": "src/assets/char_icons/herowall_1012.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1012_cutscene",
-  "charName": "Sanada Yukimura",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1012/cutscene/101204.skel",
-  "atlasPath": "src/assets/spines/1012/cutscene/101204.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1012.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1012/cutscene/101204.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1012/cutscene/101204.atlas"
  },
  {
   "id": "gw_21012",
@@ -2397,19 +1407,9 @@
   "iconPath": "src/assets/char_icons/herowall_21012.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21012_cutscene",
-  "charName": "Sanada Yukimura",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21012/cutscene/2101204.skel",
-  "atlasPath": "src/assets/spines/21012/cutscene/2101204.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21012.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21012/cutscene/2101204.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21012/cutscene/2101204.atlas"
  },
  {
   "id": "gw_31012",
@@ -2421,19 +1421,9 @@
   "iconPath": "src/assets/char_icons/herowall_31012.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31012_cutscene",
-  "charName": "Sanada Yukimura",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31012/cutscene/3101204.skel",
-  "atlasPath": "src/assets/spines/31012/cutscene/3101204.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31012.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31012/cutscene/3101204.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31012/cutscene/3101204.atlas"
  },
  {
   "id": "gw_31117",
@@ -2445,19 +1435,9 @@
   "iconPath": "src/assets/char_icons/herowall_31117.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31117_cutscene",
-  "charName": "Sanzang",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31117/cutscene/3111704.skel",
-  "atlasPath": "src/assets/spines/31117/cutscene/3111704.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31117.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31117/cutscene/3111704.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31117/cutscene/3111704.atlas"
  },
  {
   "id": "gw_1009",
@@ -2469,19 +1449,9 @@
   "iconPath": "src/assets/char_icons/herowall_1009.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1009_cutscene",
-  "charName": "Sarutobi Sasuke",
-  "costumeName": "SR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1009/cutscene/100904.skel",
-  "atlasPath": "src/assets/spines/1009/cutscene/100904.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1009.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1009/cutscene/100904.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1009/cutscene/100904.atlas"
  },
  {
   "id": "gw_1056",
@@ -2493,19 +1463,9 @@
   "iconPath": "src/assets/char_icons/herowall_1056.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1056_cutscene",
-  "charName": "Sasaki Kojiro",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1056/cutscene/105604.skel",
-  "atlasPath": "src/assets/spines/1056/cutscene/105604.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1056.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1056/cutscene/105604.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1056/cutscene/105604.atlas"
  },
  {
   "id": "gw_31114",
@@ -2517,19 +1477,9 @@
   "iconPath": "src/assets/char_icons/herowall_31114.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31114_cutscene",
-  "charName": "Scathach",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31114/cutscene/3111404.skel",
-  "atlasPath": "src/assets/spines/31114/cutscene/3111404.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31114.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31114/cutscene/3111404.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31114/cutscene/3111404.atlas"
  },
  {
   "id": "gw_1010",
@@ -2541,19 +1491,9 @@
   "iconPath": "src/assets/char_icons/herowall_1010.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1010_cutscene",
-  "charName": "Shamiram",
-  "costumeName": "SR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1010/cutscene/101004.skel",
-  "atlasPath": "src/assets/spines/1010/cutscene/101004.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1010.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1010/cutscene/101004.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1010/cutscene/101004.atlas"
  },
  {
   "id": "gw_1063",
@@ -2565,19 +1505,9 @@
   "iconPath": "src/assets/char_icons/herowall_1063.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1063_cutscene",
-  "charName": "Shizuka Gozen",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1063/cutscene/106304.skel",
-  "atlasPath": "src/assets/spines/1063/cutscene/106304.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1063.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1063/cutscene/106304.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1063/cutscene/106304.atlas"
  },
  {
   "id": "gw_1042",
@@ -2589,19 +1519,9 @@
   "iconPath": "src/assets/char_icons/herowall_1042.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1042_cutscene",
-  "charName": "Siegfried",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1042/cutscene/104204.skel",
-  "atlasPath": "src/assets/spines/1042/cutscene/104204.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1042.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1042/cutscene/104204.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1042/cutscene/104204.atlas"
  },
  {
   "id": "gw_21077",
@@ -2613,19 +1533,9 @@
   "iconPath": "src/assets/char_icons/herowall_21077.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21077_cutscene",
-  "charName": "Solomon",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21077/cutscene/2107704.skel",
-  "atlasPath": "src/assets/spines/21077/cutscene/2107704.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21077.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21077/cutscene/2107704.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21077/cutscene/2107704.atlas"
  },
  {
   "id": "gw_31077",
@@ -2637,19 +1547,9 @@
   "iconPath": "src/assets/char_icons/herowall_31077.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31077_cutscene",
-  "charName": "Solomon",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31077/cutscene/3107704.skel",
-  "atlasPath": "src/assets/spines/31077/cutscene/3107704.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31077.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31077/cutscene/3107704.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31077/cutscene/3107704.atlas"
  },
  {
   "id": "gw_1027",
@@ -2661,19 +1561,9 @@
   "iconPath": "src/assets/char_icons/herowall_1027.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1027_cutscene",
-  "charName": "Tachibana Dosetsu",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1027/cutscene/102704.skel",
-  "atlasPath": "src/assets/spines/1027/cutscene/102704.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1027.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1027/cutscene/102704.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1027/cutscene/102704.atlas"
  },
  {
   "id": "gw_1026",
@@ -2685,19 +1575,9 @@
   "iconPath": "src/assets/char_icons/herowall_1026.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1026_cutscene",
-  "charName": "Tachibana Ginchiyo",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1026/cutscene/102604.skel",
-  "atlasPath": "src/assets/spines/1026/cutscene/102604.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1026.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1026/cutscene/102604.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1026/cutscene/102604.atlas"
  },
  {
   "id": "gw_1059",
@@ -2709,19 +1589,9 @@
   "iconPath": "src/assets/char_icons/herowall_1059.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1059_cutscene",
-  "charName": "Tachibana Muneshige",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1059/cutscene/105904.skel",
-  "atlasPath": "src/assets/spines/1059/cutscene/105904.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1059.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1059/cutscene/105904.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1059/cutscene/105904.atlas"
  },
  {
   "id": "gw_1030",
@@ -2733,19 +1603,9 @@
   "iconPath": "src/assets/char_icons/herowall_1030.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1030_cutscene",
-  "charName": "Taira no Kiyomori",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1030/cutscene/103004.skel",
-  "atlasPath": "src/assets/spines/1030/cutscene/103004.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1030.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1030/cutscene/103004.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1030/cutscene/103004.atlas"
  },
  {
   "id": "gw_1021",
@@ -2757,19 +1617,9 @@
   "iconPath": "src/assets/char_icons/herowall_1021.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1021_cutscene",
-  "charName": "Takeda Shingen",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1021/cutscene/102104.skel",
-  "atlasPath": "src/assets/spines/1021/cutscene/102104.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1021.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1021/cutscene/102104.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1021/cutscene/102104.atlas"
  },
  {
   "id": "gw_1051",
@@ -2781,19 +1631,9 @@
   "iconPath": "src/assets/char_icons/herowall_1051.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1051_cutscene",
-  "charName": "Takenaka Hanbei",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1051/cutscene/105104.skel",
-  "atlasPath": "src/assets/spines/1051/cutscene/105104.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1051.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1051/cutscene/105104.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1051/cutscene/105104.atlas"
  },
  {
   "id": "gw_31103",
@@ -2805,19 +1645,9 @@
   "iconPath": "src/assets/char_icons/herowall_31103.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31103_cutscene",
-  "charName": "Tamamo no Mae",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31103/cutscene/3110304.skel",
-  "atlasPath": "src/assets/spines/31103/cutscene/3110304.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31103.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31103/cutscene/3110304.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31103/cutscene/3110304.atlas"
  },
  {
   "id": "gw_1099",
@@ -2829,19 +1659,9 @@
   "iconPath": "src/assets/char_icons/herowall_1099.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1099_cutscene",
-  "charName": "Tokisaki Kurumi",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1099/cutscene/109904.skel",
-  "atlasPath": "src/assets/spines/1099/cutscene/109904.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1099.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1099/cutscene/109904.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1099/cutscene/109904.atlas"
  },
  {
   "id": "gw_1023",
@@ -2853,19 +1673,9 @@
   "iconPath": "src/assets/char_icons/herowall_1023.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1023_cutscene",
-  "charName": "Tokugawa Ieyasu",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1023/cutscene/102304.skel",
-  "atlasPath": "src/assets/spines/1023/cutscene/102304.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1023.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1023/cutscene/102304.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1023/cutscene/102304.atlas"
  },
  {
   "id": "gw_21078",
@@ -2877,19 +1687,9 @@
   "iconPath": "src/assets/char_icons/herowall_21078.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21078_cutscene",
-  "charName": "Tomoe Gozen",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21078/cutscene/2107804.skel",
-  "atlasPath": "src/assets/spines/21078/cutscene/2107804.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21078.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21078/cutscene/2107804.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21078/cutscene/2107804.atlas"
  },
  {
   "id": "gw_1053",
@@ -2901,19 +1701,9 @@
   "iconPath": "src/assets/char_icons/herowall_1053.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1053_cutscene",
-  "charName": "Toyotomi Hideyoshi",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1053/cutscene/105304.skel",
-  "atlasPath": "src/assets/spines/1053/cutscene/105304.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1053.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1053/cutscene/105304.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1053/cutscene/105304.atlas"
  },
  {
   "id": "gw_31118",
@@ -2925,19 +1715,9 @@
   "iconPath": "src/assets/char_icons/herowall_31118.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31118_cutscene",
-  "charName": "Tsukahara Bokuden",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31118/cutscene/3111804.skel",
-  "atlasPath": "src/assets/spines/31118/cutscene/3111804.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31118.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31118/cutscene/3111804.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31118/cutscene/3111804.atlas"
  },
  {
   "id": "gw_1001",
@@ -2949,19 +1729,9 @@
   "iconPath": "src/assets/char_icons/herowall_1001.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1001_cutscene",
-  "charName": "Tsurihime",
-  "costumeName": "SR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1001/cutscene/100104.skel",
-  "atlasPath": "src/assets/spines/1001/cutscene/100104.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1001.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1001/cutscene/100104.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1001/cutscene/100104.atlas"
  },
  {
   "id": "gw_1022",
@@ -2973,19 +1743,9 @@
   "iconPath": "src/assets/char_icons/herowall_1022.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1022_cutscene",
-  "charName": "Uesugi Kenshin",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1022/cutscene/102204.skel",
-  "atlasPath": "src/assets/spines/1022/cutscene/102204.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1022.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1022/cutscene/102204.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1022/cutscene/102204.atlas"
  },
  {
   "id": "gw_31111",
@@ -2997,19 +1757,9 @@
   "iconPath": "src/assets/char_icons/herowall_31111.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31111_cutscene",
-  "charName": "Xiang Yu",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31111/cutscene/3111104.skel",
-  "atlasPath": "src/assets/spines/31111/cutscene/3111104.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31111.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31111/cutscene/3111104.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31111/cutscene/3111104.atlas"
  },
  {
   "id": "gw_31122",
@@ -3021,19 +1771,9 @@
   "iconPath": "src/assets/char_icons/herowall_31122.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31122_cutscene",
-  "charName": "Yagyu Jubei",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31122/cutscene/3112204.skel",
-  "atlasPath": "src/assets/spines/31122/cutscene/3112204.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31122.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31122/cutscene/3112204.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31122/cutscene/3112204.atlas"
  },
  {
   "id": "gw_31125",
@@ -3045,19 +1785,9 @@
   "iconPath": "src/assets/char_icons/herowall_31125.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31125_cutscene",
-  "charName": "Yamato Takeru",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31125/cutscene/3112504.skel",
-  "atlasPath": "src/assets/spines/31125/cutscene/3112504.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31125.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31125/cutscene/3112504.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31125/cutscene/3112504.atlas"
  },
  {
   "id": "gw_31110",
@@ -3069,19 +1799,9 @@
   "iconPath": "src/assets/char_icons/herowall_31110.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31110_cutscene",
-  "charName": "Yao Bikuni",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31110/cutscene/3111004.skel",
-  "atlasPath": "src/assets/spines/31110/cutscene/3111004.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31110.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31110/cutscene/3111004.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31110/cutscene/3111004.atlas"
  },
  {
   "id": "gw_1098",
@@ -3093,19 +1813,9 @@
   "iconPath": "src/assets/char_icons/herowall_1098.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1098_cutscene",
-  "charName": "Yatogami Tohka",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1098/cutscene/109804.skel",
-  "atlasPath": "src/assets/spines/1098/cutscene/109804.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1098.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1098/cutscene/109804.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1098/cutscene/109804.atlas"
  },
  {
   "id": "gw_1015",
@@ -3117,19 +1827,9 @@
   "iconPath": "src/assets/char_icons/herowall_1015.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1015_cutscene",
-  "charName": "Yekaterina",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1015/cutscene/101504.skel",
-  "atlasPath": "src/assets/spines/1015/cutscene/101504.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1015.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1015/cutscene/101504.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1015/cutscene/101504.atlas"
  },
  {
   "id": "gw_21015",
@@ -3141,19 +1841,9 @@
   "iconPath": "src/assets/char_icons/herowall_21015.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21015_cutscene",
-  "charName": "Yekaterina",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21015/cutscene/2101504.skel",
-  "atlasPath": "src/assets/spines/21015/cutscene/2101504.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21015.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21015/cutscene/2101504.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21015/cutscene/2101504.atlas"
  },
  {
   "id": "gw_31015",
@@ -3165,19 +1855,9 @@
   "iconPath": "src/assets/char_icons/herowall_31015.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31015_cutscene",
-  "charName": "Yekaterina",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31015/cutscene/3101504.skel",
-  "atlasPath": "src/assets/spines/31015/cutscene/3101504.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31015.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31015/cutscene/3101504.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31015/cutscene/3101504.atlas"
  },
  {
   "id": "gw_1065",
@@ -3189,19 +1869,9 @@
   "iconPath": "src/assets/char_icons/herowall_1065.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1065_cutscene",
-  "charName": "Ying Zheng",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1065/cutscene/106504.skel",
-  "atlasPath": "src/assets/spines/1065/cutscene/106504.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1065.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1065/cutscene/106504.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1065/cutscene/106504.atlas"
  },
  {
   "id": "gw_21075",
@@ -3213,19 +1883,9 @@
   "iconPath": "src/assets/char_icons/herowall_21075.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21075_cutscene",
-  "charName": "Yuki Onna",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21075/cutscene/2107504.skel",
-  "atlasPath": "src/assets/spines/21075/cutscene/2107504.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21075.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21075/cutscene/2107504.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21075/cutscene/2107504.atlas"
  },
  {
   "id": "gw_1066",
@@ -3237,19 +1897,9 @@
   "iconPath": "src/assets/char_icons/herowall_1066.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1066_cutscene",
-  "charName": "Zhang Fei",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1066/cutscene/106604.skel",
-  "atlasPath": "src/assets/spines/1066/cutscene/106604.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1066.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1066/cutscene/106604.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1066/cutscene/106604.atlas"
  },
  {
   "id": "gw_1041",
@@ -3261,19 +1911,9 @@
   "iconPath": "src/assets/char_icons/herowall_1041.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1041_cutscene",
-  "charName": "Zhao Zilong",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1041/cutscene/104104.skel",
-  "atlasPath": "src/assets/spines/1041/cutscene/104104.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1041.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1041/cutscene/104104.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1041/cutscene/104104.atlas"
  },
  {
   "id": "gw_21041",
@@ -3285,19 +1925,9 @@
   "iconPath": "src/assets/char_icons/herowall_21041.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_21041_cutscene",
-  "charName": "Zhao Zilong",
-  "costumeName": "UR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/21041/cutscene/2104104.skel",
-  "atlasPath": "src/assets/spines/21041/cutscene/2104104.atlas",
-  "iconPath": "src/assets/char_icons/herowall_21041.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/21041/cutscene/2104104.skel",
+  "cutsceneAtlasPath": "src/assets/spines/21041/cutscene/2104104.atlas"
  },
  {
   "id": "gw_31041",
@@ -3309,19 +1939,9 @@
   "iconPath": "src/assets/char_icons/herowall_31041.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_31041_cutscene",
-  "charName": "Zhao Zilong",
-  "costumeName": "UR EX · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/31041/cutscene/3104104.skel",
-  "atlasPath": "src/assets/spines/31041/cutscene/3104104.atlas",
-  "iconPath": "src/assets/char_icons/herowall_31041.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/31041/cutscene/3104104.skel",
+  "cutsceneAtlasPath": "src/assets/spines/31041/cutscene/3104104.atlas"
  },
  {
   "id": "gw_1035",
@@ -3333,19 +1953,9 @@
   "iconPath": "src/assets/char_icons/herowall_1035.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1035_cutscene",
-  "charName": "Zhou Yu",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1035/cutscene/103504.skel",
-  "atlasPath": "src/assets/spines/1035/cutscene/103504.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1035.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1035/cutscene/103504.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1035/cutscene/103504.atlas"
  },
  {
   "id": "gw_1037",
@@ -3357,18 +1967,8 @@
   "iconPath": "src/assets/char_icons/herowall_1037.png",
   "spineVersion": "4.0",
   "kind": "standing",
-  "named": true
- },
- {
-  "id": "gw_1037_cutscene",
-  "charName": "Zhuge Kongming",
-  "costumeName": "SSR · Cutscene",
-  "modelType": "cutscene",
-  "jsonPath": "src/assets/spines/1037/cutscene/103704.skel",
-  "atlasPath": "src/assets/spines/1037/cutscene/103704.atlas",
-  "iconPath": "src/assets/char_icons/herowall_1037.png",
-  "spineVersion": "4.0",
-  "kind": "cutscene",
-  "named": true
+  "named": true,
+  "cutsceneJsonPath": "src/assets/spines/1037/cutscene/103704.skel",
+  "cutsceneAtlasPath": "src/assets/spines/1037/cutscene/103704.atlas"
  }
 ]

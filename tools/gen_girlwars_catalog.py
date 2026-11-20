@@ -52,6 +52,7 @@ def main():
     files = {item["path"] for item in tree_data["tree"] if item.get("type") == "blob"}
 
     entries = []
+    standing_entries = {}
     skipped = Counter()
 
     def add_model(character_id, metadata, stem, is_cutscene):
@@ -66,20 +67,31 @@ def main():
             skipped["incomplete_cutscene" if is_cutscene else "incomplete_standing"] += 1
             return
 
+        if is_cutscene:
+            standing = standing_entries.get(character_id)
+            if standing is None:
+                skipped["cutscene_without_standing"] += 1
+                return
+            standing["cutsceneJsonPath"] = skeleton
+            standing["cutsceneAtlasPath"] = atlas
+            return
+
         portrait = f"src/assets/char_icons/herowall_{character_id}.png"
         icon = portrait if portrait in files else texture
-        entries.append({
-            "id": f"gw_{character_id}_cutscene" if is_cutscene else f"gw_{character_id}",
+        entry = {
+            "id": f"gw_{character_id}",
             "charName": metadata["charName"],
-            "costumeName": metadata["costumeName"] + (" · Cutscene" if is_cutscene else ""),
-            "modelType": "cutscene" if is_cutscene else "skin",
+            "costumeName": metadata["costumeName"],
+            "modelType": "skin",
             "jsonPath": skeleton,
             "atlasPath": atlas,
             "iconPath": icon,
             "spineVersion": "4.0",
-            "kind": "cutscene" if is_cutscene else "standing",
+            "kind": "standing",
             "named": True,
-        })
+        }
+        entries.append(entry)
+        standing_entries[character_id] = entry
 
     for character_id, metadata in manifest.items():
         if not metadata.get("charName") or not metadata.get("spine"):
@@ -93,6 +105,7 @@ def main():
     OUT.write_text(json.dumps(entries, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"Wrote {len(entries)} verified models to {OUT.relative_to(ROOT)}")
     print("Kinds:", dict(Counter(item["kind"] for item in entries)))
+    print("Linked cutscenes:", sum("cutsceneJsonPath" in item for item in entries))
     print("Portrait-backed entries:", sum("/char_icons/" in item["iconPath"] for item in entries))
     print("Named entries:", sum(bool(item["charName"]) for item in entries))
     print("Skipped:", dict(skipped))

@@ -41,6 +41,8 @@ export interface BD2Character extends BD2CharacterRaw {
   coverSpine?: string;
   skeletonUrl?: string;
   atlasUrl?: string;
+  cutsceneSkeletonUrl?: string;
+  cutsceneAtlasUrl?: string;
   skeletonFormat?: 'skel' | 'json';
   spineVersion?: string;
   /** Live2D model settings: .model.json for Cubism 2 or .model3.json for Cubism 4. */

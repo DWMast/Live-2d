@@ -36,7 +36,8 @@ export const CharacterDrawer: React.FC<CharacterDrawerProps> = ({
   const isDaiCore = activeGame === 'daicore';
   const isHaze = activeGame === 'hazereverb';
   const isAzurLane = activeGame === 'azurlane';
-
+  const isGirlWars = activeGame === 'girlwars';
+  const hasModelCategories = isBd2 || isGirlWars;
   const [searchTerm, setSearchTerm] = useState('');
   const [filterType, setFilterType] = useState<FilterOption>('all');
   const [sortOrder, setSortOrder] = useState<'newest' | 'oldest'>('newest');
@@ -273,7 +274,7 @@ export const CharacterDrawer: React.FC<CharacterDrawerProps> = ({
           </div>
         </span>
 
-        {isBd2 ? (
+        {hasModelCategories ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5 text-xs font-semibold">
             <button
               onClick={() => onSelectCategory('character')}
@@ -389,7 +390,7 @@ export const CharacterDrawer: React.FC<CharacterDrawerProps> = ({
                         {char.charName.slice(0, 2).toUpperCase()}
                       </div>
                     )}
-                    {isBd2 && char.hasCutscene && (
+                    {hasModelCategories && char.hasCutscene && (
                       <span className="absolute bottom-0 right-0 p-0.5 bg-sky-600 rounded-tl text-[8px] text-white">
                         <Film className="w-2.5 h-2.5" />
                       </span>
@@ -424,10 +425,10 @@ export const CharacterDrawer: React.FC<CharacterDrawerProps> = ({
                     <p className="text-[11px] text-slate-300 truncate">{char.costumeName}</p>
                     <div className="flex items-center gap-2 mt-0.5 text-[10px] text-slate-400 truncate">
                       <span className="font-mono text-slate-500">#{char.id}</span>
-                      {isBd2 ? (
+                      {hasModelCategories ? (
                         <>
                           {(char.hasCutscene || char.hasDating) && <span>·</span>}
-                          {char.hasCutscene && <span className="text-sky-400">Skill Cutscene</span>}
+                          {char.hasCutscene && <span className="text-sky-400">{isBd2 ? 'Skill Cutscene' : 'Cutscene'}</span>}
                           {char.hasCutscene && char.hasDating && <span>·</span>}
                           {char.hasDating && <span className="text-pink-400">Dating Scene</span>}
                         </>

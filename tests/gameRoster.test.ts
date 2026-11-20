@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { loadGameRoster } from '../src/utils/bd2Assets.ts';
+import { getSpineModelUrls, loadGameRoster } from '../src/utils/bd2Assets.ts';
 import type { GameId } from '../src/types/bd2.ts';
 
 const games: GameId[] = ['destinychild', 'girlssymphony', 'azurlane', 'echocalypse', 'girlwars', 'love3'];
@@ -46,9 +46,25 @@ test('external game catalogs map to complete playable roster entries', async (t)
   }
 
   const girlWars = await loadGameRoster('girlwars');
-  assert.equal(girlWars.length, 281);
-  assert.equal(girlWars.filter((entry) => entry.modelType === 'cutscene').length, 140);
+  assert.equal(girlWars.length, 141);
+  assert.equal(girlWars.filter((entry) => entry.modelType === 'cutscene').length, 0);
+  assert.equal(girlWars.filter((entry) => entry.hasCutscene).length, 140);
   assert.ok(girlWars.every((entry) => entry.iconUrl && entry.spineVersion === '4.0'));
+
+  const tsurihime = girlWars.find((entry) => entry.id === 'gw_1001');
+  assert.ok(tsurihime?.hasCutscene);
+  const standing = getSpineModelUrls(tsurihime, 'character');
+  const cutscene = getSpineModelUrls(tsurihime, 'cutscene');
+  assert.notEqual(cutscene.skeletonUrl, standing.skeletonUrl);
+  assert.notEqual(cutscene.atlasUrl, standing.atlasUrl);
+  assert.match(cutscene.skeletonUrl, /\/cutscene\//);
+  assert.equal(cutscene.isJson, false);
+  assert.ok(girlWars.every((entry) => getSpineModelUrls(entry, 'character').skeletonUrl));
+  assert.ok(
+    girlWars.every((entry) =>
+      !entry.hasCutscene || getSpineModelUrls(entry, 'cutscene').skeletonUrl.includes('/cutscene/')
+    )
+  );
 
   const love3 = await loadGameRoster('love3');
   assert.equal(love3.length, 26);

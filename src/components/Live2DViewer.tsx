@@ -9,10 +9,8 @@ import type { BD2Character } from '../types/bd2';
  */
 
 let coreLoadPromise: Promise<void> | null = null;
-let coreLoadFailed = false;
 
 function ensureLive2DRuntimes(): Promise<void> {
-  if (coreLoadFailed) return Promise.reject(new Error('Live2D runtime failed to load'));
   if (!coreLoadPromise) {
     const scripts = [
       { globalName: 'Live2D', src: '/vendor/live2d.min.js' },
@@ -31,7 +29,6 @@ function ensureLive2DRuntimes(): Promise<void> {
         });
       })
     ).then(() => undefined).catch((error) => {
-      coreLoadFailed = true;
       coreLoadPromise = null;
       throw error;
     });
@@ -117,8 +114,11 @@ export function Live2DViewer({
       const host = hostRef.current;
       if (!host || !modelUrl) return;
       try {
-        const [, displayMod, PIXI] = await Promise.all([
-          ensureLive2DRuntimes(),
+        // The display module captures both runtime globals when it is imported.
+        // Loading it concurrently with the runtime scripts causes Cubism 2 and 4
+        // models to fail intermittently, depending on which script finishes first.
+        await ensureLive2DRuntimes();
+        const [displayMod, PIXI] = await Promise.all([
           loadDisplayModule(),
           import('pixi.js'),
         ]);

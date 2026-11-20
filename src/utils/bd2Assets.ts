@@ -106,7 +106,7 @@ export const GAME_LIST: GameDescriptor[] = [
     name: 'Girl Wars JP',
     studioName: 'Girl Wars Spine Studio',
     rosterLabel: 'Girl Wars Roster',
-    engineLabel: 'Spine 4.0 · 281 Models & Cutscenes',
+    engineLabel: 'Spine 4.0 · 141 Skins · 140 Cutscenes',
     accentGradient: 'from-red-500 to-orange-600 shadow-red-500/20',
     accentText: 'text-red-400',
   },
@@ -253,6 +253,8 @@ interface AzurLaneCatalogEntry {
   modelType: string;
   jsonPath: string;
   atlasPath: string;
+  cutsceneJsonPath?: string;
+  cutsceneAtlasPath?: string;
   iconPath?: string;
   spineVersion?: string;
   kind?: string;
@@ -411,11 +413,19 @@ export async function loadGameRoster(gameId: GameId): Promise<BD2Character[]> {
         audio: '',
         skeletonUrl: encodeProxyPath(spineBase, item.jsonPath),
         atlasUrl: encodeProxyPath(spineBase, item.atlasPath),
+        cutsceneSkeletonUrl: item.cutsceneJsonPath
+          ? encodeProxyPath(spineBase, item.cutsceneJsonPath)
+          : undefined,
+        cutsceneAtlasUrl: item.cutsceneAtlasPath
+          ? encodeProxyPath(spineBase, item.cutsceneAtlasPath)
+          : undefined,
         skeletonFormat: 'skel',
         spineVersion: item.spineVersion || '3.8.99',
         modelType: item.modelType,
         iconUrl: item.iconPath ? encodeProxyPath(spineBase, item.iconPath) : '',
-        hasCutscene: item.modelType === 'cutscene',
+        hasCutscene: isGirlWars
+          ? Boolean(item.cutsceneJsonPath && item.cutsceneAtlasPath)
+          : item.modelType === 'cutscene',
         hasDating: false,
         releaseOrder: idx,
         releaseLabel: isGirlWars
@@ -558,6 +568,18 @@ export function getSpineModelUrls(char: BD2Character, category: AnimationCategor
   atlasUrl: string;
   isJson: boolean;
 } {
+  if (
+    category === 'cutscene' &&
+    char.cutsceneSkeletonUrl &&
+    char.cutsceneAtlasUrl
+  ) {
+    return {
+      skeletonUrl: char.cutsceneSkeletonUrl,
+      atlasUrl: char.cutsceneAtlasUrl,
+      isJson: /\.json(\?.*)?$/i.test(char.cutsceneSkeletonUrl),
+    };
+  }
+
   if (char.skeletonUrl && char.atlasUrl) {
     return {
       skeletonUrl: char.skeletonUrl,
