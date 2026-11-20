@@ -447,6 +447,7 @@ export default function App() {
                   isPlaying={isPlaying}
                   animationSpeed={animationSpeed}
                   activeAnimation={activeAnimation}
+                  hiddenLayers={hiddenLayers}
                   onAnimationsLoaded={handleAnimationsLoaded}
                   onLayersLoaded={handleLayersLoaded}
                 />

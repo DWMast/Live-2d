@@ -108,7 +108,7 @@ export const LayerDrawer: React.FC<LayerDrawerProps> = ({
       <div className="flex-1 overflow-y-auto p-3 flex flex-col gap-2">
         {filteredLayers.length === 0 ? (
           <div className="py-12 text-center text-xs text-slate-500">
-            {layers.length === 0 ? 'No Spine layers found in model' : `No layer matching "${searchTerm}"`}
+            {layers.length === 0 ? 'No removable layers found in model' : `No layer matching "${searchTerm}"`}
           </div>
         ) : (
           filteredLayers.map((layerName) => {
