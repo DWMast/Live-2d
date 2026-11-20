@@ -57,6 +57,15 @@ const UPSTREAM_GS_BASES = [
   'https://cdn.jsdelivr.net/gh/Misekato/IHLive2d@main',
   'https://raw.githubusercontent.com/Misekato/IHLive2d/main',
 ];
+const UPSTREAM_DC_MODEL_BASES = [
+  'https://cdn.jsdelivr.net/gh/Live2D-DCG/Live2D-DCG.github.io@master',
+  'https://raw.githubusercontent.com/Live2D-DCG/Live2D-DCG.github.io/master',
+];
+const UPSTREAM_DC_ICON_BASES = [
+  'https://cdn.jsdelivr.net/gh/Pelom777/DestinyChildLive2D@master',
+  'https://raw.githubusercontent.com/Pelom777/DestinyChildLive2D/master',
+  ...UPSTREAM_DC_MODEL_BASES,
+];
 
 
 
@@ -356,7 +365,8 @@ async function resolveCachedAsset(
     | 'al-icons'
     | 'mad-spines'
     | 'mad-icons'
-    | 'gs-live2d',
+    | 'gs-live2d'
+    | 'dc-live2d',
   relPath: string,
   upstreamBases: string | string[],
   encodePathForUpstream = false
@@ -732,6 +742,28 @@ async function startServer() {
     } catch (err) {
       const status = (err as { status?: number })?.status || 502;
       res.status(status).json({ error: `Failed to fetch DGS Live2D asset: ${relPath}` });
+    }
+  });
+
+  // Destiny Child Cubism 2 models, motions, textures and portrait icons. Korean
+  // originals are preferred by the catalog; Global-only models remain available.
+  app.get('/api/dc-live2d/*', async (req, res) => {
+    const rawParam = (req.params as Record<string, string>)[0] ?? '';
+    const relPath = sanitizeUtf8AssetPath(
+      rawParam,
+      /\.(json|dat|moc|mtn|png|webp|jpg|jpeg|mp3|ogg|wav)$/i
+    );
+    if (!relPath) {
+      res.status(400).json({ error: 'Invalid Destiny Child asset path' });
+      return;
+    }
+    try {
+      const bases = relPath.startsWith('assets/') ? UPSTREAM_DC_ICON_BASES : UPSTREAM_DC_MODEL_BASES;
+      const entry = await resolveCachedAsset('dc-live2d', relPath, bases, true);
+      sendCachedEntry(req, res, entry);
+    } catch (err) {
+      const status = (err as { status?: number })?.status || 502;
+      res.status(status).json({ error: `Failed to fetch Destiny Child asset: ${relPath}` });
     }
   });
 

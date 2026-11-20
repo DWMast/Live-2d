@@ -441,7 +441,7 @@ export default function App() {
             style={canvasFilterStyle ? { filter: canvasFilterStyle } : undefined}
           >
             <ErrorBoundary resetKey={`${selectedCharacter.id}:${activeCategory}`}>
-              {activeGame === 'girlssymphony' ? (
+              {selectedCharacter.live2dModelUrl ? (
                 <Live2DViewer
                   character={selectedCharacter}
                   isPlaying={isPlaying}

@@ -15,6 +15,7 @@ export const MAD_ICON_BASE = '/api/mad-icon';
 export const GS_LIVE2D_BASE = '/api/gs-live2d';
 export const ECHO_SPINE_BASE = '/api/echo-spine';
 export const ECHO_ICON_BASE = '/api/echo-pic';
+export const DC_LIVE2D_BASE = '/api/dc-live2d';
 
 export const GAME_LIST: GameDescriptor[] = [
   {
@@ -86,6 +87,16 @@ export const GAME_LIST: GameDescriptor[] = [
     engineLabel: 'Spine 3.8 · Full Rip',
     accentGradient: 'from-orange-500 to-red-600 shadow-orange-500/20',
     accentText: 'text-orange-400',
+  },
+  {
+    id: 'destinychild',
+    shortCode: 'DCH',
+    name: 'Destiny Child',
+    studioName: 'Destiny Child Live2D Studio',
+    rosterLabel: 'Destiny Child Roster',
+    engineLabel: 'Cubism 2 Live2D · 2,464 Models',
+    accentGradient: 'from-pink-500 to-red-600 shadow-pink-500/20',
+    accentText: 'text-pink-400',
   },
 ];
 
@@ -230,7 +241,11 @@ interface Live2DCatalogEntry {
   modelType: string;
   jsonPath: string;
   iconPath?: string;
-  api: string;
+  api: 'cubism2' | 'cubism4';
+  region?: 'kr' | 'gl';
+  uncensored?: boolean;
+  kind?: string;
+  named?: boolean;
 }
 
 
@@ -244,6 +259,8 @@ interface EchoCatalogEntry {
   charName: string;
   costumeName: string;
   kind: string;
+  modelType?: string;
+  spineVersion?: string;
   jsonPath: string;
   atlasPath: string;
   iconPath?: string;
@@ -350,6 +367,92 @@ export async function loadGameRoster(gameId: GameId): Promise<BD2Character[]> {
         named: true,
         kind: item.kind,
       }));
+    } else if (gameId === 'azurlane') {
+      const res = await fetch('/data/azurlane_catalog.json');
+      if (!res.ok) throw new Error(`Failed to load Azur Lane catalog (HTTP ${res.status})`);
+      const rawList = (await res.json()) as AzurLaneCatalogEntry[];
+      mapped = rawList.map((item, idx) => ({
+        id: item.id,
+        game: 'azurlane',
+        charName: item.charName,
+        costumeName: item.costumeName,
+        spine: item.id,
+        cutscene: '',
+        dating: '',
+        audio: '',
+        skeletonUrl: encodeProxyPath(AL_SPINE_BASE, item.jsonPath),
+        atlasUrl: encodeProxyPath(AL_SPINE_BASE, item.atlasPath),
+        skeletonFormat: 'skel',
+        spineVersion: '3.8.99',
+        modelType: item.modelType,
+        iconUrl: item.iconPath ? encodeProxyPath(AL_ICON_BASE, item.iconPath) : '',
+        hasCutscene: false,
+        hasDating: false,
+        releaseOrder: idx,
+        releaseLabel: item.modelType === 'skin' ? 'Dynamic Skin' : 'Dynamic Spine',
+        named: true,
+      }));
+    } else if (gameId === 'echocalypse') {
+      const res = await fetch('/data/echocalypse_catalog.json');
+      if (!res.ok) throw new Error(`Failed to load Echocalypse catalog (HTTP ${res.status})`);
+      const rawList = (await res.json()) as EchoCatalogEntry[];
+      mapped = rawList.map((item, idx) => ({
+        id: item.id,
+        game: 'echocalypse',
+        charName: item.charName,
+        costumeName: item.costumeName,
+        spine: item.id,
+        cutscene: '',
+        dating: '',
+        audio: '',
+        skeletonUrl: encodeProxyPath(ECHO_SPINE_BASE, item.jsonPath),
+        atlasUrl: encodeProxyPath(ECHO_SPINE_BASE, item.atlasPath),
+        skeletonFormat: 'skel',
+        spineVersion: item.spineVersion || '3.8.99',
+        modelType: item.modelType || 'character',
+        iconUrl: item.iconPath ? encodeProxyPath(ECHO_ICON_BASE, item.iconPath) : '',
+        hasCutscene: false,
+        hasDating: false,
+        releaseOrder: idx,
+        releaseLabel: item.bucket === 'knight_spine_remote' ? 'Remote Build' : item.kind,
+        kind: item.kind,
+        named: item.kind === 'character' || item.kind === 'costume',
+        source: 'rip',
+      }));
+    } else if (gameId === 'girlssymphony' || gameId === 'destinychild') {
+      const isDestinyChild = gameId === 'destinychild';
+      const catalogName = isDestinyChild ? 'destinychild' : 'girlssymphony';
+      const res = await fetch(`/data/${catalogName}_catalog.json`);
+      if (!res.ok) throw new Error(`Failed to load ${catalogName} catalog (HTTP ${res.status})`);
+      const rawList = (await res.json()) as Live2DCatalogEntry[];
+      const assetBase = isDestinyChild ? DC_LIVE2D_BASE : GS_LIVE2D_BASE;
+      mapped = rawList.map((item, idx) => ({
+        id: item.id,
+        game: gameId,
+        charName: item.charName,
+        costumeName: item.costumeName,
+        spine: item.id,
+        cutscene: '',
+        dating: '',
+        audio: '',
+        live2dModelUrl: encodeProxyPath(assetBase, item.jsonPath),
+        cubismApi: item.api,
+        modelType: item.modelType,
+        iconUrl: item.iconPath ? encodeProxyPath(assetBase, item.iconPath) : '',
+        hasCutscene: item.modelType === 'cutscene',
+        hasDating: false,
+        releaseOrder: idx,
+        releaseLabel: item.uncensored
+          ? 'Uncensored available'
+          : item.region === 'kr'
+          ? 'KR Original'
+          : item.region === 'gl'
+          ? 'Global'
+          : 'Cubism 4 Live2D',
+        uncensored: item.uncensored || undefined,
+        named: item.named ?? true,
+        kind: item.kind,
+      }));
     }
 
     rosterCache.set(gameId, mapped);
@@ -395,6 +498,13 @@ export function pickDefaultCharacterForGame(gameId: GameId, roster: BD2Character
       roster.find((c) => c.id === 'al_aerbien_4') ||
       roster.find((c) => c.id === 'al_xinzexi') ||
       roster.find((c) => c.modelType === 'skin' && c.iconUrl) ||
+      roster[0]
+    );
+  }
+  if (gameId === 'destinychild') {
+    return (
+      roster.find((c) => c.id === 'dc_c001_02') ||
+      roster.find((c) => c.modelType === 'child' && c.iconUrl) ||
       roster[0]
     );
   }

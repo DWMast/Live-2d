@@ -3,45 +3,47 @@ import { Loader2, RefreshCw } from 'lucide-react';
 import type { BD2Character } from '../types/bd2';
 
 /**
- * Live2D (Cubism 4) viewer for Dragon & Girls Symphony (Idle Huntress) models.
- *
- * Uses pixi-live2d-display-lipsyncpatch on top of pixi.js v7.
- * The official Live2D Cubism Core script is vendored in public/vendor
- * and loaded once, lazily, the first time this viewer mounts.
+ * Cubism 2 and Cubism 4 Live2D viewer.
+ * Both official runtimes are loaded before importing the combined display module,
+ * as required by pixi-live2d-display when a viewer supports both model formats.
  */
 
 let coreLoadPromise: Promise<void> | null = null;
 let coreLoadFailed = false;
 
-function ensureCubismCore(): Promise<void> {
-  if ((window as unknown as { Live2DCubismCore?: unknown }).Live2DCubismCore) {
-    return Promise.resolve();
-  }
-  if (coreLoadFailed) return Promise.reject(new Error('Live2D Cubism Core failed to load'));
+function ensureLive2DRuntimes(): Promise<void> {
+  if (coreLoadFailed) return Promise.reject(new Error('Live2D runtime failed to load'));
   if (!coreLoadPromise) {
-    coreLoadPromise = new Promise<void>((resolve, reject) => {
-      const script = document.createElement('script');
-      script.src = '/vendor/live2dcubismcore.min.js';
-      script.async = true;
-      script.onload = () => resolve();
-      script.onerror = () => {
-        coreLoadFailed = true;
-        coreLoadPromise = null;
-        reject(new Error('Failed to load the Live2D Cubism Core'));
-      };
-      document.head.appendChild(script);
+    const scripts = [
+      { globalName: 'Live2D', src: '/vendor/live2d.min.js' },
+      { globalName: 'Live2DCubismCore', src: '/vendor/live2dcubismcore.min.js' },
+    ];
+    coreLoadPromise = Promise.all(
+      scripts.map(({ globalName, src }) => {
+        if ((window as unknown as Record<string, unknown>)[globalName]) return Promise.resolve();
+        return new Promise<void>((resolve, reject) => {
+          const script = document.createElement('script');
+          script.src = src;
+          script.async = true;
+          script.onload = () => resolve();
+          script.onerror = () => reject(new Error(`Failed to load ${src}`));
+          document.head.appendChild(script);
+        });
+      })
+    ).then(() => undefined).catch((error) => {
+      coreLoadFailed = true;
+      coreLoadPromise = null;
+      throw error;
     });
   }
   return coreLoadPromise;
 }
 
-let displayModulePromise: Promise<typeof import('pixi-live2d-display-lipsyncpatch/cubism4')> | null = null;
+let displayModulePromise: Promise<typeof import('pixi-live2d-display-lipsyncpatch')> | null = null;
 
 function loadDisplayModule() {
   if (!displayModulePromise) {
-    displayModulePromise = import('pixi-live2d-display-lipsyncpatch/cubism4') as Promise<
-      typeof import('pixi-live2d-display-lipsyncpatch/cubism4')
-    >;
+    displayModulePromise = import('pixi-live2d-display-lipsyncpatch');
   }
   return displayModulePromise;
 }
@@ -91,7 +93,7 @@ export function Live2DViewer({
     let disposed = false;
     let app: import('pixi.js').Application | null = null;
     let model:
-      | (import('pixi-live2d-display-lipsyncpatch/cubism4').Live2DModel & {
+      | (import('pixi-live2d-display-lipsyncpatch').Live2DModel & {
           internalModel: { motionManager: { groups?: Record<string, string> } };
         })
       | null = null;
@@ -116,7 +118,7 @@ export function Live2DViewer({
       if (!host || !modelUrl) return;
       try {
         const [, displayMod, PIXI] = await Promise.all([
-          ensureCubismCore(),
+          ensureLive2DRuntimes(),
           loadDisplayModule(),
           import('pixi.js'),
         ]);
@@ -132,7 +134,7 @@ export function Live2DViewer({
                 autoFocus?: boolean;
                 ticker?: unknown;
               }
-            ) => Promise<import('pixi-live2d-display-lipsyncpatch/cubism4').Live2DModel>;
+            ) => Promise<import('pixi-live2d-display-lipsyncpatch').Live2DModel>;
           };
           MotionPriority: { IDLE: number; FORCE: number; NORMAL: number; NONE: number };
         };
@@ -210,12 +212,7 @@ export function Live2DViewer({
         callbacksRef.current.onLayersLoaded([]);
 
         modelRef.current = {
-          motion: (group: string) =>
-            (
-              model?.internalModel.motionManager as unknown as {
-                startMotion: (g: string, i?: number, p?: number) => Promise<unknown>;
-              }
-            )?.startMotion(group, undefined, MotionPriority.FORCE),
+          motion: (group: string) => model?.motion(group, undefined, MotionPriority.FORCE),
           motionGroups: animNames,
         };
 
@@ -228,13 +225,12 @@ export function Live2DViewer({
           if (!model || !app) return;
           app.ticker.speed = playRef.current ? speedRef.current : 0;
           const motionMgr = model.internalModel.motionManager as unknown as {
-            isFinished?: boolean;
-            startMotion: (g: string, i?: number, p?: number) => Promise<unknown>;
+            isFinished?: () => boolean;
           };
           if (!playRef.current) return;
           const wanted = activeAnimRef.current || groups.idle || initialAnim || 'idle';
-          if (motionMgr.isFinished) {
-            void motionMgr.startMotion(wanted, undefined, MotionPriority.IDLE);
+          if (motionMgr.isFinished?.()) {
+            void model.motion(wanted, undefined, MotionPriority.IDLE);
           }
         };
         tickerFunc = onTick;
@@ -296,7 +292,7 @@ export function Live2DViewer({
             Loading {character.charName}
           </p>
           <p className="text-xs text-slate-400 mt-1">
-            {character.costumeName} · Cubism 4 Live2D
+            {character.costumeName} · {character.cubismApi === 'cubism2' ? 'Cubism 2' : 'Cubism 4'} Live2D
           </p>
         </div>
       )}

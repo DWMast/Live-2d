@@ -1,4 +1,4 @@
-export type GameId = 'bd2' | 'daicore' | 'hazereverb' | 'azurlane' | 'mad' | 'girlssymphony' | 'echocalypse';
+export type GameId = 'bd2' | 'daicore' | 'hazereverb' | 'azurlane' | 'mad' | 'girlssymphony' | 'echocalypse' | 'destinychild';
 
 export type AnimationCategory = 'character' | 'cutscene' | 'dating';
 
@@ -43,10 +43,10 @@ export interface BD2Character extends BD2CharacterRaw {
   atlasUrl?: string;
   skeletonFormat?: 'skel' | 'json';
   spineVersion?: string;
-  /** Live2D (Cubism) models: URL to the .model3.json the runtime loads. */
+  /** Live2D model settings: .model.json for Cubism 2 or .model3.json for Cubism 4. */
   live2dModelUrl?: string;
   /** Cubism API version for Live2D models. */
-  cubismApi?: 'cubism4';
+  cubismApi?: 'cubism2' | 'cubism4';
   modelType?: string;
   rarity?: string;
   manufacturer?: string;

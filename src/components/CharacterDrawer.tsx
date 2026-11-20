@@ -103,6 +103,8 @@ export const CharacterDrawer: React.FC<CharacterDrawerProps> = ({
 
     : activeGame === 'girlssymphony'
     ? 'Search Aphrodite, Athena, Live2D skins...'
+    : activeGame === 'destinychild'
+    ? 'Search Mona, Lisa, Davi, Chang’e...'
     : 'Search Justia, Schera, Lathel, Teresse...';
 
   return (
@@ -318,7 +320,7 @@ export const CharacterDrawer: React.FC<CharacterDrawerProps> = ({
         ) : (
           <div className="flex items-center justify-between px-2.5 py-1.5 rounded-xl bg-slate-900/90 border border-slate-800 text-[11px] text-slate-300">
             <span className="font-semibold">
-              {activeGame === 'girlssymphony' ? 'Interactive Live2D Model' : 'Interactive Spine Model'}
+              {selectedCharacter.live2dModelUrl ? 'Interactive Live2D Model' : 'Interactive Spine Model'}
             </span>
             <span className="font-mono text-sky-300">
               {selectedCharacter.releaseLabel}
