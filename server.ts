@@ -66,6 +66,10 @@ const UPSTREAM_DC_ICON_BASES = [
   'https://raw.githubusercontent.com/Pelom777/DestinyChildLive2D/master',
   ...UPSTREAM_DC_MODEL_BASES,
 ];
+const UPSTREAM_GW_BASES = [
+  'https://cdn.jsdelivr.net/gh/Hisyn/GW-L2D-Viewer@main',
+  'https://raw.githubusercontent.com/Hisyn/GW-L2D-Viewer/main',
+];
 
 
 
@@ -366,7 +370,8 @@ async function resolveCachedAsset(
     | 'mad-spines'
     | 'mad-icons'
     | 'gs-live2d'
-    | 'dc-live2d',
+    | 'dc-live2d'
+    | 'gw-spines',
   relPath: string,
   upstreamBases: string | string[],
   encodePathForUpstream = false
@@ -764,6 +769,22 @@ async function startServer() {
     } catch (err) {
       const status = (err as { status?: number })?.status || 502;
       res.status(status).json({ error: `Failed to fetch Destiny Child asset: ${relPath}` });
+    }
+  });
+
+  app.get('/api/gw-spine/*', async (req, res) => {
+    const rawParam = (req.params as Record<string, string>)[0] ?? '';
+    const relPath = sanitizeUtf8AssetPath(rawParam, /\.(json|skel|atlas|png|webp|jpg|jpeg)$/i);
+    if (!relPath) {
+      res.status(400).json({ error: 'Invalid Girl Wars asset path' });
+      return;
+    }
+    try {
+      const entry = await resolveCachedAsset('gw-spines', relPath, UPSTREAM_GW_BASES, true);
+      sendCachedEntry(req, res, entry);
+    } catch (err) {
+      const status = (err as { status?: number })?.status || 502;
+      res.status(status).json({ error: `Failed to fetch Girl Wars asset: ${relPath}` });
     }
   });
 

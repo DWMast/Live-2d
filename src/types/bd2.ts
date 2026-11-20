@@ -1,4 +1,4 @@
-export type GameId = 'bd2' | 'daicore' | 'hazereverb' | 'azurlane' | 'mad' | 'girlssymphony' | 'echocalypse' | 'destinychild';
+export type GameId = 'bd2' | 'daicore' | 'hazereverb' | 'azurlane' | 'mad' | 'girlssymphony' | 'echocalypse' | 'destinychild' | 'girlwars';
 
 export type AnimationCategory = 'character' | 'cutscene' | 'dating';
 

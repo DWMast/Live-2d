@@ -105,6 +105,8 @@ export const CharacterDrawer: React.FC<CharacterDrawerProps> = ({
     ? 'Search Aphrodite, Athena, Live2D skins...'
     : activeGame === 'destinychild'
     ? 'Search Mona, Lisa, Davi, Chang’e...'
+    : activeGame === 'girlwars'
+    ? 'Search Tsurihime, Maeve, UR EX...'
     : 'Search Justia, Schera, Lathel, Teresse...';
 
   return (

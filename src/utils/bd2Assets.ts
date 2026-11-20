@@ -16,6 +16,7 @@ export const GS_LIVE2D_BASE = '/api/gs-live2d';
 export const ECHO_SPINE_BASE = '/api/echo-spine';
 export const ECHO_ICON_BASE = '/api/echo-pic';
 export const DC_LIVE2D_BASE = '/api/dc-live2d';
+export const GW_SPINE_BASE = '/api/gw-spine';
 
 export const GAME_LIST: GameDescriptor[] = [
   {
@@ -97,6 +98,16 @@ export const GAME_LIST: GameDescriptor[] = [
     engineLabel: 'Cubism 2 Live2D · 2,464 Models',
     accentGradient: 'from-pink-500 to-red-600 shadow-pink-500/20',
     accentText: 'text-pink-400',
+  },
+  {
+    id: 'girlwars',
+    shortCode: 'GW',
+    name: 'Girl Wars JP',
+    studioName: 'Girl Wars Spine Studio',
+    rosterLabel: 'Girl Wars Roster',
+    engineLabel: 'Spine 4.0 · 281 Models & Cutscenes',
+    accentGradient: 'from-red-500 to-orange-600 shadow-red-500/20',
+    accentText: 'text-red-400',
   },
 ];
 
@@ -228,10 +239,13 @@ interface AzurLaneCatalogEntry {
   id: string;
   charName: string;
   costumeName: string;
-  modelType: 'skin' | 'character';
+  modelType: string;
   jsonPath: string;
   atlasPath: string;
   iconPath?: string;
+  spineVersion?: string;
+  kind?: string;
+  named?: boolean;
 }
 
 interface Live2DCatalogEntry {
@@ -367,30 +381,40 @@ export async function loadGameRoster(gameId: GameId): Promise<BD2Character[]> {
         named: true,
         kind: item.kind,
       }));
-    } else if (gameId === 'azurlane') {
-      const res = await fetch('/data/azurlane_catalog.json');
-      if (!res.ok) throw new Error(`Failed to load Azur Lane catalog (HTTP ${res.status})`);
+    } else if (gameId === 'azurlane' || gameId === 'girlwars') {
+      const isGirlWars = gameId === 'girlwars';
+      const catalogName = isGirlWars ? 'girlwars' : 'azurlane';
+      const res = await fetch(`/data/${catalogName}_catalog.json`);
+      if (!res.ok) throw new Error(`Failed to load ${catalogName} catalog (HTTP ${res.status})`);
       const rawList = (await res.json()) as AzurLaneCatalogEntry[];
+      const spineBase = isGirlWars ? GW_SPINE_BASE : AL_SPINE_BASE;
       mapped = rawList.map((item, idx) => ({
         id: item.id,
-        game: 'azurlane',
+        game: gameId,
         charName: item.charName,
         costumeName: item.costumeName,
         spine: item.id,
         cutscene: '',
         dating: '',
         audio: '',
-        skeletonUrl: encodeProxyPath(AL_SPINE_BASE, item.jsonPath),
-        atlasUrl: encodeProxyPath(AL_SPINE_BASE, item.atlasPath),
+        skeletonUrl: encodeProxyPath(spineBase, item.jsonPath),
+        atlasUrl: encodeProxyPath(spineBase, item.atlasPath),
         skeletonFormat: 'skel',
-        spineVersion: '3.8.99',
+        spineVersion: item.spineVersion || '3.8.99',
         modelType: item.modelType,
-        iconUrl: item.iconPath ? encodeProxyPath(AL_ICON_BASE, item.iconPath) : '',
-        hasCutscene: false,
+        iconUrl: item.iconPath ? encodeProxyPath(spineBase, item.iconPath) : '',
+        hasCutscene: item.modelType === 'cutscene',
         hasDating: false,
         releaseOrder: idx,
-        releaseLabel: item.modelType === 'skin' ? 'Dynamic Skin' : 'Dynamic Spine',
-        named: true,
+        releaseLabel: isGirlWars
+          ? item.kind === 'cutscene'
+            ? 'Cutscene'
+            : 'Standing Spine'
+          : item.modelType === 'skin'
+          ? 'Dynamic Skin'
+          : 'Dynamic Spine',
+        kind: item.kind,
+        named: item.named ?? true,
       }));
     } else if (gameId === 'echocalypse') {
       const res = await fetch('/data/echocalypse_catalog.json');
@@ -507,6 +531,9 @@ export function pickDefaultCharacterForGame(gameId: GameId, roster: BD2Character
       roster.find((c) => c.modelType === 'child' && c.iconUrl) ||
       roster[0]
     );
+  }
+  if (gameId === 'girlwars') {
+    return roster.find((c) => c.id === 'gw_1001') || roster.find((c) => c.kind === 'standing') || roster[0];
   }
   return roster[0] || DEFAULT_CHARACTER;
 }

@@ -8,3 +8,4 @@ coverage/
 !.env.example
 tests/fixtures/*.png
 .scratch/
+tmp/

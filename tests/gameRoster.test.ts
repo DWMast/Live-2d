@@ -4,7 +4,7 @@ import { readFile } from 'node:fs/promises';
 import { loadGameRoster } from '../src/utils/bd2Assets.ts';
 import type { GameId } from '../src/types/bd2.ts';
 
-const games: GameId[] = ['destinychild', 'girlssymphony', 'azurlane', 'echocalypse'];
+const games: GameId[] = ['destinychild', 'girlssymphony', 'azurlane', 'echocalypse', 'girlwars'];
 
 test('external game catalogs map to complete playable roster entries', async (t) => {
   const originalFetch = globalThis.fetch;
@@ -32,13 +32,21 @@ test('external game catalogs map to complete playable roster entries', async (t)
   assert.ok(destinyChild.every((entry) => entry.cubismApi === 'cubism2'));
   assert.ok(destinyChild.every((entry) => entry.live2dModelUrl?.startsWith('/api/dc-live2d/')));
   assert.ok(destinyChild.every((entry) => entry.iconUrl));
+  assert.ok(
+    destinyChild.every((entry) => !['', '???', 'unknown'].includes(entry.charName.trim().toLowerCase()))
+  );
   assert.equal(destinyChild.filter((entry) => entry.uncensored).length, 230);
 
   const girlsSymphony = await loadGameRoster('girlssymphony');
   assert.ok(girlsSymphony.every((entry) => entry.cubismApi === 'cubism4'));
 
-  for (const game of ['azurlane', 'echocalypse'] as const) {
+  for (const game of ['azurlane', 'echocalypse', 'girlwars'] as const) {
     const roster = await loadGameRoster(game);
     assert.ok(roster.every((entry) => entry.skeletonUrl && entry.atlasUrl));
   }
+
+  const girlWars = await loadGameRoster('girlwars');
+  assert.equal(girlWars.length, 281);
+  assert.equal(girlWars.filter((entry) => entry.modelType === 'cutscene').length, 140);
+  assert.ok(girlWars.every((entry) => entry.iconUrl && entry.spineVersion === '4.0'));
 });
