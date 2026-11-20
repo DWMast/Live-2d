@@ -448,8 +448,11 @@ export default function App() {
                   animationSpeed={animationSpeed}
                   activeAnimation={activeAnimation}
                   hiddenLayers={hiddenLayers}
+                  selectedLayerName={selectedLayerName}
                   onAnimationsLoaded={handleAnimationsLoaded}
                   onLayersLoaded={handleLayersLoaded}
+                  onSelectLayer={handleSelectLayer}
+                  onDeleteLayer={handleDeleteLayer}
                 />
               ) : (
                 <SpineViewer

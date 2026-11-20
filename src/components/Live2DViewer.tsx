@@ -1,12 +1,15 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { Loader2, Maximize2, RefreshCw, ZoomIn, ZoomOut } from 'lucide-react';
+import { Loader2, Maximize2, RefreshCw, Trash2, ZoomIn, ZoomOut } from 'lucide-react';
+import { Point } from '@pixi/math';
 import type { BD2Character } from '../types/bd2';
 import {
   clampLive2DZoom,
   createLive2DLayerController,
+  createLive2DLayerPicker,
   zoomLive2DCameraAtPoint,
   type Live2DCameraPose,
   type Live2DLayerController,
+  type Live2DLayerPicker,
 } from '../utils/live2dControls';
 
 /** Cubism 2 and Cubism 4 Live2D viewer with native part and camera controls. */
@@ -53,8 +56,11 @@ interface Live2DViewerProps {
   animationSpeed: number;
   activeAnimation: string;
   hiddenLayers: Set<string>;
+  selectedLayerName: string | null;
   onAnimationsLoaded: (animations: string[]) => void;
   onLayersLoaded: (layers: string[]) => void;
+  onSelectLayer: (layerName: string | null) => void;
+  onDeleteLayer: (layerName: string) => void;
   onLoadError?: (message: string) => void;
 }
 
@@ -69,8 +75,11 @@ export function Live2DViewer({
   animationSpeed,
   activeAnimation,
   hiddenLayers,
+  selectedLayerName,
   onAnimationsLoaded,
   onLayersLoaded,
+  onSelectLayer,
+  onDeleteLayer,
   onLoadError,
 }: Live2DViewerProps) {
   const hostRef = useRef<HTMLDivElement | null>(null);
@@ -80,6 +89,7 @@ export function Live2DViewer({
   } | null>(null);
   const controlsRef = useRef<Live2DViewControls | null>(null);
   const layerControllerRef = useRef<Live2DLayerController | null>(null);
+  const layerPickerRef = useRef<Live2DLayerPicker | null>(null);
   const renderNowRef = useRef<(() => void) | null>(null);
   const cameraRef = useRef<Live2DCameraPose>({ zoom: 1, panX: 0, panY: 0 });
 
@@ -94,13 +104,15 @@ export function Live2DViewer({
   const speedRef = useRef(animationSpeed);
   const activeAnimRef = useRef(activeAnimation);
   const hiddenLayersRef = useRef(hiddenLayers);
-  const callbacksRef = useRef({ onAnimationsLoaded, onLayersLoaded, onLoadError });
+  const selectedLayerRef = useRef(selectedLayerName);
+  const callbacksRef = useRef({ onAnimationsLoaded, onLayersLoaded, onSelectLayer, onLoadError });
 
   playRef.current = isPlaying;
   speedRef.current = animationSpeed;
   activeAnimRef.current = activeAnimation;
   hiddenLayersRef.current = hiddenLayers;
-  callbacksRef.current = { onAnimationsLoaded, onLayersLoaded, onLoadError };
+  selectedLayerRef.current = selectedLayerName;
+  callbacksRef.current = { onAnimationsLoaded, onLayersLoaded, onSelectLayer, onLoadError };
 
   useEffect(() => {
     let disposed = false;
@@ -117,6 +129,7 @@ export function Live2DViewer({
     cameraRef.current = { zoom: 1, panX: 0, panY: 0 };
     controlsRef.current = null;
     layerControllerRef.current = null;
+    layerPickerRef.current = null;
     renderNowRef.current = null;
 
     const report = (err: unknown) => {
@@ -271,6 +284,7 @@ export function Live2DViewer({
           camera: Live2DCameraPose;
           fit: ReturnType<typeof computeFit>;
         } | null = null;
+        let suppressTap = false;
 
         const localPoint = (event: PointerEvent) => {
           const rect = view.getBoundingClientRect();
@@ -304,7 +318,9 @@ export function Live2DViewer({
         const onPointerDown = (event: PointerEvent) => {
           if (event.pointerType === 'mouse' && event.button !== 0) return;
           event.preventDefault();
+          if (pointers.size === 0) suppressTap = false;
           pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+          if (pointers.size >= 2) suppressTap = true;
           try {
             view.setPointerCapture(event.pointerId);
           } catch {
@@ -331,6 +347,9 @@ export function Live2DViewer({
           pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
 
           if (pointers.size === 1 && panStart?.pointerId === event.pointerId) {
+            if (Math.hypot(event.clientX - panStart.clientX, event.clientY - panStart.clientY) >= 6) {
+              suppressTap = true;
+            }
             setCamera({
               ...cameraRef.current,
               panX: panStart.panX + event.clientX - panStart.clientX,
@@ -358,14 +377,44 @@ export function Live2DViewer({
 
         const onPointerEnd = (event: PointerEvent) => {
           if (!pointers.has(event.pointerId)) return;
+          const shouldPick =
+            event.type === 'pointerup' &&
+            pointers.size === 1 &&
+            !suppressTap &&
+            panStart?.pointerId === event.pointerId &&
+            Math.hypot(event.clientX - panStart.clientX, event.clientY - panStart.clientY) < 6;
           pointers.delete(event.pointerId);
+
+          if (shouldPick) {
+            try {
+              const rect = view.getBoundingClientRect();
+              const point = activeModel.toModelPosition(new Point(
+                (event.clientX - rect.left) * (app?.screen.width ?? rect.width) / Math.max(rect.width, 1),
+                (event.clientY - rect.top) * (app?.screen.height ?? rect.height) / Math.max(rect.height, 1)
+              ));
+              const hit = layerPickerRef.current?.(
+                point.x,
+                point.y,
+                hiddenLayersRef.current
+              ) ?? null;
+              callbacksRef.current.onSelectLayer(
+                hit && hit === selectedLayerRef.current ? null : hit
+              );
+            } catch {
+              callbacksRef.current.onSelectLayer(null);
+            }
+          }
+
           const remaining = [...pointers.keys()];
           if (remaining.length === 1) startPan(remaining[0]);
           else {
             panStart = null;
             pinchStart = null;
           }
-          if (pointers.size === 0) view.style.cursor = 'grab';
+          if (pointers.size === 0) {
+            suppressTap = false;
+            view.style.cursor = 'grab';
+          }
         };
 
         const onWheel = (event: WheelEvent) => {
@@ -415,6 +464,7 @@ export function Live2DViewer({
 
         const layerController = createLive2DLayerController(activeModel.internalModel);
         layerControllerRef.current = layerController;
+        layerPickerRef.current = createLive2DLayerPicker(activeModel.internalModel);
         const applyLayers = () => layerController.apply(hiddenLayersRef.current);
         internalCasted.on('beforeModelUpdate', applyLayers);
         removeLayerListener = () => internalCasted.off?.('beforeModelUpdate', applyLayers);
@@ -456,6 +506,7 @@ export function Live2DViewer({
       modelRef.current = null;
       controlsRef.current = null;
       layerControllerRef.current = null;
+      layerPickerRef.current = null;
       renderNowRef.current = null;
       cleanupCameraListeners?.();
       removeLayerListener?.();
@@ -499,6 +550,30 @@ export function Live2DViewer({
     <div className="relative w-full h-full flex items-center justify-center bg-slate-950 overflow-hidden select-none">
       <div ref={hostRef} className="w-full h-full" />
 
+      {selectedLayerName && (
+        <div className="absolute top-4 left-4 z-30 flex max-w-[calc(100%-13rem)] items-center gap-2 px-3 py-2 rounded-xl bg-slate-900/95 border border-sky-400/50 shadow-xl backdrop-blur-sm">
+          <span className="text-xs text-slate-400 hidden sm:inline">Selected:</span>
+          <span className="text-xs font-bold text-sky-300 truncate font-mono" title={selectedLayerName}>
+            {selectedLayerName}
+          </span>
+          <button
+            onClick={() => onDeleteLayer(selectedLayerName)}
+            className="min-h-[34px] px-2.5 rounded-lg bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold flex items-center gap-1.5"
+            title="Delete selected layer"
+          >
+            <Trash2 className="w-3.5 h-3.5" />
+            <span>Delete</span>
+          </button>
+          <button
+            onClick={() => onSelectLayer(null)}
+            className="w-8 h-8 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 flex items-center justify-center"
+            aria-label="Clear layer selection"
+          >
+            ✕
+          </button>
+        </div>
+      )}
+
       <div className="absolute top-4 right-4 z-30 flex items-center gap-1 p-1 rounded-xl bg-slate-900/90 border border-slate-800 shadow-xl backdrop-blur-sm">
         <button
           onClick={() => controlsRef.current?.zoomBy(1 / 1.1)}
@@ -534,7 +609,7 @@ export function Live2DViewer({
       </div>
 
       <div className="hidden sm:flex absolute bottom-4 left-4 z-30 items-center px-3 py-2 rounded-xl bg-slate-900/80 border border-slate-800/80 text-[11px] text-slate-400 backdrop-blur-sm pointer-events-none">
-        Drag to pan · Pinch or scroll to zoom · Use Layer Stack to hide parts
+        Tap part to select & delete · Drag to pan · Pinch or scroll to zoom
       </div>
 
       {isLoading && (
