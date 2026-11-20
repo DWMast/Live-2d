@@ -182,11 +182,15 @@ export function createLive2DLayerController(internalModel: unknown): Live2DLayer
   });
 }
 
-export type Live2DLayerPicker = (
-  x: number,
-  y: number,
-  hidden: ReadonlySet<string>
-) => string | null;
+export interface Live2DLayerMesh {
+  vertices: Float32Array;
+  triangles?: ArrayLike<number>;
+}
+
+export interface Live2DLayerPicker {
+  (x: number, y: number, hidden: ReadonlySet<string>): string | null;
+  getMeshes: (partId: string) => Live2DLayerMesh[];
+}
 
 interface Live2DPickDrawable {
   index: number;
@@ -239,6 +243,32 @@ function hitTestLive2DDrawables(
   return null;
 }
 
+function buildLive2DLayerPicker(
+  drawables: Live2DPickDrawable[],
+  getVertices: (index: number) => Float32Array
+): Live2DLayerPicker {
+  const picker = (x: number, y: number, hidden: ReadonlySet<string>) =>
+    hitTestLive2DDrawables(drawables, getVertices, x, y, hidden);
+
+  picker.getMeshes = (partId: string) => {
+    const meshes: Live2DLayerMesh[] = [];
+    for (const drawable of drawables) {
+      if (drawable.partId !== partId) continue;
+      try {
+        const vertices = getVertices(drawable.index);
+        if (vertices.length >= 6) meshes.push({ vertices, triangles: drawable.triangles });
+      } catch {
+        // A drawable can disappear while a runtime switches poses.
+      }
+    }
+    return meshes;
+  };
+  return picker;
+}
+
+const emptyLive2DLayerPicker = (): Live2DLayerPicker =>
+  Object.assign(() => null, { getMeshes: () => [] as Live2DLayerMesh[] });
+
 /** Pick the top visible Cubism part under a point in original model-canvas space. */
 export function createLive2DLayerPicker(internalModel: unknown): Live2DLayerPicker {
   const internal = internalModel as {
@@ -249,7 +279,7 @@ export function createLive2DLayerPicker(internalModel: unknown): Live2DLayerPick
   const core = internal?.coreModel;
   if (!core || typeof internal.getDrawableIDs !== 'function' ||
       typeof internal.getDrawableVertices !== 'function') {
-    return () => null;
+    return emptyLive2DLayerPicker();
   }
 
   const drawableIds = internal.getDrawableIDs();
@@ -292,7 +322,7 @@ export function createLive2DLayerPicker(internalModel: unknown): Live2DLayerPick
           (typeof getOpacity !== 'function' || getOpacity.call(core, index) > 0.01),
       });
     }
-    return (x, y, hidden) => hitTestLive2DDrawables(drawables, getVertices, x, y, hidden);
+    return buildLive2DLayerPicker(drawables, getVertices);
   }
 
   const getContext = core.getModelContext as (() => { _$F2?: unknown[] }) | undefined;
@@ -331,5 +361,5 @@ export function createLive2DLayerPicker(internalModel: unknown): Live2DLayerPick
     });
   });
 
-  return (x, y, hidden) => hitTestLive2DDrawables(drawables, getVertices, x, y, hidden);
+  return buildLive2DLayerPicker(drawables, getVertices);
 }

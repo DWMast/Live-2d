@@ -453,6 +453,8 @@ export default function App() {
                   onLayersLoaded={handleLayersLoaded}
                   onSelectLayer={handleSelectLayer}
                   onDeleteLayer={handleDeleteLayer}
+                  onUndoDelete={handleUndoDelete}
+                  onResetAllLayers={handleResetAllLayers}
                 />
               ) : (
                 <SpineViewer

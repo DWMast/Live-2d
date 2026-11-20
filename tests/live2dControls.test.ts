@@ -105,6 +105,13 @@ test('Cubism 4 click picking follows render order, parent parts, and triangles',
   assert.equal(picker(25, 25, new Set(['PartBody'])), 'PartCoat', 'hidden parts fall through');
   assert.equal(picker(90, 90, new Set()), 'PartBody', 'triangle test avoids empty Coat bounds');
   assert.equal(picker(150, 150, new Set()), null);
+
+  const bodyMeshes = picker.getMeshes('PartBody');
+  assert.equal(bodyMeshes.length, 1, 'the selected part exposes its exact render mesh');
+  assert.equal(bodyMeshes[0].vertices, vertices[0]);
+  assert.deepEqual(Array.from(bodyMeshes[0].triangles!), [0, 1, 2, 0, 2, 3]);
+  assert.equal(picker.getMeshes('PartCoat')[0].triangles?.length, 3);
+  assert.deepEqual(picker.getMeshes('MissingPart'), []);
 });
 
 test('Cubism 2 click picking maps draw data to parts and skips hidden opacity', () => {
@@ -131,4 +138,10 @@ test('Cubism 2 click picking maps draw data to parts and skips hidden opacity', 
   assert.equal(picker(50, 50, new Set(['PARTS_COAT'])), 'PARTS_BODY');
   opacities[1] = 0;
   assert.equal(picker(50, 50, new Set()), 'PARTS_BODY', 'invisible pose parts fall through');
+
+  const coatMeshes = picker.getMeshes('PARTS_COAT');
+  assert.equal(coatMeshes.length, 1, 'Cubism 2 selection exposes the matching draw data');
+  assert.equal(coatMeshes[0].triangles, undefined, 'Cubism 2 uses its ordered vertex outline');
+  assert.deepEqual([...coatMeshes[0].vertices], [0, 0, 100, 0, 100, 100, 0, 100]);
+  assert.deepEqual(picker.getMeshes('MissingPart'), []);
 });
