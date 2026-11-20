@@ -17,6 +17,7 @@ export const ECHO_SPINE_BASE = '/api/echo-spine';
 export const ECHO_ICON_BASE = '/api/echo-pic';
 export const DC_LIVE2D_BASE = '/api/dc-live2d';
 export const GW_SPINE_BASE = '/api/gw-spine';
+export const GAL_LIVE2D_BASE = '/api/gal-live2d';
 
 export const GAME_LIST: GameDescriptor[] = [
   {
@@ -108,6 +109,16 @@ export const GAME_LIST: GameDescriptor[] = [
     engineLabel: 'Spine 4.0 · 281 Models & Cutscenes',
     accentGradient: 'from-red-500 to-orange-600 shadow-red-500/20',
     accentText: 'text-red-400',
+  },
+  {
+    id: 'love3',
+    shortCode: 'L3',
+    name: 'LOVE³ -LOVE CUBE-',
+    studioName: 'LOVE³ Live2D Studio',
+    rosterLabel: 'LOVE³ Roster',
+    engineLabel: 'Cubism Live2D · 26 Models · 6 Adult',
+    accentGradient: 'from-rose-500 to-pink-700 shadow-rose-500/20',
+    accentText: 'text-rose-400',
   },
 ];
 
@@ -255,6 +266,7 @@ interface Live2DCatalogEntry {
   modelType: string;
   jsonPath: string;
   iconPath?: string;
+  iconUrl?: string;
   api: 'cubism2' | 'cubism4';
   region?: 'kr' | 'gl';
   uncensored?: boolean;
@@ -443,13 +455,13 @@ export async function loadGameRoster(gameId: GameId): Promise<BD2Character[]> {
         named: item.kind === 'character' || item.kind === 'costume',
         source: 'rip',
       }));
-    } else if (gameId === 'girlssymphony' || gameId === 'destinychild') {
+    } else if (gameId === 'girlssymphony' || gameId === 'destinychild' || gameId === 'love3') {
       const isDestinyChild = gameId === 'destinychild';
-      const catalogName = isDestinyChild ? 'destinychild' : 'girlssymphony';
+      const catalogName = isDestinyChild ? 'destinychild' : gameId;
       const res = await fetch(`/data/${catalogName}_catalog.json`);
       if (!res.ok) throw new Error(`Failed to load ${catalogName} catalog (HTTP ${res.status})`);
       const rawList = (await res.json()) as Live2DCatalogEntry[];
-      const assetBase = isDestinyChild ? DC_LIVE2D_BASE : GS_LIVE2D_BASE;
+      const assetBase = isDestinyChild ? DC_LIVE2D_BASE : gameId === 'love3' ? GAL_LIVE2D_BASE : GS_LIVE2D_BASE;
       mapped = rawList.map((item, idx) => ({
         id: item.id,
         game: gameId,
@@ -462,7 +474,7 @@ export async function loadGameRoster(gameId: GameId): Promise<BD2Character[]> {
         live2dModelUrl: encodeProxyPath(assetBase, item.jsonPath),
         cubismApi: item.api,
         modelType: item.modelType,
-        iconUrl: item.iconPath ? encodeProxyPath(assetBase, item.iconPath) : '',
+        iconUrl: item.iconUrl || (item.iconPath ? encodeProxyPath(assetBase, item.iconPath) : ''),
         hasCutscene: item.modelType === 'cutscene',
         hasDating: false,
         releaseOrder: idx,
@@ -534,6 +546,9 @@ export function pickDefaultCharacterForGame(gameId: GameId, roster: BD2Character
   }
   if (gameId === 'girlwars') {
     return roster.find((c) => c.id === 'gw_1001') || roster.find((c) => c.kind === 'standing') || roster[0];
+  }
+  if (gameId === 'love3') {
+    return roster.find((c) => c.id === 'love3_akira_st01_w') || roster.find((c) => c.kind === 'regular') || roster[0];
   }
   return roster[0] || DEFAULT_CHARACTER;
 }

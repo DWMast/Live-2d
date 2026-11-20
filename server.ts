@@ -70,6 +70,10 @@ const UPSTREAM_GW_BASES = [
   'https://cdn.jsdelivr.net/gh/Hisyn/GW-L2D-Viewer@main',
   'https://raw.githubusercontent.com/Hisyn/GW-L2D-Viewer/main',
 ];
+const UPSTREAM_GAL_BASES = [
+  'https://raw.githubusercontent.com/Eikanya/Live2d-model/master',
+  'https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@master',
+];
 
 
 
@@ -371,7 +375,8 @@ async function resolveCachedAsset(
     | 'mad-icons'
     | 'gs-live2d'
     | 'dc-live2d'
-    | 'gw-spines',
+    | 'gw-spines'
+    | 'gal-live2d',
   relPath: string,
   upstreamBases: string | string[],
   encodePathForUpstream = false
@@ -785,6 +790,25 @@ async function startServer() {
     } catch (err) {
       const status = (err as { status?: number })?.status || 502;
       res.status(status).json({ error: `Failed to fetch Girl Wars asset: ${relPath}` });
+    }
+  });
+
+  app.get('/api/gal-live2d/*', async (req, res) => {
+    const rawParam = (req.params as Record<string, string>)[0] ?? '';
+    const relPath = sanitizeUtf8AssetPath(
+      rawParam,
+      /\.(json|moc3|png|webp|jpg|jpeg|mp3|ogg|wav)$/i
+    );
+    if (!relPath) {
+      res.status(400).json({ error: 'Invalid galgame Live2D asset path' });
+      return;
+    }
+    try {
+      const entry = await resolveCachedAsset('gal-live2d', relPath, UPSTREAM_GAL_BASES, true);
+      sendCachedEntry(req, res, entry);
+    } catch (err) {
+      const status = (err as { status?: number })?.status || 502;
+      res.status(status).json({ error: `Failed to fetch galgame Live2D asset: ${relPath}` });
     }
   });
 

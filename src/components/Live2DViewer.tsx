@@ -206,7 +206,6 @@ export function Live2DViewer({
         ).settings;
         const motions = rawSettings?.motions ?? {};
         for (const name of Object.keys(motions)) animNames.push(name);
-        if (animNames.length === 0) animNames.push('idle');
 
         callbacksRef.current.onAnimationsLoaded(animNames);
         callbacksRef.current.onLayersLoaded([]);
@@ -227,8 +226,9 @@ export function Live2DViewer({
           const motionMgr = model.internalModel.motionManager as unknown as {
             isFinished?: () => boolean;
           };
-          if (!playRef.current) return;
-          const wanted = activeAnimRef.current || groups.idle || initialAnim || 'idle';
+          if (!playRef.current || animNames.length === 0) return;
+          const wanted = activeAnimRef.current || groups.idle || initialAnim;
+          if (!wanted) return;
           if (motionMgr.isFinished?.()) {
             void model.motion(wanted, undefined, MotionPriority.IDLE);
           }

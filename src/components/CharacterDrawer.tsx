@@ -107,6 +107,8 @@ export const CharacterDrawer: React.FC<CharacterDrawerProps> = ({
     ? 'Search Mona, Lisa, Davi, Chang’e...'
     : activeGame === 'girlwars'
     ? 'Search Tsurihime, Maeve, UR EX...'
+    : activeGame === 'love3'
+    ? 'Search Akira, Iori, Nodoka, Adult...'
     : 'Search Justia, Schera, Lathel, Teresse...';
 
   return (
