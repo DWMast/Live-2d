@@ -120,6 +120,46 @@ export const GAME_LIST: GameDescriptor[] = [
     accentGradient: 'from-rose-500 to-pink-700 shadow-rose-500/20',
     accentText: 'text-rose-400',
   },
+  {
+    id: 'konfox',
+    shortCode: 'KF',
+    name: 'Daily Life with Konfox+',
+    studioName: 'Konfox Live2D Studio',
+    rosterLabel: 'Konfox Roster',
+    engineLabel: 'Cubism 2 · 300 Outfits & Interactions · Adult',
+    accentGradient: 'from-orange-400 to-rose-600 shadow-orange-500/20',
+    accentText: 'text-orange-300',
+  },
+  {
+    id: 'sacredsword',
+    shortCode: 'SSP',
+    name: 'Sacred Sword Princesses',
+    studioName: 'Sacred Sword Live2D Studio',
+    rosterLabel: 'Sacred Sword Roster',
+    engineLabel: 'Cubism 2 · 12 Named Models · 5 Adult Scenes',
+    accentGradient: 'from-violet-500 to-fuchsia-700 shadow-violet-500/20',
+    accentText: 'text-violet-300',
+  },
+  {
+    id: 'princessharem',
+    shortCode: 'PH',
+    name: 'Princess Harem',
+    studioName: 'Princess Harem Live2D Studio',
+    rosterLabel: 'Princess Harem Roster',
+    engineLabel: 'Cubism 4 · 5 Adult Models',
+    accentGradient: 'from-amber-400 to-pink-600 shadow-amber-500/20',
+    accentText: 'text-amber-300',
+  },
+  {
+    id: 'imokone',
+    shortCode: 'ISC',
+    name: 'Sisters Connect',
+    studioName: 'Imokone Live2D Studio',
+    rosterLabel: 'Sisters Connect Roster',
+    engineLabel: 'Cubism 4 · 18 Named Scenes · Interactive Adult',
+    accentGradient: 'from-pink-400 to-purple-700 shadow-pink-500/20',
+    accentText: 'text-pink-300',
+  },
 ];
 
 export const GAME_MAP: Record<GameId, GameDescriptor> = GAME_LIST.reduce(
@@ -465,13 +505,25 @@ export async function loadGameRoster(gameId: GameId): Promise<BD2Character[]> {
         named: item.kind === 'character' || item.kind === 'costume',
         source: 'rip',
       }));
-    } else if (gameId === 'girlssymphony' || gameId === 'destinychild' || gameId === 'love3') {
+    } else if (
+      gameId === 'girlssymphony' ||
+      gameId === 'destinychild' ||
+      gameId === 'love3' ||
+      gameId === 'konfox' ||
+      gameId === 'sacredsword' ||
+      gameId === 'princessharem' ||
+      gameId === 'imokone'
+    ) {
       const isDestinyChild = gameId === 'destinychild';
       const catalogName = isDestinyChild ? 'destinychild' : gameId;
       const res = await fetch(`/data/${catalogName}_catalog.json`);
       if (!res.ok) throw new Error(`Failed to load ${catalogName} catalog (HTTP ${res.status})`);
       const rawList = (await res.json()) as Live2DCatalogEntry[];
-      const assetBase = isDestinyChild ? DC_LIVE2D_BASE : gameId === 'love3' ? GAL_LIVE2D_BASE : GS_LIVE2D_BASE;
+      const assetBase = isDestinyChild
+        ? DC_LIVE2D_BASE
+        : gameId === 'girlssymphony'
+        ? GS_LIVE2D_BASE
+        : GAL_LIVE2D_BASE;
       mapped = rawList.map((item, idx) => ({
         id: item.id,
         game: gameId,
@@ -488,12 +540,16 @@ export async function loadGameRoster(gameId: GameId): Promise<BD2Character[]> {
         hasCutscene: item.modelType === 'cutscene',
         hasDating: false,
         releaseOrder: idx,
-        releaseLabel: item.uncensored
+        releaseLabel: item.kind === 'adult'
+          ? 'Adult scene'
+          : item.uncensored
           ? 'Uncensored available'
           : item.region === 'kr'
           ? 'KR Original'
           : item.region === 'gl'
           ? 'Global'
+          : item.api === 'cubism2'
+          ? 'Cubism 2 Live2D'
           : 'Cubism 4 Live2D',
         uncensored: item.uncensored || undefined,
         named: item.named ?? true,
@@ -559,6 +615,15 @@ export function pickDefaultCharacterForGame(gameId: GameId, roster: BD2Character
   }
   if (gameId === 'love3') {
     return roster.find((c) => c.id === 'love3_akira_st01_w') || roster.find((c) => c.kind === 'regular') || roster[0];
+  }
+  if (gameId === 'konfox') {
+    return roster.find((c) => c.id === 'konfox_stand_casual_casual') || roster.find((c) => c.kind === 'skin' && c.charName === 'Konko') || roster[0];
+  }
+  if (gameId === 'sacredsword') {
+    return roster.find((c) => c.id === 'ssp_char2d_live2d_001') || roster.find((c) => c.kind === 'skin') || roster[0];
+  }
+  if (gameId === 'imokone') {
+    return roster.find((c) => c.id === 'imokone_my_fj_dadun') || roster.find((c) => c.kind === 'skin') || roster[0];
   }
   return roster[0] || DEFAULT_CHARACTER;
 }

@@ -4,7 +4,18 @@ import { readFile } from 'node:fs/promises';
 import { getSpineModelUrls, loadGameRoster } from '../src/utils/bd2Assets.ts';
 import type { GameId } from '../src/types/bd2.ts';
 
-const games: GameId[] = ['destinychild', 'girlssymphony', 'azurlane', 'echocalypse', 'girlwars', 'love3'];
+const games: GameId[] = [
+  'destinychild',
+  'girlssymphony',
+  'azurlane',
+  'echocalypse',
+  'girlwars',
+  'love3',
+  'konfox',
+  'sacredsword',
+  'princessharem',
+  'imokone',
+];
 
 test('external game catalogs map to complete playable roster entries', async (t) => {
   const originalFetch = globalThis.fetch;
@@ -71,4 +82,46 @@ test('external game catalogs map to complete playable roster entries', async (t)
   assert.equal(love3.filter((entry) => entry.kind === 'adult').length, 6);
   assert.ok(love3.every((entry) => entry.cubismApi === 'cubism4' && entry.iconUrl));
   assert.ok(love3.every((entry) => entry.live2dModelUrl?.startsWith('/api/gal-live2d/')));
+
+  const konfox = await loadGameRoster('konfox');
+  assert.equal(konfox.length, 300);
+  assert.equal(konfox.filter((entry) => entry.kind === 'adult').length, 12);
+  assert.ok(konfox.some((entry) => entry.charName === 'Konko'));
+  assert.ok(konfox.some((entry) => entry.charName === 'Nanako'));
+  assert.ok(konfox.every((entry) => entry.cubismApi === 'cubism2' && entry.iconUrl?.startsWith('/icons/konfox/')));
+  assert.ok(konfox.every((entry) => entry.named && entry.live2dModelUrl?.startsWith('/api/gal-live2d/')));
+  assert.ok(new Set(konfox.map((entry) => entry.iconUrl)).size >= 60);
+
+  const sacredSword = await loadGameRoster('sacredsword');
+  assert.equal(sacredSword.length, 12);
+  assert.equal(sacredSword.filter((entry) => entry.kind === 'adult').length, 5);
+  assert.ok(sacredSword.every((entry) => entry.cubismApi === 'cubism2' && entry.iconUrl?.startsWith('/icons/sacredsword/') && entry.named));
+  assert.ok(sacredSword.every((entry) => entry.releaseLabel !== 'Cubism 4 Live2D'));
+
+  const princessHarem = await loadGameRoster('princessharem');
+  assert.equal(princessHarem.length, 5);
+  assert.ok(princessHarem.every((entry) => entry.kind === 'adult' && entry.releaseLabel === 'Adult scene'));
+  assert.ok(princessHarem.every((entry) => entry.cubismApi === 'cubism4' && entry.iconUrl?.startsWith('/icons/princessharem/') && entry.named));
+  assert.ok(princessHarem.every((entry) => entry.live2dModelUrl?.startsWith('/api/gal-live2d/')));
+
+  const imokone = await loadGameRoster('imokone');
+  assert.equal(imokone.length, 18);
+  assert.ok(imokone.some((entry) => entry.charName === 'Hagiwara Michiru (萩原満月)'));
+  assert.ok(imokone.some((entry) => entry.charName === 'Enomoto Mikaru (榎本三日月)'));
+  assert.ok(imokone.filter((entry) => entry.kind === 'adult').length >= 4);
+  assert.ok(imokone.every((entry) => entry.cubismApi === 'cubism4' && entry.iconUrl?.startsWith('/icons/imokone/') && entry.named));
+  assert.ok(imokone.every((entry) => entry.live2dModelUrl?.startsWith('/api/gal-live2d/')));
+
+  const localIcons = new Set<string>();
+  for (const roster of [konfox, sacredSword, princessHarem, imokone]) {
+    for (const entry of roster) {
+      if (entry.iconUrl) localIcons.add(entry.iconUrl);
+    }
+  }
+  assert.equal(localIcons.size, 104);
+  for (const url of localIcons) {
+    const icon = await readFile(new URL(`../public${url}`, import.meta.url));
+    assert.equal(icon.subarray(0, 4).toString(), 'RIFF', url);
+    assert.equal(icon.subarray(8, 12).toString(), 'WEBP', url);
+  }
 });

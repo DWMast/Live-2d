@@ -1,0 +1,62 @@
+[
+ {
+  "id": "princessharem_azur_rear_1",
+  "charName": "Azur",
+  "costumeName": "Rear Entry · Scene I",
+  "modelType": "adult",
+  "jsonPath": "galgame live2d/[200502][らぷらす] プリンセスハーレム [RJ280657]/アズール/アズール 後背位第一画面12.model3.json",
+  "iconPath": "galgame live2d/[200502][らぷらす] プリンセスハーレム [RJ280657]/アズール/textures/texture_00 #3.png",
+  "api": "cubism4",
+  "kind": "adult",
+  "named": true,
+  "iconUrl": "/icons/princessharem/princessharem_azur_rear_1.webp"
+ },
+ {
+  "id": "princessharem_azur_rear_2",
+  "charName": "Azur",
+  "costumeName": "Rear Entry · Scene II",
+  "modelType": "adult",
+  "jsonPath": "galgame live2d/[200502][らぷらす] プリンセスハーレム [RJ280657]/アズール/アズール 後背位第二画面39.model3.json",
+  "iconPath": "galgame live2d/[200502][らぷらす] プリンセスハーレム [RJ280657]/アズール/textures/texture_00 #5.png",
+  "api": "cubism4",
+  "kind": "adult",
+  "named": true,
+  "iconUrl": "/icons/princessharem/princessharem_azur_rear_2.webp"
+ },
+ {
+  "id": "princessharem_azur_touch",
+  "charName": "Azur",
+  "costumeName": "Touching · Intimate Scene",
+  "modelType": "adult",
+  "jsonPath": "galgame live2d/[200502][らぷらす] プリンセスハーレム [RJ280657]/アズール/アズール おさわり第一画面1 69正常位.model.json",
+  "iconPath": "galgame live2d/[200502][らぷらす] プリンセスハーレム [RJ280657]/アズール/textures/texture_00 #3.png",
+  "api": "cubism4",
+  "kind": "adult",
+  "named": true,
+  "iconUrl": "/icons/princessharem/princessharem_azur_rear_1.webp"
+ },
+ {
+  "id": "princessharem_flora_1",
+  "charName": "Flora",
+  "costumeName": "Adult Scene I",
+  "modelType": "adult",
+  "jsonPath": "galgame live2d/[200502][らぷらす] プリンセスハーレム [RJ280657]/フローラ/フローラ1_100.model3.json",
+  "iconPath": "galgame live2d/[200502][らぷらす] プリンセスハーレム [RJ280657]/フローラ/textures/texture_00.png",
+  "api": "cubism4",
+  "kind": "adult",
+  "named": true,
+  "iconUrl": "/icons/princessharem/princessharem_flora_1.webp"
+ },
+ {
+  "id": "princessharem_flora_2",
+  "charName": "Flora",
+  "costumeName": "Adult Scene II",
+  "modelType": "adult",
+  "jsonPath": "galgame live2d/[200502][らぷらす] プリンセスハーレム [RJ280657]/フローラ/フローラ2_20.model3.json",
+  "iconPath": "galgame live2d/[200502][らぷらす] プリンセスハーレム [RJ280657]/フローラ/textures/texture_00.png",
+  "api": "cubism4",
+  "kind": "adult",
+  "named": true,
+  "iconUrl": "/icons/princessharem/princessharem_flora_1.webp"
+ }
+]

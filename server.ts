@@ -12,6 +12,7 @@ import {
   UpgradeCdnNotCovered,
 } from './server/echoUpgradeCdn.ts';
 import { rangeCacheStats } from './server/remoteZip.ts';
+import { rewriteLive2DManifestFileRefs } from './server/live2dManifest.ts';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PORT = Number(process.env.PORT) || 3000;
@@ -797,14 +798,22 @@ async function startServer() {
     const rawParam = (req.params as Record<string, string>)[0] ?? '';
     const relPath = sanitizeUtf8AssetPath(
       rawParam,
-      /\.(json|moc3|png|webp|jpg|jpeg|mp3|ogg|wav)$/i
+      /\.(json|moc|moc3|mtn|png|webp|jpg|jpeg|mp3|ogg|wav)$/i
     );
     if (!relPath) {
       res.status(400).json({ error: 'Invalid galgame Live2D asset path' });
       return;
     }
     try {
-      const entry = await resolveCachedAsset('gal-live2d', relPath, UPSTREAM_GAL_BASES, true);
+      const cached = await resolveCachedAsset('gal-live2d', relPath, UPSTREAM_GAL_BASES, true);
+      let entry = cached;
+      if (/\.json$/i.test(relPath) && cached.buffer.includes('#')) {
+        const source = cached.buffer.toString('utf8');
+        const rewritten = rewriteLive2DManifestFileRefs(source);
+        if (rewritten !== source) {
+          entry = { ...cached, buffer: Buffer.from(rewritten), gzipBuffer: undefined };
+        }
+      }
       sendCachedEntry(req, res, entry);
     } catch (err) {
       const status = (err as { status?: number })?.status || 502;
